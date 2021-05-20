@@ -1,6 +1,7 @@
 site_name: Comfor Documentation 
 site_author: Eduardo Guzman
 site_dir: public
+site_url: https://innovamics.gitlab.io/comfor-doc
 repo_url: https://gitlab.com/innovamics/comfor-doc
 copyright: Copyright &copy; 2021 Eduardo Guzman
 
@@ -53,7 +54,7 @@ markdown_extensions:
 plugins:
   - search
   - bibtex:
-      bib_file: "Docs/Bibliography.bib"
+      bib_file: "docs/Bibliography.bib"
       cite_style: "pandoc"
   #    - mermaid2
 
