@@ -7,6 +7,8 @@ stages:
 
 image: python:3.9
 
+before_script:
+  - pip install -r requirements.txt
 
 test:
   stage: test
