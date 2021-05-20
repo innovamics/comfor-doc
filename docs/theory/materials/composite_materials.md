@@ -43,15 +43,15 @@ For 2D fabrics, there are three main weaves:
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/tissage2D1.svg"  width="200" />
+      <img src="../../../assets/img/tissage2D1.svg"  width="200" />
       <figcaption>Taffeta</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/tissage2D2.svg"  width="200" />
+      <img src="../../../assets/img/tissage2D2.svg"  width="200" />
       <figcaption>Twill</figcaption>
     </figure>
     <figure  >
-      <img src="/assets/img/tissage2D3.svg"  width="200" />
+      <img src="../../../assets/img/tissage2D3.svg"  width="200" />
       <figcaption>Satin</figcaption>
     </figure>
     <figcaption>Caption for the bundle of images</figcaption>
@@ -70,7 +70,7 @@ In the case of 3D and 2.5D woven fabrics, the weft rovings cross several planes 
 
 <div style="text-align:center;">
  <figure >
-   <img src="/assets/img/tissage3D2.svg"  />
+   <img src="../../../assets/img/tissage3D2.svg"  />
    <figcaption>Example of 3D fabrics</figcaption>
  </figure> 
 </div>
@@ -122,7 +122,7 @@ In vacuum infusion, the dry woven reinforcement is placed between a mold and a w
 
 <div style="text-align:center;">
  <figure >
-   <img src="/assets/img/infusion_vide.svg" width=300 />
+   <img src="../../../assets/img/infusion_vide.svg" width=300 />
    <figcaption>Vacuum infusion</figcaption>
  </figure> 
 </div>
@@ -139,7 +139,7 @@ This process is undergoing a strong development with the objective of being used
 
 <div style="text-align:center;">
  <figure >
-   <img src="/assets/img/rtm.svg" width=500 />
+   <img src="../../../assets/img/rtm.svg" width=500 />
    <figcaption>RTM Process</figcaption>
  </figure> 
 </div>
@@ -148,7 +148,12 @@ This process is undergoing a strong development with the objective of being used
 
 In order to exploit the excellent properties of CFRTP composites in an industrial context, different manufacturing processes have been developed depending on the product and its application. Most of these methods are an adaptation of the processes for the shaping of thermoset composites or of the classical stamping techniques. In the case of forming flat structures, roll forming and simple compression have already been mentioned. In the case of constant section structures, we can mention pultrusion forming, which is a continuous manufacturing process where the profile is obtained by pulling the prepreg reinforcement through a heated die, or filament winding forming, whose functional principle is shown in [1.12](#fig:1_winding){reference-type="ref" reference="fig:1_winding"}[@MAC12]. These processes allow the shaping of simple parts (1D and 2D) and are easily automated.
 
-![Thermoplastic filament winding production line](/assets/img/winding.png){#fig:1_winding width=600}
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../assets/img/winding.png" width=600 />
+   <figcaption>Thermoplastic filament winding production line</figcaption>
+ </figure> 
+</div>
 
 In order to manufacture structures with non-developable (3D) geometry, thermoforming appears to be an ideal candidate.
 
@@ -168,9 +173,19 @@ However, the optimal automation of the process implies that the physical phenome
 
 It is clear that temperature is an essential factor since it modifies the behavior of the resin. The mechanical properties and particular deformation mechanisms of the material, due to the fibrous nature of the reinforcement, are constantly evolving.
 
-![Principales étapes du procédé de thermostampage](/assets/img/thermoforming.svg){#fig:1_thermoforming width=600}
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../assets/img/thermoforming.svg" width=600 />
+   <figcaption>Thermo-stamping steps</figcaption>
+ </figure> 
+</div>
 
-![Chaîne de thermostampage.](/assets/img/stamping_old.png){#fig:1_stamping_old width=600}
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../assets/img/stamping_old.png" width=600 />
+   <figcaption>Thermo-stamping chain</figcaption>
+ </figure> 
+</div>
 
 ## Modeling and Simulation approaches.
 
@@ -203,11 +218,11 @@ The main limitation of this type of approach is the computational time inherent 
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/ZHO04.png"  width="300" />
+      <img src="../../../assets/img/ZHO04.png"  width="300" />
       <figcaption>Zhou model</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/DUR10plain.png"  width="300" />
+      <img src="../../../assets/img/DUR10plain.png"  width="300" />
       <figcaption>Durville model </figcaption>
     </figure>
     <figcaption>Microscopic modelling</figcaption>
@@ -231,11 +246,11 @@ The next figures shows an example using this type of approach proposed by Kawaba
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/KAW73.png"  width="250" />
+      <img src="../../../assets/img/KAW73.png"  width="250" />
       <figcaption>Structure to model</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/KAW73_2.png"  width="250" />
+      <img src="../../../assets/img/KAW73_2.png"  width="250" />
       <figcaption>Analytical modelling</figcaption>
     </figure>
     <figcaption>Mesoscopic modelling</figcaption>
@@ -251,11 +266,11 @@ Many models have been developed to obtain the final geometry. We note the models
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/LOM00.png"  width="300" />
+      <img src="../../../assets/img/LOM00.png"  width="300" />
       <figcaption>Structure to model</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/texgen.png"  width="300" />
+      <img src="../../../assets/img/texgen.png"  width="300" />
       <figcaption>Analytical modelling</figcaption>
     </figure>
     <figcaption>Mesoscopic modelling</figcaption>
@@ -270,11 +285,11 @@ X-ray microtomography is the most promising method to experimentally access the 
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/tomo_comp_xy_yz.png"  width="300" />
+      <img src="../../../assets/img/tomo_comp_xy_yz.png"  width="300" />
       <figcaption>3D tomography of an interlock</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/simu_comp_xy_yz.png"  width="300" />
+      <img src="../../../assets/img/simu_comp_xy_yz.png"  width="300" />
       <figcaption>Mesh part</figcaption>
     </figure>
     <figcaption>Mesoscopic modelling</figcaption>
@@ -308,7 +323,7 @@ In this approach, the reinforcement is similar to hinged bars at the crossing po
 
 <div style="text-align:center;">
  <figure >
-   <img src="/assets/img/Filet.svg" width=200 />
+   <img src="../../../assets/img/Filet.svg" width=200 />
    <figcaption>Geometrical approach</figcaption>
  </figure> 
 </div>
@@ -320,11 +335,11 @@ With the removal of all mechanical and weaving considerations, the results are i
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/FiletDrappagePiece.png"  width="300" />
+      <img src="../../../assets/img/FiletDrappagePiece.png"  width="300" />
       <figcaption>Geometrical part</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/FiletDrappage.png"  width="300" />
+      <img src="../../../assets/img/FiletDrappage.png"  width="300" />
       <figcaption>Simulation</figcaption>
     </figure>
     <figcaption>Geometrical approach</figcaption>
@@ -342,7 +357,7 @@ The _discrete_ approaches consist in considering the textile as a discontinuous 
 
 <div style="text-align:center;">
  <figure >
-   <img src="/assets/img/SZE05.png" width=600 />
+   <img src="../../../assets/img/SZE05.png" width=600 />
    <figcaption>Sze Discret approach</figcaption>
  </figure> 
 </div>
@@ -352,11 +367,11 @@ The application of this type of approach in the case of thermoplastic prepreg co
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/skordos1.svg"  width="300" />
+      <img src="../../../assets/img/skordos1.svg"  width="300" />
       <figcaption>Meshing</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/skordos2.svg"  width="300" />
+      <img src="../../../assets/img/skordos2.svg"  width="300" />
       <figcaption>Simulation</figcaption>
     </figure>
     <figcaption>Skordos discret approach</figcaption>
@@ -373,7 +388,7 @@ Different approaches, either hypoelastic [@PEN05] [BAD08] [@KHA10] or hyperelast
 
 <div style="text-align:center;">
  <figure >
-   <img src="/assets/img/KHA10_2.png" width=600 />
+   <img src="../../../assets/img/KHA10_2.png" width=600 />
    <figcaption>Khan continuous approach</figcaption>
  </figure> 
 </div>
@@ -404,11 +419,11 @@ In the first case, the discrete and continuous parts are associated in the same 
 <div style="text-align:center;">
 <figure>
     <figure >
-      <img src="/assets/img/Nahiene1.png"  width="300" />
+      <img src="../../../assets/img/Nahiene1.png"  width="300" />
       <figcaption>Semi-discrete finite element</figcaption>
     </figure> 
     <figure  >
-      <img src="/assets/img/Nahiene2.png"  width="300" />
+      <img src="../../../assets/img/Nahiene2.png"  width="300" />
       <figcaption>Simulation</figcaption>
     </figure>
     <figcaption>Hamila discret approach</figcaption>
@@ -422,7 +437,7 @@ Another modeling strategy considers discrete and continuous parts as totally ind
 
 <div style="text-align:center;">
  <figure >
-   <img src="/assets/img/CRE06a.png" width=600 />
+   <img src="../../../assets/img/CRE06a.png" width=600 />
    <figcaption>Creech NCF semi-discrete model</figcaption>
  </figure> 
 </div>
