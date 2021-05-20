@@ -53,7 +53,7 @@ markdown_extensions:
 plugins:
   - search
   - bibtex:
-      bib_file: "Docs/Bibliography.bib"
+      bib_file: "docs/Bibliography.bib"
       cite_style: "pandoc"
   #    - mermaid2
 
