@@ -261,7 +261,7 @@ Analytical approaches provide consistent results in determining the mechanical b
 
 Faced with these limitations, the use of finite elements seems a good alternative. Their use at this scale requires two prerequisites: the geometry and the boundary conditions of the reinforcement. The geometry must be obtained theoretically from the characteristics of the wick and the armor, or experimentally.
 
-Many models have been developed to obtain the final geometry. We note the models associated with the software _WiseTex_ developed at the Katholieke Universiteit Leuven [@LOM00] [@LOM06] and _Texgen_ developed at the University of Nottingham [@SHE07]. In the case of _WiseTex_, the geometry of the reinforcement ([1.19](#fig:1_LOM00){reference-type="ref" reference="fig:1_LOM00"}) is obtained by minimizing the strain energy of the strands within the reinforcement by taking into account different mechanical contributions (tension, bending, torsion, compression of the strands and interactions). This approach requires the experimental identification of data that are difficult to obtain. The models made with _Texgen_ ([1.20](#fig:1_SHE){reference-type="ref" reference="fig:1_SHE"}), unlike _WiseTex_, do not use mechanical considerations. However, it allows to easily realize elementary meshes of 2D and 3D woven fabrics in which the wicks can have variable non-symmetric sections along their mean line. For both approaches, the problem of interpenetration, although reduced under _WiseTex_ [@VER05], remains major.
+Many models have been developed to obtain the final geometry. We note the models associated with the software _WiseTex_ developed at the Katholieke Universiteit Leuven [@LOM00] [@LOM06] and _Texgen_ developed at the University of Nottingham [@SHE07]. In the case of _WiseTex_, the geometry of the reinforcement is obtained by minimizing the strain energy of the strands within the reinforcement by taking into account different mechanical contributions (tension, bending, torsion, compression of the strands and interactions). This approach requires the experimental identification of data that are difficult to obtain. The models made with _Texgen_ , unlike _WiseTex_, do not use mechanical considerations. However, it allows to easily realize elementary meshes of 2D and 3D woven fabrics in which the wicks can have variable non-symmetric sections along their mean line. For both approaches, the problem of interpenetration, although reduced under _WiseTex_ [@VER05], remains major.
 
 <div style="text-align:center;">
 <figure>
@@ -270,7 +270,7 @@ Many models have been developed to obtain the final geometry. We note the models
       <figcaption>Structure to model</figcaption>
     </figure> 
     <figure  >
-      <img src="../../../assets/img/texgen.png"  width="300" />
+      <img src="/../../assets/img/texgen.png"  width="300" />
       <figcaption>Analytical modelling</figcaption>
     </figure>
     <figcaption>Mesoscopic modelling</figcaption>
