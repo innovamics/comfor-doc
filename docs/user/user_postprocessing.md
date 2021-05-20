@@ -26,7 +26,7 @@ In order to visualize the results, open Paraview. Click on menu _File_->_Open_ a
 
 <div style="text-align:center;">
     <figure>
-        <img src="/assets/img/open_vtk.gif" alt="Logo">
+        <img src="../../assets/img/open_vtk.gif" alt="Logo">
         <figcaption>Loading the files</figcaption>
     </figure>
 </div>
@@ -44,7 +44,7 @@ The data to be displayed can be selected in the _Data Analysis_ toolbar. A list 
 
 <div style="text-align:center;">
     <figure>
-        <img src="/assets/img/play_vtk.gif">
+        <img src="../../assets/img/play_vtk.gif">
         <figcaption>Playing the animation</figcaption>
     </figure>
 </div>
@@ -61,7 +61,7 @@ Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_
 
 <div style="text-align:center;">
     <figure>
-        <img src="/assets/img/filter_vtk.gif">
+        <img src="../../assets/img/filter_vtk.gif">
         <figcaption>Applying filters</figcaption>
     </figure>
 </div>
