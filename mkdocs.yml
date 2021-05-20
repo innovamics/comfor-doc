@@ -1,0 +1,73 @@
+site_name: Comfor Documentation 
+site_author: Eduardo Guzman
+site_dir: public
+repo_url: https://gitlab.com/innovamics/comfor-doc
+copyright: Copyright &copy; 2021 Eduardo Guzman
+
+docs_dir: docs
+
+nav:
+  - 'Home':
+    - 'Welcome': index.md
+    - 'Quick Start': overview/quick_starter_guide.md
+  - 'User':
+    - 'Overview': user/user_overview.md
+    - 'Pre-processing': user/user_preprocessing.md
+    - 'Analysis': user/user_analysis.md
+    - 'Post-processing': user/user_postprocessing.md
+  - 'Theory':
+    - 'Overview': theory/theory_overview.md
+    - 'Continuum Mechanics': theory/continuum_mechanics.md
+    - 'Composite Materials': theory/materials/composite_materials.md
+    - 'Materials overview': theory/materials/materials_overview.md
+    - 'Solvers': theory/solvers/solvers_overview.md
+  - 'Developer':
+    - 'Overview': developer/dev_overview.md
+    - 'Using git': developer/dev_git.md
+    - 'Modularity': developer/dev_mod.md
+
+theme:
+  name: readthedocs
+  # Select here your language: en, fr, ...
+  language: en
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+        baselevel: 2
+        separator: "_"
+    - attr_list
+    - footnotes 
+    - fenced_code 
+    - def_list 
+    - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
+    - pymdownx.arithmatex:        # LaTeX syntax
+        generic: true
+    - pymdownx.emoji:             # :smile: :heart: :thumbsup:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.tasklist          # - [X] item
+    - pymdownx.tabbed             # === "Tab 1"
+    #- pymdownx.superfences
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: "Docs/Bibliography.bib"
+      cite_style: "pandoc"
+  #    - mermaid2
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   # Math ajax
+  - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js # chart.js
+  - assets/js/xy_graphs.js
+  - assets/js/table_rtd.js
+
+extra_css:
+  - assets/css/test.css
+  - assets/css/tabbed.css
+
+  # See https://www.mkdocs.org/user-guide/configuration/
+  # pip install pymdown-extensions
+  # pip install --upgrade mkdocs-material

@@ -1,0 +1,13 @@
+# ------------------------------------------------------------------------------
+# Ignore files that are generated from the repository sources by either building
+# the code or running it.
+#
+# Also ignore OS-specific files like .DS_Store on Mac
+# ------------------------------------------------------------------------------
+# Documentation
+public/
+site/
+_site/
+
+#Other
+.DS_Store

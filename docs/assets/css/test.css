@@ -1,0 +1,25 @@
+
+figure {
+  margin: 6px;
+  color: #333;
+  display: inline-table;  /*changed to inline-table*/
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box ;
+   box-sizing: border-box ;
+}
+
+figure figcaption {
+    padding: 6px 10px 6px;
+    color: #333;
+    text-align: center;
+    font-style: italic;
+    font-size: 13px;
+    /*  width:100%;   */
+    display: table-caption;
+    caption-side: bottom;
+    -webkit-box-sizing: border-box ;
+    -moz-box-sizing: border-box ;
+    box-sizing: border-box ;
+}
+
+
