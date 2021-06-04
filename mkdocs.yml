@@ -11,6 +11,7 @@ nav:
   - 'Home':
     - 'Welcome': index.md
     - 'Quick Start': overview/quick_starter_guide.md
+    - 'Downloads': overview/download_page.md
   - 'User':
     - 'Overview': user/user_overview.md
     - 'Pre-processing': user/user_preprocessing.md

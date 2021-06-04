@@ -43,6 +43,9 @@ Kinetic energy: 0.0110008
 - `Internal energy`: Is the energy generate by the internal forces int the whole model.
 - `Kinetic energy`: Is the kinetic energy in the whole model.
 
+!!! tip
+    To stop a job just press `ctrl + c`
+
 ## Output
 
 A new folder named `Results_<file_name>` is created in the same directory of the input file. This folder contains a série of \*.vtk files which can be viewed using paraview.
