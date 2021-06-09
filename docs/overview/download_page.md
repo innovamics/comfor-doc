@@ -9,7 +9,7 @@ Download the last binary files for:
     - <a href="../../assets/bin/COMFOR_V0_5_1.exe" download>Click to Download Comfor V0.5.1 for Windows</a>
 - Ubuntu 
     - <a href="../../assets/bin/COMFOR_V0_5_0_GCC_10_2_0" download>Click to Download Comfor V0.5.0 for Linux (GCC 10.2.0)</a>
-- macOS
+- macOS Big Sur
     - <a href="../../assets/bin/COMFOR_V0_5_1_OSX_clang11" download>Click to Download Comfor V0.5.1 for macOS (Clang 11.0.3)</a>
 
 ## Examples 
