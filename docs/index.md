@@ -25,7 +25,7 @@ Using tools like cmake, we can provide a cross platform solution. Currently Comf
     - Gcc 10.2
     - Clang 11.0.3
     - Clang 12.0.0
-- OSX
+- OSX Big Sur
     - Clang 11.0.3
     - Clang 12.0.0
 - Windows 7
@@ -34,9 +34,7 @@ Using tools like cmake, we can provide a cross platform solution. Currently Comf
 
 **Comfor is open source**
 
-We believe in open source solutions. Put some principles:
-
-More about licensing (ref to license )
+We believe in open source solutions. 
 
 ## Users
 

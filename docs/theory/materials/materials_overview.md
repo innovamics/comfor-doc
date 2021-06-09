@@ -1,6 +1,6 @@
 # Materials overview 
 
-This section concisely describes the mechanical models implemented in Comfor. For a more detailed introduction, the reader is recommended to refer to the following links, as well as to consult the cited papers. textiles
+This section concisely describes the mechanical models implemented in Comfor. For a more detailed introduction, the reader is recommended to refer to the following links, as well as to consult the cited papers.
 
 - [Nonlinear continuum mechanics](../continuum_mechanics.md)
 - [Composite material introduction](composite_materials.md)
