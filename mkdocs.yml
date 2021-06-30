@@ -32,8 +32,6 @@ theme:
   name: readthedocs
   # Select here your language: en, fr, ...
   language: en
-  analytics:
-      gtag: G-7CEE34RD0F
 
 markdown_extensions:
     - toc:
@@ -71,6 +69,10 @@ extra_javascript:
 extra_css:
   - assets/css/test.css
   - assets/css/tabbed.css
+
+google_analytics:
+  - 'G-7CEE34RD0F'
+  - auto
 
   # See https://www.mkdocs.org/user-guide/configuration/
   # pip install pymdown-extensions
