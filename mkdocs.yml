@@ -32,6 +32,8 @@ theme:
   name: readthedocs
   # Select here your language: en, fr, ...
   language: en
+  analytics:
+      gtag: G-7CEE34RD0F
 
 markdown_extensions:
     - toc:
