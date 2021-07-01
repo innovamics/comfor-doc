@@ -30,6 +30,8 @@ nav:
 
 theme:
   name: readthedocs
+  analytics: 
+    gtag: 'G-7CEE34RD0F'
   # Select here your language: en, fr, ...
   language: en
 
@@ -70,9 +72,6 @@ extra_css:
   - assets/css/test.css
   - assets/css/tabbed.css
 
-google_analytics:
-  - 'G-7CEE34RD0F'
-  - auto
 
   # See https://www.mkdocs.org/user-guide/configuration/
   # pip install pymdown-extensions
