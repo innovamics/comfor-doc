@@ -8,7 +8,7 @@ stages:
 image: python:3.9-alpine
 
 before_script:
-  - sudo pacman -S  pandoc
+  - pacman -S  pandoc
   - pip install -r requirements.txt
 
 test:
