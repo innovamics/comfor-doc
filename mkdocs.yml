@@ -58,7 +58,7 @@ plugins:
   - search
   - bibtex:
       bib_file: "docs/Bibliography.bib"
-      cite_style: "pandoc"
+      csl_file: "docs/assets/csl/nature.csl"
   #    - mermaid2
 
 extra_javascript:

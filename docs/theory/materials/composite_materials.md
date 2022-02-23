@@ -129,7 +129,7 @@ In vacuum infusion, the dry woven reinforcement is placed between a mold and a w
 
 #### Resin transfer moulding
 
-Resin Transfer Moulding (RTM) is also used to produce composite parts with woven reinforcements [@RUD97; @POT99; @PAR00]. The manufacturing process can be broken down into three steps, as illustrated in [1.11](#fig:1_RTM){reference-type="ref" reference="fig:1_RTM"}.
+The manufacturing process can be broken down into three steps, as illustrated in [1.11](#fig:1_RTM){reference-type="ref" reference="fig:1_RTM"}.
 
 The first step is the preforming step. It consists in shaping (or stamping) a woven reinforcement in a mold by means of a punch. The advantage of this process is to have two rigid parts which will allow to better control the compression of the reinforcement during the shaping and thus its final thickness. Contrary to vacuum infusion, the surface finish is good on both sides. In order to avoid wrinkles during the stamping process, blank holders can be used by adding a slight tension in the rovings.
 
@@ -237,7 +237,7 @@ Models at the mesoscopic scale are interested in the behavior of an elementary m
 
 - the local permeability of the reinforcement as a function of the deformation of the elementary mesh [@LOI08], allowing to feed simulations of the resin flow in the reinforcement in the case of LCM type processes.
 
-- The macroscopic thermal properties of the material (with or without taking into account the matrix) for the simulation of thermal exchanges, such as the macroscopic thermal conductivity [@DAS92] [@DAS96] [@HSI99] [@BIG01].
+- The macroscopic thermal properties of the material (with or without taking into account the matrix) for the simulation of thermal exchanges, such as the macroscopic thermal conductivity [@DAS92] [@DAS96] [@BIG01].
 
 Analytical approaches have been developed to access these thermomechanical and geometrical quantities. These approaches are generally based on a simplification of the wick geometry in the elementary mesh and on assumptions of mechanical or thermal behavior.
 
@@ -270,15 +270,12 @@ Many models have been developed to obtain the final geometry. We note the models
       <figcaption>Structure to model</figcaption>
     </figure> 
     <figure  >
-      <img src="/../../assets/img/texgen.png"  width="300" />
+      <img src="../../../assets/img/texgen.png"  width="300" />
       <figcaption>Analytical modelling</figcaption>
     </figure>
     <figcaption>Mesoscopic modelling</figcaption>
 </figure>
 </div>
-
-<!-- ![WiseTex [@LOM00]](/assets/img/LOM00.png){#fig:1_LOM00 width="35%"}
-![TexGen [@SHE07]](/assets/img/texgen.png){#fig:1_SHE width="35%"} -->
 
 X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@BAR00] [@DES05] [@HSI09] [@HER80] [@KHA14]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. An example of automation of the processing of microtomographic fabrics is shown [\[fig:1_NAO14\]](#fig:1_NAO14){reference-type="ref" reference="fig:1_NAO14"}.
 
@@ -297,11 +294,11 @@ X-ray microtomography is the most promising method to experimentally access the 
 </div>
 
 <!-- ![3D tomography of an interlock](/assets/img/tomo_comp_xy_yz.png){#fig:1_NAO14ini2 width="\textwidth"}.
-![Modèle obtenu maillé [@NAO15].](/assets/img/simu_comp_xy_yz.png){#fig:1_NAO14fin2 width="\\textwidth"} -->
+![Modèle obtenu maillé.](/assets/img/simu_comp_xy_yz.png){#fig:1_NAO14fin2 width="\\textwidth"} -->
 
 Once the geometry is defined and discretized by finite elements, it is necessary to associate a behavior law to the wicks, which are in most cases considered as a continuous medium. This behavior is very specific due to the fibrous nature of the fibers. Most studies use hypoelastic [@GAS00] or hyperelastic [@CHA11] models to describe this behavior.
 
-At this scale, modeling the entire woven reinforcement during forming is still difficult. However, the study of an elementary pattern or cell representative of the structure (CER) will allow to understand the behavior of the weaving at a smaller scale before extending it to the whole part. This is the case of modeling by homogenization [@HSI99] and multi-scale calculations [@GEE03] [@OZD08].
+At this scale, modeling the entire woven reinforcement during forming is still difficult. However, the study of an elementary pattern or cell representative of the structure (CER) will allow to understand the behavior of the weaving at a smaller scale before extending it to the whole part. This is the case of modeling by homogenization and multi-scale calculations [@GEE03] [@OZD08].
 
 ### Macroscale modeling
 
@@ -309,7 +306,7 @@ The objective of macroscale simulation is to simulate the shaping of woven reinf
 
 #### Geometrical approaches
 
-Geometric approaches are based on the so-called fishnet algorithm. This so-called geometric or kinematic approach is mainly used for the simulation of dragging. Its simplicity of use and its speed of execution make it a good method of first approach [@MAR5] [@VAN91]. It is based on strong assumptions:
+Geometric approaches are based on the so-called fishnet algorithm. This so-called geometric or kinematic approach is mainly used for the simulation of dragging. Its simplicity of use and its speed of execution make it a good method of first approach [@MAR56] [@VAN91]. It is based on strong assumptions:
 
 - The inextensibility of the rovings ;
 
@@ -353,7 +350,7 @@ With the removal of all mechanical and weaving considerations, the results are i
 
 Among the mechanical models, three types of approaches can be distinguished: discrete, semi-discrete or continuous.
 
-The _discrete_ approaches consist in considering the textile as a discontinuous assembly of deformable elements [@CHE01] [@SHA04] [@SZE05] [@BOU07]. They are generally extensions of the net theory, i.e. the introduction of mechanical characteristics in the solution of the shaping problem. The reinforcement is modeled by nodes connected by bars and springs with the aim of modeling the response in elongation, shear, torsion and bending. The work of Sze and Liu [@SZE05] is particularly interesting on the variety of solicitations modeled for 2D dry reinforcements, as illustrated in the following figure. These approaches, generally encountered for clothing fabrics, are abandoned in favor of semi-discrete or continuous methods in the case of technical fabrics.
+The _discrete_ approaches consist in considering the textile as a discontinuous assembly of deformable elements [@BOU07]. They are generally extensions of the net theory, i.e. the introduction of mechanical characteristics in the solution of the shaping problem. The reinforcement is modeled by nodes connected by bars and springs with the aim of modeling the response in elongation, shear, torsion and bending. The work of Sze and Liu [@SZE05] is particularly interesting on the variety of solicitations modeled for 2D dry reinforcements, as illustrated in the following figure. These approaches, generally encountered for clothing fabrics, are abandoned in favor of semi-discrete or continuous methods in the case of technical fabrics.
 
 <div style="text-align:center;">
  <figure >
@@ -384,7 +381,7 @@ The application of this type of approach in the case of thermoplastic prepreg co
 
 The _continuous_ approaches make the assumption of a continuous material at the macroscopic scale. This assumption follows directly from the consideration of non-slip between rovings during the shaping phase. The consideration of the textile as a continuous anisotropic medium whose behavior is homogenized from lower scales is then possible. The modeling is focused on an adapted proposal of behavior laws.
 
-Different approaches, either hypoelastic [@PEN05] [BAD08] [@KHA10] or hyperelastic [@SPE72] [@THI07] [@DRI10] [@CHA12], have given good results. These laws are associated with shell or plate elements for thin woven fabrics, and with bricks for thick woven fabrics. These methods have the advantage that they can be easily used in commercial finite element codes. Their main disadvantage comes from the homogenization that is performed. The same material is applied at all points of the fibrous reinforcement to be modeled and does not take into account the variations of the mechanical characteristics inherent to the weave studied.
+Different approaches, either hypoelastic [@PEN05] [@BAD08] [@KHA10] or hyperelastic [@SPE72] [@THI07] [@DRI10] [@CHA12], have given good results. These laws are associated with shell or plate elements for thin woven fabrics, and with bricks for thick woven fabrics. These methods have the advantage that they can be easily used in commercial finite element codes. Their main disadvantage comes from the homogenization that is performed. The same material is applied at all points of the fibrous reinforcement to be modeled and does not take into account the variations of the mechanical characteristics inherent to the weave studied.
 
 <div style="text-align:center;">
  <figure >
@@ -395,9 +392,9 @@ Different approaches, either hypoelastic [@PEN05] [BAD08] [@KHA10] or hyperelast
 
 <!-- ![khan ](/assets/img/KHA10_2.png){#fig:1_KHA10 width="90%"} -->
 
-Most of the proposed continuous models for the shaping of prepreg composites are based on the so-called IFRM (_ideal fiber reinforced model_) assumptions. IFRM was originally proposed by Spencer for purely elastic responses [@SPE72] [@SPE84] and adapted by Rogers [@ROG89] and Johnson [@JOH95] to the viscoelastic behavior of unidirectional and bidirectional prepregs. Two important assumptions are made in this type of model: the incompressibility of the material and the inextensibility of the fibers. Therefore, the only _deformation mode_ considered is in-plane shear. This can be seen as the rotation of the rovings around the crossing points of the warp-weft networks (lattice effect).
+Most of the proposed continuous models for the shaping of prepreg composites are based on the so-called IFRM (_ideal fiber reinforced model_) assumptions. IFRM was originally proposed by Spencer for purely elastic responses [@SPE84] and adapted by Rogers [@ROG89] and Johnson [@JOH95] to the viscoelastic behavior of unidirectional and bidirectional prepregs. Two important assumptions are made in this type of model: the incompressibility of the material and the inextensibility of the fibers. Therefore, the only _deformation mode_ considered is in-plane shear. This can be seen as the rotation of the rovings around the crossing points of the warp-weft networks (lattice effect).
 
-In the case of woven reinforcements, the stress state is given by the following relationship [@ROG89] [@JOH95] [@SPE00]:
+In the case of woven reinforcements, the stress state is given by the following relationship [@SPE00]:
 
 $$
 \begin{split}
@@ -408,7 +405,7 @@ $$
 
 $\mathbf{{A}}  = \mathbf{a}\otimes \mathbf{a}$, $\mathbf{{B}}  = \mathbf{b}\otimes \mathbf{b}$ and $\mathbf{{C}}  = \mathbf{a}\otimes \mathbf{b}$, $\mathbf{a}$ et $\mathbf{b}$ being the directions of the fibers in the warp and weft direction respectively.
 
-The first term of the previous relation represents an arbitrary hydrostatic pressure induced by the assumption of incompressibility of the material, similarly, $T_A$ and $T_B$ are arbitrary stresses in the direction of the fibers resulting from the inextensibility stress. The scalars $\eta_\mathrm{1}$ , $\eta_\mathrm{2}$ and $\eta_\mathrm{3}$ can be interpreted as the viscosity parameters of the material, possibly as a function of the strain rate tensor $\mathbf{{D}}$ (non-linear viscosity). The identification of these parameters from experimental tests, either in the one-dimensional case [@ROG89a] [@GOS96] [@ADV97] [@CHR93] [@MAR95] or in the two-dimensional case [@OB91] [@MCG97] [@MCG98], has been the subject of much work. However, difficulties have been encountered mainly due to the fact that $\eta_\mathrm{1}$ , $\eta_\mathrm{2}$ and $\eta_\mathrm{3}$ are not associated with simple shear mechanisms. In order to correctly represent the different _flows_ associated with the main deformation modes of the tissue, different modifications have been proposed [@MCG97] [@MAL00].
+The first term of the previous relation represents an arbitrary hydrostatic pressure induced by the assumption of incompressibility of the material, similarly, $T_A$ and $T_B$ are arbitrary stresses in the direction of the fibers resulting from the inextensibility stress. The scalars $\eta_\mathrm{1}$ , $\eta_\mathrm{2}$ and $\eta_\mathrm{3}$ can be interpreted as the viscosity parameters of the material, possibly as a function of the strain rate tensor $\mathbf{{D}}$ (non-linear viscosity). The identification of these parameters from experimental tests, either in the one-dimensional case [@GOS96] [@ADV97] [@CHR93] [@MAR95] or in the two-dimensional case [@OB91] [@MCG97] [@MCG98], has been the subject of much work. However, difficulties have been encountered mainly due to the fact that $\eta_\mathrm{1}$ , $\eta_\mathrm{2}$ and $\eta_\mathrm{3}$ are not associated with simple shear mechanisms. In order to correctly represent the different _flows_ associated with the main deformation modes of the tissue, different modifications have been proposed [@MAL00].
 
 The models developed under IFRM principles give very interesting analytical results in the case of simple deformations. However, the constraint associated with the non-extensibility of the fibers makes its implementation by finite elements difficult because of the arbitrary tensions. This last point has motivated the development of various models in order to make the implementation more suitable for the simulation of thermoforming of complex parts by finite elements [@HSI99] [@CHE01] [@THI07] [@JAU09] [@HAR04a] [@HAR11] [@GUZ15].
 
@@ -442,7 +439,7 @@ Another modeling strategy considers discrete and continuous parts as totally ind
  </figure> 
 </div>
 
-<!-- ![Representation of two plies and the seams linking them in a semi-discrete model [@CRE06] ](/assets/img/CRE06a.png){#fig:1_CRE06 width="90%"} -->
+<!-- ![Representation of two plies and the seams linking them in a semi-discrete model](/assets/img/CRE06a.png){#fig:1_CRE06 width="90%"} -->
 
 ## References
 
