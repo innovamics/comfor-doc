@@ -5,10 +5,10 @@ stages:
   - test
   - deploy 
 
-image: python:3.9-alpine
+image: python:3.9
 
 before_script:
-  - pacman -S  pandoc
+  - apt-get update -yq && apt-get -yq install pandoc
   - pip install -r requirements.txt
 
 test:
