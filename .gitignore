@@ -12,3 +12,9 @@ _site/
 
 #Other
 .DS_Store
+
+# Python
+build
+venv
+bin
+lib
