@@ -18,3 +18,5 @@ build
 venv
 bin
 lib
+.venv
+venv
