@@ -16,7 +16,6 @@ _site/
 # Python
 build
 venv
-bin
 lib
 .venv
 venv
