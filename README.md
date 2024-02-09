@@ -7,7 +7,9 @@ Public documentation of the Comfor project
 Install requirement using `pip`
 
 ```sh
-python -m pip install -r requirements
+python3 -m venv .venv
+source .venv/bin/activate 
+python3 -m pip install -r requirements
 ```
 
 and build the site:
