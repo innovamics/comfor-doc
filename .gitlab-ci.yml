@@ -5,10 +5,10 @@ stages:
   - test
   - deploy 
 
-image: python:3.9
+image: python:3.8-buster
 
 before_script:
-  - apt-get update -yq && apt-get -yq install pandoc pandoc-citeproc
+  - apt update -yq && apt -yq install pandoc pandoc-citeproc
   - pip install -r requirements.txt
 
 test:
