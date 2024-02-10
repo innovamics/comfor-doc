@@ -5,10 +5,11 @@ stages:
   - test
   - deploy 
 
-image: python:3.8-buster
+image: python:3.13.0a3-bookworm
 
 before_script:
-  - apt update -yq && apt -yq install pandoc pandoc-citeproc
+  - apt update -yq 
+  - apt -yq install pandoc
   - pip install -r requirements.txt
 
 test:
