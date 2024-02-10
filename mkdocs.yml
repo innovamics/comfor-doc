@@ -3,7 +3,7 @@ site_author: Eduardo Guzman
 site_dir: public
 site_url: https://comfor.gitlab.io/comfor-doc
 repo_url: https://gitlab.com/comfor/comfor-doc
-copyright: Copyright &copy; 2021 Eduardo Guzman
+copyright: Copyright &copy; 2019 - 2024 Eduardo Guzman
 
 docs_dir: docs
 
