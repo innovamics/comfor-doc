@@ -9,7 +9,7 @@ Install requirement using `pip`
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install -r requirements
+python3 -m pip install -r requirements.txt
 ```
 
 and build the site:
