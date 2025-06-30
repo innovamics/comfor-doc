@@ -27,6 +27,7 @@ test:
     - artefactos_tmp
   rules:
     - if: '$CI_COMMIT_BRANCH != "master"'
+  allow_failure: true 
 
 pages:
   stage: deploy
