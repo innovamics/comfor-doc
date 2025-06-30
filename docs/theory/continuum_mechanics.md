@@ -577,4 +577,3 @@ $$
 
 ## References
 
-\bibliography
