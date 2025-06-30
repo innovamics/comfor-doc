@@ -29,11 +29,25 @@ nav:
     - 'Modularity': developer/dev_mod.md
 
 theme:
-  name: readthedocs
+  name: material
   analytics: 
     gtag: 'G-7CEE34RD0F'
   # Select here your language: en, fr, ...
   language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  
 
 markdown_extensions:
     - toc:
@@ -48,8 +62,8 @@ markdown_extensions:
     - pymdownx.arithmatex:        # LaTeX syntax
         generic: true
     - pymdownx.emoji:             # :smile: :heart: :thumbsup:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
     - pymdownx.tasklist          # - [X] item
     - pymdownx.tabbed             # === "Tab 1"
     #- pymdownx.superfences
