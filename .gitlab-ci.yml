@@ -5,12 +5,15 @@ stages:
   - test
   - deploy 
 
-image: python:3.10
+image: python:3.12
 
 before_script:
   - apt update -yq 
   - apt -yq install pandoc
+  - panodc --version
   - pip install -r requirements.txt
+  - mkdocs --version
+  
 
 test:
   stage: test
@@ -19,6 +22,7 @@ test:
   artifacts:
     paths:
     - test
+    - 
   rules:
     - if: '$CI_COMMIT_BRANCH != "master"'
 
