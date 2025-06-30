@@ -304,7 +304,7 @@ $$
  \int_\Omega{\frac{d}{dt}\rho e \,dv}  = \int_\Omega  {\mathbf{\sigma} : \mathbf{D} \;dv}  + \int_\Omega{\left( r - \mathrm{div} \mathbf{q} \right)\, dv}
 $$
 
-where the divergence theorem has been applied to $Q$ and the Reynolds transport theorem to left hand side[@HOL00] [@LEM09]. This equation is verified for any point on $\Omega$ domain considered. Thus, the _local_ Eulerian form is:
+where the divergence theorem has been applied to $Q$ and the Reynolds transport theorem to left hand side [@LEM09]. This equation is verified for any point on $\Omega$ domain considered. Thus, the _local_ Eulerian form is:
 
 $$
 \frac{d}{dt} \rho e = \mathbf{\sigma} : \mathbf{D}  + r - \mathrm{div} \mathbf{q}
@@ -577,3 +577,4 @@ $$
 
 ## References
 
+\bibliography
