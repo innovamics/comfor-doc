@@ -21,7 +21,6 @@ test:
   - mkdocs build --strict --verbose --site-dir test
   - mkdir -p artefactos_tmp
   - cp -r /tmp/* artefactos_tmp/ || true
-  - mkdocs build --clean
   artifacts:
     paths:
     - test
