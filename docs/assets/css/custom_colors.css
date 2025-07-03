@@ -1,0 +1,30 @@
+/*
+
+Selection of color for the documentation:
+
+Principal Deep Blue  :  #116A7B
+Secondary Light Blue :  #C2DEDC
+Accent Cream color   :  #ECE5C7
+Accent Light Grey    :  #CDC2AE
+
+*/
+
+:root {
+
+    /* Light */
+
+    --md-primary-fg-color: #116A7B;
+    --md-accent-fg-color: #ECE5C7;
+    --md-default-bg-color: #ffffff;
+    --md-typeset-color: #040404;
+}
+
+[data-md-color-scheme="slate"] {
+
+    /* Dark */
+
+    --md-primary-fg-color: #116A7B;
+    --md-accent-fg-color: #CDC2AE;
+    --md-default-bg-color: #1e1e1e;
+    --md-typeset-color: #c4c4c4;
+}
