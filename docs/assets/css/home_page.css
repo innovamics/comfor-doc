@@ -1,0 +1,24 @@
+/* Transparent Sidebars */
+
+.md-sidebar__scrollwrap {
+    background-color: none;
+    backdrop-filter: none(4px);
+    border-radius: 6px;
+    padding: 4px 3px;
+    border: 1px none;
+}
+
+
+/* Text */
+
+.md-sidebar__scrollwrap {
+    background: none;
+    color: #ffffff;
+}
+
+/* Sidebar Down on Index */
+
+body.home .md-sidebar--primary,
+body.home .md-sidebar--secondary {
+    margin-top: 200px;
+}

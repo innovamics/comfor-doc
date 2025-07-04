@@ -113,7 +113,7 @@ extra_css:
   - assets/css/tabbed.css
   - assets/css/custom_colors.css
   - assets/css/background.css
-  - assets/css/box.css
+  - assets/css/home_page.css
 
 
   # See https://www.mkdocs.org/user-guide/configuration/

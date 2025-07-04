@@ -14,3 +14,14 @@ body.home {
 .md-header {
     box-shadow: none !important;
 }
+
+body.home .md-content h1:first-of-type {
+    margin-top: 200px;
+}
+
+
+/*
+.md-content h1:first-of-type {
+    margin-top: 200px;
+}
+    */

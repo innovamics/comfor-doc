@@ -1,12 +1,12 @@
 
-/*Parallax effect */
+/* Parallax effect */
 
 document.addEventListener("scroll", function () {
     const scrollY = window.scrollY;
     document.body.style.backgroundPositionY = -(scrollY * 2) + "px";
 });
 
-/*Homepage detection for background*/
+/* Homepage detection for background */
 
 document.addEventListener("DOMContentLoaded", function () {
     const path = window.location.pathname;
@@ -15,4 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
     if (path.endsWith("/index.html") || path.endsWith("/comfor-doc/") || path === "/comfor-doc") {
         document.body.classList.add("home");
     }
+});
+
+/* Side Box animation */
+
+document.addEventListener("DOMContentLoaded", function () {
+    function onScroll() {
+        if (window.scrollY > 50) {
+            document.body.classList.add("scrolled");
+        } else {
+            document.body.classList.remove("scrolled");
+        }
+    }
+
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // appel initial
 });
