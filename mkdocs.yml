@@ -71,7 +71,14 @@ theme:
         name: Light
   features:
       - navigation.footer
-     
+      - navigation.tabs
+
+#nav:
+ # - Accueil: index.md
+  #- Guide:
+   #   - Démarrage: guide/start.md
+    #  - Avancé: guide/advanced.md
+  #- À propos: about.md    
   
 
 markdown_extensions:
