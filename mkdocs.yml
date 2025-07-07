@@ -7,9 +7,6 @@ copyright: Copyright &copy; 2021 - 2024 Eduardo Guzman
 
 docs_dir: docs
 
-site_favicon: assets\img\apple-touch-icon-72x72.png
-
-
 nav:
   - 'Home':
     - 'Welcome': index.md
