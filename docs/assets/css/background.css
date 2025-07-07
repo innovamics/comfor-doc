@@ -9,19 +9,8 @@ body.home {
     transition: background-position 0.4s ease-out;
 }
 
-/*No shadow for header*/
+/* No shadow for header */
 
 .md-header {
     box-shadow: none !important;
 }
-
-body.home .md-content h1:first-of-type {
-    margin-top: 200px;
-}
-
-
-/*
-.md-content h1:first-of-type {
-    margin-top: 200px;
-}
-    */
