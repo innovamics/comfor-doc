@@ -35,8 +35,8 @@ theme:
 
   name: material
 
-  logo: assets\img\apple-touch-icon-114x114.png
-  favicon: assets\img\apple-touch-icon-114x114.png
+  logo: assets/img/apple-touch-icon-114x114.png
+  favicon: assets/img/apple-touch-icon-114x114.png
 
   analytics: 
     gtag: 'G-7CEE34RD0F'
