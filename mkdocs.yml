@@ -12,28 +12,36 @@ nav:
     - 'Welcome': index.md
     - 'Quick Start': overview/quick_starter_guide.md
     - 'Downloads': overview/download_page.md
-  - 'User':
+  - 'Getting started':
     - 'Overview': user/user_overview.md
     - 'Pre-processing': user/user_preprocessing.md
     - 'Analysis': user/user_analysis.md
     - 'Post-processing': user/user_postprocessing.md
-  - 'Theory':
+  - 'Docs':
     - 'Overview': theory/theory_overview.md
     - 'Continuum Mechanics': theory/continuum_mechanics.md
     - 'Composite Materials': theory/materials/composite_materials.md
     - 'Materials overview': theory/materials/materials_overview.md
     - 'Solvers': theory/solvers/solvers_overview.md
-  - 'Developer':
+  - 'API':
     - 'Overview': developer/dev_overview.md
     - 'Using git': developer/dev_git.md
     - 'Modularity': developer/dev_mod.md
+  - 'Road map':
+    - 'Test': index.md
+  - 'Contributing':
+    - 'Test': index.md
+  - 'FAQ':
+    - 'Test': index.md
+  - 'Partners':
+    - 'Test': index.md
 
 theme:
 
   name: material
 
-  logo: assets/img/apple-touch-icon-114x114.png
-  favicon: assets/img/apple-touch-icon-114x114.png
+  logo: assets/img/apple-touch-icon-72x72.png
+  favicon: assets/img/apple-touch-icon-72x72.png
 
   analytics: 
     gtag: 'G-7CEE34RD0F'
@@ -48,7 +56,7 @@ theme:
 
     - media: "(prefers-color-scheme: light)"        # Automatic gestion of user's preferences
 
-      scheme: default                               # Dark theme
+      scheme: default                               # Light theme
 
       primary: custom
       accent: custom
@@ -62,7 +70,7 @@ theme:
 
     - media: "(prefers-color-scheme: dark)"         # Automatic gestion of user's preferences
 
-      scheme: slate                                 # Light theme
+      scheme: slate                                 # Dark theme
 
       primary: custom
       accent: custom
@@ -76,13 +84,7 @@ theme:
       - navigation.footer
       - navigation.tabs
 
-#nav:
- # - Accueil: index.md
-  #- Guide:
-   #   - Démarrage: guide/start.md
-    #  - Avancé: guide/advanced.md
-  #- À propos: about.md    
-  
+
 
 markdown_extensions:
     - toc:
