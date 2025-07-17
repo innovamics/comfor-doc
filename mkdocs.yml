@@ -10,13 +10,16 @@ docs_dir: docs
 nav:
   - 'Home':
     - 'Welcome': index.md
-    - 'Quick Start': overview/quick_starter_guide.md
-    - 'Downloads': overview/download_page.md
+#    - 'Quick Start': overview/quick_starter_guide.md
+#    - 'Downloads': overview/download_page.md
   - 'Getting started':
-    - 'Overview': user/user_overview.md
-    - 'Pre-processing': user/user_preprocessing.md
-    - 'Analysis': user/user_analysis.md
-    - 'Post-processing': user/user_postprocessing.md
+     - 'Quick Start': overview/quick_starter_guide.md
+     - 'Downloads': overview/download_page.md
+     - 'Tutorial': index.md
+#    - 'Overview': user/user_overview.md
+#    - 'Pre-processing': user/user_preprocessing.md
+#    - 'Analysis': user/user_analysis.md
+#    - 'Post-processing': user/user_postprocessing.md
   - 'Docs':
     - 'Overview': theory/theory_overview.md
     - 'Continuum Mechanics': theory/continuum_mechanics.md
