@@ -213,7 +213,7 @@ The Cauchy tensor $\mathbf{\sigma}$ will be said to be Eulerian (i.e. current co
 
 ## Constitutive behavior models and the objectivity principle
 
-Constitutive behavior models describes the relationship between deformation and the evolution of stresses. We can distinguish three main types of constitutive behavior models [SID82]:
+Constitutive behavior models describes the relationship between deformation and the evolution of stresses. We can distinguish three main types of constitutive behavior models:
 
 - _Hypoelastic_: the strain rate is related to a stress rate. These laws are frequently used for materials with a low anisotropic response. They are easy to implement and suitable for updated resolutions. The stresses and strain energies may not be independent of the deformation history;
 
@@ -221,7 +221,7 @@ Constitutive behavior models describes the relationship between deformation and 
 
 - _Hyperelastic_: a strain energy density is defined as a stress potential. The stresses and strain energies are independent of the deformation history.
 
-A constitutive behavior model must verify the principle of material indifference or objectivity, i.e. it must be invariant in any change of reference frame. Indeed, the objectivity translates the independence of these quantities from the chosen observer. It is therefore necessary to define and work with objective quantities. It is thus necessary to distinguish among the previously introduced quantities those which are objective[@LEM09]:
+A constitutive behavior model must verify the principle of material indifference or objectivity, i.e. it must be invariant in any change of reference frame. Indeed, the objectivity translates the independence of these quantities from the chosen observer. It is therefore necessary to define and work with objective quantities. It is thus necessary to distinguish among the previously introduced quantities those which are objective[@LEM90]:
 
 - Any tensor written in the reference configuration $C_0$ (such the Green-Lagrange deformation tensor $\mathbf{E}$ and the second Piola-Kirchhoff stress tensor $\mathbf{S}$).
 
@@ -241,7 +241,7 @@ $$
 \mathbf{\sigma}^{\bigtriangledown} = \dot{\mathbf{\sigma}} + \mathbf{\sigma} \mathbf{\omega} - \mathbf{\omega}\mathbf{\sigma}
 $$
 
-or the _Green-Naghdi stress rate_[@BON08],
+or the _Green-Naghdi stress rate_[@BON97],
 
 $$
 \mathbf{\sigma}^{\bigtriangleup} = \dot{\mathbf{\sigma}} + \mathbf{\sigma} \dot{\mathbf{R}} \mathbf{R}^T - \dot{\mathbf{R}} \mathbf{R}^T\mathbf{\sigma}
@@ -304,7 +304,7 @@ $$
  \int_\Omega{\frac{d}{dt}\rho e \,dv}  = \int_\Omega  {\mathbf{\sigma} : \mathbf{D} \;dv}  + \int_\Omega{\left( r - \mathrm{div} \mathbf{q} \right)\, dv}
 $$
 
-where the divergence theorem has been applied to $Q$ and the Reynolds transport theorem to left hand side [@LEM09]. This equation is verified for any point on $\Omega$ domain considered. Thus, the _local_ Eulerian form is:
+where the divergence theorem has been applied to $Q$ and the Reynolds transport theorem to left hand side [@LEM90]. This equation is verified for any point on $\Omega$ domain considered. Thus, the _local_ Eulerian form is:
 
 $$
 \frac{d}{dt} \rho e = \mathbf{\sigma} : \mathbf{D}  + r - \mathrm{div} \mathbf{q}
@@ -365,7 +365,7 @@ $$
 
 ### State variables and thermodynamic potentials
 
-The thermodynamic state of a medium for a given point and at a fixed time is completely defined by the knowledge of a certain number of scalar and tensor variables, the state variables. The evolution of a system can then be considered as a succession of equilibrium states corresponding to the different points of the medium [@LEM09]. These state or thermodynamic variables can be observable or internal.
+The thermodynamic state of a medium for a given point and at a fixed time is completely defined by the knowledge of a certain number of scalar and tensor variables, the state variables. The evolution of a system can then be considered as a succession of equilibrium states corresponding to the different points of the medium [@LEM90]. These state or thermodynamic variables can be observable or internal.
 
 The observable variables (i.e. deformation, temperature) as its name indicates can be directly measured and fully describe the evolution of reversible phenomena, this is the case for elastic phenomena.
 
@@ -425,7 +425,7 @@ $$
 
 - $w$ respects the material symmetries.
 
-Using the [polar decomposition]() definition we can shows that the strain-energy potential depends only on the stretching part of $\mathbf{F}$ [@CIA88]:
+Using the [polar decomposition]() definition we can shows that the strain-energy potential depends only on the stretching part of $\mathbf{F}$ [@CIA21]:
 
 $$
 w\left(\mathbf{F} \right) = w\left(\mathbf{R^T}\mathbf{F} \right) = w\left(\mathbf{R}^T\mathbf{R}\mathbf{U} \right) =w\left(\mathbf{U} \right)
@@ -501,13 +501,13 @@ $$
 
 ### Transverse isotropic hyperelasticity
 
-A transverse isotropic material is characterized by a preferred direction $\mathbf{l}_1$ in its initial configuration. This type of material has rotational symmetry about this direction, and therefore the response of the material is also invariant to any arbitrary rotation about this axis. In this case, the strain energy potential can be expressed in terms of five independent scalars defined from the right-hand Cauchy-Green tensor. The common representation of this potential (see for example [@SPE72] [@SPE84]) is as follows:
+A transverse isotropic material is characterized by a preferred direction $\mathbf{l}_1$ in its initial configuration. This type of material has rotational symmetry about this direction, and therefore the response of the material is also invariant to any arbitrary rotation about this axis. In this case, the strain energy potential can be expressed in terms of five independent scalars defined from the right-hand Cauchy-Green tensor. The common representation of this potential (see for example [@SPE84]) is as follows:
 
 $$
 w = w \left( I_{1},I_{2},I_{3},I_{4},I_{5}\right)
 $$
 
-Where $I_{1},I_{2},I_{3}$ correspond to the classical right Cauchy-Green invariants. Whereas, $I_{4},I_{5}$ are pseudo-invariants associated with the principal direction by [@SPE72] [@BOE78] [@BOE87] [@QUA94] [@ITS04]:
+Where $I_{1},I_{2},I_{3}$ correspond to the classical right Cauchy-Green invariants. Whereas, $I_{4},I_{5}$ are pseudo-invariants associated with the principal direction by [@SPE84] [@BOE87] [@QUA94] [@ITS04]:
 
 $$
 \begin{aligned}
@@ -539,7 +539,7 @@ $$
 
 ### Orthotropic hyperelasticity
 
-An orthotropic material is defined, in the initial configuration, by three preferred directions $\mathbf{l_1}$, $\mathbf{l_2}$ and $\mathbf{l_3}$ (unit base vector). These directions allow to define the structural tensors [@BOE78] :
+An orthotropic material is defined, in the initial configuration, by three preferred directions $\mathbf{l_1}$, $\mathbf{l_2}$ and $\mathbf{l_3}$ (unit base vector). These directions allow to define the structural tensors [@BOE87] :
 
 $$
 \mathbf{L}_{ij}  = \mathbf{l}_i \otimes \mathbf{l}_j
