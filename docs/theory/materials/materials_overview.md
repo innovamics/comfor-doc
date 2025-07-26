@@ -144,7 +144,7 @@ MATERIALS TYPE HYPERELASTIC
 
 ### Textile composite hyperelastic materials
 
-The mechanical behavior of textile composite materials can modelled using a non-linear hyperelastic model[@GUZ15] [@GUZ16]. The membrane and bending contributions to the strain energy potential are decoupled given the fibrous nature of one single ply.
+The mechanical behavior of textile composite materials can modelled using a non-linear hyperelastic model[@GUZ15] [@GUZ16a]. The membrane and bending contributions to the strain energy potential are decoupled given the fibrous nature of one single ply.
 
 $$
 \begin{equation}
