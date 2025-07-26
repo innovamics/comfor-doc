@@ -316,7 +316,7 @@ Geometric approaches are based on the so-called fishnet algorithm. This so-calle
 
 - The absence of slippage between the woven fabric and the shaping tools.
 
-In this approach, the reinforcement is similar to hinged bars at the crossing points between networks[@BOI04]. As shown in [1.23](#fig:1_Filet){reference-type="ref" reference="fig:1_Filet"}, the algorithm determines the position of a curant point C from the intersection of the two geodesics drawn on the surface to be draped from the related points A and B. The position of the initial point is thus made paramount and influences the final result [@WAN99a].
+In this approach, the reinforcement is similar to hinged bars at the crossing points between networks. As shown in [1.23](#fig:1_Filet){reference-type="ref" reference="fig:1_Filet"}, the algorithm determines the position of a curant point C from the intersection of the two geodesics drawn on the surface to be draped from the related points A and B. The position of the initial point is thus made paramount and influences the final result [@WAN99a].
 
 <div style="text-align:center;">
  <figure >

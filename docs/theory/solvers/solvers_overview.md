@@ -119,7 +119,7 @@ The parameters $\gamma$ and $\beta$ of the algorithm allow to obtain different i
 
 ## Lumped mass matrix 
 
-In explicit dynamics, the mass and damping matrices are taken diagonally. The inversion of these matrices is then extremely simplified. A method of mass matrix condensation is used (mass lumping[@ZIE05]). The condensation of the matrix is done by summing on the diagonal the terms of the same row:
+In explicit dynamics, the mass and damping matrices are taken diagonally. The inversion of these matrices is then extremely simplified. A method of mass matrix condensation is used (mass lumping[@ZIE05a]). The condensation of the matrix is done by summing on the diagonal the terms of the same row:
 
 \begin{equation}
 	\tilde{M}_{ii} = \sum_j {M}_{ij}
