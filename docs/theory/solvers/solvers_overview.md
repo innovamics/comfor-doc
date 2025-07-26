@@ -16,7 +16,7 @@ The time integration scheme will define how displacements, velocities and accele
 
 ## Central difference scheme 
 
-The most popular, and currently implemented method on comfor is the central difference method. This method is developed from the central difference formulas applied for acceleration and velocity[@BEL13] [@BEN17]. 
+The most popular, and currently implemented method on comfor is the central difference method. This method is developed from the central difference formulas applied for acceleration and velocity[@BEL14] [@BEN17]. 
 
 Let the time of the simulation be $t_0 \leq t \leq t_e$ be subdivided in time steps $\Delta t^n$ from $n=1$ to $n = n_e$ where $n_e$ is the number of time steps and $t_e$ the end time of the simulation. The time after the _n-th_ integration is $t^n$. 
 

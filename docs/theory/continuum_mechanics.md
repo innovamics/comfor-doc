@@ -213,7 +213,7 @@ The Cauchy tensor $\mathbf{\sigma}$ will be said to be Eulerian (i.e. current co
 
 ## Constitutive behavior models and the objectivity principle
 
-Constitutive behavior models describes the relationship between deformation and the evolution of stresses. We can distinguish three main types of constitutive behavior models [SID82]:
+Constitutive behavior models describes the relationship between deformation and the evolution of stresses. We can distinguish three main types of constitutive behavior models [@SID82]:
 
 - _Hypoelastic_: the strain rate is related to a stress rate. These laws are frequently used for materials with a low anisotropic response. They are easy to implement and suitable for updated resolutions. The stresses and strain energies may not be independent of the deformation history;
 
@@ -241,7 +241,7 @@ $$
 \mathbf{\sigma}^{\bigtriangledown} = \dot{\mathbf{\sigma}} + \mathbf{\sigma} \mathbf{\omega} - \mathbf{\omega}\mathbf{\sigma}
 $$
 
-or the _Green-Naghdi stress rate_[@BON08],
+or the _Green-Naghdi stress rate_[@BON97],
 
 $$
 \mathbf{\sigma}^{\bigtriangleup} = \dot{\mathbf{\sigma}} + \mathbf{\sigma} \dot{\mathbf{R}} \mathbf{R}^T - \dot{\mathbf{R}} \mathbf{R}^T\mathbf{\sigma}
