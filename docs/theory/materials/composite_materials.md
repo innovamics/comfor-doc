@@ -277,7 +277,7 @@ Many models have been developed to obtain the final geometry. We note the models
 </figure>
 </div>
 
-X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@DES05] [@HSI09] [@HER80]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. An example of automation of the processing of microtomographic fabrics is shown [\[fig:1_NAO14\]](#fig:1_NAO14){reference-type="ref" reference="fig:1_NAO14"}.
+X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@DES05] [@HSI15] [@HER09]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. An example of automation of the processing of microtomographic fabrics is shown [\[fig:1_NAO14\]](#fig:1_NAO14){reference-type="ref" reference="fig:1_NAO14"}.
 
 <div style="text-align:center;">
 <figure>
@@ -381,7 +381,7 @@ The application of this type of approach in the case of thermoplastic prepreg co
 
 The _continuous_ approaches make the assumption of a continuous material at the macroscopic scale. This assumption follows directly from the consideration of non-slip between rovings during the shaping phase. The consideration of the textile as a continuous anisotropic medium whose behavior is homogenized from lower scales is then possible. The modeling is focused on an adapted proposal of behavior laws.
 
-Different approaches, either hypoelastic [@PEN05] [@BAD08] [@KHA10] or hyperelastic [@SPE72] [@TEN07] [@CHA12], have given good results. These laws are associated with shell or plate elements for thin woven fabrics, and with bricks for thick woven fabrics. These methods have the advantage that they can be easily used in commercial finite element codes. Their main disadvantage comes from the homogenization that is performed. The same material is applied at all points of the fibrous reinforcement to be modeled and does not take into account the variations of the mechanical characteristics inherent to the weave studied.
+Different approaches, either hypoelastic [@PEN05] [@BAD08] [@KHA10] or hyperelastic [@CHA12], have given good results. These laws are associated with shell or plate elements for thin woven fabrics, and with bricks for thick woven fabrics. These methods have the advantage that they can be easily used in commercial finite element codes. Their main disadvantage comes from the homogenization that is performed. The same material is applied at all points of the fibrous reinforcement to be modeled and does not take into account the variations of the mechanical characteristics inherent to the weave studied.
 
 <div style="text-align:center;">
  <figure >
