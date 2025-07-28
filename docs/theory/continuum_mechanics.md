@@ -1,6 +1,4 @@
-# Continuum mechanics in large transformations
-
-## Description of the motion
+# Description of the motion
 
 The motion in any point of a solid region $\Omega$ in space with boundary surface $\partial\Omega$, is described by the bijective function $\Phi$:
 
@@ -23,7 +21,7 @@ which gives the position vector $\mathbf{x}$ at time $t$ of any particle which p
 
 In solid mechanics, the reference configuration $C_0$ is usually associated with the initial state of the undeformed solid, which allows the two configurations to be associated in the same axis system. Nevertheless, it is preferable to treat these two systems separately and to distinguish between Lagrangian or material coordinates for the $C_0$ configuration and Eulerian or spatial coordinates for the current $C\left(t\right)$ configuration. By abuse of language the time dependence t will be omitted in the following assuming $t > 0$.
 
-## Deformation gradient tensor
+# Deformation gradient tensor
 
 In order to describe the kinematics in the vicinity of a given point $\mathbf{X}$, we introduce the gradient tensor of the transformation, also called the linear tangent application, defined as the Jacobian of the application $\Phi$ . The vector $d\mathbf{x}$ then takes the form:
 
@@ -56,7 +54,7 @@ $$
 \mathbf{n} ds =J\mathbf{F}^{-T}\mathbf{N}dS
 $$
 
-## Strain measurement
+# Strain measurement
 
 In order to define its deformation, it is necessary to characterize the changes in shape, i.e. the variations in length and angle. These are in fact the variations of the scalar products of material vectors $d\mathbf{X}$ and $\delta \mathbf{X}$, becoming $d\mathbf{x}$ and $\delta \mathbf{x}$ after transformation:
 
@@ -130,7 +128,7 @@ $$
 
 where $\dot{\mathbf{E}}$ is the Lagrangian strain rate.
 
-## Polar decomposition
+# Polar decomposition
 
 The deformation gradient tensor can be expressed as the product of a rotation tensor $\mathbf{R}$ time the stretch tensor $\mathbf{U}$.
 
@@ -156,7 +154,7 @@ $$
 \mathbf{U}= \lambda_{i} \mathbf{N}_{i} \otimes \mathbf{N}_{i}
 $$
 
-## Stress measurement
+# Stress measurement
 
 Let a deformable solid be virtually cut into two subdomains, before and after transformation. The equilibrium of each of the two subdomains thus defined imposes the existence of internal forces at the boundary. As in the case of small deformations, we define in the present configuration the stress vector $\mathbf{t}$ which characterizes the internal cohesive forces $\mathbf{f}$ exerted on a part of the solid through the surface $ds$ of external normal $\mathbf{n}$:
 
@@ -211,7 +209,7 @@ $$
 
 The Cauchy tensor $\mathbf{\sigma}$ will be said to be Eulerian (i.e. current configuration), while the second Piola-Kirchhoff tensor $\mathbf{S}$ will be said to be Lagrangian (i.e. initial configuration). The Piola-Kirchhoff $\mathbf{P}$ and Kirchhoff $\mathbf{\tau}$ tensors, neither Eulerian nor Lagrangian, will be called two-point tensor.
 
-## Constitutive behavior models and the objectivity principle
+# Constitutive behavior models and the objectivity principle
 
 Constitutive behavior models describes the relationship between deformation and the evolution of stresses. We can distinguish three main types of constitutive behavior models:
 
@@ -247,11 +245,11 @@ $$
 \mathbf{\sigma}^{\bigtriangleup} = \dot{\mathbf{\sigma}} + \mathbf{\sigma} \dot{\mathbf{R}} \mathbf{R}^T - \dot{\mathbf{R}} \mathbf{R}^T\mathbf{\sigma}
 $$
 
-## Thermodynamics of continuous media
+# Thermodynamics of continuous media
 
 The thermodynamic laws associated with the mechanics of continuous media is necessary to introduce the coupling between thermal phenomena and mechanical effects. However, even in the absence of any mechanical coupling, the second principle of thermodynamics allows the introduction of the fundamental principle related to dissipation, leading to the fact that the mechanical energy supplied to a system is lost as heat.
 
-### First principle of thermodynamics
+## First principle of thermodynamics
 
 The first principle of thermodynamics or law of conservation of energy expresses that the total energy variation (i.e. internal energy plus kinetic energy) is equal to the sum of the power of the external forces plus the quantity of heat supplied to the system per unit of time, that is to say:
 
@@ -310,7 +308,7 @@ $$
 \frac{d}{dt} \rho e = \mathbf{\sigma} : \mathbf{D}  + r - \mathrm{div} \mathbf{q}
 $$
 
-### Second principle of thermodynamics
+## Second principle of thermodynamics
 
 The second principle of thermodynamics involves two new variables: the temperature ${T}(\mathbf{x},t)$ and the entropy $S$. The entropy expresses a variation of internal energy associated with a variation of the temperature, its definition in function of the specific entropy $\eta$ is given by:
 
@@ -363,7 +361,7 @@ $$
 \Phi_{0}=-{{\rho }_{0}}\left( \dot{\psi }-\dot{{T} }\,\eta  \right)+\mathbf{{S}}:\mathbf{{{\dot{E}}}}-\frac{1}{T} \mathbf{q} \cdot \frac{\partial {T} }{\partial \mathbf{X}} \ge 0
 $$
 
-### State variables and thermodynamic potentials
+## State variables and thermodynamic potentials
 
 The thermodynamic state of a medium for a given point and at a fixed time is completely defined by the knowledge of a certain number of scalar and tensor variables, the state variables. The evolution of a system can then be considered as a succession of equilibrium states corresponding to the different points of the medium [@LEM90]. These state or thermodynamic variables can be observable or internal.
 
@@ -371,21 +369,21 @@ The observable variables (i.e. deformation, temperature) as its name indicates c
 
 The internal variables are involved when considering a dissipative phenomenon, which depends not only on the current state but also on the history of transformation undergone by the material. These variables do not appear directly in the equations of motion and therefore are not directly measurable. But from a physical point of view, they allow to give a macroscopic characterization of the microscopic state of the material (e.g. dislocations, crystallization, cracks). The choice of these variables, their type and number, requires a deep knowledge of the physical meaning of the problem and conditions the accuracy of the modeling of the phenomenon.
 
-### Rational thermodynamics
+## Rational thermodynamics
 
 In the general case, a law of behavior should provide: the free energy of the system $\Phi$, the specific entropy $\eta$, the stress tensor $\mathbf{{sigma}}$ and the heat flux vector $\mathbf{q}$ as a function of the state variables. The physical content of the theory results from the list of available state variables. Thermodynamics is then used to restrict the possible laws of behavior and to keep only those which are compatible with the second principle of thermodynamics, i.e. compatible with the Clausius-Duheim inequality.
 
 The rational thermodynamics method consists in assuming the existence of a thermodynamic potential as a function of a certain number of well-defined state variables (observables or internal). Generally we postulate the existence and the form of the free energy $\Phi$. The equations of state of the system are then deduced from the Clausius-Duheim inequality and from the application of certain hypotheses specific to the physical phenomenon (e.g.: an isothermal $T =const$ and homogeneous $\frac{\partial {T} }{\partial \mathbf{x}}=0$ process).
 
-### Thermodynamics of irreversible processes
+## Thermodynamics of irreversible processes
 
 In the case of an irreversible (dissipative) processes, the Clausius-Duheim inequality will allow us to determine the _dissipation_ function of the system, the associated forces (e.g. stresses) and thermodynamic flows (e.g. deformation rates) and to deduce the equations of evolution of the internal variables. This second method is more physical because its assumptions (nature of state variables and nature of dissipations) are directly related to the mechanisms of the phenomenon.
 
 In summary, when one wishes to describe the behavior of a given material on which one has a minimum of physical knowledge, it is preferable to use the method of thermodynamics of irreversible processes which is more restrictive than rational thermodynamics. Otherwise the rational thermodynamics will be used to give a general structure without referring to a particular material.
 
-## Hyperelastic constitutive models
+# Hyperelastic constitutive models
 
-### Generalities
+## Generalities
 
 The Clausius-Duhem inequality is the basis for the definition of hyperelastic laws of behavior. These laws differ from elastic models and hypoelastic laws which have no thermodynamic basis.
 
@@ -451,7 +449,7 @@ $$
 
 The previous expression is the general form of the hyperelastic behavior models. It only requires the definition of the strain-energy potential $w$ related to the mechanical behavior of the material.
 
-### Isotropic hyperelasticity
+## Isotropic hyperelasticity
 
 An hyperelastic material is isotropic relative to the reference configuration if the strain-energy :
 
@@ -499,7 +497,7 @@ $$
 \end{align}
 $$
 
-### Transverse isotropic hyperelasticity
+## Transverse isotropic hyperelasticity
 
 A transverse isotropic material is characterized by a preferred direction $\mathbf{l}_1$ in its initial configuration. This type of material has rotational symmetry about this direction, and therefore the response of the material is also invariant to any arbitrary rotation about this axis. In this case, the strain energy potential can be expressed in terms of five independent scalars defined from the right-hand Cauchy-Green tensor. The common representation of this potential (see for example [@SPE84]) is as follows:
 
@@ -537,7 +535,7 @@ $$
 \end{aligned}
 $$
 
-### Orthotropic hyperelasticity
+## Orthotropic hyperelasticity
 
 An orthotropic material is defined, in the initial configuration, by three preferred directions $\mathbf{l_1}$, $\mathbf{l_2}$ and $\mathbf{l_3}$ (unit base vector). These directions allow to define the structural tensors [@BOE87] :
 
@@ -575,6 +573,6 @@ $$
 \end{aligned}
 $$
 
-## References
+# References
 
 \bibliography

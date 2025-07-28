@@ -1,5 +1,3 @@
-# Pre-processing
-
 Comfor has a general class for parsers[^1], so in the future we will be able to create subclasses to read different data from other software (e.g. Abaqus). But for the moment Comfor reads a generic ASCII text file organized by blocks. The extension of this file is not important, but in the future we will associate the extension *.bim (basic input model), the structure of this file is detailed below. 
 
 However, in the general case, each input file must define the following points:
@@ -12,7 +10,7 @@ However, in the general case, each input file must define the following points:
 - Loads
 - Analysis
 
-## Units 
+# Units 
 
 There are not unit system in Comfor. The user can use any consistent unit system [see](https://femci.gsfc.nasa.gov/units/index.html). The units must be consistent in that mathematical operations directly yield the correct units for the result quantity. For example for Newtons' law :
 
@@ -20,7 +18,7 @@ $$ \mathbf{f} = \mathbf{M} \mathbf{a} $$
 
 If the unit force is the the newton $N$, the length unit is the $mm$ and the time unit is the second $s$, the units for acceleration are $mm/s^2$ and the units for mass, must be $kg \cdot 10^{3} = t$ (metric ton).
 
-## Bim input file
+# Bim input file
 
 This type of file is structured by blocks. Each block is labeled and defines the input parameters of the model. Each block have a type depending on the label/category of the input data. The existing labels ans types are given in the following table.
 
@@ -44,7 +42,7 @@ This type of file is structured by blocks. Each block is labeled and defines the
 
 The general definition of one block is: 
 
-```
+```xml
 <block_label> TYPE <type_block>
 <entry_1>
 <entry_2>
@@ -54,7 +52,7 @@ The general definition of one block is:
 !!! hint
     The order of the block in the input file has not impact for parsing operation
 
-### Control
+## Control
 
 This block defines the control parameters of the explicit analysis. 
 
@@ -69,7 +67,7 @@ The associated label is `CONTROLS`.
 
 **Structure**
 
-```javascript
+```xml
 CONTROLS
 RUN FROM <start_time> TO <end_time> STEP <time_step> 
 PRINT EVERY <print_step> 
@@ -80,11 +78,11 @@ If the `STEP` label is not specified, the time step will be set automatically ac
 !!! note
     In future version the solver type would be defined here.
 
-### Materials
+## Materials
 
 This blocks defines the materials of the model. Each block contains a group of materials of the same type. The general structure is :
 
-```
+```xml
 MATERIALS TYPE <material_type_1>
 <material_1_name> RHO = <density> DAMPING = <material1_damping_value> <prop_1> = <value_prop_n> ...
 <material_2_name> RHO = <density> DAMPING = <material2_damping-value> <prop_1> = <value_prop_n> ...
@@ -100,22 +98,22 @@ MATERIALS TYPE <material_type_2>
 - `DAMPING` is the mass proportional damping. This factor introduces damping forces caused by the absolute velocities of the model. This parameter is optional.
 - `<prop_n>` Defines the value of the property with name `prop_n`. The labels depends of each material. 
 
-To see the available list of materials see [Material](/theory/materials/materials_overview) 
+To see the available list of materials see [Material](../theory/materials/materials_overview.md) 
 
 _Example_: 
 
-```
+```js
 MATERIAL TYPE Elastic
 aluminium rho = 2.7e-9 nu=0.3 E=70000
 ```
 
-### Amplitudes
+## Amplitudes
 
 An amplitude allows to impose a time dependent behavior for constraints and loads.
 
 **Structure**
 
-```
+```xml
 AMPLITUDES TYPE <amplitude_type_1>
 <amplitude_1_name> <prop_n> = <value_prop_n> ...
 <amplitude_2_name> <prop_n> = <value_prop_n> ...
@@ -128,7 +126,7 @@ AMPLITUDES TYPE <amplitude_type_1>
 
 At this moment only tabular amplitudes are supported. The structure is given by:
 
-```
+```xml
 AMPLITUDES TYPE TABULAR
 <amplitude_1_name> VALUES = <t1 , v1, t2, v2, ... , tn, vn>
 <amplitude_2_name> VALUES = <t1 , v1, t2, v2, ... , tn, vn>
@@ -138,7 +136,7 @@ where `tn, vn` defines the value $v_n$ of the amplitude at time $t_n$. The value
 
 _Example_: 
 
-```
+```js
 AMPLITUDES TYPE TABULAR
 Palier   VALUES = 0, 0 ,1 ,1 ,5, 6, 0, 7, 0
 Increase VALUES = 0, 0 ,7 ,1 
@@ -148,16 +146,15 @@ Defines the amplitude:
 
 <canvas id="Amplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
-### Constraints 
+## Constraints 
 
 This block defines the different constraints of the model. Each Block contains different constraints of the same type. 
 
 **Structure**
 
-```
+```xml
 CONSTRAINTS TYPE <constraint_type_1>
 <constraint_1_name> <prop_n> = <value_prop_n> ...
-
 
 CONSTRAINTS TYPE <constraint_type_1>
 <constraint_n_name> <prop_n> = <value_prop_n> ... AMPLITUDE = <amplitude_name>
@@ -171,7 +168,7 @@ CONSTRAINTS TYPE <constraint_type_1>
 
 At this moment only the only type of constraint is `boundary_conditions`. This constraints allows to fix the DOFS of the node.The structure is given by:
 
-```
+```xml
 CONSTRAINTS TYPE BOUNDARY_CONDITION
 <bc_1_name> VX = <value> VY = <value> VZ = <value> VRX = <value> VRY = <value> VRZ = <value> AX = <value> AY = <value> AZ = <value> ARX = <value> ARY = <value> ARZ = <value>
 <bc_with_amplitude> VX = <value>  ... AMPLITUDE = <amplitude_name>
@@ -183,7 +180,7 @@ where `VI` defines the value displacement rate in direction I(X,Y,Z), `VRI` defi
 
 _Example_: 
 
-```
+```js
 CONSTRAINTS TYPE BOUNDARY_CONDITION
 FIX_ROT  VRX = O. VRY = O. VRZ = O.
 PINNED   VX = O.  VY = O.  VZ = O.
@@ -200,13 +197,13 @@ The displacement rate evolution is given by:
     The order of blocks doesn't have any importance, you can make reference to an amplitude even if the amplitude block is defined after.
 
 
-### Loads
+## Loads
 
 This block defines the different loads of the model. Each block may contain loads of different types.
 
 **Structure**
 
-```
+```xml
 LOADS 
 <load_1_name> <load_type_1> = <value_Load> <load_type_2> = <value_Load>
 <load_2_name> <load_type_3> = <value_Load> Amplitude = <amplitude_name>
@@ -222,7 +219,7 @@ LOADS
 
 _Example_:
 
-```
+```js
 LOADS
 punctual_force   FX = 1.0
 gravity_field    AZ = 9.8
@@ -233,13 +230,13 @@ vacuum VALUES = 0., 0. , 5., -1.0
 ```
 <canvas id="LoadAmplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
-### Nodes
+## Nodes
 
 This block defines the position of the different nodes in the model, **and* eventually the constraints and loads applied to each node. 
 
 **Structure**
 
-```
+```xml
 NODES
 <node_number_1> X = <x_coord> Y = <y_coord> Z = <z_coord>
 <node_number_2> X = <x_coord> Y = <y_coord> Z = <z_coord> CONSTRAINT = <constraint_name> LOAD = <load_name> 
@@ -274,16 +271,17 @@ This defines 3 points :
 <canvas id="NodeTri" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
 
-### Elements
+## Elements
 
 This block defines the different elements of the model. Each block contains a group of elements of the same type. The general structure is:
 
 **Structure**
 
-```
+```xml
 ELEMENTS TYPE <element_type>
 <element_number_1> NODES = <node_number_1 node_number_2 node_number_3 ...> MATERIAL = <material_name> T = <thickness_value> LOAD = <load_name> <prop_n> = <value_prop_n> ... 
 ```
+
 - `<element_number>`: integer element number
 - `NODES`: defines the connectivity input of the element
     - `<node_number_1>`: number of the first node as given in the node block
@@ -311,7 +309,7 @@ This defines a triangular membrane element from node 1, 2 and 3, using the const
 
 <canvas id="ElementTri" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
-### Contact 
+## Contact 
 
 Contact is enable by adding the key label `CONTACT = ` after the definition of each element line. Friction is enable by using `FRICTION = <friction_value>`. You can specify two contact types:
 
@@ -325,13 +323,13 @@ ELEMENTS TYPE MEMBRANE_3
 1 NODES = [1, 2, 3]	MATERIAL = elastic T =  1.0 CONTACT = edge FRICTION = 0.2
 ```
 
-### Trackers 
+## Trackers 
 
 Finally we can use tracker objects to track some nodal or element information. This information is printed into a CSV file for each [`print_step`](#control) and for each node/element specified in the tracker definition. 
 
 **Structure**
 
-```
+```xml
 TRACKER TYPE <tracker_type>
 <tracker_1_name> <list> = <object_number> TYPE = <information_type> <prop_n> = <value_prop_n> ... 
 <tracker_2_name> <list> = <object_number> TYPE = <information_type> <prop_n> = <value_prop_n> ... 
@@ -350,7 +348,7 @@ As you see, we can track nodal an element information.
 
 For nodes :
 
-```
+```xml
 TRACKER TYPE NODES
 <tracker_1_name> NODES = <node_number_1 node_number_2 node_number_3 ...>  TYPE = <information_type> DIRECTION = <direction_axis> 
 ```
@@ -374,14 +372,14 @@ TRACKER TYPE NODES
 
 _Example_:
 
-```
+```js
 TRACKERS TYPE NODE
 FY NODES = [7,8] DIRECTION = Y TYPE = FORCE
 ```
 
 For elements :
 
-```
+```xml
 TRACKER TYPE ELEMENT
 <tracker_1_name> ELEMENTS = <element_number_1 element_number_2 element_number_3 ...>  TYPE = <type_tensor> COMPONENT = <component_tensor>
 ```
