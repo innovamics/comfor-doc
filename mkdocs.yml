@@ -30,7 +30,7 @@ nav:
 
 theme:
   name: material
-  logo: assets/img/apple-touch-icon-114x114.png
+  logo: assets/img/logo-icon-innovamics.png
   favicon: assets/img/apple-touch-icon-72x72.png
   analytics:
     gtag: "G-7CEE34RD0F"
