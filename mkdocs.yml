@@ -1,4 +1,4 @@
-site_name: Comfor Documentation 
+site_name: Comfor Documentation
 site_author: Eduardo Guzman
 site_dir: public
 site_url: https://comfor.gitlab.io/comfor-doc
@@ -8,105 +8,76 @@ copyright: Copyright &copy; 2021 - 2025 Eduardo Guzman
 docs_dir: docs
 
 nav:
-  - 'Home':
-    - 'Welcome': index.md
-#    - 'Quick Start': overview/quick_starter_guide.md
-#    - 'Downloads': overview/download_page.md
-  - 'Getting started':
-     - 'Quick Start': overview/quick_starter_guide.md
-     - 'Downloads': overview/download_page.md
-     - 'Tutorial': index.md
-#    - 'Overview': user/user_overview.md
-#    - 'Pre-processing': user/user_preprocessing.md
-#    - 'Analysis': user/user_analysis.md
-#    - 'Post-processing': user/user_postprocessing.md
-  - 'Docs':
-    - 'Overview': theory/theory_overview.md
-    - 'Continuum Mechanics': theory/continuum_mechanics.md
-    - 'Composite Materials': theory/materials/composite_materials.md
-    - 'Materials overview': theory/materials/materials_overview.md
-    - 'Solvers': theory/solvers/solvers_overview.md
-  - 'API':
-    - 'Overview': developer/dev_overview.md
-    - 'Using git': developer/dev_git.md
-    - 'Modularity': developer/dev_mod.md
-  - 'Road map':
-    - 'Test': index.md
-  - 'Contributing':
-    - 'Test': index.md
-  - 'FAQ':
-    - 'Test': index.md
-  - 'Partners':
-    - 'Test': index.md
+  - "Home":
+      - "Welcome": index.md
+  - "Getting started":
+      - "Quick Start": overview/quick_starter_guide.md
+      - "Downloads": overview/download_page.md
+  #     - 'Tutorial': index.md
+  - "User":
+      - "Overview": user/user_overview.md
+      - "Preprocessing": user/user_preprocessing.md
+      - "Running": user/user_analysis.md
+      - "Postprocessing": user/user_postprocessing.md
+  - "Theory":
+      - "Overview": theory/theory_overview.md
+      - "Continuum Mechanics": theory/continuum_mechanics.md
+      - "Composite Materials": theory/materials/composite_materials.md
+      - "Materials overview": theory/materials/materials_overview.md
+      - "Solvers": theory/solvers/solvers_overview.md
+  - "Dev":
+      - "Using git": developer/dev_git.md
 
 theme:
-
   name: material
-
-  logo: assets/img/apple-touch-icon-72x72.png
+  logo: assets/img/apple-touch-icon-114x114.png
   favicon: assets/img/apple-touch-icon-72x72.png
-
-  analytics: 
-    gtag: 'G-7CEE34RD0F'
-  
-  language: en                                      # Select here your language: en, fr, ...
-
+  analytics:
+    gtag: "G-7CEE34RD0F"
+  language: en 
   font:
     text: Roboto
     code: Roboto Mono
-
   palette:
-
-    - media: "(prefers-color-scheme: light)"        # Automatic gestion of user's preferences
-
-      scheme: default                               # Light theme
-
+    - media: "(prefers-color-scheme: light)" # Automatic gestion of user's preferences
+      scheme: default # Light theme
       primary: custom
       accent: custom
       default: custom
       typeset: custom
-
-      toggle:                                       # Theme changing button
-        icon: material/toggle-switch                # Theme changing button style
+      toggle: # Theme changing button
+        icon: material/toggle-switch # Theme changing button style
         name: Dark
-  
-
-    - media: "(prefers-color-scheme: dark)"         # Automatic gestion of user's preferences
-
-      scheme: slate                                 # Dark theme
-
+    - media: "(prefers-color-scheme: dark)" # Automatic gestion of user's preferences
+      scheme: slate # Dark theme
       primary: custom
       accent: custom
       default: custom
       typeset: custom
-
-      toggle:                                       # Theme changing button             
-        icon: material/toggle-switch-off-outline    # Theme changing button style
+      toggle: # Theme changing button
+        icon: material/toggle-switch-off-outline # Theme changing button style
         name: Light
   features:
-      - navigation.footer
-      - navigation.tabs
-
-
+    - navigation.footer
+    - navigation.tabs
 
 markdown_extensions:
-    - toc:
-        permalink: "#"
-        baselevel: 2
-        separator: "_"
-    - attr_list
-    - footnotes 
-    - fenced_code 
-    - def_list 
-    - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
-    - pymdownx.arithmatex:        # LaTeX syntax
-        generic: true
-    - pymdownx.emoji:             # :smile: :heart: :thumbsup:
-        emoji_index: !!python/name:material.extensions.emoji.twemoji
-        emoji_generator: !!python/name:material.extensions.emoji.to_svg
-    - pymdownx.tasklist          # - [X] item
-    - pymdownx.tabbed             # === "Tab 1"
-    #- pymdownx.superfences
+  - toc:
+      permalink: "#"
+      baselevel: 2
+      separator: "_"
+  - attr_list
+  - footnotes
+  - fenced_code
+  - def_list
+  - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
+  - pymdownx.arithmatex: # LaTeX syntax
+      generic: true
+  - pymdownx.emoji: # :smile: :heart: :thumbsup:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist # - [X] item
+  - pymdownx.tabbed # === "Tab 1"
 
 plugins:
   - search
@@ -117,7 +88,7 @@ plugins:
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   # Math ajax
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # Math ajax
   - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js # chart.js
   - assets/js/xy_graphs.js
   - assets/js/table_rtd.js
@@ -129,8 +100,3 @@ extra_css:
   - assets/css/custom_colors.css
   - assets/css/background.css
   - assets/css/home_page.css
-
-
-  # See https://www.mkdocs.org/user-guide/configuration/
-  # pip install pymdown-extensions
-  # pip install --upgrade mkdocs-material
