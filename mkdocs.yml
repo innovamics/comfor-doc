@@ -10,7 +10,7 @@ docs_dir: docs
 nav:
   - "Home":
       - "Welcome": index.md
-  - "Getting started":
+  - "Getting Started":
       - "Quick Start": overview/quick_starter_guide.md
       - "Downloads": overview/download_page.md
   #     - 'Tutorial': index.md
@@ -110,10 +110,22 @@ plugins:
           build: true
           nav_translations:
             Home: Accueil
-            Getting Started: Démarrage Rapide
+            Welcome: Bienvenue
             User: Utilisateur
             Theory: Théorie
             Dev: Développeur
+            Overview: Généralités
+            Preprocessing: Pré-traitement
+            Running: Exécution
+            Postprocessing: Post-traitement
+            Using git: Utilisation de git
+            Downloads: Téléchargements
+            Continuum Mechanics: Mécanique des milieux continus
+            Composite Materials: Matériaux composites
+            Materials overview: Matériaux
+            Solvers: Solveurs
+            Getting Started: Bien démarrer
+            Quick Start: Démarrage rapide
           admonition_translations:
             attention: Attention
             danger: Danger

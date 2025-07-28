@@ -97,7 +97,7 @@ git clone https://gitlab.com/innovamics/comfor.git
 
 Assurez-vous que `make` est installé (`make --version`). C’est généralement le
 cas sur macOS et Linux après l’installation des
-[outils développeurs](#prérequis).
+[outils développeurs](#prerequis).
 
 Les règles de compilation sont générées par CMake via le fichier
 `CMakeLists.txt`. Il est recommandé de créer un dossier `Build/` pour regrouper
