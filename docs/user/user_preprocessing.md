@@ -1,4 +1,4 @@
-Comfor has a general class for parsers[^1], so in the future we will be able to create subclasses to read different data from other software (e.g. Abaqus). But for the moment Comfor reads a generic ASCII text file organized by blocks. The extension of this file is not important, but in the future we will associate the extension *.bim (basic input model), the structure of this file is detailed below. 
+Comfor has a general class for parsers [^1], so in the future we will be able to create subclasses to read different data from other software (e.g. Abaqus). But for the moment Comfor reads a generic ASCII text file organized by blocks. The extension of this file is not important, but in the future we will associate the extension *.bim (basic input model), the structure of this file is detailed below. 
 
 However, in the general case, each input file must define the following points:
 
