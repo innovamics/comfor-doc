@@ -26,7 +26,7 @@ The following parameter must be set for all the materials:
 
 **Example**
 
-```
+```xml
 MATERIALS TYPE <material_type_1>
 <material_name> RHO = <mass density> DAMPING = <damping_value> ...
 ```
@@ -70,7 +70,7 @@ $$
 
 **Example**
 
-```
+```xml
 MATERIALS TYPE ELASTIC
 <material_name> RHO = <rho> DAMPING = <material_damping> E = <young_modulus> NU = <poissons_ratio>
 ```
@@ -129,7 +129,7 @@ With p being the Lagrange multiplier associated with the incompressibility condi
 
 **Example**
 
-```
+```xml
 MATERIALS TYPE HYPERELASTIC
 <material_name> RHO = <rho> DAMPING = <material_damping> TYPE = OGDEN MU = <mu_1 mu_2 mu_3 mu_n> ALPHA = <alpha_1 alpha_2 alpha_3 alpha_n>
 ```
@@ -196,7 +196,7 @@ $$
 
 **Example**
 
-```
+```xml
 MATERIALS TYPE HYPERTEXTILE
 <material_name> RHO = <rho> DAMPING = <material_damping> WARPORI = <l1_x, l1_y, l1_z> WEFTORI = <l2_x, l2_y, l2_z> KELONGWARP = <kelong1_1, kelong1_2, kelong1_n> KELONGWEFT = <kelong2_1, kelong2_2, kelong2_n> KSHEAR = <kshear_1, kshear_2, kshear_n>
 ```

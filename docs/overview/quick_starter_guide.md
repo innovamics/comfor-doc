@@ -12,7 +12,7 @@ To build Comfor from sources you will need to download an compile the code. If s
 
 **CMake** : a cross-platform, open-source build system generator. Allows to generate a project for a given IDE (Unix Makefiles, Xcode, Eclipse, etc...) or compilation rules for Comfor. It can be easily installed under linux with the following command:
 
-```bash
+```sh
 sudo apt install cmake
 ```
 
@@ -146,7 +146,7 @@ Example:
 
 Expected result :
 
-```
+```console
 [==========] Running 5 tests from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 5 tests from TabularTest
