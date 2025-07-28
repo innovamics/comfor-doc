@@ -40,22 +40,19 @@ For 2D fabrics, there are three main weaves:
 
 - _Satin_: the binding points of the warp and weft are scattered in order to reduce the diagonal effect present on the twill. The weft thread passes over N warp threads and then under 1.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/tissage2D1.svg"  width="200" />
-      <figcaption>Taffeta</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/tissage2D2.svg"  width="200" />
-      <figcaption>Twill</figcaption>
-    </figure>
-    <figure  >
-      <img src="../../../assets/img/tissage2D3.svg"  width="200" />
-      <figcaption>Satin</figcaption>
-    </figure>
-    <figcaption>Caption for the bundle of images</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/tissage2D1.svg" width="200" />
+    <figcaption>Taffeta</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/tissage2D2.svg" width="200" />
+    <figcaption>Twill</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/tissage2D3.svg" width="200" />
+    <figcaption>Satin</figcaption>
+  </figure>
 </div>
 
 The combination of these three families of textile weaves and materials results in a wide variety of woven reinforcements. If the reinforcement is identical in the warp and weft direction, it is called a balanced fabric. Generally speaking, a fabric can be characterized by its _crimp_, the relative arrangement of the warps and wefts. The latter is defined by the ratio of the length of the fabric in one direction to the length of a yarn in that same direction. Different studies [@BUE01] [@BOI01] [@LOM05] [@HIV08] have been able to show the fundamental influence of crimp on the mechanical behavior of the reinforcements. The crimp factor is given by:
@@ -122,7 +119,7 @@ In vacuum infusion, the dry woven reinforcement is placed between a mold and a w
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/infusion_vide.svg" width=300 />
+   <img src="../../../assets/img/infusion_vide.svg" width=400 />
    <figcaption>Vacuum infusion</figcaption>
  </figure> 
 </div>
@@ -213,19 +210,18 @@ Currently, the existing models that come closest to modeling the behavior of rei
 
 The main limitation of this type of approach is the computational time inherent to the number of fibers to model. For this reason, groups of fibers are modeled in the wicks, reducing the number of virtual fibers to a few tens instead of thousands of real fibers. Therefore, the simulation of the shaping of a large part with this approach is not feasible in the current state of research.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/ZHO04.png"  width="300" />
-      <figcaption>Zhou model</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/DUR10plain.png"  width="300" />
-      <figcaption>Durville model </figcaption>
-    </figure>
-    <figcaption>Microscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/ZHO04.png" width="300" />
+    <figcaption>Zhou model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/DUR10plain.png" width="300" />
+    <figcaption>Durville model</figcaption>
+  </figure>
 </div>
+
+
 
 ### Mesoscopic simulation
 
@@ -241,18 +237,15 @@ Analytical approaches have been developed to access these thermomechanical and g
 
 The next figures shows an example using this type of approach proposed by Kawabata [@KAW73]. The roving is described by a set of segments schematizing its mean line: these segments then form a set of elastic tensile bars representing the whole woven reinforcement. The interactions between the rovings at the crossing points are modeled by springs of different types.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/KAW73.png"  width="250" />
-      <figcaption>Structure to model</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/KAW73_2.png"  width="250" />
-      <figcaption>Analytical modelling</figcaption>
-    </figure>
-    <figcaption>Mesoscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/KAW73.png" width="250" />
+    <figcaption>Structure to model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/KAW73_2.png" width="250" />
+    <figcaption>Analytical modelling</figcaption>
+  </figure>
 </div>
 
 Analytical approaches provide consistent results in determining the mechanical behavior of wicks in tension, but are more limited in more complex applications where shear is involved, for example. Simplifying assumptions about the geometry, especially at the level of lateral contacts, are problematic.
@@ -261,38 +254,29 @@ Faced with these limitations, the use of finite elements seems a good alternativ
 
 Many models have been developed to obtain the final geometry. We note the models associated with the software _WiseTex_ developed at the Katholieke Universiteit Leuven [@LOM00] and _Texgen_ developed at the University of Nottingham [@SHE07]. In the case of _WiseTex_, the geometry of the reinforcement is obtained by minimizing the strain energy of the strands within the reinforcement by taking into account different mechanical contributions (tension, bending, torsion, compression of the strands and interactions). This approach requires the experimental identification of data that are difficult to obtain. The models made with _Texgen_ , unlike _WiseTex_, do not use mechanical considerations. However, it allows to easily realize elementary meshes of 2D and 3D woven fabrics in which the wicks can have variable non-symmetric sections along their mean line. For both approaches, the problem of interpenetration, although reduced under _WiseTex_ [@VER05], remains major.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/LOM00.png"  width="300" />
-      <figcaption>Structure to model</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/texgen.png"  width="300" />
-      <figcaption>Analytical modelling</figcaption>
-    </figure>
-    <figcaption>Mesoscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/LOM00.png" width="300" />
+    <figcaption>Structure to model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/texgen.png" width="300" />
+    <figcaption>Analytical modelling</figcaption>
+  </figure>
 </div>
 
 X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@DES05] [@HSI15] [@HER09]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. 
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/tomo_comp_xy_yz.png"  width="300" />
-      <figcaption>3D tomography of an interlock</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/simu_comp_xy_yz.png"  width="300" />
-      <figcaption>Mesh part</figcaption>
-    </figure>
-    <figcaption>Mesoscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/tomo_comp_xy_yz.png" width="300" />
+    <figcaption>3D tomography of an interlock</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/simu_comp_xy_yz.png" width="300" />
+    <figcaption>Mesh part</figcaption>
+  </figure>
 </div>
-
-<!-- ![3D tomography of an interlock](/assets/img/tomo_comp_xy_yz.png){#fig:1_NAO14ini2 width="\textwidth"}.
-![Modèle obtenu maillé.](/assets/img/simu_comp_xy_yz.png){#fig:1_NAO14fin2 width="\\textwidth"} -->
 
 Once the geometry is defined and discretized by finite elements, it is necessary to associate a behavior law to the wicks, which are in most cases considered as a continuous medium. This behavior is very specific due to the fibrous nature of the fibers. Most studies use hypoelastic [@GAS00] or hyperelastic [@CHA11b] models to describe this behavior.
 
@@ -328,22 +312,16 @@ In this approach, the reinforcement is similar to hinged bars at the crossing po
 
 With the removal of all mechanical and weaving considerations, the results are identical whatever the stiffness of the rovings and the weave chosen. Kinematic blocking in shear and thickness variation in compression are also absent from the basic model. The absence of developed contact prevents the use of external tools such as blanket clamps, which are necessary for some shaping. For woven reinforcements, the net algorithm is interesting as a preliminary approach to determine the degree of complexity of forming a part. An example of application on a non-developable part is given in the next figure.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/FiletDrappagePiece.png"  width="300" />
-      <figcaption>Geometrical part</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/FiletDrappage.png"  width="300" />
-      <figcaption>Simulation</figcaption>
-    </figure>
-    <figcaption>Geometrical approach</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/FiletDrappagePiece.png" width="300" />
+    <figcaption>Geometrical part</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/FiletDrappage.png" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
 </div>
-
-<!-- ![Piece](/assets/img/FiletDrappagePiece.png){#fig:1_FiletDrappagePiece width="69%"}
-![Drape](/assets/img/FiletDrappage.png){#fig:1_FiletDrappage width="69%"} -->
 
 #### Mechanical approaches
 
@@ -360,23 +338,16 @@ The _discrete_ approaches consist in considering the textile as a discontinuous 
 
 The application of this type of approach in the case of thermoplastic prepreg composites results in the modification of the mechanical behavior of the discrete elements that compose the reinforcement, in order to take into account the contribution of the matrix. We note the model proposed by Skordos [@SKO07] based on the work of Sharma [@SHA04], which introduces nonlinear elastoviscoplastic elements in order to take into account the specific behaviors of prepregs, such as the dependence on the strain rate.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/skordos1.svg"  width="300" />
-      <figcaption>Meshing</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/skordos2.svg"  width="300" />
-      <figcaption>Simulation</figcaption>
-    </figure>
-    <figcaption>Skordos discret approach</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/skordos1.svg" width="300" />
+    <figcaption>Meshing</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/skordos2.svg" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
 </div>
-
-<!-- ![skordos1](/assets/img/skordos1.svg){#fig:1_skordos1 width="\\textwidth"}
-
-![skordos2](/assets/img/skordos2.svg){#fig:1_skordos2 width="\\textwidth"} -->
 
 The _continuous_ approaches make the assumption of a continuous material at the macroscopic scale. This assumption follows directly from the consideration of non-slip between rovings during the shaping phase. The consideration of the textile as a continuous anisotropic medium whose behavior is homogenized from lower scales is then possible. The modeling is focused on an adapted proposal of behavior laws.
 
@@ -412,22 +383,16 @@ The _semi-discrete_ approaches are a combination of the two approaches mentioned
 
 In the first case, the discrete and continuous parts are associated in the same Lagrangian element. The forces generated by any deformation are subdivided between a tension contribution associated with the discrete parts and the other contributions (shear, compression) associated with the continuous part. The discrete and continuous parts are fixed with respect to each other in the isoparametric configuration. In this case, the discrete part is only the elementary representation of an energy contribution of tension. Different models have been developed, dedicated to 2D fabrics using shell elements [@HAM08] [@HAM09] [@BEL12], but also to interlocks using solid elements (hexahedral) [@DE09a]. The interest of such an element is to be able to represent more accurately and simply the local directions of the wicks in the preform and to account for the complex anisotropy of these materials.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/Nahiene1.png"  width="300" />
-      <figcaption>Semi-discrete finite element</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/Nahiene2.png"  width="300" />
-      <figcaption>Simulation</figcaption>
-    </figure>
-    <figcaption>Hamila discret approach</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/Nahiene1.png" width="300" />
+    <figcaption>Semi-discrete finite element</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/Nahiene2.png" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
 </div>
-
-<!-- ![Discretization of the semi-discrete finite element](/assets/img/Nahiene1.png){#fig:1_LUY09a_2 width="\textwidth"}
-![Formatting a strongly non-developable geometry](/assets/img/Nahiene2.png){#fig:1_LUY09b width="90%"} -->
 
 Another modeling strategy considers discrete and continuous parts as totally independent. This is the case, for example, of work on NCFs [@CRE06]. These specific woven fabrics are made of sewn webs. In this modeling, the roving plies are represented by layers of solid elements while bar elements are added to represent the seams. Here, the continuous parts are totally decoupled from the discrete parts, implying the management of the contact between the webs and the seams.
 

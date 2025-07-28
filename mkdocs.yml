@@ -62,15 +62,12 @@ theme:
     - navigation.tabs
 
 markdown_extensions:
-  - toc:
-      permalink: "#"
-      baselevel: 2
-      separator: "_"
+  - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
   - attr_list
+  - def_list
   - footnotes
   - fenced_code
-  - def_list
-  - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
+  - md_in_html # An extension that parses Markdown inside of HTML tags.
   - pymdownx.arithmatex: # LaTeX syntax
       generic: true
   - pymdownx.emoji: # :smile: :heart: :thumbsup:
@@ -78,6 +75,11 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tasklist # - [X] item
   - pymdownx.tabbed # === "Tab 1"
+  - pymdownx.blocks.caption
+  - toc:
+      permalink: "#"
+      baselevel: 2
+      separator: "_"
 
 plugins:
   - search
@@ -95,7 +97,7 @@ extra_javascript:
   - assets/js/background_effects.js
 
 extra_css:
-  - assets/css/test.css
+ # - assets/css/test.css # figure formatting
   - assets/css/tabbed.css
   - assets/css/custom_colors.css
   - assets/css/background.css
