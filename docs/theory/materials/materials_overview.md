@@ -1,11 +1,9 @@
-# Materials overview 
-
 This section concisely describes the mechanical models implemented in Comfor. For a more detailed introduction, the reader is recommended to refer to the following links, as well as to consult the cited papers.
 
 - [Nonlinear continuum mechanics](../continuum_mechanics.md)
 - [Composite material introduction](composite_materials.md)
 
-## Comfor constitutive models
+# Comfor constitutive models
 
 Comfor includes the following constitutive models.
 
@@ -33,7 +31,7 @@ MATERIALS TYPE <material_type_1>
 <material_name> RHO = <mass density> DAMPING = <damping_value> ...
 ```
 
-## Elastic materials
+# Elastic materials
 
 In order to model elastic materials with small strain are large rotations we use a Saint-Venant-Kirchoff material model. The general expression is given by:
 
@@ -43,7 +41,7 @@ $$
 
 where $\mathbb{C}$ _elastic tensor_ or _elastic moduli_. 
 
-### Isotropic Kirchhoff 
+## Isotropic Kirchhoff 
 
 In tha case of an isotropic material the elastic moduli is given simply by :
 
@@ -77,7 +75,7 @@ MATERIALS TYPE ELASTIC
 <material_name> RHO = <rho> DAMPING = <material_damping> E = <young_modulus> NU = <poissons_ratio>
 ```
 
-## Hyperelastic materials 
+# Hyperelastic materials 
 
 Two families of hyperelastic materials are currently implemented:
 
@@ -93,7 +91,7 @@ $$
 
 where $w$ is the strain-energy potential of the material.
 
-### Isotropic hyperelastic materials
+## Isotropic hyperelastic materials
 
 **Ogden**
 
@@ -142,7 +140,7 @@ MATERIALS TYPE HYPERELASTIC
 !!! warning
     The number of $\mu_p$ and $\alpha_p$ parameters must be equal. 
 
-### Textile composite hyperelastic materials
+## Textile composite hyperelastic materials
 
 The mechanical behavior of textile composite materials can modelled using a non-linear hyperelastic model[@GUZ15] [@GUZ16a]. The membrane and bending contributions to the strain energy potential are decoupled given the fibrous nature of one single ply.
 
@@ -203,6 +201,6 @@ MATERIALS TYPE HYPERTEXTILE
 <material_name> RHO = <rho> DAMPING = <material_damping> WARPORI = <l1_x, l1_y, l1_z> WEFTORI = <l2_x, l2_y, l2_z> KELONGWARP = <kelong1_1, kelong1_2, kelong1_n> KELONGWEFT = <kelong2_1, kelong2_2, kelong2_n> KSHEAR = <kshear_1, kshear_2, kshear_n>
 ```
 
-## References
+# References
 
 \bibliography

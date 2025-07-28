@@ -1,5 +1,3 @@
-# Post-processing
-
 [VTK](http://www.vtk.org/VTK/img/file-formats.pdf) is the default output format for the results. In the future, other formats may be developed according to users and researchers needs.
 
 During the simulation Comfor writes several vtk files, one every [`print_step`](user_preprocessing.md#control). These files are located in the folder `Results_<file_name>`.
@@ -20,7 +18,7 @@ Project_name
 !!! tip
     You can also open many other inputs formats, like raw tables `*.csv`, geometric data `*.stl`, images `*.png` ... try to open your tracker csv files.
 
-## Load the files
+# Load the files
 
 In order to visualize the results, open Paraview. Click on menu _File_->_Open_ and look for the `Results_<file_name>`. Since Comfor names the files in ascending order, Paraview propose to open the files as a group.
 
@@ -31,7 +29,7 @@ In order to visualize the results, open Paraview. Click on menu _File_->_Open_ a
     </figure>
 </div>
 
-## Play the animation
+# Play the animation
 
 After open the files, Paraview create a stage on the [`Pipeline Browser`](https://www.paraview.org/ParaView/index.php/Pipeline_Browser_Ideas). If the mesh is not displayed you need to click in _Apply_ in the properties section.
 
@@ -49,7 +47,7 @@ The data to be displayed can be selected in the _Data Analysis_ toolbar. A list 
     </figure>
 </div>
 
-## Applying filters
+# Applying filters
 
 Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters) that allow us to manipulate the data and treat the simulation data. These filters can be applied in cascade to combine their functionalities. To apply a filter, click on menu _Filters -> Alphabetical_, or search by category. The most common filters for our application are:
 
@@ -66,7 +64,7 @@ Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_
     </figure>
 </div>
 
-## Ressources
+# Ressources
 
 For more information you can read the different online tutorials:
 

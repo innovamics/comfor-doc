@@ -1,8 +1,6 @@
-# Analysis with Comfor
-
 As seen before, the pre-processing operation consist in generating the input ASCII text file of the model. The next step is to run comfor using this input file. The analysis will be performed and Comfor is going to generate several output files : Paraview files, CSV files and log files.
 
-## Starting a new analysis
+# Starting a new analysis
 
 Comfor is execute from the terminal(command line) using the following syntax:
 
@@ -21,7 +19,7 @@ $ comfor ../test.bim
 $ comfor /usr/name/sim/test.bim
 ```
 
-## Run time information
+# Run time information
 
 During the analysis, Comfor will print periodically some useful information on the terminal. The frequency is the defined by the [`print_step`](user_preprocessing.md#control) defined in the control block.
 
@@ -46,10 +44,10 @@ Kinetic energy: 0.0110008
 !!! tip
     To stop a job just press `ctrl + c`
 
-## Output
+# Output
 
 A new folder named `Results_<file_name>` is created in the same directory of the input file. This folder contains a série of \*.vtk files which can be viewed using paraview.
 
-## Errors and bugs
+# Errors and bugs
 
 If any error occurs, please [contact us]()

@@ -1,7 +1,3 @@
-# Composite materials
-
-## General presentation
-
 A composite material is an assembly of two or more immiscible constituents whose properties meet specific needs not met individually by the basic components. This definition includes a wide range of materials, some natural and long used such as wood, bone or cob, and others more recently developed such as tires or reinforced concrete. All these materials have in common the fact that they are composed of two components: the reinforcement that gives the final product its dominant mechanical characteristics and the matrix that provides the cohesion of the whole. The will to use specific materials for each application, with the aim of optimizing costs and mechanical performance, makes composites a serious candidate.
 
 The matrices of currently developed composite materials are generally classified into two categories:
@@ -20,11 +16,11 @@ Reinforcements can be classified according to their geometry:
 
 Comfor allows to model at this moment only **Continuous fiber reinforcements**.
 
-## Continuous fiber and organic matrix composites
+# Continuous fiber and organic matrix composites
 
 Continuous fiber and organic matrix composites are widely used in industry, particularly in the military sector[@BHA16], aeronautics or in shipbuilding[@SMI90] [@MOU01]. Since a few years, the automotive sector also shows a growing interest for these materials in order to reduce the mass of the vehicles[@VER06] [@FUC08].
 
-### The reinforcement
+## The reinforcement
 
 Depending on the purpose of the fiber, several types of compositions can be used as raw material. **Fibers** must be produced and then assembled into **yarns** that will be linked by weaving according to different patterns, the **reinforcement** is thus obtained.
 
@@ -72,11 +68,11 @@ In the case of 3D and 2.5D woven fabrics, the weft rovings cross several planes 
  </figure> 
 </div>
 
-### The matrix
+## The matrix
 
 Organic (synthetic) matrices are _polymer_ resins. These materials are composed of a series of repeating units called _monomers_, which join together in a chemical reaction known as polymerization to form macromolecular _chains_. The most commonly used polymers for composite material matrices belong to the family of thermosets and thermoplastics.
 
-##### Thermosets
+### Thermosets
 
 Thermosetting polymer resins are composed of cross-linked or three-dimensional macromolecular chains. Before heat treatment, the resin is in a liquid or past-like state at room temperature, which facilitates its handling and impregnation of the fibers.
 
@@ -84,7 +80,7 @@ After undergoing a heating cycle known as a polymerization cycle or cross-linkin
 
 Thermoset resins are the most widely used in industry and have good mechanical properties and strength.
 
-##### Thermoplastics
+### Thermoplastics
 
 Thermoplastic matrices are composed of linear or one-dimensional chains and branched or two-dimensional chains. Unlike thermosetting resins, the material is usually in a solid state at room temperature. Under the influence of heat, the polymer can be softened and then melted and deformed, but can be returned to its original solid state by cooling without any chemical change (under certain conditions, e.g. oxidation). The transformation process is reversible and, therefore, the material and the manufactured parts can be potentially recycled.
 
@@ -97,23 +93,23 @@ Compared to thermoset matrices, thermoplastic matrix composites have many advant
 
 The industrial development of thermoplastic matrix composite structures is now in full swing. This manuscript is part of the numerous works that are being developed to industrialize the manufacturing of such products.
 
-#### Prepregs
+## Prepregs
 
 Prepregs are the result of the combination of the reinforcement and a thermoplastic or thermoset polymer already joined together before forming.
 
 As mentioned previously, one of the advantages of thermosets is the good impregnation of fibers due to its low viscosity at room temperature; whereas thermoplastics must be heated above the melting temperature and require a long compaction phase in order to properly impregnate the fibers. This step affects the forming cycle by increasing the consolidation time, necessary to remove porosities by compaction.
 
-## Manufacturing processes
+# Manufacturing processes
 
 The manufacturing processes of composite materials are numerous and varied. From essentially manual processes, techniques have not stopped evolving to meet the growing use of these materials. The need for higher and higher production rates, or for parts with better controlled and optimized characteristics, have led to different types of processes which are chosen according to the need (shape, production rate, series, mechanical characteristics, etc.). The forming operations described below are based on the principle of molding, a process that allows obtaining structures with non-developable geometry.
 
 As mentioned previously, depending on the manufacturing process, the addition of the matrix takes place before or after the deformation of the reinforcement. The main processes used in each case will be briefly described below. A more detailed explanation will be given for the process targeted in this work: thermoforming.
 
-### Liquid Composite Moulding
+## Liquid Composite Moulding
 
 The LCM (Liquid Composite Moulding) processes are used to shape woven and polymer matrix composites. Among these processes, vacuum infusion and RTM (Resin Transfer Moulding, [@POT99]) are the most used. The principle of these processes is to mold the dry reinforcement, then to inject the resin to solidify the part. The fact of molding the dry reinforcement makes it possible to obtain a final composite part very close to the desired part, and thus to minimize the machining steps and thus the costs. These processes, known as "closed mould processes", allow a strict control of volatile organic compounds emitted during the manufacturing process, as the resin is not in direct contact with the atmosphere.
 
-#### Vacuum infusion
+## Vacuum infusion
 
 In vacuum infusion, the dry woven reinforcement is placed between a mold and a waterproof membrane. By evacuating this area, the pump will press the reinforcement against the mold through the membrane and start the resin flow. A drainage net, made of a porous material, is placed near the reinforcement in order to facilitate the distribution of the resin. This process is easier to implement than RTM, and allows the production of parts in large series with good repeatability on complex shapes. However, thickness control is difficult and the surface finish on the membrane side is generally worse than the molded side.
 
@@ -124,7 +120,7 @@ In vacuum infusion, the dry woven reinforcement is placed between a mold and a w
  </figure> 
 </div>
 
-#### Resin transfer moulding
+## Resin transfer moulding
 
 The manufacturing process can be broken down into three steps. The first step is the preforming step. It consists in shaping (or stamping) a woven reinforcement in a mold by means of a punch. The advantage of this process is to have two rigid parts which will allow to better control the compression of the reinforcement during the shaping and thus its final thickness. Contrary to vacuum infusion, the surface finish is good on both sides. In order to avoid wrinkles during the stamping process, blank holders can be used by adding a slight tension in the rovings.
 
@@ -139,7 +135,7 @@ This process is undergoing a strong development with the objective of being used
  </figure> 
 </div>
 
-### Thermoforming
+## Thermoforming
 
 In order to exploit the excellent properties of CFRTP composites in an industrial context, different manufacturing processes have been developed depending on the product and its application. Most of these methods are an adaptation of the processes for the shaping of thermoset composites or of the classical stamping techniques. In the case of forming flat structures, roll forming and simple compression have already been mentioned. In the case of constant section structures, we can mention pultrusion forming, which is a continuous manufacturing process where the profile is obtained by pulling the prepreg reinforcement through a heated die, or filament winding forming [@MAC12]. These processes allow the shaping of simple parts (1D and 2D) and are easily automated.
 
@@ -182,7 +178,7 @@ It is clear that temperature is an essential factor since it modifies the behavi
  </figure> 
 </div>
 
-## Modeling and Simulation approaches.
+# Modeling and Simulation approaches.
 
 Modeling and numerical simulation of the forming process are two important steps to predict the feasibility of different parts, but also to understand and improve the process itself. As mentioned earlier, the quality of the resulting parts depends greatly on the settings of the parameters that control the forming operations. Thus, during the design of a product, it is necessary to call upon trial and error campaigns, which are all the more costly as the part is complex and of large dimensions. The objective of the simulation is to predict the geometrical and mechanical characteristics likely to appear during the shaping process such as
 
@@ -202,7 +198,7 @@ These characteristics and defects are not all defined at the same scale: a fiber
 
 - The _macroscopic_ scale: study of the deformation of the reinforcement as a whole, in order to characterize the appearance of folds, slippage of the strands and more generally the formability of a complex geometry part.
 
-### Modeling at the microscopic scale
+## Modeling at the microscopic scale
 
 In a microscopic scale approach, the basic component is the fiber. The behavior of the fiber is linear orthotropic and its characteristic quantities are relatively well known. The difficulty of this type of approach is the management of the numerous bodies constituting the model, especially in the management of the contact between them.
 
@@ -223,7 +219,7 @@ The main limitation of this type of approach is the computational time inherent 
 
 
 
-### Mesoscopic simulation
+## Mesoscopic simulation
 
 Models at the mesoscopic scale are interested in the behavior of an elementary mesh of the reinforcement. At this scale, the wick is considered as a continuous medium. The objective of these models is to determine certain behaviors or properties of the reinforcement that are difficult or expensive to determine experimentally. Among these properties, the most sought after are :
 
@@ -282,11 +278,11 @@ Once the geometry is defined and discretized by finite elements, it is necessary
 
 At this scale, modeling the entire woven reinforcement during forming is still difficult. However, the study of an elementary pattern or cell representative of the structure (CER) will allow to understand the behavior of the weaving at a smaller scale before extending it to the whole part. This is the case of modeling by homogenization and multi-scale calculations [@GEE03].
 
-### Macroscale modeling
+## Macroscale modeling
 
 The objective of macroscale simulation is to simulate the shaping of woven reinforcements at the scale of the entire part. The study of formability consists in predicting the appearance of the various defects observable on the woven fabrics. The number of defects that can be obtained depends both on the type of modeling approach chosen and on the richness of the mechanical characteristics given to them. These characteristics can be derived from tests performed at the woven fabric scale or from observations/simulations at smaller, microscopic and mesoscopic scales. The reuse of results obtained at smaller scales is the main reason for the existence of the corresponding models. Among the known macroscopic approaches, there are geometrical and mechanical approaches.
 
-#### Geometrical approaches
+### Geometrical approaches
 
 Geometric approaches are based on the so-called fishnet algorithm. This so-called geometric or kinematic approach is mainly used for the simulation of dragging. Its simplicity of use and its speed of execution make it a good method of first approach [@MAC56] [@VAN91]. It is based on strong assumptions:
 
@@ -323,7 +319,7 @@ With the removal of all mechanical and weaving considerations, the results are i
   </figure>
 </div>
 
-#### Mechanical approaches
+### Mechanical approaches
 
 Among the mechanical models, three types of approaches can be distinguished: discrete, semi-discrete or continuous.
 
@@ -405,6 +401,6 @@ Another modeling strategy considers discrete and continuous parts as totally ind
 
 <!-- ![Representation of two plies and the seams linking them in a semi-discrete model](/assets/img/CRE06a.png){#fig:1_CRE06 width="90%"} -->
 
-## References
+# References
 
 \bibliography

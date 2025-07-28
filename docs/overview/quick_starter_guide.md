@@ -1,16 +1,14 @@
-# Quick starter guide
-
 This tool has been compiled and tested on Windows (win64), Linux (amd64), and macOS(amd64). Using any other architecture, is not guaranteed to work.
 
-## Download
+# Download
 
 To run Comfor you can [download](download_page.md) the binaries from the release page or you can build it from source. For download the binary for your architecture and follow the instructions given here and [run some test](#run_it).
 
 To build Comfor from sources you will need to download an compile the code. If so, follow these instructions.
 
-## Build from sources
+# Build from sources
 
-### Prerequisites
+## Prerequisites
 
 **CMake** : a cross-platform, open-source build system generator. Allows to generate a project for a given IDE (Unix Makefiles, Xcode, Eclipse, etc...) or compilation rules for Comfor. It can be easily installed under linux with the following command:
 
@@ -88,7 +86,7 @@ python3 -m pip install <package name>
 !!! warning
     On windows comfor is currently working by installing the standalone [Python 3.8.7](https://www.python.org/downloads/release/python-387/) distribution. Anaconda is not yet supported. Make sure that `python` and `pip` are on the path.
     
-### Clone
+## Clone
 
 Clone or download the sources from the main [repo](https://gitlab.com/innovamics/comfor). If you are not familiarized with Git, check the (Cheat Sheet)
 
@@ -96,9 +94,9 @@ Clone or download the sources from the main [repo](https://gitlab.com/innovamics
 git clone https://gitlab.com/innovamics/comfor.git
 ```
 
-### Compile
+## Compile
 
-#### Using make
+### Using make
 
 Make sure that make is installed on your machine `make --version`, this is usually the case for macOS and Linux after install the [developer tools](#prerequisites). If you are not sure, use the cross platform proposition.
 
@@ -116,11 +114,11 @@ The binary files are on the `Bin/Release` folder.
 !!! tip
     Cmake can [generate](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) the project for different IDE (Eclipse, Xcode, Visual code..). In the previous example we assume that the default generator is Unix MakeFiles. You can specify generator using `cmake .. -G <generator_name>`. To see the available list of generators for your case use: `cmake -G`
     
-#### Cross platform proposition
+### Cross platform proposition
 
 If you are having troubles compiling the code you can use visual code. Visual code, provides a GUI support and different extension to automatize th compilation process. To configure Visual click here.
 
-## Run and test
+# Run and test
 
 You should now have a nice binary file called Comfor. To run comfor you can specify the name of the input file, or run comfor directly, comfor will prompt you for the path to the input file.
 
@@ -128,7 +126,7 @@ You should now have a nice binary file called Comfor. To run comfor you can spec
 ./comfor
 ```
 
-### Run it
+## Run it
 
 Run one of the provided samples in `Examples` folder using the following the following command. Or download some other test from the [download page](download_page.md) 
 
@@ -136,7 +134,7 @@ Run one of the provided samples in `Examples` folder using the following the fol
 ./comfor PATH_TO_INPUT_FILE
 ```
 
-### Test it
+## Test it
 
 In addition to the main binary file, Cmake also generates a series of executables called \*Test.o/exe. These files allow to launch a test to see if the different comfor modules are working correctly. You can execute directly this files.
 
@@ -168,7 +166,7 @@ Expected result :
 
 If some test fails, please feel free to contact us.
 
-## Postprocessing
+# Postprocessing
 
 Comfor can generate VTK files for the results. Paraview post-processor can be used to visualize those results. Paraview is available at [paraview.com](https://www.paraview.org/download)
 

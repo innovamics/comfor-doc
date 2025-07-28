@@ -1,5 +1,3 @@
-## Configure Git
-
 To start using Git from your computer, you must enter your credentials (user name and email) to identify you as the author of your work. The user name and email should match the ones you’re using on GitLab.
 
 In your shell, add your user name:

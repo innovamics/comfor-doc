@@ -1,5 +1,3 @@
-# Pre-processing
-
 Comfor has a general class for parsers[^1], so in the future we will be able to create subclasses to read different data from other software (e.g. Abaqus). But for the moment Comfor reads a generic ASCII text file organized by blocks. The extension of this file is not important, but in the future we will associate the extension *.bim (basic input model), the structure of this file is detailed below. 
 
 However, in the general case, each input file must define the following points:
@@ -12,7 +10,7 @@ However, in the general case, each input file must define the following points:
 - Loads
 - Analysis
 
-## Units 
+# Units 
 
 There are not unit system in Comfor. The user can use any consistent unit system [see](https://femci.gsfc.nasa.gov/units/index.html). The units must be consistent in that mathematical operations directly yield the correct units for the result quantity. For example for Newtons' law :
 
@@ -20,7 +18,7 @@ $$ \mathbf{f} = \mathbf{M} \mathbf{a} $$
 
 If the unit force is the the newton $N$, the length unit is the $mm$ and the time unit is the second $s$, the units for acceleration are $mm/s^2$ and the units for mass, must be $kg \cdot 10^{3} = t$ (metric ton).
 
-## Bim input file
+# Bim input file
 
 This type of file is structured by blocks. Each block is labeled and defines the input parameters of the model. Each block have a type depending on the label/category of the input data. The existing labels ans types are given in the following table.
 
@@ -54,7 +52,7 @@ The general definition of one block is:
 !!! hint
     The order of the block in the input file has not impact for parsing operation
 
-### Control
+## Control
 
 This block defines the control parameters of the explicit analysis. 
 
@@ -80,7 +78,7 @@ If the `STEP` label is not specified, the time step will be set automatically ac
 !!! note
     In future version the solver type would be defined here.
 
-### Materials
+## Materials
 
 This blocks defines the materials of the model. Each block contains a group of materials of the same type. The general structure is :
 
@@ -109,7 +107,7 @@ MATERIAL TYPE Elastic
 aluminium rho = 2.7e-9 nu=0.3 E=70000
 ```
 
-### Amplitudes
+## Amplitudes
 
 An amplitude allows to impose a time dependent behavior for constraints and loads.
 
@@ -148,7 +146,7 @@ Defines the amplitude:
 
 <canvas id="Amplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
-### Constraints 
+## Constraints 
 
 This block defines the different constraints of the model. Each Block contains different constraints of the same type. 
 
@@ -199,7 +197,7 @@ The displacement rate evolution is given by:
     The order of blocks doesn't have any importance, you can make reference to an amplitude even if the amplitude block is defined after.
 
 
-### Loads
+## Loads
 
 This block defines the different loads of the model. Each block may contain loads of different types.
 
@@ -232,7 +230,7 @@ vacuum VALUES = 0., 0. , 5., -1.0
 ```
 <canvas id="LoadAmplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
-### Nodes
+## Nodes
 
 This block defines the position of the different nodes in the model, **and* eventually the constraints and loads applied to each node. 
 
@@ -273,7 +271,7 @@ This defines 3 points :
 <canvas id="NodeTri" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
 
-### Elements
+## Elements
 
 This block defines the different elements of the model. Each block contains a group of elements of the same type. The general structure is:
 
@@ -311,7 +309,7 @@ This defines a triangular membrane element from node 1, 2 and 3, using the const
 
 <canvas id="ElementTri" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
 
-### Contact 
+## Contact 
 
 Contact is enable by adding the key label `CONTACT = ` after the definition of each element line. Friction is enable by using `FRICTION = <friction_value>`. You can specify two contact types:
 
@@ -325,7 +323,7 @@ ELEMENTS TYPE MEMBRANE_3
 1 NODES = [1, 2, 3]	MATERIAL = elastic T =  1.0 CONTACT = edge FRICTION = 0.2
 ```
 
-### Trackers 
+## Trackers 
 
 Finally we can use tracker objects to track some nodal or element information. This information is printed into a CSV file for each [`print_step`](#control) and for each node/element specified in the tracker definition. 
 
