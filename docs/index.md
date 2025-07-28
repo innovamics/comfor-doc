@@ -1,6 +1,7 @@
 # Welcome to comfor documentation
 
-![Placeholder](assets/img/forming.png){ align=right }
+![Placeholder](assets/img/forming.png){ align=right width="450" }
+
 Comfor is an Explicit FEM code written in C++. The aim of this software is to provide a innovative general solution for modelling composite processes. Comfor is being designed to be modular and adapted for both, industrial and research applications.
 
 We are proud of being the only composite software vendor that provides source code. As there should not be secrets in physics, the source code of all equations and physical models implemented in Comfor are available to researchers. It is our hope that our openness would allow more researchers get involved in the development of physical models much needed in industry. Please feel free to check out a copy of the open source edition on the downloads page.
