@@ -118,7 +118,7 @@ The LCM (Liquid Composite Moulding) processes are used to shape woven and polyme
 
 #### Vacuum infusion
 
-In vacuum infusion, the dry woven reinforcement is placed between a mold and a waterproof membrane, as described [1.10](#fig:1_Infusion){reference-type="ref" reference="fig:1_Infusion"}. By evacuating this area, the pump will press the reinforcement against the mold through the membrane and start the resin flow. A drainage net, made of a porous material, is placed near the reinforcement in order to facilitate the distribution of the resin. This process is easier to implement than RTM, and allows the production of parts in large series with good repeatability on complex shapes. However, thickness control is difficult and the surface finish on the membrane side is generally worse than the molded side.
+In vacuum infusion, the dry woven reinforcement is placed between a mold and a waterproof membrane. By evacuating this area, the pump will press the reinforcement against the mold through the membrane and start the resin flow. A drainage net, made of a porous material, is placed near the reinforcement in order to facilitate the distribution of the resin. This process is easier to implement than RTM, and allows the production of parts in large series with good repeatability on complex shapes. However, thickness control is difficult and the surface finish on the membrane side is generally worse than the molded side.
 
 <div style="text-align:center;">
  <figure >
@@ -129,9 +129,7 @@ In vacuum infusion, the dry woven reinforcement is placed between a mold and a w
 
 #### Resin transfer moulding
 
-The manufacturing process can be broken down into three steps, as illustrated in [1.11](#fig:1_RTM){reference-type="ref" reference="fig:1_RTM"}.
-
-The first step is the preforming step. It consists in shaping (or stamping) a woven reinforcement in a mold by means of a punch. The advantage of this process is to have two rigid parts which will allow to better control the compression of the reinforcement during the shaping and thus its final thickness. Contrary to vacuum infusion, the surface finish is good on both sides. In order to avoid wrinkles during the stamping process, blank holders can be used by adding a slight tension in the rovings.
+The manufacturing process can be broken down into three steps. The first step is the preforming step. It consists in shaping (or stamping) a woven reinforcement in a mold by means of a punch. The advantage of this process is to have two rigid parts which will allow to better control the compression of the reinforcement during the shaping and thus its final thickness. Contrary to vacuum infusion, the surface finish is good on both sides. In order to avoid wrinkles during the stamping process, blank holders can be used by adding a slight tension in the rovings.
 
 Once the reinforcement is molded into the desired shape, the resin is injected. The assembly is then heated to cure the resin. Finally, when the resin is consolidated, the mold is opened and the part demolded.
 
@@ -146,7 +144,7 @@ This process is undergoing a strong development with the objective of being used
 
 ### Thermoforming
 
-In order to exploit the excellent properties of CFRTP composites in an industrial context, different manufacturing processes have been developed depending on the product and its application. Most of these methods are an adaptation of the processes for the shaping of thermoset composites or of the classical stamping techniques. In the case of forming flat structures, roll forming and simple compression have already been mentioned. In the case of constant section structures, we can mention pultrusion forming, which is a continuous manufacturing process where the profile is obtained by pulling the prepreg reinforcement through a heated die, or filament winding forming, whose functional principle is shown in [1.12](#fig:1_winding){reference-type="ref" reference="fig:1_winding"}[@MAC12]. These processes allow the shaping of simple parts (1D and 2D) and are easily automated.
+In order to exploit the excellent properties of CFRTP composites in an industrial context, different manufacturing processes have been developed depending on the product and its application. Most of these methods are an adaptation of the processes for the shaping of thermoset composites or of the classical stamping techniques. In the case of forming flat structures, roll forming and simple compression have already been mentioned. In the case of constant section structures, we can mention pultrusion forming, which is a continuous manufacturing process where the profile is obtained by pulling the prepreg reinforcement through a heated die, or filament winding forming [@MAC12]. These processes allow the shaping of simple parts (1D and 2D) and are easily automated.
 
 <div style="text-align:center;">
  <figure >
@@ -165,7 +163,7 @@ The first step in thermoforming is to heat the material above its melting temper
 
 After heating, the material is transported to the press. The transfer time is a critical parameter. The material must be transported to the press as quickly as possible to prevent the material from cooling above its crystallization temperature. Today's automation systems such as conveyors and robots help to reduce this time. The temperature loss in this step is about 10%. This is usually compensated by overheating the material in the first step. The material is then shaped.
 
-During forming, the reinforcement is deformed by applying pressure between two complementary tools which are the impression of the final structure, the punch and the die. These tools are usually equipped with a system to maintain a constant temperature below the melting point. The forming process takes a few seconds. The part is then maintained under pressure to remove porosities and ensure cohesion between the different layers and cooled down to a temperature that allows the dimensional stability of the part. This is the consolidation phase. The structure is finally demolded and continues to cool in ambient air. All the phases are shown in [1.13](#fig:1_thermoforming){reference-type="ref" reference="fig:1_thermoforming"} and [1.14](#fig:1_stamping_old){reference-type="ref" reference="fig:1_stamping_old"}
+During forming, the reinforcement is deformed by applying pressure between two complementary tools which are the impression of the final structure, the punch and the die. These tools are usually equipped with a system to maintain a constant temperature below the melting point. The forming process takes a few seconds. The part is then maintained under pressure to remove porosities and ensure cohesion between the different layers and cooled down to a temperature that allows the dimensional stability of the part. This is the consolidation phase. The structure is finally demolded and continues to cool in ambient air. 
 
 All the steps are carried out in a few minutes, this time can be further reduced if the production line allows the manufacture of two parts at the same time, one on the heating module and one on the shaping module. All these characteristics make thermostamping a prime candidate for the mass production of composite parts, especially in the automotive sector.
 
@@ -211,7 +209,7 @@ These characteristics and defects are not all defined at the same scale: a fiber
 
 In a microscopic scale approach, the basic component is the fiber. The behavior of the fiber is linear orthotropic and its characteristic quantities are relatively well known. The difficulty of this type of approach is the management of the numerous bodies constituting the model, especially in the management of the contact between them.
 
-Currently, the existing models that come closest to modeling the behavior of reinforcements at the microscopic scale are those performed on ropes or cables, which are similar to strands containing fewer fibers and strongly twisted [@JIA99] [@NAW00] [@SRE06] [@GHO07]. On the other hand, the application to reinforcement rovings is rarer [@LAT11], mainly because of the high number of fibers per roving. However, we can mention the weaving model developed by Zhou [@ZHO04]([1.15](#fig:1_ZHO04){reference-type="ref" reference="fig:1_ZHO04"}) and Durville [@DUR10]([1.16](#fig:1_DUR10plain){reference-type="ref" reference="fig:1_DUR10plain"}).
+Currently, the existing models that come closest to modeling the behavior of reinforcements at the microscopic scale are those performed on ropes or cables, which are similar to strands containing fewer fibers and strongly twisted [@JIA99] [@NAW00] [@SRE06] [@GHO07]. On the other hand, the application to reinforcement rovings is rarer [@LAT11], mainly because of the high number of fibers per roving. However, we can mention the weaving model developed by Zhou [@ZHO04] and Durville [@DUR10].
 
 The main limitation of this type of approach is the computational time inherent to the number of fibers to model. For this reason, groups of fibers are modeled in the wicks, reducing the number of virtual fibers to a few tens instead of thousands of real fibers. Therefore, the simulation of the shaping of a large part with this approach is not feasible in the current state of research.
 
@@ -277,7 +275,7 @@ Many models have been developed to obtain the final geometry. We note the models
 </figure>
 </div>
 
-X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@DES05] [@HSI15] [@HER09]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. An example of automation of the processing of microtomographic fabrics is shown [\[fig:1_NAO14\]](#fig:1_NAO14){reference-type="ref" reference="fig:1_NAO14"}.
+X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@DES05] [@HSI15] [@HER09]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. 
 
 <div style="text-align:center;">
 <figure>
@@ -316,7 +314,8 @@ Geometric approaches are based on the so-called fishnet algorithm. This so-calle
 
 - The absence of slippage between the woven fabric and the shaping tools.
 
-In this approach, the reinforcement is similar to hinged bars at the crossing points between networks. As shown in [1.23](#fig:1_Filet){reference-type="ref" reference="fig:1_Filet"}, the algorithm determines the position of a curant point C from the intersection of the two geodesics drawn on the surface to be draped from the related points A and B. The position of the initial point is thus made paramount and influences the final result [@WAN99a].
+In this approach, the reinforcement is similar to hinged bars at the crossing points between networks. The algorithm determines the position of a curant point C from the intersection of the two geodesics drawn on the surface to be draped from the related points A and B. The position of the initial point is thus made paramount and influences the final result [@WAN99a].
+
 
 <div style="text-align:center;">
  <figure >
@@ -327,7 +326,7 @@ In this approach, the reinforcement is similar to hinged bars at the crossing po
 
 <!-- ![Net method](/assets/img/Filet.svg){#fig:1_Net} -->
 
-With the removal of all mechanical and weaving considerations, the results are identical whatever the stiffness of the rovings and the weave chosen. Kinematic blocking in shear and thickness variation in compression are also absent from the basic model. The absence of developed contact prevents the use of external tools such as blanket clamps, which are necessary for some shaping. For woven reinforcements, the net algorithm is interesting as a preliminary approach to determine the degree of complexity of forming a part. An example of application on a non-developable part is given [\[fig:1_BOR03\]](#fig:1_BOR03){reference-type="ref" reference="fig:1_BOR03"}.
+With the removal of all mechanical and weaving considerations, the results are identical whatever the stiffness of the rovings and the weave chosen. Kinematic blocking in shear and thickness variation in compression are also absent from the basic model. The absence of developed contact prevents the use of external tools such as blanket clamps, which are necessary for some shaping. For woven reinforcements, the net algorithm is interesting as a preliminary approach to determine the degree of complexity of forming a part. An example of application on a non-developable part is given in the next figure.
 
 <div style="text-align:center;">
 <figure>
