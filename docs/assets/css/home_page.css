@@ -1,0 +1,39 @@
+/* Transparent Sidebars */
+
+.md-sidebar__scrollwrap {
+    background-color: none;
+    backdrop-filter: none(4px);
+    border-radius: 6px;
+    padding: 4px 3px;
+    border: 1px none;
+}
+
+/* Sidebar Down on home page */
+
+
+/* Sidebar Down on Index */
+
+body.home .md-sidebar--primary,
+body.home .md-sidebar--secondary {
+    display: none !important;
+}
+
+/* Étendre le contenu principal pour qu’il prenne toute la largeur */
+body.home .md-main__inner {
+    grid-template-columns: 1fr !important;
+}
+
+
+
+/* Home page text start adjustments*/
+
+body.home .md-content h1:first-of-type {
+    margin-top: 100px;
+    font-size: 0%;
+}
+
+body.home .md-content h2:first-of-type {
+    font-size: 250%;
+    font-weight: 500;
+    color: #ffffff;
+}
