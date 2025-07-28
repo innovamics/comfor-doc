@@ -7,7 +7,7 @@ We are proud of being the only composite software vendor that provides source co
 
 ## Getting started
 
-The [Quick starter guide](overview/quick_starter_guide.md) gives the bare minimum needed to get things working. To start building your own models you can look at the [User guide](user/user_overview).
+The [Quick starter guide](overview/quick_starter_guide.md) gives the bare minimum needed to get things working. To start building your own models you can look at the [User guide](user/user_overview.md).
 
 ## Overview
 
