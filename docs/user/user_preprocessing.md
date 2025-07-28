@@ -44,7 +44,7 @@ This type of file is structured by blocks. Each block is labeled and defines the
 
 The general definition of one block is: 
 
-```
+```xml
 <block_label> TYPE <type_block>
 <entry_1>
 <entry_2>
@@ -69,7 +69,7 @@ The associated label is `CONTROLS`.
 
 **Structure**
 
-```javascript
+```xml
 CONTROLS
 RUN FROM <start_time> TO <end_time> STEP <time_step> 
 PRINT EVERY <print_step> 
@@ -84,7 +84,7 @@ If the `STEP` label is not specified, the time step will be set automatically ac
 
 This blocks defines the materials of the model. Each block contains a group of materials of the same type. The general structure is :
 
-```
+```xml
 MATERIALS TYPE <material_type_1>
 <material_1_name> RHO = <density> DAMPING = <material1_damping_value> <prop_1> = <value_prop_n> ...
 <material_2_name> RHO = <density> DAMPING = <material2_damping-value> <prop_1> = <value_prop_n> ...
@@ -104,7 +104,7 @@ To see the available list of materials see [Material](../theory/materials/materi
 
 _Example_: 
 
-```
+```js
 MATERIAL TYPE Elastic
 aluminium rho = 2.7e-9 nu=0.3 E=70000
 ```
@@ -115,7 +115,7 @@ An amplitude allows to impose a time dependent behavior for constraints and load
 
 **Structure**
 
-```
+```xml
 AMPLITUDES TYPE <amplitude_type_1>
 <amplitude_1_name> <prop_n> = <value_prop_n> ...
 <amplitude_2_name> <prop_n> = <value_prop_n> ...
@@ -128,7 +128,7 @@ AMPLITUDES TYPE <amplitude_type_1>
 
 At this moment only tabular amplitudes are supported. The structure is given by:
 
-```
+```xml
 AMPLITUDES TYPE TABULAR
 <amplitude_1_name> VALUES = <t1 , v1, t2, v2, ... , tn, vn>
 <amplitude_2_name> VALUES = <t1 , v1, t2, v2, ... , tn, vn>
@@ -138,7 +138,7 @@ where `tn, vn` defines the value $v_n$ of the amplitude at time $t_n$. The value
 
 _Example_: 
 
-```
+```js
 AMPLITUDES TYPE TABULAR
 Palier   VALUES = 0, 0 ,1 ,1 ,5, 6, 0, 7, 0
 Increase VALUES = 0, 0 ,7 ,1 
@@ -154,10 +154,9 @@ This block defines the different constraints of the model. Each Block contains d
 
 **Structure**
 
-```
+```xml
 CONSTRAINTS TYPE <constraint_type_1>
 <constraint_1_name> <prop_n> = <value_prop_n> ...
-
 
 CONSTRAINTS TYPE <constraint_type_1>
 <constraint_n_name> <prop_n> = <value_prop_n> ... AMPLITUDE = <amplitude_name>
@@ -171,7 +170,7 @@ CONSTRAINTS TYPE <constraint_type_1>
 
 At this moment only the only type of constraint is `boundary_conditions`. This constraints allows to fix the DOFS of the node.The structure is given by:
 
-```
+```xml
 CONSTRAINTS TYPE BOUNDARY_CONDITION
 <bc_1_name> VX = <value> VY = <value> VZ = <value> VRX = <value> VRY = <value> VRZ = <value> AX = <value> AY = <value> AZ = <value> ARX = <value> ARY = <value> ARZ = <value>
 <bc_with_amplitude> VX = <value>  ... AMPLITUDE = <amplitude_name>
@@ -183,7 +182,7 @@ where `VI` defines the value displacement rate in direction I(X,Y,Z), `VRI` defi
 
 _Example_: 
 
-```
+```js
 CONSTRAINTS TYPE BOUNDARY_CONDITION
 FIX_ROT  VRX = O. VRY = O. VRZ = O.
 PINNED   VX = O.  VY = O.  VZ = O.
@@ -206,7 +205,7 @@ This block defines the different loads of the model. Each block may contain load
 
 **Structure**
 
-```
+```xml
 LOADS 
 <load_1_name> <load_type_1> = <value_Load> <load_type_2> = <value_Load>
 <load_2_name> <load_type_3> = <value_Load> Amplitude = <amplitude_name>
@@ -222,7 +221,7 @@ LOADS
 
 _Example_:
 
-```
+```js
 LOADS
 punctual_force   FX = 1.0
 gravity_field    AZ = 9.8
@@ -239,7 +238,7 @@ This block defines the position of the different nodes in the model, **and* even
 
 **Structure**
 
-```
+```xml
 NODES
 <node_number_1> X = <x_coord> Y = <y_coord> Z = <z_coord>
 <node_number_2> X = <x_coord> Y = <y_coord> Z = <z_coord> CONSTRAINT = <constraint_name> LOAD = <load_name> 
@@ -280,10 +279,11 @@ This block defines the different elements of the model. Each block contains a gr
 
 **Structure**
 
-```
+```xml
 ELEMENTS TYPE <element_type>
 <element_number_1> NODES = <node_number_1 node_number_2 node_number_3 ...> MATERIAL = <material_name> T = <thickness_value> LOAD = <load_name> <prop_n> = <value_prop_n> ... 
 ```
+
 - `<element_number>`: integer element number
 - `NODES`: defines the connectivity input of the element
     - `<node_number_1>`: number of the first node as given in the node block
@@ -331,7 +331,7 @@ Finally we can use tracker objects to track some nodal or element information. T
 
 **Structure**
 
-```
+```xml
 TRACKER TYPE <tracker_type>
 <tracker_1_name> <list> = <object_number> TYPE = <information_type> <prop_n> = <value_prop_n> ... 
 <tracker_2_name> <list> = <object_number> TYPE = <information_type> <prop_n> = <value_prop_n> ... 
@@ -350,7 +350,7 @@ As you see, we can track nodal an element information.
 
 For nodes :
 
-```
+```xml
 TRACKER TYPE NODES
 <tracker_1_name> NODES = <node_number_1 node_number_2 node_number_3 ...>  TYPE = <information_type> DIRECTION = <direction_axis> 
 ```
@@ -374,14 +374,14 @@ TRACKER TYPE NODES
 
 _Example_:
 
-```
+```js
 TRACKERS TYPE NODE
 FY NODES = [7,8] DIRECTION = Y TYPE = FORCE
 ```
 
 For elements :
 
-```
+```xml
 TRACKER TYPE ELEMENT
 <tracker_1_name> ELEMENTS = <element_number_1 element_number_2 element_number_3 ...>  TYPE = <type_tensor> COMPONENT = <component_tensor>
 ```

@@ -6,7 +6,7 @@ During the simulation Comfor writes several vtk files, one every [`print_step`](
 
 _Exemple_
 
-```
+```console
 Project_name
   |
   |---in_file.bim

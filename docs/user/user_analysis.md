@@ -6,7 +6,7 @@ As seen before, the pre-processing operation consist in generating the input ASC
 
 Comfor is execute from the terminal(command line) using the following syntax:
 
-```
+```bash
 comfor <input_file_name>
 ```
 
@@ -14,11 +14,11 @@ comfor <input_file_name>
 
 _Examples_:
 
-```
-comfor test.bim
-comfor ./sim/test.bim
-comfor ../test.bim
-comfor /usr/name/sim/test.bim
+```console
+$ comfor test.bim
+$ comfor ./sim/test.bim
+$ comfor ../test.bim
+$ comfor /usr/name/sim/test.bim
 ```
 
 ## Run time information
@@ -27,7 +27,7 @@ During the analysis, Comfor will print periodically some useful information on t
 
 The output information is given by block with the general structure:
 
-```
+```console
 =================================
 Elapsed time: 0.955748s
 Current time: 8s
