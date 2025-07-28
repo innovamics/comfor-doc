@@ -1,5 +1,3 @@
-# Overview
-
 Comfor is an explicit non linear finite element software for composite modelling modelling. It is suitable for dynamic transient response and some quasi static problems by using dynamic relaxation.
 
 The different materials, finite elements, contact laws come from confirmed and recent research works. 

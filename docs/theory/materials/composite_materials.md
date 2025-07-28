@@ -1,7 +1,3 @@
-# Composite materials
-
-## General presentation
-
 A composite material is an assembly of two or more immiscible constituents whose properties meet specific needs not met individually by the basic components. This definition includes a wide range of materials, some natural and long used such as wood, bone or cob, and others more recently developed such as tires or reinforced concrete. All these materials have in common the fact that they are composed of two components: the reinforcement that gives the final product its dominant mechanical characteristics and the matrix that provides the cohesion of the whole. The will to use specific materials for each application, with the aim of optimizing costs and mechanical performance, makes composites a serious candidate.
 
 The matrices of currently developed composite materials are generally classified into two categories:
@@ -20,11 +16,11 @@ Reinforcements can be classified according to their geometry:
 
 Comfor allows to model at this moment only **Continuous fiber reinforcements**.
 
-## Continuous fiber and organic matrix composites
+# Continuous fiber and organic matrix composites
 
 Continuous fiber and organic matrix composites are widely used in industry, particularly in the military sector[@BHA16], aeronautics or in shipbuilding[@SMI90] [@MOU01]. Since a few years, the automotive sector also shows a growing interest for these materials in order to reduce the mass of the vehicles[@VER06] [@FUC08].
 
-### The reinforcement
+## The reinforcement
 
 Depending on the purpose of the fiber, several types of compositions can be used as raw material. **Fibers** must be produced and then assembled into **yarns** that will be linked by weaving according to different patterns, the **reinforcement** is thus obtained.
 
@@ -40,22 +36,19 @@ For 2D fabrics, there are three main weaves:
 
 - _Satin_: the binding points of the warp and weft are scattered in order to reduce the diagonal effect present on the twill. The weft thread passes over N warp threads and then under 1.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/tissage2D1.svg"  width="200" />
-      <figcaption>Taffeta</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/tissage2D2.svg"  width="200" />
-      <figcaption>Twill</figcaption>
-    </figure>
-    <figure  >
-      <img src="../../../assets/img/tissage2D3.svg"  width="200" />
-      <figcaption>Satin</figcaption>
-    </figure>
-    <figcaption>Caption for the bundle of images</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/tissage2D1.svg" width="200" />
+    <figcaption>Taffeta</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/tissage2D2.svg" width="200" />
+    <figcaption>Twill</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/tissage2D3.svg" width="200" />
+    <figcaption>Satin</figcaption>
+  </figure>
 </div>
 
 The combination of these three families of textile weaves and materials results in a wide variety of woven reinforcements. If the reinforcement is identical in the warp and weft direction, it is called a balanced fabric. Generally speaking, a fabric can be characterized by its _crimp_, the relative arrangement of the warps and wefts. The latter is defined by the ratio of the length of the fabric in one direction to the length of a yarn in that same direction. Different studies [@BUE01] [@BOI01] [@LOM05] [@HIV08] have been able to show the fundamental influence of crimp on the mechanical behavior of the reinforcements. The crimp factor is given by:
@@ -75,11 +68,11 @@ In the case of 3D and 2.5D woven fabrics, the weft rovings cross several planes 
  </figure> 
 </div>
 
-### The matrix
+## The matrix
 
 Organic (synthetic) matrices are _polymer_ resins. These materials are composed of a series of repeating units called _monomers_, which join together in a chemical reaction known as polymerization to form macromolecular _chains_. The most commonly used polymers for composite material matrices belong to the family of thermosets and thermoplastics.
 
-##### Thermosets
+### Thermosets
 
 Thermosetting polymer resins are composed of cross-linked or three-dimensional macromolecular chains. Before heat treatment, the resin is in a liquid or past-like state at room temperature, which facilitates its handling and impregnation of the fibers.
 
@@ -87,7 +80,7 @@ After undergoing a heating cycle known as a polymerization cycle or cross-linkin
 
 Thermoset resins are the most widely used in industry and have good mechanical properties and strength.
 
-##### Thermoplastics
+### Thermoplastics
 
 Thermoplastic matrices are composed of linear or one-dimensional chains and branched or two-dimensional chains. Unlike thermosetting resins, the material is usually in a solid state at room temperature. Under the influence of heat, the polymer can be softened and then melted and deformed, but can be returned to its original solid state by cooling without any chemical change (under certain conditions, e.g. oxidation). The transformation process is reversible and, therefore, the material and the manufactured parts can be potentially recycled.
 
@@ -100,38 +93,36 @@ Compared to thermoset matrices, thermoplastic matrix composites have many advant
 
 The industrial development of thermoplastic matrix composite structures is now in full swing. This manuscript is part of the numerous works that are being developed to industrialize the manufacturing of such products.
 
-#### Prepregs
+## Prepregs
 
 Prepregs are the result of the combination of the reinforcement and a thermoplastic or thermoset polymer already joined together before forming.
 
 As mentioned previously, one of the advantages of thermosets is the good impregnation of fibers due to its low viscosity at room temperature; whereas thermoplastics must be heated above the melting temperature and require a long compaction phase in order to properly impregnate the fibers. This step affects the forming cycle by increasing the consolidation time, necessary to remove porosities by compaction.
 
-## Manufacturing processes
+# Manufacturing processes
 
 The manufacturing processes of composite materials are numerous and varied. From essentially manual processes, techniques have not stopped evolving to meet the growing use of these materials. The need for higher and higher production rates, or for parts with better controlled and optimized characteristics, have led to different types of processes which are chosen according to the need (shape, production rate, series, mechanical characteristics, etc.). The forming operations described below are based on the principle of molding, a process that allows obtaining structures with non-developable geometry.
 
 As mentioned previously, depending on the manufacturing process, the addition of the matrix takes place before or after the deformation of the reinforcement. The main processes used in each case will be briefly described below. A more detailed explanation will be given for the process targeted in this work: thermoforming.
 
-### Liquid Composite Moulding
+## Liquid Composite Moulding
 
 The LCM (Liquid Composite Moulding) processes are used to shape woven and polymer matrix composites. Among these processes, vacuum infusion and RTM (Resin Transfer Moulding, [@POT99]) are the most used. The principle of these processes is to mold the dry reinforcement, then to inject the resin to solidify the part. The fact of molding the dry reinforcement makes it possible to obtain a final composite part very close to the desired part, and thus to minimize the machining steps and thus the costs. These processes, known as "closed mould processes", allow a strict control of volatile organic compounds emitted during the manufacturing process, as the resin is not in direct contact with the atmosphere.
 
-#### Vacuum infusion
+## Vacuum infusion
 
-In vacuum infusion, the dry woven reinforcement is placed between a mold and a waterproof membrane, as described [1.10](#fig:1_Infusion){reference-type="ref" reference="fig:1_Infusion"}. By evacuating this area, the pump will press the reinforcement against the mold through the membrane and start the resin flow. A drainage net, made of a porous material, is placed near the reinforcement in order to facilitate the distribution of the resin. This process is easier to implement than RTM, and allows the production of parts in large series with good repeatability on complex shapes. However, thickness control is difficult and the surface finish on the membrane side is generally worse than the molded side.
+In vacuum infusion, the dry woven reinforcement is placed between a mold and a waterproof membrane. By evacuating this area, the pump will press the reinforcement against the mold through the membrane and start the resin flow. A drainage net, made of a porous material, is placed near the reinforcement in order to facilitate the distribution of the resin. This process is easier to implement than RTM, and allows the production of parts in large series with good repeatability on complex shapes. However, thickness control is difficult and the surface finish on the membrane side is generally worse than the molded side.
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/infusion_vide.svg" width=300 />
+   <img src="../../../assets/img/infusion_vide.svg" width=400 />
    <figcaption>Vacuum infusion</figcaption>
  </figure> 
 </div>
 
-#### Resin transfer moulding
+## Resin transfer moulding
 
-The manufacturing process can be broken down into three steps, as illustrated in [1.11](#fig:1_RTM){reference-type="ref" reference="fig:1_RTM"}.
-
-The first step is the preforming step. It consists in shaping (or stamping) a woven reinforcement in a mold by means of a punch. The advantage of this process is to have two rigid parts which will allow to better control the compression of the reinforcement during the shaping and thus its final thickness. Contrary to vacuum infusion, the surface finish is good on both sides. In order to avoid wrinkles during the stamping process, blank holders can be used by adding a slight tension in the rovings.
+The manufacturing process can be broken down into three steps. The first step is the preforming step. It consists in shaping (or stamping) a woven reinforcement in a mold by means of a punch. The advantage of this process is to have two rigid parts which will allow to better control the compression of the reinforcement during the shaping and thus its final thickness. Contrary to vacuum infusion, the surface finish is good on both sides. In order to avoid wrinkles during the stamping process, blank holders can be used by adding a slight tension in the rovings.
 
 Once the reinforcement is molded into the desired shape, the resin is injected. The assembly is then heated to cure the resin. Finally, when the resin is consolidated, the mold is opened and the part demolded.
 
@@ -144,9 +135,9 @@ This process is undergoing a strong development with the objective of being used
  </figure> 
 </div>
 
-### Thermoforming
+## Thermoforming
 
-In order to exploit the excellent properties of CFRTP composites in an industrial context, different manufacturing processes have been developed depending on the product and its application. Most of these methods are an adaptation of the processes for the shaping of thermoset composites or of the classical stamping techniques. In the case of forming flat structures, roll forming and simple compression have already been mentioned. In the case of constant section structures, we can mention pultrusion forming, which is a continuous manufacturing process where the profile is obtained by pulling the prepreg reinforcement through a heated die, or filament winding forming, whose functional principle is shown in [1.12](#fig:1_winding){reference-type="ref" reference="fig:1_winding"}[@MAC12]. These processes allow the shaping of simple parts (1D and 2D) and are easily automated.
+In order to exploit the excellent properties of CFRTP composites in an industrial context, different manufacturing processes have been developed depending on the product and its application. Most of these methods are an adaptation of the processes for the shaping of thermoset composites or of the classical stamping techniques. In the case of forming flat structures, roll forming and simple compression have already been mentioned. In the case of constant section structures, we can mention pultrusion forming, which is a continuous manufacturing process where the profile is obtained by pulling the prepreg reinforcement through a heated die, or filament winding forming [@MAC12]. These processes allow the shaping of simple parts (1D and 2D) and are easily automated.
 
 <div style="text-align:center;">
  <figure >
@@ -165,7 +156,7 @@ The first step in thermoforming is to heat the material above its melting temper
 
 After heating, the material is transported to the press. The transfer time is a critical parameter. The material must be transported to the press as quickly as possible to prevent the material from cooling above its crystallization temperature. Today's automation systems such as conveyors and robots help to reduce this time. The temperature loss in this step is about 10%. This is usually compensated by overheating the material in the first step. The material is then shaped.
 
-During forming, the reinforcement is deformed by applying pressure between two complementary tools which are the impression of the final structure, the punch and the die. These tools are usually equipped with a system to maintain a constant temperature below the melting point. The forming process takes a few seconds. The part is then maintained under pressure to remove porosities and ensure cohesion between the different layers and cooled down to a temperature that allows the dimensional stability of the part. This is the consolidation phase. The structure is finally demolded and continues to cool in ambient air. All the phases are shown in [1.13](#fig:1_thermoforming){reference-type="ref" reference="fig:1_thermoforming"} and [1.14](#fig:1_stamping_old){reference-type="ref" reference="fig:1_stamping_old"}
+During forming, the reinforcement is deformed by applying pressure between two complementary tools which are the impression of the final structure, the punch and the die. These tools are usually equipped with a system to maintain a constant temperature below the melting point. The forming process takes a few seconds. The part is then maintained under pressure to remove porosities and ensure cohesion between the different layers and cooled down to a temperature that allows the dimensional stability of the part. This is the consolidation phase. The structure is finally demolded and continues to cool in ambient air. 
 
 All the steps are carried out in a few minutes, this time can be further reduced if the production line allows the manufacture of two parts at the same time, one on the heating module and one on the shaping module. All these characteristics make thermostamping a prime candidate for the mass production of composite parts, especially in the automotive sector.
 
@@ -187,7 +178,7 @@ It is clear that temperature is an essential factor since it modifies the behavi
  </figure> 
 </div>
 
-## Modeling and Simulation approaches.
+# Modeling and Simulation approaches.
 
 Modeling and numerical simulation of the forming process are two important steps to predict the feasibility of different parts, but also to understand and improve the process itself. As mentioned earlier, the quality of the resulting parts depends greatly on the settings of the parameters that control the forming operations. Thus, during the design of a product, it is necessary to call upon trial and error campaigns, which are all the more costly as the part is complex and of large dimensions. The objective of the simulation is to predict the geometrical and mechanical characteristics likely to appear during the shaping process such as
 
@@ -207,29 +198,28 @@ These characteristics and defects are not all defined at the same scale: a fiber
 
 - The _macroscopic_ scale: study of the deformation of the reinforcement as a whole, in order to characterize the appearance of folds, slippage of the strands and more generally the formability of a complex geometry part.
 
-### Modeling at the microscopic scale
+## Modeling at the microscopic scale
 
 In a microscopic scale approach, the basic component is the fiber. The behavior of the fiber is linear orthotropic and its characteristic quantities are relatively well known. The difficulty of this type of approach is the management of the numerous bodies constituting the model, especially in the management of the contact between them.
 
-Currently, the existing models that come closest to modeling the behavior of reinforcements at the microscopic scale are those performed on ropes or cables, which are similar to strands containing fewer fibers and strongly twisted [@JIA99] [@NAW00] [@SRE06] [@GHO07]. On the other hand, the application to reinforcement rovings is rarer [@LAT11], mainly because of the high number of fibers per roving. However, we can mention the weaving model developed by Zhou [@ZHO04]([1.15](#fig:1_ZHO04){reference-type="ref" reference="fig:1_ZHO04"}) and Durville [@DUR10]([1.16](#fig:1_DUR10plain){reference-type="ref" reference="fig:1_DUR10plain"}).
+Currently, the existing models that come closest to modeling the behavior of reinforcements at the microscopic scale are those performed on ropes or cables, which are similar to strands containing fewer fibers and strongly twisted [@JIA99] [@NAW00] [@SRE06] [@GHO07]. On the other hand, the application to reinforcement rovings is rarer [@LAT11], mainly because of the high number of fibers per roving. However, we can mention the weaving model developed by Zhou [@ZHO04] and Durville [@DUR10].
 
 The main limitation of this type of approach is the computational time inherent to the number of fibers to model. For this reason, groups of fibers are modeled in the wicks, reducing the number of virtual fibers to a few tens instead of thousands of real fibers. Therefore, the simulation of the shaping of a large part with this approach is not feasible in the current state of research.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/ZHO04.png"  width="300" />
-      <figcaption>Zhou model</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/DUR10plain.png"  width="300" />
-      <figcaption>Durville model </figcaption>
-    </figure>
-    <figcaption>Microscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/ZHO04.png" width="300" />
+    <figcaption>Zhou model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/DUR10plain.png" width="300" />
+    <figcaption>Durville model</figcaption>
+  </figure>
 </div>
 
-### Mesoscopic simulation
+
+
+## Mesoscopic simulation
 
 Models at the mesoscopic scale are interested in the behavior of an elementary mesh of the reinforcement. At this scale, the wick is considered as a continuous medium. The objective of these models is to determine certain behaviors or properties of the reinforcement that are difficult or expensive to determine experimentally. Among these properties, the most sought after are :
 
@@ -243,18 +233,15 @@ Analytical approaches have been developed to access these thermomechanical and g
 
 The next figures shows an example using this type of approach proposed by Kawabata [@KAW73]. The roving is described by a set of segments schematizing its mean line: these segments then form a set of elastic tensile bars representing the whole woven reinforcement. The interactions between the rovings at the crossing points are modeled by springs of different types.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/KAW73.png"  width="250" />
-      <figcaption>Structure to model</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/KAW73_2.png"  width="250" />
-      <figcaption>Analytical modelling</figcaption>
-    </figure>
-    <figcaption>Mesoscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/KAW73.png" width="250" />
+    <figcaption>Structure to model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/KAW73_2.png" width="250" />
+    <figcaption>Analytical modelling</figcaption>
+  </figure>
 </div>
 
 Analytical approaches provide consistent results in determining the mechanical behavior of wicks in tension, but are more limited in more complex applications where shear is involved, for example. Simplifying assumptions about the geometry, especially at the level of lateral contacts, are problematic.
@@ -263,48 +250,39 @@ Faced with these limitations, the use of finite elements seems a good alternativ
 
 Many models have been developed to obtain the final geometry. We note the models associated with the software _WiseTex_ developed at the Katholieke Universiteit Leuven [@LOM00] and _Texgen_ developed at the University of Nottingham [@SHE07]. In the case of _WiseTex_, the geometry of the reinforcement is obtained by minimizing the strain energy of the strands within the reinforcement by taking into account different mechanical contributions (tension, bending, torsion, compression of the strands and interactions). This approach requires the experimental identification of data that are difficult to obtain. The models made with _Texgen_ , unlike _WiseTex_, do not use mechanical considerations. However, it allows to easily realize elementary meshes of 2D and 3D woven fabrics in which the wicks can have variable non-symmetric sections along their mean line. For both approaches, the problem of interpenetration, although reduced under _WiseTex_ [@VER05], remains major.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/LOM00.png"  width="300" />
-      <figcaption>Structure to model</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/texgen.png"  width="300" />
-      <figcaption>Analytical modelling</figcaption>
-    </figure>
-    <figcaption>Mesoscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/LOM00.png" width="300" />
+    <figcaption>Structure to model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/texgen.png" width="300" />
+    <figcaption>Analytical modelling</figcaption>
+  </figure>
 </div>
 
-X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@DES05] [@HSI15] [@HER09]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. An example of automation of the processing of microtomographic fabrics is shown [\[fig:1_NAO14\]](#fig:1_NAO14){reference-type="ref" reference="fig:1_NAO14"}.
+X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh [@DES05] [@HSI15] [@HER09]. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed [@NAO14] [@NAO15]. 
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/tomo_comp_xy_yz.png"  width="300" />
-      <figcaption>3D tomography of an interlock</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/simu_comp_xy_yz.png"  width="300" />
-      <figcaption>Mesh part</figcaption>
-    </figure>
-    <figcaption>Mesoscopic modelling</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/tomo_comp_xy_yz.png" width="300" />
+    <figcaption>3D tomography of an interlock</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/simu_comp_xy_yz.png" width="300" />
+    <figcaption>Mesh part</figcaption>
+  </figure>
 </div>
-
-<!-- ![3D tomography of an interlock](/assets/img/tomo_comp_xy_yz.png){#fig:1_NAO14ini2 width="\textwidth"}.
-![Modèle obtenu maillé.](/assets/img/simu_comp_xy_yz.png){#fig:1_NAO14fin2 width="\\textwidth"} -->
 
 Once the geometry is defined and discretized by finite elements, it is necessary to associate a behavior law to the wicks, which are in most cases considered as a continuous medium. This behavior is very specific due to the fibrous nature of the fibers. Most studies use hypoelastic [@GAS00] or hyperelastic [@CHA11b] models to describe this behavior.
 
 At this scale, modeling the entire woven reinforcement during forming is still difficult. However, the study of an elementary pattern or cell representative of the structure (CER) will allow to understand the behavior of the weaving at a smaller scale before extending it to the whole part. This is the case of modeling by homogenization and multi-scale calculations [@GEE03].
 
-### Macroscale modeling
+## Macroscale modeling
 
 The objective of macroscale simulation is to simulate the shaping of woven reinforcements at the scale of the entire part. The study of formability consists in predicting the appearance of the various defects observable on the woven fabrics. The number of defects that can be obtained depends both on the type of modeling approach chosen and on the richness of the mechanical characteristics given to them. These characteristics can be derived from tests performed at the woven fabric scale or from observations/simulations at smaller, microscopic and mesoscopic scales. The reuse of results obtained at smaller scales is the main reason for the existence of the corresponding models. Among the known macroscopic approaches, there are geometrical and mechanical approaches.
 
-#### Geometrical approaches
+### Geometrical approaches
 
 Geometric approaches are based on the so-called fishnet algorithm. This so-called geometric or kinematic approach is mainly used for the simulation of dragging. Its simplicity of use and its speed of execution make it a good method of first approach [@MAC56] [@VAN91]. It is based on strong assumptions:
 
@@ -316,7 +294,8 @@ Geometric approaches are based on the so-called fishnet algorithm. This so-calle
 
 - The absence of slippage between the woven fabric and the shaping tools.
 
-In this approach, the reinforcement is similar to hinged bars at the crossing points between networks. As shown in [1.23](#fig:1_Filet){reference-type="ref" reference="fig:1_Filet"}, the algorithm determines the position of a curant point C from the intersection of the two geodesics drawn on the surface to be draped from the related points A and B. The position of the initial point is thus made paramount and influences the final result [@WAN99a].
+In this approach, the reinforcement is similar to hinged bars at the crossing points between networks. The algorithm determines the position of a curant point C from the intersection of the two geodesics drawn on the surface to be draped from the related points A and B. The position of the initial point is thus made paramount and influences the final result [@WAN99a].
+
 
 <div style="text-align:center;">
  <figure >
@@ -327,26 +306,20 @@ In this approach, the reinforcement is similar to hinged bars at the crossing po
 
 <!-- ![Net method](/assets/img/Filet.svg){#fig:1_Net} -->
 
-With the removal of all mechanical and weaving considerations, the results are identical whatever the stiffness of the rovings and the weave chosen. Kinematic blocking in shear and thickness variation in compression are also absent from the basic model. The absence of developed contact prevents the use of external tools such as blanket clamps, which are necessary for some shaping. For woven reinforcements, the net algorithm is interesting as a preliminary approach to determine the degree of complexity of forming a part. An example of application on a non-developable part is given [\[fig:1_BOR03\]](#fig:1_BOR03){reference-type="ref" reference="fig:1_BOR03"}.
+With the removal of all mechanical and weaving considerations, the results are identical whatever the stiffness of the rovings and the weave chosen. Kinematic blocking in shear and thickness variation in compression are also absent from the basic model. The absence of developed contact prevents the use of external tools such as blanket clamps, which are necessary for some shaping. For woven reinforcements, the net algorithm is interesting as a preliminary approach to determine the degree of complexity of forming a part. An example of application on a non-developable part is given in the next figure.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/FiletDrappagePiece.png"  width="300" />
-      <figcaption>Geometrical part</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/FiletDrappage.png"  width="300" />
-      <figcaption>Simulation</figcaption>
-    </figure>
-    <figcaption>Geometrical approach</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/FiletDrappagePiece.png" width="300" />
+    <figcaption>Geometrical part</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/FiletDrappage.png" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
 </div>
 
-<!-- ![Piece](/assets/img/FiletDrappagePiece.png){#fig:1_FiletDrappagePiece width="69%"}
-![Drape](/assets/img/FiletDrappage.png){#fig:1_FiletDrappage width="69%"} -->
-
-#### Mechanical approaches
+### Mechanical approaches
 
 Among the mechanical models, three types of approaches can be distinguished: discrete, semi-discrete or continuous.
 
@@ -361,23 +334,16 @@ The _discrete_ approaches consist in considering the textile as a discontinuous 
 
 The application of this type of approach in the case of thermoplastic prepreg composites results in the modification of the mechanical behavior of the discrete elements that compose the reinforcement, in order to take into account the contribution of the matrix. We note the model proposed by Skordos [@SKO07] based on the work of Sharma [@SHA04], which introduces nonlinear elastoviscoplastic elements in order to take into account the specific behaviors of prepregs, such as the dependence on the strain rate.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/skordos1.svg"  width="300" />
-      <figcaption>Meshing</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/skordos2.svg"  width="300" />
-      <figcaption>Simulation</figcaption>
-    </figure>
-    <figcaption>Skordos discret approach</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/skordos1.svg" width="300" />
+    <figcaption>Meshing</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/skordos2.svg" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
 </div>
-
-<!-- ![skordos1](/assets/img/skordos1.svg){#fig:1_skordos1 width="\\textwidth"}
-
-![skordos2](/assets/img/skordos2.svg){#fig:1_skordos2 width="\\textwidth"} -->
 
 The _continuous_ approaches make the assumption of a continuous material at the macroscopic scale. This assumption follows directly from the consideration of non-slip between rovings during the shaping phase. The consideration of the textile as a continuous anisotropic medium whose behavior is homogenized from lower scales is then possible. The modeling is focused on an adapted proposal of behavior laws.
 
@@ -413,22 +379,16 @@ The _semi-discrete_ approaches are a combination of the two approaches mentioned
 
 In the first case, the discrete and continuous parts are associated in the same Lagrangian element. The forces generated by any deformation are subdivided between a tension contribution associated with the discrete parts and the other contributions (shear, compression) associated with the continuous part. The discrete and continuous parts are fixed with respect to each other in the isoparametric configuration. In this case, the discrete part is only the elementary representation of an energy contribution of tension. Different models have been developed, dedicated to 2D fabrics using shell elements [@HAM08] [@HAM09] [@BEL12], but also to interlocks using solid elements (hexahedral) [@DE09a]. The interest of such an element is to be able to represent more accurately and simply the local directions of the wicks in the preform and to account for the complex anisotropy of these materials.
 
-<div style="text-align:center;">
-<figure>
-    <figure >
-      <img src="../../../assets/img/Nahiene1.png"  width="300" />
-      <figcaption>Semi-discrete finite element</figcaption>
-    </figure> 
-    <figure  >
-      <img src="../../../assets/img/Nahiene2.png"  width="300" />
-      <figcaption>Simulation</figcaption>
-    </figure>
-    <figcaption>Hamila discret approach</figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../assets/img/Nahiene1.png" width="300" />
+    <figcaption>Semi-discrete finite element</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../assets/img/Nahiene2.png" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
 </div>
-
-<!-- ![Discretization of the semi-discrete finite element](/assets/img/Nahiene1.png){#fig:1_LUY09a_2 width="\textwidth"}
-![Formatting a strongly non-developable geometry](/assets/img/Nahiene2.png){#fig:1_LUY09b width="90%"} -->
 
 Another modeling strategy considers discrete and continuous parts as totally independent. This is the case, for example, of work on NCFs [@CRE06]. These specific woven fabrics are made of sewn webs. In this modeling, the roving plies are represented by layers of solid elements while bar elements are added to represent the seams. Here, the continuous parts are totally decoupled from the discrete parts, implying the management of the contact between the webs and the seams.
 
@@ -441,6 +401,6 @@ Another modeling strategy considers discrete and continuous parts as totally ind
 
 <!-- ![Representation of two plies and the seams linking them in a semi-discrete model](/assets/img/CRE06a.png){#fig:1_CRE06 width="90%"} -->
 
-## References
+# References
 
 \bibliography

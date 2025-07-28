@@ -1,14 +1,12 @@
-# Theory overview
-
 In this section you will find the some details about the physical models and method behind Comfor. For further details, the reader is advised to refer to the articles cited in each section.
 
-## Contents
+# Contents
 
 - [Materials](materials/materials_overview.md)
 - [Elements](materials/materials_overview.md)
 - [Solvers](solvers/solvers_overview.md)
 
-## Notation
+# Notation
 
 Following the common usage in the finite element and continuum mechanics literature we adopt the following rules.
 

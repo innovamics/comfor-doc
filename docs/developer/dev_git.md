@@ -1,22 +1,20 @@
-## Configure Git
-
 To start using Git from your computer, you must enter your credentials (user name and email) to identify you as the author of your work. The user name and email should match the ones you’re using on GitLab.
 
 In your shell, add your user name:
 
-```
+```bash
 git config --global user.name "your_username"
 ```
 
 And your email address:
 
-```
+```bash
 git config --global user.email "your_email_address@example.com"
 ```
 
 To check the configuration, run:
 
-```
+```bash
 git config --global --list
 ```
 
@@ -33,13 +31,14 @@ If you do not have an existing SSH key pair, generate a new one.
     
     For example, for ED25519:
     
-    ```
+    ```bash
     ssh-keygen -t ed25519 -C "<comment>"
     ```
     
 3. Press Enter. Output similar to the following is displayed:
 
-```
+```console
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/home/user/.ssh/id_ed25519):
 ```
@@ -50,7 +49,7 @@ Enter file in which to save the key (/home/user/.ssh/id_ed25519):
     
    - Specify a [passphrase](https://www.ssh.com/ssh/passphrase/):
     
-    ```
+    ```console
     Enter passphrase (empty for no passphrase):
     Enter same passphrase again:
     ```
@@ -62,24 +61,19 @@ A confirmation is displayed, including information about where your files are st
 To use SSH with GitLab, copy your public key to your GitLab account.
 
 1.  Copy the contents of your public key file. You can do this manually or use a script. For example, to copy an ED25519 key to the clipboard:
-    
+
     **macOS:**
-    
-    ```
+    ```bash
     tr -d '\n' < ~/.ssh/id_ed25519.pub | pbcopy
     ```
-
-   **Linux** (requires the `xclip` package):
-
-```
-xclip -sel clip < ~/.ssh/id_ed25519.pub
-```
-
-   **Git Bash on Windows:**
-
-```
-cat ~/.ssh/id_ed25519.pub | clip
-```
+    **Linux** (requires the `xclip` package):
+    ```bash
+    xclip -sel clip < ~/.ssh/id_ed25519.pub
+    ```
+    **Git Bash on Windows:**
+    ```bash
+    cat ~/.ssh/id_ed25519.pub | clip
+    ```
 
 1.  Replace `id_ed25519.pub` with your filename. For example, use `id_rsa.pub` for RSA.
     

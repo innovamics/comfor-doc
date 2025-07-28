@@ -1,5 +1,3 @@
-# Explicit dynamics 
-
 The scheme used in Comfor is explicit dynamics. This type of scheme allows a conditional step by step resolution of a dynamics problem. The equation of the dynamics, valid at any time, is written in the form :
 
 \begin{equation}
@@ -14,7 +12,7 @@ In order to solve this equation using a time integration scheme, time is first d
 
 The time integration scheme will define how displacements, velocities and accelerations are approximated from one increment to the next.
 
-## Central difference scheme 
+# Central difference scheme 
 
 The most popular, and currently implemented method on comfor is the central difference method. This method is developed from the central difference formulas applied for acceleration and velocity[@BEL14] [@BEN17]. 
 
@@ -80,7 +78,7 @@ $$
 
 Usually a safety factor $\alpha$ of 0.9 is used to guarantee convergence. Or, 0.25 to 0.50 in the case of problems involving explosives. 
 
-## Newmark scheme
+# Newmark scheme
 
 The Newmark $\beta_2$ and corresponds to a Taylor series development of the displacements, truncated at the jerk, with weighting coefficients $\beta$ and $\gamma$ :
 
@@ -117,7 +115,7 @@ where:
 
 The parameters $\gamma$ and $\beta$ of the algorithm allow to obtain different integration schemes, adapted to a given problem. Two types of resolution are then possible. The explicit resolution which allows to know the displacement at the next increment only with the help of the displacement, the speed and the acceleration at the previous step. Conversely, when this is not possible, the resolution is called implicit. The latter are generally stable for large time steps and ensure by construction the convergence of the dynamics equation. The explicit schemes are conditionally stable. Their stabilization implies the use of small time steps depending on the mesh and the material used. On the other hand, the absence of convergence verification allows to solve more easily non linear problems (geometrical, material or contact). 
 
-## Lumped mass matrix 
+# Lumped mass matrix 
 
 In explicit dynamics, the mass and damping matrices are taken diagonally. The inversion of these matrices is then extremely simplified. A method of mass matrix condensation is used (mass lumping[@ZIE05a]). The condensation of the matrix is done by summing on the diagonal the terms of the same row:
 
@@ -128,6 +126,6 @@ In explicit dynamics, the mass and damping matrices are taken diagonally. The in
 This method using a diagonal approximation speeds up the calculation, while being reasonable since globally $M_{ij} \neq 0$ is small for each row $i$ and is associated with geometrically close degrees of freedom. The loss of accuracy is largely compensated by the gain in computation time. In addition, the damping matrix is computed as a function of the mass matrix using a special case of Rayleigh damping, such that $\mathbf{C}^d=\alpha \mathbf{M}$.
 
 
-## References
+# References
 
 \bibliography
