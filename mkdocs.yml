@@ -97,6 +97,16 @@ plugins:
   - bibtex:
       bib_file: "docs/Bibliography.bib"
       csl_file: "docs/assets/csl/nature.csl"
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
