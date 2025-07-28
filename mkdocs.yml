@@ -41,22 +41,24 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)" # Automatic gestion of user's preferences
       scheme: default # Light theme
-      primary: custom
-      accent: custom
-      default: custom
-      typeset: custom
       toggle: # Theme changing button
         icon: material/toggle-switch # Theme changing button style
         name: Dark
+      primary: black
+      #primary: custom
+      #accent: custom
+      #default: custom
+      #typeset: custom
     - media: "(prefers-color-scheme: dark)" # Automatic gestion of user's preferences
       scheme: slate # Dark theme
-      primary: custom
-      accent: custom
-      default: custom
-      typeset: custom
       toggle: # Theme changing button
         icon: material/toggle-switch-off-outline # Theme changing button style
         name: Light
+      primary: black
+      #primary: custom
+      #accent: custom
+      #default: custom
+      #typeset: custom
   features:
     - navigation.footer
     - navigation.tabs
@@ -95,7 +97,6 @@ plugins:
   - bibtex:
       bib_file: "docs/Bibliography.bib"
       csl_file: "docs/assets/csl/nature.csl"
-  #    - mermaid2
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -103,11 +104,11 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js # chart.js
   - assets/js/xy_graphs.js
   - assets/js/table_rtd.js
-  - assets/js/background_effects.js
+ # - assets/js/background_effects.js
 
 extra_css:
- # - assets/css/test.css # figure formatting
   - assets/css/tabbed.css
-  - assets/css/custom_colors.css
-  - assets/css/background.css
-  - assets/css/home_page.css
+ # - assets/css/home_page.css
+ # - assets/css/custom_colors.css
+ # - assets/css/background.css
+ # - assets/css/test.css # figure formatting
