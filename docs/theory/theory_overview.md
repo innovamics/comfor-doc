@@ -10,9 +10,7 @@ In this section you will find the some details about the physical models and met
 
 Following the common usage in the finite element and continuum mechanics literature we adopt the following rules.
 
-**Notation convention**
-
-We adopt the following convention for variables notation.
+**Variables notation**
 
 | Notation                                  | Description                                                          |
 | ----------------------------------------- | -------------------------------------------------------------------- |
