@@ -88,6 +88,7 @@ markdown_extensions:
   - pymdownx.tasklist # - [X] item
   - pymdownx.tabbed # === "Tab 1"
   - pymdownx.blocks.caption
+  - tables
   - toc:
       permalink: "#"
       baselevel: 2
@@ -141,7 +142,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # Math ajax
   - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js # chart.js
   - assets/js/xy_graphs.js
-  - assets/js/table_rtd.js
+  # - assets/js/table_rtd.js
   # - assets/js/background_effects.js
 
 extra_css:
