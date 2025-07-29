@@ -104,10 +104,10 @@ plugins:
       languages:
         - locale: en
           default: true
-          name: English
+          name: 🇬🇧 English
           build: true
         - locale: fr
-          name: Français
+          name: 🇫🇷 Français
           build: true
           nav_translations:
             Home: Accueil
@@ -138,9 +138,9 @@ plugins:
             warning: Avertissement
 
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # Math ajax
-  - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js # chart.js
+  - assets/js/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js
   - assets/js/xy_graphs.js
   # - assets/js/table_rtd.js
   # - assets/js/background_effects.js
