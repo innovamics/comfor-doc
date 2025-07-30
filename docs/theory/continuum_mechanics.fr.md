@@ -434,21 +434,27 @@ Clausius-Duhem, combinée à certaines hypothèses propres au phénomène physiq
 $\nabla T = 0$).
 
 
-## Thermodynamics of irreversible processes
+## Thermodynamique des processus irréversibles
 
-In the case of an irreversible (dissipative) processes, the Clausius-Duheim
-inequality will allow us to determine the _dissipation_ function of the system,
-the associated forces (e.g. stresses) and thermodynamic flows (e.g. deformation
-rates) and to deduce the equations of evolution of the internal variables. This
-second method is more physical because its assumptions (nature of state
-variables and nature of dissipations) are directly related to the mechanisms of
-the phenomenon.
+Dans le cas d’un processus irréversible (dissipatif), l’inégalité de
+Clausius-Duhem permet de définir la **fonction de dissipation** du système, les
+**forces thermodynamiques** associées (par exemple : les contraintes) et les
+**flux thermodynamiques** (par exemple : les taux de déformation). Elle permet
+également de déduire les équations d’évolution des variables internes.
 
-In summary, when one wishes to describe the behavior of a given material on
-which one has a minimum of physical knowledge, it is preferable to use the
-method of thermodynamics of irreversible processes which is more restrictive
-than rational thermodynamics. Otherwise the rational thermodynamics will be used
-to give a general structure without referring to a particular material.
+Cette méthode est plus physiques car ses hypothèses (nature des variables
+d’état, formes des dissipation) sont directement liées aux mécanismes réels du
+phénomène étudié.
+
+En résumé, si l’on souhaite modéliser le comportement d’un matériau donné à
+partir d’un minimum de données expérimentales ou physiques, il est préférable
+d’utiliser la thermodynamique des processus irréversibles, plus contraignante
+mais aussi plus représentative.
+
+Dans le cas contraire, par exemple pour établir une structure générale sans
+cibler un matériau particulier, on peut utiliser la thermodynamique rationnelle,
+qui fournit un cadre formel et cohérent basé sur les principes fondamentaux.
+
 
 # Modèle de comportement
 
