@@ -691,53 +691,56 @@ $$
 \frac{\partial I_5}{\partial \mathbf{C}} &= \mathbf{l}_1 \otimes (\mathbf{C} \mathbf{l}_1) + (\mathbf{C} \mathbf{l}_1) \otimes \mathbf{l}_1
 \end{aligned}
 $$
+### Hyperélasticité orthotrope
 
-### Orthotropic hyperelasticity
-
-Un matériau orthotrope est caractérisé, dans la configuration initiale, par
-trois directions privilégiées $\mathbf{l_1}$, $\mathbf{l_2}$ et $\mathbf{l_3}$
-(normées). Ces directions permettent de définir les tenseurs de structure
-caractéristiques du groupe de symétrie du matériau [@BOE87] :
-
-$$
-\mathbf{L}_{ij}  = \mathbf{l}_i \otimes \mathbf{l}_j
-$$
-
-Le théorème de représentation permet alors l\'écriture de la fonction densité
-d\'énergie de déformation en fonction d\'invariants de la transformation pour un
-comportement orthotrope [@QUA94] [@ITS04] :
+Un matériau hyperélastique orthotrope est caractérisé, dans la configuration de
+référence, par trois directions privilégiées normées : $\mathbf{l}_1$,
+$\mathbf{l}_2$ et $\mathbf{l}_3$. Ces directions permettent de définir des
+tenseurs de structure associés au groupe de symétrie du matériau [@BOE87] :
 
 $$
-w =w \left( I_{1},I_{2},I_{3},I_{41},I_{42},I_{43},I_{412},I_{413},I_{423},I_{51},I_{52},I_{53} \right)
+\mathbf{L}_{ij} = \mathbf{l}_i \otimes \mathbf{l}_j
 $$
 
-$$w =w \left( I_{1},I_{2},I_{3},I_{41},I_{42},I_{43},I_{412},
-I_{413},I_{423},I_{51},I_{52},I_{53} \right)$$
+Le théorème de représentation permet alors d’écrire le potentiel d’énergie de
+déformation en fonction d’invariants adaptés à la symétrie orthotrope [@QUA94],
+[@ITS04] :
 
-définis par :
+$$
+w = w(I_1, I_2, I_3, I_{41}, I_{42}, I_{43}, I_{412}, I_{413}, I_{423}, I_{51}, I_{52}, I_{53})
+$$
 
-$$\begin{aligned}
-I_{4i} & = \mathbf{l}_i \cdot \mathbf{C} \mathbf{l}_i = \mathbf{C}:\mathbf{L}_{ii} \\
-I_{4ij} & = \mathbf{l}_i \cdot \mathbf{C} \mathbf{l}_j = \mathbf{C}:\mathbf{L}_{ij} \\
-I_{5i} & = \mathbf{l}_i \cdot \mathbf{C}^2 \mathbf{l}_i = \mathbf{C}^2:\mathbf{L}_{ii}
-\end{aligned}$$
+avec :
 
-$$\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} = 
-2 \sum_{i=1}^3 \left( \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}} +
-\frac{\partial w}{\partial I_{4i}} \frac{\partial I_{4i}}{\partial \mathbf{C}} + 
-\frac{\partial w}{\partial I_{5i}} \frac{\partial I_{5i}}{\partial \mathbf{C}} \right) + 
-2 \sum_{i,j=1}^3 \left( \frac{\partial w}{\partial I_{4ij}}
-\frac{\partial I_{4ij}}{\partial \mathbf{C}}  \right)$$
+$$
+\begin{aligned}
+I_{4i} &= \mathbf{l}_i \cdot \mathbf{C} \mathbf{l}_i = \mathbf{C} : \mathbf{L}_{ii} \\
+I_{4ij} &= \mathbf{l}_i \cdot \mathbf{C} \mathbf{l}_j = \mathbf{C} : \mathbf{L}_{ij} \\
+I_{5i} &= \mathbf{l}_i \cdot \mathbf{C}^2 \mathbf{l}_i = \mathbf{C}^2 : \mathbf{L}_{ii}
+\end{aligned}
+$$
 
-où les dérivées des tenseurs sont données par:
+Le tenseur des contraintes de Piola-Kirchhoff 2 associé est alors donné par :
 
-$$\begin{aligned}
-\frac{\partial I_{4i}}{\partial \mathbf{C}} & = \mathbf{L}_{ii}  \\
-\frac{\partial I_{4ij}}{\partial \mathbf{C}} & = \frac{1}{2} 
-\left( \mathbf{l}_i \otimes \mathbf{l}_j +  \mathbf{l}_j \otimes \mathbf{l}_i \right) \\
-\frac{\partial I_{5i}}{\partial \mathbf{C}} & = \mathbf{l}_i \otimes  
-\mathbf{C}\mathbf{l}_i +  \mathbf{C}\mathbf{l}_i \otimes \mathbf{l}_i
-\end{aligned}$$
+$$
+\begin{aligned}
+\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} =& 
+\ 2 \sum_{i=1}^3 \left( \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}} +
+\frac{\partial w}{\partial I_{4i}} \frac{\partial I_{4i}}{\partial \mathbf{C}} +
+\frac{\partial w}{\partial I_{5i}} \frac{\partial I_{5i}}{\partial \mathbf{C}} \right) \\\\
+& + 2 \sum_{\substack{i,j=1 \\\\ i<j}}^3 \left( \frac{\partial w}{\partial I_{4ij}} \frac{\partial I_{4ij}}{\partial \mathbf{C}} \right)
+\end{aligned}
+$$
+
+Les dérivées des invariants par rapport à $\mathbf{C}$ sont :
+
+$$
+\begin{aligned}
+\frac{\partial I_{4i}}{\partial \mathbf{C}} &= \mathbf{L}_{ii} \\
+\frac{\partial I_{4ij}}{\partial \mathbf{C}} &= \frac{1}{2} \left( \mathbf{l}_i \otimes \mathbf{l}_j + \mathbf{l}_j \otimes \mathbf{l}_i \right) \\
+\frac{\partial I_{5i}}{\partial \mathbf{C}} &= \mathbf{l}_i \otimes (\mathbf{C} \mathbf{l}_i) + (\mathbf{C} \mathbf{l}_i) \otimes \mathbf{l}_i
+\end{aligned}
+$$
 
 # References
 
