@@ -80,7 +80,7 @@ correspond en fait aux variations des produits scalaires de vecteurs matériels
 $\mathrm{d}\mathbf{X}$ et $\delta \mathbf{X}$, devenant $\mathrm{d}\mathbf{x}$
 et $\delta \mathbf{x}$ après transformation :
 
-$$ 
+$$
 \mathrm{d} \mathbf{x} \cdot \delta \mathbf{x} = \left( \mathbf{F} \,
 \mathrm{d}\mathbf{X} \right)^{T} \cdot \left( \mathbf{F} \, \delta \mathbf{X}
 \right) = \mathrm{d} \mathbf{X} \cdot \mathbf{C} \cdot \delta \mathbf{X}
@@ -123,8 +123,10 @@ Le tenseur $\mathbf{R}$ étant orthogonal, $\mathbf{R}^T \mathbf{R} =
 \mathbf{I}$, la définition du tenseur $\mathbf{U}$ découle de celle de
 $\mathbf{C}$ :
 
-$$\mathbf{C} = \mathbf{F}^T \mathbf{F} = \mathbf{U}^T \mathbf{R}^T \mathbf{R}
-\mathbf{U} = \mathbf{U}^2$$
+$$
+\mathbf{C} = \mathbf{F}^T \mathbf{F} = \mathbf{U}^T \mathbf{R}^T \mathbf{R}
+\mathbf{U} = \mathbf{U}^2
+$$
 
 Une analyse spectrale de $\mathbf{C}$ fournit les directions principales
 $\mathbf{N}_i$ et les valeurs propres associées $\lambda_i$ :
@@ -227,10 +229,15 @@ Les relations entre ces différents tenseurs sont données par :
 
 $$
 \begin{aligned}
-\mathbf{\tau} &= J \mathbf{\sigma} = \mathbf{F} \mathbf{S} \mathbf{F}^T = \mathbf{P} \mathbf{F}^T \\
-\mathbf{P} &= \mathbf{F} \mathbf{S} = \mathbf{\tau} \mathbf{F}^{-T} = J \mathbf{\sigma} \mathbf{F}^{-T} \\
-\mathbf{S} &= \mathbf{F}^{-1} \mathbf{P} = \mathbf{F}^{-1} \mathbf{\tau} \mathbf{F}^{-T} = J \mathbf{F}^{-1} \mathbf{\sigma} \mathbf{F}^{-T} \\
-\mathbf{\sigma} &= J^{-1} \mathbf{\tau} = J^{-1} \mathbf{P} \mathbf{F}^T = J^{-1} \mathbf{F} \mathbf{S} \mathbf{F}^T
+\mathbf{\tau} &= J \mathbf{\sigma} =
+\mathbf{F} \mathbf{S} \mathbf{F}^T = \mathbf{P} \mathbf{F}^T \\
+\mathbf{P} &= \mathbf{F} \mathbf{S} =
+\mathbf{\tau} \mathbf{F}^{-T} = J \mathbf{\sigma} \mathbf{F}^{-T} \\
+\mathbf{S} &= \mathbf{F}^{-1} \mathbf{P} =
+\mathbf{F}^{-1} \mathbf{\tau} \mathbf{F}^{-T} =
+J \mathbf{F}^{-1} \mathbf{\sigma} \mathbf{F}^{-T} \\
+\mathbf{\sigma} &= J^{-1} \mathbf{\tau} =
+J^{-1} \mathbf{P} \mathbf{F}^T = J^{-1} \mathbf{F} \mathbf{S} \mathbf{F}^T
 \end{aligned}
 $$
 
@@ -253,8 +260,11 @@ Il en résulte que les tenseurs $\mathbf{\sigma}$, $\mathbf{\tau}$ et
 $\mathbf{S}$ sont respectivement duaux des tenseurs cinématiques $\mathbf{D}$,
 $\dot{\mathbf{F}}$ et $\dot{\mathbf{E}}$ :
 
-$$ \mathbf{S} : \dot{\mathbf{E}} = \mathbf{\tau} : \dot{\mathbf{F}} =
-\mathbf{\sigma} : \mathbf{D} = \frac{1}{2} \mathbf{S} : \dot{\mathbf{C}} $$
+$$
+\mathbf{S} : \dot{\mathbf{E}} = \mathbf{\tau} : \dot{\mathbf{F}} =
+\mathbf{\sigma} : \mathbf{D} = \frac{1}{2} \mathbf{S} : \dot{\mathbf{C}}
+$$
+
 # Thermodynamique des milieux continus
 
 Les lois de la thermodynamique associées à la mécanique des milieux continus
@@ -359,7 +369,7 @@ $$
 En remplaçant $r$ via le premier principe et en utilisant :
 
 $$
-\mathrm{div} \left( \frac{\mathbf{q}}{T} \right) = 
+\mathrm{div} \left( \frac{\mathbf{q}}{T} \right) =
 \frac{1}{T} \mathrm{div}(\mathbf{q}) - \frac{1}{T^2} \mathbf{q} \cdot \nabla T
 $$
 
@@ -368,21 +378,27 @@ On définit la **fonction de dissipation** $\Phi$, qui se décompose en :
 - $\Phi_{\text{int}}$ : dissipation intrinsèque (production d'entropie interne)
 - $\Phi_{\text{th}}$ : dissipation thermique par conduction
 
-$$\Phi  = \underbrace {\rho \left( {{T} \,\dot \eta  - \frac{d}{dt}e} \right) + 
-\mathbf{ \sigma } :\mathbf{D}}_{\Phi _{\mathrm int}} - \underbrace 
+$$
+\Phi  = \underbrace {\rho \left( {{T} \,\dot \eta  - \frac{d}{dt}e} \right) +
+\mathbf{ \sigma } :\mathbf{D}}_{\Phi _{\mathrm int}} - \underbrace
 {\frac{1}{T}\mathbf{q} \cdot \frac{\partial T}
-{{\partial \underline X }}}_{\Phi _{\mathrm{th}}} \ge 0$$
+{{\partial \underline X }}}_{\Phi _{\mathrm{th}}} \ge 0
+$$
 
 En introduisant l'énergie libre spécifique $\psi = e - T\eta$, on obtient
 l'inégalité de Clausius-Duhem sous forme locale eulérienne :
 
-$$\Phi =-\rho \left(\dot{\psi} - \dot{{T} }\,\eta  \right)+\mathbf{\sigma}:
-\mathbf{D}-\frac{1}{T}\mathbf{q} \cdot \frac{\partial T }{\partial \mathbf{X}}\ge 0$$
+$$
+\Phi =-\rho \left(\dot{\psi} - \dot{{T} }\,\eta  \right)+\mathbf{\sigma}:
+\mathbf{D}-\frac{1}{T}\mathbf{q} \cdot \frac{\partial T }{\partial \mathbf{X}}\ge 0
+$$
 
 ou sous forme lagrangienne :
 
 $$
-\Phi_{0}=-{{\rho }_{0}}\left( \dot{\psi }-\dot{{T} }\,\eta  \right)+\mathbf{{S}}:\mathbf{{{\dot{E}}}}-\frac{1}{T} \mathbf{q} \cdot \frac{\partial {T} }{\partial \mathbf{X}} \ge 0
+\Phi_{0}=-{{\rho }_{0}}\left( \dot{\psi }-\dot{{T} }\,\eta  \right)+
+\mathbf{{S}}:\mathbf{{{\dot{E}}}}-\frac{1}{T} \mathbf{q} \cdot
+\frac{\partial {T} }{\partial \mathbf{X}} \ge 0
 $$
 
 ## Variables d'état et potentiels thermodynamiques
@@ -432,7 +448,6 @@ Les équations d’état du système sont ensuite déduites de l’inégalité d
 Clausius-Duhem, combinée à certaines hypothèses propres au phénomène physique
 étudié (par exemple : processus isotherme $T = \mathrm{const}$ et homogène
 $\nabla T = 0$).
-
 
 ## Thermodynamique des processus irréversibles
 
@@ -510,7 +525,8 @@ $$
 
 - **Dérivée de Green–Naghdi** [@BON97]:
 
-$$ \mathbf{\sigma}^{\triangle} = \dot{\mathbf{\sigma}} +
+$$
+\mathbf{\sigma}^{\triangle} = \dot{\mathbf{\sigma}} +
 \mathbf{\sigma} \dot{\mathbf{R}} \mathbf{R}^T - \dot{\mathbf{R}}
 \mathbf{R}^T \mathbf{\sigma}
 $$
@@ -580,13 +596,14 @@ modèles hyperélastiques :
 $$
 \begin{align}
 \dot{w} &= \mathbf{S} : \dot{\mathbf{E}} \\
-\dot{w}(\mathbf{C}) &= \mathbf{S} : \frac{1}{2} \frac{\partial}{\partial t} (\mathbf{C} - \mathbf{I}) \\
-\frac{\partial w}{\partial \mathbf{C}} : \dot{\mathbf{C}} &= \frac{1}{2} \mathbf{S} : \dot{\mathbf{C}} \\
+\dot{w}(\mathbf{C}) &=
+\mathbf{S} : \frac{1}{2} \frac{\partial}{\partial t} (\mathbf{C} - \mathbf{I}) \\
+\frac{\partial w}{\partial \mathbf{C}} : \dot{\mathbf{C}} &=
+\frac{1}{2} \mathbf{S} : \dot{\mathbf{C}} \\
 \Rightarrow \frac{\partial w}{\partial \mathbf{C}} &= \frac{1}{2} \mathbf{S} \\
 \mathbf{S} &= 2 \frac{\partial w}{\partial \mathbf{C}}
 \end{align}
 $$
-
 
 ### Hyperélasticité isotrope
 
@@ -641,7 +658,6 @@ $$
 \end{aligned}
 $$
 
-
 ### Hyperélasticité transverse isotrope
 
 Un matériau hyperélastique isotrope transverse est caractérisé par une direction
@@ -664,9 +680,9 @@ classiques définis précédemment. Les invariants $I_4$ et $I_5$ sont appelés
 
 $$
 \begin{aligned}
-I_4(\mathbf{C}, \mathbf{l}_1) &= \mathbf{l}_1 \cdot \mathbf{C} \mathbf{l}_1 = 
+I_4(\mathbf{C}, \mathbf{l}_1) &= \mathbf{l}_1 \cdot \mathbf{C} \mathbf{l}_1 =
 \mathbf{C} : \mathbf{L}_{11} \\
-I_5(\mathbf{C}, \mathbf{l}_1) &= \mathbf{l}_1 \cdot \mathbf{C}^2 \mathbf{l}_1 = 
+I_5(\mathbf{C}, \mathbf{l}_1) &= \mathbf{l}_1 \cdot \mathbf{C}^2 \mathbf{l}_1 =
 \mathbf{C}^2 : \mathbf{L}_{11}
 \end{aligned}
 $$
@@ -680,7 +696,8 @@ $$
 Avec cette définition, le tenseur des contraintes de Piola-Kirchhoff 2 s’écrit :
 
 $$
-\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} = 2 \sum_{i=1}^5 \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}}
+\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} =
+2 \sum_{i=1}^5 \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}}
 $$
 
 Les dérivées des invariants par rapport à $\mathbf{C}$ sont :
@@ -688,9 +705,11 @@ Les dérivées des invariants par rapport à $\mathbf{C}$ sont :
 $$
 \begin{aligned}
 \frac{\partial I_4}{\partial \mathbf{C}} &= \mathbf{L}_{11} \\
-\frac{\partial I_5}{\partial \mathbf{C}} &= \mathbf{l}_1 \otimes (\mathbf{C} \mathbf{l}_1) + (\mathbf{C} \mathbf{l}_1) \otimes \mathbf{l}_1
+\frac{\partial I_5}{\partial \mathbf{C}} &= \mathbf{l}_1 \otimes
+(\mathbf{C} \mathbf{l}_1) + (\mathbf{C} \mathbf{l}_1) \otimes \mathbf{l}_1
 \end{aligned}
 $$
+
 ### Hyperélasticité orthotrope
 
 Un matériau hyperélastique orthotrope est caractérisé, dans la configuration de
@@ -707,7 +726,8 @@ déformation en fonction d’invariants adaptés à la symétrie orthotrope [@QU
 [@ITS04] :
 
 $$
-w = w(I_1, I_2, I_3, I_{41}, I_{42}, I_{43}, I_{412}, I_{413}, I_{423}, I_{51}, I_{52}, I_{53})
+w = w(I_1, I_2, I_3, I_{41}, I_{42}, I_{43}, I_{412}, I_{413}, I_{423},
+I_{51}, I_{52}, I_{53})
 $$
 
 avec :
@@ -724,11 +744,12 @@ Le tenseur des contraintes de Piola-Kirchhoff 2 associé est alors donné par :
 
 $$
 \begin{aligned}
-\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} =& 
+\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} =&
 \ 2 \sum_{i=1}^3 \left( \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}} +
 \frac{\partial w}{\partial I_{4i}} \frac{\partial I_{4i}}{\partial \mathbf{C}} +
 \frac{\partial w}{\partial I_{5i}} \frac{\partial I_{5i}}{\partial \mathbf{C}} \right) \\\\
-& + 2 \sum_{\substack{i,j=1 \\\\ i<j}}^3 \left( \frac{\partial w}{\partial I_{4ij}} \frac{\partial I_{4ij}}{\partial \mathbf{C}} \right)
+& + 2 \sum_{\substack{i,j=1 \\\\ i<j}}^3
+\left( \frac{\partial w}{\partial I_{4ij}} \frac{\partial I_{4ij}}{\partial \mathbf{C}} \right)
 \end{aligned}
 $$
 
@@ -737,8 +758,10 @@ Les dérivées des invariants par rapport à $\mathbf{C}$ sont :
 $$
 \begin{aligned}
 \frac{\partial I_{4i}}{\partial \mathbf{C}} &= \mathbf{L}_{ii} \\
-\frac{\partial I_{4ij}}{\partial \mathbf{C}} &= \frac{1}{2} \left( \mathbf{l}_i \otimes \mathbf{l}_j + \mathbf{l}_j \otimes \mathbf{l}_i \right) \\
-\frac{\partial I_{5i}}{\partial \mathbf{C}} &= \mathbf{l}_i \otimes (\mathbf{C} \mathbf{l}_i) + (\mathbf{C} \mathbf{l}_i) \otimes \mathbf{l}_i
+\frac{\partial I_{4ij}}{\partial \mathbf{C}} &= \frac{1}{2}
+\left( \mathbf{l}_i \otimes \mathbf{l}_j + \mathbf{l}_j \otimes \mathbf{l}_i \right) \\
+\frac{\partial I_{5i}}{\partial \mathbf{C}} &=
+\mathbf{l}_i \otimes (\mathbf{C} \mathbf{l}_i) + (\mathbf{C} \mathbf{l}_i) \otimes \mathbf{l}_i
 \end{aligned}
 $$
 
