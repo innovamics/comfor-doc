@@ -63,6 +63,7 @@ The stress-strain relation is given simply by:
 $$
 \mathbf{S} = \mathbb{C}:\mathbf{E}
 $$
+
 **Expected parameters**
 
 - $E$ : Young's modulus
@@ -83,7 +84,6 @@ Two families of hyperelastic materials are currently implemented:
 - Anisotropic textiles models.
 
 The general form for the strain-stress relation is given by:
-
 
 $$
 \mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} 
@@ -112,6 +112,7 @@ This allows us to express the thickness evolution as a function of the membrane 
 $$
 \lambda_3 = \frac{1}{\lambda_1 \lambda_2} = \frac{h}{h_0}
 $$
+
 Finally, the stress state expressed in the initial configuration under the assumption of an incompressible material is given by:
 
 
@@ -123,7 +124,7 @@ With p being the Lagrange multiplier associated with the incompressibility condi
 
 **Expected parameters**
 
-- `potential type`: Ogden
+- `TYPE` : OGDEN
 - $\mu_i$ : shear moduli constant values.
 - $\alpha_i$ : constant dimensionless values associated to each $\mu_i$.
 
@@ -145,9 +146,7 @@ MATERIALS TYPE HYPERELASTIC
 The mechanical behavior of textile composite materials can modelled using a non-linear hyperelastic model[@GUZ15] [@GUZ16a]. The membrane and bending contributions to the strain energy potential are decoupled given the fibrous nature of one single ply.
 
 $$
-\begin{equation}
-	w = {w_{mem}} + {w_{ben}}
-\end{equation}
+w = {w_{mem}} + {w_{ben}}
 $$
 
 The membrane strain energy is expressed as a function of the physical invariants associated with the different deformation modes of the reinforcement. 

@@ -15,9 +15,6 @@ Project_name
        ...
 ```
 
-!!! tip
-    You can also open many other inputs formats, like raw tables `*.csv`, geometric data `*.stl`, images `*.png` ... try to open your tracker csv files.
-
 # Load the files
 
 In order to visualize the results, open Paraview. Click on menu _File_->_Open_ and look for the `Results_<file_name>`. Since Comfor names the files in ascending order, Paraview propose to open the files as a group.
