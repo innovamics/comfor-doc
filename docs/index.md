@@ -60,7 +60,7 @@ If you're new to Comfor, here are the best places to begin:
   your first simulation
 - [User Guide](user/user_overview.md) – Define models, materials, and
   postprocess results
-- [Downloads](overview/dowload_page) – Get the latest binaries and example
+- [Downloads](overview/download_page.md) – Get the latest binaries and example
   cases.
 
 ---
@@ -95,5 +95,3 @@ href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attributi
 xmlns:dct="http://purl.org/dc/terms/"
 href="https://gitlab.com/innovamics/comfor-doc"
 rel="dct:source">https://gitlab.com/innovamics/comfor-doc</a>.
-
-> Fork it, improve it, just don’t lock it down.
