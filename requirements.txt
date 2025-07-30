@@ -3,10 +3,12 @@ mkdocs>=1.2.1
 pymdown-extensions
 mkdocs-bibtex
 
-
 # Add your custom theme if not inside a theme_dir
 # (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
 mkdocs-material
 
 # Pygments for code highlighting
 pygments
+
+# Multilingual support
+mkdocs-static-i18n[material]

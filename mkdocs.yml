@@ -10,7 +10,7 @@ docs_dir: docs
 nav:
   - "Home":
       - "Welcome": index.md
-  - "Getting started":
+  - "Getting Started":
       - "Quick Start": overview/quick_starter_guide.md
       - "Downloads": overview/download_page.md
   #     - 'Tutorial': index.md
@@ -34,7 +34,7 @@ theme:
   favicon: assets/img/apple-touch-icon-72x72.png
   analytics:
     gtag: "G-7CEE34RD0F"
-  language: en 
+  language: en
   font:
     text: Roboto
     code: Roboto Mono
@@ -76,6 +76,7 @@ markdown_extensions:
   - pymdownx.emoji: # :smile: :heart: :thumbsup:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details
   - pymdownx.highlight: # Code highlighting
       use_pygments: true
       anchor_linenums: true
@@ -84,9 +85,10 @@ markdown_extensions:
   - pymdownx.inlinehilite # `==highlighted text==`
   - pymdownx.snippets # `{{snippet_name}}`
   - pymdownx.superfences # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
-  - pymdownx.tasklist # - [X] item  
+  - pymdownx.tasklist # - [X] item
   - pymdownx.tabbed # === "Tab 1"
   - pymdownx.blocks.caption
+  - tables
   - toc:
       permalink: "#"
       baselevel: 2
@@ -97,18 +99,55 @@ plugins:
   - bibtex:
       bib_file: "docs/Bibliography.bib"
       csl_file: "docs/assets/csl/nature.csl"
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: 🇬🇧 English
+          build: true
+        - locale: fr
+          name: 🇫🇷 Français
+          build: true
+          nav_translations:
+            Home: Accueil
+            Welcome: Bienvenue
+            User: Utilisateur
+            Theory: Théorie
+            Dev: Développeur
+            Overview: Généralités
+            Preprocessing: Pré-traitement
+            Running: Exécution
+            Postprocessing: Post-traitement
+            Using git: Configurer de git
+            Downloads: Téléchargements
+            Continuum Mechanics: Mécanique des milieux continus
+            Composite Materials: Matériaux composites
+            Materials overview: Matériaux
+            Solvers: Solveurs
+            Getting Started: Bien démarrer
+            Quick Start: Démarrage rapide
+          admonition_translations:
+            attention: Attention
+            danger: Danger
+            error: Erreur
+            hint: Astuce
+            important: Important
+            note: Note
+            tip: Conseil
+            warning: Avertissement
 
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # Math ajax
-  - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js # chart.js
+  - assets/js/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js
   - assets/js/xy_graphs.js
-  - assets/js/table_rtd.js
- # - assets/js/background_effects.js
+  # - assets/js/table_rtd.js
+  # - assets/js/background_effects.js
 
 extra_css:
   - assets/css/tabbed.css
- # - assets/css/home_page.css
- # - assets/css/custom_colors.css
- # - assets/css/background.css
- # - assets/css/test.css # figure formatting
+  # - assets/css/home_page.css
+  # - assets/css/custom_colors.css
+  # - assets/css/background.css
+  # - assets/css/test.css # figure formatting
