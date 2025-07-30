@@ -285,7 +285,7 @@ $$
 
 où :
 
-- $E_{int}$ est lénergie interne du système (en fonction de lénergie spécifique $e$) ;
+- $E_{int}$ est l'énergie interne du système (en fonction de l'énergie spécifique $e$) ;
 
 $$E_{int} = \int_\Omega \rho e dv$$
 
@@ -339,7 +339,7 @@ $$
 où $\\eta$ est l'entropie spécifique.
 
 Le second principe de la thermodynamique traduit la non-conservation de
-lentropie dans un cadre irréversible (non dissipatif). Il postule que le taux de
+l'entropie dans un cadre irréversible (non dissipatif). Il postule que le taux de
 production d'entropie est toujours supérieur ou égale au taux de chaleur reçue
 divisé par la température :
 
@@ -485,7 +485,7 @@ l’évolution des contraintes. On distingue généralement trois grandes famill
   contrainte. Ces modèles sont souvent utilisés pour des matériaux à la réponse
   peu anisotrope. Elles sont faciles à mettre en place et adaptées aux
   résolutions réactualisées. Les contraintes et énergies de déformation peuvent
-  ne pas être indépendantes de lhistorique de déformation.
+  ne pas être indépendantes de l'historique de déformation.
 
 - **Modèles hyperélastiques** : une densité d’énergie de déformation est définie
   comme un potentiel thermodynamique des contraintes. Les contraintes et

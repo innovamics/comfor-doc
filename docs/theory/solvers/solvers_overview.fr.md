@@ -198,7 +198,7 @@ fortement non linéaires (grands déplacements, contact, onde de choc), car ils
 permettent de s'affranchir de la résolution itérative au prix d’un pas de temps
 plus petit.
 
-## Matrice de masse lumpée
+## Matrice de masse diagonale
 
 En dynamique explicite, les matrices de masse et d’amortissement sont souvent
 supposées diagonales pour simplifier les calculs. On utilise une **condensation

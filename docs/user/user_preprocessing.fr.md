@@ -32,7 +32,7 @@ Si l'unité de force est le newton $N$, l'unité de longueur est le $mm$ et
 l'unité de temps est la seconde $s$, les unités d'accélération sont $mm/s^2$ et
 les unités de masse doivent être $kg \cdot 10^{3} = t$ (tonne métrique). 
 
-# Fichier d'entrée Bim 
+# Fichier d'entrée
 
 Ce type de fichier est structuré en blocs. Chaque bloc est étiqueté et définit
 les paramètres d'entrée du modèle. Chaque bloc a un type qui dépend de
@@ -70,8 +70,9 @@ La définition générale d'un bloc est la suivante :
     L'ordre des blocs dans le fichier d'entrée n'a aucune incidence sur
     l'opération d'analyse.
 
-## Contrôle
-Ce bloc définit les paramètres de contrôle de l'analyse explicite.
+## Contrôle de temps
+
+Ce bloc définit les paramètres de l'analyse explicite.
  
 - Heure de début et de fin de l'analyse
     - `RUN FROM .. TO ..`
@@ -89,7 +90,8 @@ CONTROLS
 RUN FROM <start_time> TO <end_time> STEP <time_step> 
 PRINT EVERY <print_step> 
 ```
-Si le label `STEP` n'est pas spécifié, le pas de temps sera défini automatiquement en fonction du matériau et du type de maillage.
+Si le label `STEP` n'est pas spécifié, le pas de temps sera défini
+automatiquement en fonction du matériau et du type de maillage.
 
 !!! note
     Dans une version future, le type de solveur sera défini ici.
@@ -143,10 +145,13 @@ AMPLITUDES TYPE <amplitude_type_1>
 ```
 
 - `<amplitude_type>` définit le type d'amplitude du matériau du modèle.
-- `amplitude_1_name>` est le nom personnalisé de la première amplitude 1 (défini par l'utilisateur)
-- `<prop_n>` Définit la valeur de la propriété nommée `prop_n`. Les étiquettes dépendent de chaque type d'amplitude.
+- `amplitude_1_name>` est le nom personnalisé de la première amplitude 1 (défini
+  par l'utilisateur)
+- `<prop_n>` Définit la valeur de la propriété nommée `prop_n`. Les étiquettes
+  dépendent de chaque type d'amplitude.
 
-Pour l'instant, seules les amplitudes tabulaires sont prises en charge. La structure est donnée par :
+Pour l'instant, seules les amplitudes tabulaires sont prises en charge. La
+structure est donnée par :
 
 ```xml
 AMPLITUDES TYPE TABULAR
@@ -154,7 +159,8 @@ AMPLITUDES TYPE TABULAR
 <amplitude_2_name> VALUES = <t1 , v1, t2, v2, ... , tn, vn>
 ```
 
-où `tn, vn` définit la valeur $v_n$ de l'amplitude à l'instant $t_n$. Les valeurs entre $t_n$ et $t_{n+1}$ sont interpolées linéairement.
+où `tn, vn` définit la valeur $v_n$ de l'amplitude à l'instant $t_n$. Les
+valeurs entre $t_n$ et $t_{n+1}$ sont interpolées linéairement.
 
 _Exemple_:
  
@@ -166,11 +172,13 @@ Diminution VALUES = 0, 1 ,7 ,0
 ```
 Définit l'amplitude :
 
-<canvas id="Amplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
+<canvas id="Amplitude" width="700" height="400">Désolé, votre navigateur ne
+prend pas en charge &lt;canvas&gt;.</canvas>
 
 ## Contraintes
 
-Ce bloc définit les différentes contraintes du modèle. Chaque bloc contient différentes contraintes du même type.
+Ce bloc définit les différentes contraintes du modèle. Chaque bloc contient
+différentes contraintes du même type.
 
 **Structure**
 
@@ -183,13 +191,17 @@ CONSTRAINTS TYPE <constraint_type_1>
 ```
 
 - `<constraint_type>` : définit le type de contrainte du matériau du modèle.
-- `contraint_n_name>` : nom personnalisé de l'amplitude n (défini par l'utilisateur)
-- `<prop_n>` : définit la valeur de la propriété nommée `prop_n`. Les étiquettes dépendent du type de contrainte.
+- `contraint_n_name>` : nom personnalisé de l'amplitude n (défini par
+  l'utilisateur)
+- `<prop_n>` : définit la valeur de la propriété nommée `prop_n`. Les étiquettes
+  dépendent du type de contrainte.
 - `AMPLITUDE` : indique qu'une amplitude est associée à cette contrainte
     
-- `<amplitude_name>` : nom de l'amplitude à appliquer à cette contrainte, comme spécifié dans le bloc amplitude.
+- `<amplitude_name>` : nom de l'amplitude à appliquer à cette contrainte, comme
+  spécifié dans le bloc amplitude.
 
-À l'heure actuelle, le seul type de contrainte est `boundary_conditions`. Cette contrainte permet de fixer le DOFS du nœud. La structure est donnée par :
+À l'heure actuelle, le seul type de contrainte est `boundary_conditions`. Cette
+contrainte permet de fixer le degrés de liberté du nœud. La structure est donnée par :
 
 ```xml
 CONSTRAINTS TYPE BOUNDARY_CONDITION
@@ -197,7 +209,12 @@ CONSTRAINTS TYPE BOUNDARY_CONDITION
 <bc_with_amplitude> VX = <valeur>  ... AMPLITUDE = <amplitude_name>
 ```
 
-où `VI` définit le taux de déplacement de la valeur dans la direction I(X,Y,Z), `VRI` définit le taux de rotation dans la direction I(X,Y,Z), `AI` définit l'accélération du déplacement de la valeur dans la direction I(X,Y,Z), `ARI` définit le taux d'accélération de rotation dans la direction I(X,Y,Z). Enfin, vous pouvez utiliser une amplitude du bloc amplitude pour modifier la valeur absolue de la condition aux limites. 
+où `VI` définit le taux de déplacement de la valeur dans la direction I(X,Y,Z),
+`VRI` définit le taux de rotation dans la direction I(X,Y,Z), `AI` définit
+l'accélération du déplacement de la valeur dans la direction I(X,Y,Z), `ARI`
+définit le taux d'accélération de rotation dans la direction I(X,Y,Z). Enfin,
+vous pouvez utiliser une amplitude du bloc amplitude pour modifier la valeur
+absolue de la condition aux limites.
 
 !!! remarque
     Si le DOF n'est pas fixe, alors il est libre.
@@ -254,7 +271,8 @@ vacuum VALUES = 0., 0. , 5., -1.0
 
 ## Nœuds
 
-Ce bloc définit la position des différents nœuds dans le modèle, **et* éventuellement les contraintes et les charges appliquées à chaque nœud.
+Ce bloc définit la position des différents nœuds dans le modèle, **et*
+éventuellement les contraintes et les charges appliquées à chaque nœud.
  
 **Structure**
 
@@ -288,11 +306,13 @@ P_FORCE   FZ = 1.0
 ```
 Cela définit 3 points :
 
-<canvas id="NodeTri" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
+<canvas id="NodeTri" width="700" height="400">Désolé, votre navigateur ne prend
+pas en charge &lt;canvas&gt;.</canvas>
 
 ## Éléments
 
-Ce bloc définit les différents éléments du modèle. Chaque bloc contient un groupe d'éléments du même type. La structure générale est la suivante :
+Ce bloc définit les différents éléments du modèle. Chaque bloc contient un
+groupe d'éléments du même type. La structure générale est la suivante :
 
 **Structure**
 
@@ -351,7 +371,10 @@ ELEMENTS TYPE MEMBRANE_3
 ```
 ## Trackers
 
-Enfin, nous pouvons utiliser des objets trackers pour suivre certaines informations sur les nœuds ou les éléments. Ces informations sont imprimées dans un fichier CSV pour chaque [`print_step`](#control) et pour chaque nœud/élément spécifié dans la définition du tracker.
+Enfin, nous pouvons utiliser des objets trackers pour suivre certaines
+informations sur les nœuds ou les éléments. Ces informations sont imprimées dans
+un fichier CSV pour chaque [`print_step`](#controle_de_temps) et pour chaque nœud/élément
+spécifié dans la définition du tracker.
 
 **Structure**
 ```xml

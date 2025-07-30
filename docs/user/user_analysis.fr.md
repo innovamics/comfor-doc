@@ -29,7 +29,7 @@ $ comfor /usr/name/sim/test.bim
 
 Pendant l’analyse, Comfor affiche périodiquement des informations utiles dans le
 terminal. La fréquence est définie par le paramètre
-[`PRINT EVERY`](user_preprocessing.md#control) dans le bloc de contrôle.
+[`PRINT EVERY`](user_preprocessing.md#controle_de_temps) dans le bloc de contrôle.
 
 La sortie s’organise en blocs comme suit :
 

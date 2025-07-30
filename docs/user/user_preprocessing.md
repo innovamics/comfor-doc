@@ -166,7 +166,8 @@ CONSTRAINTS TYPE <constraint_type_1>
 - `AMPLITUDE`: Indicates that an amplitude is associated to this constraint
     - `<amplitude_name>`: amplitude name to be applied to this constraint, as specified in the amplitude block.
 
-At this moment only the only type of constraint is `boundary_conditions`. This constraints allows to fix the DOFS of the node.The structure is given by:
+At this moment only the only type of constraint is `boundary_conditions`. This
+constraints allows to fix the degrees of freedom of the node.The structure is given by:
 
 ```xml
 CONSTRAINTS TYPE BOUNDARY_CONDITION
