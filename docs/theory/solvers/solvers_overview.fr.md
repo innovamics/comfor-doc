@@ -104,7 +104,7 @@ vibration longitudinale de longueur $l$ :
 $$
 \omega = \frac{2}{l} \sqrt{\frac{E}{\rho}} = \frac{2c}{l}
 \quad \Rightarrow \quad
-\Delta t_{\text{crit}} = \f---rac{l}{c}
+\Delta t_{\text{crit}} = \frac{l}{c}
 $$
 
 En deux ou trois dimensions, on utilise une longueur caractéristique $l_e$ et
@@ -202,7 +202,7 @@ plus petit.
 
 En dynamique explicite, les matrices de masse et d’amortissement sont souvent
 supposées diagonales pour simplifier les calculs. On utilise une **condensation
-de masse** (_mass lumping_[@ZIE05a]), consistant à répartir la masse totale de
+de masse** (_mass lumping_ [@ZIE05a]), consistant à répartir la masse totale de
 chaque ligne sur sa diagonale :
 
 $$
@@ -211,8 +211,8 @@ $$
 
 Cette approximation permet une inversion locale rapide, sans perte significative
 de précision car les termes hors-diagonale sont généralement faibles et associés
-à des degrés de liberté géométriquement proches[@BON08]. La perte de précision
-est largement compensée par le gain en performance.
+à des degrés de liberté géométriquement proches. La perte de précision est
+largement compensée par le gain en performance.
 
 L’amortissement est souvent défini par un modèle simplifié de Rayleigh :
 
