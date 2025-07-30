@@ -114,7 +114,7 @@ $$
 ## Décomposition polaire
 
 Le tenseur gradient de déformation $\mathbf{F}$ peut être exprimé comme le
-produit d’un tenseur de rotation $\mathbf{R}$ et d’un tenseur des déformations
+produit d'un tenseur de rotation $\mathbf{R}$ et d'un tenseur des déformations
 pures droit $\mathbf{U}$ :
 
 $$\mathbf{F} = \mathbf{R} \mathbf{U}$$
@@ -165,76 +165,76 @@ $$
 \dot{\mathbf{E}} = \mathbf{F}^T \mathbf{D} \mathbf{F} = \frac{1}{2} \dot{\mathbf{C}}
 $$
 
-
 # Mesures des contraintes
 
-Soit un solide déformable découpé virtuellement en deux sous-domaines, avant et
-après transformation. L'équilibre de chacun des deux sous-domaines implique
-l'existence de forces internes à l'interface. On définit dans la configuration
-actuelle $C_f$ le vecteur actuelle $\mathbf{t}$ qui caractérise les forces de
-cohésion interne $\mathbf{f}$ exercées sur une partie du solide à travers la
-surface $ds$ de normale externe $\mathbf{n}$ :mae
+Considérons un solide déformable découpé virtuellement en deux sous-domaines,
+avant et après transformation. L'équilibre de chacun des deux sous-domaines
+implique l'existence de forces internes à l'interface. On définit dans la
+configuration actuelle $C_t$ le vecteur contrainte $\mathbf{t}$ qui caractérise
+les forces de cohésion interne $\mathrm{d}\mathbf{f}$ exercées sur une partie du
+solide à travers la surface $\mathrm{d}s$ de normale externe $\mathbf{n}$ :
 
 $$
-\mathbf{t}=\frac{d\mathbf{f}}{ds}
+\mathbf{t} = \frac{\mathrm{d}\mathbf{f}}{\mathrm{d}s}
 $$
 
 <div style="text-align:center;">
- <figure >
-   <img src="../../assets/img/stress.svg"  />
-   <figcaption>Définition du vecteur contrainte </figcaption>
- </figure> 
+ <figure>
+   <img src="../../assets/img/stress.svg" />
+   <figcaption>Définition du vecteur contrainte</figcaption>
+ </figure>
 </div>
-
 
 Selon le théorème de Cauchy, pour un point donné, le vecteur contrainte dépend
 linéairement du vecteur normal $\mathbf{n}$. Il existe alors un tenseur d'ordre
-deux, nommé tenseur des contraintes de Cauchy $\mathbf{\sigma}$ , tel que :
+deux, nommé tenseur des contraintes de Cauchy $\mathbf{\sigma}$, tel que :
 
 $$
 \mathbf{t} = \mathbf{\sigma} \mathbf{n}
 $$
 
-soit :
+soit aussi :
 
 $$
-d\mathbf{f} = \mathbf{\sigma} \mathbf{n} ds
+\mathrm{d}\mathbf{f} = \mathbf{\sigma} \mathbf{n} \, \mathrm{d}s
 $$
 
-!!! note
-    L'écriture de l'équation du principe fondamental de la dynamique
-    permet de démontrer que le tenseur des contraintes de Cauchy est
-    symétrique.
+> **Note** : L'équation du principe fondamental de la dynamique permet de
+> démontrer que le tenseur des contraintes de Cauchy est symétrique.
 
-Le tenseur de Cauchy représente donc les efforts internes exprimés dans la
+Le tenseur de Cauchy représente les efforts internes exprimés dans la
 configuration actuelle. De même que pour les différentes mesures de déformation
-établies précédemment, il est possible de définir dautres mesures des efforts
-internes. Ainsi, en notant $d\mathbf{F}$, $dS$ et $\mathbf{N}$ les effort
-internes, la surface et sa normale ramenés en configuration initiale, les trois
-tenseurs suivants sont définis :
-
-$$\begin{aligned}
-d\mathbf{f} & = \mathbf{P} \mathbf{N} dS \\
-d\mathbf{F} & = \mathbf{S} \mathbf{N} dS \\
-d\mathbf{F} & = \mathbf{\tau} \mathbf{n} ds
-\end{aligned}$$
-
-
-Ces tenseurs sont nommés le tenseur de Piola-Kirchhoff $\mathbf{P}$, le tenseur
-de Piola-Kirchhoff 2 $\mathbf{S}$ et le tenseur de Kirchhoff $\mathbf{\tau}$.
-Les liens entre ces différents tenseurs sont donnés par :
+établies précédemment, il est possible de définir d'autres mesures des efforts
+internes dans la configuration de référence. En notant $\mathrm{d}\mathbf{F}$,
+$\mathrm{d}S$ et $\mathbf{N}$ les forces internes, la surface et sa normale
+ramenées en configuration initiale, on définit les trois tenseurs suivants :
 
 $$
 \begin{aligned}
-\mathbf{\tau} &= J\mathbf{\sigma} = \mathbf{F}\mathbf{S}\mathbf{F}^{T} = \mathbf{P}\mathbf{F}^{T} \\
-\mathbf{P} &= \mathbf{F} \mathbf{S} = \mathbf{\tau} \mathbf{F}^{-T} = J \mathbf{\sigma} \mathbf{F}^{-T} \\
-\mathbf{S} &= \mathbf{F}^{-1} \mathbf{P} = \mathbf{F}^{-1} \mathbf{\tau} \mathbf{F}^{-T} = J \mathbf{F}^{-1} \mathbf{\sigma} \mathbf{F}^{-T} \\
-\mathbf{\sigma} &= J^{-1} \mathbf{\tau} = J^{-1} \mathbf{P}\mathbf{F}^{T} = J^{-1} \mathbf{F} \mathbf{S} \mathbf{F}^{T}
+\mathrm{d}\mathbf{f} &= \mathbf{P} \mathbf{N} \, \mathrm{d}S \\
+\mathrm{d}\mathbf{F} &= \mathbf{S} \mathbf{N} \, \mathrm{d}S \\
+\mathrm{d}\mathbf{F} &= \mathbf{\tau} \mathbf{n} \, \mathrm{d}s
 \end{aligned}
 $$
 
-!!! note
-      En petites déformations, ces tenseurs sont identiques.
+Ces tenseurs sont nommés respectivement :
+
+- $\mathbf{P}$ : tenseur de Piola-Kirchhoff premier,
+- $\mathbf{S}$ : tenseur de Piola-Kirchhoff second,
+- $\mathbf{\tau}$ : tenseur de Kirchhoff.
+
+Les relations entre ces différents tenseurs sont données par :
+
+$$
+\begin{aligned}
+\mathbf{\tau} &= J \mathbf{\sigma} = \mathbf{F} \mathbf{S} \mathbf{F}^T = \mathbf{P} \mathbf{F}^T \\
+\mathbf{P} &= \mathbf{F} \mathbf{S} = \mathbf{\tau} \mathbf{F}^{-T} = J \mathbf{\sigma} \mathbf{F}^{-T} \\
+\mathbf{S} &= \mathbf{F}^{-1} \mathbf{P} = \mathbf{F}^{-1} \mathbf{\tau} \mathbf{F}^{-T} = J \mathbf{F}^{-1} \mathbf{\sigma} \mathbf{F}^{-T} \\
+\mathbf{\sigma} &= J^{-1} \mathbf{\tau} = J^{-1} \mathbf{P} \mathbf{F}^T = J^{-1} \mathbf{F} \mathbf{S} \mathbf{F}^T
+\end{aligned}
+$$
+
+> **Note** : En petites déformations, ces tenseurs sont identiques.
 
 # Dualités contraintes-déformations
 
