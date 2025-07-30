@@ -363,7 +363,7 @@ $$
 \frac{1}{T} \mathrm{div}(\mathbf{q}) - \frac{1}{T^2} \mathbf{q} \cdot \nabla T
 $$
 
-On définit la **fonction de dissipation** $\\Phi$, qui se décompose en :
+On définit la **fonction de dissipation** $\Phi$, qui se décompose en :
 
 - $\Phi_{\text{int}}$ : dissipation intrinsèque (production d'entropie interne)
 - $\Phi_{\text{th}}$ : dissipation thermique par conduction
@@ -373,7 +373,7 @@ $$\Phi  = \underbrace {\rho \left( {{T} \,\dot \eta  - \frac{d}{dt}e} \right) +
 {\frac{1}{T}\mathbf{q} \cdot \frac{\partial T}
 {{\partial \underline X }}}_{\Phi _{\mathrm{th}}} \ge 0$$
 
-En introduisant l'énergie libre spécifique $\\psi = e - T\eta$, on obtient
+En introduisant l'énergie libre spécifique $\psi = e - T\eta$, on obtient
 l'inégalité de Clausius-Duhem sous forme locale eulérienne :
 
 $$\Phi =-\rho \left(\dot{\psi} - \dot{{T} }\,\eta  \right)+\mathbf{\sigma}:
@@ -411,23 +411,28 @@ Le choix de ces variables, leur type et leur nombre, nécessite une bonne
 compréhension physique du problème étudié, et conditionne la précision du
 modèle.
 
-## Rational thermodynamics
+## Thermodynamique rationnelle
 
-In the general case, a law of behavior should provide: the free energy of the
-system $\Phi$, the specific entropy $\eta$, the stress tensor $\mathbf{{sigma}}$
-and the heat flux vector $\mathbf{q}$ as a function of the state variables. The
-physical content of the theory results from the list of available state
-variables. Thermodynamics is then used to restrict the possible laws of behavior
-and to keep only those which are compatible with the second principle of
-thermodynamics, i.e. compatible with the Clausius-Duheim inequality.
+Dans le cas général, une loi de comportement doit fournir les grandeurs
+suivantes en fonction des variables d’état : l’énergie libre $\psi$, l’entropie
+spécifique $\eta$, le tenseur des contraintes $\mathbf{\sigma}$, ainsi
+que le vecteur de flux thermique $\mathbf{q}$.
 
-The rational thermodynamics method consists in assuming the existence of a
-thermodynamic potential as a function of a certain number of well-defined state
-variables (observables or internal). Generally we postulate the existence and
-the form of the free energy $\Phi$. The equations of state of the system are
-then deduced from the Clausius-Duheim inequality and from the application of
-certain hypotheses specific to the physical phenomenon (e.g.: an isothermal $T
-=const$ and homogeneous $\frac{\partial {T} }{\partial \mathbf{x}}=0$ process).
+Le contenu physique de la théorie dépend donc du choix des variables d’état
+disponibles. La thermodynamique est alors utilisée pour restreindre l’espace des
+lois de comportement admissibles et ne retenir que celles qui sont compatibles
+avec le second principe, c’est-à-dire avec l’inégalité de Clausius-Duhem.
+
+La méthode dite de la **thermodynamique rationnelle** consiste à postuler
+l’existence d’un potentiel thermodynamique exprimé en fonction d’un ensemble
+bien défini de variables d’état (observables ou internes). En général, on
+suppose l’existence et la forme de l’énergie libre $\psi$.
+
+Les équations d’état du système sont ensuite déduites de l’inégalité de
+Clausius-Duhem, combinée à certaines hypothèses propres au phénomène physique
+étudié (par exemple : processus isotherme $T = \mathrm{const}$ et homogène
+$\nabla T = 0$).
+
 
 ## Thermodynamics of irreversible processes
 
