@@ -255,123 +255,135 @@ $\dot{\mathbf{F}}$ et $\dot{\mathbf{E}}$ :
 
 $$ \mathbf{S} : \dot{\mathbf{E}} = \mathbf{\tau} : \dot{\mathbf{F}} =
 \mathbf{\sigma} : \mathbf{D} = \frac{1}{2} \mathbf{S} : \dot{\mathbf{C}} $$
-
 # Thermodynamique des milieux continus
 
-Les lois thermodynamiques associées à la mécanique des milieux continus sont
-nécessaires pour introduire le couplage entre les phénomènes thermiques et les
-effets mécaniques. Cependant, même en labsence de tout couplage
-Thermo-mécanique, le second principe de la thermodynamique permet dintroduire le
-principe fondamental de conservation de lénergie.
+Les lois de la thermodynamique associées à la mécanique des milieux continus
+sont nécessaires pour introduire le couplage entre phénomènes thermiques et
+effets mécaniques. Même en l'absence de couplage thermomécanique, le second
+principe permet d'introduire la conservation de l'énergie.
 
 ## Premier principe de la thermodynamique
 
-Le premier principe de la thermodynamique exprime que la variation totale
-dénergie (cest-à-dire lénergie interne plus lénergie cinétique) est égale à la
-somme de la puissance des forces externes plus la quantité de chaleur fournie au
-système par unité de temps, cest-à-dire :
+Le premier principe exprime que la variation totale d'énergie (interne +
+cinétique) est égale à la somme de la puissance des forces extérieures et de la
+chaleur fournie au système :
 
-$$\frac{d}{dt}\left( E_{int} + E_{cin} \right) = P_{ext} + \dot Q$$
+$$
+\frac{d}{dt} \left( E_{\text{int}} + E_{\text{cin}} \right) = P_{\text{ext}}
++ \dot{Q}
+$$
 
+où :
 
-with the internal energy of the system $E_{int}$ is a function of the specific
-energy $e$,
-
-Avec :
-
-- $E_{int}$ : lénergie interne du système (en fonction de lénergie spécifique $e$) ;
+- $E_{int}$ est lénergie interne du système (en fonction de lénergie spécifique $e$) ;
 
 $$E_{int} = \int_\Omega \rho e dv$$
 
-- $Q$ le taux de chaleur fourni au système ;
+- $\dot{Q}$ : taux de chaleur fourni ;
 
-$$Q = \int_\Omega r dv - \int_{\partial\Omega}  \mathbf{q} \cdot \mathbf{n}  ds$$
+$$
+\dot{Q} = \int_\Omega r \, \mathrm{d}v - \int_{\partial\Omega} \mathbf{q} \cdot
+\mathbf{n} \, \mathrm{d}s
+$$
 
-En tenant compte de la définition de chaque terme énergétique, le premier
-principe de la thermodynamique devient :
+La forme développée du premier principe devient :
 
-$$ \frac{d}{dt} \int_\Omega{\rho \left( e + \frac{1}{2} \mathbf{v} \cdot
-\mathbf{v} \right) \,dv} = \int_\Omega \left( \mathbf{f}_{v} \cdot \mathbf{v} +
-r \right) dv + \int_{\partial\Omega} \left( \mathbf{t} \cdot \mathbf{v} -
-\mathbf{q} \cdot \mathbf{n} \right) ds $$
+$$
+\frac{d}{dt} \int_\Omega \rho \left( e + \frac{1}{2} \mathbf{v} \cdot
+\mathbf{v} \right) \, \mathrm{d}v = \int_\Omega \left( \mathbf{f}_v \cdot
+\mathbf{v} + r \right) \, \mathrm{d}v + \int_{\partial\Omega} \left( \mathbf{t}
+\cdot \mathbf{v} - \mathbf{q} \cdot \mathbf{n} \right) \, \mathrm{d}s
+$$
 
-Ou avec :
+ou, en posant :
 
-$$P_{ext} = \int_\Omega \rho \mathbf{\gamma} \cdot \mathbf{v} dv  - 
-\int_\Omega \rho \mathbf{\sigma} : \mathbf{D} dv$$
+$$
+P_{\text{ext}} = \int_\Omega \rho \mathbf{\gamma} \cdot \mathbf{v} \, \mathrm{d}v -
+\int_\Omega \mathbf{\sigma} : \mathbf{D} \, \mathrm{d}v
+$$
 
-La nouvelle forme du premier principe est donnée par :
+On obtient la forme locale eulérienne :
 
-$$\int_\Omega{\frac{d}{dt}\rho e \,dv}  = \int_\Omega  {\mathbf{\sigma} : 
-\mathbf{D} \;dv}  + \int_\Omega{\left( r - \mathrm{div} \mathbf{q} \right)\, dv}$$
+$$
+\int_\Omega \frac{d}{dt} \rho e \, \mathrm{d}v =
+\int_\Omega \mathbf{\sigma} : \mathbf{D} \, \mathrm{d}v +
+\int_\Omega \left( r - \mathrm{div}\, \mathbf{q} \right) \, \mathrm{d}v
+$$
 
-où le théorème de divergence a été appliqué à $Q$ et le théorème de transport de
-Reynolds au membre de gauche [@LEM90]. Cette équation est vérifiée pour tout
-point du domaine $\Omega$ considéré. Ainsi, la **forme eulérienne locale** est :
+Et donc, sous forme locale :
 
-$$\frac{d}{dt} \rho e = \mathbf{\sigma} : \mathbf{D}  + r - \mathrm{div} \mathbf{q}$$
+$$
+\frac{d}{dt} \rho e = \mathbf{\sigma} : \mathbf{D} + r - \mathrm{div}\, \mathbf{q}
+$$
 
 ## Deuxième principe de la thermodynamique
 
-Le deuxième principe de la thermodynamique fait intervenir deux nouvelles
-variables: la température ${T}(\mathbf{x},t)$ et lentropie $S$. Lentropie
-exprime une variation dénergie interne associée à une variation de la
-température, sa définition en fonction de lentropie spécifique $\eta$ est donnée
-par:
+Le second principe introduit la température $T(\mathbf{x},t)$ et l'entropie $S$.
+Cette dernière mesure la variation d'énergie interne associée à la température.
+Avec :
 
-$$S = \int_\Omega \rho \, \eta \, dv$$
+$$
+S = \int_\Omega \rho \eta \, \mathrm{d}v
+$$
+
+où $\\eta$ est l'entropie spécifique.
 
 Le second principe de la thermodynamique traduit la non-conservation de
 lentropie dans un cadre irréversible (non dissipatif). Il postule que le taux de
-production dentropie est toujours supérieur ou égale au taux de chaleur reçue
+production d'entropie est toujours supérieur ou égale au taux de chaleur reçue
 divisé par la température :
 
-$$\begin{aligned}
-\frac{dS}{dt} &\ge \frac{{\dot Q}}{T}\\
-\int_\Omega \rho \, \dot{\eta} \, dv &\ge \int_\Omega \frac{r}{T} dv - 
-\int_{\partial\Omega}  \frac{\mathbf{q}\cdot \mathbf{n}  }{T} ds
-\end{aligned}$$
+$$
+\begin{aligned}
+\frac{dS}{dt} &\ge \frac{\dot{Q}}{T} \\\\
+\int_\Omega \rho \dot{\eta} \, \mathrm{d}v &\ge \int_\Omega \frac{r}{T} \,
+\mathrm{d}v - \int_{\partial\Omega} \frac{\mathbf{q} \cdot \mathbf{n}}{T} \,
+\mathrm{d}s
+\end{aligned}
+$$
 
-en utilisant le théorème de divergence,
+En utilisant le théorème de divergence :
 
-$$\int_\Omega   \left( \rho \dot{\eta }  + 
-\mathrm{div}\left( \frac{\underline q}{T} \right) - \frac{r}{T} \right) dv \ge 0$$
+$$
+\int_\Omega \left( \rho \dot{\eta} + \mathrm{div} \left( \frac{\mathbf{q}}{T}
+\right) - \frac{r}{T} \right) \, \mathrm{d}v \ge 0
+$$
 
 Ceci est valable pour tout point de $\Omega$, par conséquent la forme
 locale est donnée par :
 
-$$\rho \dot{\eta }  + \mathrm{div}\left( \frac{\underline q}{T} \right) - \frac{r}{T}  \ge 0$$
+$$
+\rho \dot{\eta} + \mathrm{div} \left( \frac{\mathbf{q}}{T} \right) - \frac{r}{T} \ge 0
+$$
 
-En remplaçant les sources dénergie volumique $r$ à laide du premier
-principe et en remarquant que :
+En remplaçant $r$ via le premier principe et en utilisant :
 
-$$\mathrm{div}\left( \frac{\underline q}{T} \right) = 
-\frac{1}{T}\mathrm{div}(\mathbf{q}) - \frac{1}{T ^2}\mathbf{q} 
-\cdot \frac{\partial T}{\partial \mathbf{x}}$$
+$$
+\mathrm{div} \left( \frac{\mathbf{q}}{T} \right) = 
+\frac{1}{T} \mathrm{div}(\mathbf{q}) - \frac{1}{T^2} \mathbf{q} \cdot \nabla T
+$$
 
-Le premier et second principe définissent la fonction dissipation $\Phi$. Ce
-potentiel peut être divisé en deux parties, la dissipation intrinsèque
-$\Phi_{int}$ (i.e production interne dentropie) et la dissipation thermique par
-conduction $\Phi_{th}$ :
+On définit la **fonction de dissipation** $\\Phi$, qui se décompose en :
+
+- $\Phi_{\text{int}}$ : dissipation intrinsèque (production d'entropie interne)
+- $\Phi_{\text{th}}$ : dissipation thermique par conduction
 
 $$\Phi  = \underbrace {\rho \left( {{T} \,\dot \eta  - \frac{d}{dt}e} \right) + 
 \mathbf{ \sigma } :\mathbf{D}}_{\Phi _{\mathrm int}} - \underbrace 
 {\frac{1}{T}\mathbf{q} \cdot \frac{\partial T}
 {{\partial \underline X }}}_{\Phi _{\mathrm{th}}} \ge 0$$
 
-Finalement en introduisant la notion dénergie libre spécifique $\psi = e -
-{T}\eta$, on obtient la forme locale du deuxième principe connue sous le nom de
-**inégalite de Clausius-Duheim** sous sa forme eulérienne:
+En introduisant l'énergie libre spécifique $\\psi = e - T\eta$, on obtient
+l'inégalité de Clausius-Duhem sous forme locale eulérienne :
 
 $$\Phi =-\rho \left(\dot{\psi} - \dot{{T} }\,\eta  \right)+\mathbf{\sigma}:
 \mathbf{D}-\frac{1}{T}\mathbf{q} \cdot \frac{\partial T }{\partial \mathbf{X}}\ge 0$$
 
-ou Lagrangienne:
+ou sous forme lagrangienne :
 
 $$
 \Phi_{0}=-{{\rho }_{0}}\left( \dot{\psi }-\dot{{T} }\,\eta  \right)+\mathbf{{S}}:\mathbf{{{\dot{E}}}}-\frac{1}{T} \mathbf{q} \cdot \frac{\partial {T} }{\partial \mathbf{X}} \ge 0
 $$
-
 
 ## State variables and thermodynamic potentials
 
