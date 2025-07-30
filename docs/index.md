@@ -57,9 +57,9 @@ and transparency come first.
 If you're new to Comfor, here are the best places to begin:
 
 - [Quick Starter Guide](overview/quick_starter_guide.md) – Minimal steps to run
-  your first simulation.
+  your first simulation
 - [User Guide](user/user_overview.md) – Define models, materials, and
-  postprocess results.
+  postprocess results
 - [Downloads](overview/dowload_page) – Get the latest binaries and example
   cases.
 
@@ -82,7 +82,7 @@ features, or integration.
 
 ---
 
-# License and credits
+# License and Credits
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
 alt="Creative Commons License" style="border-width:0"
@@ -91,8 +91,7 @@ xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Comfor
 Documentation</span> by <a xmlns:cc="http://creativecommons.org/ns#"
 href="https://egm_foss.gitlab.io/about_me/" property="cc:attributionName"
 rel="cc:attributionURL">Eduardo Guzman</a> is licensed under a <a rel="license"
-href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
-Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a
+href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a
 xmlns:dct="http://purl.org/dc/terms/"
 href="https://gitlab.com/innovamics/comfor-doc"
 rel="dct:source">https://gitlab.com/innovamics/comfor-doc</a>.
