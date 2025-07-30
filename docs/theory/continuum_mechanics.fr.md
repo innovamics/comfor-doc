@@ -236,24 +236,25 @@ $$
 
 > **Note** : En petites déformations, ces tenseurs sont identiques.
 
-# Dualités contraintes-déformations
+# Dualités contraintes–déformations
 
-La puissance des efforts intérieurs peut être exprimée comme :
-
-$$\begin{aligned}
-P_{int} =  \int_\Omega \mathbf{\sigma} : \mathbf{D} dv 
-        = \int_{\Omega_0} \mathbf{\tau} : \dot{\mathbf{F}} dv_0 
-        =  \int_{\Omega_0} \mathbf{S} : \dot{\mathbf{E}} dv_0
-\end{aligned}$$
-
-Ainsi, il ressort que les tenseurs $\mathbf{\sigma}$, $\mathbf{\tau}$ et
-$\mathbf{S}$ sont respectivement duaux des tenseurs cinématiques
-$\mathbf{D}$, $\mathbf{F}$ et $\mathbf{E}$.
+La puissance des efforts intérieurs peut s'exprimer selon différentes formes
+équivalentes :
 
 $$
-\mathbf{S} : \dot{\mathbf{E}} = \mathbf{\tau}: \dot{\mathbf{F}} =
-\mathbf{\sigma} : \mathbf{D} = \frac{1}{2}\mathbf{S} : \dot{\mathbf{C}}
+\begin{aligned}
+P_{\text{int}} &= \int_\Omega \mathbf{\sigma} : \mathbf{D} \, \mathrm{d}v \\
+               &= \int_{\Omega_0} \mathbf{\tau} : \dot{\mathbf{F}} \, \mathrm{d}v_0 \\
+               &= \int_{\Omega_0} \mathbf{S} : \dot{\mathbf{E}} \, \mathrm{d}v_0
+\end{aligned}
 $$
+
+Il en résulte que les tenseurs $\mathbf{\sigma}$, $\mathbf{\tau}$ et
+$\mathbf{S}$ sont respectivement duaux des tenseurs cinématiques $\mathbf{D}$,
+$\dot{\mathbf{F}}$ et $\dot{\mathbf{E}}$ :
+
+$$ \mathbf{S} : \dot{\mathbf{E}} = \mathbf{\tau} : \dot{\mathbf{F}} =
+\mathbf{\sigma} : \mathbf{D} = \frac{1}{2} \mathbf{S} : \dot{\mathbf{C}} $$
 
 # Thermodynamique des milieux continus
 
