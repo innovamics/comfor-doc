@@ -119,7 +119,7 @@ plugins:
             Preprocessing: Pré-traitement
             Running: Exécution
             Postprocessing: Post-traitement
-            Using git: Utilisation de git
+            Using git: Configurer de git
             Downloads: Téléchargements
             Continuum Mechanics: Mécanique des milieux continus
             Composite Materials: Matériaux composites
