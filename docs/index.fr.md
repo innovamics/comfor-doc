@@ -1,75 +1,99 @@
-Comfor est un code FEM explicite écrit en C++. L'objectif de ce logiciel est de
-fournir une solution générale et innovante pour la modélisation des procédés de
-mise en forme des composites. Comfor est conçu pour être modulaire et adapté
-aussi bien aux applications industrielles qu'à la recherche.
+**Comfor** est une plateforme de simulation moderne et open source dédiée à la
+mise en forme et au traitement des matériaux composites. Développé en
+**C++17/20**, il repose sur une méthode des éléments finis explicite (FEM)
+adaptée à la simulation des procédés de fabrication complexes.
 
-Nous sommes fiers d'être le seul fournisseur de logiciels pour composites à
-fournir le code source. Puisqu’il ne devrait pas y avoir de secrets en
-physique, le code source de toutes les équations et des modèles physiques
-implémentés dans Comfor est accessible aux chercheurs. Nous espérons que cette
-ouverture permettra à davantage de chercheurs de participer au développement de
-modèles physiques indispensables à l'industrie. N'hésitez pas à consulter une
-copie de l'édition open source sur la page de téléchargement.
-
-# Bien démarrer
-
-Le [guide de démarrage rapide](overview/quick_starter_guide.md) vous donne le
-strict nécessaire pour commencer. Pour créer vos propres modèles, vous pouvez
-consulter le [guide utilisateur](user/user_overview.md).
-
-# Présentation
-
-**Comfor est écrit en C++**
-
-- Le C++ est un langage orienté objet, permettant une solution hautement modulaire.
-- Le C++ est robuste et performant.
-- Le calcul parallèle peut être implémenté facilement avec OpenMP.
-
-**Comfor est multiplateforme**
-
-Grâce à des outils comme CMake, nous pouvons proposer une solution compatible
-multiplateforme. Actuellement, Comfor a été compilé et testé pour les
-architectures suivantes :
-
-- Ubuntu 18.04/20.04
-  - Gcc 10.2
-  - Clang 11.0.3
-  - Clang 12.0.0
-- OSX Big Sur
-  - Clang 11.0.3
-  - Clang 12.0.0
-- Windows 7, 10, 11
-  - GCC 10.2.0 via MSYS2/MinGW64
-  - Visual Studio 2019 (amd64, x86_amd64)
-
-**Comfor est open source**
-
-Le code source sera publié en 2025.
-
-# Utilisateurs
-
-Dans la documentation utilisateur, vous apprendrez à construire, exécuter et
-analyser votre première simulation. Si vous avez besoin de bases scientifiques
-sur la mise en forme des composites et la simulation par éléments finis, vous
-pouvez consulter la [documentation théorique](theory/theory_overview.md).
-
-# Développeurs
-
-Vous souhaitez rejoindre la communauté ? Génial ! Vous trouverez dans le guide
-développeur toutes les informations et les outils nécessaires sur le projet.
-Innovons ensemble !
+Conçu pour allier **modularité**, **transparence** et **performance**, Comfor
+vise à comble l’écart entre les exigences industrielles et la flexibilité
+académique. Que vous simuliez des procédés avancés de mise en forme ou
+développiez vos propres modèles matériaux, Comfor offre un cadre puissant et
+extensible.
 
 ---
 
+# Pourquoi Choisir Comfor ?
+
+## 📚 Fondements scientifiques solides
+
+Comfor repose sur plus d’une décennie de recherche et développement, en
+collaboration avec le monde académique et industriel. Les modèles numériques
+sont publiés, évalués par des pairs, et validés expérimentalement grâce à des
+partenariats avec :
+
+- [ENIB – École Nationale d'Ingénieurs de Brest](https://www.enib.fr/en_enib/)  
+- [INSA Lyon – Institut National des Sciences Appliquées de Lyon](https://www.insa-lyon.fr/en)  
+- [IRT Jules Verne – Institut de Recherche Technologique](https://www.irt-jules-verne.fr/en/irt-jules-verne/)  
+- [UHA – Université de Haute Alsace](https://www.uha.fr/en/index.html)
+
+Consultez la section **Références scientifiques** pour en savoir plus.
+
+---
+
+## 🔍 Une physique transparente, sans boîte noire
+
+Oubliez les boîtes noires. Forkez la physique.  
+Chez [Innovamics](https://www.innovamics.com/), nous dévoilons chaque couche de
+la simulation. Du comportement matériau au solveur, tout peut être inspecté,
+audité et modifié :
+
+- Formulations éléments finis  
+- Modèles d’interaction et de contact  
+- Conditions aux limites et contraintes cinématiques
+- Schémas d’intégration temporelle  
+- Et tous les composants de la chaîne de simulation
+
+Cela permet aux chercheurs et ingénieurs de :
+
+1. Vérifier et auditer les modèles mathématiques utilisés  
+2. Adapter ou étendre la physique pour des cas d’usage spécifiques  
+3. Avoir en confiance dans les résultats  
+
+Notre approche ouverte encourage l’innovation, la reproductibilité et la
+transparence scientifique.
+
+> Nous croyons dans la science ouverte!
+
+---
+
+# 🚀 Prêt à démarrer ?
+
+Si vous découvrez Comfor, voici les sections recommandées :
+
+- [Guide de démarrage rapide](overview/quick_starter_guide.md) – Lancer votre
+  première simulation en quelques étapes  
+- [Guide utilisateur](user/user_overview.md) – Créer vos modèles, définir les
+  matériaux et post-traiter les résultats  
+- [Téléchargements](overview/download_page.md) – Obtenir les dernières versions et  
+  exemples
+
+---
+
+# 👩‍💻 Pour les développeurs
+
+Vous souhaitez contribuer ou ajouter vos propres modèles ? Le
+[Guide développeur](developer/dev_overview.md) vous accompagne pas à pas dans la
+compilation, les tests et l’extension de Comfor.
+
+---
+
+## Construisons ensemble la prochaine génération d’outils de simulation
+
+Contribuez au projet ou contactez-nous pour collaborer sur la recherche, des
+fonctionnalités ou des intégrations industrielles.
+
+[Voir le dépôt GitLab](https://gitlab.com/comfor)
+
+---
+
+# Licence et crédits
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
-alt="Creative Commons License" style="border-width:0"
+alt="Licence Creative Commons" style="border-width:0"
 src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span
-xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Comfor
-Documentation</span> by <a xmlns:cc="http://creativecommons.org/ns#"
+xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Documentation Comfor</span> par <a xmlns:cc="http://creativecommons.org/ns#"
 href="https://egm_foss.gitlab.io/about_me/" property="cc:attributionName"
-rel="cc:attributionURL">Eduardo Guzman</a> is licensed under a <a rel="license"
-href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
-Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a
+rel="cc:attributionURL">Eduardo Guzman</a> est sous licence <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International</a>.<br />Basé sur le travail disponible à <a
 xmlns:dct="http://purl.org/dc/terms/"
 href="https://gitlab.com/innovamics/comfor-doc"
 rel="dct:source">https://gitlab.com/innovamics/comfor-doc</a>.
