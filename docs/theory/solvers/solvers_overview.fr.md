@@ -4,7 +4,7 @@
 du mouvement. Ce type de schéma permet une résolution incrémentale
 conditionnelle des problèmes dynamiques, où les grandeurs mécaniques
 (déplacements, vitesses, accélérations) sont calculées étape par étape dans le
-temps, sans inversion globale de matrice.
+temps, sans résolution globale de système linéaire à chaque incrément.
 
 L’équation générale de la dynamique, valable à tout instant, s’écrit sous la
 forme :
@@ -23,8 +23,8 @@ où :
 - $\mathbf{f}_{\text{int}}$ est le vecteur des efforts internes,
 - $\mathbf{f}_{\text{ext}}$ est le vecteur des efforts appliqués.
 
-Pour appliquer un schéma d’intégration temporelle, on commence par discrétiser
-le temps en incréments $\Delta t$, appelés pas de temps. L’équation devient
+Pour appliquer un schéma d’intégration temporelle, le temps est discrétisé en
+incréments $\Delta t$, appelés pas de temps. L’équation de la dynamique devient
 alors, à l’instant $t^i$ :
 
 $$
@@ -41,32 +41,31 @@ classiques des différences centrées appliquées à la vitesse et à l’accél
 [@BEL14] [@BEN17].
 
 
-Soit l’intervalle de temps de la simulation $[t_0, t_e]$ subdivisé en $n_e$ pas
-de temps $\Delta t^n$. L’instant $t^n$ est défini par :
+Soit l’intervalle temporel de simulation $[t_0, t_e]$ subdivisé en $n_e$ pas de
+temps $\Delta t^n$. L’instant $t^n$ est défini par :
 
 $$
 t^n = t_0 + \sum_{i=1}^{n} \Delta t^i
 $$
 
 Sans perte de généralité, on pose $t_0 = 0$. La position d’un point matériel
-$\mathbf{x}$ à l’instant $t^{n+1}$ est exprimée comme :
+$\mathbf{x}$ à l’instant $t^{n+1}$ est donnée par :
 
 $$
 \mathbf{x}^{n+1} = \mathbf{x}^n + \mathbf{u}^{n+1}
 $$
 
-où $\mathbf{u}^{n+1}$ est le vecteur déplacement au temps $t^{n+1}$
+où $\mathbf{u}^{n+1}$ est le vecteur déplacement au temps $t^{n+1}$.
 
-Le vecteur déplacement à l'instant $t^{n+1}$ est intégré à partir des vitesses
-évaluées à $t^{n+1/2} = t^n + \frac{1}{2} \Delta t^{n+1}$ :
+Ce déplacement est intégré à partir de la vitesse évaluée à l’instant
+intermédiaire $t^{n+1/2} = t^n + \frac{1}{2} \Delta t^{n+1}$ :
 
 $$
 \mathbf{u}^{n+1} = \mathbf{u}^n + \Delta t^{n+1} \, \mathbf{v}^{n+1/2}
 $$
 
-La vitesse $\mathbf{v}^{n+1/2}$ est une **vitesse évaluée à un demi‑pas de
-temps** (_staggered_). Elle est calculée à partir de l’accélération au temps
-$t^n$ :
+La vitesse $\mathbf{v}^{n+1/2}$ est dite *décalée* (ou *staggered*). Elle est
+intégrée à partir de l’accélération connue à l’instant $t^n$ :
 
 $$
 \mathbf{v}^{n+1/2} = \mathbf{v}^{n-1/2} + \Delta t^{n+1/2} \, \mathbf{a}^n
@@ -86,9 +85,9 @@ $$
 \mathbf{f}_{\text{int}}^n - \mathbf{C}^d \mathbf{v}^{n-1/2} \right)
 $$
 
-Ce schéma est **conditionnellement stable**. Cela signifie qu’un pas de temps
-trop grand peut conduire à une instabilité numérique. La condition de stabilité
-impose :
+Ce schéma est **conditionnellement stable**, c’est-à-dire que la stabilité
+dépend du pas de temps utilisé. Un pas trop grand entraîne une divergence de la
+solution. La condition de stabilité impose :
 
 $$
 \Delta t \leq \alpha \, \Delta t_{\text{crit}} = \frac{2}{\omega_{\text{max}}}
@@ -96,38 +95,39 @@ $$
 
 où :
 
-- $\omega_{\text{max}}$ est la fréquence propre maximale du système,
-- $\alpha$ est un facteur de sécurité (typiquement $\alpha = 0.9$).
+- $\omega_{\text{max}}$ est la fréquence propre maximale du système (issue d'une
+  analyse modale),
+- $\alpha$ est un facteur de sécurité (généralement compris entre 0,8 et 0,95).
 
-Afin d’éviter le calcul direct des valeurs propres, une estimation est faite par
-analogie avec une barre élastique de longueur $l$ :
+Afin d’éviter le calcul direct des valeurs propres, une estimation peut être
+faite par analogie avec la première fréquence propre d’une barre élastique en
+vibration longitudinale de longueur $l$ :
 
 $$
 \omega = \frac{2}{l} \sqrt{\frac{E}{\rho}} = \frac{2c}{l}
 \quad \Rightarrow \quad
-\Delta t_{\text{crit}} = \frac{l}{c}
+\Delta t_{\text{crit}} = \f---rac{l}{c}
 $$
 
-En 2D et 3D, on utilise une longueur caractéristique élémentaire $l_e$ et une
-vitesse d’onde $c_e$ propre à chaque élément. Le pas de temps global est alors
-défini par :
+En deux ou trois dimensions, on utilise une longueur caractéristique $l_e$ et
+une vitesse d’onde $c_e$ propre à chaque élément :
 
 $$
 \Delta t = \alpha \min_{e} \left( \frac{l_e}{c_e} \right)
 $$
 
-Les valeurs usuelles pour $\alpha$ :
+Valeurs typiques de $\alpha$ :
 
-- $\alpha = 0.9$ pour les simulations standards,
-- $\alpha = 0.25$ à $0.50$ pour des cas à haute fréquence comme les ondes de
-  choc ou les explosifs.
+- $\alpha = 0.9$ pour des simulations standards,
+- $\alpha = 0.25$ à $0.50$ pour des cas hautement transitoires (ondes de choc,
+  explosifs).
 
 
 ## Schéma de Newmark
 
 Le schéma de Newmark $\beta_2$ repose sur un développement en série de Taylor
-des déplacements, tronqué à l'ordre de la dérivée troisième (jerk), avec des
-coefficients de pondération $\beta$ et $\gamma$ :
+des déplacements, tronqué à l’ordre deux ou trois selon les paramètres $\beta$
+et $\gamma$ :
 
 $$
 \begin{aligned} 
@@ -163,20 +163,18 @@ $$
 \end{aligned}
 $$
 
-Le but est maintenant de déterminer $\mathbf{a}^{n+1}$ en imposant l’équilibre
-dynamique au pas suivant. En réinjectant les prédictions dans l’équation du
-mouvement, on obtient :
+L’accélération au pas $n+1$ est obtenue à partir de l’équation d’équilibre dynamique :
 
 $$
-\mathbf{a}^{n+1} = - \mathbf{A}^{-1} \left( \mathbf{f}_{\text{ext}}^{n+1} + \mathbf{C}^{d} \tilde{\mathbf{v}}^{n+1} + \mathbf{K} \tilde{\mathbf{u}}^{n+1} \right)
+\mathbf{a}^{n+1} = - \mathbf{A}^{-1} \left( \mathbf{f}_{\text{ext}}^{n+1} +
+\mathbf{C}^{d} \tilde{\mathbf{v}}^{n+1} + \mathbf{K} \tilde{\mathbf{u}}^{n+1} \right)
 $$
 
-où la matrice effective $\mathbf{A}$ du système dynamique est donnée par :
+avec :
 
 $$
 \mathbf{A} = \mathbf{M} + \gamma \Delta t \, \mathbf{C}^{d} + \beta \Delta t^2 \, \mathbf{K}
 $$
-
 
 ### Propriétés du schéma de Newmark
 
@@ -194,7 +192,7 @@ pas de temps. Cela le rend plus coûteux en calcul, mais lui permet :
 
 - d'accepter des pas de temps plus grands ;
 - d’assurer la convergence numérique même en présence de comportements non
-  linéaires (plasticité, contact) ;
+  linéaires.
 - d'améliorer la précision sur les basses fréquences.
 
 En revanche, les **schémas explicites** sont préférés dans des contextes
@@ -205,33 +203,28 @@ plus petit.
 
 ## Matrice de masse lumpée
 
-En dynamique explicite, les matrices de masse et d’amortissement sont prises
-**diagonales**, ce qui permet une inversion très rapide. Une technique appelée
-**condensation de masse** (*mass lumping*[@ZIE05a]) est utilisée. La
-condensation de la matrice est faite en sommant sur la diagonale les termes
-d'une même ligne :
+En dynamique explicite, les matrices de masse et d’amortissement sont souvent
+supposées diagonales pour simplifier les calculs. On utilise une **condensation
+de masse** (*mass lumping*[@ZIE05a]), consistant à répartir la masse totale de
+chaque ligne sur sa diagonale :
 
 $$
 \tilde{M}_{ii} = \sum_j M_{ij}
 $$
 
-L'utilisation de la matrice diagonale permet d'accélérer le calcul, tout en étant
-raisonnable puisque globalement ${M}_{ij} \neq 0$ est en faible nombre pour
-chaque ligne $i$ et est associé à des degrés de libertés proches géométriquement
-[@BON08].
+Cette approximation permet une inversion locale rapide, sans perte significative
+de précision car les termes hors-diagonale sont généralement faibles et associés
+à des degrés de liberté géométriquement proches[@BON08]. La perte de précision
+est largement compensée par le gain en performance.
 
-La perte de précision est largement compensée par le gain en performance. De
-plus, la matrice d’amortissement est souvent calculée à partir de la matrice de
-masse via une forme particulière d’amortissement de Rayleigh :
+L’amortissement est souvent défini par un modèle simplifié de Rayleigh :
 
 $$
 \mathbf{C}^{d} = \alpha \mathbf{M}
 $$
 
-où $\alpha$ est un coefficient d’amortissement choisi selon le comportement
-viscoélastique du matériau. Cela permet de modéliser simplement la dissipation
-d’énergie, tout en maintenant une structure diagonale favorable au calcul
-explicite.
+où $\alpha$ est un coefficient choisi pour modéliser une dissipation d’énergie
+globale.
 
 # References
 
