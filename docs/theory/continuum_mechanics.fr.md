@@ -455,61 +455,65 @@ Dans le cas contraire, par exemple pour établir une structure générale sans
 cibler un matériau particulier, on peut utiliser la thermodynamique rationnelle,
 qui fournit un cadre formel et cohérent basé sur les principes fondamentaux.
 
-
 # Modèle de comportement
 
 Les modèles de comportement décrivent les relations entre les déformations et
-lévolution des contraintes. On peut distinguer trois grands types de modèles de
-comportement
+l’évolution des contraintes. On distingue généralement trois grandes familles de
+**modèles constitutifs** :
 
-- Les lois hypoélastiques où une vitesse de déformation est liée à un taux de
-  contrainte. Ces lois sont fréquemment utilisées pour des matériaux à la
-  réponse peu anisotrope. Elles sont faciles à mettre en place et adaptées aux
+- **Modèles élastiques (ou de type Cauchy)** : une mesure de déformation est
+  liée à une mesure de contrainte. Les contraintes sont alors indépendantes de
+  l’historique, mais l’énergie de déformation peut en dépendre. Ces formulations
+  sont rarement utilisées pour les grandes transformations.
+
+- **Modèles hypoélastiques** : une vitesse de déformation est liée à un taux de
+  contrainte. Ces modèles sont souvent utilisés pour des matériaux à la réponse
+  peu anisotrope. Elles sont faciles à mettre en place et adaptées aux
   résolutions réactualisées. Les contraintes et énergies de déformation peuvent
-  ne pas être indépendantes de lhistorique de déformation ;
-- Les lois élastiques (ou Cauchy élastique) où une mesure de la déformation est
-  liée à une mesure de la contrainte. Les contraintes sont indépendantes de
-  lhistorique de déformation tandis que lénergie de déformation peut ne pas
-  lêtre. Ces formulations sont très peu utilisées dans le cadre des grandes
-  transformations ;
-- Les lois hyperélastiques où une densité dénergie de déformation est définie
-  comme étant un potentiel des contraintes. Les contraintes et énergies de
-  déformation sont indépendantes de lhistorique de déformation.
+  ne pas être indépendantes de lhistorique de déformation.
 
-## Principe dobjectivité
+- **Modèles hyperélastiques** : une densité d’énergie de déformation est définie
+  comme un potentiel thermodynamique des contraintes. Les contraintes et
+  l’énergie sont dérivées de ce potentiel et sont donc indépendantes de
+  l’historique. Ces modèles sont bien adaptés aux grandes déformations.
 
-Un modèle de comportement constitutif doit vérifier le principe dindifférence
-matérielle ou dobjectivité, autrement dit, il doit être invariant dans tout
-changement de référentiel.
+## Principe d’objectivité
 
-Quelques tenseurs objectifs :
+Un modèle de comportement doit vérifier le **principe d’indifférence
+matérielle** (ou **d’objectivité**), c’est-à-dire rester invariant lors d’un
+changement de référentiel (rotation rigide, translation...).
 
-- Tout tenseur écrit dans la configuration de référence $C_0$ (tels sont les cas
-  du tenseur de déformation de Green-Lagrange $\mathbf{E}$ et le tenseur des
-  contraintes de Piola-Kirchhoff 2 $\mathbf{S}$)
-- Toute dérivée temporelle dun tenseur défini dans la configuration de référence
-  $C_0$ ($\dot{\mathbf{E}}$ et $\dot{\mathbf{S}}$).
+Quelques exemples de grandeurs objectives :
+
+- Tout tenseur exprimé dans la configuration de référence $C_0$, comme le
+  tenseur de Green-Lagrange $\mathbf{E}$ ou le tenseur de Piola-Kirchhoff 2
+  $\mathbf{S}$ ;
+- Toute dérivée temporelle d’un tenseur défini dans la configuration de
+  référence (ex. : $\dot{\mathbf{E}}$, $\dot{\mathbf{S}}$) ;
 - Tout scalaire.
 
-Cependant, il est important de noter que :
+Cependant, certaines dérivées temporelles **ne sont pas objectives** :
 
-- Les dérivées temporelles des quantités définies dans la configuration déformée
-  actuelle $C_t$ ne sont pas objectives. Ainsi, la dérivée du tenseur des
-  contraintes de Cauchy $\dot{\mathbf{\sigma}}$ nest pas objective.
-- Les dérivées temporelles $\dot{\mathbf{F}}$ du gradient de la transformation
-  et $\dot{\mathbf{P}}$ du premier tenseur des contraintes de Piola-Kirchhoff ne
-  sont pas non plus objectives.
+- $\dot{\mathbf{\sigma}}$, dérivée du tenseur des contraintes de Cauchy ;
+- $\dot{\mathbf{F}}$, dérivée du gradient de transformation ;
+- $\dot{\mathbf{P}}$, dérivée du premier tenseur de Piola-Kirchhoff.
 
-Cependant, plusieurs dérivées temporelles objectives existent, comme
-**la dérivée de Jaumann** :
+Pour contourner cela, plusieurs dérivées **objectives** ont été introduites. Par
+exemple :
 
-$$\mathbf{\sigma}^{\bigtriangledown} = \dot{\mathbf{\sigma}} + \mathbf{\sigma} 
-\mathbf{\omega} - \mathbf{\omega}\mathbf{\sigma}$$
+- **Dérivée de Jaumann** :
 
-ou **la dérivée de Green-Naghdi** :
+$$
+\mathbf{\sigma}^{\triangledown} = \dot{\mathbf{\sigma}} +
+\mathbf{\sigma} \mathbf{W} - \mathbf{W} \mathbf{\sigma}
+$$
 
-$$\mathbf{\sigma}^{\bigtriangleup} = \dot{\mathbf{\sigma}} + \mathbf{\sigma} 
-\dot{\mathbf{R}} \mathbf{R}^T - \dot{\mathbf{R}} \mathbf{R}^T\mathbf{\sigma}$$
+- **Dérivée de Green–Naghdi** :
+
+$$ \mathbf{\sigma}^{\triangle} = \dot{\mathbf{\sigma}} +
+\mathbf{\sigma} \dot{\mathbf{R}} \mathbf{R}^T - \dot{\mathbf{R}}
+\mathbf{R}^T \mathbf{\sigma}
+$$
 
 
 ## Modèles de comportement hyperélastiques
