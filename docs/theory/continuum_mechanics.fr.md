@@ -385,28 +385,31 @@ $$
 \Phi_{0}=-{{\rho }_{0}}\left( \dot{\psi }-\dot{{T} }\,\eta  \right)+\mathbf{{S}}:\mathbf{{{\dot{E}}}}-\frac{1}{T} \mathbf{q} \cdot \frac{\partial {T} }{\partial \mathbf{X}} \ge 0
 $$
 
-## State variables and thermodynamic potentials
+## Variables d'état et potentiels thermodynamiques
 
-The thermodynamic state of a medium for a given point and at a fixed time is
-completely defined by the knowledge of a certain number of scalar and tensor
-variables, the state variables. The evolution of a system can then be considered
-as a succession of equilibrium states corresponding to the different points of
-the medium [@LEM90]. These state or thermodynamic variables can be observable or
-internal.
+L’état thermodynamique d’un milieu, en un point donné et à un instant fixé, est
+entièrement défini par la connaissance d’un certain nombre de variables
+scalaires et tensorielles appelées **variables d’état**. L’évolution d’un
+système peut alors être vue comme une succession d’états d’équilibre
+correspondant aux différents points du domaine [@LEM90].
 
-The observable variables (i.e. deformation, temperature) as its name indicates
-can be directly measured and fully describe the evolution of reversible
-phenomena, this is the case for elastic phenomena.
+Ces variables thermodynamiques peuvent être **observables** ou **internes**.
 
-The internal variables are involved when considering a dissipative phenomenon,
-which depends not only on the current state but also on the history of
-transformation undergone by the material. These variables do not appear directly
-in the equations of motion and therefore are not directly measurable. But from a
-physical point of view, they allow to give a macroscopic characterization of the
-microscopic state of the material (e.g. dislocations, crystallization, cracks).
-The choice of these variables, their type and number, requires a deep knowledge
-of the physical meaning of the problem and conditions the accuracy of the
-modeling of the phenomenon.
+- Les **variables observables** (comme la déformation ou la température) peuvent
+  être directement mesurées et suffisent à décrire l’évolution des phénomènes
+  réversibles, comme dans le cas de l’élasticité.
+
+- Les **variables internes** interviennent lorsqu’on considère un phénomène
+  dissipatif. Elles dépendent non seulement de l’état actuel, mais aussi de
+  l’histoire de la transformation du matériau. Ces variables ne figurent pas
+  explicitement dans les équations du mouvement et ne sont donc pas mesurables
+  directement. Cependant, elles permettent une description macroscopique de
+  l’état microscopique du matériau (exemples : dislocations, cristallisation,
+  endommagement).
+
+Le choix de ces variables, leur type et leur nombre, nécessite une bonne
+compréhension physique du problème étudié, et conditionne la précision du
+modèle.
 
 ## Rational thermodynamics
 
