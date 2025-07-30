@@ -139,28 +139,31 @@ où $\lambda_i$ sont les elongations dans les directions principales.
 
 ## Vitesses de déformation
 
-Le tenseur du gradient de vitesse $\mathbf{L}$ est defini par :
+Le tenseur gradient de vitesse $\mathbf{L}$ est défini par :
 
-$$\mathbf{L} =  \dot{\mathbf{F}} \mathbf{F}^{-1}$$
+$$\mathbf{L} = \dot{\mathbf{F}} \mathbf{F}^{-1}$$
 
-La décomposition de L en partie symétrique et antisymétrique permet de définir
-le tenseur taux de déformation D et le tenseur taux de rotation W :
+Sa décomposition en partie symétrique et antisymétrique permet de définir le
+tenseur taux de déformation $\mathbf{D}$ et le tenseur taux de rotation
+$\mathbf{W}$ :
 
-$$\begin{aligned}
-\mathbf{D} =& \mathbf{L}^S = \frac{1}{2} ( \mathbf{L} + \mathbf{L}^T ) \\ 
-\mathbf{W} =& \mathbf{L}^A = \frac{1}{2} ( \mathbf{L} - \mathbf{L}^T )
-\end{aligned}$$
+$$
+\begin{aligned}
+\mathbf{D} &= \frac{1}{2} (\mathbf{L} + \mathbf{L}^T) \\
+\mathbf{W} &= \frac{1}{2} (\mathbf{L} - \mathbf{L}^T)
+\end{aligned}
+$$
 
 Le tenseur $\mathbf{W}$ correspond au rotationnel du champ des vitesses
-$\mathbf{V}$ , et décrit donc la vitesse de rotation du solide, tandis que
+$\mathbf{v}$, et décrit la vitesse de rotation du solide, tandis que
 $\mathbf{D}$ décrit la vitesse de déformation.
 
+La vitesse de déformation est donnée, dans $C_0$, par $\dot{\mathbf{E}}$ et,
+dans $C_t$, par $\mathbf{D}$, ces deux tenseurs étant reliés par :
 
-La vitesse de déformation est donnée dans $C_0$ par $\dot{\mathbf{E}}$, et dans
-$C_t$ par \mathbf{D}, ces deux tenseurs étant *transportés* l'un de l'autre par
-la relation :
-
-$$\dot{\mathbf{E}} =  \mathbf{F}^{T} \mathbf{D} \mathbf{F} = \frac{1}{2} \dot{\mathbf{C}}$$
+$$
+\dot{\mathbf{E}} = \mathbf{F}^T \mathbf{D} \mathbf{F} = \frac{1}{2} \dot{\mathbf{C}}
+$$
 
 
 # Mesures des contraintes
