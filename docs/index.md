@@ -1,65 +1,88 @@
-Comfor is an Explicit FEM code written in C++. The aim of this software is to
-provide a innovative general solution for modelling composite processes. Comfor
-is being designed to be modular and adapted for both, industrial and research
-applications.
+**Comfor** is a modern, open-source simulation platform for composite forming
+and processing. Built in **C++17/20**, it uses an explicit finite element method
+(FEM) tailored to simulate complex manufacturing processes.
 
-We are proud of being the only composite software vendor that provides source
-code. As there should not be secrets in physics, the source code of all
-equations and physical models implemented in Comfor are available to
-researchers. It is our hope that our openness would allow more researchers get
-involved in the development of physical models much needed in industry. Please
-feel free to check out a copy of the open source edition on the downloads page.
-
-# Getting started
-
-The [Quick starter guide](overview/quick_starter_guide.md) gives the bare
-minimum needed to get things working. To start building your own models you can
-look at the [User guide](user/user_overview.md).
-
-# Overview
-
-**Comfor is written in C++**
-
-- C++ is an Object Oriented language. It's possible to design a highly modular
-  solution.
-- C++ is robuste and performant.
-- Parallel computation ca be implemented using OpenMP in a straightforward
-  manner.
-
-**Comfor is a cross platform**
-
-Using tools like CMake, we can provide a cross platform solution. Currently
-Comfor has been compiled an tested for the following architectures.
-
-- Ubuntu 18.04/20.04
-  - Gcc 10.2
-  - Clang 11.0.3
-  - Clang 12.0.0
-- OSX Big Sur,
-  - Clang 11.0.3
-  - Clang 12.0.0
-- Windows 7, 10, 11
-  - GCC 10.2.0 from MSYS2/MinGW64
-  - Visual Studio 2019 (amd64, x86_amd64)
-
-**Comfor is open source**
-
-Source code to be released in 2025.
-
-# Users
-
-In the user documentation you will learn how to build, run and analyse your
-first simulation. If you need some scientific background about composite
-processing and finite element simulation you can visit the
-[theory documentation](theory/theory_overview.md).
-
-# Developers
-
-So, you want to be part of the community? Great, you will find in the developers
-guide all the the necessary information and tools about the project. Lets
-innovate together !
+Engineered for **modularity**, **transparency**, and **performance**, Comfor
+bridges the gap between industrial robustness and academic flexibility. Whether
+you're modeling advanced forming processes or developing custom material
+behaviors, Comfor provides a powerful, extensible framework.
 
 ---
+
+# Why Comfor?
+
+## 📚 Built on a Scientific Foundation
+
+Comfor is backed by over a decade of academic and industrial R&D. Our numerical
+models are published, peer-reviewed, and validated in collaboration with:
+
+- ENIB [(Brest national school of engineering)](https://www.enib.fr/en_enib/)
+- INSA Lyon [(Institut National des Sciences Appliquées de Lyon)](https://www.insa-lyon.fr/en)
+- IRT Jules Verne [(French Institutes of Technology)](https://www.irt-jules-verne.fr/en/irt-jules-verne/)
+- UHA [(Université de Haute Alsace)](https://www.uha.fr/en/index.html)
+
+Explore our references and publications in the Scientific References section.
+
+---
+
+## 🔍 Transparent Physics, From the Ground Up
+
+Forget the black-boxes. Fork the physics. At
+[Innovamics](https://www.innovamics.com/), we expose every layer of the
+simulation stack—because understanding and trust matter. From material laws to
+solvers, you can inspect, audit, and modify:
+
+- Finite element formulations
+- Contact and interaction models
+- Boundary conditions and constraints
+- Time integration schemes
+- Plus every component involved in the simulation pipeline
+
+This enables researchers and engineers to:
+
+1. Audit and verify the mathematical models behind simulations
+2. Extend or adapt specific aspects of the physics for custom use cases
+3. Build trust in simulation results, with full control over assumptions and
+   implementations
+
+Our openness fosters a scientific environment where innovation, reproducibility,
+and transparency come first.
+
+> We believe open software leads to better science and better engineering.
+
+---
+
+# 🚀 Ready to Start?
+
+If you're new to Comfor, here are the best places to begin:
+
+- [Quick Starter Guide](overview/quick_starter_guide.md) – Minimal steps to run
+  your first simulation.
+- [User Guide](user/user_overview.md) – Define models, materials, and
+  postprocess results.
+- [Downloads](overview/dowload_page) – Get the latest binaries and example
+  cases.
+
+---
+
+# 👨‍💻 For Developers
+
+Want to contribute or implement your own models? The
+[Developer Guide](developer/dev_overview.md) walks you through building,
+testing, and extending Comfor.
+
+---
+
+## Let’s build the next generation of composite simulation tools
+
+Start contributing today or reach out if you want to collaborate on research,
+features, or integration.
+
+[Visit the GitLab repository](https://gitlab.com/comfor)
+
+---
+
+# License and credits
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
 alt="Creative Commons License" style="border-width:0"
@@ -73,3 +96,5 @@ Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a
 xmlns:dct="http://purl.org/dc/terms/"
 href="https://gitlab.com/innovamics/comfor-doc"
 rel="dct:source">https://gitlab.com/innovamics/comfor-doc</a>.
+
+> Fork it, improve it, just don’t lock it down.
