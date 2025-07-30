@@ -515,76 +515,76 @@ $$ \mathbf{\sigma}^{\triangle} = \dot{\mathbf{\sigma}} +
 \mathbf{R}^T \mathbf{\sigma}
 $$
 
-
 ## Modèles de comportement hyperélastiques
 
-L'inégalité de Clausius-Duhem constitue le point de départ de la définition des
-lois de comportement hyperélastiques. Ces lois diffèrent en ce point des lois
-élastiques et des lois hypoélastiques qui sont dépourvues de fondements
-thermodynamiques.
+L’inégalité de Clausius-Duhem constitue le point de départ pour la définition
+des modèles hyperélastiques. Contrairement aux modèles élastiques ou
+hypoélastiques, les modèles hyperélastiques reposent sur une base
+thermodynamique.
 
-En théorie *purement mécanique*, il est courant de saffranchir des effets
-thermiques. Les dissipations sécrivent alors :
-
-$$
-\begin{align}
-\Phi_{0} & = -\rho_0 \dot{\psi} + \mathbf{S}:\mathbf{\dot{E}} \\
-\Phi & = -\rho \dot{\psi} + \mathbf{\sigma}:\mathbf{D}
-\end{align}
-$$
-
-Un matériau hyperélastique est un matériau dont lénergie de déformation par
-unité de volume initial $w$ ne dépend que de létat actuel de déformation et qui
-est non dissipatif, cest-à-dire qui ne produisent localement aucune entropie
-($\Phi =0$).
+En théorie **purement mécanique**, on néglige souvent les effets thermiques. La
+dissipation s’écrit alors :
 
 $$
 \begin{align}
-w\left( \mathbf{F} \right) & = \rho_0 \psi \\
-\Phi_{0} & = 0 \\
+\Phi_0 &= - \rho_0 \dot{\psi} + \mathbf{S} : \dot{\mathbf{E}} \\
+\Phi &= - \rho \dot{\psi} + \mathbf{\sigma} : \mathbf{D}
 \end{align}
 $$
 
-Le potentiel dénergie de déformation $w$ nest admissible que sil satisfait aux
+Un matériau hyperélastique est un matériau dont l’énergie de déformation par
+unité de volume initial $w$ ne dépend que de l’état actuel de déformation et qui
+est **non dissipatif**, c’est-à-dire que localement, il ne produit aucune
+entropie :
+
+$$
+\begin{align}
+w(\mathbf{F}) &= \rho_0 \psi \\
+\Phi_0 &= 0
+\end{align}
+$$
+
+Le potentiel d’énergie de déformation $w$ est admissible s’il satisfait les
 conditions suivantes :
 
-- $w$ il est nul lorsque le matériau nest soumis à aucune sollicitation :
-  $w\left(\mathbf{I}\right) = 0$ ;
-- $w$ augmente avec la déformation : $w\left(\mathbf{F}\right) \geq 0$ ;
-- $w$ respecte le principe dindifférence matérielle.
-  $w\left(\mathbf{F} \right) = w\left(\mathbf{Q}\mathbf{F}
-  \right) \, \forall\mathbf{F}, \mathrm{det} \mathbf{F} \geq 0$ ;
-- $w$ respecte les symétries matérielles ;
-- La fonction du potentiel dénergie doit être de classe $\mathcal{C}^2$ ( $w$,
-  sa première dérivée et sa seconde dérivée doivent être continues).
+- $w = 0$ lorsque le matériau n’est soumis à aucune sollicitation :
+  $w(\mathbf{I}) = 0$ ;
+- $w(\mathbf{F}) \geq 0$ pour toute déformation ;
+- $w$ respecte le **principe d’indifférence matérielle** : $w(\mathbf{F}) =
+  w(\mathbf{QF})$ pour toute rotation $\mathbf{Q}$ orthogonale ;
+- $w$ respecte les **symétries matérielles** du matériau ;
+- $w$ est une fonction régulière de classe $\mathcal{C}^2$ (sa première dérivée
+  et sa seconde dérivée doivent être continues).
 
 En utilisant la définition de la
 [décomposition polaire](#decomposition_polaire), on peut montrer que le
-potentiel d\'énergie de déformation ne dépend que de la partie associée aux
+potentiel d’énergie de déformation ne dépend que de la partie associée aux
 deformations pures de $\mathbf{F}$ [@CIA21]:
 
-$$ w\left(\mathbf{F} \right) = w\left(\mathbf{R^T}\mathbf{F} \right) =
-w\left(\mathbf{R}^T\mathbf{R}\mathbf{U} \right) =w\left(\mathbf{U} \right) $$
-
-Par conséquent, l\'énergie de déformation **reste objective** si elle est
-exprimée en fonction du tenseur de Cauchy-Green droit ou du tenseur de
-Green-Lagrange.
-
 $$
-w\left(\mathbf{F} \right) = w\left(\mathbf{C} \right) = w\left(\mathbf{E} \right)
+w\left(\mathbf{F} \right) = w\left(\mathbf{R^T}\mathbf{F} \right) =
+w\left(\mathbf{R}^T\mathbf{R}\mathbf{U} \right) =w\left(\mathbf{U} \right)
 $$
 
-En utilisant le tenseur de Cauchy-Green droit, on en déduit la relation de base
-des modèles constitutifs hyperélastiques :
+Par conséquent, l’énergie de déformation reste **objective** si elle est
+exprimée en fonction du tenseur de Cauchy-Green droit $\mathbf{C}$ ou du tenseur
+de Green-Lagrange $\mathbf{E}$ :
 
 $$
-\begin{aligned}
-\dot{w} & = \mathbf{S}:\mathbf{\dot{E}} \\
-\dot{w} \left( \mathbf{C} \right) & =\mathbf{S}:\frac{1}{2} \frac{\partial }{\partial t} \left(\mathbf{C} - \mathbf{I} \right) \\
-\frac{\partial w}{\partial \mathbf{C}}:\frac{\partial \mathbf{C}}{\partial t} & = \frac{1}{2}\mathbf{S}:\frac{\partial \mathbf{C}}{\partial t} \\
-\therefore \frac{\partial w}{\partial \mathbf{C}} & =\frac{1}{2}\mathbf{S}  \\
-\mathbf{S}&=2 \frac{\partial w}{\partial \mathbf{C}}
-\end{aligned}
+w(\mathbf{F}) = w(\mathbf{C}) = w(\mathbf{E})
+$$
+
+En exprimant $w$ en fonction de $\mathbf{C}$, on obtient la relation de base des
+modèles hyperélastiques :
+
+$$
+\begin{align}
+\dot{w} &= \mathbf{S} : \dot{\mathbf{E}} \\
+\dot{w}(\mathbf{C}) &= \mathbf{S} : \frac{1}{2} \frac{\partial}{\partial t} (\mathbf{C} - \mathbf{I}) \\
+\frac{\partial w}{\partial \mathbf{C}} : \dot{\mathbf{C}} &= \frac{1}{2} \mathbf{S} : \dot{\mathbf{C}} \\
+\Rightarrow \frac{\partial w}{\partial \mathbf{C}} &= \frac{1}{2} \mathbf{S} \\
+\mathbf{S} &= 2 \frac{\partial w}{\partial \mathbf{C}}
+\end{align}
 $$
 
 
