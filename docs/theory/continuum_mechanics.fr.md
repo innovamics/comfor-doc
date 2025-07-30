@@ -642,50 +642,53 @@ $$
 $$
 
 
-### Transverse isotropic hyperelasticity
+### Hyperélasticité transverse isotrope
 
-A transverse isotropic material is characterized by a preferred direction
-$\mathbf{l}_1$ in its initial configuration. This type of material has
-rotational symmetry about this direction, and therefore the response of the
-material is also invariant to any arbitrary rotation about this axis. In this
-case, the strain energy potential can be expressed in terms of five independent
-scalars defined from the right-hand Cauchy-Green tensor. The common
-representation of this potential (see for example [@SPE84]) is as follows:
+Un matériau hyperélastique isotrope transverse est caractérisé par une direction
+privilégiée $\mathbf{l}_1$ dans la configuration de référence. Le matériau
+possède une symétrie de rotation autour de cette direction, ce qui implique que
+sa réponse reste invariante sous toute rotation autour de $\mathbf{l}_1$.
+
+Dans ce cas, le potentiel d’énergie de déformation peut être exprimé en fonction
+de cinq invariants indépendants construits à partir du tenseur de Cauchy-Green
+droit. Une représentation classique de ce potentiel [@SPE84]
 
 $$
-w = w \left( I_{1},I_{2},I_{3},I_{4},I_{5}\right)
+w = w(I_1, I_2, I_3, I_4, I_5)
 $$
 
-Where $I_{1},I_{2},I_{3}$ correspond to the classical right Cauchy-Green
-invariants. Whereas, $I_{4},I_{5}$ are pseudo-invariants associated with the
-principal direction by [@SPE84] [@BOE87] [@QUA94] [@ITS04]:
+Les trois premiers invariants $I_1$, $I_2$ et $I_3$ sont les invariants
+classiques définis précédemment. Les invariants $I_4$ et $I_5$ sont appelés
+**pseudo-invariants** et dépendent de la direction privilégiée [@SPE84]
+[@BOE87] [@QUA94] [@ITS04]:
 
 $$
 \begin{aligned}
-I_4 \left(\mathbf{C},\mathbf{l}_1  \right) & = \mathbf{l}_1 \cdot \mathbf{C} \mathbf{l}_1 = \mathbf{C}:\mathbf{L}_{11} \\
-I_5 \left(\mathbf{C},\mathbf{l}_1  \right) & = \mathbf{l}_1 \cdot \mathbf{C}^2 \mathbf{l}_1 = \mathbf{C}^2:\mathbf{L}_{11}
+I_4(\mathbf{C}, \mathbf{l}_1) &= \mathbf{l}_1 \cdot \mathbf{C} \mathbf{l}_1 = 
+\mathbf{C} : \mathbf{L}_{11} \\
+I_5(\mathbf{C}, \mathbf{l}_1) &= \mathbf{l}_1 \cdot \mathbf{C}^2 \mathbf{l}_1 = 
+\mathbf{C}^2 : \mathbf{L}_{11}
 \end{aligned}
 $$
 
-where $\mathbf{L}_{11}$ is the structural tensor defined by :
+où le tenseur de structure associé à la direction privilégiée est :
 
 $$
-\mathbf{L}_{11}  = \mathbf{l}_1 \otimes \mathbf{l}_1
+\mathbf{L}_{11} = \mathbf{l}_1 \otimes \mathbf{l}_1
 $$
 
-Ising this invariant definition, the Second Piola-Kirchhoff stress tensor is
-given by:
+Avec cette définition, le tenseur des contraintes de Piola-Kirchhoff 2 s’écrit :
 
-$$ \mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} = 2 \sum_{a=1}^5
-\frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}} $$
+$$
+\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} = 2 \sum_{i=1}^5 \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}}
+$$
 
-The derivatives of the pseudo-invariants with respect to $\mathbf{C}$ are given
-by:
+Les dérivées des invariants par rapport à $\mathbf{C}$ sont :
 
 $$
 \begin{aligned}
-\frac{\partial I_4}{\partial \mathbf{C}} & = \mathbf{L}_{11} \\
-\frac{\partial I_5}{\partial \mathbf{C}} & = \mathbf{l}_1 \otimes  \mathbf{C}\mathbf{l}_1 +  \mathbf{C}\mathbf{l}_1 \otimes \mathbf{l}_1 \\
+\frac{\partial I_4}{\partial \mathbf{C}} &= \mathbf{L}_{11} \\
+\frac{\partial I_5}{\partial \mathbf{C}} &= \mathbf{l}_1 \otimes (\mathbf{C} \mathbf{l}_1) + (\mathbf{C} \mathbf{l}_1) \otimes \mathbf{l}_1
 \end{aligned}
 $$
 
