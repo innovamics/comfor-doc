@@ -508,7 +508,7 @@ $$
 \mathbf{\sigma} \mathbf{W} - \mathbf{W} \mathbf{\sigma}
 $$
 
-- **Dérivée de Green–Naghdi** :
+- **Dérivée de Green–Naghdi** [@BON97]:
 
 $$ \mathbf{\sigma}^{\triangle} = \dot{\mathbf{\sigma}} +
 \mathbf{\sigma} \dot{\mathbf{R}} \mathbf{R}^T - \dot{\mathbf{R}}
