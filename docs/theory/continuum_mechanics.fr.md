@@ -74,80 +74,68 @@ $$
 
 # Mesure des déformations
 
-Afin de définir la déformation d'un solide, il est nécessaire de caractériser
-les changements de forme, c'est-à-dire les variations de longueur et d'angle. Il
-s'agit en fait des variations des produits scalaires de vecteurs matériels
-$d\mathbf{X}$ et $\delta \mathbf{X}$, devenant $d\mathbf{x}$ et $\delta
-\mathbf{x}$ après transformation :
+Pour définir la déformation d'un solide, il est nécessaire de caractériser les
+changements de forme, c'est-à-dire les variations de longueurs et d'angles. Cela
+correspond en fait aux variations des produits scalaires de vecteurs matériels
+$\mathrm{d}\mathbf{X}$ et $\delta \mathbf{X}$, devenant $\mathrm{d}\mathbf{x}$
+et $\delta \mathbf{x}$ après transformation :
 
-$$ d \mathbf{x} \cdot \delta \mathbf{x} = \left( \mathbf{F} d\mathbf{X}
-\right)^{T} \cdot \left( \mathbf{F} \delta \mathbf{X} \right) = d \mathbf{X}
-\cdot \mathbf{ C} \cdot \delta \mathbf{X} $$
-
-où $\mathbf{C}$ dénote le tenseur de dilatations Cauchy-Green droit et
-$\mathbf{B}$ le tenseur de Cauchy-Green gauche définis par :
-
-$$
-\mathbf{C}=\mathbf{F}^{T}\mathbf{F}
+$$ 
+\mathrm{d} \mathbf{x} \cdot \delta \mathbf{x} = \left( \mathbf{F} \,
+\mathrm{d}\mathbf{X} \right)^{T} \cdot \left( \mathbf{F} \, \delta \mathbf{X}
+\right) = \mathrm{d} \mathbf{X} \cdot \mathbf{C} \cdot \delta \mathbf{X}
 $$
 
-À partir de la variation de ces produits scalaires, on obtient la déformation
+où $\mathbf{C}$ désigne le tenseur des dilatations de Cauchy-Green droit, défini
+par :
+
+$$\mathbf{C} = \mathbf{F}^T \mathbf{F}$$
+
+À partir de la variation des produits scalaires, on obtient la déformation
 associée :
 
 $$
-\begin{align}
-d\mathbf{x} \cdot \delta \mathbf{x} - d\mathbf{X} \cdot\delta \mathbf{X}
-&= d\mathbf{X} \cdot \mathbf{ C} \delta \mathbf{X} - d\mathbf{X} \cdot\delta \mathbf{X} \\
-&=d\mathbf{X} \cdot \left( \mathbf{ C} - \mathbf{I} \right) \delta \mathbf{X} \\
-&=d\mathbf{X} \cdot 2 \mathbf{ E}\, \delta \mathbf{X}
-\end{align}
+\begin{align} \mathrm{d}\mathbf{x} \cdot \delta \mathbf{x} -
+\mathrm{d}\mathbf{X} \cdot \delta \mathbf{X} &= \mathrm{d}\mathbf{X} \cdot
+(\mathbf{C} - \mathbf{I}) \delta \mathbf{X} \\ &= \mathrm{d}\mathbf{X} \cdot 2
+\mathbf{E} \, \delta \mathbf{X} \end{align}
 $$
 
-$\mathbf{E}$ est le tenseur des déformations de Green-Lagrange donné par :
+où $\mathbf{E}$ est le tenseur des déformations de Green-Lagrange :
 
 $$
-\mathbf{E} = \frac{1}{2} \left( \mathbf{C} - \mathbf{I} \right)
+\mathbf{E} = \frac{1}{2} (\mathbf{C} - \mathbf{I})
 $$
 
+> **Note** : En petites déformations, ce tenseur se confond avec le tenseur des
+> déformations linéarisées $\mathbf{\varepsilon}$. Les tenseurs $\mathbf{C}$
+> et $\mathbf{E}$ sont définis dans la configuration de référence.
 
-!!! note 
-    En petites déformations, ce tenseur se confond avec le tenseur des
-    déformations linéarisées $\mathbf{\varepsilon}$. Les tenseurs
-    $\mathbf{C}$ et $\mathbf{E}$ sont définis par rapport à la
-    configuration initiale et à des variations de vecteurs matériels
-    élémentaires.
+## Décomposition polaire
 
-## Décomposition polaire 
+Le tenseur gradient de déformation $\mathbf{F}$ peut être exprimé comme le
+produit d’un tenseur de rotation $\mathbf{R}$ et d’un tenseur des déformations
+pures droit $\mathbf{U}$ :
 
-Le tenseur de gradient de déformation peut être exprimé comme le produit du
-tenseur de rotation $\mathbf{R}$ et du tenseur des déformations pures droit
-$\mathbf{U}$.
+$$\mathbf{F} = \mathbf{R} \mathbf{U}$$
 
-$$
-\mathbf{F} = \mathbf{R} \mathbf{U}
-$$
+Le tenseur $\mathbf{R}$ étant orthogonal, $\mathbf{R}^T \mathbf{R} =
+\mathbf{I}$, la définition du tenseur $\mathbf{U}$ découle de celle de
+$\mathbf{C}$ :
 
-Le tenseur de rotation étant orthogonal $\mathbf{R}^{T} \mathbf{R} =\mathbf{I}$,
-la définition du tenseur $\mathbf{U}$ peut être déduite de la définition du
-tenseur de Cauchy-Green droit :
+$$\mathbf{C} = \mathbf{F}^T \mathbf{F} = \mathbf{U}^T \mathbf{R}^T \mathbf{R}
+\mathbf{U} = \mathbf{U}^2$$
 
-$$
-\mathbf{C}= \mathbf{U}^{T}\mathbf{R}^{T} \mathbf{R} \mathbf{U} = \mathbf{U}^2
-$$
+Une analyse spectrale de $\mathbf{C}$ fournit les directions principales
+$\mathbf{N}_i$ et les valeurs propres associées $\lambda_i$ :
 
+$$\mathbf{C} = \sum_i \lambda_i^2 \, \mathbf{N}_i \otimes \mathbf{N}_i$$
 
-Une analyse des valeurs propres de $\mathbf{C}$ donne les directions principales
-$\mathbf{N}_{i}$ et les valeurs propres correspondantes $\lambda_{i}$.
+et donc :
 
-$$
-\mathbf{C}= \lambda_{i}^2 \mathbf{N}_{i} \otimes \mathbf{N}_{i}
-$$
+$$\mathbf{U} = \sum_i \lambda_i \, \mathbf{N}_i \otimes \mathbf{N}_i$$
 
-D'où :
-
-$$
-\mathbf{U}= \lambda_{i} \mathbf{N}_{i} \otimes \mathbf{N}_{i}
-$$
+où $\lambda_i$ sont les elongations dans les directions principales.
 
 ## Vitesses de déformation
 
