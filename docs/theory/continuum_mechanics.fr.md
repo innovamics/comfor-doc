@@ -588,48 +588,59 @@ $$
 $$
 
 
-### Hyperélasticité isotrope 
+### Hyperélasticité isotrope
 
-Un matériau hyperélastique est isotrope est défini par un potentiel de la forme:
+Un matériau hyperélastique isotrope est défini par un potentiel d’énergie de la
+forme :
 
-$$w\left(\mathbf{C} \right) = w\left(I_1 ,I_2 ,I_3  \right)$$
+$$
+w(\mathbf{C}) = w(I_1, I_2, I_3)
+$$
 
-où $I_i$ sont les invariants classiques du tenseur de Cauchy-Green droit définis
-par:
+où $I_1$, $I_2$ et $I_3$ sont les invariants classiques du tenseur de
+Cauchy-Green droit, définis par :
 
-$$\begin{aligned}
-I_1 & = \mathrm{tr}  \left( \mathbf{C} \right) = \mathbf{C} : \mathbf{I} \\
-I_2 & = \dfrac{1}{2} \left( \mathrm{tr} \left( \mathbf{C} \right)^2 - 
-\mathrm{tr} \left( \mathbf{C}^2 \right)\right) = \mathbf{C} : \mathbf{C} \\
-I_3 & = \mathrm{det} \left( \mathbf{C} \right) = J^2
-\end{aligned}$$
+$$
+\begin{aligned}
+I_1 &= \mathrm{tr}(\mathbf{C}) = \mathbf{C} : \mathbf{I} \\
+I_2 &= \frac{1}{2} \left[ (\mathrm{tr} \, \mathbf{C})^2 - \mathrm{tr}(\mathbf{C}^2) \right] \\
+I_3 &= \det(\mathbf{C}) = J^2
+\end{aligned}
+$$
 
-Le potentiel peut également être exprimé en fonctions des élongations
-principales:
+Le potentiel peut également être exprimé en fonction des allongements principaux
+$\lambda_i$ :
 
-$$\begin{aligned}
-w\left(\mathbf{C} \right) & = w\left(\lambda_1 ,\lambda_2 ,\lambda_3  \right) \\
-I_1 & = \lambda_1^2 +  \lambda_2^2 + \lambda_3^2 \\
-I_2 & = \lambda_1^2 \lambda_2^2 +  \lambda_1^2 \lambda_3^2+ \lambda_2^2 \lambda_3^2\\
-I_3 & =  \lambda_1^2 \lambda_2^2 \lambda_3^2
-\end{aligned}$$
+$$
+\begin{aligned}
+w(\mathbf{C}) &= w(\lambda_1, \lambda_2, \lambda_3) \\\\
+I_1 &= \lambda_1^2 + \lambda_2^2 + \lambda_3^2 \\
+I_2 &= \lambda_1^2 \lambda_2^2 + \lambda_1^2 \lambda_3^2 + \lambda_2^2 \lambda_3^2 \\
+I_3 &= \lambda_1^2 \lambda_2^2 \lambda_3^2
+\end{aligned}
+$$
 
-Plusieurs expressions invariantes du potentiel existent pour les matériaux
-hyperélastiques isotropes, les plus répandues ont été proposées par [@MOO40],
-[@OGD97] et [@RIV48].
+Plusieurs expressions du potentiel ont été proposées pour décrire le
+comportement des matériaux hyperélastiques isotropes, notamment par Mooney
+[@MOO40], Ogden [@OGD97] et Rivlin [@RIV48].
 
-Le tenseur PK2 est donc de la forme:
+Le tenseur de Piola-Kirchhoff 2 s’exprime alors comme :
 
-$$\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} = 
-2 \sum_{a=1}^3  \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}}$$
+$$
+\mathbf{S} = 2 \frac{\partial w}{\partial \mathbf{C}} =
+2 \sum_{i=1}^{3} \frac{\partial w}{\partial I_i} \frac{\partial I_i}{\partial \mathbf{C}}
+$$
 
-Les dérivées des invariants par rapport à $\mathbf{C}$ sont données par:
+Les dérivées des invariants par rapport à $\mathbf{C}$ sont données par :
 
-$$\begin{aligned}
-\frac{\partial I_1}{\partial \mathbf{C}} & = \mathbf{I} \\
-\frac{\partial I_2}{\partial \mathbf{C}} & = I_1\mathbf{I} - \mathbf{C} \\
-\frac{\partial I_3}{\partial \mathbf{C}} & = I_3\mathbf{C}^{-1}
-\end{aligned}$$
+$$
+\begin{aligned}
+\frac{\partial I_1}{\partial \mathbf{C}} &= \mathbf{I} \\
+\frac{\partial I_2}{\partial \mathbf{C}} &= I_1 \mathbf{I} - \mathbf{C} \\
+\frac{\partial I_3}{\partial \mathbf{C}} &= I_3 \mathbf{C}^{-1}
+\end{aligned}
+$$
+
 
 ### Transverse isotropic hyperelasticity
 
