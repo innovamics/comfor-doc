@@ -32,14 +32,12 @@ $$
 \mathbf{f}_{\text{int}}^i = \mathbf{f}_{\text{ext}}^i
 $$
 
-
 ## Schéma des différences centrées
 
 Le schéma des différences centrées est la méthode d’intégration explicite
 actuellement implémentée dans **Comfor**. Il est basé sur les formules
 classiques des différences centrées appliquées à la vitesse et à l’accélération
 [@BEL14] [@BEN17].
-
 
 Soit l’intervalle temporel de simulation $[t_0, t_e]$ subdivisé en $n_e$ pas de
 temps $\Delta t^n$. L’instant $t^n$ est défini par :
@@ -64,7 +62,7 @@ $$
 \mathbf{u}^{n+1} = \mathbf{u}^n + \Delta t^{n+1} \, \mathbf{v}^{n+1/2}
 $$
 
-La vitesse $\mathbf{v}^{n+1/2}$ est dite *décalée* (ou *staggered*). Elle est
+La vitesse $\mathbf{v}^{n+1/2}$ est dite _décalée_ (ou _staggered_). Elle est
 intégrée à partir de l’accélération connue à l’instant $t^n$ :
 
 $$
@@ -81,7 +79,7 @@ Enfin, l’accélération est déterminée par la résolution de l’équation d
 dynamique à $t^n$ :
 
 $$
-\mathbf{a}^n = \mathbf{M}^{-1} \left( \mathbf{f}_{\text{ext}}^n - 
+\mathbf{a}^n = \mathbf{M}^{-1} \left( \mathbf{f}_{\text{ext}}^n -
 \mathbf{f}_{\text{int}}^n - \mathbf{C}^d \mathbf{v}^{n-1/2} \right)
 $$
 
@@ -122,7 +120,6 @@ Valeurs typiques de $\alpha$ :
 - $\alpha = 0.25$ à $0.50$ pour des cas hautement transitoires (ondes de choc,
   explosifs).
 
-
 ## Schéma de Newmark
 
 Le schéma de Newmark $\beta_2$ repose sur un développement en série de Taylor
@@ -130,14 +127,15 @@ des déplacements, tronqué à l’ordre deux ou trois selon les paramètres $\b
 et $\gamma$ :
 
 $$
-\begin{aligned} 
+\begin{aligned}
 \mathbf{u}^{n+1} &= \mathbf{u}^{n} + \Delta t\,
 \mathbf{v}^{n} + \frac{1}{2} \Delta t^2\, \mathbf{a}^{n} + \beta\, \frac{1}{2}
-\Delta t^2 \left( \mathbf{a}^{n+1} - \mathbf{a}^{n} \right) \\ 
-\mathbf{v}^{n+1} &= \mathbf{v}^{n} + \Delta t\, 
+\Delta t^2 \left( \mathbf{a}^{n+1} - \mathbf{a}^{n} \right) \\
+\mathbf{v}^{n+1} &= \mathbf{v}^{n} + \Delta t\,
 \mathbf{a}^{n} + \gamma\, \Delta t \left(
-\mathbf{a}^{n+1} - \mathbf{a}^{n} \right) 
-\end{aligned} $$
+\mathbf{a}^{n+1} - \mathbf{a}^{n} \right)
+\end{aligned}
+$$
 
 Ces équations peuvent être reformulées pour séparer les **termes de prédiction**
 (utilisant uniquement les grandeurs connues à l’instant $n$) et les **termes de
@@ -147,7 +145,7 @@ correction**, dépendants de l'accélération à l'instant $n+1$ :
 
 $$
 \begin{aligned}
-\tilde{\mathbf{u}}^{n+1} &= \mathbf{u}^{n} + \Delta t \, 
+\tilde{\mathbf{u}}^{n+1} &= \mathbf{u}^{n} + \Delta t \,
 \mathbf{v}^{n} + \frac{1}{2} \Delta t^2 (1 - \beta) \, \mathbf{a}^{n} \\
 \tilde{\mathbf{v}}^{n+1} &= \mathbf{v}^{n} + \Delta t (1 - \gamma) \, \mathbf{a}^{n}
 \end{aligned}
@@ -157,7 +155,7 @@ $$
 
 $$
 \begin{aligned}
-\mathbf{u}^{n+1} &= \tilde{\mathbf{u}}^{n+1} + \beta 
+\mathbf{u}^{n+1} &= \tilde{\mathbf{u}}^{n+1} + \beta
 \frac{1}{2} \Delta t^2 \, \mathbf{a}^{n+1} \\
 \mathbf{v}^{n+1} &= \tilde{\mathbf{v}}^{n+1} + \gamma \Delta t \, \mathbf{a}^{n+1}
 \end{aligned}
@@ -200,12 +198,11 @@ fortement non linéaires (grands déplacements, contact, onde de choc), car ils
 permettent de s'affranchir de la résolution itérative au prix d’un pas de temps
 plus petit.
 
-
 ## Matrice de masse lumpée
 
 En dynamique explicite, les matrices de masse et d’amortissement sont souvent
 supposées diagonales pour simplifier les calculs. On utilise une **condensation
-de masse** (*mass lumping*[@ZIE05a]), consistant à répartir la masse totale de
+de masse** (_mass lumping_[@ZIE05a]), consistant à répartir la masse totale de
 chaque ligne sur sa diagonale :
 
 $$
