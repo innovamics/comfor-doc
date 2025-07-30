@@ -1,53 +1,48 @@
 # Description du mouvement
 
 Le mouvement en tout point d'une région solide $\Omega$ dans l'espace avec
-surface frontière $\partial\Omega$, est décrit par la fonction bijective $\Phi$
-:
+surface frontière $\partial\Omega$ est décrit par la fonction bijective $\Phi$ :
 
-$$\mathbf{x} = \Phi \left(\mathbf{X},t\right)$$
+$$\mathbf{x} = \Phi (\mathbf{X},t)$$
 
-Ce qui nous permet d'obtenir le vecteur position $\mathbf{x}$ au moment $t$ de
-toute particule qui occupait précédemment la position $\mathbf{X}$. Pour un
-instant $t$ fixé, cette fonction définit la déformation en tout point d'un
-solide entre une configuration de référence $C_0$ et une configuration actuelle
-$C\left(t\right)$
+Cela permet d'obtenir le vecteur position $\mathbf{x}$ au moment $t$ de toute
+particule qui occupait précédemment la position $\mathbf{X}$. Pour un instant
+$t$ fixé, cette fonction définit la déformation en tout point d'un solide entre
+une configuration de référence $C_0$ et une configuration actuelle $C(t)$.
 
 <div style="text-align:center;">
- <figure >
-   <img src="../../assets/img/coordonnees.svg"  />
-   <figcaption>Configurations initiale et déformée </figcaption>
- </figure> 
+ <figure>
+   <img src="../../assets/img/coordonnees.svg" />
+   <figcaption>Configurations initiale et déformée</figcaption>
+ </figure>
 </div>
 
 En mécanique des solides, la configuration de référence $C_0$ est généralement
 associée à l'état initial du solide non déformé, ce qui permet d'associer les
-deux configurations dans le même système d'axe. Les coordonnées dans la
+deux configurations dans le même système d'axes. Les coordonnées dans la
 configuration $C_0$ sont alors nommées coordonnées lagrangiennes ou matérielles,
 tandis que celles associées à la configuration courante $C_t$ sont appelées
 coordonnées eulériennes ou spatiales. Les différentes quantités présentées dans
 la suite seront écrites par rapport à l'un ou l'autre de ces référentiels. Par
-abus de langage la dépendance au temps $t$ sera omise dans la suite en supposant
-$t > 0$.
+abus de langage, la dépendance au temps $t$ sera omise dans la suite en
+supposant $t > 0$.
 
-# Deformation gradient tensor
+# Tenseur gradient de déformation
 
-Afin de décrire la cinématique au voisinage d'un point $X$ donné, on introduit
-le tenseur gradient de la transformation. Ce tenseur est une application qui
-transforme un vecteur matériel élémentaire donné $\text{d}\mathbf{X}$ en sa
-contrepartie eulérienne $\text{d}\mathbf{x}$. $\mathbf{F}$ donne une description
-locale, au premier ordre :
-
-$$ d\mathbf{x} \left(\mathbf{X},t \right) =\frac{\partial \Phi }{\partial
-\mathbf{X}}d\mathbf{X}=\mathbf{F}d\mathbf{X} $$
+Afin de décrire la cinématique au voisinage d'un point $\mathbf{X}$ donné, on
+introduit le tenseur gradient de la transformation. Ce tenseur est une
+application qui transforme un vecteur matériel élémentaire
+$\mathrm{d}\mathbf{X}$ en sa contrepartie eulérienne $\mathrm{d}\mathbf{x}$. Le
+tenseur $\mathbf{F}$ fournit une description locale au premier ordre :
 
 $$
-\mathbf{F} = \frac{\partial \mathbf{x} }{\partial \mathbf{X}}
+\mathrm{d}\mathbf{x} = \frac{\partial \Phi}{\partial \mathbf{X}}
+\mathrm{d}\mathbf{X} = \mathbf{F} \mathrm{d}\mathbf{X}
 $$
 
-The gradient tensor of the transformation $\mathbf{F}$, is thus an application
-which transforms a given elementary material vector $d\mathbf{X}$ into its
-Eulerian counterpart $d\mathbf{x}$. This tensor gives a local description, to
-the first order, of the solid transformation.
+$$
+\mathbf{F} = \frac{\partial \mathbf{x}}{\partial \mathbf{X}}
+$$
 
 On définit aussi la transformation d'un élément de volume élémentaire. Soit un
 élément de volume dans la configuration de référence, $dV \in C_0$. Sa
@@ -56,27 +51,25 @@ par le déterminant de la matrice jacobienne du tenseur gradient de la
 transformation, appelé le jacobien $J$.
 
 $$
-dv=JdV \quad \mathrm{with} \quad J=\mathrm{det} \left( \mathbf{F} \right)
+\mathrm{d}v = J \mathrm{d}V \quad \text{avec} \quad J = \det(\mathbf{F})
 $$
 
-La condition locale d'impénétrabilité de la matière exige que:
+La condition locale d'impénétrabilité de la matière exige que :
 
 $$
-J\left( X\right) > 0
+J(\mathbf{X}) > 0
 $$
 
+> **Note** : L'application $\Phi$ étant bijective, le jacobien $J$ est
+> strictement positif. Physiquement, il serait incohérent de trouver un volume
+> élémentaire nul ou négatif.
 
-!!! note
-    L'application $\Phi$ étant bijective, le jacobien $j$ est strictement
-    positif. Physiquement, il serait incohérent de trouver un volume
-    élémentaire nul ou négatif.
-
-Nous définissons également la transformation d'un élément de surface $dS$ de
-normale $\mathbf{N}$ en configuration initiale en un élément de surface $ds$ de
-normale $\mathbf{n}$ en utilisant la formule de Nanson:
+La transformation d'un élément de surface $\mathrm{d}S$ de normale $\mathbf{N}$
+en configuration initiale en un élément de surface $\mathrm{d}s$ de normale
+$\mathbf{n}$ est donnée par la formule de Nanson :
 
 $$
-\mathbf{n} ds =J\mathbf{F}^{-T}\mathbf{N}dS
+\mathbf{n} \, \mathrm{d}s = J \mathbf{F}^{-T} \mathbf{N} \, \mathrm{d}S
 $$
 
 # Mesure des déformations
