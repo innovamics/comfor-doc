@@ -23,7 +23,7 @@ test:
     paths:
     - test
   rules:
-    - if: '$CI_COMMIT_BRANCH != "master"'
+    - if: '$CI_COMMIT_BRANCH != "main"'
 
 pages:
   stage: deploy
@@ -33,4 +33,4 @@ pages:
     paths:
       - public
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
