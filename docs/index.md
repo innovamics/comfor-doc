@@ -58,7 +58,7 @@ If you're new to Comfor, here are the best places to begin:
 
 - [Quick Starter Guide](overview/quick_starter_guide.md) – Minimal steps to run
   your first simulation
-- [User Guide](user/user_overview.md) – Define models, materials, and
+- [User Guide](docs/docs_overview.md) – Define models, materials, and
   postprocess results
 - [Downloads](overview/download_page.md) – Get the latest binaries and example
   cases.
@@ -68,7 +68,7 @@ If you're new to Comfor, here are the best places to begin:
 # 👨‍💻 For Developers
 
 Want to contribute or implement your own models? The
-[Developer Guide](developer/dev_overview.md) walks you through building,
+[Developer Guide](developers/dev_overview.md) walks you through building,
 testing, and extending Comfor.
 
 ---

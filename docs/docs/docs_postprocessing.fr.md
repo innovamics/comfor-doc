@@ -3,7 +3,7 @@ défaut pour l’exportation des résultats. D’autres formats pourront être p
 charge à l’avenir, en fonction des besoins des utilisateurs et des chercheurs.
 
 Au cours de la simulation, Comfor génère plusieurs fichiers `.vtk`, un à chaque
-[`print_step`](user_preprocessing.md#controle_de_temps). Ces fichiers sont enregistrés
+[`print_step`](docs_preprocessing.md#controle_de_temps). Ces fichiers sont enregistrés
 dans le dossier `Results_<nom_du_fichier>`.
 
 

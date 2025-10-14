@@ -1,6 +1,6 @@
 [VTK](http://www.vtk.org/VTK/img/file-formats.pdf) is the default output format for the results. In the future, other formats may be developed according to users and researchers needs.
 
-During the simulation Comfor writes several vtk files, one every [`print_step`](user_preprocessing.md#control). These files are located in the folder `Results_<file_name>`.
+During the simulation Comfor writes several vtk files, one every [`print_step`](docs_preprocessing.md#control). These files are located in the folder `Results_<file_name>`.
 
 _Exemple_
 

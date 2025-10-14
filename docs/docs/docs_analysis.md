@@ -21,7 +21,7 @@ $ comfor /usr/name/sim/test.bim
 
 # Run time information
 
-During the analysis, Comfor will print periodically some useful information on the terminal. The frequency is the defined by the [`print_step`](user_preprocessing.md#control) defined in the control block.
+During the analysis, Comfor will print periodically some useful information on the terminal. The frequency is the defined by the [`print_step`](docs_preprocessing.md#control) defined in the control block.
 
 The output information is given by block with the general structure:
 

@@ -4,7 +4,7 @@ The different materials, finite elements, contact laws come from confirmed and r
 
 This section will allow to establish the basic notions for the construction of a numerical model for Comfor, the simulation and its analysis. 
 
-1. [Pre-processing](user_preprocessing.md)
+1. [Pre-processing](docs_preprocessing.md)
     - Control 
     - Materials
     - Boundary conditions 
@@ -14,11 +14,11 @@ This section will allow to establish the basic notions for the construction of a
     - Elements
     - Contact
     - Trackers
-2. [Analysis](user_analysis.md)
+2. [Analysis](docs_analysis.md)
     - Starting a new analysis
     - Runtime information
     - Errors and bugs
-3. [Post-processing](user_postprocessing.md)  
+3. [Post-processing](docs_postprocessing.md)  
     - Load the files 
     - Play the animation
     - Applying filters

@@ -9,7 +9,7 @@ travaux de recherche récents et validés.
 Cette section permet d’établir les notions de base pour construire un modèle
 numérique avec Comfor, lancer une simulation et analyser les résultats.
 
-1. [Pré-traitement](user_preprocessing.md)
+1. [Pré-traitement](docs_preprocessing.md)
     - Contrôle
     - Matériaux
     - Conditions aux limites
@@ -19,11 +19,11 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
     - Éléments
     - Contact
     - Traceurs
-2. [Analyse](user_analysis.md)
+2. [Analyse](docs_analysis.md)
     - Démarrer une nouvelle analyse
     - Informations en cours d’exécution
     - Erreurs et bugs
-3. [Post-traitement](user_postprocessing.md)  
+3. [Post-traitement](docs_postprocessing.md)  
     - Charger les fichiers
     - Lancer l’animation
     - Appliquer des filtres

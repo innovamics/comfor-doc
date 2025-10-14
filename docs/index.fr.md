@@ -61,7 +61,7 @@ Si vous découvrez Comfor, voici les sections recommandées :
 
 - [Guide de démarrage rapide](overview/quick_starter_guide.md) – Lancer votre
   première simulation en quelques étapes  
-- [Guide utilisateur](user/user_overview.md) – Créer vos modèles, définir les
+- [Guide utilisateur](docs/docs_overview.md) – Créer vos modèles, définir les
   matériaux et post-traiter les résultats  
 - [Téléchargements](overview/download_page.md) – Obtenir les dernières versions et  
   exemples
@@ -71,7 +71,7 @@ Si vous découvrez Comfor, voici les sections recommandées :
 # 👩‍💻 Pour les développeurs
 
 Vous souhaitez contribuer ou ajouter vos propres modèles ? Le
-[Guide développeur](developer/dev_overview.md) vous accompagne pas à pas dans la
+[Guide développeur](developers/dev_overview.md) vous accompagne pas à pas dans la
 compilation, les tests et l’extension de Comfor.
 
 ---

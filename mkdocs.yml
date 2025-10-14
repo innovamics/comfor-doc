@@ -11,22 +11,22 @@ nav:
   - "Home":
       - "Welcome": index.md
   - "Getting Started":
-      - "Quick Start": overview/quick_starter_guide.md
       - "Downloads": overview/download_page.md
+      - "Quick Start": overview/quick_starter_guide.md
   #     - 'Tutorial': index.md
-  - "User":
-      - "Overview": user/user_overview.md
-      - "Preprocessing": user/user_preprocessing.md
-      - "Running": user/user_analysis.md
-      - "Postprocessing": user/user_postprocessing.md
-  - "Theory":
-      - "Overview": theory/theory_overview.md
-      - "Continuum Mechanics": theory/continuum_mechanics.md
-      - "Composite Materials": theory/materials/composite_materials.md
-      - "Materials overview": theory/materials/materials_overview.md
-      - "Solvers": theory/solvers/solvers_overview.md
-  - "Dev":
-      - "Using git": developer/dev_git.md
+  - "Docs":
+      - "Overview": docs/docs_overview.md
+      - "Preprocessing": docs/docs_preprocessing.md
+      - "Running": docs/docs_analysis.md
+      - "Postprocessing": docs/docs_postprocessing.md
+      - "Theory":
+        - "Overview": theory/theory_overview.md
+        - "Continuum Mechanics": theory/continuum_mechanics.md
+        - "Composite Materials": theory/materials/composite_materials.md
+        - "Materials overview": theory/materials/materials_overview.md
+        - "Solvers": theory/solvers/solvers_overview.md
+  - "Developers":
+      - "Git": developers/dev_git.md
 
 theme:
   name: material
