@@ -100,7 +100,8 @@ markdown_extensions:
   - pymdownx.snippets # `{{snippet_name}}`
   - pymdownx.superfences # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
   - pymdownx.tasklist # - [X] item
-  - pymdownx.tabbed # === "Tab 1"
+  - pymdownx.tabbed: # === "Tab 1"
+      alternate_style: true
   - pymdownx.blocks.caption
   - tables
   - toc:
@@ -169,7 +170,7 @@ extra_javascript:
   # - assets/js/background_effects.js
 
 extra_css:
-  - assets/css/tabbed.css
+  # - assets/css/tabbed.css
   # - assets/css/home_page.css
   # - assets/css/custom_colors.css
   # - assets/css/background.css
