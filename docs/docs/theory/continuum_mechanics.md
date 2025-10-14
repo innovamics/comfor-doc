@@ -14,7 +14,7 @@ which gives the position vector $\mathbf{x}$ at time $t$ of any particle which p
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../assets/img/coordonnees.svg"  />
+   <img src="../../../assets/img/coordonnees.svg"  />
    <figcaption>Initial configuration and current distorted configuration</figcaption>
  </figure> 
 </div>
@@ -168,7 +168,7 @@ $$
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../assets/img/stress.svg"  />
+   <img src="../../../assets/img/stress.svg"  />
    <figcaption>Stress vector definition</figcaption>
  </figure> 
 </div>

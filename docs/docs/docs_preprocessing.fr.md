@@ -123,7 +123,7 @@ MATERIALS TYPE <material_type_2>
   dépendent de chaque matériau.
  
 Pour voir la liste des matériaux disponibles, consultez
-[Matériaux](../theory/materials/materials_overview.md)
+[Matériaux](theory/materials/materials_overview.md)
 
 _Exemple_ :
 

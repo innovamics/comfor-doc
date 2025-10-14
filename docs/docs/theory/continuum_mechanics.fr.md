@@ -12,7 +12,7 @@ une configuration de référence $C_0$ et une configuration actuelle $C(t)$.
 
 <div style="text-align:center;">
  <figure>
-   <img src="../../assets/img/coordonnees.svg" />
+   <img src="../../../assets/img/coordonnees.svg" />
    <figcaption>Configurations initiale et déformée</figcaption>
  </figure>
 </div>
@@ -182,7 +182,7 @@ $$
 
 <div style="text-align:center;">
  <figure>
-   <img src="../../assets/img/stress.svg" />
+   <img src="../../../assets/img/stress.svg" />
    <figcaption>Définition du vecteur contrainte</figcaption>
  </figure>
 </div>

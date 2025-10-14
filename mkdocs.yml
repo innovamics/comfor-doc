@@ -13,18 +13,20 @@ nav:
   - "Getting Started":
       - "Downloads": overview/download_page.md
       - "Quick Start": overview/quick_starter_guide.md
-  #     - 'Tutorial': index.md
+      - 'Tutorial': overview/tutorial_page.md
   - "Docs":
       - "Overview": docs/docs_overview.md
       - "Preprocessing": docs/docs_preprocessing.md
       - "Running": docs/docs_analysis.md
       - "Postprocessing": docs/docs_postprocessing.md
+      - "Materials": docs/docs_materials.md
+      - "Elements": docs/docs_elements.md
       - "Theory":
-        - "Overview": theory/theory_overview.md
-        - "Continuum Mechanics": theory/continuum_mechanics.md
-        - "Composite Materials": theory/materials/composite_materials.md
-        - "Materials overview": theory/materials/materials_overview.md
-        - "Solvers": theory/solvers/solvers_overview.md
+        - "Overview": docs/theory/theory_overview.md
+        - "Continuum Mechanics": docs/theory/continuum_mechanics.md
+        - "Composite Materials": docs/theory/materials/composite_materials.md
+        - "Materials overview": docs/theory/materials/materials_overview.md
+        - "Solvers": docs/theory/solvers/solvers_overview.md
   - "Developers":
       - "Git": developers/dev_git.md
 
@@ -112,21 +114,23 @@ plugins:
           nav_translations:
             Home: Accueil
             Welcome: Bienvenue
-            User: Utilisateur
-            Theory: Théorie
-            Dev: Développeur
+            Getting Started: Bien démarrer
+            Downloads: Téléchargements
+            Quick Start: Démarrage rapide
+            Tutorial: Tutoriel
+            Docs: Manuel
             Overview: Généralités
             Preprocessing: Pré-traitement
             Running: Exécution
             Postprocessing: Post-traitement
-            Using git: Configurer de git
-            Downloads: Téléchargements
+            Materials: Matériaux
+            Elements: Eléments
+            Theory: Théorie
             Continuum Mechanics: Mécanique des milieux continus
             Composite Materials: Matériaux composites
             Materials overview: Matériaux
             Solvers: Solveurs
-            Getting Started: Bien démarrer
-            Quick Start: Démarrage rapide
+            Developers: Développeurs
           admonition_translations:
             attention: Attention
             danger: Danger

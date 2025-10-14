@@ -96,15 +96,15 @@ Pour les tissus 2D, on distingue principalement trois types de tissage :
 
 <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/tissage2D1.svg" width="200" />
+    <img src="../../../../assets/img/tissage2D1.svg" width="200" />
     <figcaption>Taffeta</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/tissage2D2.svg" width="200" />
+    <img src="../../../../assets/img/tissage2D2.svg" width="200" />
     <figcaption>Serge</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/tissage2D3.svg" width="200" />
+    <img src="../../../../assets/img/tissage2D3.svg" width="200" />
     <figcaption>Satin</figcaption>
   </figure>
 </div>
@@ -137,7 +137,7 @@ d'éviter le délaminage. [@GU02]:
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/tissage3D2.svg"  />
+   <img src="../../../../assets/img/tissage3D2.svg"  />
    <figcaption>Armures de renforts 3D</figcaption>
  </figure> 
 </div>
@@ -252,7 +252,7 @@ de la membrane est généralement moins bon que le côté moulé.
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/infusion_vide.svg" width=400 />
+   <img src="../../../../assets/img/infusion_vide.svg" width=400 />
    <figcaption>Processus d'infusion sous vide</figcaption>
  </figure> 
 </div>
@@ -284,7 +284,7 @@ grand intérêt au développement et à la recherche associés au procédé.
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/rtm.svg" width=500 />
+   <img src="../../../../assets/img/rtm.svg" width=500 />
    <figcaption>Processus RTM </figcaption>
  </figure> 
 </div>
@@ -309,7 +309,7 @@ apparaît comme un candidat idéal.
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/winding.png" width=600 />
+   <img src="../../../../assets/img/winding.png" width=600 />
    <figcaption>Chaine de production par enroulement filamentaire thermoplastique</figcaption>
  </figure> 
 </div>
@@ -385,14 +385,14 @@ déformations particuliers du matériau, dû à la nature fibreuse du renfort,
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/thermoforming.svg" width=600 />
+   <img src="../../../../assets/img/thermoforming.svg" width=600 />
    <figcaption>Principales étapes du procédé de thermostampage</figcaption>
  </figure> 
 </div>
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/stamping_old.png" width=600 />
+   <img src="../../../../assets/img/stamping_old.png" width=600 />
    <figcaption>Chaîne de thermostampag</figcaption>
  </figure> 
 </div>
@@ -462,11 +462,11 @@ pas envisageable dans l'état actuel des recherches.
 
 <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/ZHO04.png" width="300" />
+    <img src="../../../../assets/img/ZHO04.png" width="300" />
     <figcaption>Modèle de Zhou </figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/DUR10plain.png" width="300" />
+    <img src="../../../../assets/img/DUR10plain.png" width="300" />
     <figcaption>Modèle de Durville</figcaption>
   </figure>
 </div>
@@ -504,11 +504,11 @@ types.
 
 <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/KAW73.png" width="250" />
+    <img src="../../../../assets/img/KAW73.png" width="250" />
     <figcaption>Structure à modéliser</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/KAW73_2.png" width="250" />
+    <img src="../../../../assets/img/KAW73_2.png" width="250" />
     <figcaption>Modélisation analytique</figcaption>
   </figure>
 </div>
@@ -542,11 +542,11 @@ sous *WiseTex* [@VER05], reste majeur.
 
 <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/LOM00.png" width="300" />
+    <img src="../../../../assets/img/LOM00.png" width="300" />
     <figcaption>WiseTex</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/texgen.png" width="300" />
+    <img src="../../../../assets/img/texgen.png" width="300" />
     <figcaption>TexGen</figcaption>
   </figure>
 </div>
@@ -562,11 +562,11 @@ traitements numériques appropriés sont réalisés [@NAO14] [@NAO15].
 
 <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/tomo_comp_xy_yz.png" width="300" />
+    <img src="../../../../assets/img/tomo_comp_xy_yz.png" width="300" />
     <figcaption>Tomographie 3D d’un interlock.</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/simu_comp_xy_yz.png" width="300" />
+    <img src="../../../../assets/img/simu_comp_xy_yz.png" width="300" />
     <figcaption>Modèle obtenu maillé</figcaption>
   </figure>
 </div>
@@ -620,7 +620,7 @@ ainsi rendue primordiale et influe sur le résultat final [@WAN99a].
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/Filet.svg" width=200 />
+   <img src="../../../../assets/img/Filet.svg" width=200 />
    <figcaption>Méthode du filet</figcaption>
  </figure> 
 </div>
@@ -639,11 +639,11 @@ dans la figure suivante:
 
 <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/FiletDrappagePiece.png" width="300" />
+    <img src="../../../../assets/img/FiletDrappagePiece.png" width="300" />
     <figcaption>Pièce</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/FiletDrappage.png" width="300" />
+    <img src="../../../../assets/img/FiletDrappage.png" width="300" />
     <figcaption>Drapage avec la methode du filet</figcaption>
   </figure>
 </div>
@@ -667,7 +667,7 @@ figure suivante.
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/SZE05.png" width=600 />
+   <img src="../../../../assets/img/SZE05.png" width=600 />
    <figcaption>Approche discrete</figcaption>
  </figure> 
 </div>
@@ -686,11 +686,11 @@ préimprégnés, tel que la dépendance à la vitesse de déformation.
 
 <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/skordos1.svg" width="300" />
+    <img src="../../../../assets/img/skordos1.svg" width="300" />
     <figcaption>Discrétisation du renfort en trellis </figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/skordos2.svg" width="300" />
+    <img src="../../../../assets/img/skordos2.svg" width="300" />
     <figcaption>Exemple de mise en forme</figcaption>
   </figure>
 </div>
@@ -714,7 +714,7 @@ des caractéristiques mécaniques inhérentes à l'armure étudiée.
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/KHA10_2.png" width=600 />
+   <img src="../../../../assets/img/KHA10_2.png" width=600 />
    <figcaption>Mise en forme avec un modèle hypoélastique</figcaption>
  </figure> 
 </div>
@@ -795,11 +795,11 @@ l'anisotropie complexe de ces matériaux.
 
 <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
   <figure>
-    <img src="../../../assets/img/Nahiene1.png" width="300" />
+    <img src="../../../../assets/img/Nahiene1.png" width="300" />
     <figcaption>Discrétisation de l’élément fini semi-discret.</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/img/Nahiene2.png" width="300" />
+    <img src="../../../../assets/img/Nahiene2.png" width="300" />
     <figcaption>Simulation</figcaption>
   </figure>
 </div>
@@ -814,7 +814,7 @@ discrètes, impliquant la gestion du contact entre les nappes et les coutures.
 
 <div style="text-align:center;">
  <figure >
-   <img src="../../../assets/img/CRE06a.png" width=600 />
+   <img src="../../../../assets/img/CRE06a.png" width=600 />
    <figcaption>Représentation de deux nappes et des coutures les liant dans 
    un modèle semi-discret</figcaption>
  </figure> 
