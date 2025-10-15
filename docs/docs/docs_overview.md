@@ -4,7 +4,7 @@ The different materials, finite elements, contact laws come from confirmed and r
 
 This section will allow to establish the basic notions for the construction of a numerical model for Comfor, the simulation and its analysis. 
 
-<div class="grid cards" markdown>
+<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))" markdown>
 
 -   :fontawesome-solid-sliders:{ .lg .middle } __Pre-processing__
 
@@ -36,7 +36,7 @@ This section will allow to establish the basic notions for the construction of a
 
 Understand the building blocks of Comfor
 
-<div class="grid cards" markdown>
+<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))" markdown>
 
 -   :fontawesome-solid-flask:{ .lg .middle } __Materials__
 

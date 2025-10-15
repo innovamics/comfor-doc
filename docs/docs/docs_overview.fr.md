@@ -9,7 +9,7 @@ travaux de recherche récents et validés.
 Cette section permet d’établir les notions de base pour construire un modèle
 numérique avec Comfor, lancer une simulation et analyser les résultats.
 
-<div class="grid cards" markdown>
+<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))" markdown>
 
 -   :fontawesome-solid-sliders:{ .lg .middle } __Pré-traitement__
 
@@ -41,7 +41,7 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
 
 Comprendre les éléments fondamentaux de Comfor
 
-<div class="grid cards" markdown>
+<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))" markdown>
 
 -   :fontawesome-solid-flask:{ .lg .middle } __Matériaux__
 
