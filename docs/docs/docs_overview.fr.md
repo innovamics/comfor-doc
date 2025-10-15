@@ -9,22 +9,63 @@ travaux de recherche récents et validés.
 Cette section permet d’établir les notions de base pour construire un modèle
 numérique avec Comfor, lancer une simulation et analyser les résultats.
 
-1. [Pré-traitement](docs_preprocessing.md)
-    - Contrôle
-    - Matériaux
-    - Conditions aux limites
-    - Amplitudes
-    - Charges
-    - Nœuds
-    - Éléments
-    - Contact
-    - Traceurs
-2. [Analyse](docs_analysis.md)
-    - Démarrer une nouvelle analyse
-    - Informations en cours d’exécution
-    - Erreurs et bugs
-3. [Post-traitement](docs_postprocessing.md)  
-    - Charger les fichiers
-    - Lancer l’animation
-    - Appliquer des filtres
-    - Ressources
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-sliders:{ .lg .middle } __Pré-traitement__
+
+    ---
+
+    ...
+
+    [:octicons-arrow-right-24: Read more](docs_preprocessing.md)
+
+-   :fontawesome-solid-gears:{ .lg .middle } __Analyse__
+
+    ---
+
+    ...
+
+    [:octicons-arrow-right-24: Read more](docs_analysis.md)
+
+-   :fontawesome-solid-file-lines:{ .lg .middle } __Post-traitement__
+
+    ---
+
+    ...
+
+    [:octicons-arrow-right-24: Read more](docs_postprocessing.md)
+
+</div>
+
+# **Concepts fondamentaux**
+
+Comprendre les éléments fondamentaux de Comfor
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-flask:{ .lg .middle } __Matériaux__
+
+    ---
+
+    Découvrez les **modèles de matériaux** disponibles dans Comfor, basés sur des recherches récentes.
+
+    [:octicons-arrow-right-24: En savoir plus](docs_materials.md)
+
+-   :fontawesome-solid-cubes:{ .lg .middle } __Éléments__
+
+    ---
+    
+    Apprenez-en plus sur les **éléments finis**, les **lois de contact** et les **nœuds**.
+    
+    [:octicons-arrow-right-24: En savoir plus](docs_elements.md)
+
+-   :fontawesome-solid-book-open:{ .lg .middle } __Théorie__
+    
+    ---
+    
+    Plongez dans les **fondements théoriques** derrière les méthodes de Comfor.
+    
+    [:octicons-arrow-right-24: En savoir plus](theory/theory_overview.md)
+
+</div>
+
