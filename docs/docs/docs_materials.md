@@ -1,3 +1,13 @@
+<div class="grid cards" markdown>
+
+-   :material-vector-line:{ .lg .middle }
+    [<span style="color: #3da33dff; font-weight: bold;">Elastic materials</span>](#elastic_materials)
+
+-   :fontawesome-solid-wave-square:{ .lg .middle }
+    [<span style="color: #c73131ff; font-weight: bold;">Hyperelastic materials</span>](#hyperelastic_materials)
+
+</div>
+
 This section provides a **practical overview** of the material models available in Comfor. For detailed theoretical background, refer to the [Theory section](theory/theory_overview.md).
 
 # Available material models
