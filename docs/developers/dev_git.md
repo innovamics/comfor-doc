@@ -56,32 +56,62 @@ Enter file in which to save the key (/home/user/.ssh/id_ed25519):
     
 A confirmation is displayed, including information about where your files are stored.
 
-## Add an SSH key to your GitLab account
+## Add an SSH key to your Git platform account
 
-To use SSH with GitLab, copy your public key to your GitLab account.
+=== "GitLab :simple-gitlab:"
 
-1.  Copy the contents of your public key file. You can do this manually or use a script. For example, to copy an ED25519 key to the clipboard:
+    To use SSH with GitLab, add your public key to your GitLab account settings.
 
-    **macOS:**
-    ```bash
-    tr -d '\n' < ~/.ssh/id_ed25519.pub | pbcopy
-    ```
-    **Linux** (requires the `xclip` package):
-    ```bash
-    xclip -sel clip < ~/.ssh/id_ed25519.pub
-    ```
-    **Git Bash on Windows:**
-    ```bash
-    cat ~/.ssh/id_ed25519.pub | clip
-    ```
+    1.  Copy the contents of your public key file. You can do this manually or use a script. For example, to copy an ED25519 key to the clipboard:
 
-1.  Replace `id_ed25519.pub` with your filename. For example, use `id_rsa.pub` for RSA.
-    
-2.  Sign in to GitLab.
-3.  In the top right corner, select your avatar.
-4.  Select **Settings**.
-5.  From the left sidebar, select **SSH Keys**.
-6.  In the **Key** box, paste the contents of your public key. If you manually copied the key, make sure you copy the entire key, which starts with `ssh-ed25519` or `ssh-rsa`, and may end with a comment.
-7.  In the **Title** text box, type a description, like _Work Laptop_ or _Home Workstation_.
-8.  Optional. In the **Expires at** box, select an expiration date. (Introduced in [GitLab 12.9](https://gitlab.com/gitlab-org/gitlab/-/issues/36243).) The expiration date is informational only, and does not prevent you from using the key. However, administrators can view expiration dates and use them for guidance when [deleting keys](https://docs.gitlab.com/ee/user/admin_area/credentials_inventory.html#delete-a-users-ssh-key).
-9.  Select **Add key**.
+        **macOS:**
+        ```bash
+        tr -d '\n' < ~/.ssh/id_ed25519.pub | pbcopy
+        ```
+        **Linux** (requires the `xclip` package):
+        ```bash
+        xclip -sel clip < ~/.ssh/id_ed25519.pub
+        ```
+        **Git Bash on Windows:**
+        ```bash
+        cat ~/.ssh/id_ed25519.pub | clip
+        ```
+
+    2.  Replace `id_ed25519.pub` with your filename. For example, use `id_rsa.pub` for RSA.
+    3.  Sign in to [GitLab](https://gitlab.com/).
+    4.  In the top-left corner, select your avatar.
+    5.  Select **Settings**.
+    6.  From the left sidebar, select **SSH Keys**.
+    7.  In the **Key** box, paste the contents of your public key. If you manually copied the key, make sure you copy the entire key, which starts with `ssh-ed25519` or `ssh-rsa`, and may end with a comment.
+    8.  In the **Title** text box, type a description, like _Work Laptop_ or _Home Workstation_.
+    9.  Optional. In the **Expires at** box, select an expiration date. (Introduced in [GitLab 12.9](https://gitlab.com/gitlab-org/gitlab/-/issues/36243).) The expiration date is informational only, and does not prevent you from using the key. However, administrators can view expiration dates and use them for guidance when [deleting keys](https://docs.gitlab.com/ee/user/admin_area/credentials_inventory.html#delete-a-users-ssh-key).
+    10.  Select **Add key**.
+
+=== "GitHub :simple-github:"
+
+    To use SSH with GitHub, add your public key to your GitHub account settings.
+
+    1.  Copy the contents of your public key file. You can do this manually or use a script. For example, to copy an ED25519 key to the clipboard:
+
+        **macOS:**
+        ```bash
+        tr -d '\n' < ~/.ssh/id_ed25519.pub | pbcopy
+        ```
+        **Linux** (requires the `xclip` package):
+        ```bash
+        xclip -sel clip < ~/.ssh/id_ed25519.pub
+        ```
+        **Git Bash on Windows:**
+        ```bash
+        cat ~/.ssh/id_ed25519.pub | clip
+        ```
+
+    2. Replace `id_ed25519.pub` with your filename. For example, use `id_rsa.pub` for RSA.
+    3. Sign in to [GitHub](https://github.com/).
+    4. In the top-right corner, select your avatar.
+    5. Select **Settings**.
+    6. From the left sidebar, select **SSH and GPG keys**.
+    7. Click **New SSH key**.
+    8. In the **Title** field, add a descriptive label (e.g., *Work Laptop* or *Home Workstation*).
+    9. In the **Key** field, paste your public key. Ensure the entire key is copied, starting with `ssh-ed25519`, `ssh-rsa`, or similar.
+    10. Select **Add SSH key**.
