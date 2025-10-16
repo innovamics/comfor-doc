@@ -123,7 +123,7 @@ MATERIALS TYPE <material_type_2>
   dépendent de chaque matériau.
  
 Pour voir la liste des matériaux disponibles, consultez
-[Matériaux](theory/materials/materials_overview.md)
+[Matériaux](docs_materials.md)
 
 _Exemple_ :
 
@@ -336,7 +336,7 @@ ELEMENTS TYPE <type_élément>
     - `<load_name>` : nom de la charge à appliquer à cet élément, tel que spécifié dans le bloc de charge.
     - `<prop_n>` Définit la valeur de la propriété nommée `prop_n`. Les étiquettes dépendent de chaque élément.
 
-Pour voir la liste des matériaux disponibles, voir [Éléments]().
+Pour voir la liste des matériaux disponibles, voir [Éléments](docs_elements.md).
 
 _Exemple_ :
 

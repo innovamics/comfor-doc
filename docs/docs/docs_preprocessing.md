@@ -98,7 +98,7 @@ MATERIALS TYPE <material_type_2>
 - `DAMPING` is the mass proportional damping. This factor introduces damping forces caused by the absolute velocities of the model. This parameter is optional.
 - `<prop_n>` Defines the value of the property with name `prop_n`. The labels depends of each material. 
 
-To see the available list of materials see [Material](theory/materials/materials_overview.md) 
+To see the available list of materials see [Material](docs_materials.md) 
 
 _Example_: 
 
@@ -297,7 +297,7 @@ ELEMENTS TYPE <element_type>
     - `<load_name>`: load name to be applied to this element as specified in the load block.
 - `<prop_n>` Defines the value of the property with name `prop_n`. The labels depends of each element 
 
-To see the available list of materials see [Elements]() 
+To see the available list of materials see [Elements](docs_elements.md) 
 
 _Example_: 
 

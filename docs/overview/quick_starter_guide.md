@@ -53,7 +53,7 @@ If you want to install or update the Clang compilers, enter the command:
 command xcode-select --install
 ```
 
-Under Windows you can use a POSIX environnement like [MSYS2](https://www.msys2.org) or [Mingw](http://www.mingw-w64.org/doku.php) or Mysys. Since version **0.2.1**.
+Under Windows you can use a POSIX environnement like [MSYS2](https://www.msys2.org) or [Mingw](https://www.mingw-w64.org/) or Mysys. Since version **0.2.1**.
 
 !!! note
     Comfor is compatible with [Microsoft C++ compilers](https://visualstudio.microsoft.com/downloads/) (Tested using Visual C++ 2019 ).
@@ -128,7 +128,7 @@ You should now have a nice binary file called Comfor. To run comfor you can spec
 
 ## Run it
 
-Run one of the provided samples in `Examples` folder using the following the following command. Or download some other test from the [download page](download_page.md) 
+Run one of the provided samples in `Examples` folder using the following the following command. Or download some other test from the [download page](download_page.md#examples) 
 
 ```bash
 ./comfor PATH_TO_INPUT_FILE

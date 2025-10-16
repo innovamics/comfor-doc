@@ -66,7 +66,7 @@ xcode-select --install
 ```
 
 Sous **Windows**, vous pouvez utiliser un environnement POSIX comme
-[MSYS2](https://www.msys2.org), [MinGW](http://www.mingw-w64.org/doku.php), ou
+[MSYS2](https://www.msys2.org), [MinGW](https://www.mingw-w64.org/), ou
 Mysys. Depuis la version **0.2.1** :
 
 !!! note
@@ -142,7 +142,7 @@ spécifié.
 ## Exécuter un exemple
 
 Utilisez un fichier d’entrée fourni dans le dossier `Examples` ou téléchargez
-des cas de test depuis la [page de téléchargement](download_page.md) :
+des cas de test depuis la [page de téléchargement](download_page.md#exemples) :
 
 ```bash
 ./comfor CHEMIN_VERS_FICHIER_ENTRÉE
