@@ -87,20 +87,38 @@ CLion insère automatiquement les en-têtes au style COMFOR lors de la création
 - Réduisant les temps de compilation et les dépendances.
 
 ## Installation
-### Linux (Debian/Fedora/Arch) :
-```sh
-sudo apt install include-what-you-use   # Debian/Ubuntu
-sudo dnf install include-what-you-use   # Fedora
-sudo pacman -S include-what-you-use     # Arch
-```
 
-### macOS (Homebrew) :
-```sh
-brew install include-what-you-use
-```
+=== "Windows :fontawesome-brands-windows:"
 
-### Windows :
-IWYU n'est pas officiellement supporté sur Windows. Une installation manuelle nécessite une chaîne d'outils LLVM/Clang complète et la compilation d'IWYU à partir des sources.
+    IWYU n'est pas officiellement supporté sur Windows. Une installation manuelle nécessite une chaîne d'outils LLVM/Clang complète et la compilation d'IWYU à partir des sources.
+
+=== "Linux :simple-linux:"
+
+    Debian/Ubuntu
+
+    ```sh
+    sudo apt install include-what-you-use
+    ```
+
+    Fedora
+
+    ```sh
+    sudo dnf install include-what-you-use
+    ```
+    
+    Arch
+
+    ```sh
+    sudo pacman -S include-what-you-use
+    ```
+
+=== "macOS :simple-apple:"
+
+    Homebrew
+
+    ```sh
+    brew install include-what-you-use
+    ```
 
 ## Activer IWYU dans CMake
 Ajoutez ce qui suit à votre `CMakeLists.txt` :
@@ -127,7 +145,7 @@ python3 /usr/bin/fix_includes.py \
   --update_comments --reorder --nosafe_headers < out.txt
 ```
 
-## Notes finales
+# Notes finales
 1. **Formatez votre code** avec `.clang-format` avant de commit.
 2. **Utilisez les modèles officiels** pour les en-têtes et les fichiers sources.
 3. **Gardez les inclusions minimales** avec IWYU.

@@ -87,20 +87,38 @@ CLion automatically inserts COMFOR-style headers when creating new files (`.cpp`
 - Reducing build times and dependencies.
 
 ## Installation
-### Linux (Debian/Fedora/Arch):
-```sh
-sudo apt install include-what-you-use   # Debian/Ubuntu
-sudo dnf install include-what-you-use   # Fedora
-sudo pacman -S include-what-you-use     # Arch
-```
 
-### macOS (Homebrew):
-```sh
-brew install include-what-you-use
-```
+=== "Windows :fontawesome-brands-windows:"
 
-### Windows:
-IWYU is not officially supported on Windows. Manual setup requires a full LLVM/Clang toolchain and building IWYU from source.
+    IWYU is not officially supported on Windows. Manual setup requires a full LLVM/Clang toolchain and building IWYU from source.
+
+=== "Linux :simple-linux:"
+
+    Debian/Ubuntu
+
+    ```sh
+    sudo apt install include-what-you-use
+    ```
+
+    Fedora
+
+    ```sh
+    sudo dnf install include-what-you-use
+    ```
+    
+    Arch
+
+    ```sh
+    sudo pacman -S include-what-you-use
+    ```
+
+=== "macOS :simple-apple:"
+
+    Homebrew
+
+    ```sh
+    brew install include-what-you-use
+    ```
 
 ## Enable IWYU in CMake
 Add the following to your `CMakeLists.txt`:
@@ -127,7 +145,7 @@ python3 /usr/bin/fix_includes.py \
   --update_comments --reorder --nosafe_headers < out.txt
 ```
 
-## Final Notes
+# Final Notes
 1. **Format your code** with `.clang-format` before committing.
 2. **Use official templates** for headers and source files.
 3. **Keep includes minimal** with IWYU.
