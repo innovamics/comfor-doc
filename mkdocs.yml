@@ -111,6 +111,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - ignore_bibtex # Custom plugin to ignore @ outside [@]
   - bibtex:
       bib_file: "docs/Bibliography.bib"
       csl_file: "docs/assets/csl/nature.csl"
