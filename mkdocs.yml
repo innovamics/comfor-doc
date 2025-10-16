@@ -103,6 +103,7 @@ markdown_extensions:
   - pymdownx.tabbed: # === "Tab 1"
       alternate_style: true
   - pymdownx.blocks.caption
+  - pymdownx.keys
   - tables
   - toc:
       permalink: "#"
