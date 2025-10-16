@@ -76,6 +76,7 @@ theme:
   features:
     - navigation.footer
     - navigation.tabs
+    - navigation.sections
     - content.code.copy
 
 markdown_extensions:
