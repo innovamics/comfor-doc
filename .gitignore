@@ -15,6 +15,7 @@ _site/
 
 # Python
 build
+__pycache__
 venv
 lib
 .venv
