@@ -35,7 +35,7 @@ If you do not have an existing SSH key pair, generate a new one.
     ssh-keygen -t ed25519 -C "<comment>"
     ```
     
-3. Press Enter. Output similar to the following is displayed:
+3. Press ++return++. Output similar to the following is displayed:
 
 ```console
 $ ssh-keygen -t ed25519 -C "your_email@example.com"

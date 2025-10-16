@@ -42,7 +42,7 @@ Kinetic energy: 0.0110008
 - `Kinetic energy`: Is the kinetic energy in the whole model.
 
 !!! tip
-    To stop a job just press `ctrl + c`
+    To stop a job just press ++ctrl+c++
 
 # Output
 

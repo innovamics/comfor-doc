@@ -57,7 +57,7 @@ Predefined snippets are available in `.vscode/comfor.code-snippets` to quickly i
 
 **How to use:**
 
-1. Press `Ctrl + Space` to trigger snippets.
+1. Press ++ctrl+spc++ to trigger snippets.
 2. Type the snippet name (e.g., `comfor_hpp` for a header file).
 3. Update placeholders (author, copyright, `@brief`).
 

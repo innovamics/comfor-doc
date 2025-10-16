@@ -45,7 +45,7 @@ Si vous ne possédez pas encore de paire de clés SSH, vous devez en générer u
 		ssh-keygen -t ed25519 -C "<comment>"
 		```
 
-	3.  Appuyez sur Entrée. Une sortie similaire s’affichera à l’écran.
+	3.  Appuyez sur ++return++. Une sortie similaire s’affichera à l’écran.
 
 	```console
 	$ ssh-keygen -t ed25519 -C "your_email@example.com"

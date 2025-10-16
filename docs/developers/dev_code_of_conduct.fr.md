@@ -57,7 +57,7 @@ Des extraits de code prédéfinis sont disponibles dans `.vscode/comfor.code-sni
 
 **Comment les utiliser :**
 
-1. Appuyez sur `Ctrl + Space` pour déclencher les extraits de code.
+1. Appuyez sur ++ctrl+spc++ pour déclencher les extraits de code.
 2. Tapez le nom de l'extrait (par exemple, `comfor_hpp` pour un fichier d'en-tête).
 3. Mettez à jour les espaces réservés (auteur, copyright, `@brief`).
 

@@ -50,7 +50,7 @@ Kinetic energy: 0.0110008
 - `Kinetic energy` : énergie cinétique du modèle.
 
 !!! tip
-    Pour arrêter une simulation en cours, appuyez sur `Ctrl + C`.
+    Pour arrêter une simulation en cours, appuyez sur ++ctrl+c++.
 
 # Sortie
 
