@@ -19,7 +19,7 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
     Suivez les instructions dans le [Guide de démarrage rapide](../overview/quick_starter_guide.md).
 
 ??? question "Existe-t-il des binaires pré-compilés disponibles ?"
-    Oui ! Des binaires pré-compilés sont disponibles sur la [Page de téléchargement](../overview/download_page.md#examples).
+    Oui ! Des binaires pré-compilés sont disponibles sur la [Page de téléchargement](../overview/download_page.md).
 
 ??? question "Comment vérifier mon installation ?"
     Exécutez la suite de tests comme décrit dans le [Guide de démarrage rapide](../overview/quick_starter_guide.md#execution_et_tests).
