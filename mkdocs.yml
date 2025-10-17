@@ -170,10 +170,12 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js
   - assets/js/xy_graphs.js
+  - assets/js/landing_page.js   
   # - assets/js/table_rtd.js
-  # - assets/js/background_effects.js
+  # - assets/js/background_effects.js 
 
 extra_css:
+  - assets/css/landing_page.css
   # - assets/css/tabbed.css
   # - assets/css/home_page.css
   # - assets/css/custom_colors.css
