@@ -16,6 +16,7 @@ _site/
 # Python
 build
 __pycache__
+*.egg-info
 venv
 lib
 .venv
