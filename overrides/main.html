@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page.url == "" %}
+    <script>
+      document.body.classList.add("is-home");
+    </script>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

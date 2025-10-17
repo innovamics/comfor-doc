@@ -19,13 +19,16 @@
   padding: 0 20px;
 }
 
-.md-header, .md-tabs {
+/* Navbar transparente uniquement sur la home */
+body.is-home .md-header,
+body.is-home .md-tabs {
   background: transparent !important;
   box-shadow: none !important;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.md-header.scrolled {
+/* Quand on quitte la bannière */
+body.is-home .md-header.scrolled {
   background: var(--md-primary-fg-color) !important;
   box-shadow: var(--md-shadow-z1) !important;
 }
