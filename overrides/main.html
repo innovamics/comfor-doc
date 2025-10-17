@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {% if page.url == "" %}
+  {% if page.url == "" or page.url == "fr/" %}
     <script>
       document.body.classList.add("is-home");
     </script>
