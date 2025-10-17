@@ -45,6 +45,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/img/logo-icon-innovamics.png
   favicon: assets/img/apple-touch-icon-72x72.png
   analytics:
