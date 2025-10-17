@@ -95,5 +95,5 @@ href="https://egm_foss.gitlab.io/about_me/" property="cc:attributionName"
 rel="cc:attributionURL">Eduardo Guzman</a> est sous licence <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International</a>.<br />Basé sur le travail disponible à <a
 xmlns:dct="http://purl.org/dc/terms/"
-href="https://gitlab.com/innovamics/comfor-doc"
-rel="dct:source">https://gitlab.com/innovamics/comfor-doc</a>.
+href="https://gitlab.com/comfor/comfor-doc"
+rel="dct:source">https://gitlab.com/comfor/comfor-doc</a>.
