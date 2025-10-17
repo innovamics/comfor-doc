@@ -1,3 +1,15 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+<div class="fullscreen-banner">
+  <div class="banner-content">
+    <h1>Comfor</h1>
+  </div>
+</div>
+
 **Comfor** is a modern, open-source simulation platform for composite forming
 and processing. Built in **C++17/20**, it uses an explicit finite element method
 (FEM) tailored to simulate complex manufacturing processes.

@@ -1,3 +1,15 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+<div class="fullscreen-banner">
+  <div class="banner-content">
+    <h1>Comfor</h1>
+  </div>
+</div>
+
 **Comfor** est une plateforme de simulation moderne et open source dédiée à la
 mise en forme et au traitement des matériaux composites. Développé en
 **C++17/20**, il repose sur une méthode des éléments finis explicite (FEM)
