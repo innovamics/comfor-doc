@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const bannerBottom = banner.offsetTop + banner.offsetHeight;
 
-    if (window.scrollY >= bannerBottom - 50) {
+    if (window.scrollY >= bannerBottom - 55) {
       header?.classList.add("scrolled");
     } else {
       header?.classList.remove("scrolled");
