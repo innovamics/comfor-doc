@@ -67,6 +67,42 @@ transparence scientifique.
 
 ---
 
+# Comparatif des éditions de Comfor
+
+<div class="comparatif-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+
+  <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+    <h2 style="margin-top: 0.5rem; color: #333;">Comfor Community</h2>
+    <p style="font-weight: bold; color: #555;">Gratuit et open source</p>
+    <ul style="list-style: none; padding: 0; text-align: left;">
+      <li>✔ Performances standards</li>
+      <li>✔ Adapté aux petites équipes</li>
+      <li>✔ Support communautaire</li>
+      <li>✔ Options de configuration de base</li>
+      <li>✔ Ensemble d’outils standard</li>
+    </ul>
+    <div style="margin-top: 1rem; font-weight: bold; color: #333;">Parfait pour les étudiants, particuliers ou petites équipes</div>
+    <a class="md-button md-raised" href="overview/download_page/" style="margin-top: 1rem;">Télécharger</a>
+  </div>
+
+  <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+    <h2 style="margin-top: 0.5rem; color: #333;">Comfor Enterprise</h2>
+    <p style="font-weight: bold; color: #555;">Édition professionnelle</p>
+    <ul style="list-style: none; padding: 0; text-align: left;">
+      <li>✔ Performances optimisées pour les environnements à grande échelle</li>
+      <li>✔ Evolutivité adaptée aux grandes structures</li>
+      <li>✔ Support prioritaire dédié</li>
+      <li>✔ Options de configuration et de déploiement avancées</li>
+      <li>✔ Outils et modules supplémentaires</li>
+    </ul>
+    <div style="margin-top: 1rem; font-weight: bold; color: #333;">Idéal pour les grandes entreprises et équipes industrielles</div>
+    <a class="md-button md-raised" href="collaborate/collab_industry/#comfor_entreprise" style="margin-top: 1rem;">En savoir plus</a>
+  </div>
+
+</div>
+
+---
+
 # 🚀 Prêt à démarrer ?
 
 Si vous découvrez Comfor, voici les sections recommandées :
