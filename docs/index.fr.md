@@ -83,7 +83,7 @@ Si vous découvrez Comfor, voici les sections recommandées :
 # 👩‍💻 Pour les développeurs
 
 Vous souhaitez contribuer ou ajouter vos propres modèles ? Le
-[Guide développeur](developers/dev_overview.md) vous accompagne pas à pas dans la
+[Guide développeur](developers/dev_api.md) vous accompagne pas à pas dans la
 compilation, les tests et l’extension de Comfor.
 
 ---

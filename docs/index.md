@@ -80,7 +80,7 @@ If you're new to Comfor, here are the best places to begin:
 # 👨‍💻 For Developers
 
 Want to contribute or implement your own models? The
-[Developer Guide](developers/dev_overview.md) walks you through building,
+[Developer Guide](developers/dev_api.md) walks you through building,
 testing, and extending Comfor.
 
 ---
