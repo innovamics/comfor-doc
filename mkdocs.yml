@@ -34,7 +34,7 @@ nav:
       - "License": developers/dev_license.md
       - "Code of conduct": developers/dev_code_of_conduct.md
   - "Work with us":
-      - "Company": collaborate/collab_company.md
+      - "Industry": collaborate/collab_industry.md
       - "Academy": collaborate/collab_academy.md
       - "Partners": collaborate/collab_partners.md
   - "News":
@@ -151,8 +151,8 @@ plugins:
             Developers: Développeurs
             License: Licence
             Code of conduct: Code de conduite
-            Work with us: Collaborer
-            Company: Entreprise
+            Work with us: Travaillez avec nous
+            Industry: Entreprise
             Academy: Enseignement
             Partners: Partenaires
             News: Actualités
