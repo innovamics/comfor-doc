@@ -175,6 +175,7 @@ extra_javascript:
 
 extra_css:
   - assets/css/landing_page.css
+  - assets/css/faq_admonition.css
   # - assets/css/tabbed.css
   # - assets/css/home_page.css
   # - assets/css/custom_colors.css
