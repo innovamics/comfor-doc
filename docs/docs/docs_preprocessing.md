@@ -12,7 +12,7 @@ However, in the general case, each input file must define the following points:
 
 # Units 
 
-There are not unit system in Comfor. The user can use any consistent unit system [see](https://femci.gsfc.nasa.gov/units/index.html). The units must be consistent in that mathematical operations directly yield the correct units for the result quantity. For example for Newtons' law :
+There are not unit system in Comfor. The user can use any consistent unit system [see](https://femci.gsfc.nasa.gov/units/index.html){:target="_blank"}. The units must be consistent in that mathematical operations directly yield the correct units for the result quantity. For example for Newtons' law :
 
 $$ \mathbf{f} = \mathbf{M} \mathbf{a} $$
 
@@ -405,4 +405,4 @@ shear_angle_b ELEMENTS = [2,4,10,12] COMPONENT = C23 TYPE = strain
 shear_angle_c ELEMENTS = [1,11] COMPONENT = C23 TYPE = strain
 ```
 
-[^1]: Parsing, syntax analysis, or syntactic analysis is the process of analyzing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar. [Wikipedia](https://en.wikipedia.org/wiki/Parsing)
+[^1]: Parsing, syntax analysis, or syntactic analysis is the process of analyzing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar. [Wikipedia](https://en.wikipedia.org/wiki/Parsing){:target="_blank"}

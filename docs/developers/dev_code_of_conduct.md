@@ -79,7 +79,7 @@ CLion automatically inserts COMFOR-style headers when creating new files (`.cpp`
 - Complete Doxygen tags (e.g., `@brief`).
 
 # Include What You Use (IWYU)
-[IWYU](https://include-what-you-use.org/) is integrated into COMFOR to **optimize `#include` directives** by:
+[IWYU](https://include-what-you-use.org/){:target="_blank"} is integrated into COMFOR to **optimize `#include` directives** by:
 
 - Removing unused includes.
 - Adding missing includes.

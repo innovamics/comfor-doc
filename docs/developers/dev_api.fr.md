@@ -1,7 +1,7 @@
 La documentation de l'API Comfor fournit des détails complets pour les développeurs, contributeurs et chercheurs souhaitant étendre les fonctionnalités du logiciel, intégrer des modules personnalisés ou explorer son architecture.
 
 # Informations essentielles
-- **[Documentation de l'API](https://comfor.gitlab.io/comfor/)** – Référence complète pour les classes, méthodes et interfaces.
+- **[Documentation de l'API](https://comfor.gitlab.io/comfor/){:target="_blank"}** – Référence complète pour les classes, méthodes et interfaces.
 - **[Licence d'utilisation](../developers/dev_license.md)** – Conditions d'utilisation, de modification et de diffusion de COMFOR.
 - **[Code de conduite](../developers/dev_code_of_conduct.md)** – Lignes directrices pour les contributions et l'engagement communautaire.
 
@@ -17,4 +17,4 @@ Avant de contribuer ou de modifier le code, nous vous invitons à consulter atte
 ## Support
 Pour toute question ou retour, contactez-nous via :
 
-- [Discussions GitLab](https://gitlab.com/comfor/comfor)
+- [Discussions GitLab](https://gitlab.com/comfor/comfor){:target="_blank"}

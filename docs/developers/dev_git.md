@@ -20,7 +20,7 @@ git config --global --list
 
 The `--global` option tells Git to always use this information for anything you do on your system. If you omit `--global` or use `--local`, the configuration is applied only to the current repository.
 
-You can read more on how Git manages configurations in [Customizing-Git-Git-Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+You can read more on how Git manages configurations in [Customizing-Git-Git-Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration){:target="_blank"}
 
 ## Generate an SSH key pair
 
@@ -43,11 +43,11 @@ Generating public/private ed25519 key pair.
 Enter file in which to save the key (/home/user/.ssh/id_ed25519):
 ```
 
-   - Accept the suggested filename and directory, unless you are generating a [deploy key](https://docs.gitlab.com/ee/user/project/deploy_keys/index.html) or want to save in a specific directory where you store other keys.
+   - Accept the suggested filename and directory, unless you are generating a [deploy key](https://docs.gitlab.com/ee/user/project/deploy_keys/index.html){:target="_blank"} or want to save in a specific directory where you store other keys.
     
-    You can also dedicate the SSH key pair to a [specific host](https://docs.gitlab.com/ee/ssh/README.html#configure-ssh-to-point-to-a-different-directory).
+    You can also dedicate the SSH key pair to a [specific host](https://docs.gitlab.com/ee/ssh/README.html#configure-ssh-to-point-to-a-different-directory){:target="_blank"}.
     
-   - Specify a [passphrase](https://www.ssh.com/ssh/passphrase/):
+   - Specify a [passphrase](https://www.ssh.com/ssh/passphrase/){:target="_blank"}:
     
     ```console
     Enter passphrase (empty for no passphrase):
@@ -78,13 +78,13 @@ A confirmation is displayed, including information about where your files are st
         ```
 
     2.  Replace `id_ed25519.pub` with your filename. For example, use `id_rsa.pub` for RSA.
-    3.  Sign in to [GitLab](https://gitlab.com/).
+    3.  Sign in to [GitLab](https://gitlab.com/){:target="_blank"}.
     4.  In the top-left corner, select your avatar.
     5.  Select **Settings**.
     6.  From the left sidebar, select **SSH Keys**.
     7.  In the **Key** box, paste the contents of your public key. If you manually copied the key, make sure you copy the entire key, which starts with `ssh-ed25519` or `ssh-rsa`, and may end with a comment.
     8.  In the **Title** text box, type a description, like _Work Laptop_ or _Home Workstation_.
-    9.  Optional. In the **Expires at** box, select an expiration date. (Introduced in [GitLab 12.9](https://gitlab.com/gitlab-org/gitlab/-/issues/36243).) The expiration date is informational only, and does not prevent you from using the key. However, administrators can view expiration dates and use them for guidance when [deleting keys](https://docs.gitlab.com/ee/user/admin_area/credentials_inventory.html#delete-a-users-ssh-key).
+    9.  Optional. In the **Expires at** box, select an expiration date. (Introduced in [GitLab 12.9](https://gitlab.com/gitlab-org/gitlab/-/issues/36243){:target="_blank"}.) The expiration date is informational only, and does not prevent you from using the key. However, administrators can view expiration dates and use them for guidance when [deleting keys](https://docs.gitlab.com/ee/user/admin_area/credentials_inventory.html#delete-a-users-ssh-key){:target="_blank"}.
     10.  Select **Add key**.
 
 === "GitHub :simple-github:"
@@ -107,7 +107,7 @@ A confirmation is displayed, including information about where your files are st
         ```
 
     2. Replace `id_ed25519.pub` with your filename. For example, use `id_rsa.pub` for RSA.
-    3. Sign in to [GitHub](https://github.com/).
+    3. Sign in to [GitHub](https://github.com/){:target="_blank"}.
     4. In the top-right corner, select your avatar.
     5. Select **Settings**.
     6. From the left sidebar, select **SSH and GPG keys**.

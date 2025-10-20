@@ -79,10 +79,10 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
 
 ??? question "Ma simulation plante. Que faire ?"
     1. Vérifiez le fichier de log.
-    2. Signalez le problème sur [GitLab](https://gitlab.com/comfor/comfor) avec le fichier de log d'erreur et le fichier d'entrée.
+    2. Signalez le problème sur [GitLab](https://gitlab.com/comfor/comfor){:target="_blank"} avec le fichier de log d'erreur et le fichier d'entrée.
 
 ??? question "Comment signaler un bug ?"
-    Ouvrez une issue sur [GitLab](https://gitlab.com/comfor/comfor) avec un fichier d'entrée minimal et le fichier de log d'erreur complet.
+    Ouvrez une issue sur [GitLab](https://gitlab.com/comfor/comfor){:target="_blank"} avec un fichier d'entrée minimal et le fichier de log d'erreur complet.
 
 # Divers
 
@@ -97,4 +97,4 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
 
 ??? question "Comment rester informé des nouvelles versions ?"
     - Consultez la [Page des versions](../news/news_versions.md) pour les dernières mises à jour.
-    - Surveillez le [Dépôt GitLab](https://gitlab.com/comfor/comfor) pour des notifications en temps réel.
+    - Surveillez le [Dépôt GitLab](https://gitlab.com/comfor/comfor){:target="_blank"} pour des notifications en temps réel.

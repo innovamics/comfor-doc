@@ -7,7 +7,7 @@
     [Windows 7/10 :fontawesome-brands-windows:](../assets/bin/v0_8_0/Release-windows-vs2019/COMFOR_V0_8_0_VS2019.exe){ .md-button }
 
     !!! note
-        For Windows : Install the corresponding [Visual C++ redistributable packages for Visual Studio](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
+        For Windows : Install the corresponding [Visual C++ redistributable packages for Visual Studio](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0){:target="_blank"}
 
 === "Linux :simple-linux:"
 

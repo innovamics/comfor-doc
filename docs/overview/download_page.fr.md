@@ -8,7 +8,7 @@
 
     !!! note
         Pour Windows : installez les
-        [packages redistribuables Visual C++ pour Visual Studio](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
+        [packages redistribuables Visual C++ pour Visual Studio](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0){:target="_blank"}
 
 === "Linux :simple-linux:"
 

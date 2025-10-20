@@ -1,4 +1,4 @@
-[VTK](http://www.vtk.org/VTK/img/file-formats.pdf) is the default output format for the results. In the future, other formats may be developed according to users and researchers needs.
+[VTK](http://www.vtk.org/VTK/img/file-formats.pdf){:target="_blank"} is the default output format for the results. In the future, other formats may be developed according to users and researchers needs.
 
 During the simulation Comfor writes several vtk files, one every [`print_step`](docs_preprocessing.md#control). These files are located in the folder `Results_<file_name>`.
 
@@ -28,7 +28,7 @@ In order to visualize the results, open Paraview. Click on menu _File_->_Open_ a
 
 # Play the animation
 
-After open the files, Paraview create a stage on the [`Pipeline Browser`](https://www.paraview.org/ParaView/index.php/Pipeline_Browser_Ideas). If the mesh is not displayed you need to click in _Apply_ in the properties section.
+After open the files, Paraview create a stage on the [`Pipeline Browser`](https://www.paraview.org/ParaView/index.php/Pipeline_Browser_Ideas){:target="_blank"}. If the mesh is not displayed you need to click in _Apply_ in the properties section.
 
 !!! tip
     Activate the **Auto Apply** option in _Paraview Preferences_->_General_->_Properties Panel Options_.
@@ -46,7 +46,7 @@ The data to be displayed can be selected in the _Data Analysis_ toolbar. A list 
 
 # Applying filters
 
-Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters) that allow us to manipulate the data and treat the simulation data. These filters can be applied in cascade to combine their functionalities. To apply a filter, click on menu _Filters -> Alphabetical_, or search by category. The most common filters for our application are:
+Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters){:target="_blank"} that allow us to manipulate the data and treat the simulation data. These filters can be applied in cascade to combine their functionalities. To apply a filter, click on menu _Filters -> Alphabetical_, or search by category. The most common filters for our application are:
 
 - `Connectivity`: Identifies the mesh regions that are connected. The Connectivity filter assigns a region id (point data) to connected components of the input data set. We use this filter to separate the solid regions form the composite plates.
 - `Threshold`:This filter extracts elements that have nodal or element data scalars in the specified range. The Threshold filter extracts the portions of the input dataset whose scalars lie within the specified range. To specify the range, select **your** Threshold filter in the Pile Browser tree and expand the `Properties(Threshold)` section in the properties menu. Select the scalar to be evaluated and fix the max an min values. Finally click apply
@@ -65,5 +65,5 @@ Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_
 
 For more information you can read the different online tutorials:
 
-- [Official Paraview tutorial ](https://www.paraview.org/Wiki/The_ParaView_Tutorial)
-- [Cyprien Rusu tutorials](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-)
+- [Official Paraview tutorial ](https://www.paraview.org/Wiki/The_ParaView_Tutorial){:target="_blank"}
+- [Cyprien Rusu tutorials](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-){:target="_blank"}

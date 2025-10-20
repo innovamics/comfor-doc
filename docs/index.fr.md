@@ -32,10 +32,10 @@ collaboration avec le monde académique et industriel. Les modèles numériques
 sont publiés, évalués par des pairs, et validés expérimentalement grâce à des
 partenariats avec :
 
-- [ENIB – École Nationale d'Ingénieurs de Brest](https://www.enib.fr/en_enib/)  
-- [INSA Lyon – Institut National des Sciences Appliquées de Lyon](https://www.insa-lyon.fr/en)  
-- [IRT Jules Verne – Institut de Recherche Technologique](https://www.irt-jules-verne.fr/en/irt-jules-verne/)  
-- [UHA – Université de Haute Alsace](https://www.uha.fr/en/index.html)
+- [ENIB – École Nationale d'Ingénieurs de Brest](https://www.enib.fr/en_enib/){:target="_blank"}
+- [INSA Lyon – Institut National des Sciences Appliquées de Lyon](https://www.insa-lyon.fr/en){:target="_blank"}
+- [IRT Jules Verne – Institut de Recherche Technologique](https://www.irt-jules-verne.fr/en/irt-jules-verne/){:target="_blank"}
+- [UHA – Université de Haute Alsace](https://www.uha.fr/en/index.html){:target="_blank"}
 
 Consultez la section **Références scientifiques** pour en savoir plus.
 
@@ -44,7 +44,7 @@ Consultez la section **Références scientifiques** pour en savoir plus.
 ## 🔍 Une physique transparente, sans boîte noire
 
 Oubliez les boîtes noires. Forkez la physique.  
-Chez [Innovamics](https://www.innovamics.com/), nous dévoilons chaque couche de
+Chez [Innovamics](https://www.innovamics.com/){:target="_blank"}, nous dévoilons chaque couche de
 la simulation. Du comportement matériau au solveur, tout peut être inspecté,
 audité et modifié :
 
@@ -93,7 +93,7 @@ compilation, les tests et l’extension de Comfor.
 Contribuez au projet ou contactez-nous pour collaborer sur la recherche, des
 fonctionnalités ou des intégrations industrielles.
 
-[Voir le dépôt GitLab](https://gitlab.com/comfor)
+[Voir le dépôt GitLab](https://gitlab.com/comfor){:target="_blank"}
 
 ---
 

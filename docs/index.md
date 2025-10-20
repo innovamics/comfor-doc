@@ -28,10 +28,10 @@ behaviors, Comfor provides a powerful, extensible framework.
 Comfor is backed by over a decade of academic and industrial R&D. Our numerical
 models are published, peer-reviewed, and validated in collaboration with:
 
-- ENIB [(Brest national school of engineering)](https://www.enib.fr/en_enib/)
-- INSA Lyon [(Institut National des Sciences Appliquées de Lyon)](https://www.insa-lyon.fr/en)
-- IRT Jules Verne [(French Institutes of Technology)](https://www.irt-jules-verne.fr/en/irt-jules-verne/)
-- UHA [(Université de Haute Alsace)](https://www.uha.fr/en/index.html)
+- ENIB [(Brest national school of engineering)](https://www.enib.fr/en_enib/){:target="_blank"}
+- INSA Lyon [(Institut National des Sciences Appliquées de Lyon)](https://www.insa-lyon.fr/en){:target="_blank"}
+- IRT Jules Verne [(French Institutes of Technology)](https://www.irt-jules-verne.fr/en/irt-jules-verne/){:target="_blank"}
+- UHA [(Université de Haute Alsace)](https://www.uha.fr/en/index.html){:target="_blank"}
 
 Explore our references and publications in the Scientific References section.
 
@@ -40,7 +40,7 @@ Explore our references and publications in the Scientific References section.
 ## 🔍 Transparent Physics, From the Ground Up
 
 Forget the black-boxes. Fork the physics. At
-[Innovamics](https://www.innovamics.com/), we expose every layer of the
+[Innovamics](https://www.innovamics.com/){:target="_blank"}, we expose every layer of the
 simulation stack—because understanding and trust matter. From material laws to
 solvers, you can inspect, audit, and modify:
 
@@ -90,7 +90,7 @@ testing, and extending Comfor.
 Start contributing today or reach out if you want to collaborate on research,
 features, or integration.
 
-[Visit the GitLab repository](https://gitlab.com/comfor)
+[Visit the GitLab repository](https://gitlab.com/comfor){:target="_blank"}
 
 ---
 

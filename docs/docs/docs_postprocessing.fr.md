@@ -1,4 +1,4 @@
-Le format [VTK](http://www.vtk.org/VTK/img/file-formats.pdf) est utilisé par
+Le format [VTK](http://www.vtk.org/VTK/img/file-formats.pdf){:target="_blank"} est utilisé par
 défaut pour l’exportation des résultats. D’autres formats pourront être pris en
 charge à l’avenir, en fonction des besoins des utilisateurs et des chercheurs.
 
@@ -39,7 +39,7 @@ groupe.
 # Lire l’animation
 
 Une fois les fichiers ouverts, ParaView crée une scène dans le  
-[`Pipeline Browser`](https://www.paraview.org/ParaView/index.php/Pipeline_Browser_Ideas).
+[`Pipeline Browser`](https://www.paraview.org/ParaView/index.php/Pipeline_Browser_Ideas){:target="_blank"}.
 Si le maillage n’est pas affiché, cliquez sur *Apply* dans la section des
 propriétés.
 
@@ -70,7 +70,7 @@ Les cartes de couleurs peuvent être ajustées pour améliorer la lisibilité.
 # Application de filtres
 
 Paraview propose une série de
-[filtres](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters)
+[filtres](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters){:target="_blank"}
 permettant de manipuler et traiter les données. Ces filtres peuvent être
 combinés en cascade. Pour appliquer un filtre, allez dans _Filters →
 Alphabetical_ ou recherchez par catégorie. Les filtres les plus courants pour
@@ -100,5 +100,5 @@ notre application sont :
 
 Consultez les tutoriels en ligne suivants :
 
-- [Tutoriel officiel de Paraview](https://www.paraview.org/Wiki/The_ParaView_Tutorial)
-- [Tutoriels de Cyprien Rusu](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-)
+- [Tutoriel officiel de Paraview](https://www.paraview.org/Wiki/The_ParaView_Tutorial){:target="_blank"}
+- [Tutoriels de Cyprien Rusu](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-){:target="_blank"}

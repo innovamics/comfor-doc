@@ -16,17 +16,17 @@ To build Comfor from sources you will need to download an compile the code. If s
 sudo apt install cmake
 ```
 
-On MacOS using [brew](https://brew.sh/):
+On MacOS using [brew](https://brew.sh/){:target="_blank"}:
 
 ```bash
 brew install cmake
 ```
 
-Binaries files for Mac OS and Windows can be downloaded at [cmake.org](https://cmake.org)
+Binaries files for Mac OS and Windows can be downloaded at [cmake.org](https://cmake.org){:target="_blank"}
 
 **C++ Compiler**
 
-Comfor is written in C++ and it needs at least a [c++ compiler](https://en.cppreference.com/w/cpp/compiler_support/17) that support **C++ 17** language features.
+Comfor is written in C++ and it needs at least a [c++ compiler](https://en.cppreference.com/w/cpp/compiler_support/17){:target="_blank"} that support **C++ 17** language features.
 
 Examples:
 
@@ -53,13 +53,13 @@ If you want to install or update the Clang compilers, enter the command:
 command xcode-select --install
 ```
 
-Under Windows you can use a POSIX environnement like [MSYS2](https://www.msys2.org) or [Mingw](https://www.mingw-w64.org/) or Mysys. Since version **0.2.1**.
+Under Windows you can use a POSIX environnement like [MSYS2](https://www.msys2.org){:target="_blank"} or [Mingw](https://www.mingw-w64.org/){:target="_blank"} or Mysys. Since version **0.2.1**.
 
 !!! note
-    Comfor is compatible with [Microsoft C++ compilers](https://visualstudio.microsoft.com/downloads/) (Tested using Visual C++ 2019 ).
+    Comfor is compatible with [Microsoft C++ compilers](https://visualstudio.microsoft.com/downloads/){:target="_blank"} (Tested using Visual C++ 2019 ).
     
 !!! Warning
-    [Mingw32](https://www.msys2.org) is not fully compatible with [google-test](https://github.com/google/googletest), a popular library to build unit an integration test (see [issue 2418](https://github.com/google/googletest/issues/2418)). You can compile Comfor but you cannot build the binary files for the test cases.
+    [Mingw32](https://www.msys2.org){:target="_blank"} is not fully compatible with [google-test](https://github.com/google/googletest){:target="_blank"}, a popular library to build unit an integration test (see [issue 2418](https://github.com/google/googletest/issues/2418){:target="_blank"}). You can compile Comfor but you cannot build the binary files for the test cases.
 
 **Python**
 
@@ -68,8 +68,8 @@ Under Windows you can use a POSIX environnement like [MSYS2](https://www.msys2.o
     
 Python modules are used to generate the documentation and charts during testing . Make sure that python and the following packages are installed.
 
-- Charts: [Matplotlib](https://pypi.org/project/matplotlib/)
-- This site: [Mkdocs](https://pypi.org/project/mkdocs/)
+- Charts: [Matplotlib](https://pypi.org/project/matplotlib/){:target="_blank"}
+- This site: [Mkdocs](https://pypi.org/project/mkdocs/){:target="_blank"}
 
 To install, make sure that Python 3 is installed:
 
@@ -84,11 +84,11 @@ python3 -m pip install <package name>
 ```
 
 !!! warning
-    On windows comfor is currently working by installing the standalone [Python 3.8.7](https://www.python.org/downloads/release/python-387/) distribution. Anaconda is not yet supported. Make sure that `python` and `pip` are on the path.
+    On windows comfor is currently working by installing the standalone [Python 3.8.7](https://www.python.org/downloads/release/python-387/){:target="_blank"} distribution. Anaconda is not yet supported. Make sure that `python` and `pip` are on the path.
     
 ## Clone
 
-Clone or download the sources from the main [repo](https://gitlab.com/innovamics/comfor). If you are not familiarized with Git, check the (Cheat Sheet)
+Clone or download the sources from the main [repo](https://gitlab.com/innovamics/comfor){:target="_blank"}. If you are not familiarized with Git, check the (Cheat Sheet)
 
 ```bash
 git clone https://gitlab.com/innovamics/comfor.git
@@ -112,7 +112,7 @@ make
 The binary files are on the `Bin/Release` folder.
 
 !!! tip
-    Cmake can [generate](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) the project for different IDE (Eclipse, Xcode, Visual code..). In the previous example we assume that the default generator is Unix MakeFiles. You can specify generator using `cmake .. -G <generator_name>`. To see the available list of generators for your case use: `cmake -G`
+    Cmake can [generate](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html){:target="_blank"} the project for different IDE (Eclipse, Xcode, Visual code..). In the previous example we assume that the default generator is Unix MakeFiles. You can specify generator using `cmake .. -G <generator_name>`. To see the available list of generators for your case use: `cmake -G`
     
 ### Cross platform proposition
 
@@ -168,6 +168,6 @@ If some test fails, please feel free to contact us.
 
 # Postprocessing
 
-Comfor can generate VTK files for the results. Paraview post-processor can be used to visualize those results. Paraview is available at [paraview.com](https://www.paraview.org/download)
+Comfor can generate VTK files for the results. Paraview post-processor can be used to visualize those results. Paraview is available at [paraview.com](https://www.paraview.org/download){:target="_blank"}
 
 

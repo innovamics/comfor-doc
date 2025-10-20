@@ -21,7 +21,7 @@ suivants :
 
 Il n'y a pas de système d'unités dans Comfor. L'utilisateur peut utiliser
 n'importe quel système d'unités cohérent
-[voir](https://femci.gsfc.nasa.gov/units/index.html). Les unités doivent être
+[voir](https://femci.gsfc.nasa.gov/units/index.html){:target="_blank"}. Les unités doivent être
 cohérentes de manière à ce que les opérations mathématiques donnent directement
 les unités correctes pour la quantité résultante. Par exemple, pour la loi de
 Newton :
@@ -452,6 +452,6 @@ shear_angle_b ELEMENTS = [2,4,10,12] COMPONENT = C23 TYPE = strain
 shear_angle_c ÉLÉMENTS = [1,11] COMPOSANT = C23 TYPE = strain
 ```
 
-[^1]: L'analyse syntaxique, ou analyse syntaxique, est le processus qui consiste à analyser une chaîne de symboles, qu'il s'agisse d'un langage naturel, d'un langage informatique ou d'une structure de données, conformément aux règles d'une grammaire formelle. [Wikipedia](https://en.wikipedia.org/wiki/Parsing)
+[^1]: L'analyse syntaxique, ou analyse syntaxique, est le processus qui consiste à analyser une chaîne de symboles, qu'il s'agisse d'un langage naturel, d'un langage informatique ou d'une structure de données, conformément aux règles d'une grammaire formelle. [Wikipedia](https://en.wikipedia.org/wiki/Parsing){:target="_blank"}
 
 

@@ -28,7 +28,7 @@ actions effectuées sur votre système. Si vous omettez `--global` ou utilisez
 
 Vous pouvez en savoir plus sur la gestion des configurations Git dans la
 documentation officielle:
-[Personnalisation de Git - Configuration de Git](https://git-scm.com/book/fr/v2/Personnalisation-de-Git-Configuration-de-Git)
+[Personnalisation de Git - Configuration de Git](https://git-scm.com/book/fr/v2/Personnalisation-de-Git-Configuration-de-Git){:target="_blank"}
 
 ## Générer une paire de clés SSH
 
@@ -55,10 +55,10 @@ Si vous ne possédez pas encore de paire de clés SSH, vous devez en générer u
 
 	- Acceptez le nom de fichier et le répertoire proposés, sauf si vous
 		souhaitez créer une
-		[clé de déploiement](https://docs.gitlab.com/ee/user/project/deploy_keys/index.html)
+		[clé de déploiement](https://docs.gitlab.com/ee/user/project/deploy_keys/index.html){:target="_blank"}
 		ou stocker la clé dans un répertoire spécifique.
 	- Vous pouvez également attribuer cette paire de clés SSH à un hôte spécifique
-	- Définissez une [phrase de passe](https://www.ssh.com/ssh/passphrase/) si
+	- Définissez une [phrase de passe](https://www.ssh.com/ssh/passphrase/){:target="_blank"} si
 		vous le souhaitez.
 
 Une confirmation s’affichera, indiquant l’emplacement où vos fichiers ont été enregistrés.
@@ -92,7 +92,7 @@ Une confirmation s’affichera, indiquant l’emplacement où vos fichiers ont �
 		cat ~/.ssh/id_ed25519.pub | clip
 		```
 
-	2. Connectez-vous à [GitLab](https://gitlab.com/).
+	2. Connectez-vous à [GitLab](https://gitlab.com/){:target="_blank"}.
 	3. Cliquez sur votre avatar en haut à gauche de l’interface.
 	4. Sélectionnez **Settings** (Paramètres).
 	5. Dans le menu de gauche, cliquez sur **SSH Keys**.
@@ -132,7 +132,7 @@ Une confirmation s’affichera, indiquant l’emplacement où vos fichiers ont �
 		cat ~/.ssh/id_ed25519.pub | clip
 		```
 
-    2. Connectez-vous à [GitHub](https://github.com/).
+    2. Connectez-vous à [GitHub](https://github.com/){:target="_blank"}.
 	3. Cliquez sur votre avatar en haut à droite de l’interface.
 	4. Sélectionnez **Settings** (Paramètres).
     5. Dans la barre latérale gauche, sélectionnez **SSH and GPG keys**.

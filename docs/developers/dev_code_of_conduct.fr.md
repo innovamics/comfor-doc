@@ -79,7 +79,7 @@ CLion insère automatiquement les en-têtes au style COMFOR lors de la création
 - Compléter les balises Doxygen (par exemple, `@brief`).
 
 # Include What You Use (IWYU)
-[IWYU](https://include-what-you-use.org/) est intégré à COMFOR pour **optimiser les directives `#include`** en :
+[IWYU](https://include-what-you-use.org/){:target="_blank"} est intégré à COMFOR pour **optimiser les directives `#include`** en :
 
 - Supprimant les inclusions inutilisées.
 - Ajoutant les inclusions manquantes.
