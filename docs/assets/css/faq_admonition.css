@@ -1,0 +1,26 @@
+.md-typeset .admonition.faq,
+.md-typeset details.faq {
+  border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .faq > .admonition-title,
+.md-typeset .faq > summary {
+  background-color: color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent);
+}
+
+.md-typeset .faq > .admonition-title::before,
+.md-typeset .faq > summary::before {
+  background-color: var(--md-accent-fg-color);
+  -webkit-mask-image: var(--md-admonition-icon--question);
+          mask-image: var(--md-admonition-icon--question);
+}
+
+.md-typeset .faq > .admonition-title::after,
+.md-typeset .faq > summary::after {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .admonition.faq:focus-within,
+.md-typeset details.faq:focus-within {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent);
+}
