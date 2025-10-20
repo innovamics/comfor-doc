@@ -36,7 +36,6 @@ nav:
   - "Work with us":
       - "Industry": collaborate/collab_industry.md
       - "Academy": collaborate/collab_academy.md
-      - "Partners": collaborate/collab_partners.md
   - "News":
       - "Publications": news/news_publications.md
       - "Versions": news/news_versions.md
@@ -154,7 +153,6 @@ plugins:
             Work with us: Travaillez avec nous
             Industry: Entreprise
             Academy: Enseignement
-            Partners: Partenaires
             News: Actualités
           admonition_translations:
             attention: Attention
