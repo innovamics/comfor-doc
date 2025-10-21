@@ -12,16 +12,16 @@ nav:
   - "Home":
       - "Welcome": index.md
   - "Getting Started":
-      - "Downloads": overview/download_page.md
+      - "Downloads": overview/download.md
       - "Quick Start": overview/quick_starter_guide.md
-      - 'Tutorial': overview/tutorial_page.md
+      - 'Tutorial': overview/tutorial.md
   - "Docs":
-      - "Overview": docs/docs_overview.md
-      - "Preprocessing": docs/docs_preprocessing.md
-      - "Running": docs/docs_analysis.md
-      - "Postprocessing": docs/docs_postprocessing.md
-      - "Materials": docs/docs_materials.md
-      - "Elements": docs/docs_elements.md
+      - "Overview": docs/overview.md
+      - "Preprocessing": docs/preprocessing.md
+      - "Running": docs/analysis.md
+      - "Postprocessing": docs/postprocessing.md
+      - "Materials": docs/materials.md
+      - "Elements": docs/elements.md
       - "Theory":
         - "Overview": docs/theory/theory_overview.md
         - "Continuum Mechanics": docs/theory/continuum_mechanics.md
@@ -29,17 +29,17 @@ nav:
         - "Materials overview": docs/theory/materials/materials_overview.md
         - "Solvers": docs/theory/solvers/solvers_overview.md
   - "Developers":
-      - "Git": developers/dev_git.md
-      - "API": developers/dev_api.md
-      - "License": developers/dev_license.md
-      - "Code of conduct": developers/dev_code_of_conduct.md
+      - "Git": developers/git.md
+      - "API": developers/api.md
+      - "License": developers/license.md
+      - "Code of conduct": developers/code_of_conduct.md
   - "Work with us":
-      - "Industry": collaborate/collab_industry.md
-      - "Academy": collaborate/collab_academy.md
+      - "Industry": collaborate/industry.md
+      - "Academy": collaborate/academy.md
   - "News":
       - "Publications": news/news_publications.md
   - "FAQ":
-      - "FAQ": faq/faq_overview.md
+      - "FAQ": faq/faq.md
 
 theme:
   name: material
