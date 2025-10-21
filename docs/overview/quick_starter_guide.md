@@ -2,7 +2,7 @@ This tool has been compiled and tested on Windows (win64), Linux (amd64), and ma
 
 # Download
 
-To run Comfor you can [download](download_page.md) the binaries from the release page or you can build it from source. For download the binary for your architecture and follow the instructions given here and [run some test](#run_it).
+To run Comfor you can [download](download.md) the binaries from the release page or you can build it from source. For download the binary for your architecture and follow the instructions given here and [run some test](#run_it).
 
 To build Comfor from sources you will need to download an compile the code. If so, follow these instructions.
 
@@ -128,7 +128,7 @@ You should now have a nice binary file called Comfor. To run comfor you can spec
 
 ## Run it
 
-Run one of the provided samples in `Examples` folder using the following the following command. Or download some other test from the [download page](download_page.md#examples) 
+Run one of the provided samples in `Examples` folder using the following the following command. Or download some other test from the [download page](download.md#examples) 
 
 ```bash
 ./comfor PATH_TO_INPUT_FILE

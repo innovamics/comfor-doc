@@ -8,7 +8,7 @@ You will learn how to:
 
 # Example Overview
 
-For this tutorial, we will use the `Feuilles` example, which can be downloaded from the [Comfor Download page](download_page.md#examples).
+For this tutorial, we will use the `Feuilles` example, which can be downloaded from the [Comfor Download page](download.md#examples).
 
 After extracting the archive, the `Feuilles` folder structure is:
 
@@ -48,7 +48,7 @@ Each section (or *block*) defines a different part of the simulation:
 - `NODES` and `ELEMENTS` — define the mesh and connectivity
 - `CONSTRAINT` and `LOAD` — apply boundary conditions and loads
 
-For the full description of all available blocks, see [Input file reference](../docs/docs_preprocessing.md).
+For the full description of all available blocks, see [Input file reference](../docs/preprocessing.md).
 
 # Running the Simulation
 
@@ -123,5 +123,5 @@ You have now completed your first Comfor simulation.
 
 To learn more:
 
-- [Overview Documentation](../docs/docs_overview.md)
-- [Material Models](../docs/docs_materials.md)
+- [Overview Documentation](../docs/overview.md)
+- [Material Models](../docs/materials.md)

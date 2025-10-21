@@ -2,8 +2,8 @@ The Comfor API documentation provides comprehensive details for developers, cont
 
 # Key Information
 - **[API Documentation](https://comfor.gitlab.io/comfor/){:target="_blank"}** – Complete reference for classes, methods, and interfaces.
-- **[License Agreement](../developers/dev_license.md)** – Terms governing the use, modification, and distribution of Comfor.
-- **[Code of Conduct](../developers/dev_code_of_conduct.md)** – Guidelines for contributions and community engagement.
+- **[License Agreement](../developers/license.md)** – Terms governing the use, modification, and distribution of Comfor.
+- **[Code of Conduct](../developers/code_of_conduct.md)** – Guidelines for contributions and community engagement.
 
 ## Purpose
 This documentation covers:

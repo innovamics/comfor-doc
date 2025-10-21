@@ -12,7 +12,7 @@ This section will allow to establish the basic notions for the construction of a
 
     ...
 
-    [:octicons-arrow-right-24: Read more](docs_preprocessing.md)
+    [:octicons-arrow-right-24: Read more](preprocessing.md)
 
 -   :fontawesome-solid-gears:{ .lg .middle } __Analysis__
 
@@ -20,7 +20,7 @@ This section will allow to establish the basic notions for the construction of a
 
     ...
 
-    [:octicons-arrow-right-24: Read more](docs_analysis.md)
+    [:octicons-arrow-right-24: Read more](analysis.md)
 
 -   :fontawesome-solid-file-lines:{ .lg .middle } __Post-processing__
 
@@ -28,7 +28,7 @@ This section will allow to establish the basic notions for the construction of a
 
     ...
 
-    [:octicons-arrow-right-24: Read more](docs_postprocessing.md)
+    [:octicons-arrow-right-24: Read more](postprocessing.md)
 
 </div>
 
@@ -44,7 +44,7 @@ Understand the building blocks of Comfor
 
     Explore the **material models** available in Comfor, based on recent research.
 
-    [:octicons-arrow-right-24: Read more](docs_materials.md)
+    [:octicons-arrow-right-24: Read more](materials.md)
 
 -   :fontawesome-solid-cubes:{ .lg .middle } __Elements__
 
@@ -52,7 +52,7 @@ Understand the building blocks of Comfor
 
     Learn about **finite elements**, **contact laws**, and **nodes**.
 
-    [:octicons-arrow-right-24: Read more](docs_elements.md)
+    [:octicons-arrow-right-24: Read more](elements.md)
 
 -   :fontawesome-solid-book-open:{ .lg .middle } __Theory__
 

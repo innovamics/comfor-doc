@@ -8,7 +8,7 @@ Vous apprendrez à :
 
 # Présentation de l’exemple
 
-Pour ce tutoriel, nous utiliserons l’exemple `Feuilles`, téléchargeable depuis la [page de téléchargement de Comfor](download_page.md#exemples).
+Pour ce tutoriel, nous utiliserons l’exemple `Feuilles`, téléchargeable depuis la [page de téléchargement de Comfor](download.md#exemples).
 
 Après avoir extrait l’archive, la structure du dossier `Feuilles` est la suivante :
 
@@ -48,7 +48,7 @@ Chaque section (ou *bloc*) définit une partie différente de la simulation :
 * `NODES` et `ELEMENTS` — définissent le maillage et la connectivité
 * `CONSTRAINT` et `LOAD` — appliquent les conditions aux limites et les charges
 
-Pour la description complète de tous les blocs disponibles, consultez la [documentation sur les fichiers d’entrée](../docs/docs_preprocessing.md).
+Pour la description complète de tous les blocs disponibles, consultez la [documentation sur les fichiers d’entrée](../docs/preprocessing.md).
 
 # Exécution de la simulation
 
@@ -123,5 +123,5 @@ Vous avez maintenant terminé votre première simulation avec Comfor.
 
 Pour en savoir plus :
 
-* [Documentation générale](../docs/docs_overview.md)
-* [Modèles de matériaux](../docs/docs_materials.md)
+* [Documentation générale](../docs/overview.md)
+* [Modèles de matériaux](../docs/materials.md)

@@ -82,7 +82,7 @@ transparence scientifique.
       <li>✔ Ensemble d’outils standard</li>
     </ul>
     <div style="margin-top: 1rem; font-weight: bold; color: #333;">Parfait pour les étudiants, particuliers ou petites équipes</div>
-    <a class="md-button md-raised" href="overview/download_page/" style="margin-top: 1rem;">Télécharger</a>
+    <a class="md-button md-raised" href="overview/download/" style="margin-top: 1rem;">Télécharger</a>
   </div>
 
   <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
@@ -96,7 +96,7 @@ transparence scientifique.
       <li>✔ Outils et modules supplémentaires</li>
     </ul>
     <div style="margin-top: 1rem; font-weight: bold; color: #333;">Idéal pour les grandes entreprises et équipes industrielles</div>
-    <a class="md-button md-raised" href="collaborate/collab_industry/#comfor_entreprise" style="margin-top: 1rem;">En savoir plus</a>
+    <a class="md-button md-raised" href="collaborate/industry/#comfor_entreprise" style="margin-top: 1rem;">En savoir plus</a>
   </div>
 
 </div>
@@ -109,9 +109,9 @@ Si vous découvrez Comfor, voici les sections recommandées :
 
 - [Guide de démarrage rapide](overview/quick_starter_guide.md) – Lancer votre
   première simulation en quelques étapes  
-- [Guide utilisateur](docs/docs_overview.md) – Créer vos modèles, définir les
+- [Guide utilisateur](docs/overview.md) – Créer vos modèles, définir les
   matériaux et post-traiter les résultats  
-- [Téléchargements](overview/download_page.md) – Obtenir les dernières versions et  
+- [Téléchargements](overview/download.md) – Obtenir les dernières versions et  
   exemples
 
 ---
@@ -119,7 +119,7 @@ Si vous découvrez Comfor, voici les sections recommandées :
 # 👩‍💻 Pour les développeurs
 
 Vous souhaitez contribuer ou ajouter vos propres modèles ? Le
-[Guide développeur](developers/dev_api.md) vous accompagne pas à pas dans la
+[Guide développeur](developers/api.md) vous accompagne pas à pas dans la
 compilation, les tests et l’extension de Comfor.
 
 ---

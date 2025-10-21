@@ -17,7 +17,7 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
 
     ...
 
-    [:octicons-arrow-right-24: Read more](docs_preprocessing.md)
+    [:octicons-arrow-right-24: Read more](preprocessing.md)
 
 -   :fontawesome-solid-gears:{ .lg .middle } __Analyse__
 
@@ -25,7 +25,7 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
 
     ...
 
-    [:octicons-arrow-right-24: Read more](docs_analysis.md)
+    [:octicons-arrow-right-24: Read more](analysis.md)
 
 -   :fontawesome-solid-file-lines:{ .lg .middle } __Post-traitement__
 
@@ -33,7 +33,7 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
 
     ...
 
-    [:octicons-arrow-right-24: Read more](docs_postprocessing.md)
+    [:octicons-arrow-right-24: Read more](postprocessing.md)
 
 </div>
 
@@ -49,7 +49,7 @@ Comprendre les éléments fondamentaux de Comfor
 
     Découvrez les **modèles de matériaux** disponibles dans Comfor, basés sur des recherches récentes.
 
-    [:octicons-arrow-right-24: En savoir plus](docs_materials.md)
+    [:octicons-arrow-right-24: En savoir plus](materials.md)
 
 -   :fontawesome-solid-cubes:{ .lg .middle } __Éléments__
 
@@ -57,7 +57,7 @@ Comprendre les éléments fondamentaux de Comfor
     
     Apprenez-en plus sur les **éléments finis**, les **lois de contact** et les **nœuds**.
     
-    [:octicons-arrow-right-24: En savoir plus](docs_elements.md)
+    [:octicons-arrow-right-24: En savoir plus](elements.md)
 
 -   :fontawesome-solid-book-open:{ .lg .middle } __Théorie__
     

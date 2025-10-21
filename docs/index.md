@@ -79,7 +79,7 @@ and transparency come first.
       <li>✔ Standard toolkit</li>
     </ul>
     <div style="margin-top: 1rem; font-weight: bold; color: #333;">Best for students, individuals, small teams</div>
-    <a class="md-button md-raised" href="overview/download_page/" style="margin-top: 1rem;">Download</a>
+    <a class="md-button md-raised" href="overview/download/" style="margin-top: 1rem;">Download</a>
   </div>
 
   <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
@@ -93,7 +93,7 @@ and transparency come first.
       <li>✔ Enhanced toolkit with extra modules</li>
     </ul>
     <div style="margin-top: 1rem; font-weight: bold; color: #333;">Best for large organizations & industrial teams</div>
-    <a class="md-button md-raised" href="collaborate/collab_industry/#comfor_enterprise" style="margin-top: 1rem;">Learn More</a>
+    <a class="md-button md-raised" href="collaborate/industry/#comfor_enterprise" style="margin-top: 1rem;">Learn More</a>
   </div>
 
 </div>
@@ -106,9 +106,9 @@ If you're new to Comfor, here are the best places to begin:
 
 - [Quick Starter Guide](overview/quick_starter_guide.md) – Minimal steps to run
   your first simulation
-- [User Guide](docs/docs_overview.md) – Define models, materials, and
+- [User Guide](docs/overview.md) – Define models, materials, and
   postprocess results
-- [Downloads](overview/download_page.md) – Get the latest binaries and example
+- [Downloads](overview/download.md) – Get the latest binaries and example
   cases.
 
 ---
@@ -116,7 +116,7 @@ If you're new to Comfor, here are the best places to begin:
 # 👨‍💻 For Developers
 
 Want to contribute or implement your own models? The
-[Developer Guide](developers/dev_api.md) walks you through building,
+[Developer Guide](developers/api.md) walks you through building,
 testing, and extending Comfor.
 
 ---

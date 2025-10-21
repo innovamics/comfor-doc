@@ -13,13 +13,13 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
     - **CMake ≥ 3.15**
     - **Git**
 
-    Pour plus de détails, consultez les pages [Téléchargement](../overview/download_page.md) et [Guide de démarrage rapide](../overview/quick_starter_guide.md).
+    Pour plus de détails, consultez les pages [Téléchargement](../overview/download.md) et [Guide de démarrage rapide](../overview/quick_starter_guide.md).
 
 ??? faq "Comment installer Comfor à partir des sources ?"
     Suivez les instructions dans le [Guide de démarrage rapide](../overview/quick_starter_guide.md).
 
 ??? faq "Existe-t-il des binaires pré-compilés disponibles ?"
-    Oui ! Des binaires pré-compilés sont disponibles sur la [Page de téléchargement](../overview/download_page.md).
+    Oui ! Des binaires pré-compilés sont disponibles sur la [Page de téléchargement](../overview/download.md).
 
 ??? faq "Comment vérifier mon installation ?"
     Exécutez la suite de tests comme décrit dans le [Guide de démarrage rapide](../overview/quick_starter_guide.md#execution_et_tests).
@@ -30,32 +30,32 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
     Consultez le [Guide de démarrage rapide](../overview/quick_starter_guide.md).
 
 ??? faq "Comment définir un modèle de matériau ?"
-    Les modèles de matériaux sont documentés dans la [Documentation sur les matériaux](../docs/docs_materials.md).
+    Les modèles de matériaux sont documentés dans la [Documentation sur les matériaux](../docs/materials.md).
 
 ??? faq "Comment exécuter une simulation ?"
     Exécutez Comfor depuis le terminal en utilisant :
     ```bash
     comfor <nom_du_fichier>
     ```
-    Pour plus de détails, consultez la section [Exécution d'une simulation](../docs/docs_analysis.md).
+    Pour plus de détails, consultez la section [Exécution d'une simulation](../docs/analysis.md).
 
 ??? faq "Où puis-je trouver des cas d'exemples ?"
     Des cas d'exemples sont inclus dans le code source dans le répertoire `Examples/`.
 
-    Vous pouvez également [télécharger des exemples](../overview/download_page.md#exemples).
+    Vous pouvez également [télécharger des exemples](../overview/download.md#exemples).
 
 # Physique et modèles
 
 ??? faq "Quelles formulations d'éléments finis sont prises en charge ?"
-    Consultez la [Documentation sur les éléments](../docs/docs_elements.md) pour une liste complète.
+    Consultez la [Documentation sur les éléments](../docs/elements.md) pour une liste complète.
 
 ??? faq "Comment les conditions aux limites sont-elles appliquées ?"
-    Les conditions aux limites sont documentées dans la [Documentation sur le prétraitement](../docs/docs_preprocessing.md).
+    Les conditions aux limites sont documentées dans la [Documentation sur le prétraitement](../docs/preprocessing.md).
 
 # Développement
 
 ??? faq "Comment puis-je contribuer à Comfor ?"
-    Consultez le [Code de conduite](../developers/dev_code_of_conduct.md) et le [Guide Git](../developers/dev_git.md) pour les directives de contribution.
+    Consultez le [Code de conduite](../developers/code_of_conduct.md) et le [Guide Git](../developers/git.md) pour les directives de contribution.
 
 # Utilisation scientifique et académique
 
@@ -69,7 +69,7 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
     Oui, Comfor est disponible pour un **usage de recherche et académique** sous les termes de sa licence.
     Vous pouvez modifier le logiciel ou créer des œuvres dérivées **uniquement pour un usage de recherche ou académique**.
     Pour un usage commercial ou une redistribution, un accord de licence séparé avec Innovamics est requis.
-    Consultez la [Page de licence](../developers/dev_license.md) pour plus de détails.
+    Consultez la [Page de licence](../developers/license.md) pour plus de détails.
 
 ??? faq "Comment citer Comfor dans mes publications ?"
     Pour citer Comfor, référez-vous aux publications pertinentes listées sur la [Page des publications](../news/news_publications.md).
@@ -88,12 +88,12 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
 
 ??? faq "Comfor est-il gratuit ?"
     Comfor est disponible **gratuitement** pour un **usage de recherche et académique** sous les termes de sa licence.
-    Consultez la [Page de licence](../developers/dev_license.md) pour plus de détails.
+    Consultez la [Page de licence](../developers/license.md) pour plus de détails.
 
 ??? faq "Puis-je utiliser Comfor pour des projets commerciaux ?"
     Comfor **n'est pas disponible pour un usage commercial** sous sa licence standard.
     Pour un usage propriétaire ou commercial, veuillez contacter Innovamics pour négocier un accord de licence séparé.
-    Consultez la [Page de licence](../developers/dev_license.md) pour plus d'informations.
+    Consultez la [Page de licence](../developers/license.md) pour plus d'informations.
 
 ??? faq "Comment rester informé des nouvelles versions ?"
     - Consultez la [Page des versions](../overview/versions.md) pour les dernières mises à jour.

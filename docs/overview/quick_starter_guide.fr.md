@@ -4,7 +4,7 @@ Comfor a été compilé et testé sous Windows (win64), Linux (amd64) et macOS
 
 # Téléchargement
 
-Pour exécuter Comfor, vous pouvez [télécharger](download_page.md) les binaires
+Pour exécuter Comfor, vous pouvez [télécharger](download.md) les binaires
 depuis la page des versions, ou bien le compiler depuis les sources. Téléchargez
 la version correspondant à votre architecture et
 [exécutez un exemple](#executer_un_exemple).
@@ -142,7 +142,7 @@ spécifié.
 ## Exécuter un exemple
 
 Utilisez un fichier d’entrée fourni dans le dossier `Examples` ou téléchargez
-des cas de test depuis la [page de téléchargement](download_page.md#exemples) :
+des cas de test depuis la [page de téléchargement](download.md#exemples) :
 
 ```bash
 ./comfor CHEMIN_VERS_FICHIER_ENTRÉE
