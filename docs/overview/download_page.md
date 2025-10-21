@@ -30,7 +30,7 @@
     [macOS Monterey :simple-apple:](../assets/bin/v0_8_0/Release-macos-sonoma-clang/COMFOR_V0_8_0_CLANG15){ .md-button }
 
 !!! info
-    Browse the archives for [previous versions](../news/news_versions.md).
+    Browse the archives for [previous versions](versions.md).
 
 # Examples
 

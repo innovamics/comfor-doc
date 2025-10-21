@@ -96,5 +96,5 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
     Consultez la [Page de licence](../developers/dev_license.md) pour plus d'informations.
 
 ??? faq "Comment rester informé des nouvelles versions ?"
-    - Consultez la [Page des versions](../news/news_versions.md) pour les dernières mises à jour.
+    - Consultez la [Page des versions](../overview/versions.md) pour les dernières mises à jour.
     - Surveillez le [Dépôt GitLab](https://gitlab.com/comfor/comfor){:target="_blank"} pour des notifications en temps réel.
