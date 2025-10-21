@@ -72,8 +72,8 @@ Les cartes de couleurs peuvent être ajustées pour améliorer la lisibilité.
 Paraview propose une série de
 [filtres](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters){:target="_blank"}
 permettant de manipuler et traiter les données. Ces filtres peuvent être
-combinés en cascade. Pour appliquer un filtre, allez dans _Filters →
-Alphabetical_ ou recherchez par catégorie. Les filtres les plus courants pour
+combinés en cascade. Pour appliquer un filtre, allez dans *Filters →
+Alphabetical* ou recherchez par catégorie. Les filtres les plus courants pour
 notre application sont :
 
 - `Connectivity` : identifie les régions connectées du maillage. Ce filtre
