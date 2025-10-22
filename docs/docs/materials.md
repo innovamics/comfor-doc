@@ -1,4 +1,4 @@
-<div class="grid cards" markdown>
+<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))" markdown>
 
 - :material-vector-line:{ .lg .middle }
   [<span style="color: #76B900; font-weight: bold;">Elastic</span>](#elastic_models)
@@ -7,7 +7,7 @@
   [<span style="color: #c73131ff; font-weight: bold;">Hyperelastic</span>](#hyperelastic_models)
 
 - :material-grid:{ .lg .middle }
-  [<span style="color: #2B17E5; font-weight: bold;">Composite</span>](#hyperelastic_materials)
+  [<span style="color: #2B17E5; font-weight: bold;">Composite</span>](#composite)
 
 </div>
 
