@@ -15,13 +15,14 @@ The Licensor grants the Recipient a **non-exclusive, non-transferable** right to
 # 2. Termination
 
 The use of the SOFTWARE is subject to compliance with the terms of this Agreement.
+
 - **Obligations upon termination**:
   The Recipient must **remove all copies** of the SOFTWARE and discontinue all use.
   Copies are permitted solely for use in accordance with this Agreement or for backup purposes.
 - **Termination conditions**:
-  - The Recipient may terminate this Agreement at any time by **destroying the SOFTWARE and all its copies**.
-  - The Licensor may terminate this Agreement in the event of **non-compliance with its terms** or upon **30 days' written notice**.
-  - Upon termination, the Recipient agrees to **destroy the SOFTWARE and all its copies**.
+	- The Recipient may terminate this Agreement at any time by **destroying the SOFTWARE and all its copies**.
+	- The Licensor may terminate this Agreement in the event of **non-compliance with its terms** or upon **30 days' written notice**.
+	- Upon termination, the Recipient agrees to **destroy the SOFTWARE and all its copies**.
 
 # 3. Copyright
 

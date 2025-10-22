@@ -20,9 +20,9 @@ L’utilisation du LOGICIEL est soumise au respect des termes de cet accord.
   Le Bénéficiaire doit **supprimer toutes les copies** du LOGICIEL et cesser toute utilisation.
   Les copies sont autorisées uniquement pour un usage conforme à cet accord ou à des fins de sauvegarde.
 - **Modalités de résiliation** :
-  - Le Bénéficiaire peut résilier cet accord à tout moment en **détruisant le LOGICIEL et toutes ses copies**.
-  - Le Licenciateur peut résilier cet accord en cas de **non-respect des termes** ou après un **préavis écrit de 30 jours**.
-  - En cas de résiliation, le Bénéficiaire s’engage à **détruire le LOGICIEL et toutes ses copies**.
+	- Le Bénéficiaire peut résilier cet accord à tout moment en **détruisant le LOGICIEL et toutes ses copies**.
+	- Le Licenciateur peut résilier cet accord en cas de **non-respect des termes** ou après un **préavis écrit de 30 jours**.
+	- En cas de résiliation, le Bénéficiaire s’engage à **détruire le LOGICIEL et toutes ses copies**.
 
 # 3. Droits d’auteur
 
