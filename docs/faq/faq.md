@@ -61,7 +61,7 @@ This FAQ covers common questions about **Comfor**, from installation and usage t
 
 ??? faq "Is Comfor peer-reviewed?"
     Comfor's numerical methods are published and validated in collaboration with academic and industrial partners.
-    For references, see the [Publications Page](../news/news_publications.md).
+    <!-- For references, see the [Publications Page](../news/news_publications.md). -->
     !!! note
         Comfor is provided "as is" and is intended for research and academic use.
 
@@ -71,9 +71,9 @@ This FAQ covers common questions about **Comfor**, from installation and usage t
     For commercial use or redistribution, a separate license agreement with Innovamics is required.
     See the [License Page](../developers/license.md) for full details.
 
-??? faq "How do I cite Comfor in my publications?"
+<!-- ??? faq "How do I cite Comfor in my publications?"
     To cite Comfor, refer to the relevant publications listed on the [Publications Page](../news/news_publications.md).
-    Ensure compliance with the license terms and acknowledge Innovamics as the software developer.
+    Ensure compliance with the license terms and acknowledge Innovamics as the software developer. -->
 
 # Troubleshooting
 

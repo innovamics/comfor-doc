@@ -31,13 +31,11 @@ nav:
   - "Developers":
       - "Git": developers/git.md
       - "API": developers/api.md
-      - "License": developers/license.md
+      # - "License": developers/license.md
       - "Code of conduct": developers/code_of_conduct.md
   - "Work with us":
       - "Industry": collaborate/industry.md
       - "Academy": collaborate/academy.md
-  - "News":
-      - "Publications": news/news_publications.md
   - "FAQ":
       - "FAQ": faq/faq.md
 

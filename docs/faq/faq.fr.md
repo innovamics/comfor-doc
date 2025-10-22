@@ -61,7 +61,7 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
 
 ??? faq "Comfor est-il revu par des pairs ?"
     Les méthodes numériques de Comfor sont publiées et validées en collaboration avec des partenaires académiques et industriels.
-    Pour les références, consultez la [Page des publications](../news/news_publications.md).
+    <!-- Pour les références, consultez la [Page des publications](../news/news_publications.md). -->
     !!! note
         Comfor est fourni "tel quel" et est destiné à un usage de recherche et académique.
 
@@ -71,9 +71,9 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
     Pour un usage commercial ou une redistribution, un accord de licence séparé avec Innovamics est requis.
     Consultez la [Page de licence](../developers/license.md) pour plus de détails.
 
-??? faq "Comment citer Comfor dans mes publications ?"
+<!-- ??? faq "Comment citer Comfor dans mes publications ?"
     Pour citer Comfor, référez-vous aux publications pertinentes listées sur la [Page des publications](../news/news_publications.md).
-    Assurez-vous de respecter les termes de la licence et de mentionner Innovamics comme développeur du logiciel.
+    Assurez-vous de respecter les termes de la licence et de mentionner Innovamics comme développeur du logiciel. -->
 
 # Résolution des problèmes
 
