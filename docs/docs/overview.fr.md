@@ -15,7 +15,7 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
 
     ---
 
-    ...
+    Préparez votre fichier d’entrée.
 
     [:octicons-arrow-right-24: Read more](preprocessing.md)
 
@@ -23,7 +23,7 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
 
     ---
 
-    ...
+    Lancez votre simulation avec Comfor.
 
     [:octicons-arrow-right-24: Read more](analysis.md)
 
@@ -31,7 +31,7 @@ numérique avec Comfor, lancer une simulation et analyser les résultats.
 
     ---
 
-    ...
+    Explorez et visualisez vos résultats
 
     [:octicons-arrow-right-24: Read more](postprocessing.md)
 

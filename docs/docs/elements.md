@@ -1,6 +1,5 @@
-# Page in Progress
+# :material-clock-outline: Page in Progress
 
-This page is currently under development.
-We're finalizing its content and it will be available soon.
+---
 
-Thank you for your patience!
+:material-hammer-wrench:{ .middle } This page is currently under development. We’re working hard to bring you more detailed content soon.

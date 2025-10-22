@@ -1,6 +1,5 @@
-# Page en préparation
+# :material-clock-outline: Page en préparation
 
-Cette page est actuellement en développement.
-Nous finalisons son contenu et elle sera disponible prochainement.
+---
 
-Merci de votre patience !
+:material-hammer-wrench:{ .middle } Cette page est actuellement en développement. Nous finalisons son contenu et elle sera disponible prochainement.

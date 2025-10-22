@@ -10,7 +10,7 @@ This section will allow to establish the basic notions for the construction of a
 
     ---
 
-    ...
+    Prepare your input file.
 
     [:octicons-arrow-right-24: Read more](preprocessing.md)
 
@@ -18,7 +18,7 @@ This section will allow to establish the basic notions for the construction of a
 
     ---
 
-    ...
+    Run your simulation with Comfor.
 
     [:octicons-arrow-right-24: Read more](analysis.md)
 
@@ -26,7 +26,7 @@ This section will allow to establish the basic notions for the construction of a
 
     ---
 
-    ...
+    Explore and visualise your results.
 
     [:octicons-arrow-right-24: Read more](postprocessing.md)
 
