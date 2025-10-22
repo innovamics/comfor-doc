@@ -12,3 +12,6 @@ pygments
 
 # Multilingual support
 mkdocs-static-i18n[material]
+
+# Local plugin to ignore @ in code blocks for BibTeX citations
+./plugins/ignore_bibtex
