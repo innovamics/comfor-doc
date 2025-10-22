@@ -12,7 +12,7 @@ install:
 	$(PIP) install -r $(REQUIREMENTS)
 
 serve:
-	$(MKDOCS) serve
+	$(MKDOCS) serve --livereload
 
 build: install
 	$(MKDOCS) build

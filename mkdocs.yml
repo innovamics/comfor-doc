@@ -3,6 +3,7 @@ site_author: Eduardo Guzman
 site_dir: public
 site_url: https://comfor.gitlab.io/comfor-doc
 repo_url: https://gitlab.com/comfor/comfor-doc
+repo_name: comfor/comfor
 copyright: Copyright &copy; 2021 - 2025 Eduardo Guzman
 
 docs_dir: docs
@@ -11,25 +12,36 @@ nav:
   - "Home":
       - "Welcome": index.md
   - "Getting Started":
+      - "Downloads": overview/download.md
       - "Quick Start": overview/quick_starter_guide.md
-      - "Downloads": overview/download_page.md
-  #     - 'Tutorial': index.md
-  - "User":
-      - "Overview": user/user_overview.md
-      - "Preprocessing": user/user_preprocessing.md
-      - "Running": user/user_analysis.md
-      - "Postprocessing": user/user_postprocessing.md
-  - "Theory":
-      - "Overview": theory/theory_overview.md
-      - "Continuum Mechanics": theory/continuum_mechanics.md
-      - "Composite Materials": theory/materials/composite_materials.md
-      - "Materials overview": theory/materials/materials_overview.md
-      - "Solvers": theory/solvers/solvers_overview.md
-  - "Dev":
-      - "Using git": developer/dev_git.md
+      - 'Tutorial': overview/tutorial.md
+  - "Docs":
+      - "Overview": docs/overview.md
+      - "Preprocessing": docs/preprocessing.md
+      - "Running": docs/analysis.md
+      - "Postprocessing": docs/postprocessing.md
+      - "Materials": docs/materials.md
+      - "Elements": docs/elements.md
+      - "Theory":
+        - "Overview": docs/theory/theory_overview.md
+        - "Continuum Mechanics": docs/theory/continuum_mechanics.md
+        - "Composite Materials": docs/theory/materials/composite_materials.md
+        - "Materials overview": docs/theory/materials/materials_overview.md
+        - "Solvers": docs/theory/solvers/solvers_overview.md
+  - "Developers":
+      - "Git": developers/git.md
+      - "API": developers/api.md
+      # - "License": developers/license.md
+      - "Code of conduct": developers/code_of_conduct.md
+  - "Work with us":
+      - "Industry": collaborate/industry.md
+      - "Academy": collaborate/academy.md
+  - "FAQ":
+      - "FAQ": faq/faq.md
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/img/logo-icon-innovamics.png
   favicon: assets/img/apple-touch-icon-72x72.png
   analytics:
@@ -62,6 +74,7 @@ theme:
   features:
     - navigation.footer
     - navigation.tabs
+    - navigation.sections
     - content.code.copy
 
 markdown_extensions:
@@ -86,8 +99,10 @@ markdown_extensions:
   - pymdownx.snippets # `{{snippet_name}}`
   - pymdownx.superfences # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
   - pymdownx.tasklist # - [X] item
-  - pymdownx.tabbed # === "Tab 1"
+  - pymdownx.tabbed: # === "Tab 1"
+      alternate_style: true
   - pymdownx.blocks.caption
+  - pymdownx.keys
   - tables
   - toc:
       permalink: "#"
@@ -96,6 +111,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - ignore_bibtex # Custom plugin to ignore @ outside [@]
   - bibtex:
       bib_file: "docs/Bibliography.bib"
       csl_file: "docs/assets/csl/nature.csl"
@@ -112,21 +128,29 @@ plugins:
           nav_translations:
             Home: Accueil
             Welcome: Bienvenue
-            User: Utilisateur
-            Theory: Théorie
-            Dev: Développeur
+            Getting Started: Bien démarrer
+            Downloads: Téléchargements
+            Quick Start: Démarrage rapide
+            Tutorial: Tutoriel
+            Docs: Manuel
             Overview: Généralités
             Preprocessing: Pré-traitement
             Running: Exécution
             Postprocessing: Post-traitement
-            Using git: Configurer de git
-            Downloads: Téléchargements
+            Materials: Matériaux
+            Elements: Eléments
+            Theory: Théorie
             Continuum Mechanics: Mécanique des milieux continus
             Composite Materials: Matériaux composites
             Materials overview: Matériaux
             Solvers: Solveurs
-            Getting Started: Bien démarrer
-            Quick Start: Démarrage rapide
+            Developers: Développeurs
+            License: Licence
+            Code of conduct: Code de conduite
+            Work with us: Travaillez avec nous
+            Industry: Entreprise
+            Academy: Enseignement
+            News: Actualités
           admonition_translations:
             attention: Attention
             danger: Danger
@@ -142,11 +166,14 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js
   - assets/js/xy_graphs.js
+  # - assets/js/landing_page.js   
   # - assets/js/table_rtd.js
-  # - assets/js/background_effects.js
+  # - assets/js/background_effects.js 
 
 extra_css:
-  - assets/css/tabbed.css
+  # - assets/css/landing_page.css
+  - assets/css/faq_admonition.css
+  # - assets/css/tabbed.css
   # - assets/css/home_page.css
   # - assets/css/custom_colors.css
   # - assets/css/background.css

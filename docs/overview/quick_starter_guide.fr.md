@@ -4,7 +4,7 @@ Comfor a été compilé et testé sous Windows (win64), Linux (amd64) et macOS
 
 # Téléchargement
 
-Pour exécuter Comfor, vous pouvez [télécharger](download_page.md) les binaires
+Pour exécuter Comfor, vous pouvez [télécharger](download.md) les binaires
 depuis la page des versions, ou bien le compiler depuis les sources. Téléchargez
 la version correspondant à votre architecture et
 [exécutez un exemple](#executer_un_exemple).
@@ -25,19 +25,19 @@ Xcode, Eclipse, etc.) ou bien des règles de compilation pour Comfor. Il peut
 sudo apt install cmake
 ```
 
-Sous macOS avec [brew](https://brew.sh/) :
+Sous macOS avec [brew](https://brew.sh/){:target="_blank"} :
 
 ```bash
 brew install cmake
 ```
 
 Les binaires pour macOS et Windows sont disponibles sur
-[cmake.org](https://cmake.org).
+[cmake.org](https://cmake.org){:target="_blank"}.
 
 **Compilateur C++**
 
 Comfor est écrit en C++ et nécessite un
-[compilateur C++](https://en.cppreference.com/w/cpp/compiler_support/17)
+[compilateur C++](https://en.cppreference.com/w/cpp/compiler_support/17){:target="_blank"}
 compatible avec les fonctionnalités du standard **C++17**.
 
 Exemples compatibles :
@@ -66,25 +66,25 @@ xcode-select --install
 ```
 
 Sous **Windows**, vous pouvez utiliser un environnement POSIX comme
-[MSYS2](https://www.msys2.org), [MinGW](http://www.mingw-w64.org/doku.php), ou
+[MSYS2](https://www.msys2.org){:target="_blank"}, [MinGW](https://www.mingw-w64.org/){:target="_blank"}, ou
 Mysys. Depuis la version **0.2.1** :
 
 !!! note
     Comfor est compatible avec les
-    [compilateurs Microsoft C++](https://visualstudio.microsoft.com/downloads/)
+    [compilateurs Microsoft C++](https://visualstudio.microsoft.com/downloads/){:target="_blank"}
     (testé avec Visual C++ 2019).
 
 !!! warning
-    [Mingw32](https://www.msys2.org) n'est pas entièrement compatible avec
-    [google-test](https://github.com/google/googletest), une bibliothèque
+    [Mingw32](https://www.msys2.org){:target="_blank"} n'est pas entièrement compatible avec
+    [google-test](https://github.com/google/googletest){:target="_blank"}, une bibliothèque
     populaire pour les tests unitaires et d'intégration (voir
-    [issue 2418](https://github.com/google/googletest/issues/2418)). Vous pouvez
+    [issue 2418](https://github.com/google/googletest/issues/2418){:target="_blank"}). Vous pouvez
     compiler Comfor mais pas exécuter les tests.
 
 ## Cloner le dépôt
 
 Clonez ou téléchargez les sources depuis le
-[répertoire principal](https://gitlab.com/innovamics/comfor). Si vous ne
+[répertoire principal](https://gitlab.com/innovamics/comfor){:target="_blank"}. Si vous ne
 connaissez pas Git, consultez une cheat sheet.
 
 ```bash
@@ -115,7 +115,7 @@ Les binaires se trouvent dans le dossier `Bin/Release`.
 
 !!! tip
     CMake peut
-    [générer](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html)
+    [générer](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html){:target="_blank"}
     des projets pour divers IDE (Eclipse, Xcode, VSCode...). Pour spécifier un
     générateur :  
     ```bash
@@ -142,7 +142,7 @@ spécifié.
 ## Exécuter un exemple
 
 Utilisez un fichier d’entrée fourni dans le dossier `Examples` ou téléchargez
-des cas de test depuis la [page de téléchargement](download_page.md) :
+des cas de test depuis la [page de téléchargement](download.md#exemples) :
 
 ```bash
 ./comfor CHEMIN_VERS_FICHIER_ENTRÉE
@@ -170,4 +170,4 @@ Si un test échoue, n'hésitez pas à nous contacter.
 
 Comfor peut générer des fichiers VTK pour visualiser les résultats avec le
 post-processeur Paraview, disponible sur
-[paraview.org](https://www.paraview.org/download).
+[paraview.org](https://www.paraview.org/download){:target="_blank"}.
