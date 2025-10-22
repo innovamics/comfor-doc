@@ -1,22 +1,42 @@
 # Services
 
-Nous proposons des **programmes de formation** dédiés aux étudiants et aux établissements académiques. Notre objectif est de rendre accessibles aux apprenants de tous niveaux les techniques avancées de simulation et de modélisation.
+À travers **Comfor Academy**, nous proposons des programmes de formation dédiés
+aux étudiants, chercheurs et établissements académiques.  
+Notre objectif est de rendre les techniques avancées de simulation pour la
+**mise en forme et le procédé des composites** accessibles à tous les niveaux —
+en aidant les apprenants à gagner en efficacité et à réduire le temps consacré à
+la préparation de leur thèse ou de leurs travaux de recherche.
 
-Dans le cadre de notre initiative Academy, nous proposons :
+# Programmes de formation
 
-- **Formation au logiciel** — sessions pratiques pour apprendre à utiliser et maîtriser Comfor  
-- **Fondamentaux de la simulation** — cours couvrant les principes et les bonnes pratiques de la simulation moderne  
+Nos formations académiques visent à faire le lien entre la théorie et la
+pratique de la simulation numérique.  
+Nous proposons :
 
-Ces programmes sont conçus pour aider les étudiants et les enseignants à acquérir de solides bases techniques et à utiliser efficacement les outils de simulation dans des contextes concrets.
+- **Simulation avec Comfor** — ateliers pratiques pour apprendre, utiliser et
+  maîtriser l’environnement Comfor dans les domaines de la mise en forme et du
+  contact des matériaux  
+- **Développement de logiciels scientifiques** — cours portant sur les principes
+  fondamentaux et les bonnes pratiques du développement moderne en C++ et Python
+  appliqué à la simulation et à la recherche  
+
+Ces programmes aident les étudiants et les enseignants à acquérir de solides
+bases techniques, à développer leur autonomie en recherche et à appliquer
+efficacement les outils de simulation à des problématiques réelles d’ingénierie
+ou de science.
 
 # Collaboration
 
-Nous collaborons activement avec des universités, laboratoires de recherche et établissements éducatifs sur des **projets de recherche et développement**. Nous sommes ouverts à des partenariats explorant l’innovation, la recherche appliquée et de nouvelles méthodologies de simulation.
+Nous collaborons activement avec des universités, laboratoires de recherche et
+partenaires académiques dans le cadre de **projets de recherche et  
+développement**. Notre objectif est d’accélérer l’innovation et de promouvoir
+une science ouverte et reproductible dans le domaine de la simulation des
+composites.
 
 Ensemble, nous pouvons :
+- Développer et valider de nouvelles techniques de simulation  
+- Proposer et implémenter des modèles de comportement avancés  
+- Co-encadrer des thèses et projets de recherche académiques  
 
-- Développer et tester de nouvelles techniques de simulation  
-- Co-encadrer des projets académiques ou de recherche  
-- Soutenir les initiatives étudiantes et les challenges d’ingénierie  
-
-Si votre établissement recherche un partenaire académique ou industriel en simulation et modélisation, **nous sommes prêts à travailler avec vous**.
+Si votre établissement recherche un partenaire académique ou industriel en
+simulation et modélisation, **nous sommes prêts à collaborer avec vous**.
