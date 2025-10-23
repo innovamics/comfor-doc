@@ -115,8 +115,8 @@ and transparency come first.
 <div class="comparatif-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
 
   <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
-    <h2 style="margin-top: 0.5rem; color: #333;">Comfor Community</h2>
-    <p style="font-weight: bold; color: #555;">Free & Open Source</p>
+    <h2 style="margin-top: 0.5rem; font-size: 1.4rem; font-weight: 500; color: var(--md-default-fg-color);">Comfor Community</h2>
+    <p style="font-weight: bold; color: var(--md-default-fg-color--light);">Free & Open Source</p>
     <ul style="list-style: none; padding: 0; text-align: left;">
       <li>✔ Standard performance</li>
       <li>✔ Suitable for small teams</li>
@@ -124,13 +124,13 @@ and transparency come first.
       <li>✔ Basic configuration options</li>
       <li>✔ Standard toolkit</li>
     </ul>
-    <div style="margin-top: 1rem; font-weight: bold; color: #333;">Best for students, individuals, small teams</div>
+    <div style="margin-top: 1rem; font-weight: bold; color: var(--md-default-fg-color--light);">Best for students, individuals, small teams</div>
     <a class="md-button md-raised" href="overview/download/" style="margin-top: 1rem;">Download</a>
   </div>
 
   <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
-    <h2 style="margin-top: 0.5rem; color: #333;">Comfor Enterprise</h2>
-    <p style="font-weight: bold; color: #555;">Commercial Edition</p>
+    <h2 style="margin-top: 0.5rem; font-size: 1.4rem; font-weight: 500; color: var(--md-default-fg-color);">Comfor Enterprise</h2>
+    <p style="font-weight: bold; color: var(--md-default-fg-color--light);">Commercial Edition</p>
     <ul style="list-style: none; padding: 0; text-align: left;">
       <li>✔ High performance for large-scale use</li>
       <li>✔ Enterprise-level scalability</li>
@@ -138,7 +138,7 @@ and transparency come first.
       <li>✔ Advanced configuration & deployment</li>
       <li>✔ Enhanced toolkit with extra modules</li>
     </ul>
-    <div style="margin-top: 1rem; font-weight: bold; color: #333;">Best for large organizations & industrial teams</div>
+    <div style="margin-top: 1rem; font-weight: bold; color: var(--md-default-fg-color--light);">Best for large organizations & industrial teams</div>
     <a class="md-button md-raised" href="collaborate/industry/#comfor_enterprise" style="margin-top: 1rem;">Learn More</a>
   </div>
 
