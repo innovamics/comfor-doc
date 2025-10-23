@@ -12,7 +12,7 @@ hide:
   </div>
 </div>
 
-**Comfor** is a modern, open-source simulation platform for composite forming
+<!-- **Comfor** is a modern, open-source simulation platform for composite forming
 and processing. Built in **C++17/20**, it uses an explicit finite element method
 (FEM) tailored to simulate complex manufacturing processes.
 
@@ -64,7 +64,51 @@ and transparency come first.
 
 > We believe open software leads to better science and better engineering.
 
----
+--- -->
+
+<div class="feature feature-right">
+  <div class="feature-content">
+    <h2>Open Source and Cross-Platform</h2>
+    <p><strong>Comfor</strong> is a fully <em>open-source</em> software, available on Windows, Linux, and macOS. Whether you are a researcher, student, or engineer, you can download precompiled binaries or build it from source to adapt it to your needs. Its transparent and well-documented code allows you to understand every step of the simulation process and actively contribute to its development. Join a vibrant community sharing improvements, examples, and tips to get the most out of Comfor.</p>
+    <p><a href="https://gitlab.com/innovamics/comfor" class="md-button">Explore the source code</a></p>
+  </div>
+  <div class="feature-image">
+    <img src="assets/img/filter_vtk.gif" alt="Open Source">
+  </div>
+</div>
+
+<div class="feature feature-left">
+  <div class="feature-content">
+    <h2>Advanced Composite Material Simulation</h2>
+    <p>With its <strong>explicit non-linear solver</strong>, Comfor enables modeling of complex composite materials with scientific accuracy. From elastic membranes to anisotropic textile composites, it can simulate large deformations and transient dynamic behavior reliably. Every material, element, and contact law is based on recent research, providing a solid foundation for engineering and research projects. <em>You have full control over your simulation parameters</em> while leveraging a robust and high-performance tool.</p>
+    <p><a href="docs/overview/" class="md-button">Discover the capabilities</a></p>
+  </div>
+  <div class="feature-image">
+    <img src="assets/img/filter_vtk.gif" alt="Composite Materials">
+  </div>
+</div>
+
+<div class="feature feature-right">
+  <div class="feature-content">
+    <h2>Interactive Results Visualization</h2>
+    <p>Comfor integrates seamlessly with <strong>Paraview</strong> to turn your simulations into interactive visualizations. Play animations, apply filters to isolate areas of interest, interpolate solutions between steps, and plot data intuitively. This approach makes it easy to <em>understand and present forces, displacements, and stresses</em> in your model, making your results both accurate and visually compelling.</p>
+    <p><a href="docs/postprocessing" class="md-button">See the visualization</a></p>
+  </div>
+  <div class="feature-image">
+    <img src="assets/img/filter_vtk.gif" alt="Results Visualization">
+  </div>
+</div>
+
+<div class="feature feature-left">
+  <div class="feature-content">
+    <h2>Designed for Research and Innovation</h2>
+    <p>Comfor is designed to support both cutting-edge research and professional engineering workflows. With a <strong>Community Edition</strong> for open research and an <strong>Enterprise Edition</strong> for large-scale industrial applications, it offers flexibility, high performance, and reliability. Researchers and engineers can also benefit from professional services, training programs, and collaborative partnerships to extend Comfor’s capabilities and drive innovation in composite simulation.</p>
+    <p><a href="collaborate/industry/" class="md-button">Discover editions & services</a></p>
+  </div>
+  <div class="feature-image">
+    <img src="assets/img/filter_vtk.gif" alt="Research and Innovation">
+  </div>
+</div>
 
 # Comfor Edition Comparison
 
@@ -100,7 +144,7 @@ and transparency come first.
 
 </div>
 
----
+<!-- ---
 
 # 🚀 Ready to Start?
 
@@ -130,7 +174,7 @@ features, or integration.
 
 [Visit the GitLab repository](https://gitlab.com/comfor){:target="_blank"}
 
----
+--- -->
 
 # License and Credits
 
