@@ -101,3 +101,41 @@
         padding: 0;
     }
 }
+
+.partner-slider {
+  overflow: hidden;
+  position: relative;
+  margin: 3rem 0;
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.slide-track a {
+  margin: 0 3rem;
+  padding: 10px 0;
+}
+
+.slide-track img {
+  height: 100px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-track img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+  z-index: 2;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
