@@ -1,7 +1,7 @@
 site_name: Comfor Documentation
 site_author: Eduardo Guzman
 site_dir: public
-site_url: https://innovamics.github.io/comfor-doc/
+site_url: !ENV [SITE_URL, "https://innovamics.github.io/comfor-doc"]
 repo_url: https://gitlab.com/comfor/comfor-doc
 repo_name: comfor/comfor
 copyright: Copyright &copy; 2021 - 2025 Eduardo Guzman
