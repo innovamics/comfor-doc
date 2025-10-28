@@ -11,7 +11,7 @@ docs_dir: docs
 nav:
   - "Home":
       - "Welcome": index.md
-  - "Getting Started":
+  - "Start here":
       - "Downloads": overview/download.md
       - "Quick Start": overview/quick_starter_guide.md
       - 'Tutorial': overview/tutorial.md
@@ -20,8 +20,9 @@ nav:
       - "Preprocessing": docs/preprocessing.md
       - "Running": docs/analysis.md
       - "Postprocessing": docs/postprocessing.md
-      - "Materials": docs/materials.md
-      - "Elements": docs/elements.md
+      - "Modules":
+        - "Materials": docs/materials.md
+        - "Elements": docs/elements.md
       - "Theory":
         - "Overview": docs/theory/theory_overview.md
         - "Continuum Mechanics": docs/theory/continuum_mechanics.md
@@ -33,9 +34,9 @@ nav:
       - "API": developers/api.md
       # - "License": developers/license.md
       - "Code of conduct": developers/code_of_conduct.md
-  - "Work with us":
-      - "Industry": collaborate/industry.md
-      - "Academy": collaborate/academy.md
+  - "Services":
+      - "Industry": services/industry.md
+      - "Academy": services/academy.md
   - "FAQ":
       - "FAQ": faq/faq.md
 
@@ -128,7 +129,7 @@ plugins:
           nav_translations:
             Home: Accueil
             Welcome: Bienvenue
-            Getting Started: Bien démarrer
+            Start here: Démarrer ici
             Downloads: Téléchargements
             Quick Start: Démarrage rapide
             Tutorial: Tutoriel
@@ -147,7 +148,6 @@ plugins:
             Developers: Développeurs
             License: Licence
             Code of conduct: Code de conduite
-            Work with us: Travaillez avec nous
             Industry: Entreprise
             Academy: Enseignement
             News: Actualités

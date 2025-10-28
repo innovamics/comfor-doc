@@ -5,11 +5,10 @@ besoins de la recherche ouverte et des applications industrielles.
 
 - **Comfor Community (Open Source)**: Édition open source destinée à la
   recherche et à l’enseignement, favorisant la transparence, la reproductibilité
-  et l’innovation collaborative.  
+  et l’innovation collaborative.
 - **Comfor Enterprise (Licence commerciale)**: Édition professionnelle
   développée et maintenue par _Innovamics_, offrant des performances accrues,
-  une stabilité renforcée et un support dédié. built for demanding industrial  
-  environments.
+  une stabilité renforcée et un support dédié.
   
 # Comfor Enterprise
 

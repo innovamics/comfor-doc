@@ -1,4 +1,8 @@
-# Latest version
+This page provides downloads for the **Comfor Community Edition**, the open-source version of Comfor designed for research and educational use.
+
+For advanced features, enterprise integrations, and professional support, see [**Comfor Enterprise**](../services/industry.md#comfor_editions).
+
+# Latest Community Version — v0.8.0
 
 === "Windows :fontawesome-brands-windows:"
 
