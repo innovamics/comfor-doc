@@ -23,8 +23,8 @@ before_script:
 test:
   stage: test
   script:
-  - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir test/en
-  - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir test/fr
+  - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../test/en
+  - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../test/fr
   artifacts:
     paths:
       - test
@@ -34,10 +34,8 @@ test:
 pages:
   stage: deploy
   script:
-    - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir public/en
-    - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir public/fr
-    - mkdir -p public
-    - ls -R public
+    - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../public/en
+    - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../public/fr
   artifacts:
     paths:
       - public
