@@ -1,0 +1,151 @@
+site_name: Comfor Documentation
+site_author: Eduardo Guzman
+site_url: !ENV [SITE_URL, "https://innovamics.github.io/comfor-doc"]
+repo_url: https://gitlab.com/comfor/comfor-doc
+repo_name: comfor/comfor
+copyright: Copyright &copy; 2021 - 2025 Eduardo Guzman
+
+docs_dir: ../../docs/fr
+site_dir: ../../public/comfor-doc/fr
+
+nav:
+  - "Accueil":
+      - "Bienvenue": index.md
+  - "Démarrer ici":
+      - "Téléchargements": overview/download.md
+      - "Démarrage rapide": overview/quick_starter_guide.md
+      - 'Tutoriel': overview/tutorial.md
+  - "Manuel":
+      - "Généralités": docs/overview.md
+      - "Pré-traitement": docs/preprocessing.md
+      - "Exécution": docs/analysis.md
+      - "Post-traitement": docs/postprocessing.md
+      - "Modules":
+        - "Matériaux": docs/materials.md
+        - "Eléments": docs/elements.md
+      - "Théorie":
+        - "Généralités": docs/theory/theory_overview.md
+        - "Mécanique des milieux continus": docs/theory/continuum_mechanics.md
+        - "Matériaux composites": docs/theory/materials/composite_materials.md
+        - "Matériaux": docs/theory/materials/materials_overview.md
+        - "Solveurs": docs/theory/solvers/solvers_overview.md
+  - "Développeurs":
+      - "Git": developers/git.md
+      - "API": developers/api.md
+      # - "Licence": developers/license.md
+      - "Code de conduite": developers/code_of_conduct.md
+  - "Services":
+      - "Entreprise": services/industry.md
+      - "Enseignement": services/academy.md
+  - "Blog":
+      - "Blog": blog/index.md
+  - "FAQ":
+      - "FAQ": faq/faq.md
+
+theme:
+  name: material
+  custom_dir: ../../overrides
+  logo: assets/img/logo-icon-innovamics.png
+  favicon: assets/img/apple-touch-icon-72x72.png
+  analytics:
+    gtag: "G-7CEE34RD0F"
+  language: fr
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - media: "(prefers-color-scheme: light)" # Automatic gestion of user's preferences
+      scheme: default # Light theme
+      toggle: # Theme changing button
+        icon: material/toggle-switch # Theme changing button style
+        name: Dark
+      primary: black
+      #primary: custom
+      #accent: custom
+      #default: custom
+      #typeset: custom
+    - media: "(prefers-color-scheme: dark)" # Automatic gestion of user's preferences
+      scheme: slate # Dark theme
+      toggle: # Theme changing button
+        icon: material/toggle-switch-off-outline # Theme changing button style
+        name: Light
+      primary: black
+      #primary: custom
+      #accent: custom
+      #default: custom
+      #typeset: custom
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+extra:
+  alternate:
+    - name: 🇬🇧 English
+      link: /comfor-doc/en/
+      lang: en
+    - name: 🇫🇷 Français
+      link: /comfor-doc/fr/
+      lang: fr
+
+markdown_extensions:
+  - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
+  - attr_list
+  - def_list
+  - footnotes
+  - fenced_code
+  - md_in_html # An extension that parses Markdown inside of HTML tags.
+  - pymdownx.arithmatex: # LaTeX syntax
+      generic: true
+  - pymdownx.emoji: # :smile: :heart: :thumbsup:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.highlight: # Code highlighting
+      use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite # `==highlighted text==`
+  - pymdownx.snippets # `{{snippet_name}}`
+  - pymdownx.superfences # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
+  - pymdownx.tasklist # - [X] item
+  - pymdownx.tabbed: # === "Tab 1"
+      alternate_style: true
+  - pymdownx.blocks.caption
+  - pymdownx.keys
+  - tables
+  - toc:
+      permalink: "#"
+      baselevel: 2
+      separator: "_"
+
+plugins:
+  - search:
+      lang: fr
+  - blog:
+      pagination_per_page: 5
+  - tags
+  - ignore_bibtex # Custom plugin to ignore @ outside [@]
+  - bibtex:
+      bib_file: "../../docs/Bibliography.bib"
+      csl_file: "overrides/assets/csl/nature.csl"
+
+extra_javascript:
+  - assets/js/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js
+  - assets/js/xy_graphs.js
+  # - assets/js/landing_page.js   
+  # - assets/js/table_rtd.js
+  # - assets/js/background_effects.js 
+
+extra_css:
+  # - assets/css/landing_page.css
+  - assets/css/faq_admonition.css
+  # - assets/css/tabbed.css
+  # - assets/css/home_page.css
+  # - assets/css/custom_colors.css
+  # - assets/css/background.css
+  # - assets/css/test.css # figure formatting

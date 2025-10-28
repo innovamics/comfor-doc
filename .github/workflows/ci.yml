@@ -8,6 +8,11 @@ on:
 permissions:
   contents: write
 
+env:
+  EN_CONFIG: config/en/mkdocs.yml
+  FR_CONFIG: config/fr/mkdocs.yml
+  SITE_URL: "https://innovamics.github.io/comfor-doc"
+
 jobs:
   test:
     if: github.ref != 'refs/heads/main'
@@ -22,9 +27,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pip install -e ./plugins/ignore_bibtex
       - run: export SITE_URL="https://innovamics.github.io/comfor-doc"
-      - run: mkdocs build --strict --verbose --site-dir test
-    env:
-      SITE_URL: "https://innovamics.github.io/comfor-doc"
+      - run: mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../test/en
+      - run: mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../test/fr
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -43,6 +47,5 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pip install -e ./plugins/ignore_bibtex
       - run: export SITE_URL="https://innovamics.github.io/comfor-doc"
-      - run: mkdocs gh-deploy --force
-    env:
-      SITE_URL: "https://innovamics.github.io/comfor-doc"
+      - run: mkdocs gh-deploy --config-file $EN_CONFIG --site-dir ../../public/en
+      - run: mkdocs gh-deploy --config-file $FR_CONFIG --site-dir ../../public/fr
