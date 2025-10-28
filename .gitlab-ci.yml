@@ -13,6 +13,7 @@ before_script:
   - pandoc --version
   - pip install -r requirements.txt
   - mkdocs --version
+  - export SITE_URL="https://comfor.gitlab.io/comfor-doc"
   
 
 test:
