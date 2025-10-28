@@ -1,0 +1,48 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -yq
+      - run: sudo apt-get install -yq pandoc
+      - run: pip install -r requirements.txt
+      - run: pip install -e ./plugins/ignore_bibtex
+      - run: export SITE_URL="https://innovamics.github.io/comfor-doc"
+      - run: mkdocs build --strict --verbose --site-dir test
+    env:
+      SITE_URL: "https://innovamics.github.io/comfor-doc"
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -yq
+      - run: sudo apt-get install -yq pandoc
+      - run: pip install -r requirements.txt
+      - run: pip install -e ./plugins/ignore_bibtex
+      - run: export SITE_URL="https://innovamics.github.io/comfor-doc"
+      - run: mkdocs gh-deploy --force
+    env:
+      SITE_URL: "https://innovamics.github.io/comfor-doc"
