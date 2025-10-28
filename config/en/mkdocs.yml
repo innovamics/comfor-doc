@@ -6,7 +6,7 @@ repo_name: comfor/comfor
 copyright: Copyright &copy; 2021 - 2025 Eduardo Guzman
 
 docs_dir: ../../docs/en
-site_dir: ../../public/en
+site_dir: ../../public/comfor-doc/en
 
 nav:
   - "Home":
@@ -83,10 +83,10 @@ theme:
 extra:
   alternate:
     - name: 🇬🇧 English
-      link: /en/
+      link: /comfor-doc/en/
       lang: en
     - name: 🇫🇷 Français
-      link: /fr/
+      link: /comfor-doc/fr/
       lang: fr
 
 markdown_extensions:
