@@ -36,6 +36,8 @@ pages:
   script:
     - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir public/en
     - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir public/fr
+    - mkdir -p public
+    - ls -R public
   artifacts:
     paths:
       - public
