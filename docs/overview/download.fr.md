@@ -1,8 +1,4 @@
-Cette page propose les téléchargements de l'édition **Comfor Community**, la version open source de Comfor destinée à la recherche et à l’enseignement.
-
-Pour accéder aux fonctionnalités avancées, aux intégrations professionnelles et au support dédié, consultez [**Comfor Enterprise**](../services/industry.md#editions_de_comfor).
-
-# Dernière version Community — v0.8.0
+# Dernière version
 
 === "Windows :fontawesome-brands-windows:"
 
