@@ -1,0 +1,2335 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Eduardo Guzman">
+      
+      
+        <link rel="canonical" href="https://innovamics.github.io/comfor-doc/docs/preprocessing/">
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../analysis/">
+      
+      
+      <link rel="icon" href="../../assets/img/apple-touch-icon-72x72.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Preprocessing - Comfor Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/faq_admonition.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#units" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Comfor Documentation" class="md-header__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
+      
+  <img src="../../assets/img/logo-icon-innovamics.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Comfor Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Preprocessing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Dark"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/comfor-doc/en/" hreflang="en" class="md-select__link">
+              🇬🇧 English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/comfor-doc/fr/" hreflang="fr" class="md-select__link">
+              🇫🇷 Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitlab.com/comfor/comfor-doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    comfor/comfor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../overview/download/" class="md-tabs__link">
+          
+  
+  
+  Start here
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developers/git/" class="md-tabs__link">
+          
+  
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../services/industry/" class="md-tabs__link">
+          
+  
+  
+  Services
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/faq/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Comfor Documentation" class="md-nav__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
+      
+  <img src="../../assets/img/logo-icon-innovamics.png" alt="logo">
+
+    </a>
+    Comfor Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitlab.com/comfor/comfor-doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    comfor/comfor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Start here
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Start here
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/quick_starter_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Preprocessing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preprocessing
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Units
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bim_input_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bim input file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bim input file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amplitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amplitudes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trackers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trackers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postprocessing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modules
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Materials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Theory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/theory_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/continuum_mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Continuum Mechanics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/materials/composite_materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composite Materials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/materials/materials_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Materials overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/solvers/solvers_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solvers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/code_of_conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code of conduct
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/industry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Industry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../services/academy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Academy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Units
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bim_input_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bim input file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bim input file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amplitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amplitudes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trackers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trackers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Preprocessing</h1>
+
+<p>Comfor has a general class for parsers <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, so in the future we will be able to create subclasses to read different data from other software (e.g. Abaqus). But for the moment Comfor reads a generic ASCII text file organized by blocks. The extension of this file is not important, but in the future we will associate the extension *.bim (basic input model), the structure of this file is detailed below. </p>
+<p>However, in the general case, each input file must define the following points:</p>
+<ul>
+<li>Meshing<ul>
+<li>Nodes</li>
+<li>Elements</li>
+</ul>
+</li>
+<li>Material</li>
+<li>Boundary conditions</li>
+<li>Loads</li>
+<li>Analysis</li>
+</ul>
+<h2 id="units">Units<a class="headerlink" href="#units" title="Permanent link">#</a></h2>
+<p>There are not unit system in Comfor. The user can use any consistent unit system <a href="https://femci.gsfc.nasa.gov/units/index.html" target="_blank">see</a>. The units must be consistent in that mathematical operations directly yield the correct units for the result quantity. For example for Newtons' law :</p>
+<div class="arithmatex">\[ \mathbf{f} = \mathbf{M} \mathbf{a} \]</div>
+<p>If the unit force is the the newton <span class="arithmatex">\(N\)</span>, the length unit is the <span class="arithmatex">\(mm\)</span> and the time unit is the second <span class="arithmatex">\(s\)</span>, the units for acceleration are <span class="arithmatex">\(mm/s^2\)</span> and the units for mass, must be <span class="arithmatex">\(kg \cdot 10^{3} = t\)</span> (metric ton).</p>
+<h2 id="bim_input_file">Bim input file<a class="headerlink" href="#bim_input_file" title="Permanent link">#</a></h2>
+<p>This type of file is structured by blocks. Each block is labeled and defines the input parameters of the model. Each block have a type depending on the label/category of the input data. The existing labels ans types are given in the following table.</p>
+<ul>
+<li><code>CONTROL</code>    </li>
+<li><code>MATERIAL</code><ul>
+<li>Hyperelastic</li>
+<li>Hypertextile</li>
+<li>Elastic</li>
+</ul>
+</li>
+<li><code>CONTRAINTS</code><ul>
+<li>Boundary_conditions  </li>
+</ul>
+</li>
+<li><code>AMPLITUDES</code>  <ul>
+<li>Tabular </li>
+</ul>
+</li>
+<li><code>NODES</code>   </li>
+<li><code>ELEMENTS</code><ul>
+<li>Shell_C03</li>
+<li>Membrane_3</li>
+<li>Contact_triangle</li>
+<li>Contact_line</li>
+<li>Rod_2</li>
+</ul>
+</li>
+<li><code>TRACKERS</code>  </li>
+</ul>
+<p>The general definition of one block is: </p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;block_label&gt;</span><span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;type_block&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;entry_1&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">&lt;entry_2&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">&lt;entry_3&gt;</span>
+</span></code></pre></div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The order of the block in the input file has not impact for parsing operation</p>
+</div>
+<h3 id="control">Control<a class="headerlink" href="#control" title="Permanent link">#</a></h3>
+<p>This block defines the control parameters of the explicit analysis. </p>
+<ul>
+<li>Start and end time of the analysis<ul>
+<li><code>RUN FROM .. TO ..</code></li>
+</ul>
+</li>
+<li>Time step (optional)<ul>
+<li><code>STEP</code></li>
+</ul>
+</li>
+<li>Printing step<ul>
+<li><code>PRINT EVERY</code></li>
+</ul>
+</li>
+</ul>
+<p>The associated label is <code>CONTROLS</code>. </p>
+<p><strong>Structure</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CONTROLS
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>RUN<span class="w"> </span>FROM<span class="w"> </span><span class="nt">&lt;start_time&gt;</span><span class="w"> </span>TO<span class="w"> </span><span class="nt">&lt;end_time&gt;</span><span class="w"> </span>STEP<span class="w"> </span><span class="nt">&lt;time_step&gt;</span><span class="w"> </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>PRINT<span class="w"> </span>EVERY<span class="w"> </span><span class="nt">&lt;print_step&gt;</span><span class="w"> </span>
+</span></code></pre></div>
+<p>If the <code>STEP</code> label is not specified, the time step will be set automatically according to the material and the mesh type.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In future version the solver type would be defined here.</p>
+</div>
+<h3 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">#</a></h3>
+<p>This blocks defines the materials of the model. Each block contains a group of materials of the same type. The general structure is :</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>MATERIALS<span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;material_type_1&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;material_1_name&gt;</span><span class="w"> </span>RHO<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;density&gt;</span><span class="w"> </span>DAMPING<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;material1_damping_value&gt;</span><span class="w"> </span><span class="nt">&lt;prop_1&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">&lt;material_2_name&gt;</span><span class="w"> </span>RHO<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;density&gt;</span><span class="w"> </span>DAMPING<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;material2_damping-value&gt;</span><span class="w"> </span><span class="nt">&lt;prop_1&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>MATERIALS<span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;material_type_2&gt;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nt">&lt;material_3_name&gt;</span><span class="w"> </span>RHO<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;density&gt;</span><span class="w"> </span>DAMPING<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;material1_damping_value&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">&lt;material_4_name&gt;</span><span class="w"> </span>RHO<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;density&gt;</span><span class="w"> </span>DAMPING<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;material2_damping-value&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...
+</span></code></pre></div>
+<ul>
+<li><code>&lt;material_type&gt;</code> defines the constitutive model of the material. </li>
+<li><code>&lt;material_1_name&gt;</code> is the custom name for the material 1 (defined by the user)</li>
+<li><code>RHO</code> parameter make reference to the mass density of the material and <strong>must</strong> be defined in all cases.  </li>
+<li><code>DAMPING</code> is the mass proportional damping. This factor introduces damping forces caused by the absolute velocities of the model. This parameter is optional.</li>
+<li><code>&lt;prop_n&gt;</code> Defines the value of the property with name <code>prop_n</code>. The labels depends of each material. </li>
+</ul>
+<p>To see the available list of materials see <a href="../materials/">Material</a> </p>
+<p><em>Example</em>: </p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">MATERIAL</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">Elastic</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">aluminium</span><span class="w"> </span><span class="nx">rho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.7e-9</span><span class="w"> </span><span class="nx">nu</span><span class="o">=</span><span class="mf">0.3</span><span class="w"> </span><span class="nx">E</span><span class="o">=</span><span class="mf">70000</span>
+</span></code></pre></div>
+<h3 id="amplitudes">Amplitudes<a class="headerlink" href="#amplitudes" title="Permanent link">#</a></h3>
+<p>An amplitude allows to impose a time dependent behavior for constraints and loads.</p>
+<p><strong>Structure</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>AMPLITUDES<span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;amplitude_type_1&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">&lt;amplitude_1_name&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">&lt;amplitude_2_name&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...
+</span></code></pre></div>
+<ul>
+<li><code>&lt;amplitude_type&gt;</code> defines the amplitude type of the model material. </li>
+<li><code>amplitude_1_name&gt;</code> is the custom name for the first amplitude 1 (defined by the user)</li>
+<li><code>&lt;prop_n&gt;</code> Defines the value of the property with name <code>prop_n</code>. The labels depends of each amplitude type.</li>
+</ul>
+<p>At this moment only tabular amplitudes are supported. The structure is given by:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>AMPLITUDES<span class="w"> </span>TYPE<span class="w"> </span>TABULAR
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">&lt;amplitude_1_name&gt;</span><span class="w"> </span>VALUES<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;t1</span><span class="w"> </span><span class="err">,</span><span class="w"> </span><span class="err">v1,</span><span class="w"> </span><span class="err">t2,</span><span class="w"> </span><span class="err">v2,</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">,</span><span class="w"> </span><span class="err">tn,</span><span class="w"> </span><span class="err">vn</span><span class="nt">&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">&lt;amplitude_2_name&gt;</span><span class="w"> </span>VALUES<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;t1</span><span class="w"> </span><span class="err">,</span><span class="w"> </span><span class="err">v1,</span><span class="w"> </span><span class="err">t2,</span><span class="w"> </span><span class="err">v2,</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">,</span><span class="w"> </span><span class="err">tn,</span><span class="w"> </span><span class="err">vn</span><span class="nt">&gt;</span>
+</span></code></pre></div>
+<p>where <code>tn, vn</code> defines the value <span class="arithmatex">\(v_n\)</span> of the amplitude at time <span class="arithmatex">\(t_n\)</span>. The values between <span class="arithmatex">\(t_n\)</span> and <span class="arithmatex">\(t_{n+1}\)</span> are linear interpolated.</p>
+<p><em>Example</em>: </p>
+<p><div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">AMPLITUDES</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">TABULAR</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">Palier</span><span class="w">   </span><span class="nx">VALUES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">,</span><span class="mf">1</span><span class="w"> </span><span class="p">,</span><span class="mf">1</span><span class="w"> </span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">Increase</span><span class="w"> </span><span class="nx">VALUES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">,</span><span class="mf">7</span><span class="w"> </span><span class="p">,</span><span class="mf">1</span><span class="w"> </span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nx">Decrease</span><span class="w"> </span><span class="nx">VALUES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">,</span><span class="mf">7</span><span class="w"> </span><span class="p">,</span><span class="mf">0</span><span class="w"> </span>
+</span></code></pre></div>
+Defines the amplitude: </p>
+<canvas id="Amplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
+
+<h3 id="constraints">Constraints<a class="headerlink" href="#constraints" title="Permanent link">#</a></h3>
+<p>This block defines the different constraints of the model. Each Block contains different constraints of the same type. </p>
+<p><strong>Structure</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>CONSTRAINTS<span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;constraint_type_1&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">&lt;constraint_1_name&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>CONSTRAINTS<span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;constraint_type_1&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nt">&lt;constraint_n_name&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...<span class="w"> </span>AMPLITUDE<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;amplitude_name&gt;</span>
+</span></code></pre></div>
+<ul>
+<li><code>&lt;constraint_type&gt;</code>: defines the constraint type of the model material. </li>
+<li><code>contraint_n_name&gt;</code>: is the custom name for the amplitude n (defined by the user)</li>
+<li><code>&lt;prop_n&gt;</code>: Defines the value of the property with name <code>prop_n</code>. The labels depends of each constraint type type.</li>
+<li><code>AMPLITUDE</code>: Indicates that an amplitude is associated to this constraint<ul>
+<li><code>&lt;amplitude_name&gt;</code>: amplitude name to be applied to this constraint, as specified in the amplitude block.</li>
+</ul>
+</li>
+</ul>
+<p>At this moment only the only type of constraint is <code>boundary_conditions</code>. This
+constraints allows to fix the degrees of freedom of the node.The structure is given by:</p>
+<p><div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>CONSTRAINTS<span class="w"> </span>TYPE<span class="w"> </span>BOUNDARY_CONDITION
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">&lt;bc_1_name&gt;</span><span class="w"> </span>VX<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>VY<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>VZ<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>VRX<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>VRY<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>VRZ<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>AX<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>AY<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>AZ<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>ARX<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>ARY<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w"> </span>ARZ<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nt">&lt;bc_with_amplitude&gt;</span><span class="w"> </span>VX<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value&gt;</span><span class="w">  </span>...<span class="w"> </span>AMPLITUDE<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;amplitude_name&gt;</span>
+</span></code></pre></div>
+where <code>VI</code> defines the value displacement rate in direction I(X,Y,Z), <code>VRI</code> defines the rotational rate in direction I(X,Y,Z), <code>AI</code> defines the value displacement acceleration in direction I(X,Y,Z), <code>ARI</code> defines the rotational acceleration rate in direction I(X,Y,Z). Finally, you can use an amplitude from the amplitude block to modify the absolute value of the boundary condition. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the DOF is not fixed, then is free. </p>
+</div>
+<p><em>Example</em>: </p>
+<p><div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">CONSTRAINTS</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">BOUNDARY_CONDITION</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">FIX_ROT</span><span class="w">  </span><span class="nx">VRX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">O</span><span class="p">.</span><span class="w"> </span><span class="nx">VRY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">O</span><span class="p">.</span><span class="w"> </span><span class="nx">VRZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">O</span><span class="p">.</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">PINNED</span><span class="w">   </span><span class="nx">VX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">O</span><span class="p">.</span><span class="w">  </span><span class="nx">VY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">O</span><span class="p">.</span><span class="w">  </span><span class="nx">VZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">O</span><span class="p">.</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nx">VX_AMP</span><span class="w">   </span><span class="nx">VX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.</span><span class="w">  </span><span class="nx">AMPLITUDE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Increase</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nx">AMPLITUDES</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">TABULAR</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nx">Increase</span><span class="w"> </span><span class="nx">VALUES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">,</span><span class="mf">7</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="w"> </span>
+</span></code></pre></div>
+The displacement rate evolution is given by: </p>
+<canvas id="BCAmplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The order of blocks doesn't have any importance, you can make reference to an amplitude even if the amplitude block is defined after.</p>
+</div>
+<h3 id="loads">Loads<a class="headerlink" href="#loads" title="Permanent link">#</a></h3>
+<p>This block defines the different loads of the model. Each block may contain loads of different types.</p>
+<p><strong>Structure</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>LOADS<span class="w"> </span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nt">&lt;load_1_name&gt;</span><span class="w"> </span><span class="nt">&lt;load_type_1&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_Load&gt;</span><span class="w"> </span><span class="nt">&lt;load_type_2&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_Load&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nt">&lt;load_2_name&gt;</span><span class="w"> </span><span class="nt">&lt;load_type_3&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_Load&gt;</span><span class="w"> </span>Amplitude<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;amplitude_name&gt;</span>
+</span></code></pre></div>
+<ul>
+<li><code>&lt;load_n_name&gt;</code>: is the custom name for the load n (defined by the user)</li>
+<li><code>&lt;load_type&gt;</code>: Defines the type of load to be defined, options are:<ul>
+<li><code>P</code>: Defines a normal pressure to an element face</li>
+<li><code>AX,AY,AZ</code>: Defines nodal acceleration field in the direction <code>X,Y,Z</code></li>
+<li><code>FX,FY,FZ</code>: Defines a punctual nodal force in the direction <code>X,Y,Z</code></li>
+</ul>
+</li>
+<li><code>AMPLITUDE</code>: Indicates that an amplitude is associated to this load.<ul>
+<li><code>&lt;amplitude_name&gt;</code>: amplitude name to be applied to this load as specified in the amplitude block.</li>
+</ul>
+</li>
+</ul>
+<p><em>Example</em>:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">LOADS</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nx">punctual_force</span><span class="w">   </span><span class="nx">FX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nx">gravity_field</span><span class="w">    </span><span class="nx">AZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.8</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nx">normal_pressure</span><span class="w">  </span><span class="nx">P</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">1.0</span><span class="w"> </span><span class="nx">AMPLITUDE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">vacuum</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nx">AMPLITUDES</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">TABULAR</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nx">vacuum</span><span class="w"> </span><span class="nx">VALUES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mf">5.</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.0</span><span class="w"> </span>
+</span></code></pre></div>
+<canvas id="LoadAmplitude" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
+
+<h3 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">#</a></h3>
+<p>This block defines the position of the different nodes in the model, *<em>and</em> eventually the constraints and loads applied to each node. </p>
+<p><strong>Structure</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>NODES
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">&lt;node_number_1&gt;</span><span class="w"> </span>X<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;x_coord&gt;</span><span class="w"> </span>Y<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;y_coord&gt;</span><span class="w"> </span>Z<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;z_coord&gt;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nt">&lt;node_number_2&gt;</span><span class="w"> </span>X<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;x_coord&gt;</span><span class="w"> </span>Y<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;y_coord&gt;</span><span class="w"> </span>Z<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;z_coord&gt;</span><span class="w"> </span>CONSTRAINT<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;constraint_name&gt;</span><span class="w"> </span>LOAD<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;load_name&gt;</span><span class="w"> </span>
+</span></code></pre></div>
+<ul>
+<li><code>&lt;node_number&gt;</code>: integer node number</li>
+<li><code>&lt;X&gt;</code>: x-coordinate</li>
+<li><code>&lt;Y&gt;</code>: y-coordinate</li>
+<li><code>&lt;Z&gt;</code>: z-coordinate</li>
+<li><code>CONSTRAINT</code>: Indicates that a constraint is associated to this node.<ul>
+<li><code>&lt;constraint_name&gt;</code>: constraint name to be applied to this node as specified in the constraint block.</li>
+</ul>
+</li>
+<li><code>LOAD</code>: Indicates that a load is associated to this node.<ul>
+<li><code>&lt;load_name&gt;</code>: load name to be applied to this node as specified in the load block.</li>
+</ul>
+</li>
+</ul>
+<p><em>Example</em>:</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">NODES</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="mi">1</span><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">3.0</span><span class="w">    </span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="n">Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FIXED_XY</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="mi">2</span><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">5.0</span><span class="w">    </span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="w"> </span><span class="n">Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">LOAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_FORCE</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="mi">3</span><span class="w">   </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">7.0</span><span class="w">    </span><span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="n">Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FIXED_XY</span><span class="w"> </span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">CONSTRAINTS</span><span class="w"> </span><span class="n">TYPE</span><span class="w"> </span><span class="n">BOUNDARY_CONDITION</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">FIXED_XY</span><span class="w"> </span><span class="n">VX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">VY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">VZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">LOADS</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">P_FORCE</span><span class="w">   </span><span class="n">FZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span>
+</span></code></pre></div>
+<p>This defines 3 points :</p>
+<canvas id="NodeTri" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
+
+<h3 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">#</a></h3>
+<p>This block defines the different elements of the model. Each block contains a group of elements of the same type. The general structure is:</p>
+<p><strong>Structure</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ELEMENTS<span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;element_type&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nt">&lt;element_number_1&gt;</span><span class="w"> </span>NODES<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;node_number_1</span><span class="w"> </span><span class="err">node_number_2</span><span class="w"> </span><span class="err">node_number_3</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w"> </span>MATERIAL<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;material_name&gt;</span><span class="w"> </span>T<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;thickness_value&gt;</span><span class="w"> </span>LOAD<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;load_name&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...<span class="w"> </span>
+</span></code></pre></div>
+<ul>
+<li><code>&lt;element_number&gt;</code>: integer element number</li>
+<li><code>NODES</code>: defines the connectivity input of the element<ul>
+<li><code>&lt;node_number_1&gt;</code>: number of the first node as given in the node block</li>
+<li><code>&lt;node_number_2&gt;</code>: number of the second node as given in the node block</li>
+<li><code>&lt;node_number_3&gt;</code>: number of the third node as given in the node block</li>
+<li>...</li>
+</ul>
+</li>
+<li><code>MATERIAL</code>: defines the material of the element<ul>
+<li><code>&lt;material_name&gt;</code>: material name as given in the material block</li>
+</ul>
+</li>
+<li><code>T</code>: Defines the thickness value (only for shells)<ul>
+<li><code>&lt;thickness_value&gt;</code>: the thickness value</li>
+</ul>
+</li>
+<li><code>LOAD</code>: Indicates that a load is associated to this element.<ul>
+<li><code>&lt;load_name&gt;</code>: load name to be applied to this element as specified in the load block.</li>
+</ul>
+</li>
+<li><code>&lt;prop_n&gt;</code> Defines the value of the property with name <code>prop_n</code>. The labels depends of each element </li>
+</ul>
+<p>To see the available list of materials see <a href="../elements/">Elements</a> </p>
+<p><em>Example</em>: </p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">ELEMENTS</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">MEMBRANE_3</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="mf">1</span><span class="w"> </span><span class="nx">NODES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="nx">MATERIAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elastic</span><span class="w"> </span><span class="nx">T</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">1.0</span><span class="w"> </span><span class="nx">LOAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">vacuum</span>
+</span></code></pre></div>
+<p>This defines a triangular membrane element from node 1, 2 and 3, using the constitutive behavior defined for the elastic material.</p>
+<canvas id="ElementTri" width="700" height="400">Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.</canvas>
+
+<h3 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">#</a></h3>
+<p>Contact is enable by adding the key label <code>CONTACT =</code> after the definition of each element line. Friction is enable by using <code>FRICTION = &lt;friction_value&gt;</code>. You can specify two contact types:</p>
+<ul>
+<li><code>CONTACT = BASIC</code>: The element (contact surface) is going to detect the nodes penetrating the surface and is gonna compute the necessary force to enforce contact.</li>
+<li><code>CONTACT = EDGE</code>: Enables contact surface + detects any edge in contact with the edges of the element.</li>
+</ul>
+<p><em>Example</em>: </p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">ELEMENTS</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">MEMBRANE_3</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="mf">1</span><span class="w"> </span><span class="nx">NODES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="nx">MATERIAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elastic</span><span class="w"> </span><span class="nx">T</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">1.0</span><span class="w"> </span><span class="nx">CONTACT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edge</span><span class="w"> </span><span class="nx">FRICTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span>
+</span></code></pre></div>
+<h3 id="trackers">Trackers<a class="headerlink" href="#trackers" title="Permanent link">#</a></h3>
+<p>Finally we can use tracker objects to track some nodal or element information. This information is printed into a CSV file for each <a href="#control"><code>print_step</code></a> and for each node/element specified in the tracker definition. </p>
+<p><strong>Structure</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>TRACKER<span class="w"> </span>TYPE<span class="w"> </span><span class="nt">&lt;tracker_type&gt;</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nt">&lt;tracker_1_name&gt;</span><span class="w"> </span><span class="nt">&lt;list&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;object_number&gt;</span><span class="w"> </span>TYPE<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;information_type&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...<span class="w"> </span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="nt">&lt;tracker_2_name&gt;</span><span class="w"> </span><span class="nt">&lt;list&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;object_number&gt;</span><span class="w"> </span>TYPE<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;information_type&gt;</span><span class="w"> </span><span class="nt">&lt;prop_n&gt;</span><span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;value_prop_n&gt;</span><span class="w"> </span>...<span class="w"> </span>
+</span></code></pre></div>
+<ul>
+<li><code>&lt;tracker_type&gt;</code>: defines the the tracker nature of the block.<ul>
+<li><code>ELEMENT</code>: define a tracker block for elements.</li>
+<li><code>NODES</code>: define a tracker block for nodes.</li>
+</ul>
+</li>
+<li><code>&lt;tracker_n_name&gt;</code> is the custom name for the tracker n (defined by the user)</li>
+<li><code>&lt;list&gt;</code>: lit of nodes or elements to be tracked.  <ul>
+<li><code>NODES</code>: follow by the node numbers to be tracked.</li>
+<li><code>ELEMENTS</code>: follow by the element numbers to be tracked.</li>
+</ul>
+</li>
+<li><code>&lt;prop_n&gt;</code> Defines the value of the property with name <code>prop_n</code>. The labels depends of each tracker block.</li>
+</ul>
+<p>As you see, we can track nodal an element information. </p>
+<p>For nodes :</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>TRACKER<span class="w"> </span>TYPE<span class="w"> </span>NODES
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nt">&lt;tracker_1_name&gt;</span><span class="w"> </span>NODES<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;node_number_1</span><span class="w"> </span><span class="err">node_number_2</span><span class="w"> </span><span class="err">node_number_3</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w">  </span>TYPE<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;information_type&gt;</span><span class="w"> </span>DIRECTION<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;direction_axis&gt;</span><span class="w"> </span>
+</span></code></pre></div>
+<ul>
+<li><code>NODES</code>: defines the list of the nodes ID to be tracked<ul>
+<li><code>&lt;node_number_1&gt;</code>: number of the first node as given in the node block</li>
+<li><code>&lt;node_number_2&gt;</code>: number of the second node as given in the node block</li>
+<li><code>&lt;node_number_3&gt;</code>: number of the third node as given in the node block</li>
+<li>...</li>
+</ul>
+</li>
+<li><code>TYPE</code>: nodal information to be tracked.<ul>
+<li><code>FORCE</code>: Nodal force</li>
+<li><code>MOMENT</code>: Nodal moments </li>
+<li><code>POSITION</code>: Nodal position</li>
+<li><code>VELOCITY</code>: Nodal velocity</li>
+<li><code>ACCELERATION</code>: Nodal acceleration</li>
+<li><code>CONTACTFORCE</code>: Nodal contact force</li>
+</ul>
+</li>
+<li><code>DIRECTION</code>: Component of the nodal information tensor<ul>
+<li><code>X</code>: X component</li>
+<li><code>Y</code>: Y component</li>
+<li><code>Z</code>: Z component</li>
+</ul>
+</li>
+</ul>
+<p><em>Example</em>:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">TRACKERS</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">NODE</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nx">FY</span><span class="w"> </span><span class="nx">NODES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="mf">8</span><span class="p">]</span><span class="w"> </span><span class="nx">DIRECTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Y</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FORCE</span>
+</span></code></pre></div>
+<p>For elements :</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>TRACKER<span class="w"> </span>TYPE<span class="w"> </span>ELEMENT
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nt">&lt;tracker_1_name&gt;</span><span class="w"> </span>ELEMENTS<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;element_number_1</span><span class="w"> </span><span class="err">element_number_2</span><span class="w"> </span><span class="err">element_number_3</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span><span class="w">  </span>TYPE<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;type_tensor&gt;</span><span class="w"> </span>COMPONENT<span class="w"> </span>=<span class="w"> </span><span class="nt">&lt;component_tensor&gt;</span>
+</span></code></pre></div>
+<ul>
+<li><code>NODES</code>: defines the list of the nodes ID to be tracked<ul>
+<li><code>&lt;node_number_1&gt;</code>: number of the first node as given in the node block</li>
+<li><code>&lt;node_number_2&gt;</code>: number of the second node as given in the node block</li>
+<li><code>&lt;node_number_3&gt;</code>: number of the third node as given in the node block</li>
+<li>...</li>
+</ul>
+</li>
+<li><code>TYPE</code>: element information to be tracked.<ul>
+<li><code>STRESS</code>: Stress tensor</li>
+<li><code>STRAIN</code>: Strain tensor </li>
+</ul>
+</li>
+<li><code>COMPONENT</code>: Component of the tensor<ul>
+<li><code>Cii</code>: Gives the component <span class="arithmatex">\({A}_{ii}\)</span> of the tensor <span class="arithmatex">\(\mathbf{A}\)</span> of type <code>&lt;type_tensor&gt;</code></li>
+</ul>
+</li>
+</ul>
+<p><em>Example</em>:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nx">TRACKERS</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="nx">ELEMENT</span><span class="w"> </span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nx">shear_angle_a</span><span class="w"> </span><span class="nx">ELEMENTS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="mf">7</span><span class="p">,</span><span class="mf">8</span><span class="p">,</span><span class="mf">9</span><span class="p">]</span><span class="w"> </span><span class="nx">COMPONENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">C23</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strain</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nx">shear_angle_b</span><span class="w"> </span><span class="nx">ELEMENTS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">12</span><span class="p">]</span><span class="w"> </span><span class="nx">COMPONENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">C23</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strain</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="nx">shear_angle_c</span><span class="w"> </span><span class="nx">ELEMENTS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">11</span><span class="p">]</span><span class="w"> </span><span class="nx">COMPONENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">C23</span><span class="w"> </span><span class="nx">TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strain</span>
+</span></code></pre></div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Parsing, syntax analysis, or syntactic analysis is the process of analyzing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar. <a href="https://en.wikipedia.org/wiki/Parsing" target="_blank">Wikipedia</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Running">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Running
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2025 Eduardo Guzman
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../assets/js/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+      
+        <script src="../../assets/js/xy_graphs.js"></script>
+      
+    
+  </body>
+</html>

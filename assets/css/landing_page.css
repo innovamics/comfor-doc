@@ -1,0 +1,48 @@
+.fullscreen-banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: -50vw;
+  left: 50%;
+  background: url('../img/landing_background.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -7.3rem;
+  overflow: hidden;
+}
+
+.fullscreen-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--md-primary-fg-color) 100%);
+  pointer-events: none;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+body.is-home .md-header,
+body.is-home .md-tabs {
+  background: transparent !important;
+  box-shadow: none !important;
+  /* transition: background-color 0.2s ease, box-shadow 0.2s ease; */
+}
+
+body.is-home .md-header.scrolled {
+  background: var(--md-primary-fg-color) !important;
+  box-shadow: var(--md-shadow-z1) !important;
+}
+
+.md-tabs {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
