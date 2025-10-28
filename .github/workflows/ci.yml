@@ -47,5 +47,5 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pip install -e ./plugins/ignore_bibtex
       - run: export SITE_URL="https://innovamics.github.io/comfor-doc"
-      - run: mkdocs gh-deploy --config-file $EN_CONFIG --site-dir ../../public/en
-      - run: mkdocs gh-deploy --config-file $FR_CONFIG --site-dir ../../public/fr
+      - run: mkdocs gh-deploy --config-file $EN_CONFIG --site-dir ../../public/en --force
+      - run: mkdocs gh-deploy --config-file $FR_CONFIG --site-dir ../../public/fr --force
