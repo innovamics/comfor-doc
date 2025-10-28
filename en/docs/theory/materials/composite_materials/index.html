@@ -1,0 +1,2696 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Eduardo Guzman">
+      
+      
+        <link rel="canonical" href="https://innovamics.github.io/comfor-doc/docs/theory/materials/composite_materials/">
+      
+      
+        <link rel="prev" href="../../continuum_mechanics/">
+      
+      
+        <link rel="next" href="../materials_overview/">
+      
+      
+      <link rel="icon" href="../../../../assets/img/apple-touch-icon-72x72.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Composite Materials - Comfor Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/faq_admonition.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#continuous_fiber_and_organic_matrix_composites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Comfor Documentation" class="md-header__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/img/logo-icon-innovamics.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Comfor Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Composite Materials
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Dark"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Light"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/comfor-doc/en/" hreflang="en" class="md-select__link">
+              🇬🇧 English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/comfor-doc/fr/" hreflang="fr" class="md-select__link">
+              🇫🇷 Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitlab.com/comfor/comfor-doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    comfor/comfor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../overview/download/" class="md-tabs__link">
+          
+  
+  
+  Start here
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../overview/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../developers/git/" class="md-tabs__link">
+          
+  
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../services/industry/" class="md-tabs__link">
+          
+  
+  
+  Services
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../faq/faq/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Comfor Documentation" class="md-nav__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/img/logo-icon-innovamics.png" alt="logo">
+
+    </a>
+    Comfor Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitlab.com/comfor/comfor-doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    comfor/comfor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Start here
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Start here
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/quick_starter_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../preprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preprocessing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../postprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postprocessing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modules
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Materials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Theory
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../theory_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../continuum_mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Continuum Mechanics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Composite Materials
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composite Materials
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continuous_fiber_and_organic_matrix_composites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous fiber and organic matrix composites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous fiber and organic matrix composites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the_reinforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The reinforcement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the_matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      The matrix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thermosets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermosets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermoplastics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermoplastics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepregs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepregs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing_processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manufacturing processes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturing processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquid_composite_moulding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liquid Composite Moulding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vacuum_infusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vacuum infusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resin_transfer_moulding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resin transfer moulding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermoforming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermoforming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling_and_simulation_approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling and Simulation approaches.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling and Simulation approaches.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modeling_at_the_microscopic_scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling at the microscopic scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesoscopic_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mesoscopic simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macroscale_modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macroscale modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macroscale modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometrical_approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometrical approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mechanical_approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mechanical approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../materials_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Materials overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solvers/solvers_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solvers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developers/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developers/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../developers/code_of_conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code of conduct
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../services/industry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Industry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../services/academy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Academy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../faq/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continuous_fiber_and_organic_matrix_composites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous fiber and organic matrix composites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous fiber and organic matrix composites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the_reinforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The reinforcement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the_matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      The matrix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thermosets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermosets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermoplastics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermoplastics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepregs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepregs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing_processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manufacturing processes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturing processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquid_composite_moulding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liquid Composite Moulding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vacuum_infusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vacuum infusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resin_transfer_moulding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resin transfer moulding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermoforming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thermoforming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling_and_simulation_approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling and Simulation approaches.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling and Simulation approaches.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modeling_at_the_microscopic_scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling at the microscopic scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesoscopic_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mesoscopic simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macroscale_modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macroscale modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Macroscale modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometrical_approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometrical approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mechanical_approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mechanical approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Composite Materials</h1>
+
+<p>A composite material is an assembly of two or more immiscible constituents whose properties meet specific needs not met individually by the basic components. This definition includes a wide range of materials, some natural and long used such as wood, bone or cob, and others more recently developed such as tires or reinforced concrete. All these materials have in common the fact that they are composed of two components: the reinforcement that gives the final product its dominant mechanical characteristics and the matrix that provides the cohesion of the whole. The will to use specific materials for each application, with the aim of optimizing costs and mechanical performance, makes composites a serious candidate.</p>
+<p>The matrices of currently developed composite materials are generally classified into two categories:</p>
+<ul>
+<li>
+<p><em>Organic matrices</em> (thermoplastic polymers, thermosets and elastomers). They represent the vast majority of matrices used industrially because of their low cost and ease of implementation.</p>
+</li>
+<li>
+<p><em>Mineral matrices</em> (ceramic and metallic). Ceramic and metallic matrices are intended for advanced applications. They are used when environmental conditions do not allow the use of an organic matrix (high temperatures, unfavorable hygrometry).</p>
+</li>
+</ul>
+<p>Reinforcements can be classified according to their geometry:</p>
+<ul>
+<li>
+<p><em>Particulate reinforcements</em>: the matrix is reinforced by a dispersed phase of particles with or without preferred orientation. These are generally granular (chalk), lamellar (talc, mica) or acicular (wallastonite, short fibres) inclusions. Composites with particulate reinforcement are rarely used for structural purposes, but rather for specific applications or for consumer products.</p>
+</li>
+<li>
+<p><em>Staple fiber reinforcements</em>: the matrix is reinforced by a dispersed phase of short fibers (lengths less than 100 times their diameter) with or without a preferred orientation. The short fibers are assembled in layers called strands and represent a volume contribution in fiber of about 30%. The composite obtained is then a reinforced polymer.</p>
+</li>
+<li>
+<p><em>Continuous fiber reinforcements</em>: the matrix is reinforced by a dispersed phase of continuous fibers whose length is close to that of the final part. The preferred directions of the fibers give the final part its main mechanical characteristics. In this type of reinforcement, the matrix is only present to ensure the cohesion of the whole and to bring a resistance to the efforts applied in directions different from those of the fibres.</p>
+</li>
+</ul>
+<p>Comfor allows to model at this moment only <strong>Continuous fiber reinforcements</strong>.</p>
+<h2 id="continuous_fiber_and_organic_matrix_composites">Continuous fiber and organic matrix composites<a class="headerlink" href="#continuous_fiber_and_organic_matrix_composites" title="Permanent link">#</a></h2>
+<p>Continuous fiber and organic matrix composites are widely used in industry, particularly in the military sector<sup id="fnref:BHA16"><a class="footnote-ref" href="#fn:BHA16">1</a></sup>, aeronautics or in shipbuilding<sup id="fnref:SMI90"><a class="footnote-ref" href="#fn:SMI90">2</a></sup> <sup id="fnref:MOU01"><a class="footnote-ref" href="#fn:MOU01">3</a></sup>. Since a few years, the automotive sector also shows a growing interest for these materials in order to reduce the mass of the vehicles<sup id="fnref:VER06"><a class="footnote-ref" href="#fn:VER06">4</a></sup> <sup id="fnref:FUC08"><a class="footnote-ref" href="#fn:FUC08">5</a></sup>.</p>
+<h3 id="the_reinforcement">The reinforcement<a class="headerlink" href="#the_reinforcement" title="Permanent link">#</a></h3>
+<p>Depending on the purpose of the fiber, several types of compositions can be used as raw material. <strong>Fibers</strong> must be produced and then assembled into <strong>yarns</strong> that will be linked by weaving according to different patterns, the <strong>reinforcement</strong> is thus obtained.</p>
+<p>The architecture of the reinforcement weave can be 2D (surface), 2.5D (interlocks) or 3D (three-dimensional). The first one corresponds to an interlacing of wicks according to two directions, the warp and the weft. The type of arrangement used is called reinforcement weave and is the traditional textile used in industry. For 3D weaves, a third sliver direction is added in the thickness of the reinforcement. Finally, the so-called 2.5D weaves are located at the border of the 2D and 3D reinforcements. Yarns will then seek in the upper and lower layers one or more weft rovings in order to link the layers together.</p>
+<p>Depending on the manufacturing process, the addition of the matrix takes place before the forming step, like the thermoforming process, or after, this is the case of LCM (Liquid Composite Moulding) processes.</p>
+<p>For 2D fabrics, there are three main weaves:</p>
+<ul>
+<li>
+<p><em>Cloth or taffeta</em>, the simplest weave: each warp thread passes alternately above and below each weft thread.</p>
+</li>
+<li>
+<p><em>Twill</em> NxM : the weft thread passes over N and then under M warp threads, shifting one thread at each pass.</p>
+</li>
+<li>
+<p><em>Satin</em>: the binding points of the warp and weft are scattered in order to reduce the diagonal effect present on the twill. The weft thread passes over N warp threads and then under 1.</p>
+</li>
+</ul>
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/tissage2D1.svg" width="200" />
+    <figcaption>Taffeta</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/tissage2D2.svg" width="200" />
+    <figcaption>Twill</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/tissage2D3.svg" width="200" />
+    <figcaption>Satin</figcaption>
+  </figure>
+</div>
+
+<p>The combination of these three families of textile weaves and materials results in a wide variety of woven reinforcements. If the reinforcement is identical in the warp and weft direction, it is called a balanced fabric. Generally speaking, a fabric can be characterized by its <em>crimp</em>, the relative arrangement of the warps and wefts. The latter is defined by the ratio of the length of the fabric in one direction to the length of a yarn in that same direction. Different studies <sup id="fnref:BUE01"><a class="footnote-ref" href="#fn:BUE01">6</a></sup> <sup id="fnref:BOI01"><a class="footnote-ref" href="#fn:BOI01">7</a></sup> <sup id="fnref:LOM05"><a class="footnote-ref" href="#fn:LOM05">8</a></sup> <sup id="fnref:HIV08"><a class="footnote-ref" href="#fn:HIV08">9</a></sup> have been able to show the fundamental influence of crimp on the mechanical behavior of the reinforcements. The crimp factor is given by:</p>
+<div class="arithmatex">\[
+e = \frac{l_{\text{yarn}}-l_{\text{weave}}}{l_\text{yarn}}
+\]</div>
+<p>Thick parts can be made with these 2D fabrics by superimposing them. The structure thus obtained allows to optimize the stiffness of the finished material by acting on the orientation of the plies. However, in this configuration, the final structure is subject to delamination.</p>
+<p>In the case of 3D and 2.5D woven fabrics, the weft rovings cross several planes of warp rovings in the thickness of the material. The resulting woven fabric can then reach thicknesses of about ten centimeters and avoid delamination <sup id="fnref:GU02"><a class="footnote-ref" href="#fn:GU02">10</a></sup>:</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/tissage3D2.svg"  />
+   <figcaption>Example of 3D fabrics</figcaption>
+ </figure> 
+</div>
+
+<h3 id="the_matrix">The matrix<a class="headerlink" href="#the_matrix" title="Permanent link">#</a></h3>
+<p>Organic (synthetic) matrices are <em>polymer</em> resins. These materials are composed of a series of repeating units called <em>monomers</em>, which join together in a chemical reaction known as polymerization to form macromolecular <em>chains</em>. The most commonly used polymers for composite material matrices belong to the family of thermosets and thermoplastics.</p>
+<h4 id="thermosets">Thermosets<a class="headerlink" href="#thermosets" title="Permanent link">#</a></h4>
+<p>Thermosetting polymer resins are composed of cross-linked or three-dimensional macromolecular chains. Before heat treatment, the resin is in a liquid or past-like state at room temperature, which facilitates its handling and impregnation of the fibers.</p>
+<p>After undergoing a heating cycle known as a polymerization cycle or cross-linking cycle, the resin becomes irreversibly solid. Thus, thermoset composite parts can be shaped only once since the matrix becomes infusible and insoluble after polymerization.</p>
+<p>Thermoset resins are the most widely used in industry and have good mechanical properties and strength.</p>
+<h4 id="thermoplastics">Thermoplastics<a class="headerlink" href="#thermoplastics" title="Permanent link">#</a></h4>
+<p>Thermoplastic matrices are composed of linear or one-dimensional chains and branched or two-dimensional chains. Unlike thermosetting resins, the material is usually in a solid state at room temperature. Under the influence of heat, the polymer can be softened and then melted and deformed, but can be returned to its original solid state by cooling without any chemical change (under certain conditions, e.g. oxidation). The transformation process is reversible and, therefore, the material and the manufactured parts can be potentially recycled.</p>
+<p>Compared to thermoset matrices, thermoplastic matrix composites have many advantages:</p>
+<ul>
+<li>Equal or superior mechanical properties.</li>
+<li>Shorter forming cycle.</li>
+<li>Greater ease of storage.</li>
+<li>Reversibility and recycling.</li>
+</ul>
+<p>The industrial development of thermoplastic matrix composite structures is now in full swing. This manuscript is part of the numerous works that are being developed to industrialize the manufacturing of such products.</p>
+<h3 id="prepregs">Prepregs<a class="headerlink" href="#prepregs" title="Permanent link">#</a></h3>
+<p>Prepregs are the result of the combination of the reinforcement and a thermoplastic or thermoset polymer already joined together before forming.</p>
+<p>As mentioned previously, one of the advantages of thermosets is the good impregnation of fibers due to its low viscosity at room temperature; whereas thermoplastics must be heated above the melting temperature and require a long compaction phase in order to properly impregnate the fibers. This step affects the forming cycle by increasing the consolidation time, necessary to remove porosities by compaction.</p>
+<h2 id="manufacturing_processes">Manufacturing processes<a class="headerlink" href="#manufacturing_processes" title="Permanent link">#</a></h2>
+<p>The manufacturing processes of composite materials are numerous and varied. From essentially manual processes, techniques have not stopped evolving to meet the growing use of these materials. The need for higher and higher production rates, or for parts with better controlled and optimized characteristics, have led to different types of processes which are chosen according to the need (shape, production rate, series, mechanical characteristics, etc.). The forming operations described below are based on the principle of molding, a process that allows obtaining structures with non-developable geometry.</p>
+<p>As mentioned previously, depending on the manufacturing process, the addition of the matrix takes place before or after the deformation of the reinforcement. The main processes used in each case will be briefly described below. A more detailed explanation will be given for the process targeted in this work: thermoforming.</p>
+<h3 id="liquid_composite_moulding">Liquid Composite Moulding<a class="headerlink" href="#liquid_composite_moulding" title="Permanent link">#</a></h3>
+<p>The LCM (Liquid Composite Moulding) processes are used to shape woven and polymer matrix composites. Among these processes, vacuum infusion and RTM (Resin Transfer Moulding, <sup id="fnref:POT99"><a class="footnote-ref" href="#fn:POT99">11</a></sup>) are the most used. The principle of these processes is to mold the dry reinforcement, then to inject the resin to solidify the part. The fact of molding the dry reinforcement makes it possible to obtain a final composite part very close to the desired part, and thus to minimize the machining steps and thus the costs. These processes, known as "closed mould processes", allow a strict control of volatile organic compounds emitted during the manufacturing process, as the resin is not in direct contact with the atmosphere.</p>
+<h3 id="vacuum_infusion">Vacuum infusion<a class="headerlink" href="#vacuum_infusion" title="Permanent link">#</a></h3>
+<p>In vacuum infusion, the dry woven reinforcement is placed between a mold and a waterproof membrane. By evacuating this area, the pump will press the reinforcement against the mold through the membrane and start the resin flow. A drainage net, made of a porous material, is placed near the reinforcement in order to facilitate the distribution of the resin. This process is easier to implement than RTM, and allows the production of parts in large series with good repeatability on complex shapes. However, thickness control is difficult and the surface finish on the membrane side is generally worse than the molded side.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/infusion_vide.svg" width=400 />
+   <figcaption>Vacuum infusion</figcaption>
+ </figure> 
+</div>
+
+<h3 id="resin_transfer_moulding">Resin transfer moulding<a class="headerlink" href="#resin_transfer_moulding" title="Permanent link">#</a></h3>
+<p>The manufacturing process can be broken down into three steps. The first step is the preforming step. It consists in shaping (or stamping) a woven reinforcement in a mold by means of a punch. The advantage of this process is to have two rigid parts which will allow to better control the compression of the reinforcement during the shaping and thus its final thickness. Contrary to vacuum infusion, the surface finish is good on both sides. In order to avoid wrinkles during the stamping process, blank holders can be used by adding a slight tension in the rovings.</p>
+<p>Once the reinforcement is molded into the desired shape, the resin is injected. The assembly is then heated to cure the resin. Finally, when the resin is consolidated, the mold is opened and the part demolded.</p>
+<p>This process is undergoing a strong development with the objective of being used for mass production parts because it allows a control of the volume rate of fiber, a good surface finish, the creation of complex geometries and sustained and automated production rates. However, despite its use in industry, this process is not fully controlled for complex shapes (non-developable for example) or large sizes. These elements lead aerospace and automotive industries to take a great interest in the development and research associated with the process.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/rtm.svg" width=500 />
+   <figcaption>RTM Process</figcaption>
+ </figure> 
+</div>
+
+<h3 id="thermoforming">Thermoforming<a class="headerlink" href="#thermoforming" title="Permanent link">#</a></h3>
+<p>In order to exploit the excellent properties of CFRTP composites in an industrial context, different manufacturing processes have been developed depending on the product and its application. Most of these methods are an adaptation of the processes for the shaping of thermoset composites or of the classical stamping techniques. In the case of forming flat structures, roll forming and simple compression have already been mentioned. In the case of constant section structures, we can mention pultrusion forming, which is a continuous manufacturing process where the profile is obtained by pulling the prepreg reinforcement through a heated die, or filament winding forming <sup id="fnref:MAC12"><a class="footnote-ref" href="#fn:MAC12">12</a></sup>. These processes allow the shaping of simple parts (1D and 2D) and are easily automated.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/winding.png" width=600 />
+   <figcaption>Thermoplastic filament winding production line</figcaption>
+ </figure> 
+</div>
+
+<p>In order to manufacture structures with non-developable (3D) geometry, thermoforming appears to be an ideal candidate.</p>
+<p>The term "thermoforming" encompasses a variety of manufacturing processes ranging from molding by applying pressure or vacuum to a flexible diaphragm, to hydroforming or thermostamping. However, the operating principle is essentially the same. A plate consisting of one or more initially flat prepreg layers is heated and then shaped by applying pressure. The plate can be pre-consolidated, which ensures a good degree of consolidation after shaping with less production time. In the following, the thermoforming process by deep drawing or thermostamping will be described.</p>
+<p>Thermoforming is a very interesting solution for the mass production of composite structures. Indeed, being an adaptation of the shaping of metal sheets by stamping, there is the possibility of reusing the already existing equipment as well as its automation system <sup id="fnref:CAM10"><a class="footnote-ref" href="#fn:CAM10">13</a></sup>.</p>
+<p>The first step in thermoforming is to heat the material above its melting temperature. The main methods used for preheating are infrared (IR) lamps, convection ovens, and heated platen presses. IR heating is the most popular. The heating time is very short (1 to 2 minutes). However, temperature gradients in the thickness can appear which are managed by imposing a progressive heating (preheating cycle). A second constraint associated with this method is the poor temperature distribution in the case of complex geometries. In the case of thin structures, IR heating is well suited. On the other hand, convection heating is slow (5-10 min) but a homogeneous temperature distribution is obtained in the thickness at the end of heating. Finally, conduction heating is rarely used, because the material tends to stick to the heating plates.</p>
+<p>After heating, the material is transported to the press. The transfer time is a critical parameter. The material must be transported to the press as quickly as possible to prevent the material from cooling above its crystallization temperature. Today's automation systems such as conveyors and robots help to reduce this time. The temperature loss in this step is about 10%. This is usually compensated by overheating the material in the first step. The material is then shaped.</p>
+<p>During forming, the reinforcement is deformed by applying pressure between two complementary tools which are the impression of the final structure, the punch and the die. These tools are usually equipped with a system to maintain a constant temperature below the melting point. The forming process takes a few seconds. The part is then maintained under pressure to remove porosities and ensure cohesion between the different layers and cooled down to a temperature that allows the dimensional stability of the part. This is the consolidation phase. The structure is finally demolded and continues to cool in ambient air. </p>
+<p>All the steps are carried out in a few minutes, this time can be further reduced if the production line allows the manufacture of two parts at the same time, one on the heating module and one on the shaping module. All these characteristics make thermostamping a prime candidate for the mass production of composite parts, especially in the automotive sector.</p>
+<p>However, the optimal automation of the process implies that the physical phenomena involved are mastered. Double curvature structures present different types of defects that are difficult to predict. In order to avoid the "trial and error" method, numerical modeling is a beneficial step.</p>
+<p>It is clear that temperature is an essential factor since it modifies the behavior of the resin. The mechanical properties and particular deformation mechanisms of the material, due to the fibrous nature of the reinforcement, are constantly evolving.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/thermoforming.svg" width=600 />
+   <figcaption>Thermo-stamping steps</figcaption>
+ </figure> 
+</div>
+
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/stamping_old.png" width=600 />
+   <figcaption>Thermo-stamping chain</figcaption>
+ </figure> 
+</div>
+
+<h2 id="modeling_and_simulation_approaches">Modeling and Simulation approaches.<a class="headerlink" href="#modeling_and_simulation_approaches" title="Permanent link">#</a></h2>
+<p>Modeling and numerical simulation of the forming process are two important steps to predict the feasibility of different parts, but also to understand and improve the process itself. As mentioned earlier, the quality of the resulting parts depends greatly on the settings of the parameters that control the forming operations. Thus, during the design of a product, it is necessary to call upon trial and error campaigns, which are all the more costly as the part is complex and of large dimensions. The objective of the simulation is to predict the geometrical and mechanical characteristics likely to appear during the shaping process such as</p>
+<ul>
+<li>
+<p>the position of the strands and fibers after deformation</p>
+</li>
+<li>
+<p>the mechanical characteristics of the deformed reinforcement</p>
+</li>
+<li>
+<p>the possible appearance of folding, unweaving, fiber breakage</p>
+</li>
+</ul>
+<p>The simulation also allows to determine the ideal conditions in order to optimize both the process and the quality of the structure (temperature, forming speed, initial size and geometry of the reinforcement, etc.).</p>
+<p>These characteristics and defects are not all defined at the same scale: a fiber break is a microscopic phenomenon difficult to detect when the scale of observation is macroscopic, as well as a wrinkle (macroscopic phenomenon) cannot be detected at the microscopic scale. Therefore, different types of simulations have been developed, each one being placed at a precise scale of the reinforcement:</p>
+<ul>
+<li>
+<p>The <em>microscopic</em> scale: study of the fibers and their interactions. Only a few hundred fibers per strand can be simulated at most</p>
+</li>
+<li>
+<p>The <em>mesoscopic</em> scale: study of the behavior of the sliver in order to determine the local characteristics of the reinforcement. The simulated volumes are generally of the order of the elementary mesh of the reinforcement</p>
+</li>
+<li>
+<p>The <em>macroscopic</em> scale: study of the deformation of the reinforcement as a whole, in order to characterize the appearance of folds, slippage of the strands and more generally the formability of a complex geometry part.</p>
+</li>
+</ul>
+<h3 id="modeling_at_the_microscopic_scale">Modeling at the microscopic scale<a class="headerlink" href="#modeling_at_the_microscopic_scale" title="Permanent link">#</a></h3>
+<p>In a microscopic scale approach, the basic component is the fiber. The behavior of the fiber is linear orthotropic and its characteristic quantities are relatively well known. The difficulty of this type of approach is the management of the numerous bodies constituting the model, especially in the management of the contact between them.</p>
+<p>Currently, the existing models that come closest to modeling the behavior of reinforcements at the microscopic scale are those performed on ropes or cables, which are similar to strands containing fewer fibers and strongly twisted <sup id="fnref:JIA99"><a class="footnote-ref" href="#fn:JIA99">14</a></sup> <sup id="fnref:NAW00"><a class="footnote-ref" href="#fn:NAW00">15</a></sup> <sup id="fnref:SRE06"><a class="footnote-ref" href="#fn:SRE06">16</a></sup> <sup id="fnref:GHO07"><a class="footnote-ref" href="#fn:GHO07">17</a></sup>. On the other hand, the application to reinforcement rovings is rarer <sup id="fnref:LAT11"><a class="footnote-ref" href="#fn:LAT11">18</a></sup>, mainly because of the high number of fibers per roving. However, we can mention the weaving model developed by Zhou <sup id="fnref:ZHO04"><a class="footnote-ref" href="#fn:ZHO04">19</a></sup> and Durville <sup id="fnref:DUR10"><a class="footnote-ref" href="#fn:DUR10">20</a></sup>.</p>
+<p>The main limitation of this type of approach is the computational time inherent to the number of fibers to model. For this reason, groups of fibers are modeled in the wicks, reducing the number of virtual fibers to a few tens instead of thousands of real fibers. Therefore, the simulation of the shaping of a large part with this approach is not feasible in the current state of research.</p>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/ZHO04.png" width="300" />
+    <figcaption>Zhou model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/DUR10plain.png" width="300" />
+    <figcaption>Durville model</figcaption>
+  </figure>
+</div>
+
+<h3 id="mesoscopic_simulation">Mesoscopic simulation<a class="headerlink" href="#mesoscopic_simulation" title="Permanent link">#</a></h3>
+<p>Models at the mesoscopic scale are interested in the behavior of an elementary mesh of the reinforcement. At this scale, the wick is considered as a continuous medium. The objective of these models is to determine certain behaviors or properties of the reinforcement that are difficult or expensive to determine experimentally. Among these properties, the most sought after are :</p>
+<ul>
+<li>
+<p>the macroscopic mechanical behavior of the reinforcement, allowing in particular to feed the models at the macroscopic scale.</p>
+</li>
+<li>
+<p>the local permeability of the reinforcement as a function of the deformation of the elementary mesh <sup id="fnref:LOI08"><a class="footnote-ref" href="#fn:LOI08">68</a></sup>, allowing to feed simulations of the resin flow in the reinforcement in the case of LCM type processes.</p>
+</li>
+<li>
+<p>The macroscopic thermal properties of the material (with or without taking into account the matrix) for the simulation of thermal exchanges, such as the macroscopic thermal conductivity <sup id="fnref:DAS92"><a class="footnote-ref" href="#fn:DAS92">69</a></sup> <sup id="fnref:DAS96"><a class="footnote-ref" href="#fn:DAS96">70</a></sup> <sup id="fnref:BIG01"><a class="footnote-ref" href="#fn:BIG01">71</a></sup>.</p>
+</li>
+</ul>
+<p>Analytical approaches have been developed to access these thermomechanical and geometrical quantities. These approaches are generally based on a simplification of the wick geometry in the elementary mesh and on assumptions of mechanical or thermal behavior.</p>
+<p>The next figures shows an example using this type of approach proposed by Kawabata <sup id="fnref:KAW73"><a class="footnote-ref" href="#fn:KAW73">21</a></sup>. The roving is described by a set of segments schematizing its mean line: these segments then form a set of elastic tensile bars representing the whole woven reinforcement. The interactions between the rovings at the crossing points are modeled by springs of different types.</p>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/KAW73.png" width="250" />
+    <figcaption>Structure to model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/KAW73_2.png" width="250" />
+    <figcaption>Analytical modelling</figcaption>
+  </figure>
+</div>
+
+<p>Analytical approaches provide consistent results in determining the mechanical behavior of wicks in tension, but are more limited in more complex applications where shear is involved, for example. Simplifying assumptions about the geometry, especially at the level of lateral contacts, are problematic.</p>
+<p>Faced with these limitations, the use of finite elements seems a good alternative. Their use at this scale requires two prerequisites: the geometry and the boundary conditions of the reinforcement. The geometry must be obtained theoretically from the characteristics of the wick and the armor, or experimentally.</p>
+<p>Many models have been developed to obtain the final geometry. We note the models associated with the software <em>WiseTex</em> developed at the Katholieke Universiteit Leuven <sup id="fnref:LOM00"><a class="footnote-ref" href="#fn:LOM00">22</a></sup> and <em>Texgen</em> developed at the University of Nottingham <sup id="fnref:SHE07"><a class="footnote-ref" href="#fn:SHE07">23</a></sup>. In the case of <em>WiseTex</em>, the geometry of the reinforcement is obtained by minimizing the strain energy of the strands within the reinforcement by taking into account different mechanical contributions (tension, bending, torsion, compression of the strands and interactions). This approach requires the experimental identification of data that are difficult to obtain. The models made with <em>Texgen</em> , unlike <em>WiseTex</em>, do not use mechanical considerations. However, it allows to easily realize elementary meshes of 2D and 3D woven fabrics in which the wicks can have variable non-symmetric sections along their mean line. For both approaches, the problem of interpenetration, although reduced under <em>WiseTex</em> <sup id="fnref:VER05"><a class="footnote-ref" href="#fn:VER05">24</a></sup>, remains major.</p>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/LOM00.png" width="300" />
+    <figcaption>Structure to model</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/texgen.png" width="300" />
+    <figcaption>Analytical modelling</figcaption>
+  </figure>
+</div>
+
+<p>X-ray microtomography is the most promising method to experimentally access the geometry of an elementary mesh <sup id="fnref:DES05"><a class="footnote-ref" href="#fn:DES05">25</a></sup> <sup id="fnref:HSI15"><a class="footnote-ref" href="#fn:HSI15">26</a></sup> <sup id="fnref:HER09"><a class="footnote-ref" href="#fn:HER09">27</a></sup>. This technique consists in scanning a representative sample of a reinforcement in order to obtain a 3D cartography and then to process the images obtained by cutting the constituent elements (the strands), separating them from each other and meshing them. Microtomography has the great advantage of being able to lead to interpenetration-free modeling if the appropriate digital treatments are performed <sup id="fnref:NAO14"><a class="footnote-ref" href="#fn:NAO14">28</a></sup> <sup id="fnref:NAO15"><a class="footnote-ref" href="#fn:NAO15">29</a></sup>. </p>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/tomo_comp_xy_yz.png" width="300" />
+    <figcaption>3D tomography of an interlock</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/simu_comp_xy_yz.png" width="300" />
+    <figcaption>Mesh part</figcaption>
+  </figure>
+</div>
+
+<p>Once the geometry is defined and discretized by finite elements, it is necessary to associate a behavior law to the wicks, which are in most cases considered as a continuous medium. This behavior is very specific due to the fibrous nature of the fibers. Most studies use hypoelastic <sup id="fnref:GAS00"><a class="footnote-ref" href="#fn:GAS00">30</a></sup> or hyperelastic <sup id="fnref:CHA11b"><a class="footnote-ref" href="#fn:CHA11b">31</a></sup> models to describe this behavior.</p>
+<p>At this scale, modeling the entire woven reinforcement during forming is still difficult. However, the study of an elementary pattern or cell representative of the structure (CER) will allow to understand the behavior of the weaving at a smaller scale before extending it to the whole part. This is the case of modeling by homogenization and multi-scale calculations <sup id="fnref:GEE03"><a class="footnote-ref" href="#fn:GEE03">32</a></sup>.</p>
+<h3 id="macroscale_modeling">Macroscale modeling<a class="headerlink" href="#macroscale_modeling" title="Permanent link">#</a></h3>
+<p>The objective of macroscale simulation is to simulate the shaping of woven reinforcements at the scale of the entire part. The study of formability consists in predicting the appearance of the various defects observable on the woven fabrics. The number of defects that can be obtained depends both on the type of modeling approach chosen and on the richness of the mechanical characteristics given to them. These characteristics can be derived from tests performed at the woven fabric scale or from observations/simulations at smaller, microscopic and mesoscopic scales. The reuse of results obtained at smaller scales is the main reason for the existence of the corresponding models. Among the known macroscopic approaches, there are geometrical and mechanical approaches.</p>
+<h4 id="geometrical_approaches">Geometrical approaches<a class="headerlink" href="#geometrical_approaches" title="Permanent link">#</a></h4>
+<p>Geometric approaches are based on the so-called fishnet algorithm. This so-called geometric or kinematic approach is mainly used for the simulation of dragging. Its simplicity of use and its speed of execution make it a good method of first approach <sup id="fnref:MAC56"><a class="footnote-ref" href="#fn:MAC56">33</a></sup> <sup id="fnref:VAN91"><a class="footnote-ref" href="#fn:VAN91">34</a></sup>. It is based on strong assumptions:</p>
+<ul>
+<li>
+<p>The inextensibility of the rovings ;</p>
+</li>
+<li>
+<p>The non-slip between warp and weft;</p>
+</li>
+<li>
+<p>The free rotation at the crossing points between networks;</p>
+</li>
+<li>
+<p>The absence of slippage between the woven fabric and the shaping tools.</p>
+</li>
+</ul>
+<p>In this approach, the reinforcement is similar to hinged bars at the crossing points between networks. The algorithm determines the position of a curant point C from the intersection of the two geodesics drawn on the surface to be draped from the related points A and B. The position of the initial point is thus made paramount and influences the final result <sup id="fnref:WAN99a"><a class="footnote-ref" href="#fn:WAN99a">35</a></sup>.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/Filet.svg" width=200 />
+   <figcaption>Geometrical approach</figcaption>
+ </figure> 
+</div>
+
+<!-- ![Net method](/assets/img/Filet.svg){#fig:1_Net} -->
+
+<p>With the removal of all mechanical and weaving considerations, the results are identical whatever the stiffness of the rovings and the weave chosen. Kinematic blocking in shear and thickness variation in compression are also absent from the basic model. The absence of developed contact prevents the use of external tools such as blanket clamps, which are necessary for some shaping. For woven reinforcements, the net algorithm is interesting as a preliminary approach to determine the degree of complexity of forming a part. An example of application on a non-developable part is given in the next figure.</p>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/FiletDrappagePiece.png" width="300" />
+    <figcaption>Geometrical part</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/FiletDrappage.png" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
+</div>
+
+<h4 id="mechanical_approaches">Mechanical approaches<a class="headerlink" href="#mechanical_approaches" title="Permanent link">#</a></h4>
+<p>Among the mechanical models, three types of approaches can be distinguished: discrete, semi-discrete or continuous.</p>
+<p>The <em>discrete</em> approaches consist in considering the textile as a discontinuous assembly of deformable elements <sup id="fnref:BEN07"><a class="footnote-ref" href="#fn:BEN07">36</a></sup>. They are generally extensions of the net theory, i.e. the introduction of mechanical characteristics in the solution of the shaping problem. The reinforcement is modeled by nodes connected by bars and springs with the aim of modeling the response in elongation, shear, torsion and bending. The work of Sze and Liu <sup id="fnref:SZE05"><a class="footnote-ref" href="#fn:SZE05">37</a></sup> is particularly interesting on the variety of solicitations modeled for 2D dry reinforcements, as illustrated in the following figure. These approaches, generally encountered for clothing fabrics, are abandoned in favor of semi-discrete or continuous methods in the case of technical fabrics.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/SZE05.png" width=600 />
+   <figcaption>Sze Discret approach</figcaption>
+ </figure> 
+</div>
+
+<p>The application of this type of approach in the case of thermoplastic prepreg composites results in the modification of the mechanical behavior of the discrete elements that compose the reinforcement, in order to take into account the contribution of the matrix. We note the model proposed by Skordos <sup id="fnref:SKO07"><a class="footnote-ref" href="#fn:SKO07">38</a></sup> based on the work of Sharma <sup id="fnref:SHA04"><a class="footnote-ref" href="#fn:SHA04">39</a></sup>, which introduces nonlinear elastoviscoplastic elements in order to take into account the specific behaviors of prepregs, such as the dependence on the strain rate.</p>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/skordos1.svg" width="300" />
+    <figcaption>Meshing</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/skordos2.svg" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
+</div>
+
+<p>The <em>continuous</em> approaches make the assumption of a continuous material at the macroscopic scale. This assumption follows directly from the consideration of non-slip between rovings during the shaping phase. The consideration of the textile as a continuous anisotropic medium whose behavior is homogenized from lower scales is then possible. The modeling is focused on an adapted proposal of behavior laws.</p>
+<p>Different approaches, either hypoelastic <sup id="fnref:PEN05"><a class="footnote-ref" href="#fn:PEN05">40</a></sup> <sup id="fnref:BAD08"><a class="footnote-ref" href="#fn:BAD08">41</a></sup> <sup id="fnref:KHA10"><a class="footnote-ref" href="#fn:KHA10">42</a></sup> or hyperelastic <sup id="fnref:CHA12"><a class="footnote-ref" href="#fn:CHA12">43</a></sup>, have given good results. These laws are associated with shell or plate elements for thin woven fabrics, and with bricks for thick woven fabrics. These methods have the advantage that they can be easily used in commercial finite element codes. Their main disadvantage comes from the homogenization that is performed. The same material is applied at all points of the fibrous reinforcement to be modeled and does not take into account the variations of the mechanical characteristics inherent to the weave studied.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/KHA10_2.png" width=600 />
+   <figcaption>Khan continuous approach</figcaption>
+ </figure> 
+</div>
+
+<!-- ![khan ](/assets/img/KHA10_2.png){#fig:1_KHA10 width="90%"} -->
+
+<p>Most of the proposed continuous models for the shaping of prepreg composites are based on the so-called IFRM (<em>ideal fiber reinforced model</em>) assumptions. IFRM was originally proposed by Spencer for purely elastic responses <sup id="fnref:SPE84"><a class="footnote-ref" href="#fn:SPE84">44</a></sup> and adapted by Rogers <sup id="fnref:ROG89"><a class="footnote-ref" href="#fn:ROG89">45</a></sup> and Johnson <sup id="fnref:JOH95"><a class="footnote-ref" href="#fn:JOH95">46</a></sup> to the viscoelastic behavior of unidirectional and bidirectional prepregs. Two important assumptions are made in this type of model: the incompressibility of the material and the inextensibility of the fibers. Therefore, the only <em>deformation mode</em> considered is in-plane shear. This can be seen as the rotation of the rovings around the crossing points of the warp-weft networks (lattice effect).</p>
+<p>In the case of woven reinforcements, the stress state is given by the following relationship <sup id="fnref:SPE00"><a class="footnote-ref" href="#fn:SPE00">47</a></sup>:</p>
+<div class="arithmatex">\[
+\begin{split}
+\mathbf{ \sigma }  =  &amp;- p\mathbf{ I}  + {T_A}\mathbf{ A}  + {T_B}\mathbf{ B} \\
+  &amp;+ 2{\eta _{\mathrm{1}}}\mathbf{ D}  + 2{\eta _{\mathrm{2}}}\left( {\mathbf{ A} {\kern 1pt} \mathbf{ D}  + \mathbf{ D} {\kern 1pt} \mathbf{ A}  + \mathbf{ B} {\kern 1pt} \mathbf{ D}  + \mathbf{ D} {\kern 1pt} \mathbf{ B} } \right) + 2{\eta _3}\left( {{\mathrm{tr}}\mathbf{ C} {\kern 1pt} \mathbf{ D} } \right)\left( {\mathbf{ C}  + {{\mathbf{ C} }^T}} \right)
+\end{split}
+\]</div>
+<p><span class="arithmatex">\(\mathbf{{A}}  = \mathbf{a}\otimes \mathbf{a}\)</span>, <span class="arithmatex">\(\mathbf{{B}}  = \mathbf{b}\otimes \mathbf{b}\)</span> and <span class="arithmatex">\(\mathbf{{C}}  = \mathbf{a}\otimes \mathbf{b}\)</span>, <span class="arithmatex">\(\mathbf{a}\)</span> et <span class="arithmatex">\(\mathbf{b}\)</span> being the directions of the fibers in the warp and weft direction respectively.</p>
+<p>The first term of the previous relation represents an arbitrary hydrostatic pressure induced by the assumption of incompressibility of the material, similarly, <span class="arithmatex">\(T_A\)</span> and <span class="arithmatex">\(T_B\)</span> are arbitrary stresses in the direction of the fibers resulting from the inextensibility stress. The scalars <span class="arithmatex">\(\eta_\mathrm{1}\)</span> , <span class="arithmatex">\(\eta_\mathrm{2}\)</span> and <span class="arithmatex">\(\eta_\mathrm{3}\)</span> can be interpreted as the viscosity parameters of the material, possibly as a function of the strain rate tensor <span class="arithmatex">\(\mathbf{{D}}\)</span> (non-linear viscosity). The identification of these parameters from experimental tests, either in the one-dimensional case <sup id="fnref:GOS96"><a class="footnote-ref" href="#fn:GOS96">48</a></sup> <sup id="fnref:ADV97"><a class="footnote-ref" href="#fn:ADV97">49</a></sup> <sup id="fnref:CHR93"><a class="footnote-ref" href="#fn:CHR93">50</a></sup> <sup id="fnref:MAR95"><a class="footnote-ref" href="#fn:MAR95">51</a></sup> or in the two-dimensional case <sup id="fnref:OB91"><a class="footnote-ref" href="#fn:OB91">52</a></sup> <sup id="fnref:MCG97"><a class="footnote-ref" href="#fn:MCG97">53</a></sup> <sup id="fnref:MCG98"><a class="footnote-ref" href="#fn:MCG98">54</a></sup>, has been the subject of much work. However, difficulties have been encountered mainly due to the fact that <span class="arithmatex">\(\eta_\mathrm{1}\)</span> , <span class="arithmatex">\(\eta_\mathrm{2}\)</span> and <span class="arithmatex">\(\eta_\mathrm{3}\)</span> are not associated with simple shear mechanisms. In order to correctly represent the different <em>flows</em> associated with the main deformation modes of the tissue, different modifications have been proposed <sup id="fnref:MAL00"><a class="footnote-ref" href="#fn:MAL00">55</a></sup>.</p>
+<p>The models developed under IFRM principles give very interesting analytical results in the case of simple deformations. However, the constraint associated with the non-extensibility of the fibers makes its implementation by finite elements difficult because of the arbitrary tensions. This last point has motivated the development of various models in order to make the implementation more suitable for the simulation of thermoforming of complex parts by finite elements <sup id="fnref:HSI99"><a class="footnote-ref" href="#fn:HSI99">56</a></sup> <sup id="fnref:CHE01"><a class="footnote-ref" href="#fn:CHE01">57</a></sup> <sup id="fnref:TEN07"><a class="footnote-ref" href="#fn:TEN07">58</a></sup> <sup id="fnref:JAU09a"><a class="footnote-ref" href="#fn:JAU09a">59</a></sup> <sup id="fnref:HAR04a"><a class="footnote-ref" href="#fn:HAR04a">60</a></sup> <sup id="fnref:HAR11"><a class="footnote-ref" href="#fn:HAR11">61</a></sup> <sup id="fnref:GUZ15"><a class="footnote-ref" href="#fn:GUZ15">62</a></sup>.</p>
+<p>The <em>semi-discrete</em> approaches are a combination of the two approaches mentioned above. One part of the behavior is modeled with a continuous solid while another part is modeled with discrete inputs. One can then distinguish two philosophies in the interaction between discrete and continuous parts.</p>
+<p>In the first case, the discrete and continuous parts are associated in the same Lagrangian element. The forces generated by any deformation are subdivided between a tension contribution associated with the discrete parts and the other contributions (shear, compression) associated with the continuous part. The discrete and continuous parts are fixed with respect to each other in the isoparametric configuration. In this case, the discrete part is only the elementary representation of an energy contribution of tension. Different models have been developed, dedicated to 2D fabrics using shell elements <sup id="fnref:HAM08"><a class="footnote-ref" href="#fn:HAM08">63</a></sup> <sup id="fnref:HAM09"><a class="footnote-ref" href="#fn:HAM09">64</a></sup> <sup id="fnref:BEL12"><a class="footnote-ref" href="#fn:BEL12">65</a></sup>, but also to interlocks using solid elements (hexahedral) <sup id="fnref:DE09a"><a class="footnote-ref" href="#fn:DE09a">66</a></sup>. The interest of such an element is to be able to represent more accurately and simply the local directions of the wicks in the preform and to account for the complex anisotropy of these materials.</p>
+<div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+  <figure>
+    <img src="../../../../assets/img/Nahiene1.png" width="300" />
+    <figcaption>Semi-discrete finite element</figcaption>
+  </figure>
+  <figure>
+    <img src="../../../../assets/img/Nahiene2.png" width="300" />
+    <figcaption>Simulation</figcaption>
+  </figure>
+</div>
+
+<p>Another modeling strategy considers discrete and continuous parts as totally independent. This is the case, for example, of work on NCFs <sup id="fnref:CRE06"><a class="footnote-ref" href="#fn:CRE06">67</a></sup>. These specific woven fabrics are made of sewn webs. In this modeling, the roving plies are represented by layers of solid elements while bar elements are added to represent the seams. Here, the continuous parts are totally decoupled from the discrete parts, implying the management of the contact between the webs and the seams.</p>
+<div style="text-align:center;">
+ <figure >
+   <img src="../../../../assets/img/CRE06a.png" width=600 />
+   <figcaption>Creech NCF semi-discrete model</figcaption>
+ </figure> 
+</div>
+
+<!-- ![Representation of two plies and the seams linking them in a semi-discrete model](/assets/img/CRE06a.png){#fig:1_CRE06 width="90%"} -->
+
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:BHA16">
+<p>Bhatnagar, A. <em><a href="https://www.sciencedirect.com/book/9780081004067/lightweight-ballistic-composites">Lightweight Ballistic Composites: Military and Law-Enforcement Applications</a></em>. (Woodhead Publishing, 2016).&#160;<a class="footnote-backref" href="#fnref:BHA16" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SMI90">
+<p>Smith, C. S. <em><a href="https://openlibrary.org/works/OL3385903W/Design_of_marine_structures_in_composite_materials">Design of Marine Structures in Composite Materials</a></em>. (Elsevier, 1990).&#160;<a class="footnote-backref" href="#fnref:SMI90" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:MOU01">
+<p>Mouritz, A., Gellert, E., Burchill, P. &amp; Challis, K. <a href="https://doi.org/10.1016/S0263-8223(00)00175-6">Review of advanced composite structures for naval ships and submarines</a>. <em>Composite structures</em> <strong>53</strong>, 21--42 (2001).&#160;<a class="footnote-backref" href="#fnref:MOU01" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:VER06">
+<p>Verrey, J., Wakeman, M. D., Michaud, V. &amp; Månson, J.-A. E. <a href="https://doi.org/10.1016/j.compositesa.2005.05.048">Manufacturing cost comparison of thermoplastic and thermoset RTM for an automotive floor pan</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>37</strong>, 9--22 (2006).&#160;<a class="footnote-backref" href="#fnref:VER06" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:FUC08">
+<p>Fuchs, E. R. H., Field, F. R., Roth, R. &amp; Kirchain, R. E. <a href="https://doi.org/10.1016/j.compscitech.2008.01.015">Strategic materials selection in the automobile body: Economic opportunities for polymer composite design</a>. <em>Composites Science and Technology</em> <strong>68</strong>, 1989--2002 (2008).&#160;<a class="footnote-backref" href="#fnref:FUC08" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:BUE01">
+<p>Buet-Gautier, K. &amp; Boisse, P. <a href="https://doi.org/10.1007/BF02323143">Experimental analysis and modeling of biaxial mechanical behavior of woven composite reinforcements</a>. <em>Experimental Mechanics</em> <strong>41</strong>, 260--269 (2001).&#160;<a class="footnote-backref" href="#fnref:BUE01" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:BOI01">
+<p>Boisse, P., Gasser, A. &amp; Hivet, G. <a href="https://doi.org/10.1016/S1359-835X(01)00039-2">Analyses of fabric tensile behaviour: Determination of the biaxial tension--strain surfaces and their use in forming simulations</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>32</strong>, 1395--1414 (2001).&#160;<a class="footnote-backref" href="#fnref:BOI01" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:LOM05">
+<p>Lomov, S., Verpoest, I. &amp; Robitaille, F. <a href="http://www.sciencedirect.com/science/article/pii/B9781855737440500016">Manufacturing and internal geometry of textiles</a>. in <em>Design and Manufacture of Textile Composites</em> (ed. Long, A. C.) 1--61 (Woodhead Publishing, 2005).&#160;<a class="footnote-backref" href="#fnref:LOM05" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HIV08">
+<p>Hivet, G. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compositesb.2007.01.011">Consistent mesoscopic mechanical behaviour model for woven composite reinforcements in biaxial tension</a>. <em>Composites Part B: Engineering</em> <strong>39</strong>, 345--361 (2008).&#160;<a class="footnote-backref" href="#fnref:HIV08" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GU02">
+<p>Gu, H. &amp; Zhili, Z. <a href="https://doi.org/10.1016/S0261-3069(02)00053-5">Tensile behavior of 3D woven composites by using different fabric structures</a>. <em>Materials\ &amp; Design</em> <strong>23</strong>, 671--674 (2002).&#160;<a class="footnote-backref" href="#fnref:GU02" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:POT99">
+<p>Potter, K. D. <a href="https://doi.org/10.1016/S1359-835X(98)00179-1">The early history of the resin transfer moulding process for aerospace applications.</a> <em>Composites Part A: Applied Science and Manufacturing</em> <strong>30</strong>, 619--621 (1999).&#160;<a class="footnote-backref" href="#fnref:POT99" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:MAC12">
+<p>Mack, J. &amp; Schledjewski, R. <a href="http://www.sciencedirect.com/science/article/pii/B9780857090676500079">Filament winding process in thermoplastics</a>. in <em>Manufacturing Techniques for Polymer Matrix Composites (PMCs)</em> (eds. Advani, S. G. &amp; Hsiao, K.-T.) 182--208 (Woodhead Publishing, 2012).&#160;<a class="footnote-backref" href="#fnref:MAC12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:CAM10">
+<p>Campbell, F. C. <em><a href="https://dl.asminternational.org/handbooks/book/143/Structural-Composite-Materials">Structural Composite Materials</a></em>. (ASM International, 2010).&#160;<a class="footnote-backref" href="#fnref:CAM10" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:JIA99">
+<p>Jiang, W. G., Yao, M. S. &amp; Walton, J. M. <a href="https://doi.org/10.1016/S0020-7403(98)00039-3">A concise finite element model for simle straight wire rope strand</a>. <em>International Journal of Mechanical Sciences</em> <strong>41</strong>, 143--161 (1999).&#160;<a class="footnote-backref" href="#fnref:JIA99" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:NAW00">
+<p>Nawrocki, A. &amp; Labrosse, M. <a href="https://doi.org/10.1016/S0045-7949(00)00026-2">A finite element model for simple straight wire rope strands</a>. <em>Computers and Structures</em> <strong>77</strong>, 345--359 (2000).&#160;<a class="footnote-backref" href="#fnref:NAW00" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SRE06">
+<p>Sreprateep, K. &amp; Bohez, E. L. J. <a href="https://doi.org/10.1080/16864360.2006.10738475">Computer aided modeling of fiber assemblies</a>. <em>Computer Aided Design\ &amp; Applications</em> <strong>3</strong>, 367--376 (2006).&#160;<a class="footnote-backref" href="#fnref:SRE06" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GHO07">
+<p>Ghoreishi, S. R., Cartraud, P., Davies, P. &amp; Messager, T. <a href="https://doi.org/10.1016/j.ijsolstr.2006.08.033">Analytical modeling of synthetic fiber ropes subjected to axial loads. Part I: A new continuum model for multilayered fibrous structures</a>. <em>International Journal of Solids and Structures</em> <strong>44</strong>, 2924--2942 (2007).&#160;<a class="footnote-backref" href="#fnref:GHO07" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:LAT11">
+<p>Latil, P., Orgéas, L., Geindreau, C., Dumont, P. J. J. &amp; Rolland du Roscoat, S. <a href="https://doi.org/10.1016/j.compscitech.2010.12.023">Towards the 3D in situ characterisation of deformation micro-mechanisms within a compressed bundle of fibres</a>. <em>Composites Science and Technology</em> <strong>71</strong>, 480--488 (2011).&#160;<a class="footnote-backref" href="#fnref:LAT11" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ZHO04">
+<p>Zhou, G., Sun, X. &amp; Wang, Y. <a href="https://doi.org/10.1016/S0266-3538(03)00258-6">Multi-chain digital element analysis in textile mechanics</a>. <em>Composites Science and Technology</em> <strong>64</strong>, 239--244 (2004).&#160;<a class="footnote-backref" href="#fnref:ZHO04" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:DUR10">
+<p>Durville, D. <a href="https://doi.org/10.1007/s12289-009-0674-7">Simulation of the mechanical behaviour of woven fabrics at the scale of fibers</a>. <em>International Journal of Material Forming</em> <strong>3</strong>, 1241--1251 (2010).&#160;<a class="footnote-backref" href="#fnref:DUR10" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:KAW73">
+<p>Kawabata, S., Niwa, M. &amp; Kawai, H. <a href="https://doi.org/10.1080/00405007308630417">The finite-deformation theory of plain-weave fabrics. Part II: The uniaxial-deformation theory</a>. <em>The Journal of The Textile Institute</em> <strong>64</strong>, 47--61 (1973).&#160;<a class="footnote-backref" href="#fnref:KAW73" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:LOM00">
+<p>Lomov, S. V., Gusakov, A. V., Huysmans, G., Prodromou, A. &amp; Verpoest, I. <a href="https://doi.org/10.1016/S0266-3538(00)00121-4">Textile geometry preprocessor for meso-mechanical models of woven composites</a>. <em>Composites Science and Technology</em> <strong>60</strong>, 2083--2095 (2000).&#160;<a class="footnote-backref" href="#fnref:LOM00" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SHE07">
+<p>Sherburn, M. <a href="https://eprints.nottingham.ac.uk/10303/">Geometric and mechanical modelling of textiles</a>. (University of Nottingham, 2007).&#160;<a class="footnote-backref" href="#fnref:SHE07" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:VER05">
+<p>Verpoest, I. &amp; Lomov, S. V. <a href="https://doi.org/10.1016/j.compscitech.2005.05.031">Virtual textile composites software Wisetex: Integration with micro-mechanical and permeability and structural analysis</a>. <em>Composites Science and Technology</em> <strong>65</strong>, 2563--2574 (2005).&#160;<a class="footnote-backref" href="#fnref:VER05" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:DES05">
+<p>Desplentere, F. <em>et al.</em> <a href="https://doi.org/10.1016/j.compscitech.2005.04.008">Micro-CT characterization of variability in 3D textile architecture</a>. <em>Composites Science and Technology</em> <strong>65</strong>, 1920--1930 (2005).&#160;<a class="footnote-backref" href="#fnref:DES05" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HSI15">
+<p>Hsieh, J. <em><a href="http://ebooks.spiedigitallibrary.org/book.aspx?doi=10.1117/3.2197756">Computed Tomography: Principles, Design, Artifacts, and Recent Advances</a></em>. (Society of Photo-Optical Instrumentation Engineers (SPIE), 2015).&#160;<a class="footnote-backref" href="#fnref:HSI15" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HER09">
+<p>Herman, G. T. <em><a href="https://link.springer.com/book/10.1007/978-1-84628-723-7">Fundamentals of Computerized Tomography: Image Reconstruction from Projections</a></em>. (Springer, 2009).&#160;<a class="footnote-backref" href="#fnref:HER09" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:NAO14">
+<p>Naouar, N., Vidal-Sallé, E., Schneider, J., Maire, E. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compstruct.2014.04.026">Meso-scale FE analyses of textile composite reinforcement deformation based on X-Ray computed tomography</a>. <em>Composite Structures</em> <strong>116</strong>, 165--176 (2014).&#160;<a class="footnote-backref" href="#fnref:NAO14" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:NAO15">
+<p>Naouar, N., Vidal-Sallé, E., Schneider, J., Maire, E. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compstruct.2015.07.005">3D composite reinforcement meso F.E. Analyses based on X-Ray computed tomography</a>. <em>Composite Structures</em> <strong>132</strong>, 1094--1104 (2015).&#160;<a class="footnote-backref" href="#fnref:NAO15" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GAS00">
+<p>Gasser, A., Boisse, P. &amp; Hanklar, S. <a href="https://doi.org/10.1016/S0927-0256(99)00086-5">Mechanical behaviour of dry fabric reinforcements. 3D simulations versus biaxial tests</a>. <em>Computational Materials Science</em> <strong>17</strong>, 7--20 (2000).&#160;<a class="footnote-backref" href="#fnref:GAS00" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:CHA11b">
+<p>Charmetant, A., Vidal-Sallé, E. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compscitech.2011.07.004">Hyperelastic modelling for mesoscopic analyses of composite reinforcements</a>. <em>Composites Science and Technology</em> <strong>71</strong>, 1623--1631 (2011).&#160;<a class="footnote-backref" href="#fnref:CHA11b" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GEE03">
+<p>Geers, M., Kouznetsova, V. G. &amp; Brekelmans, W. A. M. <a href="https://doi.org/10.1615/IntJMultCompEng.v1.i4.40">MultiScale First-Order and Second-Order Computational Homogenization of Microstructures towards Continua</a>. <em>International Journal for Multiscale Computational Engineering</em> <strong>1</strong>, 371--386 (2003).&#160;<a class="footnote-backref" href="#fnref:GEE03" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:MAC56">
+<p>Mack, C. &amp; Taylor, H. M. <a href="https://doi.org/10.1080/19447027.1956.10750433">The Fitting of Woven Cloth to Surfaces</a>. <em>Journal of the Textile Institute Transactions</em> <strong>47</strong>, T477--T488 (1956).&#160;<a class="footnote-backref" href="#fnref:MAC56" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:VAN91">
+<p>Van Der Weeën, F. <a href="https://doi.org/10.1002/nme.1620310712">Algorithms for draping fabrics on doubly-curved surfaces</a>. <em>International Journal for Numerical Methods in Engineering</em> <strong>31</strong>, 1415--1426 (1991).&#160;<a class="footnote-backref" href="#fnref:VAN91" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:WAN99a">
+<p>Wang, J., Paton, R. &amp; Page, J. R. <a href="https://doi.org/10.1016/S1359-835X(98)00187-0">The draping of woven fabric preforms and prepregs for production of polymer composite components</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>30</strong>, 757--765 (1999).&#160;<a class="footnote-backref" href="#fnref:WAN99a" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:BEN07">
+<p>Ben Boubaker, B., Haussy, B. &amp; Ganghoffer, J. F. <a href="https://doi.org/10.1016/j.compositesb.2006.01.007">Discrete models of woven structures. Macroscopic approach</a>. <em>Composites Part B: Engineering</em> <strong>38</strong>, 498--505 (2007).&#160;<a class="footnote-backref" href="#fnref:BEN07" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SZE05">
+<p>Sze, K. Y. &amp; Liu, X. H. <a href="https://doi.org/10.1007/s10999-006-9004-0">A new skeletal model for fabric drapes</a>. <em>International Journal of Mechanics and Materials in Design</em> <strong>2</strong>, 225--243 (2005).&#160;<a class="footnote-backref" href="#fnref:SZE05" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SKO07">
+<p>Skordos, A. A., Monroy Aceves, C. &amp; Sutcliffe, M. P. F. <a href="https://doi.org/10.1016/j.compositesa.2006.11.005">A simplified rate dependent model of forming and wrinkling of pre-impregnated woven composites</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>38</strong>, 1318--1330 (2007).&#160;<a class="footnote-backref" href="#fnref:SKO07" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SHA04">
+<p>Sharma, S. B. &amp; Sutcliffe, M. P. F. <a href="https://doi.org/10.1016/j.compositesa.2004.02.013">A simplified finite element model for draping of woven material</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>35</strong>, 637--643 (2004).&#160;<a class="footnote-backref" href="#fnref:SHA04" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+<li id="fn:PEN05">
+<p>Peng, X. Q. &amp; Cao, J. <a href="https://doi.org/10.1016/j.compositesa.2004.08.008">A continuum mechanics-based non-orthogonal constitutive model for woven composite fabrics</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>36</strong>, 859--874 (2005).&#160;<a class="footnote-backref" href="#fnref:PEN05" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+</li>
+<li id="fn:BAD08">
+<p>Badel, P., Vidal-Salle, E., Maire, E. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compscitech.2008.04.038">Simulation and tomography analysis of textile composite reinforcement deformation at the mesoscopic scale</a>. <em>Deformation and Fracture of Composites: Analytical, Numerical and Experimental Techniques, with regular papers</em> <strong>68</strong>, 2433--2440 (2008).&#160;<a class="footnote-backref" href="#fnref:BAD08" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+</li>
+<li id="fn:KHA10">
+<p>Khan, M. A., Mabrouki, T., Vidal-Sallé, E. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.jmatprotec.2009.09.027">Numerical and experimental analyses of woven composite reinforcement forming using a hypoelastic behaviour. Application to the double dome benchmark</a>. <em>Journal of Materials Processing Technology</em> <strong>210</strong>, 378--388 (2010).&#160;<a class="footnote-backref" href="#fnref:KHA10" title="Jump back to footnote 42 in the text">&#8617;</a></p>
+</li>
+<li id="fn:CHA12">
+<p>Charmetant, A., Orliac, J. G., Vidal-Sallé, E. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compscitech.2012.05.006">Hyperelastic model for large deformation analyses of 3D interlock composite preforms</a>. <em>Composites Science and Technology</em> <strong>72</strong>, 1352--1360 (2012).&#160;<a class="footnote-backref" href="#fnref:CHA12" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SPE84">
+<p>Spencer, A. J. M. <a href="https://link.springer.com/chapter/10.1007/978-3-7091-4336-0_1">Constitutive Theory for Strongly Anisotropic Solids</a>. in <em>Continuum Theory of the Mechanics of Fibre-Reinforced Composites</em> (ed. Spencer, A. J. M.) 1--32 (Springer, 1984).&#160;<a class="footnote-backref" href="#fnref:SPE84" title="Jump back to footnote 44 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ROG89">
+<p>Rogers, T. G. <a href="https://doi.org/10.1016/0010-4361(89)90677-0">Rheological characterization of anisotropic materials</a>. <em>Composites</em> <strong>20</strong>, 21--27 (1989).&#160;<a class="footnote-backref" href="#fnref:ROG89" title="Jump back to footnote 45 in the text">&#8617;</a></p>
+</li>
+<li id="fn:JOH95">
+<p>Johnson, A. F. <a href="https://doi.org/10.1016/0956-7143(95)95006-K">Rheological model for the forming of fabric-reinforced thermoplastic sheets</a>. <em>Composites Manufacturing</em> <strong>6</strong>, 153--160 (1995).&#160;<a class="footnote-backref" href="#fnref:JOH95" title="Jump back to footnote 46 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SPE00">
+<p>Spencer, A. J. M. <a href="https://doi.org/10.1016/S1359-835X(00)00006-3">Theory of fabric-reinforced viscous fluids</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>31</strong>, 1311--1321 (2000).&#160;<a class="footnote-backref" href="#fnref:SPE00" title="Jump back to footnote 47 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GOS96">
+<p>Goshawk, J. &amp; Jones, R. <a href="https://doi.org/10.1016/1359-835X(95)00049-8">Structure reorganization during the rheological characterization of continuous fibre-reinforced composites in plane shear</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>27</strong>, 279--286 (1996).&#160;<a class="footnote-backref" href="#fnref:GOS96" title="Jump back to footnote 48 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ADV97">
+<p>Advani, S. G., Creasy, T. S. &amp; Shuler, S. F. <a href="https://doi.org/10.1016/S0927-0108(97)80010-0">Chapter 8 Rheology of long fiber-reinforced composites in sheetforming</a>. in <em>Composite Materials Series</em> vol. 11 323--369 (Elsevier, 1997).&#160;<a class="footnote-backref" href="#fnref:ADV97" title="Jump back to footnote 49 in the text">&#8617;</a></p>
+</li>
+<li id="fn:CHR93">
+<p>Christensen, R. <a href="https://doi.org/10.1122/1.550459">Effective viscous flow properties for fiber suspensions under concentrated conditions</a>. <em>Journal of Rheology (1978-present)</em> <strong>37</strong>, 103--121 (1993).&#160;<a class="footnote-backref" href="#fnref:CHR93" title="Jump back to footnote 50 in the text">&#8617;</a></p>
+</li>
+<li id="fn:MAR95">
+<p>Martin, T. A., Bhattacharyya, D. &amp; Collins, I. F. <a href="https://doi.org/10.1016/0956-7143(95)95009-N">Bending of fibre-reinforced thermoplastic sheets</a>. <em>Composites Manufacturing</em> <strong>6</strong>, 177--187 (1995).&#160;<a class="footnote-backref" href="#fnref:MAR95" title="Jump back to footnote 51 in the text">&#8617;</a></p>
+</li>
+<li id="fn:OB91">
+<p>O'Bradaigh, C. M. &amp; Byron Pipes, R. <a href="https://doi.org/10.1016/0956-7143(91)90135-4">Finite element analysis of composite sheet-forming process</a>. <em>Composites Manufacturing</em> <strong>2</strong>, 161--170 (1991).&#160;<a class="footnote-backref" href="#fnref:OB91" title="Jump back to footnote 52 in the text">&#8617;</a></p>
+</li>
+<li id="fn:MCG97">
+<p>McGuinness, G. B. &amp; ÓBrádaigh, C. M. <a href="https://doi.org/10.1016/S0377-0257(97)00040-2">Development of rheological models for forming flows and picture-frame shear testing of fabric reinforced thermoplastic sheets</a>. <em>Journal of Non-Newtonian Fluid Mechanics</em> <strong>73</strong>, 1--28 (1997).&#160;<a class="footnote-backref" href="#fnref:MCG97" title="Jump back to footnote 53 in the text">&#8617;</a></p>
+</li>
+<li id="fn:MCG98">
+<p>McGuinness, G. B. &amp; ÓBrádaigh, C. M. <a href="https://doi.org/10.1016/S1359-835X(97)00061-4">Characterisation of thermoplastic composite melts in rhombus-shear: The picture-frame experiment</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>29</strong>, 115--132 (1998).&#160;<a class="footnote-backref" href="#fnref:MCG98" title="Jump back to footnote 54 in the text">&#8617;</a></p>
+</li>
+<li id="fn:MAL00">
+<p>Mallon, P. J. &amp; Obradaigh, C. M. <a href="https://www.sciencedirect.com/science/article/pii/B0080429939001832">Compliant Mold Techniques for Thermoplastic Composites</a>. in <em>Comprehensive Composite Materials</em> (eds. Kelly, A. &amp; Zweben, C.) 873--913 (Pergamon, 2000).&#160;<a class="footnote-backref" href="#fnref:MAL00" title="Jump back to footnote 55 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HSI99">
+<p>Hsiao, S.-W. &amp; Kikuchi, N. <a href="https://doi.org/10.1016/S0045-7825(98)00273-4">Numerical analysis and optimal design of composite thermoforming process</a>. <em>Computer Methods in Applied Mechanics and Engineering</em> <strong>177</strong>, 1--34 (1999).&#160;<a class="footnote-backref" href="#fnref:HSI99" title="Jump back to footnote 56 in the text">&#8617;</a></p>
+</li>
+<li id="fn:CHE01">
+<p>Cherouat, A. &amp; Billoët, J. L. <a href="https://doi.org/10.1016/S0924-0136(01)00987-6">Mechanical and numerical modelling of composite manufacturing processes deep-drawing and laying-up of thin pre-impregnated woven fabrics</a>. <em>Journal of Materials Processing Technology</em> <strong>118</strong>, 460--471 (2001).&#160;<a class="footnote-backref" href="#fnref:CHE01" title="Jump back to footnote 57 in the text">&#8617;</a></p>
+</li>
+<li id="fn:TEN07">
+<p>Ten Thije, R. H. W., Akkerman, R. &amp; Huétink, J. <a href="https://doi.org/10.1016/j.cma.2007.02.010">Large deformation simulation of anisotropic material using an updated Lagrangian finite element method</a>. <em>Computer Methods in Applied Mechanics and Engineering</em> <strong>196</strong>, 3141--3150 (2007).&#160;<a class="footnote-backref" href="#fnref:TEN07" title="Jump back to footnote 58 in the text">&#8617;</a></p>
+</li>
+<li id="fn:JAU09a">
+<p>Jauffrès, D., Morris, C. D., Sherwood, J. A. &amp; Chen, J. <a href="https://doi.org/10.1007/s12289-009-0590-x">Simulation of the thermostamping of woven composites: Determination of the tensile and in-plane shearing behaviors</a>. <em>International Journal of Material Forming</em> <strong>2</strong>, 161--164 (2009).&#160;<a class="footnote-backref" href="#fnref:JAU09a" title="Jump back to footnote 59 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HAR04a">
+<p>Harrison, P., Clifford, M. J., Long, A. C. &amp; Rudd, C. D. <a href="https://doi.org/10.1016/j.compositesa.2004.01.005">A constituent-based predictive approach to modelling the rheology of viscous textile composites</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>35</strong>, 915--931 (2004).&#160;<a class="footnote-backref" href="#fnref:HAR04a" title="Jump back to footnote 60 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HAR11">
+<p>Harrison, P., Yu, W.-R. &amp; Long, A. C. <a href="https://doi.org/10.1016/j.compositesa.2011.07.026">Rate dependent modelling of the forming behaviour of viscous textile composites</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>42</strong>, 1719--1726 (2011).&#160;<a class="footnote-backref" href="#fnref:HAR11" title="Jump back to footnote 61 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GUZ15">
+<p>Guzman-Maldonado, E., Hamila, N., Boisse, P. &amp; Bikard, J. <a href="https://doi.org/10.1016/j.compositesa.2015.08.017">Thermomechanical analysis, modelling and simulation of the forming of pre-impregnated thermoplastics composites</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>78</strong>, 211--222 (2015).&#160;<a class="footnote-backref" href="#fnref:GUZ15" title="Jump back to footnote 62 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HAM08">
+<p>Hamila, N. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compositesb.2007.11.008">Simulations of textile composite reinforcement draping using a new semi-discrete three node finite element</a>. <em>Composites Part B: Engineering</em> <strong>39</strong>, 999--1010 (2008).&#160;<a class="footnote-backref" href="#fnref:HAM08" title="Jump back to footnote 63 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HAM09">
+<p>Hamila, N., Boisse, P., Sabourin, F. &amp; Brunet, M. <a href="https://doi.org/10.1002/nme.2625">A semi-discrete shell finite element for textile composite reinforcement forming simulation</a>. <em>International Journal for Numerical Methods in Engineering</em> <strong>79</strong>, 1443--1466 (2009).&#160;<a class="footnote-backref" href="#fnref:HAM09" title="Jump back to footnote 64 in the text">&#8617;</a></p>
+</li>
+<li id="fn:BEL12">
+<p>Bel, S., Hamila, N., Boisse, P. &amp; Dumont, F. <a href="https://doi.org/10.1016/j.compositesa.2012.08.005">Finite element model for NCF composite reinforcement preforming: Importance of inter-ply sliding</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>43</strong>, 2269--2277 (2012).&#160;<a class="footnote-backref" href="#fnref:BEL12" title="Jump back to footnote 65 in the text">&#8617;</a></p>
+</li>
+<li id="fn:DE09a">
+<p>De Luycker, E., Morestin, F., Boisse, P. &amp; Marsal, D. <a href="https://doi.org/10.1016/j.compstruct.2008.06.005">Simulation of 3D interlock composite preforming</a>. <em>Composite Structures</em> <strong>88</strong>, 615--623 (2009).&#160;<a class="footnote-backref" href="#fnref:DE09a" title="Jump back to footnote 66 in the text">&#8617;</a></p>
+</li>
+<li id="fn:CRE06">
+<p>Creech, G. &amp; Pickett, A. K. <a href="https://doi.org/10.1007/s10853-006-0213-6">Meso-modelling of Non-Crimp Fabric composites for coupled drape and failure analysis</a>. <em>Journal of Materials Science</em> <strong>41</strong>, 6725--6736 (2006).&#160;<a class="footnote-backref" href="#fnref:CRE06" title="Jump back to footnote 67 in the text">&#8617;</a></p>
+</li>
+<li id="fn:LOI08">
+<p>Loix, F., Badel, P., Orgéas, L., Geindreau, C. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.compscitech.2008.02.027">Woven fabric permeability: From textile deformation to fluid flow mesoscale simulations</a>. <em>Composites Science and Technology</em> <strong>68</strong>, 1624--1630 (2008).&#160;<a class="footnote-backref" href="#fnref:LOI08" title="Jump back to footnote 68 in the text">&#8617;</a></p>
+</li>
+<li id="fn:DAS92">
+<p>Dasgupta, A. &amp; Agarwal, R. K. <a href="https://doi.org/10.1177/002199839202601806">Orthotropic Thermal Conductivity of Plain-Weave Fabric Composites Using a Homogenization Technique</a>. <em>Journal of Composite Materials</em> <strong>26</strong>, 2736--2758 (1992).&#160;<a class="footnote-backref" href="#fnref:DAS92" title="Jump back to footnote 69 in the text">&#8617;</a></p>
+</li>
+<li id="fn:DAS96">
+<p>Dasgupta, A., Agarwal, R. K. &amp; Bhandarkar, S. M. <a href="https://doi.org/10.1016/0266-3538(95)00111-5">Three-dimensional modeling of woven-fabric composites for effective thermo-mechanical and thermal properties</a>. <em>Composites Science and Technology</em> <strong>56</strong>, 209--223 (1996).&#160;<a class="footnote-backref" href="#fnref:DAS96" title="Jump back to footnote 70 in the text">&#8617;</a></p>
+</li>
+<li id="fn:BIG01">
+<p>Bigaud, D., Goyhénèche, J.-M. &amp; Hamelin, P. <a href="https://doi.org/10.1016/S1359-835X(01)00043-4">A global-local non-linear modelling of effective thermal conductivity tensor of textile-reinforced composites</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>32</strong>, 1443--1453 (2001).&#160;<a class="footnote-backref" href="#fnref:BIG01" title="Jump back to footnote 71 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../continuum_mechanics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Continuum Mechanics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Continuum Mechanics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../materials_overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Materials overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Materials overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2025 Eduardo Guzman
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+      
+        <script src="../../../../assets/js/xy_graphs.js"></script>
+      
+    
+  </body>
+</html>
