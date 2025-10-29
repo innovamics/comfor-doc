@@ -88,6 +88,9 @@ extra:
     - name: 🇫🇷 Français
       link: /comfor-doc/fr/
       lang: fr
+  analytics:
+    provider: google
+    property: G-7CEE34RD0F
 
 markdown_extensions:
   - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"

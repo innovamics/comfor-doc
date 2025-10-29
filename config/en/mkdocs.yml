@@ -47,8 +47,6 @@ theme:
   custom_dir: ../../overrides
   logo: assets/img/logo-icon-innovamics.png
   favicon: assets/img/apple-touch-icon-72x72.png
-  analytics:
-    gtag: "G-7CEE34RD0F"
   language: en
   font:
     text: Roboto
@@ -88,6 +86,9 @@ extra:
     - name: 🇫🇷 Français
       link: /comfor-doc/fr/
       lang: fr
+  analytics:
+    provider: google
+    property: G-7CEE34RD0F
 
 markdown_extensions:
   - admonition #"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
