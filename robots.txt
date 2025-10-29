@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://innovamics.github.io/comfor-doc/en/sitemap.xml
+Sitemap: https://innovamics.github.io/comfor-doc/fr/sitemap.xml
+
+Sitemap: https://comfor.gitlab.io/comfor-doc/en/sitemap.xml
+Sitemap: https://comfor.gitlab.io/comfor-doc/fr/sitemap.xml

@@ -1,111 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/blog/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/blog/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/blog/2025/10/23/adding-blog/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/blog/2025/10/23/adding-blog/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/developers/api/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/developers/api/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/developers/code_of_conduct/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/developers/code_of_conduct/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/developers/git/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/developers/git/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/developers/license/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/developers/license/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/analysis/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/analysis/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/elements/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/elements/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/materials/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/materials/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/overview/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/overview/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/postprocessing/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/postprocessing/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/preprocessing/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/preprocessing/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/theory/continuum_mechanics/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/theory/continuum_mechanics/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/theory/theory_overview/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/theory/theory_overview/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/theory/materials/composite_materials/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/theory/materials/composite_materials/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/theory/materials/materials_overview/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/theory/materials/materials_overview/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/docs/theory/solvers/solvers_overview/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/docs/theory/solvers/solvers_overview/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/faq/faq/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/faq/faq/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/overview/download/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/overview/download/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/overview/quick_starter_guide/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/overview/quick_starter_guide/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/overview/tutorial/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/overview/tutorial/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/overview/versions/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/overview/versions/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/services/academy/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/services/academy/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/services/industry/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/services/industry/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/blog/archive/2025/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/blog/archive/2025/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
-         <loc>https://innovamics.github.io/comfor-doc/blog/category/news/</loc>
+         <loc>https://innovamics.github.io/comfor-doc/en/blog/category/news/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
 </urlset>
