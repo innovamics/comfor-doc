@@ -11,7 +11,8 @@ permissions:
 env:
   EN_CONFIG: config/en/mkdocs.yml
   FR_CONFIG: config/fr/mkdocs.yml
-  SITE_URL: "https://innovamics.github.io/comfor-doc"
+  SITE_URL_EN: "https://innovamics.github.io/comfor-doc/en"
+  SITE_URL_FR: "https://innovamics.github.io/comfor-doc/fr"
 
 jobs:
   test:
@@ -50,6 +51,9 @@ jobs:
       - run: export SITE_URL="https://innovamics.github.io/comfor-doc"
       - run: mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../public/en
       - run: mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../public/fr
+      - run: cp extra/googlef388943a115bc8cc.html public/en/googlef388943a115bc8cc.html
+      - run: cp extra/googlef388943a115bc8cc.html public/fr/googlef388943a115bc8cc.html
+      - run: cp extra/robots.txt public/robots.txt
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

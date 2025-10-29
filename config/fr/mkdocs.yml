@@ -1,6 +1,6 @@
 site_name: Comfor Documentation
 site_author: Eduardo Guzman
-site_url: !ENV [SITE_URL, "https://innovamics.github.io/comfor-doc"]
+site_url: !ENV [SITE_URL_FR, "https://innovamics.github.io/comfor-doc/fr"]
 repo_url: https://gitlab.com/comfor/comfor-doc
 repo_name: comfor/comfor
 copyright: Copyright &copy; 2021 - 2025 Eduardo Guzman
@@ -47,8 +47,6 @@ theme:
   custom_dir: ../../overrides
   logo: assets/img/logo-icon-innovamics.png
   favicon: assets/img/apple-touch-icon-72x72.png
-  analytics:
-    gtag: "G-7CEE34RD0F"
   language: fr
   font:
     text: Roboto

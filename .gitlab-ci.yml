@@ -17,14 +17,14 @@ before_script:
   - pandoc --version
   - pip install -r requirements.txt
   - mkdocs --version
-  - export SITE_URL="https://comfor.gitlab.io/comfor-doc"
-  
+  - export SITE_URL_EN="https://comfor.gitlab.io/comfor-doc/en"
+  - export SITE_URL_FR="https://comfor.gitlab.io/comfor-doc/fr"
 
 test:
   stage: test
   script:
-  - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../test/en
-  - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../test/fr
+    - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../test/en
+    - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../test/fr
   artifacts:
     paths:
       - test
@@ -36,6 +36,9 @@ pages:
   script:
     - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../public/en
     - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../public/fr
+    - cp extra/googlef388943a115bc8cc.html public/en/googlef388943a115bc8cc.html
+    - cp extra/googlef388943a115bc8cc.html public/fr/googlef388943a115bc8cc.html
+    - cp extra/robots.txt public/robots.txt
   artifacts:
     paths:
       - public
