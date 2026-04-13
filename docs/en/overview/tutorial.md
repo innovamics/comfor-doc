@@ -119,12 +119,12 @@ The most efficient way to run **COMFOR** is via the terminal (Command Prompt on 
 
 === "Windows"
     ```bash
-    comfor.exe Feuilles.toml
+    comfor.exe -j Feuilles.toml
     ```
 
 === "Linux / macOS"
     ```bash
-    ./comfor Feuilles.toml
+    ./comfor -j Feuilles.toml
     ```
 
 !!! tip
