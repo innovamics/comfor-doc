@@ -1,3 +1,9 @@
+<style>
+  .md-sidebar--secondary .md-nav__list .md-nav__item .md-nav {
+    display: none !important;
+  }
+</style>
+
 In this tutorial, we will go through a complete example using **COMFOR** — from input file setup to result visualization in ParaView.
 
 You will learn how to:
