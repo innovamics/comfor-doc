@@ -108,18 +108,52 @@ The binary files will be located in the `bin/Release` folder.
 
 If you prefer a graphical interface, you can use **Visual Studio Code** with the "C/C++" and "CMake Tools" extensions to automate the compilation process.
 
------
+---
+
+# Execution Options (CLI)
+
+**COMFOR** is a command-line tool. You can control its behavior using various arguments to manage parallel execution, validate files, or display software information.
+
+## Available Arguments
+
+| Argument | Long Form | Value | Description |
+| :--- | :--- | :---: | :--- |
+| `-j` | `--job` | `FILE` | **Required.** Path to the input file (`.toml`, `.txt` or `.fembic`). |
+| `-u` | `--cpus` | `1..16` | Number of CPU threads for parallel execution. (Default: `1`). |
+| - | `--validate` | - | Validates the input file syntax without running the solver. |
+| `-i` | `--info` | - | Shows general information about **COMFOR**. |
+| `-c` | `--credits` | - | Lists software contributors and libraries. |
+| `-l` | `--license` | - | Displays the software license terms. |
+| `-v` | `--version` | - | Shows the current version. |
+| `-h` | `--help` | - | Prints the help message. |
+
+---
 
 # Run and test
 
-You should now have an executable file called **COMFOR** (or `comfor.exe` on Windows). You can specify the path to an input file as an argument, or run it directly and the program will prompt you for the path.
+You should now have an executable file called **COMFOR** (or `comfor.exe` on Windows).
 
 ## Run it
 
-Run one of the provided samples in the `Examples` folder using the following command (supporting both `.toml` and legacy formats):
+To launch a simulation, navigate to your work directory and use the `-j` (or `--job`) flag followed by your input file. You can also specify the number of CPU threads with `-u`.
 
 ```bash
-./comfor Examples/my_input_file.toml
+# Standard execution (1 thread)
+./comfor -j Examples/input_file.toml
+
+# Parallel execution with 4 threads
+./comfor -j Examples/input_file.toml -u 4
+```
+
+!!! tip
+    If you run `./comfor` without the `-j` argument, the program will start in interactive mode and prompt you to manually type the path to your input file.
+
+## Validate it
+
+If you want to check your input file for syntax errors or missing parameters without starting the actual computation, use the `--validate` flag:
+
+```bash
+./comfor -j Examples/input_file.toml --validate
 ```
 
 ## Test it
@@ -144,7 +178,7 @@ Expected result:
 [  PASSED  ] 5 tests.
 ```
 
------
+---
 
 # Postprocessing
 
