@@ -4,7 +4,7 @@
   }
 </style>
 
-COMFOR définit le modèle numérique à travers un fichier d'entrée structuré. L'environnement dispose d'une architecture de parser modulaire supportant à la fois le standard moderne **TOML** (recommandé pour sa modularité et sa lisibilité) et le format hérité **Fembic** (maintenu pour la rétrocompatibilité).
+COMFOR définit le modèle numérique à travers un fichier d'entrée structuré. L'environnement dispose d'une architecture de parser modulaire [^1] supportant à la fois le standard moderne **TOML** (recommandé pour sa modularité et sa lisibilité) et le format hérité **Fembic** (maintenu pour la rétrocompatibilité).
 
 Contrairement aux versions précédentes, COMFOR découple désormais la définition géométrique des propriétés physiques, permettant l'import direct de formats de maillage externes tels qu'**Abaqus (.inp)** ou **Gmsh (.msh)**, en plus des définitions **Inline**.
 

@@ -166,4 +166,4 @@ Utilisez le bouton **Play** (contrôles VCR) pour regarder l'animation. Vous pou
 Félicitations ! Vous avez réussi votre première simulation avec **COMFOR**.
 
   - Explorez la [Documentation Générale](../docs/overview.md).
-  - Apprenez à configurer un [Fichier d'entrée](../docs/preprocessing.md#input_structure).
+  - Apprenez à configurer un [Fichier d'entrée](../docs/preprocessing.md#structure_de_lentree).
