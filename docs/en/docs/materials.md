@@ -98,8 +98,7 @@ Elastic materials in **COMFOR** use the [**Saint-Venant-Kirchhoff**](theory/mate
 
 ## Composite
 
-- Designed for [**anisotropic textile materials**](theory/materials/materials_overview.md#textile_composite_hyperelastic_materials) (e.g., woven composites).
-- Requires orientation parameters for warp/weft directions and stiffness coefficients.
+Designed for [**anisotropic textile materials**](theory/materials/materials_overview.md#textile_composite_hyperelastic_materials) (e.g., woven composites). Requires orientation parameters for warp/weft directions and stiffness coefficients.
 
 ### Parameters
 

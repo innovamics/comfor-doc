@@ -79,7 +79,7 @@ python3 -m pip install matplotlib mkdocs-material
 
 ## Clone
 
-Clone or download the sources from the main [repo](https://gitlab.com/innovamics/comfor){:target="_blank"}.
+Clone or download the sources from the main [repo](https://gitlab.com/comfor/comfor.git){:target="_blank"}.
 
 ```bash
 git clone https://gitlab.com/comfor/comfor.git

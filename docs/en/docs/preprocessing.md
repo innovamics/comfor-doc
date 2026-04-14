@@ -592,7 +592,6 @@ The `constraint` block is used to prescribe values to specific degrees of freedo
     ```xml
     CONSTRAINTS TYPE BOUNDARY_CONDITION
     FixedBase SET = BottomNodes PRESET = FIXED
-
     MovingPlaten SET = TopNodes VY = -10.0 AMP = RampUp
     ```
 
@@ -894,7 +893,8 @@ Each component (e.g., `vx`, `vry`, `az`) can be defined in two ways:
 
 #### Value Evaluation
 The value applied at a given time $t$ is calculated as:
-$V_{applied}(t) = Value \times Amplitude(t)$
+
+$$V_{applied}(t) = Value \times Amplitude(t)$$
 
 If no local amplitude is defined for the component, it falls back to the global `amplitude` defined at the block level. If neither is present, the factor is $1.0$.
 
