@@ -704,6 +704,7 @@ The `contact` block defines the interaction between geometric entities. It pairs
 | `surfaces` | Array | Yes\* | - | Alternative syntax: List of two surfaces `["Surf1", "Surf2"]`. |
 | **`normal`** | String | **Yes** | - | Name of the assigned Normal [Contact Behaviour](#contact_behaviour_library). |
 | **`tangential`**| String | **Yes** | - | Name of the assigned Tangential [Contact Behaviour](#contact_behaviour_library). |
+| `edge` | Boolean | No | `false` | If `true`, enables edge contact detection (surface + edges). If `false`, uses basic surface-only contact. |
 
 !!! info "Surface Definition"
     You must define the surfaces involved using either the `master`/`slave` pair **or** the `surfaces` array. Using both simultaneously will result in a validation error.
@@ -712,7 +713,7 @@ The `contact` block defines the interaction between geometric entities. It pairs
 
 === "TOML :simple-toml:"
     ```toml
-    # Interaction defined using Master/Slave keywords
+    # Interaction defined using Master/Slave keywords (basic surface contact)
     [contact.DieToBlank]
     type = "PAIR"
     master = "ToolSurface"
@@ -720,12 +721,13 @@ The `contact` block defines the interaction between geometric entities. It pairs
     normal = "HardPenalty"
     tangential = "SteelFriction"
 
-    # Interaction defined using the surfaces array
+    # Interaction defined using the surfaces array (with edge contact enabled)
     [contact.SelfContact]
     type = "PAIR"
     surfaces = ["FabricSurface", "FabricSurface"]
     normal = "SoftPenalty"
     tangential = "FabricFriction"
+    edge = true
     ```
 
 === "Fembic :material-text:"

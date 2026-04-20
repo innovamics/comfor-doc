@@ -704,6 +704,7 @@ Le bloc `contact` définit l'interaction entre les entités géométriques. Il a
 | `surfaces` | Array | Oui\* | - | Syntaxe alternative : Liste de deux surfaces `["Surf1", "Surf2"]`. |
 | **`normal`** | String | **Oui** | - | Nom du comportement de [Contact Normal](#bibliotheque_de_comportements_de_contact) assigné. |
 | **`tangential`**| String | **Oui** | - | Nom du comportement de [Contact Tangentiel](#bibliotheque_de_comportements_de_contact) assigné. |
+| `edge` | Boolean | Non | `false` | Si `true`, active la détection de contact sur les bords (surface + bords). Si `false`, utilise un contact basique uniquement sur la surface. |
 
 !!! info "Définition de la Surface"
     Vous devez définir les surfaces impliquées en utilisant soit la paire `master`/`slave`, soit le tableau `surfaces`. L'utilisation simultanée des deux entraînera une erreur de validation.
@@ -712,7 +713,7 @@ Le bloc `contact` définit l'interaction entre les entités géométriques. Il a
 
 === "TOML :simple-toml:"
     ```toml
-    # Interaction définie à l'aide des mots-clés Master/Slave
+    # Interaction définie à l'aide des mots-clés Master/Slave (contact de surface basique)
     [contact.OutilVersPiece]
     type = "PAIR"
     master = "SurfaceOutil"
@@ -720,12 +721,13 @@ Le bloc `contact` définit l'interaction entre les entités géométriques. Il a
     normal = "PenaliteDure"
     tangential = "FrottementAcier"
 
-    # Interaction définie à l'aide du tableau surfaces
+    # Interaction définie à l'aide du tableau surfaces (avec contact sur les bords activé)
     [contact.AutoContact]
     type = "PAIR"
     surfaces = ["SurfaceTissu", "SurfaceTissu"]
     normal = "PenaliteDouce"
     tangential = "FrottementTissu"
+    edge = true
     ```
 
 === "Fembic :material-text:"
