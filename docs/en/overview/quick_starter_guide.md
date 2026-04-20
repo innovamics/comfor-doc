@@ -1,142 +1,164 @@
-This tool has been compiled and tested on Windows (win64), Linux (amd64), and macOS(amd64). Using any other architecture, is not guaranteed to work.
+This tool has been compiled and tested on **Windows** (x86_64, ARM64), **Linux** (x86_64, ARM64), and **macOS** (x86_64, Apple Silicon). Using any other architecture is not guaranteed to work.
 
 # Download
 
-To run Comfor you can [download](download.md) the binaries from the release page or you can build it from source. For download the binary for your architecture and follow the instructions given here and [run some test](#run_it).
+To run **COMFOR**, you can [download](download.md) the binaries from the release page or you can build it from source. Download the binary for your architecture, follow the instructions given here, and [run some tests](#run_and_test).
 
-To build Comfor from sources you will need to download an compile the code. If so, follow these instructions.
+To build **COMFOR** from sources, you will need to download and compile the code. If so, follow the instructions below.
 
 # Build from sources
 
 ## Prerequisites
 
-**CMake** : a cross-platform, open-source build system generator. Allows to generate a project for a given IDE (Unix Makefiles, Xcode, Eclipse, etc...) or compilation rules for Comfor. It can be easily installed under linux with the following command:
+**CMake**: A cross-platform, open-source build system generator. It allows you to generate a project for a given IDE (Unix Makefiles, Xcode, Visual Studio, etc.) or compilation rules for **COMFOR**. It can be easily installed under Linux with the following command:
 
-```sh
+```bash
 sudo apt install cmake
 ```
 
-On MacOS using [brew](https://brew.sh/){:target="_blank"}:
+On macOS using [brew](https://brew.sh/){:target="_blank"}:
 
 ```bash
 brew install cmake
 ```
 
-Binaries files for Mac OS and Windows can be downloaded at [cmake.org](https://cmake.org){:target="_blank"}
+Binary files for macOS and Windows can be downloaded at [cmake.org](https://cmake.org){:target="_blank"}.
 
 **C++ Compiler**
 
-Comfor is written in C++ and it needs at least a [c++ compiler](https://en.cppreference.com/w/cpp/compiler_support/17){:target="_blank"} that support **C++ 17** language features.
+**COMFOR** is written in C++ and requires a [C++ compiler](https://en.cppreference.com/w/cpp/compiler_support/17){:target="_blank"} that supports **C++17** features or higher.
 
-Examples:
+Recommended versions:
 
-- gcc >= 9
-- clang libc++ >=7
-- Apple clang >= 11.0.0
-- MSVC >= 2015
+  - **GCC** >= 11
+  - **Clang** >= 14
+  - **Apple Clang** >= 13.0.0
+  - **MSVC** >= 2022
 
-Under **Ubuntu 18.04/20.04**, you can use gcc this can be installed with the following command:
+Under **Ubuntu 22.04 / 24.04 LTS**, you can install the necessary tools with:
 
 ```bash
 sudo apt install build-essential
 ```
 
-Under Mac OS verify if the Clang compiler is already installed.
+Under macOS, verify if the Clang compiler is already installed:
 
 ```bash
 clang --version
 ```
 
-If you want to install or update the Clang compilers, enter the command:
+To install or update the Clang compilers, enter:
 
 ```bash
 command xcode-select --install
 ```
 
-Under Windows you can use a POSIX environnement like [MSYS2](https://www.msys2.org){:target="_blank"} or [Mingw](https://www.mingw-w64.org/){:target="_blank"} or Mysys. Since version **0.2.1**.
+Under Windows, you can use a POSIX environment like [MSYS2](https://www.msys2.org){:target="_blank"} or [MinGW-w64](https://www.mingw-w64.org/){:target="_blank"}. **COMFOR** is also fully compatible with [Microsoft C++ compilers](https://visualstudio.microsoft.com/downloads/){:target="_blank"} (Tested using **Visual Studio 2022**).
 
-!!! note
-    Comfor is compatible with [Microsoft C++ compilers](https://visualstudio.microsoft.com/downloads/){:target="_blank"} (Tested using Visual C++ 2019 ).
-    
-!!! Warning
-    [Mingw32](https://www.msys2.org){:target="_blank"} is not fully compatible with [google-test](https://github.com/google/googletest){:target="_blank"}, a popular library to build unit an integration test (see [issue 2418](https://github.com/google/googletest/issues/2418){:target="_blank"}). You can compile Comfor but you cannot build the binary files for the test cases.
+!!! warning
+    Some versions of MinGW may have compatibility issues with [google-test](https://github.com/google/googletest){:target="_blank"} (see [issue 2418](https://github.com/google/googletest/issues/2418){:target="_blank"}). While you can compile **COMFOR**, building the unit tests might require specific configurations.
 
 **Python**
 
 !!! note
-    This is only useful for testing and documentation.
-    
-Python modules are used to generate the documentation and charts during testing . Make sure that python and the following packages are installed.
+    Python is mainly used for result post-processing, automated testing, and generating this documentation.
 
-- Charts: [Matplotlib](https://pypi.org/project/matplotlib/){:target="_blank"}
-- This site: [Mkdocs](https://pypi.org/project/mkdocs/){:target="_blank"}
+Make sure **Python 3.10+** and the following packages are installed:
 
-To install, make sure that Python 3 is installed:
+  - Charts: [Matplotlib](https://pypi.org/project/matplotlib/){:target="_blank"}
+  - Documentation: [MkDocs-Material](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
 
-```bash
-python3 --version
-```
-
-And install the packages using pip
+Install the packages using pip:
 
 ```bash
-python3 -m pip install <package name>
+python3 -m pip install matplotlib mkdocs-material
 ```
 
 !!! warning
-    On windows comfor is currently working by installing the standalone [Python 3.8.7](https://www.python.org/downloads/release/python-387/){:target="_blank"} distribution. Anaconda is not yet supported. Make sure that `python` and `pip` are on the path.
-    
+    On Windows, it is recommended to use the standalone [Python.org](https://www.python.org/downloads/){:target="_blank"} distribution. Ensure that `python` and `pip` are added to your system PATH.
+
 ## Clone
 
-Clone or download the sources from the main [repo](https://gitlab.com/innovamics/comfor){:target="_blank"}. If you are not familiarized with Git, check the (Cheat Sheet)
+Clone or download the sources from the main [repo](https://gitlab.com/comfor/comfor.git){:target="_blank"}.
 
 ```bash
-git clone https://gitlab.com/innovamics/comfor.git
+git clone https://gitlab.com/comfor/comfor.git
 ```
 
 ## Compile
 
-### Using make
+### Using CMake (Recommended)
 
-Make sure that make is installed on your machine `make --version`, this is usually the case for macOS and Linux after install the [developer tools](#prerequisites). If you are not sure, use the cross platform proposition.
-
-The compilation rules are generated by Cmake using the `CMakeList.txt` file included in the projet. A good habit is to encapsulate all the intermediate files generated by Cmake in a single folder (the build). Cmake identifies the architecture, the compiler version and generate the projet (a make file by default under Unix). Finally, make generate the binary according to the compilation rules.
+The compilation rules are generated by CMake using the `CMakeLists.txt` file included in the project. A good habit is to encapsulate all intermediate files in a single folder (the build). CMake identifies the architecture and generates the project rules.
 
 ```bash
 cd COMFOR
-mkdir Build
+mkdir build
+cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make
+cmake --build . --config Release
 ```
 
-The binary files are on the `Bin/Release` folder.
+The binary files will be located in the `bin/Release` folder.
 
 !!! tip
-    Cmake can [generate](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html){:target="_blank"} the project for different IDE (Eclipse, Xcode, Visual code..). In the previous example we assume that the default generator is Unix MakeFiles. You can specify generator using `cmake .. -G <generator_name>`. To see the available list of generators for your case use: `cmake -G`
-    
-### Cross platform proposition
+    CMake can [generate](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html){:target="_blank"} projects for different IDEs (Visual Studio, Xcode, Eclipse). You can specify a generator using `cmake .. -G <generator_name>`. To see the available list for your system, use `cmake -G`.
 
-If you are having troubles compiling the code you can use visual code. Visual code, provides a GUI support and different extension to automatize th compilation process. To configure Visual click here.
+### Cross-platform proposition
+
+If you prefer a graphical interface, you can use **Visual Studio Code** with the "C/C++" and "CMake Tools" extensions to automate the compilation process.
+
+---
+
+# Execution Options (CLI)
+
+**COMFOR** is a command-line tool. You can control its behavior using various arguments to manage parallel execution, validate files, or display software information.
+
+## Available Arguments
+
+| Argument | Long Form | Value | Description |
+| :--- | :--- | :---: | :--- |
+| `-j` | `--job` | `FILE` | **Required.** Path to the input file (`.toml`, `.txt` or `.fembic`). |
+| `-u` | `--cpus` | `1..16` | Number of CPU threads for parallel execution. (Default: `1`). |
+| - | `--validate` | - | Validates the input file syntax without running the solver. |
+| `-i` | `--info` | - | Shows general information about **COMFOR**. |
+| `-c` | `--credits` | - | Lists software contributors and libraries. |
+| `-l` | `--license` | - | Displays the software license terms. |
+| `-v` | `--version` | - | Shows the current version. |
+| `-h` | `--help` | - | Prints the help message. |
+
+---
 
 # Run and test
 
-You should now have a nice binary file called Comfor. To run comfor you can specify the name of the input file, or run comfor directly, comfor will prompt you for the path to the input file.
-
-```bash
-./comfor
-```
+You should now have an executable file called **COMFOR** (or `comfor.exe` on Windows).
 
 ## Run it
 
-Run one of the provided samples in `Examples` folder using the following the following command. Or download some other test from the [download page](download.md#examples) 
+To launch a simulation, navigate to your work directory and use the `-j` (or `--job`) flag followed by your input file. You can also specify the number of CPU threads with `-u`.
 
 ```bash
-./comfor PATH_TO_INPUT_FILE
+# Standard execution (1 thread)
+./comfor -j Examples/input_file.toml
+
+# Parallel execution with 4 threads
+./comfor -j Examples/input_file.toml -u 4
+```
+
+!!! tip
+    If you run `./comfor` without the `-j` argument, the program will start in interactive mode and prompt you to manually type the path to your input file.
+
+## Validate it
+
+If you want to check your input file for syntax errors or missing parameters without starting the actual computation, use the `--validate` flag:
+
+```bash
+./comfor -j Examples/input_file.toml --validate
 ```
 
 ## Test it
 
-In addition to the main binary file, Cmake also generates a series of executables called \*Test.o/exe. These files allow to launch a test to see if the different comfor modules are working correctly. You can execute directly this files.
+In addition to the main binary, CMake generates a series of test executables (e.g., `AmplitudeTest`, `MaterialTest`). These allow you to verify if the different **COMFOR** modules are working correctly on your machine.
 
 Example:
 
@@ -144,7 +166,7 @@ Example:
 ./AmplitudeTest
 ```
 
-Expected result :
+Expected result:
 
 ```console
 [==========] Running 5 tests from 1 test suite.
@@ -152,22 +174,12 @@ Expected result :
 [----------] 5 tests from TabularTest
 [ RUN      ] TabularTest.parseOne
 [       OK ] TabularTest.parseOne (0 ms)
-[ RUN      ] TabularTest.parseSeveral
-.
-.
-.
-[       OK ] TabularTest.parseFile (2 ms)
-[----------] 5 tests from TabularTest (2 ms total)
-
-[----------] Global test environment tear-down
-[==========] 5 tests from 1 test suite ran. (3 ms total)
+...
 [  PASSED  ] 5 tests.
 ```
 
-If some test fails, please feel free to contact us.
+---
 
 # Postprocessing
 
-Comfor can generate VTK files for the results. Paraview post-processor can be used to visualize those results. Paraview is available at [paraview.com](https://www.paraview.org/download){:target="_blank"}
-
-
+**COMFOR** generates **VTU** or **VTK** files for the results. **ParaView** is the recommended open-source post-processor to visualize these results. ParaView is available at [paraview.org](https://www.paraview.org/download/){:target="_blank"}.

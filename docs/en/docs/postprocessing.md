@@ -1,41 +1,41 @@
-[VTK](http://www.vtk.org/VTK/img/file-formats.pdf){:target="_blank"} is the default output format for the results. In the future, other formats may be developed according to users and researchers needs.
+[VTU (XML Unstructured Grid)](https://docs.vtk.org/en/latest/vtk_file_formats/vtkxml_file_format.html#unstructuredgrid){:target="_blank"} is the recommended output format for results in **COMFOR**, though legacy VTK is still supported. These formats are industry standards for scientific visualization.
 
-During the simulation Comfor writes several vtk files, one every [`print_step`](preprocessing.md#control). These files are located in the folder `Results_<file_name>`.
+During the simulation, **COMFOR** writes several result files at the specified [`frequency`](preprocessing.md#output). These files are stored in the results directory defined in your input file.
 
-_Exemple_
+**Example Folder Structure**
 
 ```console
-Project_name
+Project_Folder
   |
-  |---in_file.bim
-  |---Results_in_file
-  |     |--- in_file_0.vtk
-  |     |--- in_file_1.vtk
-  |     |--- in_file_2.vtk
+  |---simulation.toml
+  |---Results_Folder
+  |     |--- simulation_0.vtu
+  |     |--- simulation_1.vtu
+  |     |--- simulation_2.vtu
        ...
 ```
 
 # Load the files
 
-In order to visualize the results, open Paraview. Click on menu _File_->_Open_ and look for the `Results_<file_name>`. Since Comfor names the files in ascending order, Paraview propose to open the files as a group.
+To visualize the results, open **ParaView**. Click on **File → Open** and navigate to your results folder. Since **COMFOR** names files in ascending order (e.g., `file_..vtu`), ParaView will automatically propose to open them as a **file group** (time series).
 
 <div style="text-align:center;">
     <figure>
-        <img src="../../assets/img/open_vtk.gif" alt="Logo">
+        <img src="../../assets/img/open_vtk.gif" alt="Loading files in ParaView">
         <figcaption>Loading the files</figcaption>
     </figure>
 </div>
 
 # Play the animation
 
-After open the files, Paraview create a stage on the [`Pipeline Browser`](https://www.paraview.org/ParaView/index.php/Pipeline_Browser_Ideas){:target="_blank"}. If the mesh is not displayed you need to click in *Apply* in the properties section.
+After opening the files, they will appear in the **Pipeline Browser**. Click the **Apply** button in the Properties section to render the mesh.
 
-!!! tip
-    Activate the **Auto Apply** option in _Paraview Preferences_->_General_->_Properties Panel Options_.
-    
-To play the animation, click the Play button on the VCR toolbar. The time toolbar shows the current frame displayed. You can also go frame by frame, go to the first or last frame, or play the animation in a loop.
+!!! tip "Workflow Hint"
+    To save time, activate **Auto Apply** in *Edit → Settings → General → Properties Panel Options*.
 
-The data to be displayed can be selected in the _Data Analysis_ toolbar. A list allows you to select the active variables for the current model, scalar and vectorial values defined either at the nodes or at the elements. This can be also changed on the properties section/Coloring. The default color maps can be changed to have a more suitable visual color gradient.
+To play the animation, use the **Play** button on the VCR toolbar. You can navigate frame by frame, loop the animation, or jump to specific time steps using the time toolbar.
+
+The data to be displayed (Scalars or Vectors) can be selected in the **Active Variable** dropdown menu. You can visualize nodal data (e.g., Displacement) or element data (e.g., Stress). Colors and gradients can be customized in the **Coloring** section of the Properties panel.
 
 <div style="text-align:center;">
     <figure>
@@ -46,13 +46,15 @@ The data to be displayed can be selected in the _Data Analysis_ toolbar. A list 
 
 # Applying filters
 
-Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters){:target="_blank"} that allow us to manipulate the data and treat the simulation data. These filters can be applied in cascade to combine their functionalities. To apply a filter, click on menu *Filters -> Alphabetical*, or search by category. The most common filters for our application are:
+ParaView provides a wide range of [filters](https://docs.paraview.org/en/latest/Tutorials/ClassroomTutorials/beginningSourcesAndFilters.html){:target="_blank"} to process and analyze simulation data. Filters can be stacked in the Pipeline Browser to combine effects.
 
-- `Connectivity`: Identifies the mesh regions that are connected. The Connectivity filter assigns a region id (point data) to connected components of the input data set. We use this filter to separate the solid regions form the composite plates.
-- `Threshold`:This filter extracts elements that have nodal or element data scalars in the specified range. The Threshold filter extracts the portions of the input dataset whose scalars lie within the specified range. To specify the range, select **your** Threshold filter in the Pile Browser tree and expand the `Properties(Threshold)` section in the properties menu. Select the scalar to be evaluated and fix the max an min values. Finally click apply
-- `Cell to data point`: This filter allows to extrapolate element data to the nodes. It averages the values of the data of the elements surrounding a node to compute nodal information.
-- `Temporal interpolator`: Interpolate the solution between to frames. Useful to obtain nice and smooth animations for presentations.
-- `Plot data`: Plot data arrays from the input. This filter prepare arbitrary data to be plotted in any of the plots. By default the data is shown in a XY line plot. Use this filter to plot you csv files.
+Commonly used filters for **COMFOR** simulations:
+
+  - **`Connectivity`**: Identifies the mesh regions that are connected. The Connectivity filter assigns a region id (point data) to connected components of the input data set. We use this filter to separate the solid regions form the composite plates.
+  - **`Threshold`**: This filter extracts elements that have nodal or element data scalars in the specified range. The Threshold filter extracts the portions of the input dataset whose scalars lie within the specified range. To specify the range, select **your** Threshold filter in the Pile Browser tree and expand the `Properties(Threshold)` section in the properties menu. Select the scalar to be evaluated and fix the max an min values. Finally click apply.
+  - **`Cell Data to Point Data`**: This filter allows to extrapolate element data to the nodes. It averages the values of the data of the elements surrounding a node to compute nodal information.
+  - **`Temporal Interpolator`**: Interpolate the solution between to frames. Useful to obtain nice and smooth animations for presentations.
+  - **`Plot Data`**: Plot data arrays from the input. This filter prepare arbitrary data to be plotted in any of the plots. By default the data is shown in a XY line plot. Use this filter to plot you csv files.
 
 <div style="text-align:center;">
     <figure>
@@ -61,9 +63,9 @@ Paraview has a series of [filters](https://www.paraview.org/Wiki/ParaView/Users_
     </figure>
 </div>
 
-# Ressources
+# Resources
 
-For more information you can read the different online tutorials:
+For in-depth ParaView training, consult these resources:
 
-- [Official Paraview tutorial ](https://www.paraview.org/Wiki/The_ParaView_Tutorial){:target="_blank"}
-- [Cyprien Rusu tutorials](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-){:target="_blank"}
+  - [Official ParaView Tutorial](https://www.paraview.org/Wiki/The_ParaView_Tutorial){:target="\_blank"}
+  - [Cyprien Rusu - ParaView for FEA](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-){:target="\_blank"}

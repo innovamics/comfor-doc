@@ -1,104 +1,71 @@
-Le format [VTK](http://www.vtk.org/VTK/img/file-formats.pdf){:target="_blank"} est utilisé par
-défaut pour l’exportation des résultats. D’autres formats pourront être pris en
-charge à l’avenir, en fonction des besoins des utilisateurs et des chercheurs.
+Le format [VTU (XML Unstructured Grid)](https://docs.vtk.org/en/latest/vtk_file_formats/vtkxml_file_format.html#unstructuredgrid){:target="_blank"} est le format de sortie recommandé pour les résultats dans **COMFOR**, bien que le format VTK hérité soit toujours supporté. Ces formats sont des standards industriels pour la visualisation scientifique.
 
-Au cours de la simulation, Comfor génère plusieurs fichiers `.vtk`, un à chaque
-[`print_step`](preprocessing.md#controle_de_temps). Ces fichiers sont enregistrés
-dans le dossier `Results_<nom_du_fichier>`.
+Pendant la simulation, **COMFOR** écrit plusieurs fichiers de résultats à la [`fréquence`](preprocessing.md#sorties_output) spécifiée. Ces fichiers sont stockés dans le répertoire de résultats défini dans votre fichier d'entrée.
 
-
-_Exemple_
+**Exemple de structure de dossier**
 
 ```console
-Project_name
+Dossier_Projet
   |
-  |---in_file.bim
-  |---Results_in_file
-  |     |--- in_file_0.vtk
-  |     |--- in_file_1.vtk
-  |     |--- in_file_2.vtk
+  |---simulation.toml
+  |---Dossier_Resultats
+  |     |--- simulation_0.vtu
+  |     |--- simulation_1.vtu
+  |     |--- simulation_2.vtu
        ...
 ```
 
-# Chargement des fichiers de résultats
+# Charger les fichiers
 
-Pour visualiser les résultats, ouvrez *ParaView*. Cliquez sur le menu *File →
-Open* et recherchez le dossier `Results_<nom_du_fichier>`.Comme Comfor nomme les
-fichiers dans l’ordre croissant, ParaView proposera de les ouvrir en tant que
-groupe.
+Pour visualiser les résultats, ouvrez **ParaView**. Cliquez sur **File → Open** et naviguez jusqu'à votre dossier de résultats. Comme **COMFOR** nomme les fichiers dans un ordre croissant (ex: `fichier_..vtu`), ParaView proposera automatiquement de les ouvrir en tant que **groupe de fichiers** (série temporelle).
 
 <div style="text-align:center;">
-    <figure>
-        <img src="../../assets/img/open_vtk.gif" alt="Logo">
-        <figcaption>Chargement des fichiers</figcaption>
-    </figure>
+	<figure>
+		<img src="../../assets/img/open_vtk.gif" alt="Chargement des fichiers dans ParaView">
+		<figcaption>Chargement des fichiers</figcaption>
+	</figure>
 </div>
 
-# Lire l’animation
+# Lancer l'animation
 
-# Lire l’animation
+Après avoir ouvert les fichiers, ils apparaîtront dans le **Navigateur de pipeline** (Pipeline Browser). Cliquez sur le bouton **Apply** dans la section des propriétés pour afficher le maillage.
 
-Une fois les fichiers ouverts, ParaView crée une scène dans le  
-[`Pipeline Browser`](https://www.paraview.org/ParaView/index.php/Pipeline_Browser_Ideas){:target="_blank"}.
-Si le maillage n’est pas affiché, cliquez sur *Apply* dans la section des
-propriétés.
+!!! tip "Astuce de flux de travail"
+    Pour gagner du temps, activez l'option **Auto Apply** dans *Edit → Settings → General → Properties Panel Options*.
 
-!!! hint "Conseil"
-    
-    Activez l’option **Auto Apply** dans *ParaView Preferences → General →
-    Properties Panel Options* pour appliquer automatiquement les changements.
+Pour lancer l'animation, utilisez le bouton **Play** de la barre d'outils VCR. Vous pouvez naviguer image par image, lire l'animation en boucle ou sauter à des pas de temps spécifiques via la barre temporelle.
 
-Pour lancer l’animation, cliquez sur le bouton *Play* dans la barre VCR. La
-barre temporelle affiche le resultat courant. Vous pouvez également naviguer pas
-par pas, aller à la première ou à la dernière image, ou activer la lecture en
-boucle.
-
-Les données à afficher peuvent être sélectionnées dans la barre *Data Analysis*.  
-Une liste déroulante permet de choisir les variables scalaires ou vectorielles,
-définies aux nœuds ou aux éléments. Ce paramètre peut aussi être modifié dans
-les propriétés, section *Coloring*.  
-Les cartes de couleurs peuvent être ajustées pour améliorer la lisibilité.
-.
+Les données à afficher (Scalaires ou Vecteurs) peuvent être sélectionnées dans le menu déroulant de la **Variable Active**. Vous pouvez visualiser les données nodales (ex: Déplacement) ou les données éléments (ex: Contrainte). Les couleurs et les dégradés peuvent être personnalisés dans la section **Coloring** du panneau des propriétés.
 
 <div style="text-align:center;">
-    <figure>
-        <img src="../../assets/img/play_vtk.gif">
-        <figcaption>Lecture de l’animation</figcaption>
-    </figure>
+	<figure>
+		<img src="../../assets/img/play_vtk.gif" alt="Contrôles d'animation">
+		<figcaption>Lecture de l'animation</figcaption>
+	</figure>
 </div>
 
-# Application de filtres
+# Appliquer des filtres
 
-Paraview propose une série de
-[filtres](https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_filters){:target="_blank"}
-permettant de manipuler et traiter les données. Ces filtres peuvent être
-combinés en cascade. Pour appliquer un filtre, allez dans *Filters →
-Alphabetical* ou recherchez par catégorie. Les filtres les plus courants pour
-notre application sont :
+ParaView propose une large gamme de [filtres](https://docs.paraview.org/en/latest/Tutorials/ClassroomTutorials/beginningSourcesAndFilters.html){:target="_blank"} pour traiter et analyser les données de simulation. Les filtres peuvent être empilés dans le Navigateur de pipeline pour combiner leurs effets.
 
-- `Connectivity` : identifie les régions connectées du maillage. Ce filtre
-  attribue un identifiant de région aux composants connectés. On l’utilise pour
-  séparer les solides des plaques composites.
-- `Threshold` : extrait les éléments dont les valeurs scalaires (nœud ou
-  élément) sont dans une plage spécifiée. Sélectionnez le filtre, définissez le
-  champ scalaire, la plage, puis cliquez sur Apply.
-- `Cell to data point` : interpole les données des éléments aux nœuds en
-  moyennant les valeurs des éléments voisins.
-- `Temporal interpolator` : interpole la solution entre deux images pour créer
-  des animations fluides.
-- `Plot data` : trace des courbes à partir de tableaux de données. Utilisez ce
-  filtre pour tracer des fichiers CSV dans des graphes XY.
+Filtres couramment utilisés pour les simulations **COMFOR** :
+
+  - **`Connectivity`** : Identifie les régions du maillage qui sont connectées. Ce filtre assigne un identifiant de région (données de points) aux composants connectés du jeu de données d'entrée. Nous utilisons ce filtre pour séparer les régions solides des plaques composites.
+  - **`Threshold` (Seuil)** : Ce filtre extrait les éléments qui possèdent des scalaires de données nodales ou éléments dans une plage spécifiée. Pour spécifier la plage, sélectionnez votre filtre Threshold dans l'arborescence du Navigateur de pipeline et développez la section `Properties(Threshold)`. Sélectionnez le scalaire à évaluer et fixez les valeurs max et min. Enfin, cliquez sur Apply.
+  - **`Cell Data to Point Data`** : Ce filtre permet d'extrapoler les données des éléments vers les nœuds. Il effectue la moyenne des valeurs des données des éléments entourant un nœud pour calculer l'information nodale.
+  - **`Temporal Interpolator`** : Interpole la solution entre deux images. Utile pour obtenir des animations fluides et de qualité pour les présentations.
+  - **`Plot Data`** : Trace des tableaux de données à partir de l'entrée. Ce filtre prépare des données arbitraires pour être tracées dans n'importe quel graphique (par défaut, un graphique linéaire XY). Utilisez ce filtre pour tracer vos fichiers CSV.
 
 <div style="text-align:center;">
-    <figure>
-        <img src="../../assets/img/filter_vtk.gif">
-        <figcaption>Application des filtres</figcaption>
-    </figure>
+	<figure>
+		<img src="../../assets/img/filter_vtk.gif" alt="Application de filtres">
+		<figcaption>Application de filtres</figcaption>
+	</figure>
 </div>
 
-# Pour aller plus loin
+# Ressources
 
-Consultez les tutoriels en ligne suivants :
+Pour une formation approfondie sur ParaView, consultez ces ressources :
 
-- [Tutoriel officiel de Paraview](https://www.paraview.org/Wiki/The_ParaView_Tutorial){:target="_blank"}
-- [Tutoriels de Cyprien Rusu](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-){:target="_blank"}
+  - [Tutoriel officiel de ParaView (Wiki)](https://www.paraview.org/Wiki/The_ParaView_Tutorial){:target="_blank"}
+  - [Tutoriels de Cyprien Rusu - ParaView pour l'EF](https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-){:target="_blank"}

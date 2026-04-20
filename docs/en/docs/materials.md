@@ -1,3 +1,9 @@
+<style>
+  .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__item .md-nav {
+    display: none !important;
+  }
+</style>
+
 <div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))" markdown>
 
 - :material-vector-line:{ .lg .middle }
@@ -11,70 +17,123 @@
 
 </div>
 
-This section provides a **practical overview** of the material models available in Comfor. For detailed theoretical background, refer to the [Theory section](theory/theory_overview.md).
+This section provides a **practical overview** of the material models available in **COMFOR**. For detailed theoretical background and mathematical formulations, refer to the [Theory section](theory/theory_overview.md).
 
 # Available material models
 
 ## Common parameters for all materials
 
-| Parameter       | Description                   | Required |
-| --------------- | ----------------------------- | -------- |
-| `material_name` | Custom name for the material. | Yes      |
-| `RHO`           | Mass density of the material. | Yes      |
-| `DAMPING`       | Mass proportional damping     | No       |
+Every material block requires these base parameters regardless of the underlying constitutive law.
+
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| `type` | String | **Yes** | - | Material model keyword. |
+| `density` | Float | **Yes** | - | Mass density ($\rho$). |
+| `damping` | Float | No | `0.0` | Mass proportional Rayleigh damping. |
+
+---
 
 ## Elastic models
 
-Elastic materials in Comfor are modeled using the [**Saint-Venant-Kirchhoff**](theory/materials/materials_overview.md#isotropic_kirchhoff) constitutive law, suitable for small strains and large rotations.
+Elastic materials in **COMFOR** use the [**Saint-Venant-Kirchhoff**](theory/materials/materials_overview.md#isotropic_kirchhoff) law, which is suitable for small strains but allows for large rotations.
 
-**Key parameters**
+### Parameters
 
-- `E`: Young's modulus
-- `NU`: Poisson's ratio
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| `young` | Float | **Yes** | - | Young's modulus ($E$). |
+| `poisson` | Float | **Yes** | - | Poisson's ratio ($\nu$). |
 
-**Example**
+### Examples
 
-```xml
-MATERIALS TYPE ELASTIC
-<material_name> RHO = <mass_density> DAMPING = <damping_value> E = <young_modulus> NU = <poissons_ratio>
-```
+=== "TOML :simple-toml:"
+    ```toml 
+    [material.Steel_S235]
+    type = "ELASTIC"
+    density = 7.8e-9
+    young = 210000.0
+    poisson = 0.3
+    ```
+
+=== "Fembic :material-text:"
+    ```xml
+    MATERIALS TYPE ELASTIC Steel_S235 RHO = 7.8e-9 YOUNG = 210000.0 POISSON = 0.3
+    ```
+
+---
 
 ## Hyperelastic models
 
-[**Hyperelastic**](theory/materials/materials_overview.md#hyperelastic_materials) models are used for materials undergoing large deformations, such as rubber or textile composites.
+[**Hyperelastic**](theory/materials/materials_overview.md#hyperelastic_materials) models are designed for materials undergoing finite strains (large deformations), such as rubbers or soft membranes.
 
-### Ogden model
+### Parameters (Ogden)
 
-- Suitable for **isotropic hyperelastic materials** (e.g., rubber, membranes).
-- Requires parameters: `MU` (shear moduli) and `ALPHA` (dimensionless exponents).
-
-**Example**
-
-```xml
-MATERIALS TYPE HYPERELASTIC
-<material_name> RHO = <mass_density> DAMPING = <damping_value> TYPE = OGDEN MU = <mu_1, mu_2, ...> ALPHA = <alpha_1, alpha_2, ...>
-```
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| `potential` | String | **Yes** | - | Must be set to `OGDEN`. |
+| `mu` | Array | **Yes** | - | List of shear moduli $\mu_i$. |
+| `alpha` | Array | **Yes** | - | List of dimensionless exponents $\alpha_i$. |
 
 !!! note
-    The number of `MU` and `ALPHA` parameters must be equal.
+	The `mu` and `alpha` arrays must have the same number of elements. Each pair defines one term of the strain energy potential.
+
+### Examples
+
+=== "TOML :simple-toml:"
+    ```toml
+    [material.Rubber]
+    type = "HYPERELASTIC"
+    potential = "OGDEN"
+    density = 1.1e-9
+    mu = [ -0.09, 13.9, -0.20 ]
+    alpha = [ -13.7, 0.10, 5.06 ]
+    ```
+
+=== "Fembic :material-text:"
+    ```xml
+    MATERIALS TYPE HYPERELASTIC Rubber RHO = 1.1e-9 TYPE = OGDEN MU = [-0.09, 13.9, -0.20] ALPHA = [-13.7, 0.10, 5.06]
+    ```
+
+---
 
 ## Composite
 
-- Designed for [**anisotropic textile materials**](theory/materials/materials_overview.md#textile_composite_hyperelastic_materials)(e.g., woven composites).
-- Requires orientation parameters for warp/weft directions and stiffness coefficients.
+Designed for [**anisotropic textile materials**](theory/materials/materials_overview.md#textile_composite_hyperelastic_materials) (e.g., woven composites). Requires orientation parameters for warp/weft directions and stiffness coefficients.
 
-**Key parameters**
+### Parameters
 
-- `WARPORI`: Initial warp orientation (vector: `l1_x, l1_y, l1_z`).
-- `WEFTORI`: Initial weft orientation (vector: `l2_x, l2_y, l2_z`).
-- `KELONGWARP`, `KELONGWEFT`, `KSHEAR`: Stiffness coefficients for elongation and shear.
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| `warp_orientation` | Array | **Yes** | - | Initial warp fiber unit vector $[x, y, z]$. |
+| `weft_orientation` | Array | **Yes** | - | Initial weft fiber unit vector $[x, y, z]$. |
+| `k_elong_warp` | Array | **Yes** | - | Coefficients for warp elongation stiffness. |
+| `k_elong_weft` | Array | **Yes** | - | Coefficients for weft elongation stiffness. |
+| `k_shear` | Array | **Yes** | - | Coefficients for in-plane shear stiffness. |
+| `k_bend_warp` | Array | No | `[0.0]` | Optional coefficients for warp bending. |
+| `k_bend_weft` | Array | No | `[0.0]` | Optional coefficients for weft bending. |
+| `k_bend_twist` | Array | No | `[0.0]` | Optional coefficients for twisting stiffness. |
 
-**Example**
+### Examples
 
-```xml
-MATERIALS TYPE HYPERTEXTILE
-<material_name> RHO = <mass_density> DAMPING = <damping_value> WARPORI = <l1_x, l1_y, l1_z> WEFTORI = <l2_x, l2_y, l2_z> KELONGWARP = <k1, k2, ...> KELONGWEFT = <k1, k2, ...> KSHEAR = <k1, k2, ...>
-```
+=== "TOML :simple-toml:"
+	```toml
+	[material.CarbonFabric]
+	type = "HYPERTEXTILE"
+	density = 1.5e-9
+	warp_orientation = [1.0, 0.0, 0.0]
+	weft_orientation = [0.0, 1.0, 0.0]
+	k_elong_warp = [150.0, 1000.0]
+	k_elong_weft = [150.0, 1000.0]
+	k_shear = [2.1, 4.5]
+	k_bend_warp = [0.05] # Optional bending
+	```
+
+=== "Fembic :material-text:"
+	```xml
+	MATERIALS TYPE HYPERTEXTILE CarbonFabric RHO = 1.5e-9 WARPORI = [1,0,0] WEFTORI = [0,1,0] KELONGWARP = [150,1000] KELONGWEFT = [150,1000] KSHEAR = [2.1,4.5] KBENDWARP = [0.05]
+	```
+
+---
 
 # Choose a material model
 
