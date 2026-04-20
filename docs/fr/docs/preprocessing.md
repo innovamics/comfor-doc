@@ -215,7 +215,8 @@ Une `part` représente un composant physique. Elle instancie une source géomét
 | **`mesh`** | String | **Oui** | - | Nom du bloc `[mesh]` à utiliser. |
 | `material` | String | Non | - | Matériau assigné à tous les éléments. Si omis, doit être défini dans une [Section](#section). |
 | `thickness` | Float | Non | - | Épaisseur pour les éléments Coque/Membrane. Si omis, doit être défini dans une [Section](#section). |
-| `id_offset` | Integer | Non | `0` | Valeur d'offset ajoutée à tous les IDs de Nœuds et Éléments. |
+| `node_offset` | Integer | No | `0` | Valeur d'offset ajoutée à tous les IDs de Nœuds. |
+| `element_offset` | Integer | No | `0` | Valeur d'offset ajoutée à tous les IDs d'Éléments. |
 | `translation` | Array | Non | `[0,0,0]` | Vecteur de translation globale `[tx, ty, tz]`. |
 | `element_mapping` | Map | Non | - | Dictionnaire pour mapper les types d'éléments du maillage vers les [Technologies COMFOR](#bibliotheque_delements). |
 
@@ -254,7 +255,8 @@ Il existe deux façons de définir l' `element_mapping` en TOML :
     mesh = "GeometriePlaque"
     material = "Acier_S235"
     thickness = 1.2
-    id_offset = 10000
+    node_offset = 0
+    element_offset = 0
     translation = [0.0, 0.0, 50.0]
 
     # Réutilisation du même maillage pour une seconde pièce avec des propriétés différentes
@@ -262,7 +264,8 @@ Il existe deux façons de définir l' `element_mapping` en TOML :
     mesh = "GeometriePlaque"
     material = "Acier_S355"
     thickness = 2.5
-    id_offset = 20000
+    node_offset = 500      # MainPlate had 500 nodes
+    element_offset = 450   # MainPlate had 450 elements
     ```
 
 === "Fembic :material-text:"

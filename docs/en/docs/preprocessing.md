@@ -215,7 +215,8 @@ A `part` represents a physical component. It instantiates a geometric source and
 | **`mesh`** | String | **Yes** | - | Name of the `[mesh]` block to be used. |
 | `material` | String | No | - | Material assigned to all elements. If omitted, must be defined in a [Section](#section). |
 | `thickness` | Float | No | - | Thickness for Shell/Membrane elements. If omitted, must be defined in a `[Section](#section). |
-| `id_offset` | Integer | No | `0` | Offset value added to all Node and Element IDs. |
+| `node_offset` | Integer | No | `0` | Offset value added to all Node IDs. |
+| `element_offset` | Integer | No | `0` | Offset value added to all Element IDs. |
 | `translation` | Array | No | `[0,0,0]` | Global translation vector `[tx, ty, tz]`. |
 | `element_mapping` | Map | No | - | Dictionary to map mesh element types to [COMFOR Technologies](#element_library). |
 
@@ -254,7 +255,8 @@ There are two ways to define the `element_mapping` in TOML:
     mesh = "PlateGeometry"
     material = "Steel_S235"
     thickness = 1.2
-    id_offset = 10000
+    node_offset = 0
+    element_offset = 0
     translation = [0.0, 0.0, 50.0]
 
     # Reusing the same mesh for a second part with different properties
@@ -262,7 +264,8 @@ There are two ways to define the `element_mapping` in TOML:
     mesh = "PlateGeometry"
     material = "Steel_S355"
     thickness = 2.5
-    id_offset = 20000
+    node_offset = 500      # MainPlate had 500 nodes
+    element_offset = 450   # MainPlate had 450 elements
     ```
 
 === "Fembic :material-text:"
