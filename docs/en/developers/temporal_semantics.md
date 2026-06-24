@@ -1,9 +1,9 @@
-# Temporal semantics of the explicit solver
+# Temporal Semantics of the Explicit Solver
 
-This page describes how the current explicit solver in **Comfor** interprets
-time-dependent nodal quantities. It complements the general presentation of the
-[solver scheme](../docs/theory/solvers/solvers_overview.md) with the practical
-conventions used by the implementation.
+This page defines the temporal meaning of the main nodal quantities used by the
+explicit solver. It complements the theoretical presentation of the
+[solver scheme](../docs/theory/solvers/solvers_overview.md) with the timing
+contract used by the implementation.
 
 Comfor uses a **variable-step central-difference scheme in leapfrog form**:
 
@@ -12,7 +12,7 @@ Comfor uses a **variable-step central-difference scheme in leapfrog form**:
 - the primary velocity is staggered on half steps
   `t^{n-1/2}` and `t^{n+1/2}`
 
-## Time quantities used by the solver
+## Step context
 
 The current increment is represented by:
 
@@ -32,13 +32,12 @@ $$
 t^{n+1/2} = t^n + \frac{1}{2}\Delta t^{n+1/2}
 $$
 
-The first quantity is the **kick interval** used to update the staggered
-velocity. The second is the time at which half-step velocity constraints are
-applied.
+The first quantity is the kick interval used to update the staggered velocity.
+The second is the time at which half-step velocity constraints are applied.
 
-## Main nodal quantities
+## Nodal field timing
 
-The current explicit solver uses the following interpretation:
+The explicit solver uses the following interpretation:
 
 | Quantity | Meaning | Time instant |
 |---|---|---|
@@ -53,14 +52,14 @@ The distinction between `velocity_half` and `velocity_at_n` is essential:
 
 - `velocity_half` is used by the explicit integrator and by rate-dependent
   constitutive updates
-- `velocity_at_n` is used for nodal velocity output and kinetic energy
+- `velocity_at_n` is used for nodal output and kinetic energy
 
-## Sequence of one explicit increment
+## One explicit increment
 
 One call to `ExplicitSolver::solve()` advances the solution from `t^n` to
 `t^{n+1}`.
 
-The current sequence in Comfor is:
+The sequence is:
 
 1. choose the current `dt_forward`
 2. assemble nodal forces on the current configuration `d^n`
@@ -74,63 +73,36 @@ The current sequence in Comfor is:
 10. save the force history
 11. advance the solver clock to `t^{n+1}`
 
-## Force assembly and constitutive timing
+## Constitutive timing
 
-Constitutive updates in Comfor follow two common patterns.
+Constitutive updates follow two common patterns.
 
-### Configuration-based constitutive updates
+### Configuration-based path
 
 Material and section models based on the current geometry or deformation
 gradient are evaluated on the current configuration `d^n`. They therefore
 assemble stresses and internal forces at `t^n`.
 
-### Rate-based constitutive updates
+### Rate-based path
 
 Rate-based formulations use the staggered velocity on entry to the increment:
 
 - `v^{n-1/2}`
 - together with `Δt^{n-1/2}`
 
-This gives the strain increment that closes at `t^n`, which is then used to
+This defines the strain increment that closes at `t^n` and is then used to
 assemble the force state `f^n`.
 
-## Damping convention used today
+## Velocity conventions
 
-The current solver uses a **nodal mass-proportional Rayleigh damping**
-coefficient `alpha`.
+- `velocity_half` is the primary kinematic quantity for the explicit update
+- `velocity_at_n` is the reconstructed integer-step velocity used for output
+  and energy evaluation
 
-This damping is applied:
+New code should avoid introducing an unnamed `velocity` quantity unless its time
+location is explicit.
 
-- to translational motion
-- to rotational motion
-
-The acceleration stored in the nodal fields is the **algorithmic kick
-acceleration** used by the damped central-difference update. It is therefore
-not simply the raw physical quantity `M^{-1}f`.
-
-The current damped kick uses the denominator:
-
-$$
-1 + \frac{1}{2}\alpha \Delta t^n
-$$
-
-Acceleration-type loads such as gravity are included in the physical
-right-hand side before this damping factor is applied.
-
-## Reconstruction of the integer-step velocity
-
-The solver advances the half-step velocity and then reconstructs `v^n` for
-quantities that must be associated with the integer-step state.
-
-In the current implementation:
-
-- `velocity_at_n` is the integer-step velocity used by nodal output
-- the same reconstructed velocity is used in kinetic energy evaluation
-
-When damping is active, this reconstructed velocity remains consistent with the
-algorithmic update used by the solver.
-
-## Initial state at `t = 0`
+## Initial state
 
 Before the first increment:
 
@@ -138,66 +110,39 @@ Before the first increment:
 - prescribed velocity conditions at `t = 0` are applied
 - prescribed acceleration conditions at `t = 0` are applied
 
-The first output written by the solver corresponds to this initialized state.
+The first written state corresponds to this initialized configuration.
 
-At the moment, acceleration-driven loads such as gravity are first evaluated
-inside the solver during the first increment. Therefore the output written at
-`t = 0` is an initialized reference state, not yet a fully assembled dynamic
-state for those loads.
+Acceleration-driven loads such as gravity are assembled during the first
+increment. The output written at `t = 0` is therefore an initialized reference
+state, not a fully assembled dynamic state for those loads.
 
-## Output convention
+## Output timing
 
 Comfor writes:
 
 - one initial output at `t = 0`
-- then one output after each solved increment, according to the configured
-  output frequency
+- one output after each solved increment, according to the configured frequency
 
-The current convention is:
-
-- after an increment has been solved, the state is written with its **actual
-  converged solver time**
-
-This means that each output label corresponds to the time of the state that is
-actually written.
+Each written state is labeled with its actual converged solver time.
 
 Trackers reporting nodal velocity use the reconstructed integer-step velocity
 `v^n`, not the staggered half-step velocity.
 
 ## Energy diagnostics
 
-The explicit solver currently tracks:
+The explicit solver tracks:
 
 - internal energy
 - external energy
 - kinetic energy
 - residual and balance indicators
 
-These diagnostics are useful, but they should still be interpreted with care:
-
-- damping introduces dissipation that is not yet fully separated in the current
-  balance
-- prescribed kinematic boundary conditions may inject work that is not yet
-  represented as a dedicated external-work contribution
-
-For this reason, the public logging currently favors simple quantities such as
-internal energy, kinetic energy, and `Ek/Ei (%)`.
-
-## Current limitations
-
-The temporal semantics above describe the current solver behavior. Some known
-limitations remain:
-
-- the state written at `t = 0` is not yet a fully assembled acceleration state
-  for acceleration-driven loads
-- the current energy balance is still incomplete for damping and prescribed
-  kinematic work
-- mass and inertia regularization are separate robustness topics and are not
-  part of the temporal contract itself
+These quantities remain useful, but damping dissipation and the work associated
+with prescribed kinematic conditions are not yet isolated as separate terms.
 
 ## Summary
 
-The current explicit solver in Comfor can be summarized as follows:
+The explicit solver contract can be summarized as follows:
 
 - geometry and forces are evaluated at integer times `t^n`
 - the primary velocity is stored on staggered half steps
@@ -206,6 +151,3 @@ The current explicit solver in Comfor can be summarized as follows:
 - rate-dependent updates use `v^{n-1/2}` and `Δt^{n-1/2}`
 - nodal velocity output uses the reconstructed integer-step velocity `v^n`
 - solved outputs are labeled with the actual converged time of the state
-
-This is the temporal behavior followed today by the Comfor explicit dynamic
-solver.

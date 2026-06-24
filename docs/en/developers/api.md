@@ -12,6 +12,12 @@ This documentation covers:
 - **Data structures** for mesh handling, post-processing, and simulation control.
 - **Extensibility mechanisms** for adding new features or algorithms.
 
+## Solver notes
+
+- [Temporal Semantics](temporal_semantics.md) - timing contract for nodal
+  quantities in the explicit solver.
+- [Explicit Rayleigh Damping](../docs/theory/solvers/explicit_rayleigh_damping.md) - damping formulation used by the explicit scheme.
+
 Before contributing or modifying the codebase, please review the **License** and **Code of Conduct**.
 
 ## Support

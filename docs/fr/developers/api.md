@@ -12,6 +12,12 @@ Cette documentation détaille :
 - Les **structures de données** pour la gestion des maillages, le post-traitement et le contrôle des simulations.
 - Les **mécanismes d'extensibilité** pour ajouter de nouvelles fonctionnalités ou algorithmes.
 
+## Notes solveur
+
+- [Sémantique temporelle](temporal_semantics.md) - contrat de temporalité des
+  grandeurs nodales du solveur explicite.
+- [Amortissement de Rayleigh explicite](../docs/theory/solvers/explicit_rayleigh_damping.md) - formulation d’amortissement utilisée par le schéma explicite.
+
 Avant de contribuer ou de modifier le code, nous vous invitons à consulter attentivement la **licence** et le **code de conduite**.
 
 ## Support

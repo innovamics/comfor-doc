@@ -124,6 +124,9 @@ Valeurs typiques de $\alpha$ :
 - $\alpha = 0.25$ à $0.50$ pour des cas hautement transitoires (ondes de choc,
   explosifs).
 
+Le traitement explicite de l’amortissement proportionnel à la masse utilisé par
+Comfor est détaillé dans [Amortissement de Rayleigh explicite](explicit_rayleigh_damping.md).
+
 ## Schéma de Newmark
 
 Le schéma de Newmark $\beta_2$ repose sur un développement en série de Taylor

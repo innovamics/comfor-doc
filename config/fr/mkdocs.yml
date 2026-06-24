@@ -29,6 +29,7 @@ nav:
         - "Matériaux composites": docs/theory/materials/composite_materials.md
         - "Matériaux": docs/theory/materials/materials_overview.md
         - "Solveurs": docs/theory/solvers/solvers_overview.md
+        - "Amortissement de Rayleigh explicite": docs/theory/solvers/explicit_rayleigh_damping.md
   - "Développeurs":
       - "Git": developers/git.md
       - "API": developers/api.md

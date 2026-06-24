@@ -82,6 +82,9 @@ $$
 
 Usually a safety factor $\alpha$ of 0.9 is used to guarantee convergence. Or, 0.25 to 0.50 in the case of problems involving explosives. 
 
+The explicit treatment of mass-proportional damping used by Comfor is described
+in [Explicit Rayleigh Damping](explicit_rayleigh_damping.md).
+
 # Newmark scheme
 
 The Newmark $\beta_2$ and corresponds to a Taylor series development of the displacements, truncated at the jerk, with weighting coefficients $\beta$ and $\gamma$ :
