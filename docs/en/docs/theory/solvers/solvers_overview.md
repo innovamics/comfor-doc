@@ -1,5 +1,9 @@
 The scheme used in Comfor is explicit dynamics. This type of scheme allows a conditional step by step resolution of a dynamics problem. The equation of the dynamics, valid at any time, is written in the form :
 
+For the time location of nodal quantities and the current implementation
+conventions used by the explicit solver, see the developer note
+[Temporal Semantics](../../../developers/temporal_semantics.md).
+
 \begin{equation}
 	\mathbf{M} \mathbf{a} + \mathbf{C}^{d} \mathbf{v} + \mathbf{f}_{int} = \mathbf{f}_{ext}
 \end{equation}

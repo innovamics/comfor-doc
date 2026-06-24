@@ -1,5 +1,9 @@
 ## Schéma de résolution utilisé : dynamique explicite
 
+Pour la localisation temporelle des grandeurs nodales et les conventions
+actuelles d’implémentation du solveur explicite, voir la note développeur
+[Sémantique temporelle](../../../developers/temporal_semantics.md).
+
 **Comfor** utilise un schéma d'intégration explicite pour résoudre les équations
 du mouvement. Ce type de schéma permet une résolution incrémentale
 conditionnelle des problèmes dynamiques, où les grandeurs mécaniques

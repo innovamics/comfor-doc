@@ -32,6 +32,7 @@ nav:
   - "Développeurs":
       - "Git": developers/git.md
       - "API": developers/api.md
+      - "Sémantique temporelle": developers/temporal_semantics.md
       # - "Licence": developers/license.md
       - "Code de conduite": developers/code_of_conduct.md
   - "Services":
