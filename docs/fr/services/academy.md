@@ -28,12 +28,14 @@ ou de science.
 # Collaboration
 
 Nous collaborons activement avec des universités, laboratoires de recherche et
-partenaires académiques dans le cadre de **projets de recherche et  
-développement**. Notre objectif est d’accélérer l’innovation et de promouvoir
+partenaires académiques dans le cadre de **projets de recherche et
+développement**.  
+Notre objectif est d’accélérer l’innovation et de promouvoir
 une science ouverte et reproductible dans le domaine de la simulation des
 composites.
 
 Ensemble, nous pouvons :
+
 - Développer et valider de nouvelles techniques de simulation  
 - Proposer et implémenter des modèles de comportement avancés  
 - Co-encadrer des thèses et projets de recherche académiques  

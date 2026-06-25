@@ -31,6 +31,7 @@ Our aim is to accelerate innovation and promote open, reproducible science in
 the field of composites simulation.
 
 Together, we can:
+
 - Develop and validate new simulation techniques  
 - Propose and implement advanced constitutive models  
 - Co-supervise academic theses and research projects  

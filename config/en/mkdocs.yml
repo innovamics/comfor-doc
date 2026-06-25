@@ -51,8 +51,8 @@ theme:
   favicon: assets/img/apple-touch-icon-72x72.png
   language: en
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Geist
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)" # Automatic gestion of user's preferences
       scheme: default # Light theme
@@ -146,7 +146,7 @@ extra_javascript:
   # - assets/js/background_effects.js 
 
 extra_css:
-  # - assets/css/landing_page.css
+  - assets/css/landing_page.css
   - assets/css/faq_admonition.css
   # - assets/css/tabbed.css
   # - assets/css/home_page.css

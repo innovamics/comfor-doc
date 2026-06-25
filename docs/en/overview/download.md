@@ -31,13 +31,13 @@ For advanced features, enterprise integrations, and professional support, see [*
 
     Download Comfor V0.8.0 for macOS Sonoma (Clang 15.0.0)
 
-    [macOS Monterey :simple-apple:](../assets/bin/v0_8_0/Release-macos-sonoma-clang/COMFOR_V0_8_0_CLANG15){ .md-button }
+    [macOS Sonoma :simple-apple:](../assets/bin/v0_8_0/Release-macos-sonoma-clang/COMFOR_V0_8_0_CLANG15){ .md-button }
 
 !!! info
     Browse the archives for [previous versions](versions.md).
 
 # Examples
 
-Some examples to run with comfor:
+Some examples to run with Comfor:
 
-- <a href="../../assets/examples/examples.zip" download>Click to Download the examples</a>
+- <a href="../../assets/examples/examples.zip" download>Click here to download the examples</a>
