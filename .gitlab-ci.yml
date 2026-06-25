@@ -39,6 +39,7 @@ pages:
     - cp extra/googlef388943a115bc8cc.html public/en/googlef388943a115bc8cc.html
     - cp extra/googlef388943a115bc8cc.html public/fr/googlef388943a115bc8cc.html
     - cp extra/robots.txt public/robots.txt
+    - cp extra/index.html public/index.html
   artifacts:
     paths:
       - public
