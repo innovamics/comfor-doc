@@ -1,135 +1,230 @@
 ---
+title: Accueil
 hide:
   - navigation
   - toc
 ---
 
-<div class="hero">
-  <div class="hero-content">
-    <h1>Comfor</h1>
-    <p>Solution open source de mise en forme de composites, alliant précision et transparence</p>
-    <a href="overview/download/" class="md-button md-button--primary">Download</a>
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════ -->
+<section class="lp-hero">
+  <div class="lp-hero__content">
+    <p class="lp-eyebrow lp-eyebrow--on-dark">Comfor &bull; Simulation de mise en forme de composites</p>
+    <h1>Simulation de mise en forme de composites,<br><em>code ouvert, science ouverte.</em></h1>
+    <p class="lp-hero__sub">Une plateforme éléments finis open-source pour la fabrication composite. Une physique que vous pouvez auditer, modifier, publier.</p>
+    <div class="lp-hero__ctas">
+      <a href="overview/download/" class="md-button md-button--primary">Télécharger</a>
+      <a href="docs/overview/" class="md-button">Documentation →</a>
+      <a href="https://gitlab.com/comfor" class="md-button" target="_blank" rel="noopener">&lt;&gt; Code source</a>
+    </div>
+    <div class="lp-hero__meta">
+      <div>
+        <span class="lp-meta-label">Version</span>
+        <span class="lp-meta-value">v0.8.0</span>
+      </div>
+      <div>
+        <span class="lp-meta-label">Plateformes</span>
+        <span class="lp-meta-value">macOS · Linux · Win</span>
+      </div>
+      <div>
+        <span class="lp-meta-label">Licence</span>
+        <span class="lp-meta-value">AGPL</span>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="feature feature-right">
-  <div class="feature-content">
-    <h2>Open Source et Multiplateforme</h2>
-    <p><strong>Comfor</strong> est un logiciel entièrement <em>open source</em>, disponible sur Windows, Linux et macOS. Que vous soyez chercheur, étudiant ou ingénieur, vous pouvez télécharger des binaires précompilés ou le compiler depuis les sources pour l’adapter à vos besoins. Son code transparent et bien documenté vous permet de comprendre chaque étape du processus de simulation et de contribuer activement à son développement. Rejoignez une communauté dynamique qui partage des améliorations, des exemples et des conseils pour tirer le meilleur parti de Comfor.</p>
-    <p><a href="https://gitlab.com/innovamics/comfor" class="md-button">Explorer le code source</a></p>
-  </div>
-  <div class="feature-image">
-    <img src="assets/img/filter_vtk.gif" alt="Open Source">
-  </div>
-</div>
-
-<div class="feature feature-left">
-  <div class="feature-content">
-    <h2>Simulation Avancée de Matériaux Composites</h2>
-    <p>Grâce à son <strong>solveur non-linéaire explicite</strong>, Comfor permet de modéliser des matériaux composites complexes avec une précision scientifique. Des membranes élastiques aux composites textiles anisotropes, il simule avec fiabilité les grandes déformations et les comportements dynamiques transitoires. Chaque loi de matériau, d’élément et de contact repose sur des recherches récentes, offrant une base solide pour vos projets d’ingénierie et de recherche. <em>Vous gardez un contrôle total sur vos paramètres de simulation</em>, tout en bénéficiant d’un outil robuste et performant.</p>
-    <p><a href="docs/overview/" class="md-button">Découvrir les fonctionnalités</a></p>
-  </div>
-  <div class="feature-image">
-    <img src="assets/img/filter_vtk.gif" alt="Matériaux Composites">
-  </div>
-</div>
-
-<div class="feature feature-right">
-  <div class="feature-content">
-    <h2>Visualisation Interactive des Résultats</h2>
-    <p>Comfor s’intègre parfaitement à <strong>Paraview</strong> pour transformer vos simulations en visualisations interactives. Animez vos résultats, appliquez des filtres pour isoler des zones d’intérêt, interpolez des solutions entre les étapes et tracez vos données de manière intuitive. Cette approche facilite la <em>compréhension et la présentation des forces, déplacements et contraintes</em> dans votre modèle, rendant vos résultats à la fois précis et visuellement percutants.</p>
-    <p><a href="docs/postprocessing" class="md-button">Voir la visualisation</a></p>
-  </div>
-  <div class="feature-image">
-    <img src="assets/img/filter_vtk.gif" alt="Visualisation des Résultats">
-  </div>
-</div>
-
-<div class="feature feature-left">
-  <div class="feature-content">
-    <h2>Conçu pour la recherche et l’innovation</h2>
-    <p>Comfor s’adresse aussi bien aux laboratoires de recherche qu’aux acteurs industriels. Avec une <strong>version Communauté</strong> pour les projets académiques et une <strong>version Entreprise</strong> pour les applications industrielles exigeantes, il offre flexibilité, performance et robustesse. Les chercheurs et les ingénieurs peuvent également accéder à des services d’expertise, des formations et des collaborations pour enrichir les fonctionnalités de Comfor et faire progresser la simulation des matériaux composites.</p>
-    <p><a href="collaborate/industry/" class="md-button">Découvrir les versions et services</a></p>
-  </div>
-  <div class="feature-image">
-    <img src="assets/img/filter_vtk.gif" alt="Recherche et innovation">
-  </div>
-</div>
-
-# Comparatif des éditions de Comfor
-
-<div class="comparatif-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-
-  <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
-    <h2 style="margin-top: 0.5rem; font-size: 1.4rem; font-weight: 500; color: var(--md-default-fg-color);">Comfor Community</h2>
-    <p style="font-weight: bold; color: var(--md-default-fg-color--light);">Gratuit et open source</p>
-    <ul style="list-style: none; padding: 0; text-align: left;">
-      <li>✔ Performances standards</li>
-      <li>✔ Adapté aux petites équipes</li>
-      <li>✔ Support communautaire</li>
-      <li>✔ Options de configuration de base</li>
-      <li>✔ Ensemble d’outils standard</li>
-    </ul>
-    <div style="margin-top: 1rem; font-weight: bold; color: var(--md-default-fg-color--light);">Parfait pour les étudiants, particuliers ou petites équipes</div>
-    <a class="md-button md-raised" href="overview/download/" style="margin-top: 1rem;">Télécharger</a>
-  </div>
-
-  <div class="edition-card" style="flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
-    <h2 style="margin-top: 0.5rem; font-size: 1.4rem; font-weight: 500; color: var(--md-default-fg-color);">Comfor Enterprise</h2>
-    <p style="font-weight: bold; color: var(--md-default-fg-color--light);">Édition professionnelle</p>
-    <ul style="list-style: none; padding: 0; text-align: left;">
-      <li>✔ Performances optimisées pour les grands environnements</li>
-      <li>✔ Evolutivité adaptée aux grandes structures</li>
-      <li>✔ Support prioritaire dédié</li>
-      <li>✔ Options de configuration et de déploiement avancées</li>
-      <li>✔ Outils et modules supplémentaires</li>
-    </ul>
-    <div style="margin-top: 1rem; font-weight: bold; color: var(--md-default-fg-color--light);">Idéal pour les grandes entreprises et équipes industrielles</div>
-    <a class="md-button md-raised" href="collaborate/industry/#comfor_entreprise" style="margin-top: 1rem;">En savoir plus</a>
-  </div>
-
-</div>
-
-# Partenaires académiques
-
-<div class="partner-slider">
-  <div class="slide-track">
-    <a href="https://www.enib.fr/" target="_blank" rel="noopener">
-      <img src="assets/img/logo_enib.webp" alt="ENIB">
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION CARDS
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lp-nav">
+  <p class="lp-eyebrow">// documentation</p>
+  <h2 class="lp-section-heading">Où voulez-vous aller ?</h2>
+  <div class="lp-nav__grid">
+    <a href="overview/download/" class="lp-card">
+      <span class="lp-card__num">01</span>
+      <h3>Téléchargements</h3>
+      <p>Binaires précompilés pour Windows, Linux et macOS</p>
     </a>
-    <a href="https://www.insa-lyon.fr/" target="_blank" rel="noopener">
-      <img src="assets/img/logo_insa_lyon.webp" alt="INSA Lyon">
+    <a href="overview/quick_starter_guide/" class="lp-card">
+      <span class="lp-card__num">02</span>
+      <h3>Démarrage rapide</h3>
+      <p>Lancez votre première simulation en quelques minutes</p>
     </a>
-    <a href="https://www.irt-jules-verne.fr/" target="_blank" rel="noopener">
-      <img src="assets/img/logo_irt.webp" alt="IRT Jules Verne">
+    <a href="overview/tutorial/" class="lp-card">
+      <span class="lp-card__num">03</span>
+      <h3>Tutoriel</h3>
+      <p>Exemples guidés des cas simples aux cas avancés</p>
     </a>
-    <a href="https://www.uha.fr/fr/index.html" target="_blank" rel="noopener">
-      <img src="assets/img/logo_uha.webp" alt="UHA">
+    <a href="docs/overview/" class="lp-card">
+      <span class="lp-card__num">04</span>
+      <h3>Manuel utilisateur</h3>
+      <p>Référence complète — pré-traitement, résolution, post-traitement</p>
     </a>
-    <a href="https://www.enib.fr/" target="_blank" rel="noopener">
-      <img src="assets/img/logo_enib.webp" alt="ENIB">
+    <a href="docs/theory/theory_overview/" class="lp-card">
+      <span class="lp-card__num">05</span>
+      <h3>Théorie</h3>
+      <p>Mécanique des milieux continus, composites et formulations des solveurs</p>
     </a>
-    <a href="https://www.insa-lyon.fr/" target="_blank" rel="noopener">
-      <img src="assets/img/logo_insa_lyon.webp" alt="INSA Lyon">
-    </a>
-    <a href="https://www.irt-jules-verne.fr/" target="_blank" rel="noopener">
-      <img src="assets/img/logo_irt.webp" alt="IRT Jules Verne">
-    </a>
-    <a href="https://www.uha.fr/fr/index.html" target="_blank" rel="noopener">
-      <img src="assets/img/logo_uha.webp" alt="UHA">
+    <a href="faq/faq/" class="lp-card">
+      <span class="lp-card__num">06</span>
+      <h3>FAQ</h3>
+      <p>Questions fréquentes et conseils de dépannage</p>
     </a>
   </div>
 </div>
 
-# Licence et crédits
+<!-- ═══════════════════════════════════════════════════════════
+     POURQUOI COMFOR
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lp-why">
+  <p class="lp-eyebrow">// pourquoi comfor</p>
+  <div class="lp-why__layout">
+    <div class="lp-why__left">
+      <h2 class="lp-section-heading">La mise en forme des composites est complexe.<br>Votre solveur doit rester transparent.</h2>
+      <p>Comfor est un solveur EF explicite open source conçu pour la recherche en fabrication composite, où les modèles constitutifs, les fichiers d'entrée et les choix numériques restent inspectables et reproductibles.</p>
+    </div>
+    <div class="lp-why__right">
+      <div class="lp-why__item">
+        <span class="lp-why__dash">—</span>
+        <div><strong>Modèles traçables.</strong><p>Les modèles constitutifs sont documentés et liés à leurs publications sources.</p></div>
+      </div>
+      <div class="lp-why__item">
+        <span class="lp-why__dash">—</span>
+        <div><strong>Conçu pour la mise en forme des composites.</strong><p>Formage à sec, thermostampage et RTM sont traités comme des cas d'usage natifs.</p></div>
+      </div>
+      <div class="lp-why__item">
+        <span class="lp-why__dash">—</span>
+        <div><strong>Flux de simulation reproductibles.</strong><p>Entrées, paramètres matériau et réglages du solveur peuvent être versionnés, partagés et audités.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
-alt="Licence Creative Commons" style="border-width:0"
-src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span
-xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Documentation Comfor</span> par <a xmlns:cc="http://creativecommons.org/ns#"
-href="https://egm_foss.gitlab.io/about_me/" property="cc:attributionName"
-rel="cc:attributionURL">Eduardo Guzman</a> est sous licence <a rel="license"
-href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International</a>.<br />Basé sur le travail disponible à <a
-xmlns:dct="http://purl.org/dc/terms/"
-href="https://gitlab.com/comfor/comfor-doc"
-rel="dct:source">https://gitlab.com/comfor/comfor-doc</a>.
+<!-- ═══════════════════════════════════════════════════════════
+     PLATFORM — capacités de simulation
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lp-platform">
+  <p class="lp-eyebrow">// capacités de simulation</p>
+  <h2 class="lp-section-heading">Ce que Comfor peut simuler</h2>
+  <p class="lp-platform__intro">Un solveur EF explicite modulaire, conçu pour la fabrication composite. Chaque capacité repose sur des modèles constitutifs publiés et revus par des pairs — pas de raccourcis empiriques.</p>
+  <div class="lp-platform__grid">
+    <div class="lp-platform__item">
+      <span class="lp-pillar__num">01</span>
+      <h3>Procédés de fabrication</h3>
+      <p>Mise en forme à sec, thermostampage, drapage, RTM, enroulement filamentaire. Les EF explicites non-linéaires gèrent les grandes déformations et la dynamique transitoire.</p>
+    </div>
+    <div class="lp-platform__item">
+      <span class="lp-pillar__num">02</span>
+      <h3>Modèles de matériaux composites</h3>
+      <p>Tissus, composites UD et NCF, modèles constitutifs textiles anisotropes, matrices viscoplastiques. Chaque modèle constitutif renvoie directement à sa publication source.</p>
+    </div>
+    <div class="lp-platform__item">
+      <span class="lp-pillar__num">03</span>
+      <h3>Résultats &amp; visualisation</h3>
+      <p>Contraintes, déplacements, orientations de fibres, angles de cisaillement, efforts de contact. Intégration Paraview complète pour le post-traitement interactif.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ÉDITIONS — section sombre inversée
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lp-dark-section">
+  <div class="lp-dark-section__inner">
+    <div class="lp-dark-section__header">
+      <div>
+        <p class="lp-eyebrow lp-eyebrow--on-dark">// double licence</p>
+        <h2>Deux éditions.<br>Un seul code.</h2>
+      </div>
+      <p class="lp-dark-section__sub">Ouvert par défaut pour la recherche et l'enseignement. Licence commerciale disponible pour un usage industriel sans contrainte open-source.</p>
+    </div>
+    <div class="lp-dark-cards">
+
+      <div class="lp-dark-card">
+        <span class="lp-dark-card__badge lp-dark-card__badge--open">OPEN</span>
+        <p class="lp-dark-card__path">./community</p>
+        <h3>Community</h3>
+        <p class="lp-dark-card__price">Gratuit &amp; open source</p>
+        <p class="lp-dark-card__for">Pour étudiants, laboratoires, individus.</p>
+        <ul class="lp-dark-card__list">
+          <li>Accès complet au code source</li>
+          <li>Boîte à outils EF standard</li>
+          <li>Support communautaire &amp; doc publique</li>
+          <li>Licence open source (AGPL)</li>
+        </ul>
+        <a class="lp-dark-btn lp-dark-btn--secondary" href="overview/download/">Télécharger</a>
+      </div>
+
+      <div class="lp-dark-card lp-dark-card--highlight">
+        <span class="lp-dark-card__badge lp-dark-card__badge--business">COMMERCIAL</span>
+        <p class="lp-dark-card__path">./enterprise</p>
+        <h3>Enterprise</h3>
+        <p class="lp-dark-card__price">Licence commerciale</p>
+        <p class="lp-dark-card__for">Pour les équipes R&amp;D industrielles.</p>
+        <ul class="lp-dark-card__list">
+          <li>Support professionnel &amp; déploiement industriel</li>
+          <li>Assistance technique prioritaire</li>
+          <li>Modules avancés &amp; workflows personnalisés</li>
+          <li>Confidentialité IP protégée</li>
+          <li>Éligible au Crédit d'Impôt Recherche</li>
+        </ul>
+        <a class="lp-dark-btn lp-dark-btn--primary" href="collaborate/industry/">Nous contacter</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PARTENAIRES
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lp-partners">
+  <p class="lp-eyebrow">// partenaires de recherche</p>
+  <p class="lp-partners__caption">Construit sur une décennie de recherche publiée en collaboration avec</p>
+  <div class="partner-slider">
+    <div class="slide-track">
+      <a href="https://www.enib.fr/" target="_blank" rel="noopener">
+        <img src="assets/img/logo_enib.webp" alt="ENIB" loading="lazy">
+      </a>
+      <a href="https://www.insa-lyon.fr/" target="_blank" rel="noopener">
+        <img src="assets/img/logo_insa_lyon.webp" alt="INSA Lyon" loading="lazy">
+      </a>
+      <a href="https://www.irt-jules-verne.fr/" target="_blank" rel="noopener">
+        <img src="assets/img/logo_irt.webp" alt="IRT Jules Verne" loading="lazy">
+      </a>
+      <a href="https://www.uha.fr/fr/index.html" target="_blank" rel="noopener">
+        <img src="assets/img/logo_uha.webp" alt="UHA" loading="lazy">
+      </a>
+      <a href="https://www.enib.fr/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <img src="assets/img/logo_enib.webp" alt="" loading="lazy">
+      </a>
+      <a href="https://www.insa-lyon.fr/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <img src="assets/img/logo_insa_lyon.webp" alt="" loading="lazy">
+      </a>
+      <a href="https://www.irt-jules-verne.fr/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <img src="assets/img/logo_irt.webp" alt="" loading="lazy">
+      </a>
+      <a href="https://www.uha.fr/fr/index.html" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <img src="assets/img/logo_uha.webp" alt="" loading="lazy">
+      </a>
+    </div>
+  </div>
+  <p class="lp-partners__cred">Comfor est développé chez Innovamics en collaboration avec des partenaires académiques. Les résultats sont publiés dans des revues à comité de lecture et présentés dans des conférences internationales sur les composites.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LICENCE
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lp-license">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+    <img alt="Licence Creative Commons" style="border-width:0; vertical-align:middle; margin-right:0.5rem;"
+         src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+  </a>
+  <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Documentation Comfor</span>
+  par <a xmlns:cc="http://creativecommons.org/ns#" href="https://egm_foss.gitlab.io/about_me/"
+         property="cc:attributionName" rel="cc:attributionURL">Eduardo Guzman</a>
+  est sous licence
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution – Partage dans les Mêmes Conditions 4.0 International</a>.
+</div>

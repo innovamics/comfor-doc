@@ -48,8 +48,8 @@ theme:
     gtag: "G-7CEE34RD0F"
   language: en
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Geist
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)" # Automatic gestion of user's preferences
       scheme: default # Light theme
