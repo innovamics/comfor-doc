@@ -7,28 +7,38 @@ stages:
 
 image: python:3.12
 
+variables:
+  EN_CONFIG: config/en/mkdocs.yml
+  FR_CONFIG: config/fr/mkdocs.yml
+
 before_script:
   - apt update -yq 
   - apt -yq install pandoc
   - pandoc --version
   - pip install -r requirements.txt
   - mkdocs --version
-  
+  - export SITE_URL_EN="https://comfor.gitlab.io/comfor-doc/en"
+  - export SITE_URL_FR="https://comfor.gitlab.io/comfor-doc/fr"
 
 test:
   stage: test
   script:
-  - mkdocs build --strict --verbose --site-dir test
+    - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../test/en
+    - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../test/fr
   artifacts:
     paths:
-    - test
+      - test
   rules:
     - if: '$CI_COMMIT_BRANCH != "main"'
 
 pages:
   stage: deploy
   script:
-    - mkdocs build --strict --verbose --site-dir public
+    - mkdocs build -f $EN_CONFIG --strict --verbose --site-dir ../../public/en
+    - mkdocs build -f $FR_CONFIG --strict --verbose --site-dir ../../public/fr
+    - cp extra/googlef388943a115bc8cc.html public/en/googlef388943a115bc8cc.html
+    - cp extra/googlef388943a115bc8cc.html public/fr/googlef388943a115bc8cc.html
+    - cp extra/robots.txt public/robots.txt
   artifacts:
     paths:
       - public
