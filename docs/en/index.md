@@ -170,7 +170,7 @@ hide:
           <li>IP confidentiality protected</li>
           <li>Eligible for French CIR (R&amp;D tax credit)</li>
         </ul>
-        <a class="lp-dark-btn lp-dark-btn--primary" href="collaborate/industry/">Talk to us</a>
+        <a class="lp-dark-btn lp-dark-btn--primary" href="mailto:contact@innovamics.com">Talk to us</a>
       </div>
 
     </div>

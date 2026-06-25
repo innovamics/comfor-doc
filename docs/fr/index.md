@@ -170,7 +170,7 @@ hide:
           <li>Confidentialité IP protégée</li>
           <li>Éligible au Crédit d'Impôt Recherche</li>
         </ul>
-        <a class="lp-dark-btn lp-dark-btn--primary" href="collaborate/industry/">Nous contacter</a>
+        <a class="lp-dark-btn lp-dark-btn--primary" href="mailto:contact@innovamics.com">Nous contacter</a>
       </div>
 
     </div>
