@@ -1,7 +1,7 @@
 L'étape de pré-traitement consiste à générer un fichier texte ASCII d’entrée
 décrivant le modèle. L’étape suivante consiste à exécuter Comfor en utilisant ce
 fichier d’entrée. L’analyse sera effectuée et Comfor va générer plusieurs
-fichiers de sortie : fichiers Paraview, fichiers CSV et journaux (.log).
+fichiers de sortie : fichiers ParaView, fichiers CSV et journaux (.log).
 
 # Démarrer une nouvelle analyse
 
@@ -12,7 +12,7 @@ suivante:
 comfor <nom_du_fichier>
 ```
 
-- `<nom_du_fichier>` : est le chemin relatif ou absolu vers le fichier d’entrée.
+- `<nom_du_fichier>` : chemin relatif ou absolu vers le fichier d’entrée.
   Si le fichier est situé dans le même dossier que l’exécutable de Comfor, vous
   pouvez simplement indiquer son nom.
 
@@ -56,7 +56,7 @@ Kinetic energy: 0.0110008
 
 Un nouveau dossier nommé `Results_<nom_du_fichier>` est créé dans le même
 répertoire que le fichier d’entrée. Ce dossier contient une série de fichiers
-`*.vtk` pouvant être visualisés avec Paraview.
+`*.vtk` pouvant être visualisés avec ParaView.
 
 # Erreurs et bugs
 

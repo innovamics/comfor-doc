@@ -12,7 +12,7 @@ hide:
   <div class="lp-hero__content">
     <p class="lp-eyebrow lp-eyebrow--on-dark">Comfor &bull; Composite forming simulation</p>
     <h1>Composite forming simulation,<br><em>built in the open.</em></h1>
-    <p class="lp-hero__sub">An open-source finite element platform for composite forming. Physics you can audit, modify, publish with.</p>
+    <p class="lp-hero__sub">An open-source finite element platform for composite forming. Physics you can audit, modify, and publish with.</p>
     <div class="lp-hero__ctas">
       <a href="overview/download/" class="md-button md-button--primary">Download</a>
       <a href="docs/overview/" class="md-button">Documentation →</a>
@@ -60,7 +60,7 @@ hide:
     <a href="docs/overview/" class="lp-card">
       <span class="lp-card__num">04</span>
       <h3>User Manual</h3>
-      <p>Full reference — preprocessing, solving, postprocessing</p>
+      <p>Full reference — preprocessing, solving, and post-processing</p>
     </a>
     <a href="docs/theory/theory_overview/" class="lp-card">
       <span class="lp-card__num">05</span>
@@ -83,7 +83,7 @@ hide:
   <div class="lp-why__layout">
     <div class="lp-why__left">
       <h2 class="lp-section-heading"><span class="lp-why__mark">Com</span>posite <span class="lp-why__mark">For</span>ming is complex.<br>Your solver should stay transparent.</h2>
-      <p>Comfor is an open-source explicit FEM solver designed for composite manufacturing research, where constitutive models, input files and solver choices remain inspectable and reproducible.</p>
+      <p>Comfor is an open-source explicit FEM solver designed for composite manufacturing research, where constitutive models, input files, and solver choices remain inspectable and reproducible.</p>
     </div>
     <div class="lp-why__right">
       <div class="lp-why__item">
@@ -123,7 +123,7 @@ hide:
     <div class="lp-platform__item">
       <span class="lp-pillar__num">03</span>
       <h3>Results &amp; visualization</h3>
-      <p>Stresses, displacements, fiber orientations, shear angles, contact forces. Full Paraview integration for interactive post-processing and animation.</p>
+      <p>Stresses, displacements, fiber orientations, shear angles, and contact forces. Full ParaView integration for interactive post-processing and animation.</p>
     </div>
   </div>
 </div>
@@ -146,7 +146,7 @@ hide:
         <span class="lp-dark-card__badge lp-dark-card__badge--open">OPEN</span>
         <p class="lp-dark-card__path">./community</p>
         <h3>Community</h3>
-        <p class="lp-dark-card__price">Free &amp; open source</p>
+        <p class="lp-dark-card__price">Free and open source</p>
         <p class="lp-dark-card__for">For students, labs, individuals.</p>
         <ul class="lp-dark-card__list">
           <li>Full source code access</li>

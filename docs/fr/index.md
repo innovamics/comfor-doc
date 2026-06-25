@@ -12,7 +12,7 @@ hide:
   <div class="lp-hero__content">
     <p class="lp-eyebrow lp-eyebrow--on-dark">Comfor &bull; Simulation de mise en forme de composites</p>
     <h1>Simulation de mise en forme de composites,<br><em>code ouvert, science ouverte.</em></h1>
-    <p class="lp-hero__sub">Une plateforme éléments finis open-source pour la fabrication composite. Une physique que vous pouvez auditer, modifier, publier.</p>
+    <p class="lp-hero__sub">Une plateforme open source d'éléments finis pour la fabrication composite. Une physique que vous pouvez auditer, modifier et publier.</p>
     <div class="lp-hero__ctas">
       <a href="overview/download/" class="md-button md-button--primary">Télécharger</a>
       <a href="docs/overview/" class="md-button">Documentation →</a>
@@ -123,7 +123,7 @@ hide:
     <div class="lp-platform__item">
       <span class="lp-pillar__num">03</span>
       <h3>Résultats &amp; visualisation</h3>
-      <p>Contraintes, déplacements, orientations de fibres, angles de cisaillement, efforts de contact. Intégration Paraview complète pour le post-traitement interactif.</p>
+      <p>Contraintes, déplacements, orientations de fibres, angles de cisaillement et efforts de contact. Intégration complète avec ParaView pour le post-traitement interactif.</p>
     </div>
   </div>
 </div>
@@ -138,15 +138,15 @@ hide:
         <p class="lp-eyebrow lp-eyebrow--on-dark">// double licence</p>
         <h2>Deux éditions.<br>Un seul code.</h2>
       </div>
-      <p class="lp-dark-section__sub">Ouvert par défaut pour la recherche et l'enseignement. Licence commerciale disponible pour un usage industriel sans contrainte open-source.</p>
+      <p class="lp-dark-section__sub">Ouvert par défaut pour la recherche et l'enseignement. Une licence commerciale est disponible pour un usage industriel sans contrainte liée à l'open source.</p>
     </div>
     <div class="lp-dark-cards">
 
       <div class="lp-dark-card">
         <span class="lp-dark-card__badge lp-dark-card__badge--open">OPEN</span>
         <p class="lp-dark-card__path">./community</p>
-        <h3>Community</h3>
-        <p class="lp-dark-card__price">Gratuit &amp; open source</p>
+        <h3>Communauté</h3>
+        <p class="lp-dark-card__price">Gratuit et open source</p>
         <p class="lp-dark-card__for">Pour étudiants, laboratoires, individus.</p>
         <ul class="lp-dark-card__list">
           <li>Accès complet au code source</li>
@@ -160,7 +160,7 @@ hide:
       <div class="lp-dark-card lp-dark-card--highlight">
         <span class="lp-dark-card__badge lp-dark-card__badge--business">COMMERCIAL</span>
         <p class="lp-dark-card__path">./enterprise</p>
-        <h3>Enterprise</h3>
+        <h3>Entreprise</h3>
         <p class="lp-dark-card__price">Licence commerciale</p>
         <p class="lp-dark-card__for">Pour les équipes R&amp;D industrielles.</p>
         <ul class="lp-dark-card__list">
