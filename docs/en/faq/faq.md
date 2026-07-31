@@ -30,7 +30,7 @@ This FAQ covers common questions about **Comfor**, from installation and usage t
     See the [Quick start Page](../overview/quick_starter_guide.md).
 
 ??? faq "How do I define a material model?"
-    Material models are documented in the [Materials Documentation](../docs/materials.md).
+    Material models are documented in the [Materials Documentation](../docs/modules/materials.md).
 
 ??? faq "How do I run a simulation?"
     Run Comfor from the terminal using:
@@ -47,7 +47,7 @@ This FAQ covers common questions about **Comfor**, from installation and usage t
 # Physics and Models
 
 ??? faq "What finite element formulations are supported?"
-    See the [Elements Documentation](../docs/elements.md) for a full list.
+    See the [Elements Documentation](../docs/modules/elements.md) for a full list.
 
 ??? faq "How are boundary conditions applied?"
     Boundary conditions are documented in the [Preprocessing Documentation](../docs/preprocessing.md).

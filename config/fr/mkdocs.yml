@@ -21,8 +21,13 @@ nav:
       - "Exécution": docs/analysis.md
       - "Post-traitement": docs/postprocessing.md
       - "Modules":
-        - "Matériaux": docs/materials.md
-        - "Eléments": docs/elements.md
+        - "Amplitudes": docs/modules/amplitudes.md
+        - "Contraintes": docs/modules/constraints.md
+        - "Comportements de Contact": docs/modules/contact_behaviours.md
+        - "Eléments": docs/modules/elements.md
+        - "Matériaux": docs/modules/materials.md
+        - "Sections": docs/modules/sections.md
+        - "Trackers": docs/modules/trackers.md
       - "Théorie":
         - "Généralités": docs/theory/theory_overview.md
         - "Mécanique des milieux continus": docs/theory/continuum_mechanics.md
@@ -146,7 +151,7 @@ extra_javascript:
   # - assets/js/background_effects.js 
 
 extra_css:
-  # - assets/css/landing_page.css
+  - assets/css/landing_page.css
   - assets/css/faq_admonition.css
   # - assets/css/tabbed.css
   # - assets/css/home_page.css

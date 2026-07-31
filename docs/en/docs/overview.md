@@ -44,7 +44,7 @@ Understand the building blocks of Comfor
 
     Explore the **material models** available in Comfor, based on recent research.
 
-    [:octicons-arrow-right-24: Read more](materials.md)
+    [:octicons-arrow-right-24: Read more](modules/materials.md)
 
 -   :fontawesome-solid-cubes:{ .lg .middle } __Elements__
 
@@ -52,7 +52,7 @@ Understand the building blocks of Comfor
 
     Learn about **finite elements**, **contact laws**, and **nodes**.
 
-    [:octicons-arrow-right-24: Read more](elements.md)
+    [:octicons-arrow-right-24: Read more](modules/elements.md)
 
 -   :fontawesome-solid-book-open:{ .lg .middle } __Theory__
 

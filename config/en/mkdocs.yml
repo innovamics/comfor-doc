@@ -21,8 +21,13 @@ nav:
       - "Running": docs/analysis.md
       - "Postprocessing": docs/postprocessing.md
       - "Modules":
-        - "Materials": docs/materials.md
-        - "Elements": docs/elements.md
+        - "Amplitudes": docs/modules/amplitudes.md
+        - "Constraints": docs/modules/constraints.md
+        - "Contact Behaviours": docs/modules/contact_behaviours.md
+        - "Elements": docs/modules/elements.md
+        - "Materials": docs/modules/materials.md
+        - "Sections": docs/modules/sections.md
+        - "Trackers": docs/modules/trackers.md
       - "Theory":
         - "Overview": docs/theory/theory_overview.md
         - "Continuum Mechanics": docs/theory/continuum_mechanics.md
