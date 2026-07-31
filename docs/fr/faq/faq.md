@@ -30,7 +30,7 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
     Consultez le [Guide de démarrage rapide](../overview/quick_starter_guide.md).
 
 ??? faq "Comment définir un modèle de matériau ?"
-    Les modèles de matériaux sont documentés dans la [Documentation sur les matériaux](../docs/materials.md).
+    Les modèles de matériaux sont documentés dans la [Documentation sur les matériaux](../docs/modules/materials.md).
 
 ??? faq "Comment exécuter une simulation ?"
     Exécutez Comfor depuis le terminal en utilisant :
@@ -47,7 +47,7 @@ Cette FAQ répond aux questions courantes concernant **Comfor**, de l'installati
 # Physique et modèles
 
 ??? faq "Quelles formulations d'éléments finis sont prises en charge ?"
-    Consultez la [Documentation sur les éléments](../docs/elements.md) pour une liste complète.
+    Consultez la [Documentation sur les éléments](../docs/modules/elements.md) pour une liste complète.
 
 ??? faq "Comment les conditions aux limites sont-elles appliquées ?"
     Les conditions aux limites sont documentées dans la [Documentation sur le prétraitement](../docs/preprocessing.md).
