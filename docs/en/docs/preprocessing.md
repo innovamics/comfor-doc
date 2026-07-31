@@ -2,6 +2,10 @@
   .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__item .md-nav {
     display: none !important;
   }
+
+  .md-typeset td:first-child, .md-typeset th:first-child {
+    white-space: nowrap;
+  }
 </style>
 
 COMFOR defines the numerical model through a structured input file. The framework features a modular parser architecture [^1] supporting both the modern **TOML** standard (recommended for its modularity and readability) and the legacy **Fembic** format (maintained for backward compatibility).
@@ -172,7 +176,7 @@ The `mesh` block defines the geometric source of your model. COMFOR can either r
 | `type` | String | **Yes** | - | Reader engine: `ABAQUS`, `GMSH`, `FEMBIC` or `INLINE`. |
 | `file` | String | Yes* | - | Path to the external file. *Required for external reader types (`GMSH`, `ABAQUS`, `FEMBIC`).* |
 | `nodes` | Array | Yes* | - | List of nodes `[id, x, y, z]`. *Required only for `INLINE` type.* |
-| `elements` | Array | Yes* | - | List of elements `[id, "TYPE", n1, n2, ...]`. See [Element Library](#element_library) for available types. *Required only for `INLINE` type.* |
+| `elements` | Array | Yes* | - | List of elements `[id, "TYPE", n1, n2, ...]`. See [Element Module](modules/elements.md) for available types. *Required only for `INLINE` type.* |
 
 ### Examples
 
@@ -215,7 +219,7 @@ A `part` represents a physical component. It instantiates a geometric source def
 | **`mesh`** | String | **Yes** | - | Name of the `[mesh]` block to be used. |
 | `translation` | Array | No* | `[0,0,0]` | Global translation vector `[tx, ty, tz]`. *Cannot be used with `pattern`.* |
 | `pattern` | Array | No* | - | List of pattern configurations for duplicated placements. *Cannot be used with `translation`.* |
-| `element_mapping` | Map | No | - | Dictionary to map mesh element types to [COMFOR Technologies](#element_library). |
+| `element_mapping` | Map | No | - | Dictionary to map mesh element types to [COMFOR Technologies](modules/elements.md). |
 
 !!! warning "Exclusivity Rule"
     The `translation` and `pattern` parameters are mutually exclusive. Specifying both on the same `part` will result in a validation error.
@@ -304,13 +308,7 @@ The `section` block defines specific physical properties (such as thickness, int
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Section formulation type. See [Section Library](module.md#section-library). |
-| `material` | String | Yes* | - | Name of the assigned material. *Required for all section types except `RIGID`.* |
-| `thickness` | Float | Yes* | - | Physical thickness. *Required for Shell, Membrane, and Rigid section types.* |
-| `radius` | Float | Yes* | - | Cross-sectional radius. *Required for `ROD` sections.* |
-| `nip` | Integer | Yes* | - | Number of Integration Points through thickness. *Required for `SHELL_GAUSS`.* |
-| `integration` | String | No | `"GAUSS"` | Integration rule for `SHELL_GAUSS`: `"GAUSS"`, `"LOBATTO"`, or `"SIMPSON"`. |
-| `geometry` | String | No | - | Structural geometry for `RIGID`: `"SHELL"` or `"SOLID"`. |
+| **`type`** | String | **Yes** | - | Section formulation type. See [Section Module](modules/sections.md). |
 
 ### Examples
 
@@ -430,7 +428,7 @@ The `ELEMENTS` block defines the connectivity and the physical behavior of the m
 ELEMENTS TYPE <TECHNOLOGY>
 ```
 
-See the [Element Library](#element_library) for available technologies (e.g., `MEMBRANE_3`, `S3L_C0`, `ROD_2`).
+See the [Element Module](modules/elements.md) for available technologies (e.g., `MEMBRANE_3`, `S3L_C0`, `ROD_2`).
 
 ### Parameters
 
@@ -438,7 +436,7 @@ See the [Element Library](#element_library) for available technologies (e.g., `M
 | :--- | :--- | :---: | :---: | :--- |
 | **`ID`** | Integer | **Yes** | - | Unique identifier for the element (first token). |
 | **`NODES`** | Array | **Yes** | - | List of node IDs, e.g., `[1, 2, 3]`. |
-| **`MATERIAL`** | String | **Yes** | - | Name of the [Material](#material_library) to assign. |
+| **`MATERIAL`** | String | **Yes** | - | Name of the [Material](modules/materials.md) to assign. |
 | `T` | Float | No\* | - | Alias for **thickness**. Required for Shells/Membranes. |
 | `R` | Float | No\* | - | Alias for **radius**. Required for Rods. |
 | `LOAD` | String | No | - | Name of an element [Load](#load) (e.g., Pressure). |
@@ -570,7 +568,7 @@ These parameters are shared by all material models.
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Material model keyword. See [Material Library](module.md#material-library). |
+| **`type`** | String | **Yes** | - | Material model keyword. See [Material Module](modules/materials.md). |
 | **`density`** | Float | **Yes** | - | Material density ($\rho$). Must be strictly positive. |
 | `damping` | Float | No | `0.0` | Mass-proportional Rayleigh damping coefficient ($\alpha$). Must be non-negative. |
 
@@ -603,7 +601,7 @@ The `amplitude` block defines time-dependent functions $y = f(t)$ used to scale 
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Amplitude model. See [Amplitude Library](module.md#amplitude-library). |
+| **`type`** | String | **Yes** | - | Amplitude model. See [Amplitude Module](modules/amplitudes.md). |
 
 ### Examples
 
@@ -638,7 +636,7 @@ The `constraint` block is used to prescribe values to specific degrees of freedo
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Constraint technology. See [Constraint Library](module.md#constraint-library). |
+| **`type`** | String | **Yes** | - | Constraint technology. See [Constraint Module](modules/constraints.md). |
 | **`set`** | String | **Yes** | - | Name of the [Node Set](#set) where the constraint is applied. |
 | `amplitude` | String | No | - | Name of a global [Amplitude](#amplitude) to scale all defined components. |
 
@@ -730,7 +728,7 @@ The `contact_behaviour` block defines the physical laws (Normal and Tangential) 
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Technology keyword. See [Contact Behaviour Library](module.md#contact-behaviour-library). |
+| **`type`** | String | **Yes** | - | Technology keyword. See [Contact Behaviour Module](modules/contacts.md). |
 
 ### Examples
 
@@ -770,8 +768,8 @@ The `contact` block defines the interaction between geometric entities. It coupl
 | `master` | String | Yes* | - | Name of the first [Surface](#surface). *Required for type `PAIR` if `surfaces` is not used.* |
 | `slave` | String | Yes* | - | Name of the second [Surface](#surface). *Required for type `PAIR` if `surfaces` is not used.* |
 | `surfaces` | Array | Yes* | - | List of two surfaces `["Surf1", "Surf2"]`. *Alternative syntax for type `PAIR`.* |
-| **`normal`** | String | **Yes** | - | Name of the assigned Normal [Contact Behaviour](module.md#contact-behaviour-library). |
-| **`tangential`**| String | **Yes** | - | Name of the assigned Tangential [Contact Behaviour](module.md#contact-behaviour-library). |
+| **`normal`** | String | **Yes** | - | Name of the assigned Normal [Contact Behaviour](modules/contacts.md#normal_contact_laws). |
+| **`tangential`**| String | **Yes** | - | Name of the assigned Tangential [Contact Behaviour](modules/contacts.md#tangential_contact_laws). |
 | `edge` | Boolean | No | `false` | If `true`, enables edge contact detection for `PAIR` contact. |
 
 !!! info "Surface Definition Rules"
@@ -817,7 +815,7 @@ The `tracker` block logs discrete simulation data into separate **CSV** files. I
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
 | **`type`** | String | **Yes** | - | Entity type to track: `NODE` or `ELEMENT`. |
-| **`variable`** | String | **Yes** | - | Physical quantity to log. See [Tracker Library](module.md#tracker-library). |
+| **`variable`** | String | **Yes** | - | Physical quantity to log. See [Tracker Module](modules/trackers.md). |
 
 ### Examples
 
@@ -846,193 +844,5 @@ The `tracker` block logs discrete simulation data into separate **CSV** files. I
     TRACKERS TYPE ELEMENT
     CoreStress ELEMENTS = [101, 102] VARIABLE = STRESS COMPONENT = C11
     ```
-
----
-
-# Library Reference
-
-## Element Library
-
-The following table lists the finite element technologies available. The requirement for specific geometric parameters (like `thickness` or `radius`) depends on the element technology.
-
-| Keyword | Nodes | Category | Key Parameters | Description |
-| :--- | :---: | :--- | :--- | :--- |
-| **`ROD_2`** | 2 | Truss | `radius`, `material` | 1D rod supporting axial tension and compression only. |
-| **`MEMBRANE_3`** | 3 | Shell | `thickness`, `material` | 3-node triangular membrane (in-plane stiffness, no bending). |
-| **`S3L_C0`** | 3 | Shell | `thickness`, `material`, `nip` | 3-node shell element with linear bending (C0 continuity). |
-| **`DKT18`** | 3 | Shell | `thickness`, `material`, `nip` | Discrete Kirchhoff Triangle for thin shell bending analysis. |
-| **`HEXA8`** | 8 | Solid | `material` | 8-node linear isoparametric brick element for 3D continuum. |
-| **`CONTACT_TRIANGLE`** | 3 | Contact | `thickness`, `factor`, `subtype` | Surface contact element. Subtypes: `SOLID` or `SHELL`. |
-| **`CONTACT_LINE`** | 2 | Contact | `radius`, `factor` | 1D element for edge-to-edge or node-to-edge contact detection. |
-
-### Parameter Details
-
-* **`material`**: Name of the material assigned to the element. Required for all structural elements.
-* **`thickness`**: Physical thickness of the shell, membrane, or contact surface.
-* **`radius`**: Cross-sectional radius for `ROD_2` or `CONTACT_LINE`.
-* **`nip`**: Number of Integration Points through the thickness (typically 1 to 5).
-* **`factor`**: Penalty factor used to enforce contact constraints (stiffness).
-* **`friction`**: Coulomb friction coefficient for contact interactions.
-
-!!! tip "Contact Logic"
-    Structural elements like `MEMBRANE_3` or `DKT18` can trigger internal contact detection if the `contact` parameter is set to `BASIC` or `EDGE` in their definition. This automatically creates underlying `CONTACT_TRIANGLE` or `CONTACT_LINE` entities.
-
----
-
-## Material Library
-
-This section lists the specific parameters required for each material technology.
-
-### ELASTIC
-Standard Isotropic Linear Elasticity based on Hooke's Law. It assumes a plane stress state for 2D elements.
-
-| Parameter | Type | Required | Range | Description |
-| :--- | :--- | :---: | :---: | :--- |
-| `young` | Float | **Yes** | $>0$ | Young's Modulus ($E$). |
-| `poisson` | Float | **Yes** | $[0, 0.5]$ | Poisson's ratio ($\nu$). |
-
-### HYPERELASTIC
-Non-linear elastic model for large strain analysis (rubbers, soft tissues). Currently supports the **Ogden** potential for incompressible materials.
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| `potential` | String | **Yes** | Potential type. Supported: `OGDEN`. |
-| `mu` | Array | **Yes** | List of shear moduli $\mu_i$. |
-| `alpha` | Array | **Yes** | List of non-linear exponents $\alpha_i$. |
-
-!!! note "Array Consistency"
-    The `mu` and `alpha` arrays must have the same number of entries. Each pair $( \mu_i, \alpha_i )$ defines one term of the Ogden strain energy potential.
-
-### HYPERTEXTILE
-Advanced invariant-based model specifically designed for dry or impregnated textile reinforcements. It decouples elongation in warp/weft directions from in-plane shear.
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| **`warp_orientation`**| Array | **Yes** | Unit vector $[x, y, z]$ for initial warp fiber direction. |
-| **`weft_orientation`**| Array | **Yes** | Unit vector $[x, y, z]$ for initial weft fiber direction. |
-| **`k_shear`** | Array | **Yes** | Polynomial coefficients for shear stiffness. |
-| **`k_elong_warp`** | Array | **Yes** | Polynomial coefficients for warp elongation. |
-| **`k_elong_weft`** | Array | **Yes** | Polynomial coefficients for weft elongation. |
-| `k_bend_warp` | Array | No | Coefficients for warp bending moments. |
-| `k_bend_weft` | Array | No | Coefficients for weft bending moments. |
-| `k_bend_twist` | Array | No | Coefficients for twisting moments. |
-
-!!! tip "Orientation Projection"
-    During initialization, COMFOR automatically projects the global orientation vectors onto the local basis of each element. If a fiber direction is found to be perpendicular to an element's plane, the simulation will stop with an error.
-
----
-
-## Amplitude Library
-
-### TABULAR
-The `TABULAR` type defines a function through a series of discrete time/value pairs. COMFOR performs a **linear interpolation** between the provided points.
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| **`values`** | Array | **Yes** | List of `[time, value]` pairs. |
-
-!!! info "Operational Logic"
-    * **Interpolation**: Linear between defined points.
-    * **Out of Bounds**: If the current simulation time is outside the defined range $[t_{min}, t_{max}]$, the amplitude returns **0.0**.
-    * **Sorting**: COMFOR automatically sorts the pairs by increasing time during initialization.
-
----
-
-## Constraint Library
-
-### BOUNDARY_CONDITION
-
-This technology prescribes nodal velocities ($v$) and accelerations ($a$). You can define components as simple numeric values or as complex maps to include local amplitudes.
-
-#### Component Syntax
-
-Each component (e.g., `vx`, `vry`, `az`) can be defined in two ways:
-
-1.  **Numeric**: `vx = 1.0` (Scales with the global constraint amplitude if provided).
-2.  **Map**: `vx = { value = 1.0, amplitude = "MyAmp" }` (Uses a specific amplitude for this component).
-
-#### Available Parameters
-
-| Parameter | Category | Description |
-| :--- | :--- | :--- |
-| `preset` | Special | Use `FIXED` to set all velocities (linear and rotational) to 0.0. |
-| `vx`, `vy`, `vz` | Linear Velocity | Prescribed velocity along X, Y, or Z axes. |
-| `vrx`, `vry`, `vrz`| Rotational Vel. | Prescribed angular velocity around X, Y, or Z axes. |
-| `ax`, `ay`, `az` | Acceleration | Prescribed acceleration along X, Y, or Z axes. |
-
-!!! info "Velocity vs Acceleration"
-    If a velocity component (e.g., `vx`) is set, any prescribed acceleration for the same axis (`ax`) is ignored and forced to $0.0$ to ensure kinematic consistency.
-
-#### Value Evaluation
-The value applied at a given time $t$ is calculated as:
-
-$$V_{applied}(t) = Value \times Amplitude(t)$$
-
-If no local amplitude is defined for the component, it falls back to the global `amplitude` defined at the block level. If neither is present, the factor is $1.0$.
-
----
-
-## Contact Behaviour Library
-
-This reference lists the specific parameters required for each contact technology.
-
-### LINEAR_PENALTY (Normal)
-
-A linear spring model that applies a reaction force proportional to the penetration distance (*gap*).
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| `stiffness` | Float | **Yes** | Penalty stiffness. (Alias: `factor`). |
-
-### PENALTY_ADHESION (Normal)
-
-A normal law that manages both compression (penalty) and adhesive forces (tension) when surfaces attempt to separate.
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| `stiffness` | Float | **Yes** | Compression stiffness. (Alias: `factor`). |
-| `strength` | Float | **Yes** | Adhesive force magnitude. (Alias: `adhesive_strength`). |
-| `threshold` | Float | No | Distance limit for adhesion. (Alias: `adhesion_threshold`). Defaults to element thickness. |
-
-### COULOMB (Tangential)
-
-Standard friction model. It includes a *smooth factor* regularization to ensure numerical stability during slip-direction changes.
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| `friction` | Float | **Yes** | Friction coefficient $\mu$. (Alias: `mu`). |
-
-!!! info "Regularization"
-    The `COULOMB` implementation uses a smoothing factor based on the dot product of the current and previous slip vectors. This minimizes numerical oscillations when the sliding direction changes abruptly.
-
----
-
-## Tracker Library
-
-### NODE
-
-Tracks kinematic or kinetic data for a specific list of nodes.
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| **`nodes`** | Array | **Yes** | List of Node IDs to track. |
-| **`direction`**| String | **Yes** | Global component direction: `X`, `Y`, or `Z`. |
-| **`variable`** | String | **Yes** | Supported: `FORCE`, `MOMENT`, `POSITION`, `VELOCITY`, `ACCELERATION`, `CONTACTFORCE`, `CONTACTSLIDING`. |
-
-!!! info "Alias"
-    The keyword `CONTACTSLIDINGVELOCITY` can be used as an alias for `CONTACTSLIDING`.
-
-### ELEMENT
-
-Tracks internal state variables for a specific list of elements.
-
-| Parameter | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| **`elements`** | Array | **Yes** | List of Element IDs to track. |
-| **`component`** | String | **Yes** | Tensor component: `C11`, `C22`, `C33`, `C12`, `C13`, `C23`. |
-| **`variable`** | String | **Yes** | Supported: `STRAIN`, `STRESS`. |
-
-!!! tip "Total Values"
-    In the generated CSV, the last column is automatically calculated as the **Sum** (for Node trackers) or **Mean** (for Element trackers) of all tracked entities.
 
 [^1]: Parsing, syntax analysis, or syntactic analysis is the process of analyzing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar. [Wikipedia](https://en.wikipedia.org/wiki/Parsing){:target="_blank"}
