@@ -82,7 +82,7 @@ The `control` block defines the global time parameters for the simulation, manag
 | :--- | :--- | :---: | :---: | :--- |
 | `run_to` | Float | **Yes** | - | Final simulation time. Must be non-negative. |
 | `run_from` | Float | No | `0.0` | Starting time of the analysis. Must be non-negative. |
-| `time_step` | Float | No | `0.0` | Fixed time increment. If set to `0.0`, COMFOR uses an automatic stable time step based on the mesh and materials. |
+| `time_step` | Float | No | - | Fixed time increment. Must be strictly positive if specified. If omitted, COMFOR uses an automatic stable time step based on the mesh and materials. |
 
 !!! info "Validation Rule"
     The value of `run_from` must be strictly less than `run_to`. If this condition is not met, the simulation will fail during the validation phase with a `ControlStep` error.
@@ -170,7 +170,7 @@ The `mesh` block defines the geometric source of your model. COMFOR can either r
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
 | `type` | String | **Yes** | - | Reader engine: `ABAQUS`, `GMSH`, `FEMBIC` or `INLINE`. |
-| `mesh` | String | Yes* | - | Path to the external file. *Required for all types except `INLINE`.* |
+| `file` | String | Yes* | - | Path to the external file. *Required for external reader types (`GMSH`, `ABAQUS`, `FEMBIC`).* |
 | `nodes` | Array | Yes* | - | List of nodes `[id, x, y, z]`. *Required only for `INLINE` type.* |
 | `elements` | Array | Yes* | - | List of elements `[id, "TYPE", n1, n2, ...]`. See [Element Library](#element_library) for available types. *Required only for `INLINE` type.* |
 
@@ -180,7 +180,7 @@ The `mesh` block defines the geometric source of your model. COMFOR can either r
     ```toml
     [mesh.BodyMesh]
     type = "GMSH"
-    mesh = "models/chassis.msh"
+    file = "models/chassis.msh"
     ```
 
 === "Inline Definition"
@@ -206,19 +206,31 @@ The `mesh` block defines the geometric source of your model. COMFOR can either r
 !!! info "TOML Only"
     This block is specific to the **TOML** configuration format. In the legacy Fembic format, geometry and physical properties are defined directly within the `NODES` and `ELEMENTS` blocks.
 
-A `part` represents a physical component. It instantiates a geometric source and assigns it physical properties. Parameters defined here (like `material` or `thickness`) act as a global override for the entire part. 
+A `part` represents a physical component. It instantiates a geometric source defined in a `[mesh]` block and applies global spatial transformations or element type mappings.
 
 ### Parameters
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
 | **`mesh`** | String | **Yes** | - | Name of the `[mesh]` block to be used. |
-| `material` | String | No | - | Material assigned to all elements. If omitted, must be defined in a [Section](#section). |
-| `thickness` | Float | No | - | Thickness for Shell/Membrane elements. If omitted, must be defined in a `[Section](#section). |
-| `node_offset` | Integer | No | `0` | Offset value added to all Node IDs. |
-| `element_offset` | Integer | No | `0` | Offset value added to all Element IDs. |
-| `translation` | Array | No | `[0,0,0]` | Global translation vector `[tx, ty, tz]`. |
+| `translation` | Array | No* | `[0,0,0]` | Global translation vector `[tx, ty, tz]`. *Cannot be used with `pattern`.* |
+| `pattern` | Array | No* | - | List of pattern configurations for duplicated placements. *Cannot be used with `translation`.* |
 | `element_mapping` | Map | No | - | Dictionary to map mesh element types to [COMFOR Technologies](#element_library). |
+
+!!! warning "Exclusivity Rule"
+    The `translation` and `pattern` parameters are mutually exclusive. Specifying both on the same `part` will result in a validation error.
+
+### Pattern Parameters (Linear)
+
+When using the `pattern` array, each pattern definition supports the following keys:
+
+| Parameter | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| **`type`** | String | **Yes** | Pattern geometry type. Supported: `LINEAR`. |
+| **`translation`** | Array | **Yes** | Base translation vector `[tx, ty, tz]` for the pattern origin. |
+| **`count`** | Integer | **Yes** | Number of instances to generate (must be positive). |
+| **`spacing`** | Float | **Yes** | Distance between consecutive instances (must be positive). |
+| **`direction`** | Array | **Yes** | Direction vector `[dx, dy, dz]` for pattern propagation (cannot be zero). |
 
 ### Element Mapping Syntax
 
@@ -231,7 +243,6 @@ There are two ways to define the `element_mapping` in TOML:
     ```toml
     [part.Wing]
     mesh = "AbaqusInp"
-    material = "Composite"
     element_mapping = { "S3R" = "S3L_C0", "STRI3" = "DKT18" }
     ```
 
@@ -239,7 +250,6 @@ There are two ways to define the `element_mapping` in TOML:
     ```toml
     [part.Wing]
     mesh = "AbaqusInp"
-    material = "Composite"
 
     [part.Wing.element_mapping]
     "S3R"   = "S3L_C0"
@@ -250,22 +260,26 @@ There are two ways to define the `element_mapping` in TOML:
 
 === "TOML :simple-toml:"
     ```toml
-    # Defining a physical part from a mesh source
+    # Defining a physical part with a translation from a mesh source
     [part.MainPlate]
     mesh = "PlateGeometry"
-    material = "Steel_S235"
-    thickness = 1.2
-    node_offset = 0
-    element_offset = 0
     translation = [0.0, 0.0, 50.0]
 
-    # Reusing the same mesh for a second part with different properties
-    [part.Reinforcement]
-    mesh = "PlateGeometry"
-    material = "Steel_S355"
-    thickness = 2.5
-    node_offset = 500      # MainPlate had 500 nodes
-    element_offset = 450   # MainPlate had 450 elements
+    # Duplicating a mesh using a linear pattern (5 instances along X)
+    [part.Stiffeners]
+    mesh = "RibMesh"
+    [[part.Stiffeners.pattern]]
+    type = "LINEAR"
+    translation = [0.0, 0.0, 0.0]
+    count = 5
+    spacing = 20.0
+    direction = [1.0, 0.0, 0.0]
+
+    # Mapping element types for imported mesh formats
+    [part.Chassis]
+    mesh = "GmshMesh"
+    [part.Chassis.element_mapping]
+    "MEMBRANE_3" = "S3L_C0"
     ```
 
 === "Fembic :material-text:"
@@ -284,36 +298,37 @@ There are two ways to define the `element_mapping` in TOML:
 !!! info "TOML Only"
     This block is specific to the **TOML** configuration format. In the legacy Fembic format, geometry and physical properties are defined directly within the `NODES` and `ELEMENTS` blocks.
 
-The `section` block allows you to assign specific physical properties to a subset of elements within a Part. It is used to define local variations of materials, thicknesses, or integration settings by targeting an element **Set**.
+The `section` block defines specific physical properties (such as thickness, integration points, or radius) linked to a material model. Physical sections are then assigned to element sets using the `[[section_assignments]]` list.
 
 ### Parameters
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`set`** | String | **Yes** | - | Name of the element [Set](#set) this section applies to. |
-| **`type`** | String | **Yes** | - | Section technology (e.g., `SHELL`, `SOLID`). |
-| `material` | String | Yes | - | Name of the [Material](#material_library). Overrides Part-level material. |
-| `thickness` | Float | No* | - | Required for Shell types. Overrides Part-level thickness. |
-| `nip` | Integer | No | `3` | Number of Integration Points through the thickness. |
+| **`type`** | String | **Yes** | - | Section formulation type. See [Section Library](module.md#section-library). |
+| `material` | String | Yes* | - | Name of the assigned material. *Required for all section types except `RIGID`.* |
+| `thickness` | Float | Yes* | - | Physical thickness. *Required for Shell, Membrane, and Rigid section types.* |
+| `radius` | Float | Yes* | - | Cross-sectional radius. *Required for `ROD` sections.* |
+| `nip` | Integer | Yes* | - | Number of Integration Points through thickness. *Required for `SHELL_GAUSS`.* |
+| `integration` | String | No | `"GAUSS"` | Integration rule for `SHELL_GAUSS`: `"GAUSS"`, `"LOBATTO"`, or `"SIMPSON"`. |
+| `geometry` | String | No | - | Structural geometry for `RIGID`: `"SHELL"` or `"SOLID"`. |
 
 ### Examples
 
-Sections are defined as a list of objects. They act as a bridge between a group of elements (a Set) and their physical behavior.
-
 === "TOML :simple-toml:"
     ```toml
-    # Assigning a specific thickness to a reinforcement zone
-    [section.ReinforcedZone]
-    set = "CentralElements"
-    type = "SHELL"
-    thickness = 5.0
+    # Gauss shell section definition
+    [section.SEC_SHELL]
+    type = "SHELL_GAUSS"
+    material = "Composite_Material"
+    thickness = 2.5
     nip = 5
+    integration = "GAUSS"
 
-    # Overriding material for a specific set within a part
-    [section.ConnectionZone]
-    set = "BoltedNodes"
-    type = "SOLID"
-    material = "HighStrengthSteel"
+    # Assigning the section to an element set
+    [[section_assignments]]
+    name = "AssignShell"
+    section = "SEC_SHELL"
+    set = "ReinforcedSet"
     ```
 
 === "Fembic :material-text:"
@@ -324,6 +339,50 @@ Sections are defined as a list of objects. They act as a bridge between a group 
     ELEMENTS TYPE MEMBRANE_3
     1 NODES=[1,2,3] MATERIAL=Steel T=1.2
     2 NODES=[4,5,6] MATERIAL=Steel T=5.0  # Equivalent to a manual section change
+    ```
+
+---
+
+## Section Assignment
+
+!!! info "TOML Only"
+    This block is specific to the **TOML** configuration format. In the legacy Fembic format, physical properties are defined directly within the `ELEMENTS` block.
+
+The `section_assignments` block links a defined [Section](#section) to an element [Set](#set). It acts as the mapping layer that applies geometric and constitutive definitions to specific regions of the model mesh.
+
+### Parameters
+
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| **`section`** | String | **Yes** | - | Name of the [Section](#section) to assign. |
+| **`set`** | String | **Yes** | - | Name of the target element [Set](#set). Must be a set of type `ELEMENT`. |
+
+!!! info "Validation Rule"
+    The referenced set must exist and be defined as an `ELEMENT` set. Referencing a `NODE` set will result in a validation error during the linking phase.
+
+### Examples
+
+=== "TOML :simple-toml:"
+    ```toml
+    # Section assignment using array of tables syntax
+    [[section_assignments]]
+    name = "AssignMembrane"
+    section = "SEC_MEMBRANE"
+    set = "MainBodyElements"
+
+    # Keyed table syntax is also supported
+    [section_assignments.AssignBending]
+    section = "SEC_SHELL"
+    set = "RibElements"
+    ```
+
+=== "Fembic :material-text:"
+    !!! note "Implicit Logic"
+        In Fembic, section assignments do not exist as separate blocks. Physical properties are specified line-by-line inside the `ELEMENTS` block.
+    
+    ```xml
+    ELEMENTS TYPE MEMBRANE_3
+    1 NODES = [1, 2, 3] MATERIAL = Steel T = 1.0
     ```
 
 ---
@@ -405,19 +464,21 @@ ELEMENTS TYPE ROD_2
 
 ## Set
 
-Sets are named groups of entities (nodes or elements) used to apply boundary conditions, loads, or to define [Sections](#section). They allow for a modular selection of the model parts without redefining connectivity.
+Sets are named groups of entities (nodes or elements) used to apply boundary conditions, loads, or to define [Sections](#section). They scope entities within one or more physical [Parts](#part) using explicit ID lists, ranges, or complete part selections.
 
 ### Parameters
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
 | **`type`** | String | **Yes** | - | Entity type: `NODE` or `ELEMENT`. |
-| `nodes` | Array | No* | - | List of node IDs. *Required for type `NODE` type.* |
-| `elements` | Array | No* | - | List of element IDs. *Required for type `ELEMENT` type.* |
-| `range` | Array | No* | - | Range definition: `[start, end, step]`. |
+| `part` | String | Yes* | - | Name of the target [Part](#part). *Required if `parts` is not used.* |
+| `parts` | Array | Yes* | - | List of target [Part](#part) names. *Required if `part` is not used.* |
+| `ids` | Array | No | - | Explicit list of node or element IDs. Cannot be combined with `range`. |
+| `range` | Array | No | - | Range definition `[start, end, step]`. Cannot be combined with `ids`. |
 
 !!! warning "Validation Rules"
-    - You must provide either a list (`nodes`/`elements`) or a `range`, but **not both**.
+    - You must specify either `part` or `parts`, but **not both**.
+    - You can specify either `ids` or `range`, but **not both**. If neither is specified, the set automatically includes **all** entities of the specified type within the referenced part(s).
     - For the `range` parameter, the step (third value) **cannot be zero**.
 
 ### Range Syntax
@@ -429,15 +490,22 @@ The `range` array follows the pattern: `[start_id, end_id, step]`.
 
 === "TOML :simple-toml:"
     ```toml
-    # Set of specific nodes
+    # Node set defined by explicit IDs within a single part
     [set.FixedNodes]
     type = "NODE"
-    nodes = [1, 2, 10, 15]
+    part = "MainPlate"
+    ids = [1, 2, 10, 15]
 
-    # Set of elements defined by a range
+    # Element set defined by a range across a single part
     [set.BottomElements]
     type = "ELEMENT"
+    part = "MainPlate"
     range = [1, 100, 1]
+
+    # Set targeting all nodes across multiple parts
+    [set.AllPartNodes]
+    type = "NODE"
+    parts = ["MainPlate", "Reinforcement"]
     ```
 
 === "Fembic :material-text:"
@@ -502,9 +570,9 @@ These parameters are shared by all material models.
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Material model keyword. See [Material Library](#material_library). |
-| **`density`** | Float | **Yes** | - | Material density ($\rho$). Must be positive. |
-| `damping` | Float | No | `0.0` | Mass-proportional Rayleigh damping coefficient ($\alpha$). |
+| **`type`** | String | **Yes** | - | Material model keyword. See [Material Library](module.md#material-library). |
+| **`density`** | Float | **Yes** | - | Material density ($\rho$). Must be strictly positive. |
+| `damping` | Float | No | `0.0` | Mass-proportional Rayleigh damping coefficient ($\alpha$). Must be non-negative. |
 
 ### Examples
 
@@ -535,7 +603,7 @@ The `amplitude` block defines time-dependent functions $y = f(t)$ used to scale 
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Amplitude model. See [Amplitude Library](#amplitude_library). |
+| **`type`** | String | **Yes** | - | Amplitude model. See [Amplitude Library](module.md#amplitude-library). |
 
 ### Examples
 
@@ -570,7 +638,7 @@ The `constraint` block is used to prescribe values to specific degrees of freedo
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Constraint technology. See [Constraint Library](#constraint_library). |
+| **`type`** | String | **Yes** | - | Constraint technology. See [Constraint Library](module.md#constraint-library). |
 | **`set`** | String | **Yes** | - | Name of the [Node Set](#set) where the constraint is applied. |
 | `amplitude` | String | No | - | Name of a global [Amplitude](#amplitude) to scale all defined components. |
 
@@ -620,7 +688,7 @@ The `load` block defines external efforts applied to the model. These can be pun
 
 The magnitude of a load component at a specific simulation time $t$ is calculated as the product of the base value and the amplitude factor:
 
-$F_{applied}(t) = F_{base} \times Amplitude(t)$
+$$F_{applied}(t) = F_{base} \times Amplitude(t)$$
 
 If no `amplitude` is specified, the scale factor defaults to **1.0**.
 
@@ -662,7 +730,7 @@ The `contact_behaviour` block defines the physical laws (Normal and Tangential) 
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Technology keyword. See [Contact Behaviour Library](#contact_behaviour_library). |
+| **`type`** | String | **Yes** | - | Technology keyword. See [Contact Behaviour Library](module.md#contact-behaviour-library). |
 
 ### Examples
 
@@ -692,28 +760,29 @@ The `contact_behaviour` block defines the physical laws (Normal and Tangential) 
 
 ## Contact
 
-The `contact` block defines the interaction between geometric entities. It pairs two surfaces together and assigns them specific physical laws defined in the [Contact Behaviour](#contact_behaviour) section.
+The `contact` block defines the interaction between geometric entities. It couples surfaces or the whole domain with specific physical laws defined in the [Contact Behaviour](#contact_behaviour) section.
 
 ### Parameters
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Interaction technology. Currently supported: `PAIR`. |
-| `master` | String | Yes\* | - | Name of the first [Surface](#surface). |
-| `slave` | String | Yes\* | - | Name of the second [Surface](#surface). |
-| `surfaces` | Array | Yes\* | - | Alternative syntax: List of two surfaces `["Surf1", "Surf2"]`. |
-| **`normal`** | String | **Yes** | - | Name of the assigned Normal [Contact Behaviour](#contact_behaviour_library). |
-| **`tangential`**| String | **Yes** | - | Name of the assigned Tangential [Contact Behaviour](#contact_behaviour_library). |
-| `edge` | Boolean | No | `false` | If `true`, enables edge contact detection (surface + edges). If `false`, uses basic surface-only contact. |
+| **`type`** | String | **Yes** | - | Interaction technology keyword: `PAIR` or `GENERAL`. |
+| `master` | String | Yes* | - | Name of the first [Surface](#surface). *Required for type `PAIR` if `surfaces` is not used.* |
+| `slave` | String | Yes* | - | Name of the second [Surface](#surface). *Required for type `PAIR` if `surfaces` is not used.* |
+| `surfaces` | Array | Yes* | - | List of two surfaces `["Surf1", "Surf2"]`. *Alternative syntax for type `PAIR`.* |
+| **`normal`** | String | **Yes** | - | Name of the assigned Normal [Contact Behaviour](module.md#contact-behaviour-library). |
+| **`tangential`**| String | **Yes** | - | Name of the assigned Tangential [Contact Behaviour](module.md#contact-behaviour-library). |
+| `edge` | Boolean | No | `false` | If `true`, enables edge contact detection for `PAIR` contact. |
 
-!!! info "Surface Definition"
-    You must define the surfaces involved using either the `master`/`slave` pair **or** the `surfaces` array. Using both simultaneously will result in a validation error.
+!!! info "Surface Definition Rules"
+    - For **`PAIR`** contact, define surfaces using either the `master`/`slave` pair **or** the `surfaces` array.
+    - For **`GENERAL`** contact, surface definitions are omitted as it applies globally.
 
 ### Examples
 
 === "TOML :simple-toml:"
     ```toml
-    # Interaction defined using Master/Slave keywords (basic surface contact)
+    # Contact Pair defined using Master/Slave keywords
     [contact.DieToBlank]
     type = "PAIR"
     master = "ToolSurface"
@@ -721,13 +790,11 @@ The `contact` block defines the interaction between geometric entities. It pairs
     normal = "HardPenalty"
     tangential = "SteelFriction"
 
-    # Interaction defined using the surfaces array (with edge contact enabled)
-    [contact.SelfContact]
-    type = "PAIR"
-    surfaces = ["FabricSurface", "FabricSurface"]
+    # General contact definition
+    [contact.GlobalContact]
+    type = "GENERAL"
     normal = "SoftPenalty"
     tangential = "FabricFriction"
-    edge = true
     ```
 
 === "Fembic :material-text:"
@@ -735,8 +802,8 @@ The `contact` block defines the interaction between geometric entities. It pairs
     CONTACTS TYPE PAIR
     DieToBlank MASTER = ToolSurface SLAVE = WorkpieceNodes NORMAL = HardPenalty TANGENTIAL = SteelFriction
 
-    CONTACTS TYPE PAIR
-    SelfContact SURFACES = ["FabricSurface", "FabricSurface"] NORMAL = SoftPenalty TANGENTIAL = FabricFriction
+    CONTACTS TYPE GENERAL
+    GlobalContact NORMAL = SoftPenalty TANGENTIAL = FabricFriction
     ```
 
 ---
@@ -750,7 +817,7 @@ The `tracker` block logs discrete simulation data into separate **CSV** files. I
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
 | **`type`** | String | **Yes** | - | Entity type to track: `NODE` or `ELEMENT`. |
-| **`variable`** | String | **Yes** | - | Physical quantity to log. See [Tracker Library](#tracker_library). |
+| **`variable`** | String | **Yes** | - | Physical quantity to log. See [Tracker Library](module.md#tracker-library). |
 
 ### Examples
 
@@ -761,23 +828,23 @@ The `tracker` block logs discrete simulation data into separate **CSV** files. I
     type = "NODE"
     variable = "FORCE"
     direction = "Z"
-    nodes = [1, 2, 3, 4]
+    set = "BottomNodes"
 
-    # Tracking the axial stress in a specific element
+    # Tracking axial stress on explicit elements
     [tracker.CoreStress]
     type = "ELEMENT"
     variable = "STRESS"
     component = "C11"
-    elements = [101]
+    elements = [101, 102]
     ```
 
 === "Fembic :material-text:"
     ```xml
     TRACKERS TYPE NODE
-    ReactionForce NODES = [1, 2, 3, 4] VARIABLE = FORCE DIRECTION = Z
+    ReactionForce SET = BottomNodes VARIABLE = FORCE DIRECTION = Z
 
     TRACKERS TYPE ELEMENT
-    CoreStress ELEMENTS = [101] VARIABLE = STRESS COMPONENT = C11
+    CoreStress ELEMENTS = [101, 102] VARIABLE = STRESS COMPONENT = C11
     ```
 
 ---
