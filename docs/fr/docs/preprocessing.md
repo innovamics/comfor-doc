@@ -731,7 +731,7 @@ Le bloc `contact_behaviour` définit les lois physiques (normales et tangentiell
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Oui** | - | Mot-clé de technologie de loi de contact. Voir le [Module Contacts](modules/contacts.md). |
+| **`type`** | String | **Oui** | - | Mot-clé de technologie de loi de contact. Voir le [Module Contacts](modules/contact_behaviours.md). |
 
 ### Exemples
 
@@ -771,8 +771,8 @@ Le bloc `contact` définit l'interaction géométrique entre surfaces ou à l'é
 | `master` | String | Oui* | - | Nom de la première [Surface](#surface) (Maître). *Requis pour le type `PAIR` si `surfaces` n'est pas utilisé.* |
 | `slave` | String | Oui* | - | Nom de la seconde [Surface](#surface) (Esclave). *Requis pour le type `PAIR` si `surfaces` n'est pas utilisé.* |
 | `surfaces` | Array | Oui* | - | Liste de deux surfaces `["Surf1", "Surf2"]`. *Syntaxe alternative pour le type `PAIR`.* |
-| **`normal`** | String | **Oui** | - | Nom du [Comportement de Contact](modules/contacts.md#lois_normales_normal_contact_laws) normal assigné. |
-| **`tangential`**| String | **Oui** | - | Nom du [Comportement de Contact](modules/contacts.md#lois_tangentielles_tangential_contact_laws) tangentiel assigné. |
+| **`normal`** | String | **Oui** | - | Nom du [Comportement de Contact](modules/contact_behaviours.md#lois_normales_normal_contact_laws) normal assigné. |
+| **`tangential`**| String | **Oui** | - | Nom du [Comportement de Contact](modules/contact_behaviours.md#lois_tangentielles_tangential_contact_laws) tangentiel assigné. |
 | `edge` | Boolean | Non | `false` | Si `true`, active la détection de contact sur les bords pour un contact de type `PAIR`. |
 
 !!! info "Règles de Définition des Surfaces"

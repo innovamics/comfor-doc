@@ -147,7 +147,7 @@ Formulations d'éléments surfaciques 2D pour les membranes et les coques minces
 | **Section Requise** | `RIGID` | Lié à une section rigide définissant l'épaisseur (`thickness`, utilisée comme rayon de contact $r = t/2$). |
 
 !!! warning "Obsolescence des Paramètres de Contact"
-    Dans COMFOR TOML, les facteurs de pénalité (`factor`) et les coefficients de frottement (`friction`) ne sont plus spécifiés directement sur les éléments. Ils doivent être configurés dans les blocs [Comportement de Contact](contacts.md) et assignés via les [Paires de Contact](../preprocessing.md#contact).
+    Dans COMFOR TOML, les facteurs de pénalité (`factor`) et les coefficients de frottement (`friction`) ne sont plus spécifiés directement sur les éléments. Ils doivent être configurés dans les blocs [Comportement de Contact](contact_behaviours.md) et assignés via les [Paires de Contact](../preprocessing.md#contact).
 
 ---
 

@@ -23,7 +23,7 @@ nav:
       - "Modules":
         - "Amplitudes": docs/modules/amplitudes.md
         - "Contraintes": docs/modules/constraints.md
-        - "Contacts": docs/modules/contacts.md
+        - "Comportements de Contact": docs/modules/contact_behaviours.md
         - "Eléments": docs/modules/elements.md
         - "Matériaux": docs/modules/materials.md
         - "Sections": docs/modules/sections.md

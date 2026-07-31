@@ -728,7 +728,7 @@ The `contact_behaviour` block defines the physical laws (Normal and Tangential) 
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Yes** | - | Technology keyword. See [Contact Behaviour Module](modules/contacts.md). |
+| **`type`** | String | **Yes** | - | Technology keyword. See [Contact Behaviour Module](modules/contact_behaviours.md). |
 
 ### Examples
 
@@ -768,8 +768,8 @@ The `contact` block defines the interaction between geometric entities. It coupl
 | `master` | String | Yes* | - | Name of the first [Surface](#surface). *Required for type `PAIR` if `surfaces` is not used.* |
 | `slave` | String | Yes* | - | Name of the second [Surface](#surface). *Required for type `PAIR` if `surfaces` is not used.* |
 | `surfaces` | Array | Yes* | - | List of two surfaces `["Surf1", "Surf2"]`. *Alternative syntax for type `PAIR`.* |
-| **`normal`** | String | **Yes** | - | Name of the assigned Normal [Contact Behaviour](modules/contacts.md#normal_contact_laws). |
-| **`tangential`**| String | **Yes** | - | Name of the assigned Tangential [Contact Behaviour](modules/contacts.md#tangential_contact_laws). |
+| **`normal`** | String | **Yes** | - | Name of the assigned Normal [Contact Behaviour](modules/contact_behaviours.md#normal_contact_laws). |
+| **`tangential`**| String | **Yes** | - | Name of the assigned Tangential [Contact Behaviour](modules/contact_behaviours.md#tangential_contact_laws). |
 | `edge` | Boolean | No | `false` | If `true`, enables edge contact detection for `PAIR` contact. |
 
 !!! info "Surface Definition Rules"

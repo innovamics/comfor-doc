@@ -147,7 +147,7 @@ Specialized contact elements automatically generated or explicitly defined to en
 | **Required Section** | `RIGID` | Linked to a rigid section defining `thickness` (used as contact radius $r = t/2$). |
 
 !!! warning "Contact Parameters Deprecation"
-    In COMFOR TOML, penalty factors (`factor`) and friction coefficients (`friction`) are no longer specified directly on elements. They must be configured in [Contact Behaviour](contacts.md) blocks and assigned via [Contact Pairs](../preprocessing.md#contact).
+    In COMFOR TOML, penalty factors (`factor`) and friction coefficients (`friction`) are no longer specified directly on elements. They must be configured in [Contact Behaviour](contact_behaviours.md) blocks and assigned via [Contact Pairs](../preprocessing.md#contact).
 
 ---
 
