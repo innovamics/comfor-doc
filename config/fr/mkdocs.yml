@@ -21,8 +21,13 @@ nav:
       - "Exécution": docs/analysis.md
       - "Post-traitement": docs/postprocessing.md
       - "Modules":
-        - "Matériaux": docs/materials.md
-        - "Eléments": docs/elements.md
+        - "Amplitudes": docs/modules/amplitudes.md
+        - "Contraintes": docs/modules/constraints.md
+        - "Contacts": docs/modules/contacts.md
+        - "Eléments": docs/modules/elements.md
+        - "Matériaux": docs/modules/materials.md
+        - "Sections": docs/modules/sections.md
+        - "Trackers": docs/modules/trackers.md
       - "Théorie":
         - "Généralités": docs/theory/theory_overview.md
         - "Mécanique des milieux continus": docs/theory/continuum_mechanics.md
