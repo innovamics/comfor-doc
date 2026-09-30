@@ -57,10 +57,10 @@ Suivent les données cinématiques, cinétiques ou de contact pour un groupe ou 
 | **`CONTACTSLIDING`** | Vitesse de glissement relatif de contact nodale *(Alias : `CONTACTSLIDINGVELOCITY`)*. |
 
 ### Format de Sortie
-Dans le fichier CSV généré, chaque ligne correspond à un pas de temps. Les colonnes représentent :
+Le fichier CSV `<racine_résultats>/<nom_tracker>.csv` contient une ligne par frame de [sortie](../preprocessing.md#sorties_output). Les colonnes sont séparées par `, ` (virgule et espace). Les colonnes représentent :
 1. **Temps**
 2. Les valeurs individuelles par nœud (`Nœud N1`, `Nœud N2`, ...)
-3. **Total** : Somme cumulée de toutes les valeurs nodales suivies à ce pas de temps.
+3. **Total** : Somme de toutes les valeurs nodales suivies.
 
 ### Exemples
 
@@ -111,10 +111,10 @@ Suivent les composantes du tenseur des contraintes ou des déformations internes
 | **`STRESS`** | Composante locale du tenseur de contrainte de Cauchy de l'élément. |
 
 ### Format de Sortie
-Dans le fichier CSV généré, chaque ligne correspond à un pas de temps. Les colonnes représentent :
+Le fichier CSV `<racine_résultats>/<nom_tracker>.csv` contient une ligne par frame de [sortie](../preprocessing.md#sorties_output). Les colonnes sont séparées par `, ` (virgule et espace). Les colonnes représentent :
 1. **Temps**
 2. Les valeurs individuelles par élément (`Élément E1`, `Élément E2`, ...)
-3. **Total** : Valeur moyenne sur l'ensemble des éléments suivis à ce pas de temps.
+3. **Total** : Somme de toutes les valeurs des éléments suivis.
 
 ### Exemples
 

@@ -62,4 +62,12 @@ Understand the building blocks of Comfor
     
     [:octicons-arrow-right-24: Read more](theory/theory_overview.md)
 
+-   :fontawesome-solid-bolt:{ .lg .middle } __Solvers Architecture__
+
+    ---
+
+    Discover the **modular architecture** of the explicit solvers in COMFOR.
+
+    [:octicons-arrow-right-24: Read more](theory/solvers/solvers_architecture.md)
+
 </div>

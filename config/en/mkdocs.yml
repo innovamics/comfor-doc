@@ -6,6 +6,9 @@ repo_name: comfor/comfor
 copyright: Copyright &copy; 2021 - 2026 Eduardo Guzman
 
 docs_dir: ../../docs/en
+# Pages kept in the repository but not published yet
+exclude_docs: |
+  docs/theory/coordinate_systems.md
 site_dir: ../../public/comfor-doc/en
 
 nav:
@@ -14,7 +17,7 @@ nav:
   - "Start here":
       - "Downloads": overview/download.md
       - "Quick Start": overview/quick_starter_guide.md
-      - 'Tutorial': overview/tutorial.md
+      - "Complete Tutorial": overview/tutorial.md
   - "Docs":
       - "Overview": docs/overview.md
       - "Preprocessing": docs/preprocessing.md
@@ -33,8 +36,10 @@ nav:
         - "Continuum Mechanics": docs/theory/continuum_mechanics.md
         - "Composite Materials": docs/theory/materials/composite_materials.md
         - "Materials overview": docs/theory/materials/materials_overview.md
-        - "Solvers": docs/theory/solvers/solvers_overview.md
-        - "Explicit Rayleigh Damping": docs/theory/solvers/explicit_rayleigh_damping.md
+        - "Solvers":
+          - "Overview": docs/theory/solvers/solvers_overview.md
+          - "Solvers Architecture": docs/theory/solvers/solvers_architecture.md
+          - "Explicit Rayleigh Damping": docs/theory/solvers/explicit_rayleigh_damping.md
   - "Developers":
       - "Git": developers/git.md
       - "API": developers/api.md

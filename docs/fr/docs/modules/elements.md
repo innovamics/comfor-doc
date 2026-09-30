@@ -32,6 +32,9 @@ Toutes les définitions d'éléments nécessitent le tableau `nodes` pour défin
 | `contact` | String | Non | - | Déclencheur interne de détection de contact : `"BASIC"` ou `"EDGE"`. |
 | `load` | String | Non | - | Nom optionnel d'une [Charge](../preprocessing.md#charge_load) cible. |
 
+!!! note "TOML"
+    En TOML, les éléments sont créés à partir d'un [maillage](../preprocessing.md#maillage_mesh) : le type provient du lecteur de maillage (éventuellement modifié avec `element_mapping`) et la connectivité du fichier de maillage. Les charges sont appliquées avec des blocs [load](../preprocessing.md#charge_load) sur des sets d'éléments, et le contact avec des blocs [contact](../preprocessing.md#contact). Les paramètres d'élément `contact` et `load` ne sont utilisés que par l'ancien format Fembic.
+
 ---
 
 ## Éléments 1D
@@ -83,7 +86,7 @@ Formulations d'éléments surfaciques 2D pour les membranes et les coques minces
 | Paramètre | Valeur / Plage | Description |
 | :--- | :--- | :--- |
 | **Nœuds** | 3 | Tableau de connectivité des nœuds `[N1, N2, N3]`. |
-| **Section Requise** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Nécessite une section coque avec `thickness`, `nip` et `material`. |
+| **Section Requise** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Nécessite une section coque avec `thickness` et `material` (plus `nip` pour `SHELL_GAUSS`). |
 | **Support du Contact** | `"BASIC"`, `"EDGE"` | Génère des entités de contact internes. |
 
 ---
@@ -95,7 +98,7 @@ Formulations d'éléments surfaciques 2D pour les membranes et les coques minces
 | Paramètre | Valeur / Plage | Description |
 | :--- | :--- | :--- |
 | **Nœuds** | 3 | Tableau de connectivité des nœuds `[N1, N2, N3]`. |
-| **Section Requise** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Nécessite une section coque avec `thickness`, `nip` et `material`. |
+| **Section Requise** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Nécessite une section coque avec `thickness` et `material` (plus `nip` pour `SHELL_GAUSS`). |
 | **Support du Contact** | `"BASIC"`, `"EDGE"` | Génère des entités de contact internes. |
 
 #### Exemples

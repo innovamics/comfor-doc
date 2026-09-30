@@ -1,0 +1,167 @@
+# Double-dome benchmark (quarter model)
+# COMFOR v0.15 - Innovamics
+
+# --- Control ---
+[control]
+run_from = 0.0
+run_to = 6.5
+
+# --- Output ---
+[[output]]
+name = "fields"
+type = "VTU"
+frequency = 0.1
+format = "BINARY"
+
+# --- Mesh import ---
+[mesh.punch]
+type = "ABAQUS"
+file = "quart/punch.inp"
+
+[mesh.die]
+type = "ABAQUS"
+file = "quart/die.inp"
+
+[mesh.plate]
+type = "GMSH"
+file = "quart/plate.msh"
+
+# --- Parts ----
+[part.punch]
+mesh = "punch"
+element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
+translation = [-1.0, -1.0, 3.0]
+
+[part.die]
+mesh = "die"
+element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
+translation = [-1.0, -1.0, 0.0]
+
+[part.plate]
+mesh = "plate"
+element_mapping = { "MEMBRANE_3" = "DKT18" }
+translation = [0.0, 0.0, 2.0]
+
+#[[part.plate.pattern]]
+#type = "LINEAR"
+#translation = [0.0, 0.0, 1.0]
+#count = 10
+#direction = [0.0, 0.0, 1.0]
+#spacing = 1.0
+
+# --- Sets ---
+[set.punchNodes]
+type = "NODE"
+part = "punch"
+
+[set.punchElements]
+type = "ELEMENT"
+part = "punch"
+
+[set.dieNodes]
+type = "NODE"
+part = "die"
+
+[set.dieElements]
+type = "ELEMENT"
+part = "die"
+
+[set.plateElements]
+type = "ELEMENT"
+part = "plate"
+
+[set.plateXNodes]
+type = "NODE"
+part = "plate"
+range = [1, 666, 35]
+
+[set.plateYNodes]
+type = "NODE"
+part = "plate"
+range = [1, 35, 1]
+
+# --- Materials ---
+[material.HyperTex]
+type = "HYPERTEXTILE"
+density = 1e-6
+damping = 5.0
+warp_orientation = [1.0, 0.0, 0.0]
+weft_orientation = [0.0, 1.0, 0.0]
+k_elong_warp = [100.0]
+k_elong_weft = [100.0]
+k_shear = [0.0185, 0.0464, -0.0213]
+k_bend_warp = [5.0]
+k_bend_weft = [5.0]
+k_bend_twist = [0.0]
+
+# --- Sections ---
+[section.toolSection]
+type = "RIGID"
+thickness = 2.0
+
+[section.plateSection]
+type = "SHELL_GENERALIZED"
+material = "HyperTex"
+thickness = 1.0
+
+[[section_assignments]]
+name = "AssignPunch"
+section = "toolSection"
+set = "punchElements"
+
+[[section_assignments]]
+name = "AssignDie"
+section = "toolSection"
+set = "dieElements"
+
+[[section_assignments]]
+name = "AssignPlate"
+section = "plateSection"
+set = "plateElements"
+
+# --- Amplitudes ---
+[amplitude.punchAmplitude]
+type = "TABULAR"
+values = [[0.0, 0.0], 
+          [1.0, 1.0],
+          [10.0, 1.0]]
+
+# --- constraints ---
+[constraint.fixX]
+type = "BOUNDARY_CONDITION"
+set = "plateXNodes"
+vx = 0.0
+
+[constraint.fixY]
+type = "BOUNDARY_CONDITION"
+set = "plateYNodes"
+vy = 0.0
+vrx = 0.0
+
+[constraint.fixPunch]
+type = "BOUNDARY_CONDITION"
+set = "punchNodes"
+vx = 0.0
+vy = 0.0
+vz = {value = -10.0, amplitude = "punchAmplitude" }
+
+[constraint.fixDie]
+type = "BOUNDARY_CONDITION"
+set = "dieNodes"
+preset = "FIXED"
+
+# --- Contact Behaviours ---
+[contact_behaviour.PENALTY_GENERAL]
+type = "LINEAR_PENALTY"
+stiffness = 100.0
+
+[contact_behaviour.COULOMB_GENERAL]
+type = "COULOMB"
+friction = 0.1
+
+# --- Contacts (General) ---
+[contact.GENERAL_CONTACT]
+type = "GENERAL"
+normal = "PENALTY_GENERAL"
+tangential = "COULOMB_GENERAL"
+
