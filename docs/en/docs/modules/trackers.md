@@ -57,10 +57,10 @@ Tracks kinematic, kinetic, or contact data for a designated set or list of nodes
 | **`CONTACTSLIDING`** | Nodal contact relative sliding velocity *(Alias: `CONTACTSLIDINGVELOCITY`)*. |
 
 ### Output Format
-In the generated CSV file, each row corresponds to a time step. The columns represent:
+The CSV file `<result_root>/<tracker_name>.csv` has one row per [output](../preprocessing.md#output) frame. Columns are separated by `, ` (comma and space). The columns represent:
 1. **Time**
 2. Individual node values (`Node N1`, `Node N2`, ...)
-3. **Total**: Cumulative sum of all tracked nodal values at that time step.
+3. **Total**: Sum of all tracked nodal values.
 
 ### Examples
 
@@ -111,10 +111,10 @@ Tracks internal stress or strain tensor components for a designated set or list 
 | **`STRESS`** | Local element Cauchy stress tensor component. |
 
 ### Output Format
-In the generated CSV file, each row corresponds to a time step. The columns represent:
+The CSV file `<result_root>/<tracker_name>.csv` has one row per [output](../preprocessing.md#output) frame. Columns are separated by `, ` (comma and space). The columns represent:
 1. **Time**
 2. Individual element values (`Element E1`, `Element E2`, ...)
-3. **Total**: Mean value across all tracked elements at that time step.
+3. **Total**: Sum of all tracked element values.
 
 ### Examples
 

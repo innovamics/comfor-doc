@@ -32,6 +32,9 @@ All element definitions require the `nodes` array defining connectivity.
 | `contact` | String | No | - | Internal contact detection trigger: `"BASIC"` or `"EDGE"`. |
 | `load` | String | No | - | Optional name of a [Load](../preprocessing.md#load) target. |
 
+!!! note "TOML"
+    In TOML, elements are created from a [mesh](../preprocessing.md#mesh): the type comes from the mesh reader (possibly changed with `element_mapping`) and the connectivity from the mesh file. Loads are applied with [load](../preprocessing.md#load) blocks on element sets, and contact with [contact](../preprocessing.md#contact) blocks. The `contact` and `load` element parameters are only used by the legacy Fembic format.
+
 ---
 
 ## 1D Elements
@@ -83,7 +86,7 @@ All element definitions require the `nodes` array defining connectivity.
 | Parameter | Value / Range | Description |
 | :--- | :--- | :--- |
 | **Nodes** | 3 | Node connectivity array `[N1, N2, N3]`. |
-| **Required Section** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Requires a shell section with `thickness`, `nip`, and `material`. |
+| **Required Section** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Requires a shell section with `thickness` and `material` (plus `nip` for `SHELL_GAUSS`). |
 | **Contact Support** | `"BASIC"`, `"EDGE"` | Generates internal contact entities. |
 
 ---
@@ -95,7 +98,7 @@ All element definitions require the `nodes` array defining connectivity.
 | Parameter | Value / Range | Description |
 | :--- | :--- | :--- |
 | **Nodes** | 3 | Node connectivity array `[N1, N2, N3]`. |
-| **Required Section** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Requires a shell section with `thickness`, `nip`, and `material`. |
+| **Required Section** | `SHELL_GAUSS`, `SHELL_GENERALIZED` | Requires a shell section with `thickness` and `material` (plus `nip` for `SHELL_GAUSS`). |
 | **Contact Support** | `"BASIC"`, `"EDGE"` | Generates internal contact entities. |
 
 #### Examples

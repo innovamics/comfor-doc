@@ -22,7 +22,7 @@ De manière générale, un fichier d'entrée complet s'articule autour des pilie
 
 # Unités
 
-COMFOR n'impose aucun système d'unités prédéfini. Vous pouvez utiliser n'importe quel système d'unités cohérent [voir la référence](https://femci.gsfc.nasa.gov/units/index.html){:target="_blank"}. Les unités choisies doivent être homogènes afin que les équations de la mécanique fournissent directement des résultats corrects. Par exemple, pour la deuxième loi de Newton :
+COMFOR n'impose aucun système d'unités prédéfini. Vous pouvez utiliser n'importe quel système d'unités cohérent [voir cette référence](https://femci.gsfc.nasa.gov/units/index.html){:target="_blank"}. Les unités choisies doivent être homogènes afin que les équations de la mécanique fournissent directement des résultats corrects. Par exemple, pour la deuxième loi de Newton :
 
 $$ \mathbf{f} = \mathbf{M} \mathbf{a} $$
 
@@ -33,7 +33,38 @@ Si la force est exprimée en newtons ($N$), la longueur en millimètres ($mm$) e
 Le fichier de configuration est organisé en **Blocs**. Chaque bloc correspond à une catégorie de données spécifique (un label) et définit les propriétés d'un composant de la simulation.
 
 <h4>Nommage</h4>
-La plupart des blocs nécessitent un **Nom** unique. Ce nom sert d'identifiant permettant aux différents modules de communiquer entre eux. Par exemple, si vous définissez un bloc `material` nommé `"Acier"`, le bloc `section` pourra ensuite référencer cet `"Acier"` pour charger la loi de comportement associée.
+Tous les blocs nécessitent un **Nom**, sauf `control` et `solver`. Ce nom sert d'identifiant permettant aux différents modules de communiquer entre eux. Par exemple, si vous définissez un bloc `material` nommé `"Acier"`, le bloc `section` pourra ensuite référencer cet `"Acier"` pour charger la loi de comportement associée.
+
+Les noms doivent être uniques au sein d'un même type de bloc (deux matériaux ne peuvent pas avoir le même nom, mais un set et une surface le peuvent). Certains noms servent aussi à nommer les fichiers de résultats : le nom d'un `output` est le nom de son dossier de résultats, et le nom d'un `tracker` est le nom de son fichier CSV.
+
+<h4>Blocs Disponibles</h4>
+
+| Bloc | Syntaxe | Requis | Multiple | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| [`control`](#controle_control) | `[control]` | **Oui** | Non | Plage de temps et pas de temps de la simulation |
+| [`solver`](#solveur_solver) | `[solver]` | Non | Non | Paramètres de l'intégration temporelle |
+| [`output`](#sorties_output) | `[[output]]` | **Oui** | Oui | Fichiers de résultats (VTU/VTK) |
+| [`mesh`](#maillage_mesh) | `[mesh.Nom]` | Oui* | Oui | Sources géométriques |
+| [`part`](#piece_part) | `[part.Nom]` | Oui* | Oui | Composants physiques construits à partir des maillages |
+| [`set`](#ensemble_set) | `[set.Nom]` | Non | Oui | Groupes de nœuds ou d'éléments |
+| [`surface`](#surface) | `[surface.Nom]` | Non | Oui | Sets fusionnés utilisés par les contacts |
+| [`material`](#materiau_material) | `[material.Nom]` | Non | Oui | Lois de comportement |
+| [`section`](#section) | `[section.Nom]` | Non | Oui | Propriétés physiques (épaisseur, rayon...) |
+| [`section_assignments`](#assignation_de_section_section_assignment) | `[[section_assignments]]` | Non | Oui | Associe les sections aux sets d'éléments |
+| [`amplitude`](#amplitude) | `[amplitude.Nom]` | Non | Oui | Fonctions du temps |
+| [`constraint`](#contrainte_constraint) | `[constraint.Nom]` | Non | Oui | Conditions aux limites |
+| [`load`](#charge_load) | `[load.Nom]` | Non | Oui | Forces, pressions, accélérations volumiques |
+| [`contact_behaviour`](#comportement_de_contact_contact_behaviour) | `[contact_behaviour.Nom]` | Non | Oui | Lois de contact normales et tangentielles |
+| [`contact`](#contact) | `[contact.Nom]` | Non | Oui | Interactions de contact |
+| [`tracker`](#tracker) | `[tracker.Nom]` | Non | Oui | Historiques temporels dans des fichiers CSV |
+
+*Au moins un `mesh` et une `part` sont nécessaires pour définir la géométrie du modèle.
+
+!!! note
+    `section_assignments` est le seul nom de bloc écrit au pluriel.
+
+!!! tip "Nombres"
+    Écrivez les paramètres réels sous forme de nombres à virgule flottante (`10.0` plutôt que `10`), comme dans tous les exemples de cette documentation.
 
 <h4>Syntaxe des Blocs</h4>
 
@@ -41,14 +72,14 @@ La déclaration des blocs et de leurs identifiants dépend du format utilisé :
 
 === "TOML :simple-toml:"
     En TOML, nous recommandons fortement l'utilisation des **Tables à clés (Keyed Tables)**. Cette syntaxe est concise et met clairement en valeur le nom de l'objet dans l'en-tête du bloc.
-    
+
     ```toml
     # Syntaxe recommandée (Table à clés)
     [label.NomUnique]
     type = "TYPE_SPECIFIQUE"
     parametre = valeur
     ```
-    
+
     *Exemple :*
     ```toml
     [material.Acier_S235]
@@ -57,16 +88,23 @@ La déclaration des blocs et de leurs identifiants dépend du format utilisé :
     ```
 
     !!! tip "Syntaxe Alternative"
-        Bien qu'il soit possible d'utiliser la syntaxe de tableau `[[label]]` avec un champ `name = "..."` à l'intérieur, la version à clé `[label.Nom]` est préférable pour sa clarté et sa modularité.
+        Vous pouvez aussi utiliser la syntaxe de tableau `[[label]]` avec un champ `name = "..."` à l'intérieur. Les deux syntaxes sont équivalentes et peuvent être mélangées dans un même fichier. La version à clé `[label.Nom]` est préférable pour sa clarté, tandis que la syntaxe de tableau est couramment utilisée pour `[[output]]` et `[[section_assignments]]`.
+
+        ```toml
+        [[material]]
+        name = "Acier_S235"
+        type = "ELASTIC"
+        young = 210000.0
+        ```
 
 === "Fembic :material-text:"
     Dans le format hérité Fembic, le bloc débute par le label et le type de technologie. Les entités sont ensuite répertoriées sur les lignes suivantes en commençant par leur nom unique.
-    
+
     ```xml
     LABEL TYPE TYPE_SPECIFIQUE
     NomUnique parametre = valeur
     ```
-    
+
     *Exemple :*
     ```xml
     MATERIALS TYPE ELASTIC
@@ -121,16 +159,18 @@ Le bloc `control` définit les paramètres temporels globaux de la simulation, n
 
 ## Sorties (Output)
 
-Le bloc `output` définit les paramètres de génération des résultats (format, dossier de destination, fréquence d'écriture). Il est possible de déclarer plusieurs canaux de sortie en TOML pour exporter simultanément dans différents formats.
+Le bloc `output` définit les paramètres de génération des résultats (format, fréquence d'écriture). Au moins une sortie est requise. Il est possible de déclarer plusieurs sorties pour exporter simultanément dans différents formats ou à différentes fréquences.
 
 ### Paramètres
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
+| **`name`** | String | **Oui** | - | Nom de la sortie. Les frames sont écrites dans `<racine_résultats>/<name>/<name>_000000.vtu`, `..._000001.vtu`, etc. |
 | **`frequency`** | Float | **Oui** | - | Intervalle de temps entre deux fichiers de résultats. Doit être strictement positif. |
 | `type` | String | Non | `"VTU"` | Format d'export. Valeurs disponibles : `"VTU"` (recommandé) ou `"VTK"`. |
 | `format` | String | Non | `"ASCII"` | Encodage des données. Valeurs disponibles : `"ASCII"` ou `"BINARY"`. |
-| `directory` | String | Non | `""` | Sous-dossier dans lequel les fichiers de résultats seront enregistrés. |
+
+La racine des résultats est `Results_<nom_entrée>/` à côté du fichier d'entrée, ou le répertoire donné avec l'[option de ligne de commande](analysis.md#options_de_la_ligne_de_commande) `-o`.
 
 !!! warning "Compatibilité des Formats"
     Le format hérité `VTK` ne prend **pas** en charge l'encodage `BINARY`. Si vous souhaitez exporter en binaire pour réduire la taille des fichiers et optimiser les temps d'écriture, utilisez le format `VTU`.
@@ -139,15 +179,16 @@ Le bloc `output` définit les paramètres de génération des résultats (format
 
 === "TOML :simple-toml:"
     ```toml
-    # Sortie binaire standard dans un dossier dédié
+    # Sortie binaire standard, écrite dans Results_<nom_entrée>/fields/
     [[output]]
+    name = "fields"
     type = "VTU"
     format = "BINARY"
     frequency = 0.1
-    directory = "results"
 
-    # Export ASCII supplémentaire pour le débogage
+    # Export ASCII supplémentaire pour le débogage, écrit dans Results_<nom_entrée>/debug/
     [[output]]
+    name = "debug"
     type = "VTU"
     format = "ASCII"
     frequency = 0.5
@@ -156,7 +197,7 @@ Le bloc `output` définit les paramètres de génération des résultats (format
 === "Fembic :material-text:"
     ```xml
     OUTPUT
-    TYPE = VTU FREQUENCY = 0.1 FORMAT = BINARY DIRECTORY = results
+    TYPE = VTU FREQUENCY = 0.1 FORMAT = BINARY
 
     OUTPUT
     TYPE = VTU FREQUENCY = 0.5 FORMAT = ASCII
@@ -176,9 +217,35 @@ Le bloc `mesh` définit la source géométrique du modèle. COMFOR peut lire des
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
 | **`type`** | String | **Oui** | - | Lecteur de maillage : `ABAQUS`, `GMSH`, `FEMBIC` ou `INLINE`. |
-| `file` | String | Oui* | - | Chemin vers le fichier externe. *Requis pour les lecteurs externes (`GMSH`, `ABAQUS`, `FEMBIC`).* |
+| `file` | String | Oui* | - | Chemin vers le fichier externe, absolu ou relatif au dossier du fichier d'entrée. *Requis pour `GMSH` et `ABAQUS`.* |
 | `nodes` | Array | Oui* | - | Tableau des nœuds `[id, x, y, z]`. *Requis uniquement pour le type `INLINE`.* |
-| `elements` | Array | Oui* | - | Tableau des éléments `[id, "TYPE", n1, n2, ...]`. Voir le [Module Éléments](modules/elements.md). *Requis uniquement pour le type `INLINE`.* |
+| `elements` | Array | Non | - | Tableau des éléments `[id, "TYPE", n1, n2, ...]`. Voir le [Module Éléments](modules/elements.md). *Uniquement pour le type `INLINE`.* |
+
+### Traduction des Types d'Éléments
+
+Les lecteurs externes traduisent les types d'éléments natifs en types d'éléments COMFOR. Le type traduit peut ensuite être modifié pour chaque pièce avec [`element_mapping`](#piece_part).
+
+=== "ABAQUS"
+    | Type Abaqus (`*ELEMENT, TYPE=`) | Type COMFOR |
+    | :--- | :--- |
+    | `T3D2` | `ROD_2` |
+    | `M3D3` | `MEMBRANE_3` |
+    | `S3`, `S3R` | `S3L_C0` |
+    | `STRI3` | `DKT18` |
+    | Tout autre type | Conservé tel quel (ex: `R3D3`) |
+
+    Seuls les mots-clés `*NODE` et `*ELEMENT` sont lus ; les autres mots-clés sont ignorés.
+
+=== "GMSH"
+    | Type d'élément Gmsh | Type COMFOR |
+    | :--- | :--- |
+    | `1` (ligne à 2 nœuds) | `ROD_2` |
+    | `2` (triangle à 3 nœuds) | `MEMBRANE_3` |
+
+    Les autres types d'éléments Gmsh ne sont pas pris en charge.
+
+=== "INLINE"
+    Le type d'élément est écrit directement dans le tableau `elements` et doit être un type d'élément COMFOR.
 
 ### Exemples
 
@@ -221,7 +288,7 @@ Une `part` représente un composant physique. Elle instancie une source géomét
 | **`mesh`** | String | **Oui** | - | Nom du bloc `[mesh]` à instancier. |
 | `translation` | Array | Non* | `[0,0,0]` | Vecteur de translation globale `[tx, ty, tz]`. *Incompatible avec `pattern`.* |
 | `pattern` | Array | Non* | - | Liste de configurations de répétition pour dupliquer la pièce. *Incompatible avec `translation`.* |
-| `element_mapping` | Map | Non | - | Dictionnaire associant les types d'éléments du maillage importé aux [Technologies COMFOR](modules/elements.md). |
+| `element_mapping` | Map | Non | - | Dictionnaire `{ "DE" = "VERS" }` remplaçant des types d'éléments du maillage par d'autres [types d'éléments COMFOR](modules/elements.md). |
 
 !!! warning "Règle d'Exclusivité"
     Les paramètres `translation` et `pattern` sont mutuellement exclusifs. Renseigner les deux dans un même bloc `part` déclenchera une erreur de validation.
@@ -236,9 +303,13 @@ Lors de l'utilisation du tableau `pattern`, chaque motif de répétition prend e
 | **`translation`** | Array | **Oui** | Vecteur de translation d'origine `[tx, ty, tz]` pour le motif. |
 | **`count`** | Integer | **Oui** | Nombre d'instances à générer (doit être strictement positif). |
 | **`spacing`** | Float | **Oui** | Distance entre deux instances consécutives (doit être strictement positive). |
-| **`direction`** | Array | **Oui** | Vecteur directionnel `[dx, dy, dz]` pour la propagation du motif (non nul). |
+| **`direction`** | Array | **Oui** | Vecteur directionnel `[dx, dy, dz]` pour la propagation du motif (non nul, normalisé en interne). |
+
+L'instance `i` (à partir de 0) est placée en `translation + i × spacing × direction`. Plusieurs motifs peuvent être listés dans une même pièce ; leurs instances s'additionnent. Les sets qui référencent une pièce répétée avec `ids` ou `range` sélectionnent ces identifiants dans **chaque** instance.
 
 ### Syntaxe du Mapping d'Éléments
+
+Les clés de `element_mapping` sont les types d'éléments **après** la [traduction](#traduction_des_types_delements) effectuée par le lecteur de maillage. Par exemple, les triangles d'un fichier Gmsh sont lus comme `MEMBRANE_3` : pour les utiliser comme coques, écrivez `"MEMBRANE_3" = "DKT18"` (et non `"2" = "DKT18"`).
 
 Le dictionnaire `element_mapping` peut être déclaré de deux manières en TOML :
 
@@ -247,19 +318,19 @@ Le dictionnaire `element_mapping` peut être déclaré de deux manières en TOML
 
 === "1. Table Inline"
     ```toml
-    [part.Aile]
+    [part.Outil]
     mesh = "AbaqusInp"
-    element_mapping = { "S3R" = "S3L_C0", "STRI3" = "DKT18" }
+    element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE", "R3D3" = "CONTACT_TRIANGLE" }
     ```
 
 === "2. Table Imbriquée"
     ```toml
-    [part.Aile]
+    [part.Outil]
     mesh = "AbaqusInp"
 
-    [part.Aile.element_mapping]
-    "S3R"   = "S3L_C0"
-    "STRI3" = "DKT18"
+    [part.Outil.element_mapping]
+    "S3L_C0" = "CONTACT_TRIANGLE"
+    "R3D3"   = "CONTACT_TRIANGLE"
     ```
 
 ### Exemples
@@ -282,6 +353,7 @@ Le dictionnaire `element_mapping` peut être déclaré de deux manières en TOML
     direction = [1.0, 0.0, 0.0]
 
     # Mapping de types d'éléments pour un maillage importé
+    # (les triangles Gmsh sont lus comme MEMBRANE_3)
     [part.Chassis]
     mesh = "MaillageGmsh"
     [part.Chassis.element_mapping]
@@ -310,7 +382,10 @@ Le bloc `section` définit des propriétés physiques spécifiques (telles que l
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Oui** | - | Type de formulation de section. Voir le [Module Sections](modules/sections.md). |
+| **`type`** | String | **Oui** | - | Type de formulation de section : `ROD`, `MEMBRANE`, `SHELL_GAUSS`, `SHELL_GENERALIZED` ou `RIGID`. |
+| `material` | String | Oui* | - | Nom du [Matériau](#materiau_material). *Requis pour tous les types sauf `RIGID`.* |
+
+Les autres paramètres (`thickness`, `radius`, `nip`, `integration`, `geometry`) dépendent du type : voir le [Module Sections](modules/sections.md). Le type de section doit être compatible avec les types d'éléments du set auquel elle est assignée (par ex. `ROD` pour `ROD_2`, `RIGID` pour les éléments de contact).
 
 ### Exemples
 
@@ -334,7 +409,7 @@ Le bloc `section` définit des propriétés physiques spécifiques (telles que l
 === "Fembic :material-text:"
     !!! note "Logique Implicite"
         Fembic n'a pas de concept de "Section". Les variations de propriétés doivent être définies ligne par ligne au sein du bloc `ELEMENTS`.
-    
+
     ```xml
     ELEMENTS TYPE MEMBRANE_3
     1 NODES=[1,2,3] MATERIAL=Acier T=1.2
@@ -354,6 +429,7 @@ Le bloc `section_assignments` lie une [Section](#section) définie à un [Set](#
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
+| **`name`** | String | **Oui** | - | Nom unique de l'assignation. |
 | **`section`** | String | **Oui** | - | Nom de la [Section](#section) à assigner. |
 | **`set`** | String | **Oui** | - | Nom du [Set](#ensemble_set) d'éléments cible. Doit être un set de type `ELEMENT`. |
 
@@ -379,7 +455,7 @@ Le bloc `section_assignments` lie une [Section](#section) définie à un [Set](#
 === "Fembic :material-text:"
     !!! note "Logique Implicite"
         En Fembic, les assignations de section n'existent pas sous forme de blocs séparés. Les propriétés physiques sont spécifiées ligne par ligne dans le bloc `ELEMENTS`.
-    
+
     ```xml
     ELEMENTS TYPE MEMBRANE_3
     1 NODES = [1, 2, 3] MATERIAL = Acier T = 1.0
@@ -430,7 +506,7 @@ Le bloc `ELEMENTS` définit la connectivité et le comportement physique du mail
 ELEMENTS TYPE <TECHNOLOGIE>
 ```
 
-Voir le [Module Éléments](https://www.google.com/search?q=modules/elements.md) pour les technologies disponibles (ex: `MEMBRANE_3`, `S3L_C0`, `ROD_2`).
+Voir le [Module Éléments](modules/elements.md) pour les technologies disponibles (ex: `MEMBRANE_3`, `S3L_C0`, `ROD_2`).
 
 ### Paramètres
 
@@ -438,7 +514,7 @@ Voir le [Module Éléments](https://www.google.com/search?q=modules/elements.md)
 | --- | --- | --- | --- | --- |
 | **`ID`** | Entier | **Oui** | - | Identifiant unique de l'élément (premier jeton). |
 | **`NODES`** | Array | **Oui** | - | Liste des IDs de nœuds, ex: `[1, 2, 3]`. |
-| **`MATERIAL`** | String | **Oui** | - | Nom du [Matériau](https://www.google.com/search?q=modules/materials.md) à assigner. |
+| **`MATERIAL`** | String | **Oui** | - | Nom du [Matériau](modules/materials.md) à assigner. |
 | `T` | Float | Non* | - | Alias pour **thickness** (épaisseur). Requis pour Coques/Membranes. |
 | `R` | Float | Non* | - | Alias pour **radius** (rayon). Requis pour les Barres (Rods). |
 | `LOAD` | String | Non | - | Nom d'une [Charge](#charge_load) d'élément (ex: Pression). |
@@ -464,15 +540,15 @@ ELEMENTS TYPE ROD_2
 
 ## Ensemble (Set)
 
-Les Sets sont des groupes nommés d'entités (nœuds ou éléments) utilisés pour appliquer des conditions aux limites, des charges ou pour définir des [Sections](https://www.google.com/search?q=%23section). Ils ciblent les entités au sein d'une ou plusieurs [Pièces](https://www.google.com/search?q=%23piece-part) physiques à l'aide de listes d'IDs explicites, de plages ou d'une sélection complète de pièce.
+Les Sets sont des groupes nommés d'entités (nœuds ou éléments) utilisés pour appliquer des conditions aux limites, des charges ou pour définir des [Sections](#section). Ils ciblent les entités au sein d'une ou plusieurs [Pièces](#piece_part) physiques à l'aide de listes d'IDs explicites, de plages ou d'une sélection complète de pièce.
 
 ### Paramètres
 
 | Paramètre | Type | Requis | Défaut | Description |
 | --- | --- | --- | --- | --- |
 | **`type`** | String | **Oui** | - | Type d'entité : `NODE` ou `ELEMENT`. |
-| `part` | String | Oui* | - | Nom de la [Pièce](https://www.google.com/search?q=%23piece-part) cible. *Requis si `parts` n'est pas utilisé.* |
-| `parts` | Array | Oui* | - | Liste de noms de [Pièces](https://www.google.com/search?q=%23piece-part) cibles. *Requis si `part` n'est pas utilisé.* |
+| `part` | String | Oui* | - | Nom de la [Pièce](#piece_part) cible. *Requis si `parts` n'est pas utilisé.* |
+| `parts` | Array | Oui* | - | Liste de noms de [Pièces](#piece_part) cibles. *Requis si `part` n'est pas utilisé.* |
 | `ids` | Array | Non | - | Liste explicite d'IDs de nœuds ou d'éléments. Incompatible avec `range`. |
 | `range` | Array | Non | - | Définition par plage `[début, fin, pas]`. Incompatible avec `ids`. |
 
@@ -571,7 +647,7 @@ Ces paramètres sont partagés par tous les modèles de matériaux :
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Oui** | - | Mot-clé du modèle de matériau. Voir le [Module Matériaux](modules/materials.md). |
+| **`type`** | String | **Oui** | - | Mot-clé du modèle de matériau : `ELASTIC`, `HYPERELASTIC` ou `HYPERTEXTILE`. Voir le [Module Matériaux](modules/materials.md) pour les paramètres spécifiques. |
 | **`density`** | Float | **Oui** | - | Masse volumique ($\rho$). Doit être strictement positive. |
 | `damping` | Float | Non | `0.0` | Coefficient d'amortissement de Rayleigh proportionnel à la masse ($\alpha$). Doit être non-négatif. |
 
@@ -604,7 +680,8 @@ Le bloc `amplitude` définit des fonctions temporelles $y = f(t)$ utilisées pou
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Oui** | - | Modèle d'amplitude. Voir le [Module Amplitudes](modules/amplitudes.md). |
+| **`type`** | String | **Oui** | - | Modèle d'amplitude : `TABULAR`. Voir le [Module Amplitudes](modules/amplitudes.md). |
+| **`values`** | Array | **Oui** | - | Paires `[temps, valeur]` (au moins 2), interpolées linéairement. |
 
 ### Exemples
 
@@ -639,9 +716,15 @@ Le bloc `constraint` est utilisé pour prescrire des valeurs cinématiques sur d
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Oui** | - | Technologie de contrainte. Voir le [Module Contraintes](modules/constraints.md). |
+| **`type`** | String | **Oui** | - | Technologie de contrainte : `BOUNDARY_CONDITION`. Voir le [Module Contraintes](modules/constraints.md). |
 | **`set`** | String | **Oui** | - | Nom du [Set de Nœuds](#ensemble_set) auquel la contrainte s'applique. |
+| `preset` | String | Non* | - | `"FIXED"` bloque les 6 vitesses. |
+| `vx`, `vy`, `vz` | Float ou Map | Non* | - | Vitesses de translation imposées. |
+| `vrx`, `vry`, `vrz` | Float ou Map | Non* | - | Vitesses de rotation imposées. |
+| `ax`, `ay`, `az` | Float ou Map | Non* | - | Accélérations de translation imposées. |
 | `amplitude` | String | Non | - | Nom d'une [Amplitude](modules/amplitudes.md) globale pour moduler toutes les composantes définies. |
+
+*Au moins `preset` ou une composante est requis. Une composante est soit un nombre (`vx = 0.0`), soit une table avec sa propre amplitude (`vx = { value = -10.0, amplitude = "Rampe" }`).
 
 ### Exemples
 
@@ -677,7 +760,7 @@ Le bloc `load` définit les efforts externes appliqués au modèle : forces ou m
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`set`** | String | **Oui** | - | Nom du [Set](#ensemble_set) ou de la [Surface](#surface) sur lequel la charge s'applique. |
+| **`set`** | String | **Oui** | - | Nom du [Set](#ensemble_set) sur lequel la charge s'applique. |
 | `amplitude` | String | Non | - | Nom de l'[Amplitude](modules/amplitudes.md) utilisée pour moduler les valeurs. |
 | `p` | Float | Non | `0.0` | Pression distribuée (principalement pour les éléments Coque/Membrane). |
 | `fx`, `fy`, `fz` | Float | Non | `0.0` | Composantes de force ponctuelle selon les axes globaux X, Y et Z. |
@@ -693,6 +776,11 @@ $$F_{\text{appliquée}}(t) = F_{\text{base}} \times \text{Amplitude}(t)$$
 
 Si aucune `amplitude` n'est spécifiée, le facteur d'échelle par défaut est de **1.0**.
 
+### Set Cible
+
+- Les composantes nodales (`fx`...`mz`, `ax`...`arz`) s'appliquent aux nœuds d'un set `NODE`.
+- La pression `p` s'applique aux éléments d'un set `ELEMENT` (éléments coques et membranes).
+
 ### Exemples
 
 === "TOML :simple-toml:"
@@ -703,10 +791,15 @@ Si aucune `amplitude` n'est spécifiée, le facteur d'échelle par défaut est d
     fz = -500.0
     amplitude = "RampeDescendante"
 
-    # Application d'une pression constante sur une surface
+    # Application d'une pression constante sur un set d'éléments
     [load.PressionInterne]
-    set = "SurfaceInterne"
+    set = "ElementsInternes"
     p = 10.5
+
+    # Gravité (accélération volumique) sur tous les nœuds d'une pièce
+    [load.Gravite]
+    set = "TousLesNoeuds"
+    az = -9810.0
     ```
 
 === "Fembic :material-text:"
@@ -715,7 +808,7 @@ Si aucune `amplitude` n'est spécifiée, le facteur d'échelle par défaut est d
     ForcePoincon SET = NoeudsHaut FZ = -500.0 AMPLITUDE = RampeDescendante
 
     LOADS
-    PressionInterne SET = SurfaceInterne P = 10.5
+    PressionInterne SET = ElementsInternes P = 10.5
     ```
 
 !!! tip "Charges multi-composantes"
@@ -731,7 +824,7 @@ Le bloc `contact_behaviour` définit les lois physiques (normales et tangentiell
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`type`** | String | **Oui** | - | Mot-clé de technologie de loi de contact. Voir le [Module Contacts](modules/contact_behaviours.md). |
+| **`type`** | String | **Oui** | - | Mot-clé de technologie. Lois normales : `LINEAR_PENALTY`, `PENALTY_ADHESION`. Loi tangentielle : `COULOMB`. Voir le [Module Contacts](modules/contact_behaviours.md) pour leurs paramètres. |
 
 ### Exemples
 
@@ -775,9 +868,11 @@ Le bloc `contact` définit l'interaction géométrique entre surfaces ou à l'é
 | **`tangential`**| String | **Oui** | - | Nom du [Comportement de Contact](modules/contact_behaviours.md#lois_tangentielles_tangential_contact_laws) tangentiel assigné. |
 | `edge` | Boolean | Non | `false` | Si `true`, active la détection de contact sur les bords pour un contact de type `PAIR`. |
 
+La même surface peut être utilisée comme `master` et `slave` pour définir un auto-contact.
+
 !!! info "Règles de Définition des Surfaces"
     - Pour un contact **`PAIR`**, spécifiez les surfaces soit avec le couple `master`/`slave`, soit avec le tableau `surfaces`.
-    - Pour un contact **`GENERAL`**, la définition de surfaces est omise car le contact s'applique globalement.
+    - Pour un contact **`GENERAL`**, la définition de surfaces est omise car le contact s'applique globalement. Un **seul** contact `GENERAL` peut être défini par modèle ; il peut être combiné avec des contacts `PAIR`.
 
 ### Exemples
 
@@ -811,7 +906,7 @@ Le bloc `contact` définit l'interaction géométrique entre surfaces ou à l'é
 
 ## Tracker
 
-Le bloc `tracker` enregistre l'historique temporel de variables nodales ou d'éléments dans des fichiers **CSV** dédiés.
+Le bloc `tracker` enregistre l'historique temporel de variables nodales ou d'éléments dans des fichiers **CSV** dédiés, nommés `<racine_résultats>/<nom_tracker>.csv`. Les valeurs sont écrites à chaque écriture d'une frame de [sortie](#sorties_output).
 
 ### Paramètres
 
@@ -819,7 +914,11 @@ Le bloc `tracker` enregistre l'historique temporel de variables nodales ou d'él
 | :--- | :--- | :---: | :---: | :--- |
 | **`type`** | String | **Oui** | - | Type d'entité à suivre : `NODE` ou `ELEMENT`. |
 | **`variable`** | String | **Oui** | - | Quantité physique à enregistrer. Voir le [Module Trackers](modules/trackers.md). |
-| `set` | String | Oui* | - | Nom du [Set](#ensemble_set) cible. *Requis si la liste explicite `nodes`/`elements` n'est pas utilisée.* |
+| `set` | String | Oui* | - | Nom du [Set](#ensemble_set) cible. *Incompatible avec `nodes`/`elements`.* |
+| `nodes` | Array | Oui* | - | Identifiants explicites des nœuds (trackers `NODE`). |
+| `elements` | Array | Oui* | - | Identifiants explicites des éléments (trackers `ELEMENT`). |
+| `direction` | String | Oui* | - | `"X"`, `"Y"` ou `"Z"`. *Requis pour les trackers `NODE`.* |
+| `component` | String | Oui* | - | `"C11"`, `"C22"`, `"C33"`, `"C12"`, `"C13"` ou `"C23"`. *Requis pour les trackers `ELEMENT`.* |
 
 ### Exemples
 
@@ -848,5 +947,66 @@ Le bloc `tracker` enregistre l'historique temporel de variables nodales ou d'él
     TRACKERS TYPE ELEMENT
     ContrainteCoeur ELEMENTS = [101, 102] VARIABLE = STRESS COMPONENT = C11
     ```
+
+---
+
+## Solveur (Solver)
+
+!!! info "TOML Uniquement"
+    Ce bloc est spécifique au format de configuration **TOML**. Le format Fembic utilise des paramètres implicites de solveur.
+
+Le bloc optionnel `solver` configure le solveur de dynamique utilisé pour l'intégration temporelle. COMFOR implémente actuellement un **solveur explicite** avec intégration par différences centrées. Si le bloc est omis, le solveur explicite est utilisé avec les valeurs par défaut ci-dessous. Un seul bloc `solver` est autorisé.
+
+### Paramètres
+
+| Paramètre | Type | Requis | Défaut | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| `type` | String | Non | `"EXPLICIT"` | Type de solveur. Valeur supportée : `"EXPLICIT"`. |
+| `integrator` | String | Non | `"central_difference"` | Type d'intégrateur temporel. Valeur supportée : `"central_difference"`. |
+| `time_step_factor` | Float | Non | `0.9` | Facteur de sécurité pour le calcul automatique du pas de temps. |
+| `energy_balance_epsilon` | Float | Non | `1.0e-2` | Tolérance pour la vérification du bilan énergétique. |
+
+!!! info "Calcul Automatique du Pas de Temps"
+    Si le pas de temps n'est pas spécifié dans le bloc [`control`](#controle_control), COMFOR calcule automatiquement un pas de temps stable basé sur les propriétés du maillage et des matériaux. Le facteur `time_step_factor` est appliqué à ce pas de temps critique : $\Delta t = \alpha \cdot \Delta t_{crit}$ où $\alpha$ est le facteur de sécurité.
+
+### Exemples
+
+=== "TOML :simple-toml:"
+    ```toml
+    # Configuration avec solveur explicite et pas de temps automatique
+    [solver]
+    type = "EXPLICIT"
+    integrator = "central_difference"
+    time_step_factor = 0.9
+    energy_balance_epsilon = 1.0e-2
+
+    # Modifier uniquement le facteur de sécurité, les autres valeurs gardent leur défaut
+    [solver]
+    time_step_factor = 0.8
+    ```
+
+=== "Fembic :material-text:"
+    !!! note "Paramètres Implicites"
+        En Fembic, le solveur explicite est utilisé par défaut avec des paramètres prédéfinis. Il n'est pas possible de configurer explicitement le solveur dans ce format.
+
+---
+
+## Validation
+
+COMFOR valide l'ensemble du fichier d'entrée avant de construire le modèle et signale **toutes** les erreurs trouvées en une seule fois (dans le terminal et dans le journal du job). Pour valider un fichier sans lancer la simulation :
+
+```bash
+comfor -j simulation.toml --validate
+```
+
+La validation vérifie :
+
+- la syntaxe TOML (avec le numéro de ligne de l'erreur) ;
+- la présence des blocs requis (`control`, au moins un `output`) et du `name` de chaque bloc ;
+- l'unicité des noms au sein de chaque type de bloc ;
+- les paramètres obligatoires de chaque bloc, leurs types et leurs valeurs ou plages autorisées (par ex. `thickness > 0`, `poisson` dans $[0, 0.5]$, `run_from < run_to`) ;
+- les options exclusives (`translation`/`pattern`, `ids`/`range`, `part`/`parts`, `set`/`nodes`...).
+
+Les références croisées entre blocs (une section qui référence un matériau, une assignation qui référence un set, un contact qui référence des surfaces...) et la compatibilité entre types d'éléments et sections sont vérifiées lors de la construction du modèle, au début de la simulation. Voir [Exécution](analysis.md#validation) pour plus de détails.
 
 [^1]: L'analyse syntaxique (ou *parsing*) est le processus d'analyse d'une séquence de symboles selon les règles d'une grammaire formelle. [Wikipédia](https://fr.wikipedia.org/wiki/Analyse_syntaxique){:target="_blank"}

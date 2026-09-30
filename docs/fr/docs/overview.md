@@ -67,5 +67,12 @@ Comprendre les éléments fondamentaux de Comfor
     
     [:octicons-arrow-right-24: En savoir plus](theory/theory_overview.md)
 
-</div>
+-   :fontawesome-solid-bolt:{ .lg .middle } __Architecture des Solveurs__
 
+    ---
+
+    Découvrez l'**architecture modulaire** des solveurs explicites dans COMFOR.
+
+    [:octicons-arrow-right-24: En savoir plus](theory/solvers/solvers_architecture.md)
+
+</div>
