@@ -221,7 +221,7 @@ The `mesh` block defines the geometric source of your model. COMFOR can either r
 
 ### Element Type Translation
 
-External readers translate the native element types into COMFOR element types. The translated type can then be changed per part with [`element_mapping`](#part).
+External readers translate the native element types into COMFOR element types (default translation). Any element type can be changed per part with [`element_mapping`](#part).
 
 === "ABAQUS"
     | Abaqus type (`*ELEMENT, TYPE=`) | COMFOR type |
@@ -230,7 +230,7 @@ External readers translate the native element types into COMFOR element types. T
     | `M3D3` | `MEMBRANE_3` |
     | `S3`, `S3R` | `S3L_C0` |
     | `STRI3` | `DKT18` |
-    | Any other type | Kept unchanged (e.g. `R3D3`) |
+    | Any other type | No default: must be mapped with `element_mapping` (e.g. `R3D3`) |
 
     Only the `*NODE` and `*ELEMENT` keywords are read; other keywords are ignored.
 
@@ -240,7 +240,7 @@ External readers translate the native element types into COMFOR element types. T
     | `1` (2-node line) | `ROD_2` |
     | `2` (3-node triangle) | `MEMBRANE_3` |
 
-    Other Gmsh element types are not supported.
+    Other Gmsh element types have no default translation and must be mapped with `element_mapping`.
 
 === "INLINE"
     The element type is written directly in the `elements` array and must be a COMFOR element type.
@@ -286,7 +286,7 @@ A `part` represents a physical component. It instantiates a geometric source def
 | **`mesh`** | String | **Yes** | - | Name of the `[mesh]` block to be used. |
 | `translation` | Array | No* | `[0,0,0]` | Global translation vector `[tx, ty, tz]`. *Cannot be used with `pattern`.* |
 | `pattern` | Array | No* | - | List of pattern configurations for duplicated placements. *Cannot be used with `translation`.* |
-| `element_mapping` | Map | No | - | Dictionary `{ "FROM" = "TO" }` replacing element types of the mesh by other [COMFOR element types](modules/elements.md). |
+| `element_mapping` | Map | No | - | Dictionary `{ "FROM" = "TO" }` assigning a [COMFOR element type](modules/elements.md) to the element types of the mesh. |
 
 !!! warning "Exclusivity Rule"
     The `translation` and `pattern` parameters are mutually exclusive. Specifying both on the same `part` will result in a validation error.
@@ -307,7 +307,7 @@ Instance `i` (starting at 0) is placed at `translation + i × spacing × directi
 
 ### Element Mapping Syntax
 
-The keys of `element_mapping` are the element types **after** the [translation](#element_type_translation) done by the mesh reader. For instance, the triangles of a Gmsh file are read as `MEMBRANE_3`: to use them as shells, map `"MEMBRANE_3" = "DKT18"` (not `"2" = "DKT18"`).
+The keys of `element_mapping` are the element types **as written in the mesh file**: the Abaqus type (`"S3"`, `"R3D3"`...) or the Gmsh type number as a string (`"2"`). The COMFOR type given by the default [translation](#element_type_translation) (e.g. `"MEMBRANE_3"`) is also accepted as a key. When both match, the mesh file type takes precedence. Element types not listed in the mapping keep their default translation.
 
 There are two ways to define the `element_mapping` in TOML:
 
@@ -318,7 +318,7 @@ There are two ways to define the `element_mapping` in TOML:
     ```toml
     [part.Tool]
     mesh = "AbaqusInp"
-    element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE", "R3D3" = "CONTACT_TRIANGLE" }
+    element_mapping = { "S3" = "CONTACT_TRIANGLE", "R3D3" = "CONTACT_TRIANGLE" }
     ```
 
 === "2. Nested Table"
@@ -327,8 +327,8 @@ There are two ways to define the `element_mapping` in TOML:
     mesh = "AbaqusInp"
 
     [part.Tool.element_mapping]
-    "S3L_C0" = "CONTACT_TRIANGLE"
-    "R3D3"   = "CONTACT_TRIANGLE"
+    "S3"   = "CONTACT_TRIANGLE"
+    "R3D3" = "CONTACT_TRIANGLE"
     ```
 
 ### Examples
@@ -351,11 +351,11 @@ There are two ways to define the `element_mapping` in TOML:
     direction = [1.0, 0.0, 0.0]
 
     # Mapping element types for imported mesh formats
-    # (Gmsh triangles are read as MEMBRANE_3)
+    # (Gmsh 3-node triangles are type 2)
     [part.Chassis]
     mesh = "GmshMesh"
     [part.Chassis.element_mapping]
-    "MEMBRANE_3" = "S3L_C0"
+    "2" = "S3L_C0"
     ```
 
 === "Fembic :material-text:"
@@ -915,7 +915,7 @@ The `tracker` block logs discrete simulation data into separate **CSV** files, n
 | `nodes` | Array | Yes* | - | Explicit node IDs (`NODE` trackers). |
 | `elements` | Array | Yes* | - | Explicit element IDs (`ELEMENT` trackers). |
 | `direction` | String | Yes* | - | `"X"`, `"Y"` or `"Z"`. *Required for `NODE` trackers.* |
-| `component` | String | Yes* | - | `"C11"`, `"C22"`, `"C33"`, `"C12"`, `"C13"` or `"C23"`. *Required for `ELEMENT` trackers.* |
+| `component` | String | Yes* | - | Component of the variable (e.g. `"xx"`, `"warp"`, `"value"`). *Required for `ELEMENT` trackers.* See [Tracker Module](modules/trackers.md). |
 
 ### Examples
 
@@ -928,11 +928,11 @@ The `tracker` block logs discrete simulation data into separate **CSV** files, n
     direction = "Z"
     set = "BottomNodes"
 
-    # Tracking axial stress on explicit elements
+    # Tracking the Cauchy stress xx on explicit elements
     [tracker.CoreStress]
     type = "ELEMENT"
-    variable = "STRESS"
-    component = "C11"
+    variable = "CAUCHY_STRESS"
+    component = "xx"
     elements = [101, 102]
     ```
 
@@ -942,7 +942,7 @@ The `tracker` block logs discrete simulation data into separate **CSV** files, n
     ReactionForce SET = BottomNodes VARIABLE = FORCE DIRECTION = Z
 
     TRACKERS TYPE ELEMENT
-    CoreStress ELEMENTS = [101, 102] VARIABLE = STRESS COMPONENT = C11
+    CoreStress ELEMENTS = [101, 102] VARIABLE = CAUCHY_STRESS COMPONENT = xx
     ```
 
 ---

@@ -94,21 +94,32 @@ The CSV file `<result_root>/<tracker_name>.csv` has one row per [output](../prep
 
 ## Element Trackers (ELEMENT)
 
-Tracks internal stress or strain tensor components for a designated set or list of elements over time.
+Tracks one component of an element result field for a designated set or list of elements over time.
 
 ### Parameters
 
 | Parameter | Type | Required | Default | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`component`** | String | **Yes** | - | Tensor component: `"C11"`, `"C22"`, `"C33"`, `"C12"`, `"C13"`, or `"C23"`. |
+| **`component`** | String | **Yes** | - | Component of the variable, see the table below. |
 | `elements` | Array | Yes* | - | List of explicit Element IDs. *Required if `set` is not provided.* |
 
 ### Supported Variables
 
-| Keyword | Description |
-| :--- | :--- |
-| **`STRAIN`** | Local element strain tensor component. |
-| **`STRESS`** | Local element Cauchy stress tensor component. |
+| Keyword | Components | Description |
+| :--- | :--- | :--- |
+| **`STRAIN`** | `C11`, `C22`, `C33`, `C23`, `C13`, `C12` | Element strain in the local frame. |
+| **`GREEN_LAGRANGE_STRAIN`** | `xx`, `yy`, `zz`, `xy`, `yz`, `xz` | Green-Lagrange strain tensor. |
+| **`DEFORMATION_GRADIENT`** | `xx`, `xy`, `xz`, `yx`, `yy`, `yz`, `zx`, `zy`, `zz` | Deformation gradient $\mathbf{F}$. |
+| **`CAUCHY_STRESS`** | `xx`, `yy`, `zz`, `xy`, `yz`, `xz` | Cauchy stress tensor. |
+| **`SHEAR_ANGLE`** | `value` | In-plane shear angle of the fabric (composite materials). |
+| **`FIBER_STRAIN`** | `warp`, `weft` | Strain along the fiber directions (composite materials). |
+| **`FIBER_STRESS`** | `warp`, `weft` | Stress along the fiber directions (composite materials). |
+| **`FIBER_CURVATURE`** | `warp`, `weft` | Curvature along the fiber directions (composite materials). |
+| **`FIBER_ORIENTATION_WARP`** | `x`, `y`, `z` | Current warp direction (composite materials). |
+| **`FIBER_ORIENTATION_WEFT`** | `x`, `y`, `z` | Current weft direction (composite materials). |
+
+!!! warning "Availability"
+    The variable must be available for **every** tracked element. Rigid contact elements have no stress or strain, and fiber variables are only defined for composite materials (`HYPERTEXTILE`): select the tracked elements accordingly, otherwise the simulation stops with an error when the tracker is written.
 
 ### Output Format
 The CSV file `<result_root>/<tracker_name>.csv` has one row per [output](../preprocessing.md#output) frame. Columns are separated by `, ` (comma and space). The columns represent:
@@ -120,28 +131,28 @@ The CSV file `<result_root>/<tracker_name>.csv` has one row per [output](../prep
 
 === "TOML :simple-toml:"
     ```toml
-    # Tracking axial strain component C11 across a fabric element set
-    [tracker.WarpStrain]
+    # Tracking the shear angle across a fabric element set
+    [tracker.FabricShear]
     type = "ELEMENT"
-    variable = "STRAIN"
-    component = "C11"
+    variable = "SHEAR_ANGLE"
+    component = "value"
     set = "FabricElements"
 
-    # Tracking shear stress component C12 on specific elements
-    [tracker.ShearStressCore]
+    # Tracking the warp fiber stress on specific elements
+    [tracker.WarpStress]
     type = "ELEMENT"
-    variable = "STRESS"
-    component = "C12"
+    variable = "FIBER_STRESS"
+    component = "warp"
     elements = [50, 51, 52]
     ```
 
 === "Fembic :material-text:"
     ```xml
     TRACKERS TYPE ELEMENT
-    WarpStrain SET = FabricElements VARIABLE = STRAIN COMPONENT = C11
+    FabricShear SET = FabricElements VARIABLE = SHEAR_ANGLE COMPONENT = value
 
     TRACKERS TYPE ELEMENT
-    ShearStressCore ELEMENTS = [50, 51, 52] VARIABLE = STRESS COMPONENT = C12
+    WarpStress ELEMENTS = [50, 51, 52] VARIABLE = FIBER_STRESS COMPONENT = warp
     ```
 
 ---
@@ -149,4 +160,4 @@ The CSV file `<result_root>/<tracker_name>.csv` has one row per [output](../prep
 # Choose a Tracker Type
 
 - Use **`NODE`** tracker with `variable = "FORCE"` or `variable = "CONTACTFORCE"` on support nodes to output total punch load vs. time curves.
-- Use **`ELEMENT`** tracker with `variable = "STRAIN"` and `component = "C11"` / `"C22"` / `"C12"` to extract local warp, weft, or shear deformation histories.
+- Use **`ELEMENT`** tracker with `variable = "SHEAR_ANGLE"`, `"FIBER_STRAIN"` or `"FIBER_STRESS"` to extract local shear, warp or weft histories of a fabric.

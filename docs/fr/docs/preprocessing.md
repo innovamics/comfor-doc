@@ -223,7 +223,7 @@ Le bloc `mesh` définit la source géométrique du modèle. COMFOR peut lire des
 
 ### Traduction des Types d'Éléments
 
-Les lecteurs externes traduisent les types d'éléments natifs en types d'éléments COMFOR. Le type traduit peut ensuite être modifié pour chaque pièce avec [`element_mapping`](#piece_part).
+Les lecteurs externes traduisent les types d'éléments natifs en types d'éléments COMFOR (traduction par défaut). Tout type d'élément peut être modifié pour chaque pièce avec [`element_mapping`](#piece_part).
 
 === "ABAQUS"
     | Type Abaqus (`*ELEMENT, TYPE=`) | Type COMFOR |
@@ -232,7 +232,7 @@ Les lecteurs externes traduisent les types d'éléments natifs en types d'élém
     | `M3D3` | `MEMBRANE_3` |
     | `S3`, `S3R` | `S3L_C0` |
     | `STRI3` | `DKT18` |
-    | Tout autre type | Conservé tel quel (ex: `R3D3`) |
+    | Tout autre type | Pas de traduction par défaut : doit être mappé avec `element_mapping` (ex: `R3D3`) |
 
     Seuls les mots-clés `*NODE` et `*ELEMENT` sont lus ; les autres mots-clés sont ignorés.
 
@@ -242,7 +242,7 @@ Les lecteurs externes traduisent les types d'éléments natifs en types d'élém
     | `1` (ligne à 2 nœuds) | `ROD_2` |
     | `2` (triangle à 3 nœuds) | `MEMBRANE_3` |
 
-    Les autres types d'éléments Gmsh ne sont pas pris en charge.
+    Les autres types d'éléments Gmsh n'ont pas de traduction par défaut et doivent être mappés avec `element_mapping`.
 
 === "INLINE"
     Le type d'élément est écrit directement dans le tableau `elements` et doit être un type d'élément COMFOR.
@@ -288,7 +288,7 @@ Une `part` représente un composant physique. Elle instancie une source géomét
 | **`mesh`** | String | **Oui** | - | Nom du bloc `[mesh]` à instancier. |
 | `translation` | Array | Non* | `[0,0,0]` | Vecteur de translation globale `[tx, ty, tz]`. *Incompatible avec `pattern`.* |
 | `pattern` | Array | Non* | - | Liste de configurations de répétition pour dupliquer la pièce. *Incompatible avec `translation`.* |
-| `element_mapping` | Map | Non | - | Dictionnaire `{ "DE" = "VERS" }` remplaçant des types d'éléments du maillage par d'autres [types d'éléments COMFOR](modules/elements.md). |
+| `element_mapping` | Map | Non | - | Dictionnaire `{ "DE" = "VERS" }` attribuant un [type d'élément COMFOR](modules/elements.md) aux types d'éléments du maillage. |
 
 !!! warning "Règle d'Exclusivité"
     Les paramètres `translation` et `pattern` sont mutuellement exclusifs. Renseigner les deux dans un même bloc `part` déclenchera une erreur de validation.
@@ -309,7 +309,7 @@ L'instance `i` (à partir de 0) est placée en `translation + i × spacing × di
 
 ### Syntaxe du Mapping d'Éléments
 
-Les clés de `element_mapping` sont les types d'éléments **après** la [traduction](#traduction_des_types_delements) effectuée par le lecteur de maillage. Par exemple, les triangles d'un fichier Gmsh sont lus comme `MEMBRANE_3` : pour les utiliser comme coques, écrivez `"MEMBRANE_3" = "DKT18"` (et non `"2" = "DKT18"`).
+Les clés de `element_mapping` sont les types d'éléments **tels qu'écrits dans le fichier de maillage** : le type Abaqus (`"S3"`, `"R3D3"`...) ou le numéro de type Gmsh sous forme de chaîne (`"2"`). Le type COMFOR issu de la [traduction](#traduction_des_types_delements) par défaut (ex: `"MEMBRANE_3"`) est également accepté comme clé. Si les deux correspondent, le type du fichier de maillage est prioritaire. Les types absents du mapping conservent leur traduction par défaut.
 
 Le dictionnaire `element_mapping` peut être déclaré de deux manières en TOML :
 
@@ -320,7 +320,7 @@ Le dictionnaire `element_mapping` peut être déclaré de deux manières en TOML
     ```toml
     [part.Outil]
     mesh = "AbaqusInp"
-    element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE", "R3D3" = "CONTACT_TRIANGLE" }
+    element_mapping = { "S3" = "CONTACT_TRIANGLE", "R3D3" = "CONTACT_TRIANGLE" }
     ```
 
 === "2. Table Imbriquée"
@@ -329,8 +329,8 @@ Le dictionnaire `element_mapping` peut être déclaré de deux manières en TOML
     mesh = "AbaqusInp"
 
     [part.Outil.element_mapping]
-    "S3L_C0" = "CONTACT_TRIANGLE"
-    "R3D3"   = "CONTACT_TRIANGLE"
+    "S3"   = "CONTACT_TRIANGLE"
+    "R3D3" = "CONTACT_TRIANGLE"
     ```
 
 ### Exemples
@@ -353,11 +353,11 @@ Le dictionnaire `element_mapping` peut être déclaré de deux manières en TOML
     direction = [1.0, 0.0, 0.0]
 
     # Mapping de types d'éléments pour un maillage importé
-    # (les triangles Gmsh sont lus comme MEMBRANE_3)
+    # (les triangles Gmsh à 3 nœuds sont de type 2)
     [part.Chassis]
     mesh = "MaillageGmsh"
     [part.Chassis.element_mapping]
-    "MEMBRANE_3" = "S3L_C0"
+    "2" = "S3L_C0"
     ```
 
 === "Fembic :material-text:"
@@ -918,7 +918,7 @@ Le bloc `tracker` enregistre l'historique temporel de variables nodales ou d'él
 | `nodes` | Array | Oui* | - | Identifiants explicites des nœuds (trackers `NODE`). |
 | `elements` | Array | Oui* | - | Identifiants explicites des éléments (trackers `ELEMENT`). |
 | `direction` | String | Oui* | - | `"X"`, `"Y"` ou `"Z"`. *Requis pour les trackers `NODE`.* |
-| `component` | String | Oui* | - | `"C11"`, `"C22"`, `"C33"`, `"C12"`, `"C13"` ou `"C23"`. *Requis pour les trackers `ELEMENT`.* |
+| `component` | String | Oui* | - | Composante de la variable (ex: `"xx"`, `"warp"`, `"value"`). *Requis pour les trackers `ELEMENT`.* Voir le [Module Trackers](modules/trackers.md). |
 
 ### Exemples
 
@@ -931,11 +931,11 @@ Le bloc `tracker` enregistre l'historique temporel de variables nodales ou d'él
     direction = "Z"
     set = "NoeudsBase"
 
-    # Suivi de la contrainte axiale C11 sur des éléments explicites
+    # Suivi de la contrainte de Cauchy xx sur des éléments explicites
     [tracker.ContrainteCoeur]
     type = "ELEMENT"
-    variable = "STRESS"
-    component = "C11"
+    variable = "CAUCHY_STRESS"
+    component = "xx"
     elements = [101, 102]
     ```
 
@@ -945,7 +945,7 @@ Le bloc `tracker` enregistre l'historique temporel de variables nodales ou d'él
     ForceReaction SET = NoeudsBase VARIABLE = FORCE DIRECTION = Z
 
     TRACKERS TYPE ELEMENT
-    ContrainteCoeur ELEMENTS = [101, 102] VARIABLE = STRESS COMPONENT = C11
+    ContrainteCoeur ELEMENTS = [101, 102] VARIABLE = CAUCHY_STRESS COMPONENT = xx
     ```
 
 ---

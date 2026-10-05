@@ -34,8 +34,8 @@ The **Double Dome** is a widely used numerical benchmark in the field of composi
 | **Material** | Textile composite (HYPERTEXTILE) |
 | **Plate thickness** | 1.0 mm |
 | **Punch speed** | 10 mm/s (reached after a 1 s ramp) |
-| **Punch stroke** | 60 mm |
-| **Simulation duration** | 6.5 seconds |
+| **Punch stroke** | 65 mm |
+| **Simulation duration** | 7 seconds |
 | **Friction** | Coulomb coefficient = 0.1 |
 
 ### Geometry
@@ -78,8 +78,9 @@ The `double-dome.toml` file is structured into multiple blocks that define the c
 
 ```
 double-dome.toml
+├── [model]          # Simulation metadata (informative)
 ├── [control]        # Time parameters
-├── [[output]]       # Output configuration
+├── [output.*]       # Output configuration (1)
 ├── [mesh.*]         # Mesh sources (3)
 ├── [part.*]         # Physical components (3)
 ├── [set.*]          # Entity groups (5)
@@ -98,14 +99,18 @@ double-dome.toml
 
 Create a file `double-dome.toml` with the following content. We will explain each section in detail.
 
-### Section 1: Header
+### Section 1: Model Metadata
 
 ```toml
-# Double-dome benchmark (quarter model)
-# COMFOR v0.15 - Innovamics
+# --- Model ---
+[model]
+name = "Double-dome"
+author = "Innovamics"
+date = "2026-08-05"
+description = "Double-dome Benchmark"
 ```
 
-TOML comments (`#`) are a convenient place to document the purpose, author and version of the model.
+This block is optional and purely informative: it documents the model but is not used by the solver.
 
 ### Section 2: Simulation Control
 
@@ -113,11 +118,11 @@ TOML comments (`#`) are a convenient place to document the purpose, author and v
 # --- Control ---
 [control]
 run_from = 0.0
-run_to = 6.5
+run_to = 7.0
 ```
 
 - `run_from`: Start time (usually 0.0)
-- `run_to`: End time of simulation (6.5 seconds for full punch stroke)
+- `run_to`: End time of simulation (7 seconds for the full punch stroke)
 
 !!! info "Time Step"
     The time step is not specified here. COMFOR automatically calculates it based on mesh and material properties.
@@ -126,8 +131,7 @@ run_to = 6.5
 
 ```toml
 # --- Output ---
-[[output]]
-name = "fields"
+[output.vtus]
 type = "VTU"
 frequency = 0.1
 format = "BINARY"
@@ -135,13 +139,13 @@ format = "BINARY"
 
 | Parameter | Value | Description |
 | :--- | :--- | :--- |
-| `name` | `"fields"` | Name of the output (required). Also used as the name of the result sub-folder and files |
+| `vtus` | (name) | Name of the output, given by the table header `[output.vtus]`. Also used as the name of the result sub-folder and files |
 | `type` | `"VTU"` | Output format (recommended) |
 | `frequency` | `0.1` | Write results every 0.1 seconds |
 | `format` | `"BINARY"` | Binary format for smaller files |
 
 !!! tip "Output Directory"
-    By default, results are written to `Results_double-dome/`, next to the input file. The frames of this output are stored in `Results_double-dome/fields/`.
+    By default, results are written to `Results_double-dome/`, next to the input file. The frames of this output are stored in `Results_double-dome/vtus/`.
 
 ### Section 4: Mesh Import
 
@@ -174,38 +178,38 @@ file = "quart/plate.msh"
 # --- Parts ---
 [part.punch]
 mesh = "punch"
-element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
-translation = [-1.0, -1.0, 3.0]
+element_mapping = { "S3" = "CONTACT_TRIANGLE" }
+translation = [-1.0, -1.0, 10.0]
 
 [part.die]
 mesh = "die"
-element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
+element_mapping = { "S3" = "CONTACT_TRIANGLE" }
 translation = [-1.0, -1.0, 0.0]
 
 [part.plate]
 mesh = "plate"
-element_mapping = { "MEMBRANE_3" = "DKT18" }
-translation = [0.0, 0.0, 2.0]
+element_mapping = { "2" = "DKT18" }
+translation = [0.0, 0.0, 1.0]
 ```
 
 **Explanations:**
 
 | Part | Mesh | Mapping | Translation | Role |
 | :--- | :--- | :--- | :--- | :--- |
-| `punch` | `punch` | S3L_C0 → CONTACT_TRIANGLE | [-1, -1, 3] | Movable punch |
-| `die` | `die` | S3L_C0 → CONTACT_TRIANGLE | [-1, -1, 0] | Fixed die |
-| `plate` | `plate` | MEMBRANE_3 → DKT18 | [0, 0, 2] | Plate to form |
+| `punch` | `punch` | S3 → CONTACT_TRIANGLE | [-1, -1, 10] | Movable punch |
+| `die` | `die` | S3 → CONTACT_TRIANGLE | [-1, -1, 0] | Fixed die |
+| `plate` | `plate` | 2 → DKT18 | [0, 0, 1] | Plate to form |
 
 !!! note "Element Mapping"
-    Mesh readers first translate the native element types into COMFOR types, then `element_mapping` replaces them. The keys of the mapping are therefore **COMFOR type names**, not the names used in the mesh file:
+    The keys of `element_mapping` are the element types **as written in the mesh file**:
 
-    - Abaqus `S3` triangles are read as `S3L_C0`; punch and die remap them to `CONTACT_TRIANGLE` (rigid contact surfaces).
-    - Gmsh triangles (type `2`) are read as `MEMBRANE_3`; the plate remaps them to `DKT18` (shell triangle with bending).
+    - Abaqus `S3` triangles (read as `S3L_C0` by default) are mapped to `CONTACT_TRIANGLE` for the punch and the die (rigid contact surfaces).
+    - Gmsh triangles (type `2`, read as `MEMBRANE_3` by default) are mapped to `DKT18` for the plate (shell triangle with bending).
 
     See the [Mesh block](../docs/preprocessing.md#mesh) for the full translation tables.
 
 !!! note "Translation"
-    Translations are used to position parts in space. The punch starts above the plate (z=3.0) and the die below (z=0.0).
+    Translations are used to position parts in space. The punch starts above the plate (z=10.0), the plate at z=1.0 and the die below (z=0.0).
 
 ### Section 6: Set Definitions (Groups)
 
@@ -395,7 +399,7 @@ preset = "FIXED"
     The `"FIXED"` preset blocks all degrees of freedom (vx, vy, vz, vrx, vry, vrz).
 
 !!! info "Punch Speed"
-    The punch moves downward at 10 mm/s (negative = downward), modulated by the amplitude which ramps from 0 to 1 during the first second. Over 6.5 s the punch therefore travels 0.5 × 10 × 1 + 10 × 5.5 = 60 mm.
+    The punch moves downward at 10 mm/s (negative = downward), modulated by the amplitude which ramps from 0 to 1 during the first second. Over 7 s the punch therefore travels 0.5 × 10 × 1 + 10 × 6 = 65 mm.
 
 ### Section 11: Contact Behaviors
 
@@ -403,7 +407,7 @@ preset = "FIXED"
 # --- Contact Behaviors ---
 [contact_behaviour.PENALTY_GENERAL]
 type = "LINEAR_PENALTY"
-stiffness = 100.0
+stiffness = 10.0
 
 [contact_behaviour.COULOMB_GENERAL]
 type = "COULOMB"
@@ -414,7 +418,7 @@ friction = 0.1
 
 | Behavior | Type | Parameter | Value |
 | :--- | :--- | :--- | :--- |
-| `PENALTY_GENERAL` | LINEAR_PENALTY | stiffness | 100.0 (penalty stiffness) |
+| `PENALTY_GENERAL` | LINEAR_PENALTY | stiffness | 10.0 (penalty stiffness) |
 | `COULOMB_GENERAL` | COULOMB | friction | 0.1 (friction coefficient) |
 
 ### Section 12: Contact
@@ -468,7 +472,7 @@ The same information is written to `double-dome.md`, next to the input file. Whe
 
     1. Check that all mesh file paths are correct
     2. Check that all references exist (e.g., `material.HyperTex` is referenced in `section.plateSection`)
-    3. Check that every block that requires it has a `name` (e.g., `[[output]]`, `[[section_assignments]]`)
+    3. Check that every block that requires it has a name (e.g. `[output.vtus]`, or `name = ...` inside `[[output]]` and `[[section_assignments]]`)
 
 ---
 
@@ -498,7 +502,7 @@ comfor -j double-dome.toml
  Running info
  =======================================
   > Writing output file 1
-   - Elapsed time: 0.397605
+   - Elapsed time: 0.395195
    - Current time: 0.100326
    - Time step: 0.000446
    - Internal energy: 0.000000
@@ -507,11 +511,19 @@ comfor -j double-dome.toml
  =======================================
  ...
  =======================================
- Solving took : 31.524193
+  > Writing output file 70
+   - Elapsed time: 34.176837
+   - Current time: 7.000105
+   - Time step: 0.000273
+   - Internal energy: 77.677680
+   - Kinetic energy: 5.454920
+   - Ek/Ei (%): 7.022506
+ =======================================
+ Solving took : 34.225519
  Exit Comfor
 ```
 
-A block is printed each time an output frame is written (every 0.1 s here). The time step is computed automatically and may decrease during the forming as elements distort.
+A block is printed each time an output frame is written (every 0.1 s here). At the end of the forming, the kinetic energy is about 7 % of the internal energy: the simulation remains quasi-static. The time step is computed automatically and may decrease during the forming as elements distort.
 
 !!! info "Execution Time"
     With the quarter model, the simulation takes about 30 seconds on a recent laptop (serial execution).
@@ -532,17 +544,17 @@ double-dome.toml
 double-dome.md                  # Job log
 Results_double-dome/
 ├── manifest.toml               # Run status and list of generated files
-└── fields/                     # One folder per [[output]] (its name)
-    ├── fields_000000.vtu
-    ├── fields_000001.vtu
+└── vtus/                       # One folder per output (its name)
+    ├── vtus_000000.vtu
+    ├── vtus_000001.vtu
     │   ... (1 file every 0.1 seconds)
-    └── fields_000065.vtu
+    └── vtus_000070.vtu
 ```
 
 ### Visualization with ParaView
 
 1. **Launch ParaView**
-2. **Open files**: Select the `fields_..vtu` group in `Results_double-dome/fields/`
+2. **Open files**: Select the `vtus_..vtu` group in `Results_double-dome/vtus/`
 3. **Apply**: Click the Apply button to display the mesh
 
 #### Deformation Visualization
@@ -560,11 +572,13 @@ Results_double-dome/
 
 - Select `ShearAngle` to see the in-plane shear of the fabric (the key result of the double-dome benchmark)
 - Select `FiberStress` or `FiberStrain` (2 components: warp and weft) to see the fiber tension
+- `FiberOrientationWarp` / `FiberOrientationWeft` show the current fiber directions (e.g. with the **Glyph** filter)
 - Adjust color scale to see the distribution
 
 #### Part Selection
 
-- Apply a **`Threshold`** filter on `PartID` to display only the plate (the tools hide it at the end of the forming)
+- Apply a **`Threshold`** filter on `PartID` to display only the plate (the tools hide it at the end of the forming). Here `PartID` is 0 for the die, 1 for the plate and 2 for the punch
+- The rigid tools have no stress or strain: their cell values are `NaN`, which ParaView displays with the *NaN color*
 
 ### Tracker Analysis
 
@@ -585,7 +599,7 @@ If you add trackers (not included in this basic example), one CSV file per track
 | Issue | Cause | Solution |
 | :--- | :--- | :--- |
 | `Directory already exists` | Results from a previous run | Delete the results directory or use `-o` |
-| `assigned section must be of type ...` | Element type and section do not match | Check `element_mapping` and `section_assignments` |
+| `assigned section must be of type ...` | Element type and section do not match | Check `element_mapping` (keys = types of the mesh file) and `section_assignments` |
 | High `Ek/Ei (%)` | Dynamic effects too large | Reduce the punch speed or increase `damping` |
 | Slow simulation | Mesh too fine or small time step | Use the quarter model or coarsen the mesh |
 | Punch penetration | Insufficient contact stiffness | Increase `stiffness` in `PENALTY_GENERAL` |
@@ -633,7 +647,7 @@ The Double Dome benchmark is a well-established test case in the composite formi
 
 ## Next Steps
 
-- [ ] Try with the full model (`full/*.inp`); note that the full punch uses Abaqus `R3D3` elements, which are kept with their Abaqus name and can be mapped with `element_mapping = { "R3D3" = "CONTACT_TRIANGLE" }`
+- [ ] Try with the full model (`full/*.inp`); note that the full punch uses Abaqus `R3D3` elements, mapped with `element_mapping = { "R3D3" = "CONTACT_TRIANGLE" }`
 - [ ] Add trackers to record punch force
 - [ ] Modify geometry to create a new benchmark
 - [ ] Try with different material types (ELASTIC, etc.)

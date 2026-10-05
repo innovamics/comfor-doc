@@ -70,8 +70,8 @@ Le journal du job `simulation.md` est un fichier Markdown écrit à côté du fi
 | :--- | :---: | :---: |
 | Encodage `ASCII` | Oui | Oui |
 | Encodage `BINARY` (compressé zlib) | Oui | Non |
-| Tenseurs de contraintes/déformations | Tableaux à 6 composantes | Un scalaire par composante |
-| Résultats composites (fibres, cisaillement, résultantes) | Oui | Non |
+| Résultats élémentaires (déformations, contraintes, fibres, résultantes) | Oui | Oui |
+| Identifiants (`MaterialID`, `PartID`, `PartInstanceID`) | Oui | Non |
 
 **Exemple de configuration :**
 
@@ -108,37 +108,37 @@ Les coordonnées des nœuds sont stockées comme points du maillage (`Position` 
 | Donnée | Composantes | Description |
 | :--- | :---: | :--- |
 | `MaterialID` | 1 | Identifiant du matériau |
-| `PartID` | 1 | Identifiant de la pièce (ordre des blocs `part`) |
+| `PartID` | 1 | Identifiant de la pièce, à partir de 0, dans l'ordre alphabétique des noms de pièces (syntaxe `[part.Nom]`) |
 | `PartInstanceID` | 1 | Identifiant de l'instance au sein d'une pièce (voir [`pattern`](preprocessing.md#piece_part)) |
-| `Stress` | 6 | Tenseur des contraintes dans le repère local de l'élément |
-| `Strain` | 6 | Tenseur des déformations dans le repère local de l'élément |
-| `FiberStress` | 2 | Contrainte dans les directions chaîne et trame (matériaux composites) |
-| `FiberStrain` | 2 | Déformation dans les directions chaîne et trame (matériaux composites) |
-| `ShearAngle` | 1 | Angle de cisaillement plan entre les directions de fibres (matériaux composites) |
-| `ShearStress` | 1 | Contrainte de cisaillement plan (matériaux composites) |
-| `ResultantN` | 3 | Efforts résultants de membrane (sections coques) |
-| `ResultantM` | 3 | Moments résultants de flexion (sections coques) |
-| `ResultantQ` | 2 | Efforts tranchants résultants (sections coques) |
+| `Strain` | 6 | Déformation dans le repère local de l'élément |
+| `GreenLagrangeStrain` | 6 | Tenseur des déformations de Green-Lagrange |
+| `DeformationGradient` | 9 | Gradient de la transformation $\mathbf{F}$ |
+| `CauchyStress` | 6 | Tenseur des contraintes de Cauchy |
+| `ShearAngle` | 1 | Angle de cisaillement plan du renfort (matériaux composites) |
+| `FiberStrain` | 2 | Déformation selon les directions chaîne et trame (matériaux composites) |
+| `FiberStress` | 2 | Contrainte selon les directions chaîne et trame (matériaux composites) |
+| `FiberCurvature` | 2 | Courbure selon les directions chaîne et trame (matériaux composites) |
+| `FiberOrientationWarp` | 3 | Direction courante de la chaîne (matériaux composites) |
+| `FiberOrientationWeft` | 3 | Direction courante de la trame (matériaux composites) |
+| `ResultantN` | 3 | Efforts résultants de membrane $N_{xx}, N_{yy}, N_{xy}$ (sections coques) |
+| `ResultantM` | 3 | Moments résultants de flexion $M_{xx}, M_{yy}, M_{xy}$ (sections coques) |
+| `ResultantQ` | 2 | Efforts tranchants résultants $Q_x, Q_y$ (sections coques) |
 
-Les valeurs qui ne s'appliquent pas à un type d'élément sont écrites à zéro.
+!!! info "Valeurs non disponibles"
+    Un champ qui ne s'applique pas à un élément est écrit `NaN` pour cet élément : par exemple tous les champs de contraintes et de déformations des éléments de contact rigides, ou les champs de fibres des matériaux non composites. ParaView affiche ces éléments avec la *NaN color* et les ignore dans la plage de valeurs.
 
 ### Composantes des Tenseurs
 
-`Stress` et `Strain` sont stockés avec 6 composantes, dans cet ordre :
+| Champ | Ordre des composantes | Libellés ParaView |
+| :--- | :--- | :--- |
+| `CauchyStress`, `GreenLagrangeStrain` | `xx`, `yy`, `zz`, `xy`, `yz`, `xz` | Identiques |
+| `DeformationGradient` | `xx`, `xy`, `xz`, `yx`, `yy`, `yz`, `zx`, `zy`, `zz` | Identiques |
+| `Strain` | `C11`, `C22`, `C33`, `C23`, `C13`, `C12` | `XX`, `YY`, `ZZ`, `XY`, `YZ`, `XZ` |
 
-| Indice | Composante | Description |
-| :---: | :--- | :--- |
-| 0 | `C11` | Normale dans la direction 1 |
-| 1 | `C22` | Normale dans la direction 2 |
-| 2 | `C33` | Normale dans la direction 3 |
-| 3 | `C12` | Cisaillement dans le plan 1-2 |
-| 4 | `C13` | Cisaillement dans le plan 1-3 |
-| 5 | `C23` | Cisaillement dans le plan 2-3 |
+!!! warning "Composantes de `Strain`"
+    ParaView nomme les composantes de `Strain` selon sa propre convention : la composante affichée `XY` est `C23`, `YZ` est `C13` et `XZ` est `C12`. Les mêmes noms de composantes (`C11`...`C12`) sont utilisés par le [tracker d'éléments](modules/trackers.md#trackers_delements_element) `STRAIN`.
 
-!!! warning "Noms des composantes dans ParaView"
-    ParaView nomme les tableaux à 6 composantes selon sa propre convention de tenseur symétrique (`XX`, `YY`, `ZZ`, `XY`, `YZ`, `XZ`). Utilisez l'indice ci-dessus pour identifier une composante : par exemple la 5e composante (indice 4) est `C13`, même si ParaView la nomme `YZ`.
-
-Dans les fichiers VTK historiques, chaque composante est écrite comme un scalaire séparé : `E11` ... `E23` pour la déformation et `S11` ... `S23` pour la contrainte.
+Dans les fichiers VTK historiques, les champs élémentaires sont écrits dans un bloc `FIELD` avec les mêmes noms et le même ordre des composantes.
 
 ---
 
@@ -166,7 +166,7 @@ Après ouverture, les fichiers apparaissent dans le **Pipeline Browser**. Clique
 
 Pour lire l'animation, utilisez le bouton **Play** de la barre VCR. Vous pouvez naviguer image par image, lire en boucle ou aller directement à un instant donné avec la barre de temps.
 
-La donnée affichée se choisit dans le menu **Coloring** du panneau Properties. Vous pouvez visualiser des données nodales (par ex. `Displacement`) ou élémentaires (par ex. `Stress`, `ShearAngle`), et choisir la composante ou la norme.
+La donnée affichée se choisit dans le menu **Coloring** du panneau Properties. Vous pouvez visualiser des données nodales (par ex. `Displacement`) ou élémentaires (par ex. `CauchyStress`, `ShearAngle`), et choisir la composante ou la norme.
 
 <div style="text-align:center;">
     <figure>
@@ -222,7 +222,7 @@ Time, Node 101, Node 102, Node 103, Total
 0.2, 100.5, 95.3, 105.8, 301.6
 ```
 
-**Exemple (tracker ELEMENT, `variable = "STRESS"`, `component = "C11"`) :**
+**Exemple (tracker ELEMENT, `variable = "CAUCHY_STRESS"`, `component = "xx"`) :**
 
 ```csv
 Time, Element 50, Element 51, Element 52, Total
@@ -288,8 +288,8 @@ Les fichiers CSV peuvent aussi être ouverts directement dans ParaView (avec le 
 | Problème | Solution |
 | :--- | :--- |
 | Pas de série temporelle détectée dans ParaView | Ouvrir les fichiers depuis le dossier de la sortie (`Results_<nom>/<nom_output>/`) et sélectionner le groupe `..vtu` |
-| Une composante de contrainte/déformation n'est pas celle attendue | Utiliser l'indice de la composante, pas le libellé ParaView (voir [Composantes des Tenseurs](#composantes_des_tenseurs)) |
-| Les champs composites sont nuls | `FiberStress`, `ShearAngle`, etc. ne sont calculés que pour les matériaux composites |
+| Une composante de `Strain` n'est pas celle attendue | Vérifier l'ordre des composantes (voir [Composantes des Tenseurs](#composantes_des_tenseurs)) |
+| Certains éléments apparaissent avec la NaN color | Le champ ne s'applique pas à ces éléments (ex: outils rigides, champs de fibres des matériaux non composites) |
 | `KeyError: 'Total'` avec pandas | Utiliser `skipinitialspace=True` dans `read_csv` |
 | Le `status` de `manifest.toml` est `failed` | Lire l'erreur à la fin du journal du job (`<nom_entrée>.md`) |
 

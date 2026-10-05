@@ -1,14 +1,17 @@
-# Double-dome benchmark (quarter model)
-# COMFOR v0.15 - Innovamics
+# --- Model ---
+[model]
+name = "Double-dome"
+author = "Innovamics"
+date = "2026-08-05"
+description = "Double-dome Benchmark"
 
 # --- Control ---
 [control]
 run_from = 0.0
-run_to = 6.5
+run_to = 7.0
 
 # --- Output ---
-[[output]]
-name = "fields"
+[output.vtus]
 type = "VTU"
 frequency = 0.1
 format = "BINARY"
@@ -29,25 +32,25 @@ file = "quart/plate.msh"
 # --- Parts ----
 [part.punch]
 mesh = "punch"
-element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
-translation = [-1.0, -1.0, 3.0]
+element_mapping = { "S3" = "CONTACT_TRIANGLE" }
+translation = [-1.0, -1.0, 10.0]
 
 [part.die]
 mesh = "die"
-element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
+element_mapping = { "S3" = "CONTACT_TRIANGLE" }
 translation = [-1.0, -1.0, 0.0]
 
 [part.plate]
 mesh = "plate"
-element_mapping = { "MEMBRANE_3" = "DKT18" }
-translation = [0.0, 0.0, 2.0]
+element_mapping = { "2" = "DKT18" }
+translation = [0.0, 0.0, 1.0]
 
 #[[part.plate.pattern]]
-#type = "LINEAR"
-#translation = [0.0, 0.0, 1.0]
-#count = 10
-#direction = [0.0, 0.0, 1.0]
-#spacing = 1.0
+# type = "LINEAR"
+# translation = [0.0, 0.0, 1.0]
+# count = 10
+# direction = [0.0, 0.0, 1.0]
+# spacing = 0.5
 
 # --- Sets ---
 [set.punchNodes]
@@ -153,7 +156,7 @@ preset = "FIXED"
 # --- Contact Behaviours ---
 [contact_behaviour.PENALTY_GENERAL]
 type = "LINEAR_PENALTY"
-stiffness = 100.0
+stiffness = 10.0
 
 [contact_behaviour.COULOMB_GENERAL]
 type = "COULOMB"
