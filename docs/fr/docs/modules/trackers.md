@@ -94,54 +94,65 @@ Le fichier CSV `<racine_résultats>/<nom_tracker>.csv` contient une ligne par fr
 
 ## Trackers d'Éléments (ELEMENT)
 
-Suivent les composantes du tenseur des contraintes ou des déformations internes pour un groupe ou une liste d'éléments au cours du temps.
+Suit dans le temps une composante d'un champ de résultat élémentaire pour un set ou une liste d'éléments.
 
 ### Paramètres
 
 | Paramètre | Type | Requis | Défaut | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **`component`** | String | **Oui** | - | Composante du tenseur : `"C11"`, `"C22"`, `"C33"`, `"C12"`, `"C13"` ou `"C23"`. |
-| `elements` | Array | Oui* | - | Liste explicite d'IDs d'éléments. *Requis si `set` n'est pas renseigné.* |
+| **`component`** | String | **Oui** | - | Composante de la variable, voir le tableau ci-dessous. |
+| `elements` | Array | Oui* | - | Liste explicite d'identifiants d'éléments. *Requis si `set` n'est pas fourni.* |
 
 ### Variables Supportées
 
-| Mot-clé | Description |
-| :--- | :--- |
-| **`STRAIN`** | Composante locale du tenseur de déformation de l'élément. |
-| **`STRESS`** | Composante locale du tenseur de contrainte de Cauchy de l'élément. |
+| Mot-clé | Composantes | Description |
+| :--- | :--- | :--- |
+| **`STRAIN`** | `C11`, `C22`, `C33`, `C23`, `C13`, `C12` | Déformation de l'élément dans le repère local. |
+| **`GREEN_LAGRANGE_STRAIN`** | `xx`, `yy`, `zz`, `xy`, `yz`, `xz` | Tenseur des déformations de Green-Lagrange. |
+| **`DEFORMATION_GRADIENT`** | `xx`, `xy`, `xz`, `yx`, `yy`, `yz`, `zx`, `zy`, `zz` | Gradient de la transformation $\mathbf{F}$. |
+| **`CAUCHY_STRESS`** | `xx`, `yy`, `zz`, `xy`, `yz`, `xz` | Tenseur des contraintes de Cauchy. |
+| **`SHEAR_ANGLE`** | `value` | Angle de cisaillement plan du renfort (matériaux composites). |
+| **`FIBER_STRAIN`** | `warp`, `weft` | Déformation selon les directions des fibres (matériaux composites). |
+| **`FIBER_STRESS`** | `warp`, `weft` | Contrainte selon les directions des fibres (matériaux composites). |
+| **`FIBER_CURVATURE`** | `warp`, `weft` | Courbure selon les directions des fibres (matériaux composites). |
+| **`FIBER_ORIENTATION_WARP`** | `x`, `y`, `z` | Direction courante de la chaîne (matériaux composites). |
+| **`FIBER_ORIENTATION_WEFT`** | `x`, `y`, `z` | Direction courante de la trame (matériaux composites). |
+
+!!! warning "Disponibilité"
+    La variable doit être disponible pour **chaque** élément suivi. Les éléments de contact rigides n'ont ni contrainte ni déformation, et les variables de fibres ne sont définies que pour les matériaux composites (`HYPERTEXTILE`) : choisissez les éléments suivis en conséquence, sinon la simulation s'arrête avec une erreur lors de l'écriture du tracker.
 
 ### Format de Sortie
 Le fichier CSV `<racine_résultats>/<nom_tracker>.csv` contient une ligne par frame de [sortie](../preprocessing.md#sorties_output). Les colonnes sont séparées par `, ` (virgule et espace). Les colonnes représentent :
-1. **Temps**
-2. Les valeurs individuelles par élément (`Élément E1`, `Élément E2`, ...)
+1. **Time**
+2. Les valeurs de chaque élément (`Element E1`, `Element E2`, ...)
 3. **Total** : Somme de toutes les valeurs des éléments suivis.
 
 ### Exemples
 
 === "TOML :simple-toml:"
     ```toml
-    # Suivi de la composante de déformation axiale C11 sur un groupe d'éléments de tissu
-    [tracker.DeformationChaine]
+    # Suivi de l'angle de cisaillement sur un set d'éléments du renfort
+    [tracker.CisaillementRenfort]
     type = "ELEMENT"
-    variable = "STRAIN"
-    component = "C11"
-    set = "ElementsTissu"
+    variable = "SHEAR_ANGLE"
+    component = "value"
+    set = "ElementsRenfort"
 
-    # Suivi de la contrainte de cisaillement C12 sur des éléments spécifiques
-    [tracker.ContrainteCisaillement]
+    # Suivi de la contrainte dans la chaîne sur des éléments explicites
+    [tracker.ContrainteChaine]
     type = "ELEMENT"
-    variable = "STRESS"
-    component = "C12"
+    variable = "FIBER_STRESS"
+    component = "warp"
     elements = [50, 51, 52]
     ```
 
 === "Fembic :material-text:"
     ```xml
     TRACKERS TYPE ELEMENT
-    DeformationChaine SET = ElementsTissu VARIABLE = STRAIN COMPONENT = C11
+    CisaillementRenfort SET = ElementsRenfort VARIABLE = SHEAR_ANGLE COMPONENT = value
 
     TRACKERS TYPE ELEMENT
-    ContrainteCisaillement ELEMENTS = [50, 51, 52] VARIABLE = STRESS COMPONENT = C12
+    ContrainteChaine ELEMENTS = [50, 51, 52] VARIABLE = FIBER_STRESS COMPONENT = warp
     ```
 
 ---
@@ -149,4 +160,4 @@ Le fichier CSV `<racine_résultats>/<nom_tracker>.csv` contient une ligne par fr
 # Choisir un Type de Tracker
 
 - Utilisez le tracker **`NODE`** avec `variable = "FORCE"` ou `variable = "CONTACTFORCE"` sur les nœuds de support pour exporter les courbes de charge totale du poinçon en fonction du temps.
-- Utilisez le tracker **`ELEMENT`** avec `variable = "STRAIN"` et `component = "C11"` / `"C22"` / `"C12"` pour extraire l'historique des déformations locales en chaîne, trame ou cisaillement.
+- Utilisez le tracker **`ELEMENT`** avec `variable = "SHEAR_ANGLE"`, `"FIBER_STRAIN"` ou `"FIBER_STRESS"` pour extraire l'historique local du cisaillement, de la chaîne ou de la trame d'un renfort.

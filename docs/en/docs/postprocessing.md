@@ -70,8 +70,8 @@ The job log `simulation.md` is a Markdown file written next to the input file. I
 | :--- | :---: | :---: |
 | `ASCII` encoding | Yes | Yes |
 | `BINARY` encoding (zlib compressed) | Yes | No |
-| Stress/strain tensors | 6-component arrays | One scalar per component |
-| Composite results (fiber, shear, resultants) | Yes | No |
+| Element results (strain, stress, fibers, resultants) | Yes | Yes |
+| Identifiers (`MaterialID`, `PartID`, `PartInstanceID`) | Yes | No |
 
 **Configuration example:**
 
@@ -108,37 +108,37 @@ The node coordinates are stored as the mesh points (`Position` in the file).
 | Data | Components | Description |
 | :--- | :---: | :--- |
 | `MaterialID` | 1 | Material identifier |
-| `PartID` | 1 | Part identifier (order of the `part` blocks) |
+| `PartID` | 1 | Part identifier, starting at 0, in alphabetical order of the part names (`[part.Name]` syntax) |
 | `PartInstanceID` | 1 | Instance identifier inside a part (see [`pattern`](preprocessing.md#part)) |
-| `Stress` | 6 | Stress tensor in the element local frame |
-| `Strain` | 6 | Strain tensor in the element local frame |
-| `FiberStress` | 2 | Stress in the warp and weft directions (composite materials) |
-| `FiberStrain` | 2 | Strain in the warp and weft directions (composite materials) |
-| `ShearAngle` | 1 | In-plane shear angle between the fiber directions (composite materials) |
-| `ShearStress` | 1 | In-plane shear stress (composite materials) |
-| `ResultantN` | 3 | Membrane force resultants (shell sections) |
-| `ResultantM` | 3 | Bending moment resultants (shell sections) |
-| `ResultantQ` | 2 | Transverse shear resultants (shell sections) |
+| `Strain` | 6 | Strain in the element local frame |
+| `GreenLagrangeStrain` | 6 | Green-Lagrange strain tensor |
+| `DeformationGradient` | 9 | Deformation gradient $\mathbf{F}$ |
+| `CauchyStress` | 6 | Cauchy stress tensor |
+| `ShearAngle` | 1 | In-plane shear angle of the fabric (composite materials) |
+| `FiberStrain` | 2 | Strain along the warp and weft directions (composite materials) |
+| `FiberStress` | 2 | Stress along the warp and weft directions (composite materials) |
+| `FiberCurvature` | 2 | Curvature along the warp and weft directions (composite materials) |
+| `FiberOrientationWarp` | 3 | Current warp direction (composite materials) |
+| `FiberOrientationWeft` | 3 | Current weft direction (composite materials) |
+| `ResultantN` | 3 | Membrane force resultants $N_{xx}, N_{yy}, N_{xy}$ (shell sections) |
+| `ResultantM` | 3 | Bending moment resultants $M_{xx}, M_{yy}, M_{xy}$ (shell sections) |
+| `ResultantQ` | 2 | Transverse shear resultants $Q_x, Q_y$ (shell sections) |
 
-Values that do not apply to an element type are written as zero.
+!!! info "Unavailable values"
+    A field that does not apply to an element is written as `NaN` for that element: for instance all the stress and strain fields of rigid contact elements, or the fiber fields of non-composite materials. ParaView shows these elements with the *NaN color* and ignores them in the data range.
 
 ### Tensor Components
 
-`Stress` and `Strain` are stored with 6 components, in this order:
+| Field | Component order | ParaView labels |
+| :--- | :--- | :--- |
+| `CauchyStress`, `GreenLagrangeStrain` | `xx`, `yy`, `zz`, `xy`, `yz`, `xz` | Identical |
+| `DeformationGradient` | `xx`, `xy`, `xz`, `yx`, `yy`, `yz`, `zx`, `zy`, `zz` | Identical |
+| `Strain` | `C11`, `C22`, `C33`, `C23`, `C13`, `C12` | `XX`, `YY`, `ZZ`, `XY`, `YZ`, `XZ` |
 
-| Index | Component | Description |
-| :---: | :--- | :--- |
-| 0 | `C11` | Normal in direction 1 |
-| 1 | `C22` | Normal in direction 2 |
-| 2 | `C33` | Normal in direction 3 |
-| 3 | `C12` | Shear in plane 1-2 |
-| 4 | `C13` | Shear in plane 1-3 |
-| 5 | `C23` | Shear in plane 2-3 |
+!!! warning "Components of `Strain`"
+    ParaView labels the components of `Strain` with its own convention: the component displayed as `XY` is `C23`, `YZ` is `C13` and `XZ` is `C12`. The same component names (`C11`...`C12`) are used by the `STRAIN` [element tracker](modules/trackers.md#element_trackers_element).
 
-!!! warning "ParaView component names"
-    ParaView labels 6-component arrays with its own symmetric tensor convention (`XX`, `YY`, `ZZ`, `XY`, `YZ`, `XZ`). Use the index above to identify a component: for instance the 5th component (index 4) is `C13`, even if ParaView names it `YZ`.
-
-In legacy VTK files, each component is written as a separate scalar: `E11` ... `E23` for the strain and `S11` ... `S23` for the stress.
+In legacy VTK files, the element fields are written as a `FIELD` block with the same names and component orders.
 
 ---
 
@@ -166,7 +166,7 @@ After opening the files, they appear in the **Pipeline Browser**. Click the **Ap
 
 To play the animation, use the **Play** button on the VCR toolbar. You can navigate frame by frame, loop the animation, or jump to specific time steps using the time toolbar.
 
-The data to be displayed can be selected in the **Coloring** dropdown menu of the Properties panel. You can visualize nodal data (e.g. `Displacement`) or element data (e.g. `Stress`, `ShearAngle`), and choose the component or the magnitude.
+The data to be displayed can be selected in the **Coloring** dropdown menu of the Properties panel. You can visualize nodal data (e.g. `Displacement`) or element data (e.g. `CauchyStress`, `ShearAngle`), and choose the component or the magnitude.
 
 <div style="text-align:center;">
     <figure>
@@ -222,7 +222,7 @@ Time, Node 101, Node 102, Node 103, Total
 0.2, 100.5, 95.3, 105.8, 301.6
 ```
 
-**Example (ELEMENT tracker, `variable = "STRESS"`, `component = "C11"`):**
+**Example (ELEMENT tracker, `variable = "CAUCHY_STRESS"`, `component = "xx"`):**
 
 ```csv
 Time, Element 50, Element 51, Element 52, Total
@@ -288,8 +288,8 @@ The CSV files can also be opened directly in ParaView (with the **Plot Data** fi
 | Issue | Solution |
 | :--- | :--- |
 | No time series detected in ParaView | Open the files from the output folder (`Results_<name>/<output_name>/`) and select the `..vtu` group |
-| A stress/strain component is not the expected one | Use the component index, not the ParaView label (see [Tensor Components](#tensor_components)) |
-| Composite fields are zero | `FiberStress`, `ShearAngle`, etc. are only computed for composite materials |
+| A `Strain` component is not the expected one | Check the component order (see [Tensor Components](#tensor_components)) |
+| Some elements are drawn with the NaN color | The field does not apply to these elements (e.g. rigid tools, fiber fields of non-composite materials) |
 | `KeyError: 'Total'` with pandas | Use `skipinitialspace=True` in `read_csv` |
 | `manifest.toml` status is `failed` | Read the error at the end of the job log (`<input_name>.md`) |
 

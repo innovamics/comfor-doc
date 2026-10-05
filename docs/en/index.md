@@ -21,7 +21,7 @@ hide:
     <div class="lp-hero__meta">
       <div>
         <span class="lp-meta-label">Version</span>
-        <span class="lp-meta-value">v0.8.0</span>
+        <span class="lp-meta-value">v0.15.0</span>
       </div>
       <div>
         <span class="lp-meta-label">Platforms</span>

@@ -34,8 +34,8 @@ Le **Double Dome** (Double Dôme) est un benchmark numérique largement utilisé
 | **Matériau** | Composite textile (HYPERTEXTILE) |
 | **Épaisseur de la plaque** | 1.0 mm |
 | **Vitesse du poinçon** | 10 mm/s (atteinte après une rampe de 1 s) |
-| **Course du poinçon** | 60 mm |
-| **Durée de simulation** | 6.5 secondes |
+| **Course du poinçon** | 65 mm |
+| **Durée de simulation** | 7 secondes |
 | **Frottement** | Coefficient de Coulomb = 0.1 |
 
 ### Géométrie
@@ -78,8 +78,9 @@ Le fichier `double-dome.toml` est structuré en plusieurs blocs qui définissent
 
 ```
 double-dome.toml
+├── [model]          # Métadonnées de la simulation (informatives)
 ├── [control]        # Paramètres temporels
-├── [[output]]       # Configuration de sortie
+├── [output.*]       # Configuration de sortie (1)
 ├── [mesh.*]         # Sources de maillage (3)
 ├── [part.*]         # Composants physiques (3)
 ├── [set.*]          # Groupes d'entités (5)
@@ -98,14 +99,18 @@ double-dome.toml
 
 Créez un fichier `double-dome.toml` avec le contenu suivant. Nous allons expliquer chaque section en détail.
 
-### Section 1 : En-tête
+### Section 1 : Métadonnées du Modèle
 
 ```toml
-# Double-dome benchmark (quarter model)
-# COMFOR v0.15 - Innovamics
+# --- Model ---
+[model]
+name = "Double-dome"
+author = "Innovamics"
+date = "2026-08-05"
+description = "Double-dome Benchmark"
 ```
 
-Les commentaires TOML (`#`) sont l'endroit idéal pour documenter l'objectif, l'auteur et la version du modèle.
+Ce bloc est optionnel et purement informatif : il documente le modèle mais n'est pas utilisé par le solveur.
 
 ### Section 2 : Contrôle de la Simulation
 
@@ -113,11 +118,11 @@ Les commentaires TOML (`#`) sont l'endroit idéal pour documenter l'objectif, l'
 # --- Control ---
 [control]
 run_from = 0.0
-run_to = 6.5
+run_to = 7.0
 ```
 
 - `run_from` : Temps de début (généralement 0.0)
-- `run_to` : Temps final de la simulation (6.5 secondes pour une course complète du poinçon)
+- `run_to` : Temps final de la simulation (7 secondes pour la course complète du poinçon)
 
 !!! info "Pas de temps"
     Le pas de temps n'est pas spécifié ici. COMFOR le calcule automatiquement en fonction des propriétés du maillage et des matériaux.
@@ -126,8 +131,7 @@ run_to = 6.5
 
 ```toml
 # --- Output ---
-[[output]]
-name = "fields"
+[output.vtus]
 type = "VTU"
 frequency = 0.1
 format = "BINARY"
@@ -135,13 +139,13 @@ format = "BINARY"
 
 | Paramètre | Valeur | Description |
 | :--- | :--- | :--- |
-| `name` | `"fields"` | Nom de la sortie (obligatoire). Utilisé aussi comme nom du sous-dossier et des fichiers de résultats |
+| `vtus` | (nom) | Nom de la sortie, donné par l'en-tête de table `[output.vtus]`. Utilisé aussi comme nom du sous-dossier et des fichiers de résultats |
 | `type` | `"VTU"` | Format de sortie (recommandé) |
 | `frequency` | `0.1` | Écrire les résultats toutes les 0.1 secondes |
 | `format` | `"BINARY"` | Format binaire pour des fichiers plus petits |
 
 !!! tip "Dossier de sortie"
-    Par défaut, les résultats sont écrits dans `Results_double-dome/`, à côté du fichier d'entrée. Les frames de cette sortie sont stockées dans `Results_double-dome/fields/`.
+    Par défaut, les résultats sont écrits dans `Results_double-dome/`, à côté du fichier d'entrée. Les frames de cette sortie sont stockées dans `Results_double-dome/vtus/`.
 
 ### Section 4 : Importation des Maillages
 
@@ -174,38 +178,38 @@ file = "quart/plate.msh"
 # --- Parts ---
 [part.punch]
 mesh = "punch"
-element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
-translation = [-1.0, -1.0, 3.0]
+element_mapping = { "S3" = "CONTACT_TRIANGLE" }
+translation = [-1.0, -1.0, 10.0]
 
 [part.die]
 mesh = "die"
-element_mapping = { "S3L_C0" = "CONTACT_TRIANGLE" }
+element_mapping = { "S3" = "CONTACT_TRIANGLE" }
 translation = [-1.0, -1.0, 0.0]
 
 [part.plate]
 mesh = "plate"
-element_mapping = { "MEMBRANE_3" = "DKT18" }
-translation = [0.0, 0.0, 2.0]
+element_mapping = { "2" = "DKT18" }
+translation = [0.0, 0.0, 1.0]
 ```
 
 **Explications :**
 
 | Pièce | Maillage | Mapping | Translation | Rôle |
 | :--- | :--- | :--- | :--- | :--- |
-| `punch` | `punch` | S3L_C0 → CONTACT_TRIANGLE | [-1, -1, 3] | Poinçon mobile |
-| `die` | `die` | S3L_C0 → CONTACT_TRIANGLE | [-1, -1, 0] | Matrice fixe |
-| `plate` | `plate` | MEMBRANE_3 → DKT18 | [0, 0, 2] | Plaque à former |
+| `punch` | `punch` | S3 → CONTACT_TRIANGLE | [-1, -1, 10] | Poinçon mobile |
+| `die` | `die` | S3 → CONTACT_TRIANGLE | [-1, -1, 0] | Matrice fixe |
+| `plate` | `plate` | 2 → DKT18 | [0, 0, 1] | Plaque à former |
 
 !!! note "Mapping d'éléments"
-    Les lecteurs de maillage traduisent d'abord les types natifs en types COMFOR, puis `element_mapping` les remplace. Les clés du mapping sont donc des **noms de types COMFOR**, et non les noms utilisés dans le fichier de maillage :
+    Les clés de `element_mapping` sont les types d'éléments **tels qu'écrits dans le fichier de maillage** :
 
-    - Les triangles Abaqus `S3` sont lus comme `S3L_C0` ; le poinçon et la matrice les remplacent par `CONTACT_TRIANGLE` (surfaces de contact rigides).
-    - Les triangles Gmsh (type `2`) sont lus comme `MEMBRANE_3` ; la plaque les remplace par `DKT18` (triangle coque avec flexion).
+    - Les triangles Abaqus `S3` (lus comme `S3L_C0` par défaut) sont mappés en `CONTACT_TRIANGLE` pour le poinçon et la matrice (surfaces de contact rigides).
+    - Les triangles Gmsh (type `2`, lus comme `MEMBRANE_3` par défaut) sont mappés en `DKT18` pour la plaque (triangle coque avec flexion).
 
     Voir le [bloc Mesh](../docs/preprocessing.md#maillage_mesh) pour les tables de traduction complètes.
 
 !!! note "Translation"
-    Les translations positionnent les pièces dans l'espace. Le poinçon commence au-dessus de la plaque (z=3.0) et la matrice en dessous (z=0.0).
+    Les translations positionnent les pièces dans l'espace. Le poinçon commence au-dessus de la plaque (z=10.0), la plaque est à z=1.0 et la matrice en dessous (z=0.0).
 
 ### Section 6 : Définition des Sets (Groupes)
 
@@ -395,7 +399,7 @@ preset = "FIXED"
     Le preset `"FIXED"` bloque tous les degrés de liberté (vx, vy, vz, vrx, vry, vrz).
 
 !!! info "Vitesse du poinçon"
-    Le poinçon descend à une vitesse de 10 mm/s (négatif = vers le bas), modulée par l'amplitude qui passe de 0 à 1 pendant la première seconde. En 6.5 s, le poinçon parcourt donc 0.5 × 10 × 1 + 10 × 5.5 = 60 mm.
+    Le poinçon descend à une vitesse de 10 mm/s (négatif = vers le bas), modulée par l'amplitude qui passe de 0 à 1 pendant la première seconde. En 7 s, le poinçon parcourt donc 0.5 × 10 × 1 + 10 × 6 = 65 mm.
 
 ### Section 11 : Comportements de Contact
 
@@ -403,7 +407,7 @@ preset = "FIXED"
 # --- Contact Behaviours ---
 [contact_behaviour.PENALTY_GENERAL]
 type = "LINEAR_PENALTY"
-stiffness = 100.0
+stiffness = 10.0
 
 [contact_behaviour.COULOMB_GENERAL]
 type = "COULOMB"
@@ -414,7 +418,7 @@ friction = 0.1
 
 | Comportement | Type | Paramètre | Valeur |
 | :--- | :--- | :--- | :--- |
-| `PENALTY_GENERAL` | LINEAR_PENALTY | stiffness | 100.0 (raideur de pénalité) |
+| `PENALTY_GENERAL` | LINEAR_PENALTY | stiffness | 10.0 (raideur de pénalité) |
 | `COULOMB_GENERAL` | COULOMB | friction | 0.1 (coefficient de frottement) |
 
 ### Section 12 : Contact
@@ -468,7 +472,7 @@ Les mêmes informations sont écrites dans `double-dome.md`, à côté du fichie
 
     1. Vérifiez que tous les chemins des fichiers de maillage sont corrects
     2. Vérifiez que toutes les références existent (ex: `material.HyperTex` est référencé dans `section.plateSection`)
-    3. Vérifiez que chaque bloc qui l'exige possède un `name` (ex: `[[output]]`, `[[section_assignments]]`)
+    3. Vérifiez que chaque bloc qui l'exige possède un nom (ex: `[output.vtus]`, ou `name = ...` dans `[[output]]` et `[[section_assignments]]`)
 
 ---
 
@@ -498,7 +502,7 @@ comfor -j double-dome.toml
  Running info
  =======================================
   > Writing output file 1
-   - Elapsed time: 0.397605
+   - Elapsed time: 0.395195
    - Current time: 0.100326
    - Time step: 0.000446
    - Internal energy: 0.000000
@@ -507,11 +511,19 @@ comfor -j double-dome.toml
  =======================================
  ...
  =======================================
- Solving took : 31.524193
+  > Writing output file 70
+   - Elapsed time: 34.176837
+   - Current time: 7.000105
+   - Time step: 0.000273
+   - Internal energy: 77.677680
+   - Kinetic energy: 5.454920
+   - Ek/Ei (%): 7.022506
+ =======================================
+ Solving took : 34.225519
  Exit Comfor
 ```
 
-Un bloc est affiché à chaque écriture d'une frame de sortie (toutes les 0.1 s ici). Le pas de temps est calculé automatiquement et peut diminuer pendant la mise en forme, lorsque les éléments se distordent.
+Un bloc est affiché à chaque écriture d'une frame de sortie (toutes les 0.1 s ici). En fin de mise en forme, l'énergie cinétique représente environ 7 % de l'énergie interne : la simulation reste quasi statique. Le pas de temps est calculé automatiquement et peut diminuer pendant la mise en forme, lorsque les éléments se distordent.
 
 !!! info "Temps d'exécution"
     Avec le modèle quart, la simulation prend environ 30 secondes sur un ordinateur portable récent (exécution séquentielle).
@@ -532,17 +544,17 @@ double-dome.toml
 double-dome.md                  # Journal du job
 Results_double-dome/
 ├── manifest.toml               # Statut du calcul et liste des fichiers générés
-└── fields/                     # Un dossier par [[output]] (son nom)
-    ├── fields_000000.vtu
-    ├── fields_000001.vtu
+└── vtus/                       # Un dossier par sortie (son nom)
+    ├── vtus_000000.vtu
+    ├── vtus_000001.vtu
     │   ... (1 fichier toutes les 0.1 secondes)
-    └── fields_000065.vtu
+    └── vtus_000070.vtu
 ```
 
 ### Visualisation avec ParaView
 
 1. **Lancer ParaView**
-2. **Ouvrir les fichiers** : Sélectionnez le groupe `fields_..vtu` dans `Results_double-dome/fields/`
+2. **Ouvrir les fichiers** : Sélectionnez le groupe `vtus_..vtu` dans `Results_double-dome/vtus/`
 3. **Appliquer** : Cliquez sur le bouton Apply pour afficher le maillage
 
 #### Visualisation de la Déformation
@@ -560,11 +572,13 @@ Results_double-dome/
 
 - Sélectionnez `ShearAngle` pour voir le cisaillement plan du renfort (le résultat clé du benchmark double dôme)
 - Sélectionnez `FiberStress` ou `FiberStrain` (2 composantes : chaîne et trame) pour voir la tension des fibres
+- `FiberOrientationWarp` / `FiberOrientationWeft` donnent les directions courantes des fibres (par ex. avec le filtre **Glyph**)
 - Ajustez l'échelle de couleurs pour voir la distribution
 
 #### Sélection des Pièces
 
-- Appliquez un filtre **`Threshold`** sur `PartID` pour n'afficher que la plaque (les outils la masquent en fin de mise en forme)
+- Appliquez un filtre **`Threshold`** sur `PartID` pour n'afficher que la plaque (les outils la masquent en fin de mise en forme). Ici `PartID` vaut 0 pour la matrice, 1 pour la plaque et 2 pour le poinçon
+- Les outils rigides n'ont ni contrainte ni déformation : leurs valeurs d'élément valent `NaN`, affichées par ParaView avec la *NaN color*
 
 ### Analyse des Trackers
 
@@ -585,7 +599,7 @@ Si vous ajoutez des trackers (non inclus dans cet exemple de base), un fichier C
 | Problème | Cause | Solution |
 | :--- | :--- | :--- |
 | `Directory already exists` | Résultats d'un calcul précédent | Supprimer le répertoire de résultats ou utiliser `-o` |
-| `assigned section must be of type ...` | Type d'élément et section incompatibles | Vérifier `element_mapping` et `section_assignments` |
+| `assigned section must be of type ...` | Type d'élément et section incompatibles | Vérifier `element_mapping` (clés = types du fichier de maillage) et `section_assignments` |
 | `Ek/Ei (%)` élevé | Effets dynamiques trop importants | Réduire la vitesse du poinçon ou augmenter `damping` |
 | Simulation lente | Maillage trop fin ou petit pas de temps | Utiliser le modèle quart ou déraffiner le maillage |
 | Pénétration du poinçon | Raideur de contact insuffisante | Augmenter `stiffness` dans `PENALTY_GENERAL` |
@@ -633,7 +647,7 @@ Le benchmark Double Dome est un excellent point de départ pour explorer les cap
 
 ## Prochaines Étapes
 
-- [ ] Essayer avec le modèle complet (`full/*.inp`) ; le poinçon complet utilise des éléments Abaqus `R3D3`, conservés avec leur nom Abaqus, qui peuvent être mappés avec `element_mapping = { "R3D3" = "CONTACT_TRIANGLE" }`
+- [ ] Essayer avec le modèle complet (`full/*.inp`) ; le poinçon complet utilise des éléments Abaqus `R3D3`, mappés avec `element_mapping = { "R3D3" = "CONTACT_TRIANGLE" }`
 - [ ] Ajouter des trackers pour enregistrer la force du poinçon
 - [ ] Modifier la géométrie pour créer un nouveau benchmark
 - [ ] Essayer avec différents types de matériaux (ELASTIC, etc.)

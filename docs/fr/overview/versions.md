@@ -1,4 +1,17 @@
-# Dernière version `V0.8.0`
+# Dernière version `V0.15.0`
+
+- Windows 10/11
+    - <a href="../../assets/bin/v0_15_0/Release-windows-vs2022/COMFOR_V0_15_0_VS2022.exe" download>Télécharger Comfor V0.15.0 pour Windows (Visual Studio 2022)</a>
+- Ubuntu 22.04
+    - <a href="../../assets/bin/v0_15_0/Release-ubuntu-22.04-gcc/COMFOR_V0_15_0_GCC11" download>Télécharger Comfor V0.15.0 pour Ubuntu 22.04 (GCC 11)</a>
+- Ubuntu 24.04
+    - <a href="../../assets/bin/v0_15_0/Release-ubuntu-24.04-gcc/COMFOR_V0_15_0_GCC13" download>Télécharger Comfor V0.15.0 pour Ubuntu 24.04 (GCC 13)</a>
+- Rocky Linux 9
+    - <a href="../../assets/bin/v0_15_0/Release-rocky-linux-9-gcc/COMFOR_V0_15_0_GCC11" download>Télécharger Comfor V0.15.0 pour Rocky Linux 9 (GCC 11)</a>
+- macOS
+    - <a href="../../assets/bin/v0_15_0/Release-macos-clang/COMFOR_V0_15_0_CLANG" download>Télécharger Comfor V0.15.0 pour macOS 13 ou ultérieur (Apple Silicon, Clang)</a>
+
+# Version `V0.8.0`
 
 - Windows 7/10
     - <a href="../../assets/bin/v0_8_0/Release-windows-vs2019/COMFOR_V0_8_0_VS2019.exe" download>Télécharger Comfor V0.8.0 pour Windows (Visual Studio 2019)</a>
