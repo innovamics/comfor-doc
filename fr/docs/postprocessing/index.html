@@ -16,7 +16,7 @@
         <link rel="prev" href="../analysis/">
       
       
-        <link rel="next" href="../materials/">
+        <link rel="next" href="../modules/amplitudes/">
       
       
         
@@ -57,6 +57,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/css/landing_page.css">
+    
       <link rel="stylesheet" href="../../assets/css/faq_admonition.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -94,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#charger_les_fichiers" class="md-skip">
+        <a href="#post-traitement" class="md-skip">
           Aller au contenu
         </a>
       
@@ -653,7 +655,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriel
+    Tutoriel complet
   
 
     
@@ -878,39 +880,246 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#post-traitement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-traitement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-traitement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichiers_de_resultats_generes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichiers de Résultats Générés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers de Résultats Générés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_des_repertoires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure des Répertoires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifeste_du_calcul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manifeste du Calcul
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#journal_du_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Journal du Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formats_de_sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formats de Sortie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formats de Sortie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format_vtu_recommande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format VTU (Recommandé)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donnees_incluses_dans_les_fichiers_vtu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Données Incluses dans les Fichiers VTU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Données Incluses dans les Fichiers VTU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donnees_nodales_point_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Données Nodales (Point Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donnees_elementaires_cell_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Données Élémentaires (Cell Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composantes_des_tenseurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composantes des Tenseurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualisation_avec_paraview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualisation avec ParaView
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualisation avec ParaView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#charger_les_fichiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Charger les fichiers
+        Charger les Fichiers
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lancer_lanimation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lire_lanimation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lancer l'animation
+        Lire l'Animation
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#appliquer_des_filtres" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Appliquer des filtres
+        Appliquer des Filtres
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichiers_csv_trackers" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
+        Fichiers CSV (Trackers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers CSV (Trackers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format_des_fichiers_csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format des Fichiers CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse_des_csv_avec_python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyse des CSV avec Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépannage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ressources" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -918,6 +1127,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -992,7 +1206,119 @@
   
   
     <li class="md-nav__item">
-      <a href="../materials/" class="md-nav__link">
+      <a href="../modules/amplitudes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amplitudes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contraintes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/contact_behaviours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comportements de Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eléments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/materials/" class="md-nav__link">
         
   
   
@@ -1020,14 +1346,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../elements/" class="md-nav__link">
+      <a href="../modules/sections/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Eléments
+    Sections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/trackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trackers
   
 
     
@@ -1222,6 +1576,58 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solveurs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solveurs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../theory/solvers/solvers_overview/" class="md-nav__link">
         
@@ -1230,7 +1636,35 @@
   <span class="md-ellipsis">
     
   
-    Solveurs
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/solvers/solvers_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture des solveurs
   
 
     
@@ -1267,6 +1701,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1954,39 +2396,246 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#post-traitement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-traitement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-traitement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichiers_de_resultats_generes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichiers de Résultats Générés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers de Résultats Générés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_des_repertoires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure des Répertoires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifeste_du_calcul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manifeste du Calcul
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#journal_du_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Journal du Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formats_de_sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formats de Sortie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formats de Sortie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format_vtu_recommande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format VTU (Recommandé)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donnees_incluses_dans_les_fichiers_vtu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Données Incluses dans les Fichiers VTU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Données Incluses dans les Fichiers VTU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donnees_nodales_point_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Données Nodales (Point Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donnees_elementaires_cell_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Données Élémentaires (Cell Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composantes_des_tenseurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composantes des Tenseurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualisation_avec_paraview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualisation avec ParaView
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualisation avec ParaView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#charger_les_fichiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Charger les fichiers
+        Charger les Fichiers
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lancer_lanimation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lire_lanimation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lancer l'animation
+        Lire l'Animation
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#appliquer_des_filtres" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Appliquer des filtres
+        Appliquer des Filtres
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichiers_csv_trackers" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
+        Fichiers CSV (Trackers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers CSV (Trackers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format_des_fichiers_csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format des Fichiers CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse_des_csv_avec_python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyse des CSV avec Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depannage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépannage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ressources" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1994,6 +2643,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2021,20 +2675,276 @@
 
   <h1>Post-traitement</h1>
 
-<p>Le format <a href="https://docs.vtk.org/en/latest/vtk_file_formats/vtkxml_file_format.html#unstructuredgrid" target="_blank">VTU (XML Unstructured Grid)</a> est le format de sortie recommandé pour les résultats dans <strong>COMFOR</strong>, bien que le format VTK hérité soit toujours supporté. Ces formats sont des standards industriels pour la visualisation scientifique.</p>
-<p>Pendant la simulation, <strong>COMFOR</strong> écrit plusieurs fichiers de résultats à la <a href="../preprocessing/#sorties_output"><code>fréquence</code></a> spécifiée. Ces fichiers sont stockés dans le répertoire de résultats défini dans votre fichier d'entrée.</p>
-<p><strong>Exemple de structure de dossier</strong></p>
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">Dossier_Projet</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">  |</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">  |---simulation.toml</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">  |---Dossier_Resultats</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">  |     |--- simulation_0.vtu</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go">  |     |--- simulation_1.vtu</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="go">  |     |--- simulation_2.vtu</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">       ...</span>
+<style>
+  .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__item .md-nav {
+    display: none !important;
+  }
+
+  .md-typeset td:first-child, .md-typeset th:first-child {
+    white-space: nowrap;
+  }
+</style>
+
+<h2 id="post-traitement">Post-traitement<a class="headerlink" href="#post-traitement" title="Permanent link">#</a></h2>
+<p>Après l'exécution réussie d'une simulation COMFOR, les résultats sont disponibles dans différents formats pour l'analyse et la visualisation. Cette section explique comment accéder à vos résultats, les visualiser et les analyser.</p>
+<hr />
+<h3 id="fichiers_de_resultats_generes">Fichiers de Résultats Générés<a class="headerlink" href="#fichiers_de_resultats_generes" title="Permanent link">#</a></h3>
+<h4 id="structure_des_repertoires">Structure des Répertoires<a class="headerlink" href="#structure_des_repertoires" title="Permanent link">#</a></h4>
+<p>Pour un fichier d'entrée <code>simulation.toml</code> avec une sortie nommée <code>fields</code> et deux trackers nommés <code>PunchForce</code> et <code>CenterPosition</code> :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Dossier_Projet/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── simulation.toml              # Fichier d'entrée
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── simulation.md                # Journal du job
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└── Results_simulation/          # Racine des résultats (ou le chemin donné avec -o)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ├── manifest.toml            # Statut du calcul et liste des fichiers
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ├── fields/                  # Un dossier par [[output]], portant son nom
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    │   ├── fields_000000.vtu
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    │   ├── fields_000001.vtu
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    │   └── ...
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    ├── PunchForce.csv           # Un fichier CSV par [tracker], portant son nom
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    └── CenterPosition.csv
 </span></code></pre></div>
-<h2 id="charger_les_fichiers">Charger les fichiers<a class="headerlink" href="#charger_les_fichiers" title="Permanent link">#</a></h2>
-<p>Pour visualiser les résultats, ouvrez <strong>ParaView</strong>. Cliquez sur <strong>File → Open</strong> et naviguez jusqu'à votre dossier de résultats. Comme <strong>COMFOR</strong> nomme les fichiers dans un ordre croissant (ex: <code>fichier_..vtu</code>), ParaView proposera automatiquement de les ouvrir en tant que <strong>groupe de fichiers</strong> (série temporelle).</p>
+<ul>
+<li>Les frames sont écrites toutes les <a href="../preprocessing/#sorties_output"><code>frequency</code></a> unités de temps et numérotées sur 6 chiffres, à partir de <code>000000</code> (état initial).</li>
+<li>Lorsque plusieurs blocs <code>[[output]]</code> sont définis, chacun écrit dans son propre dossier.</li>
+</ul>
+<h4 id="manifeste_du_calcul">Manifeste du Calcul<a class="headerlink" href="#manifeste_du_calcul" title="Permanent link">#</a></h4>
+<p><code>manifest.toml</code> est mis à jour pendant le calcul. Son <code>status</code> vaut <code>running</code> pendant la simulation, puis <code>completed</code> ou <code>failed</code>. Il liste aussi chaque fichier écrit (chemin, format et taille) :</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">schema_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'completed'</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">[[artifacts]]</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">channel_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'fields'</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'vtu'</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'fields/fields_000000.vtu'</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34305</span>
+</span></code></pre></div>
+<p>Vérifier <code>status = 'completed'</code> est un moyen simple de s'assurer, dans un script, qu'une simulation s'est terminée normalement.</p>
+<h4 id="journal_du_job">Journal du Job<a class="headerlink" href="#journal_du_job" title="Permanent link">#</a></h4>
+<p>Le journal du job <code>simulation.md</code> est un fichier Markdown écrit à côté du fichier d'entrée. Il contient les informations du fichier, le rapport de validation (avec la liste des erreurs le cas échéant), le résumé du modèle et les énergies affichées à chaque frame de sortie. Voir <a href="../analysis/#fichiers_generes">Exécution</a>.</p>
+<hr />
+<h3 id="formats_de_sortie">Formats de Sortie<a class="headerlink" href="#formats_de_sortie" title="Permanent link">#</a></h3>
+<h4 id="format_vtu_recommande">Format VTU (Recommandé)<a class="headerlink" href="#format_vtu_recommande" title="Permanent link">#</a></h4>
+<p><a href="https://docs.vtk.org/en/latest/vtk_file_formats/vtkxml_file_format.html#unstructuredgrid" target="_blank">VTU (XML Unstructured Grid)</a> est le format de sortie <strong>recommandé</strong> pour COMFOR. Le format VTK historique reste pris en charge. Ces deux formats sont des standards pour la visualisation scientifique.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Caractéristique</th>
+<th style="text-align: center;">VTU</th>
+<th style="text-align: center;">VTK (historique)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Encodage <code>ASCII</code></td>
+<td style="text-align: center;">Oui</td>
+<td style="text-align: center;">Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">Encodage <code>BINARY</code> (compressé zlib)</td>
+<td style="text-align: center;">Oui</td>
+<td style="text-align: center;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Résultats élémentaires (déformations, contraintes, fibres, résultantes)</td>
+<td style="text-align: center;">Oui</td>
+<td style="text-align: center;">Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">Identifiants (<code>MaterialID</code>, <code>PartID</code>, <code>PartInstanceID</code>)</td>
+<td style="text-align: center;">Oui</td>
+<td style="text-align: center;">Non</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemple de configuration :</strong></p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[[output]]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"fields"</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"VTU"</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"BINARY"</span><span class="w">  </span><span class="c1"># ou "ASCII"</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">frequency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="w">    </span><span class="c1"># Écriture toutes les 0.1 unités de temps</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Recommandation</p>
+<p>Utilisez <strong>BINARY</strong> pour les simulations de production afin de réduire la taille des fichiers. Utilisez <strong>ASCII</strong> pour inspecter les fichiers avec un éditeur de texte.</p>
+</div>
+<hr />
+<h3 id="donnees_incluses_dans_les_fichiers_vtu">Données Incluses dans les Fichiers VTU<a class="headerlink" href="#donnees_incluses_dans_les_fichiers_vtu" title="Permanent link">#</a></h3>
+<h4 id="donnees_nodales_point_data">Données Nodales (Point Data)<a class="headerlink" href="#donnees_nodales_point_data" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Donnée</th>
+<th style="text-align: center;">Composantes</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Displacement</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Déplacement <span class="arithmatex">\([u_x, u_y, u_z]\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Velocity</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Vitesse <span class="arithmatex">\([v_x, v_y, v_z]\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Acceleration</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Accélération <span class="arithmatex">\([a_x, a_y, a_z]\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Force</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Force nodale résultante</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ContactForce</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Force de contact nodale</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SlidingVelocity</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Vitesse de glissement du contact</td>
+</tr>
+</tbody>
+</table>
+<p>Les coordonnées des nœuds sont stockées comme points du maillage (<code>Position</code> dans le fichier).</p>
+<h4 id="donnees_elementaires_cell_data">Données Élémentaires (Cell Data)<a class="headerlink" href="#donnees_elementaires_cell_data" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Donnée</th>
+<th style="text-align: center;">Composantes</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>MaterialID</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Identifiant du matériau</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PartID</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Identifiant de la pièce, à partir de 0, dans l'ordre alphabétique des noms de pièces (syntaxe <code>[part.Nom]</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PartInstanceID</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Identifiant de l'instance au sein d'une pièce (voir <a href="../preprocessing/#piece_part"><code>pattern</code></a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Strain</code></td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Déformation dans le repère local de l'élément</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GreenLagrangeStrain</code></td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Tenseur des déformations de Green-Lagrange</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeformationGradient</code></td>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Gradient de la transformation <span class="arithmatex">\(\mathbf{F}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CauchyStress</code></td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Tenseur des contraintes de Cauchy</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ShearAngle</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Angle de cisaillement plan du renfort (matériaux composites)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>FiberStrain</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Déformation selon les directions chaîne et trame (matériaux composites)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>FiberStress</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Contrainte selon les directions chaîne et trame (matériaux composites)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>FiberCurvature</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Courbure selon les directions chaîne et trame (matériaux composites)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>FiberOrientationWarp</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Direction courante de la chaîne (matériaux composites)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>FiberOrientationWeft</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Direction courante de la trame (matériaux composites)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ResultantN</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Efforts résultants de membrane <span class="arithmatex">\(N_{xx}, N_{yy}, N_{xy}\)</span> (sections coques)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ResultantM</code></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Moments résultants de flexion <span class="arithmatex">\(M_{xx}, M_{yy}, M_{xy}\)</span> (sections coques)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ResultantQ</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Efforts tranchants résultants <span class="arithmatex">\(Q_x, Q_y\)</span> (sections coques)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Valeurs non disponibles</p>
+<p>Un champ qui ne s'applique pas à un élément est écrit <code>NaN</code> pour cet élément : par exemple tous les champs de contraintes et de déformations des éléments de contact rigides, ou les champs de fibres des matériaux non composites. ParaView affiche ces éléments avec la <em>NaN color</em> et les ignore dans la plage de valeurs.</p>
+</div>
+<h4 id="composantes_des_tenseurs">Composantes des Tenseurs<a class="headerlink" href="#composantes_des_tenseurs" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Champ</th>
+<th style="text-align: left;">Ordre des composantes</th>
+<th style="text-align: left;">Libellés ParaView</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>CauchyStress</code>, <code>GreenLagrangeStrain</code></td>
+<td style="text-align: left;"><code>xx</code>, <code>yy</code>, <code>zz</code>, <code>xy</code>, <code>yz</code>, <code>xz</code></td>
+<td style="text-align: left;">Identiques</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeformationGradient</code></td>
+<td style="text-align: left;"><code>xx</code>, <code>xy</code>, <code>xz</code>, <code>yx</code>, <code>yy</code>, <code>yz</code>, <code>zx</code>, <code>zy</code>, <code>zz</code></td>
+<td style="text-align: left;">Identiques</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Strain</code></td>
+<td style="text-align: left;"><code>C11</code>, <code>C22</code>, <code>C33</code>, <code>C23</code>, <code>C13</code>, <code>C12</code></td>
+<td style="text-align: left;"><code>XX</code>, <code>YY</code>, <code>ZZ</code>, <code>XY</code>, <code>YZ</code>, <code>XZ</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Composantes de <code>Strain</code></p>
+<p>ParaView nomme les composantes de <code>Strain</code> selon sa propre convention : la composante affichée <code>XY</code> est <code>C23</code>, <code>YZ</code> est <code>C13</code> et <code>XZ</code> est <code>C12</code>. Les mêmes noms de composantes (<code>C11</code>...<code>C12</code>) sont utilisés par le <a href="../modules/trackers/#trackers_delements_element">tracker d'éléments</a> <code>STRAIN</code>.</p>
+</div>
+<p>Dans les fichiers VTK historiques, les champs élémentaires sont écrits dans un bloc <code>FIELD</code> avec les mêmes noms et le même ordre des composantes.</p>
+<hr />
+<h3 id="visualisation_avec_paraview">Visualisation avec ParaView<a class="headerlink" href="#visualisation_avec_paraview" title="Permanent link">#</a></h3>
+<p><a href="https://www.paraview.org/" target="_blank">ParaView</a> est l'outil de visualisation <strong>recommandé</strong> pour les résultats de COMFOR.</p>
+<h4 id="charger_les_fichiers">Charger les Fichiers<a class="headerlink" href="#charger_les_fichiers" title="Permanent link">#</a></h4>
+<p>Cliquez sur <strong>File → Open</strong> et naviguez jusqu'au dossier de votre sortie (par ex. <code>Results_simulation/fields/</code>). Comme <strong>COMFOR</strong> nomme les fichiers par ordre croissant (<code>fields_..vtu</code>), ParaView propose automatiquement de les ouvrir comme un <strong>groupe de fichiers</strong> (série temporelle).</p>
 <div style="text-align:center;">
     <figure>
         <img src="../../assets/img/open_vtk.gif" alt="Chargement des fichiers dans ParaView">
@@ -2042,31 +2952,66 @@
     </figure>
 </div>
 
-<h2 id="lancer_lanimation">Lancer l'animation<a class="headerlink" href="#lancer_lanimation" title="Permanent link">#</a></h2>
-<p>Après avoir ouvert les fichiers, ils apparaîtront dans le <strong>Navigateur de pipeline</strong> (Pipeline Browser). Cliquez sur le bouton <strong>Apply</strong> dans la section des propriétés pour afficher le maillage.</p>
+<h4 id="lire_lanimation">Lire l'Animation<a class="headerlink" href="#lire_lanimation" title="Permanent link">#</a></h4>
+<p>Après ouverture, les fichiers apparaissent dans le <strong>Pipeline Browser</strong>. Cliquez sur le bouton <strong>Apply</strong> de la section Properties pour afficher le maillage.</p>
 <div class="admonition tip">
-<p class="admonition-title">Astuce de flux de travail</p>
-<p>Pour gagner du temps, activez l'option <strong>Auto Apply</strong> dans <em>Edit → Settings → General → Properties Panel Options</em>.</p>
+<p class="admonition-title">Astuce</p>
+<p>Pour gagner du temps, activez <strong>Auto Apply</strong> dans <em>Edit → Settings → General → Properties Panel Options</em>.</p>
 </div>
-<p>Pour lancer l'animation, utilisez le bouton <strong>Play</strong> de la barre d'outils VCR. Vous pouvez naviguer image par image, lire l'animation en boucle ou sauter à des pas de temps spécifiques via la barre temporelle.</p>
-<p>Les données à afficher (Scalaires ou Vecteurs) peuvent être sélectionnées dans le menu déroulant de la <strong>Variable Active</strong>. Vous pouvez visualiser les données nodales (ex: Déplacement) ou les données éléments (ex: Contrainte). Les couleurs et les dégradés peuvent être personnalisés dans la section <strong>Coloring</strong> du panneau des propriétés.</p>
+<p>Pour lire l'animation, utilisez le bouton <strong>Play</strong> de la barre VCR. Vous pouvez naviguer image par image, lire en boucle ou aller directement à un instant donné avec la barre de temps.</p>
+<p>La donnée affichée se choisit dans le menu <strong>Coloring</strong> du panneau Properties. Vous pouvez visualiser des données nodales (par ex. <code>Displacement</code>) ou élémentaires (par ex. <code>CauchyStress</code>, <code>ShearAngle</code>), et choisir la composante ou la norme.</p>
 <div style="text-align:center;">
     <figure>
-        <img src="../../assets/img/play_vtk.gif" alt="Contrôles d'animation">
+        <img src="../../assets/img/play_vtk.gif" alt="Lecture de l'animation">
         <figcaption>Lecture de l'animation</figcaption>
     </figure>
 </div>
 
-<h2 id="appliquer_des_filtres">Appliquer des filtres<a class="headerlink" href="#appliquer_des_filtres" title="Permanent link">#</a></h2>
-<p>ParaView propose une large gamme de <a href="https://docs.paraview.org/en/latest/Tutorials/ClassroomTutorials/beginningSourcesAndFilters.html" target="_blank">filtres</a> pour traiter et analyser les données de simulation. Les filtres peuvent être empilés dans le Navigateur de pipeline pour combiner leurs effets.</p>
+<div class="admonition info">
+<p class="admonition-title">Géométrie déformée</p>
+<p>Les points du maillage sont écrits à leur position <strong>courante</strong> : la géométrie affichée dans ParaView est déjà la géométrie déformée. Le champ <code>Displacement</code> peut servir à colorer le maillage, ou être utilisé avec le filtre <strong><code>Warp By Vector</code></strong> pour amplifier la déformation.</p>
+</div>
+<h4 id="appliquer_des_filtres">Appliquer des Filtres<a class="headerlink" href="#appliquer_des_filtres" title="Permanent link">#</a></h4>
+<p>ParaView propose un large éventail de <a href="https://docs.paraview.org/en/latest/Tutorials/ClassroomTutorials/beginningSourcesAndFilters.html" target="_blank">filtres</a> pour traiter et analyser les données de simulation. Les filtres peuvent être empilés dans le Pipeline Browser pour combiner leurs effets.</p>
 <p>Filtres couramment utilisés pour les simulations <strong>COMFOR</strong> :</p>
-<ul>
-<li><strong><code>Connectivity</code></strong> : Identifie les régions du maillage qui sont connectées. Ce filtre assigne un identifiant de région (données de points) aux composants connectés du jeu de données d'entrée. Nous utilisons ce filtre pour séparer les régions solides des plaques composites.</li>
-<li><strong><code>Threshold</code> (Seuil)</strong> : Ce filtre extrait les éléments qui possèdent des scalaires de données nodales ou éléments dans une plage spécifiée. Pour spécifier la plage, sélectionnez votre filtre Threshold dans l'arborescence du Navigateur de pipeline et développez la section <code>Properties(Threshold)</code>. Sélectionnez le scalaire à évaluer et fixez les valeurs max et min. Enfin, cliquez sur Apply.</li>
-<li><strong><code>Cell Data to Point Data</code></strong> : Ce filtre permet d'extrapoler les données des éléments vers les nœuds. Il effectue la moyenne des valeurs des données des éléments entourant un nœud pour calculer l'information nodale.</li>
-<li><strong><code>Temporal Interpolator</code></strong> : Interpole la solution entre deux images. Utile pour obtenir des animations fluides et de qualité pour les présentations.</li>
-<li><strong><code>Plot Data</code></strong> : Trace des tableaux de données à partir de l'entrée. Ce filtre prépare des données arbitraires pour être tracées dans n'importe quel graphique (par défaut, un graphique linéaire XY). Utilisez ce filtre pour tracer vos fichiers CSV.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Filtre</th>
+<th style="text-align: left;">Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>Threshold</code></strong></td>
+<td style="text-align: left;">Extraire les éléments dont la valeur est dans une plage (par ex. <code>PartID</code> pour isoler une pièce, ou <code>ShearAngle</code> pour trouver les zones fortement cisaillées)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Connectivity</code></strong></td>
+<td style="text-align: left;">Identifier les régions connexes, par ex. pour séparer les outils des plaques composites</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Cell Data to Point Data</code></strong></td>
+<td style="text-align: left;">Moyenner les données élémentaires aux nœuds (cartes de couleurs plus lisses)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Warp By Vector</code></strong></td>
+<td style="text-align: left;">Amplifier une déformation à partir d'un champ vectoriel</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Temporal Interpolator</code></strong></td>
+<td style="text-align: left;">Interpoler entre les frames, pour des animations fluides</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Plot Data Over Time</code></strong></td>
+<td style="text-align: left;">Tracer l'évolution temporelle d'une sélection</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Plot Data</code></strong></td>
+<td style="text-align: left;">Tracer des tableaux de données, par ex. le contenu d'un fichier CSV de tracker</td>
+</tr>
+</tbody>
+</table>
 <div style="text-align:center;">
     <figure>
         <img src="../../assets/img/filter_vtk.gif" alt="Application de filtres">
@@ -2074,11 +3019,106 @@
     </figure>
 </div>
 
-<h2 id="ressources">Ressources<a class="headerlink" href="#ressources" title="Permanent link">#</a></h2>
-<p>Pour une formation approfondie sur ParaView, consultez ces ressources :</p>
+<hr />
+<h3 id="fichiers_csv_trackers">Fichiers CSV (Trackers)<a class="headerlink" href="#fichiers_csv_trackers" title="Permanent link">#</a></h3>
+<p>Les <a href="../modules/trackers/">trackers</a> enregistrent l'historique temporel de variables spécifiques dans des fichiers <strong>CSV</strong>, un fichier par tracker : <code>&lt;racine_résultats&gt;/&lt;nom_tracker&gt;.csv</code>. Une ligne est écrite à chaque écriture d'une frame de sortie.</p>
+<h4 id="format_des_fichiers_csv">Format des Fichiers CSV<a class="headerlink" href="#format_des_fichiers_csv" title="Permanent link">#</a></h4>
 <ul>
-<li><a href="https://www.paraview.org/Wiki/The_ParaView_Tutorial" target="_blank">Tutoriel officiel de ParaView (Wiki)</a></li>
-<li><a href="https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-" target="_blank">Tutoriels de Cyprien Rusu - ParaView pour l'EF</a></li>
+<li><strong>Ligne d'en-tête</strong> : <code>Time</code>, une colonne par entité suivie, puis <code>Total</code></li>
+<li><strong>Séparateur</strong> : virgule suivie d'un espace (<code>,</code>)</li>
+<li><strong>Total</strong> : somme des valeurs de toutes les entités suivies</li>
+</ul>
+<p><strong>Exemple (tracker NODE, <code>variable = "FORCE"</code>, <code>direction = "Z"</code>) :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Time, Node 101, Node 102, Node 103, Total
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>0, 0, 0, 0, 0
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>0.1, 50.2, 48.7, 52.1, 151
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>0.2, 100.5, 95.3, 105.8, 301.6
+</span></code></pre></div>
+<p><strong>Exemple (tracker ELEMENT, <code>variable = "CAUCHY_STRESS"</code>, <code>component = "xx"</code>) :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Time, Element 50, Element 51, Element 52, Total
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>0, 0, 0, 0, 0
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>0.1, 15.2, 18.1, 14.5, 47.8
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>0.2, 20.1, 22.5, 19.8, 62.4
+</span></code></pre></div>
+<h4 id="analyse_des_csv_avec_python">Analyse des CSV avec Python<a class="headerlink" href="#analyse_des_csv_avec_python" title="Permanent link">#</a></h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># skipinitialspace supprime l'espace après chaque virgule</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'Results_simulation/PunchForce.csv'</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Time'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Total'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Force du poinçon'</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Temps'</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Force'</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p><strong>Courbe force-déplacement</strong>, avec un tracker <code>NODE</code> sur la force du poinçon et un tracker <code>POSITION</code> sur un nœud du poinçon :</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">force</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'Results_simulation/PunchForce.csv'</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">position</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'Results_simulation/PunchPosition.csv'</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Déplacement du poinçon depuis sa position initiale</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">displacement</span> <span class="o">=</span> <span class="n">position</span><span class="p">[</span><span class="s1">'Total'</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">position</span><span class="p">[</span><span class="s1">'Total'</span><span class="p">]</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">displacement</span><span class="p">,</span> <span class="n">force</span><span class="p">[</span><span class="s1">'Total'</span><span class="p">])</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Déplacement du poinçon'</span><span class="p">)</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Force du poinçon'</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Les trackers correspondants :</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[tracker.PunchForce]</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NODE"</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FORCE"</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Z"</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"PunchNodes"</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">[tracker.PunchPosition]</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NODE"</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"POSITION"</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Z"</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">nodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">50</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Les fichiers CSV peuvent aussi être ouverts directement dans ParaView (avec le filtre <strong>Plot Data</strong>), Excel ou LibreOffice Calc.</p>
+<hr />
+<h3 id="depannage">Dépannage<a class="headerlink" href="#depannage" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Problème</th>
+<th style="text-align: left;">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pas de série temporelle détectée dans ParaView</td>
+<td style="text-align: left;">Ouvrir les fichiers depuis le dossier de la sortie (<code>Results_&lt;nom&gt;/&lt;nom_output&gt;/</code>) et sélectionner le groupe <code>..vtu</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Une composante de <code>Strain</code> n'est pas celle attendue</td>
+<td style="text-align: left;">Vérifier l'ordre des composantes (voir <a href="#composantes_des_tenseurs">Composantes des Tenseurs</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Certains éléments apparaissent avec la NaN color</td>
+<td style="text-align: left;">Le champ ne s'applique pas à ces éléments (ex: outils rigides, champs de fibres des matériaux non composites)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>KeyError: 'Total'</code> avec pandas</td>
+<td style="text-align: left;">Utiliser <code>skipinitialspace=True</code> dans <code>read_csv</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Le <code>status</code> de <code>manifest.toml</code> est <code>failed</code></td>
+<td style="text-align: left;">Lire l'erreur à la fin du journal du job (<code>&lt;nom_entrée&gt;.md</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="ressources">Ressources<a class="headerlink" href="#ressources" title="Permanent link">#</a></h3>
+<p>Pour une formation approfondie à ParaView, consultez ces ressources :</p>
+<ul>
+<li><a href="https://www.paraview.org/Wiki/The_ParaView_Tutorial" target="_blank">Tutoriel officiel ParaView</a></li>
+<li><a href="https://docs.paraview.org/" target="_blank">Documentation ParaView</a></li>
+<li><a href="https://youtube.com/playlist?list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-" target="_blank">Cyprien Rusu - ParaView for FEA</a></li>
 </ul>
 
 
@@ -2131,13 +3171,13 @@
         
         
           
-          <a href="../materials/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Matériaux">
+          <a href="../modules/amplitudes/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Amplitudes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Matériaux
+                Amplitudes
               </div>
             </div>
             <div class="md-footer__button md-icon">

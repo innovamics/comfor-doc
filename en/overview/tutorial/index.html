@@ -31,7 +31,7 @@
     
     
       
-        <title>Tutorial - Comfor Documentation</title>
+        <title>Tutorial - Double Dome Benchmark - Comfor Documentation</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example_overview" class="md-skip">
+        <a href="#complete_tutorial_double_dome_benchmark" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial
+              Tutorial - Double Dome Benchmark
             
           </span>
         </div>
@@ -667,7 +667,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Complete Tutorial
   
 
     
@@ -685,7 +685,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Complete Tutorial
   
 
     
@@ -709,33 +709,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example_overview" class="md-nav__link">
+  <a href="#complete_tutorial_double_dome_benchmark" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Overview
+        Complete Tutorial: Double Dome Benchmark
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the_input_file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Input File
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The Input File">
+    <nav class="md-nav" aria-label="Complete Tutorial: Double Dome Benchmark">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#understanding_the_blocks" class="md-nav__link">
+  <a href="#introduction_to_the_double_dome_benchmark" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the Blocks
+        Introduction to the Double Dome Benchmark
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to the Double Dome Benchmark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what_is_the_double_dome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Double Dome?
       
     </span>
   </a>
@@ -743,10 +744,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding_the_blocks_1" class="md-nav__link">
+  <a href="#benchmark_configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the Blocks
+        Benchmark Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry
       
     </span>
   </a>
@@ -757,30 +769,435 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#running_the_simulation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#required_files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running the Simulation
+        Required Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available_meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Meshes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Meshes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_full_model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Full Model
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizing_results_in_paraview" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2_quarter_model_recommended_for_tutorial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visualizing Results in ParaView
+        2. Quarter Model (Recommended for tutorial)
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_1_understanding_the_toml_file_structure" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
+        Step 1: Understanding the TOML File Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Understanding the TOML File Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_2_create_the_input_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create the Input File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Create the Input File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section_1_model_metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1: Model Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_2_simulation_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2: Simulation Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_3_output_configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3: Output Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_4_mesh_import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4: Mesh Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_5_part_definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5: Part Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_6_set_definitions_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 6: Set Definitions (Groups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_7_materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 7: Materials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_8_sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 8: Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_9_amplitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 9: Amplitudes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_10_constraints_boundary_conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 10: Constraints (Boundary Conditions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_11_contact_behaviors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 11: Contact Behaviors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_12_contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 12: Contact
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_3_validate_the_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Validate the File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_4_run_the_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Run the Simulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_5_analyze_the_results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Analyze the Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Analyze the Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization_with_paraview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization with ParaView
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization with ParaView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deformation_visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deformation Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fabric_visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fabric Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part_selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker_analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracker Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_6_interpret_results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Interpret Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Interpret Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulation_verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common_issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise_customize_the_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise: Customize the Simulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#next_steps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -788,6 +1205,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1030,7 +1452,119 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/materials/" class="md-nav__link">
+      <a href="../../docs/modules/amplitudes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amplitudes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Constraints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/contact_behaviours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact Behaviours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/materials/" class="md-nav__link">
         
   
   
@@ -1058,14 +1592,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/elements/" class="md-nav__link">
+      <a href="../../docs/modules/sections/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Elements
+    Sections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/trackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trackers
   
 
     
@@ -1257,6 +1819,58 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solvers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solvers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../docs/theory/solvers/solvers_overview/" class="md-nav__link">
         
@@ -1265,7 +1879,35 @@
   <span class="md-ellipsis">
     
   
-    Solvers
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/theory/solvers/solvers_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solvers Architecture
   
 
     
@@ -1302,6 +1944,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1989,33 +2639,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example_overview" class="md-nav__link">
+  <a href="#complete_tutorial_double_dome_benchmark" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Overview
+        Complete Tutorial: Double Dome Benchmark
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the_input_file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Input File
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The Input File">
+    <nav class="md-nav" aria-label="Complete Tutorial: Double Dome Benchmark">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#understanding_the_blocks" class="md-nav__link">
+  <a href="#introduction_to_the_double_dome_benchmark" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the Blocks
+        Introduction to the Double Dome Benchmark
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to the Double Dome Benchmark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what_is_the_double_dome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Double Dome?
       
     </span>
   </a>
@@ -2023,10 +2674,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding_the_blocks_1" class="md-nav__link">
+  <a href="#benchmark_configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the Blocks
+        Benchmark Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry
       
     </span>
   </a>
@@ -2037,30 +2699,435 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#running_the_simulation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#required_files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running the Simulation
+        Required Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available_meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Meshes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Meshes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_full_model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Full Model
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizing_results_in_paraview" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2_quarter_model_recommended_for_tutorial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visualizing Results in ParaView
+        2. Quarter Model (Recommended for tutorial)
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_1_understanding_the_toml_file_structure" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
+        Step 1: Understanding the TOML File Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Understanding the TOML File Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_2_create_the_input_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create the Input File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Create the Input File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section_1_model_metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1: Model Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_2_simulation_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2: Simulation Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_3_output_configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3: Output Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_4_mesh_import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4: Mesh Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_5_part_definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5: Part Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_6_set_definitions_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 6: Set Definitions (Groups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_7_materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 7: Materials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_8_sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 8: Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_9_amplitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 9: Amplitudes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_10_constraints_boundary_conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 10: Constraints (Boundary Conditions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_11_contact_behaviors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 11: Contact Behaviors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section_12_contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 12: Contact
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_3_validate_the_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Validate the File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_4_run_the_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Run the Simulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_5_analyze_the_results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Analyze the Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Analyze the Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization_with_paraview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization with ParaView
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization with ParaView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deformation_visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deformation Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fabric_visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fabric Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part_selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker_analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracker Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_6_interpret_results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Interpret Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Interpret Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulation_verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common_issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise_customize_the_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise: Customize the Simulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#next_steps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2068,6 +3135,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2093,171 +3165,876 @@
   
 
 
-  <h1>Tutorial</h1>
+  <h1>Complete Tutorial</h1>
 
 <style>
-  .md-sidebar--secondary .md-nav__list .md-nav__item .md-nav {
+  .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__item .md-nav {
     display: none !important;
+  }
+
+  .md-typeset td:first-child, .md-typeset th:first-child {
+    white-space: nowrap;
   }
 </style>
 
-<p>In this tutorial, we will go through a complete example using <strong>COMFOR</strong> — from input file setup to result visualization in ParaView.</p>
-<p>You will learn how to:</p>
+<h2 id="complete_tutorial_double_dome_benchmark">Complete Tutorial: Double Dome Benchmark<a class="headerlink" href="#complete_tutorial_double_dome_benchmark" title="Permanent link">#</a></h2>
+<p>This tutorial guides you step-by-step through creating and running a <strong>Double Dome</strong> simulation with COMFOR. The Double Dome benchmark is a standard test in the composite forming community, used to evaluate the ability of simulation codes to model the forming of complex composite structures.</p>
+<h3 id="introduction_to_the_double_dome_benchmark">Introduction to the Double Dome Benchmark<a class="headerlink" href="#introduction_to_the_double_dome_benchmark" title="Permanent link">#</a></h3>
+<h4 id="what_is_the_double_dome">What is the Double Dome?<a class="headerlink" href="#what_is_the_double_dome" title="Permanent link">#</a></h4>
+<p>The <strong>Double Dome</strong> is a widely used numerical benchmark in the field of composite material forming simulation. It consists of a flat plate being formed into a double dome shape by a central punch. This test evaluates:</p>
 <ul>
-<li>Understand the structure of a modern <strong>TOML</strong> input file.</li>
-<li>Run a simulation using the terminal.</li>
-<li>Visualize and animate results in ParaView.</li>
+<li>The code's ability to handle large deformations</li>
+<li>The accuracy of composite material behavior modeling</li>
+<li>Contact management between punch, die, and plate</li>
+<li>Numerical stability for explicit simulations</li>
 </ul>
-<h2 id="example_overview">Example Overview<a class="headerlink" href="#example_overview" title="Permanent link">#</a></h2>
-<p>For this tutorial, we will use the <code>Feuilles</code> example, which can be downloaded from the <a href="../download/#examples">COMFOR Download page</a>.</p>
-<p>After extracting the archive, the folder structure is:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>examples/Feuilles/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> ├── Feuilles.toml       # Modern TOML input file
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> ├── Feuilles.txt        # Old Fembic input file
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> └── Results_Feuilles/   # Output directory (created after running COMFOR)
-</span></code></pre></div>
-<h2 id="the_input_file">The Input File<a class="headerlink" href="#the_input_file" title="Permanent link">#</a></h2>
-<p>A <strong>COMFOR</strong> input file defines all the parameters needed for the simulation. While we maintain support for the legacy format, we strongly recommend using <strong>TOML</strong> for its readability and modularity.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">TOML <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.014 0h5.34v2.652H2.888v18.681h2.468V24H.015zm17.622 5.049v2.78h-4.274v12.935h-3.008V7.83H6.059V5.05zM23.986 24h-5.34v-2.652h2.467V2.667h-2.468V0h5.34v24Z"/></svg></span></label><label for="__tabbed_1_2">Fembic <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6v2H3V6zM3 18h9v-2H3zm0-5h18v-2H3z"/></svg></span></label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The TOML format allows for a clear separation between geometric sources (<code>mesh</code>) and physical entities (<code>part</code>).</p>
-</div>
-<div class="language-toml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[control]</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">run_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">run_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.0</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">[[output]]</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;VTU&quot;</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">frequency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Results_Feuilles&quot;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">[material.LeafMaterial]</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HYPERELASTIC&quot;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">density</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.00001</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">potential</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;OGDEN&quot;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">mu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">-0.09</span><span class="p">,</span><span class="w"> </span><span class="mf">13.9</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.20</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">-13.7</span><span class="p">,</span><span class="w"> </span><span class="mf">0.10</span><span class="p">,</span><span class="w"> </span><span class="mf">5.06</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">[mesh.LeafMesh]</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;INLINE&quot;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">nodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="p">]</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MEMBRANE_3&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="p">]</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="k">[part.MainLeaf]</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;LeafMesh&quot;</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="n">material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;LeafMaterial&quot;</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="n">thickness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span>
-</span></code></pre></div>
-<h4 id="understanding_the_blocks">Understanding the Blocks<a class="headerlink" href="#understanding_the_blocks" title="Permanent link">#</a></h4>
-<p>Each section defines a pillar of the simulation:</p>
+<h4 id="benchmark_configuration">Benchmark Configuration<a class="headerlink" href="#benchmark_configuration" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Material</strong></td>
+<td style="text-align: left;">Textile composite (HYPERTEXTILE)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Plate thickness</strong></td>
+<td style="text-align: left;">1.0 mm</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Punch speed</strong></td>
+<td style="text-align: left;">10 mm/s (reached after a 1 s ramp)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Punch stroke</strong></td>
+<td style="text-align: left;">65 mm</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Simulation duration</strong></td>
+<td style="text-align: left;">7 seconds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Friction</strong></td>
+<td style="text-align: left;">Coulomb coefficient = 0.1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="geometry">Geometry<a class="headerlink" href="#geometry" title="Permanent link">#</a></h4>
 <ul>
-<li><code>[control]</code> — Defines the time range and global integration settings.</li>
-<li><code>[[output]]</code> — Configures where and how often results (<code>.vtu</code>) are saved.</li>
-<li><code>[material]</code> — Defines the physical behavior (e.g., Ogden hyperelastic model).</li>
-<li><code>[mesh]</code> &amp; <code>[part]</code> — Geometry definition and physical instantiation.</li>
+<li><strong>Plate</strong>: Flat textile sheet, meshed with 3-node triangles</li>
+<li><strong>Punch</strong>: Double-dome shaped rigid tool</li>
+<li><strong>Die</strong>: Matching rigid cavity</li>
 </ul>
-</div>
-<div class="tabbed-block">
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>In the <strong>Fembic</strong> format, nodes and elements are defined directly, and physical properties (material, thickness) are assigned within the element block.</p>
-</div>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CONTROL
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>RUN<span class="w"> </span>FROM<span class="w"> </span>0.0<span class="w"> </span>TO<span class="w"> </span>15.0
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>OUTPUT
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>TYPE<span class="w"> </span>=<span class="w"> </span>VTU<span class="w"> </span>FREQUENCY<span class="w"> </span>=<span class="w"> </span>0.1<span class="w"> </span>DIRECTORY<span class="w"> </span>=<span class="w"> </span>Results_Feuilles
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>MATERIALS<span class="w"> </span>TYPE<span class="w"> </span>HYPERELASTIC
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>LeafMaterial<span class="w"> </span>RHO<span class="w"> </span>=<span class="w"> </span>0.00001<span class="w"> </span>TYPE<span class="w"> </span>=<span class="w"> </span>OGDEN<span class="w"> </span>MU<span class="w"> </span>=<span class="w"> </span>[<span class="w"> </span>-0.09,<span class="w"> </span>13.9,<span class="w"> </span>-0.20<span class="w"> </span>]<span class="w"> </span>ALPHA<span class="w"> </span>=<span class="w"> </span>[<span class="w"> </span>-13.7,<span class="w"> </span>0.10,<span class="w"> </span>5.06<span class="w"> </span>]
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>NODES
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>1<span class="w">   </span>X<span class="w"> </span>=<span class="w"> </span>0.0<span class="w">  </span>Y<span class="w"> </span>=<span class="w"> </span>0.0<span class="w">  </span>Z<span class="w"> </span>=<span class="w"> </span>0.0
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2<span class="w">   </span>X<span class="w"> </span>=<span class="w"> </span>1.0<span class="w">  </span>Y<span class="w"> </span>=<span class="w"> </span>1.0<span class="w">  </span>Z<span class="w"> </span>=<span class="w"> </span>0.0
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>3<span class="w">   </span>X<span class="w"> </span>=<span class="w"> </span>2.0<span class="w">  </span>Y<span class="w"> </span>=<span class="w"> </span>2.0<span class="w">  </span>Z<span class="w"> </span>=<span class="w"> </span>0.0
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>ELEMENTS<span class="w"> </span>TYPE<span class="w"> </span>MEMBRANE_3
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>1<span class="w">   </span>NODES<span class="w"> </span>=<span class="w"> </span>[1,<span class="w"> </span>2,<span class="w"> </span>3]<span class="w"> </span>MATERIAL<span class="w"> </span>=<span class="w"> </span>LeafMaterial<span class="w"> </span>T<span class="w"> </span>=<span class="w"> </span>1.0
-</span></code></pre></div>
-<h4 id="understanding_the_blocks_1">Understanding the Blocks<a class="headerlink" href="#understanding_the_blocks_1" title="Permanent link">#</a></h4>
-<p>Each section defines a pillar of the simulation:</p>
+<hr />
+<h3 id="required_files">Required Files<a class="headerlink" href="#required_files" title="Permanent link">#</a></h3>
+<p>To follow this tutorial, you will need the mesh files:</p>
+<h4 id="available_meshes">Available Meshes<a class="headerlink" href="#available_meshes" title="Permanent link">#</a></h4>
+<p>COMFOR provides two versions of the benchmark:</p>
+<h5 id="1_full_model">1. Full Model<a class="headerlink" href="#1_full_model" title="Permanent link">#</a></h5>
 <ul>
-<li><code>CONTROL</code> — defines simulation time and output frequency</li>
-<li><code>MATERIAL</code> — defines material properties</li>
-<li><code>NODES</code> and <code>ELEMENTS</code> — define the mesh and connectivity</li>
-<li><code>CONSTRAINT</code> and <code>LOAD</code> — apply boundary conditions and loads</li>
+<li><strong>Complete geometry</strong>, without symmetry</li>
+<li>Contains: <code>die.inp</code>, <code>plate.inp</code>, <code>punch.inp</code></li>
+<li><strong>Download</strong>: <a href="../../assets/tutorial/full/die.inp">full/die.inp</a>, <a href="../../assets/tutorial/full/plate.inp">full/plate.inp</a>, <a href="../../assets/tutorial/full/punch.inp">full/punch.inp</a></li>
 </ul>
-</div>
-</div>
-</div>
-<p>For a full description of all available parameters, see the <a href="../../docs/preprocessing/">Configuration Reference</a>.</p>
-<h2 id="running_the_simulation">Running the Simulation<a class="headerlink" href="#running_the_simulation" title="Permanent link">#</a></h2>
-<p>The most efficient way to run <strong>COMFOR</strong> is via the terminal (Command Prompt on Windows, Terminal on macOS/Linux).</p>
-<ol>
-<li>Open a terminal and navigate to your example folder.</li>
-<li>Run <strong>COMFOR</strong> by passing the input file as an argument:</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Linux / macOS</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>comfor.exe<span class="w"> </span>-j<span class="w"> </span>Feuilles.toml
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./comfor<span class="w"> </span>-j<span class="w"> </span>Feuilles.toml
-</span></code></pre></div>
-</div>
-</div>
-</div>
+<h5 id="2_quarter_model_recommended_for_tutorial">2. Quarter Model (Recommended for tutorial)<a class="headerlink" href="#2_quarter_model_recommended_for_tutorial" title="Permanent link">#</a></h5>
+<ul>
+<li><strong>Faster simulations</strong> exploiting the double symmetry of the benchmark</li>
+<li>Contains: <code>die.inp</code>, <code>plate.inp</code>, <code>punch.inp</code>, <code>plate.msh</code></li>
+<li>Size: 1 892 nodes and 3 492 elements once the three parts are assembled</li>
+<li><strong>Download</strong>: <a href="../../assets/tutorial/quart/die.inp">quart/die.inp</a>, <a href="../../assets/tutorial/quart/plate.inp">quart/plate.inp</a>, <a href="../../assets/tutorial/quart/plate.msh">quart/plate.msh</a>, <a href="../../assets/tutorial/quart/punch.inp">quart/punch.inp</a></li>
+</ul>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If you run <code>comfor</code> without any arguments, the program will start and interactively ask you to type the path to your input file.</p>
+<p class="admonition-title">Recommendation</p>
+<p>For this tutorial, we use the <strong>quarter</strong> model which is faster to run while demonstrating all features.</p>
 </div>
-<p>During execution, <strong>COMFOR</strong> displays real-time statistics:</p>
-<div class="language-console highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">=================================</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="go">Elapsed time: 0.23s</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">Current time: 5.0</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="go">Internal energy: 3.24</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">Kinetic energy: 0.12</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="go">=================================</span>
+<hr />
+<h3 id="step_1_understanding_the_toml_file_structure">Step 1: Understanding the TOML File Structure<a class="headerlink" href="#step_1_understanding_the_toml_file_structure" title="Permanent link">#</a></h3>
+<p>The <code>double-dome.toml</code> file is structured into multiple blocks that define the complete simulation. Let's examine each section:</p>
+<h4 id="global_structure">Global Structure<a class="headerlink" href="#global_structure" title="Permanent link">#</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>double-dome.toml
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── [model]          # Simulation metadata (informative)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── [control]        # Time parameters
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── [output.*]       # Output configuration (1)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── [mesh.*]         # Mesh sources (3)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── [part.*]         # Physical components (3)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── [set.*]          # Entity groups (5)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── [material.*]     # Constitutive laws (1)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── [section.*]      # Physical properties (2)
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── [[section_assignments]] # Associations (3)
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── [amplitude.*]    # Time functions (1)
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── [constraint.*]   # Boundary conditions (4)
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── [contact_behaviour.*] # Contact laws (2)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>└── [contact.*]      # Contact definition (1)
 </span></code></pre></div>
-<p>Once finished, a <code>Results_Feuilles/</code> folder will appear containing <code>.vtu</code> files.</p>
-<h2 id="visualizing_results_in_paraview">Visualizing Results in ParaView<a class="headerlink" href="#visualizing_results_in_paraview" title="Permanent link">#</a></h2>
-<p>To visualize the deformation and movement:</p>
+<hr />
+<h3 id="step_2_create_the_input_file">Step 2: Create the Input File<a class="headerlink" href="#step_2_create_the_input_file" title="Permanent link">#</a></h3>
+<p>Create a file <code>double-dome.toml</code> with the following content. We will explain each section in detail.</p>
+<h4 id="section_1_model_metadata">Section 1: Model Metadata<a class="headerlink" href="#section_1_model_metadata" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># --- Model ---</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">[model]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Double-dome"</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Innovamics"</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"2026-08-05"</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Double-dome Benchmark"</span>
+</span></code></pre></div>
+<p>This block is optional and purely informative: it documents the model but is not used by the solver.</p>
+<h4 id="section_2_simulation_control">Section 2: Simulation Control<a class="headerlink" href="#section_2_simulation_control" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># --- Control ---</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">[control]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">run_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">run_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.0</span>
+</span></code></pre></div>
+<ul>
+<li><code>run_from</code>: Start time (usually 0.0)</li>
+<li><code>run_to</code>: End time of simulation (7 seconds for the full punch stroke)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Time Step</p>
+<p>The time step is not specified here. COMFOR automatically calculates it based on mesh and material properties.</p>
+</div>
+<h4 id="section_3_output_configuration">Section 3: Output Configuration<a class="headerlink" href="#section_3_output_configuration" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># --- Output ---</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">[output.vtus]</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"VTU"</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">frequency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"BINARY"</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>vtus</code></td>
+<td style="text-align: left;">(name)</td>
+<td style="text-align: left;">Name of the output, given by the table header <code>[output.vtus]</code>. Also used as the name of the result sub-folder and files</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>type</code></td>
+<td style="text-align: left;"><code>"VTU"</code></td>
+<td style="text-align: left;">Output format (recommended)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>frequency</code></td>
+<td style="text-align: left;"><code>0.1</code></td>
+<td style="text-align: left;">Write results every 0.1 seconds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>format</code></td>
+<td style="text-align: left;"><code>"BINARY"</code></td>
+<td style="text-align: left;">Binary format for smaller files</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Output Directory</p>
+<p>By default, results are written to <code>Results_double-dome/</code>, next to the input file. The frames of this output are stored in <code>Results_double-dome/vtus/</code>.</p>
+</div>
+<h4 id="section_4_mesh_import">Section 4: Mesh Import<a class="headerlink" href="#section_4_mesh_import" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># --- Mesh import ---</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">[mesh.punch]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ABAQUS"</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"quart/punch.inp"</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">[mesh.die]</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ABAQUS"</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"quart/die.inp"</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">[mesh.plate]</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GMSH"</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"quart/plate.msh"</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong>
+- <strong><code>punch</code></strong>: Hemispherical punch (Abaqus <code>.inp</code> format)
+- <strong><code>die</code></strong>: Die/cavity (Abaqus <code>.inp</code> format)
+- <strong><code>plate</code></strong>: Plate to be formed (Gmsh <code>.msh</code> format)</p>
+<div class="admonition warning">
+<p class="admonition-title">File Paths</p>
+<p>Relative mesh paths are resolved from the directory containing the TOML file. Make sure the mesh files are in a <code>quart/</code> directory next to <code>double-dome.toml</code>, or adjust the paths accordingly.</p>
+</div>
+<h4 id="section_5_part_definitions">Section 5: Part Definitions<a class="headerlink" href="#section_5_part_definitions" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># --- Parts ---</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">[part.punch]</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"punch"</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">element_mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"S3"</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"CONTACT_TRIANGLE"</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">translation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">]</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">[part.die]</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"die"</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">element_mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"S3"</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"CONTACT_TRIANGLE"</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">translation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">[part.plate]</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plate"</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">element_mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"2"</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"DKT18"</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">translation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Part</th>
+<th style="text-align: left;">Mesh</th>
+<th style="text-align: left;">Mapping</th>
+<th style="text-align: left;">Translation</th>
+<th style="text-align: left;">Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>punch</code></td>
+<td style="text-align: left;"><code>punch</code></td>
+<td style="text-align: left;">S3 → CONTACT_TRIANGLE</td>
+<td style="text-align: left;">[-1, -1, 10]</td>
+<td style="text-align: left;">Movable punch</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>die</code></td>
+<td style="text-align: left;"><code>die</code></td>
+<td style="text-align: left;">S3 → CONTACT_TRIANGLE</td>
+<td style="text-align: left;">[-1, -1, 0]</td>
+<td style="text-align: left;">Fixed die</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>plate</code></td>
+<td style="text-align: left;"><code>plate</code></td>
+<td style="text-align: left;">2 → DKT18</td>
+<td style="text-align: left;">[0, 0, 1]</td>
+<td style="text-align: left;">Plate to form</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Element Mapping</p>
+<p>The keys of <code>element_mapping</code> are the element types <strong>as written in the mesh file</strong>:</p>
+<ul>
+<li>Abaqus <code>S3</code> triangles (read as <code>S3L_C0</code> by default) are mapped to <code>CONTACT_TRIANGLE</code> for the punch and the die (rigid contact surfaces).</li>
+<li>Gmsh triangles (type <code>2</code>, read as <code>MEMBRANE_3</code> by default) are mapped to <code>DKT18</code> for the plate (shell triangle with bending).</li>
+</ul>
+<p>See the <a href="../../docs/preprocessing/#mesh">Mesh block</a> for the full translation tables.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Translation</p>
+<p>Translations are used to position parts in space. The punch starts above the plate (z=10.0), the plate at z=1.0 and the die below (z=0.0).</p>
+</div>
+<h4 id="section_6_set_definitions_groups">Section 6: Set Definitions (Groups)<a class="headerlink" href="#section_6_set_definitions_groups" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># --- Sets ---</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">[set.punchNodes]</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NODE"</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"punch"</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">[set.punchElements]</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ELEMENT"</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"punch"</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">[set.dieNodes]</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NODE"</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"die"</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">[set.dieElements]</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ELEMENT"</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"die"</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="k">[set.plateElements]</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ELEMENT"</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plate"</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="k">[set.plateXNodes]</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NODE"</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plate"</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">666</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">]</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="k">[set.plateYNodes]</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NODE"</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plate"</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Set</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Part</th>
+<th style="text-align: left;">Selection</th>
+<th style="text-align: left;">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>punchNodes</code></td>
+<td style="text-align: left;">NODE</td>
+<td style="text-align: left;">punch</td>
+<td style="text-align: left;">All nodes</td>
+<td style="text-align: left;">Velocity constraint</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>punchElements</code></td>
+<td style="text-align: left;">ELEMENT</td>
+<td style="text-align: left;">punch</td>
+<td style="text-align: left;">All elements</td>
+<td style="text-align: left;">Section assignment</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dieNodes</code></td>
+<td style="text-align: left;">NODE</td>
+<td style="text-align: left;">die</td>
+<td style="text-align: left;">All nodes</td>
+<td style="text-align: left;">Fixed constraint</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dieElements</code></td>
+<td style="text-align: left;">ELEMENT</td>
+<td style="text-align: left;">die</td>
+<td style="text-align: left;">All elements</td>
+<td style="text-align: left;">Section assignment</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>plateElements</code></td>
+<td style="text-align: left;">ELEMENT</td>
+<td style="text-align: left;">plate</td>
+<td style="text-align: left;">All elements</td>
+<td style="text-align: left;">Section assignment</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>plateXNodes</code></td>
+<td style="text-align: left;">NODE</td>
+<td style="text-align: left;">plate</td>
+<td style="text-align: left;">Nodes 1, 36, 71,...</td>
+<td style="text-align: left;">X constraint</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>plateYNodes</code></td>
+<td style="text-align: left;">NODE</td>
+<td style="text-align: left;">plate</td>
+<td style="text-align: left;">Nodes 1-35</td>
+<td style="text-align: left;">Y constraint</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Range Selection</p>
+<ul>
+<li><code>range = [1, 666, 35]</code>: Selects nodes 1, 36, 71, 106, ... 666 (increment of 35)</li>
+<li><code>range = [1, 35, 1]</code>: Selects nodes 1 to 35 (increment of 1)</li>
+</ul>
+</div>
+<h4 id="section_7_materials">Section 7: Materials<a class="headerlink" href="#section_7_materials" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># --- Materials ---</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">[material.HyperTex]</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"HYPERTEXTILE"</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">density</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-6</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">damping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">warp_orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">weft_orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">k_elong_warp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">100.0</span><span class="p">]</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">k_elong_weft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">100.0</span><span class="p">]</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">k_shear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0185</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0464</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.0213</span><span class="p">]</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">k_bend_warp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">5.0</span><span class="p">]</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">k_bend_weft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">5.0</span><span class="p">]</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n">k_bend_twist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Composite Material Properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>type</code></td>
+<td style="text-align: left;"><code>"HYPERTEXTILE"</code></td>
+<td style="text-align: left;">Composite material model</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>density</code></td>
+<td style="text-align: left;"><code>1e-6</code></td>
+<td style="text-align: left;">Mass density (ton/mm³)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>damping</code></td>
+<td style="text-align: left;"><code>5.0</code></td>
+<td style="text-align: left;">Rayleigh damping</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>warp_orientation</code></td>
+<td style="text-align: left;">[1,0,0]</td>
+<td style="text-align: left;">Warp fiber direction</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>weft_orientation</code></td>
+<td style="text-align: left;">[0,1,0]</td>
+<td style="text-align: left;">Weft fiber direction</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>k_elong_warp</code></td>
+<td style="text-align: left;">[100.0]</td>
+<td style="text-align: left;">Tensile stiffness (warp)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>k_elong_weft</code></td>
+<td style="text-align: left;">[100.0]</td>
+<td style="text-align: left;">Tensile stiffness (weft)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>k_shear</code></td>
+<td style="text-align: left;">[0.0185, 0.0464, -0.0213]</td>
+<td style="text-align: left;">Shear stiffness</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>k_bend_warp</code></td>
+<td style="text-align: left;">[5.0]</td>
+<td style="text-align: left;">Bending stiffness (warp)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>k_bend_weft</code></td>
+<td style="text-align: left;">[5.0]</td>
+<td style="text-align: left;">Bending stiffness (weft)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>k_bend_twist</code></td>
+<td style="text-align: left;">[0.0]</td>
+<td style="text-align: left;">Twist stiffness</td>
+</tr>
+</tbody>
+</table>
+<h4 id="section_8_sections">Section 8: Sections<a class="headerlink" href="#section_8_sections" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># --- Sections ---</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">[section.toolSection]</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RIGID"</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">thickness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">[section.plateSection]</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"SHELL_GENERALIZED"</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"HyperTex"</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">thickness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="k">[[section_assignments]]</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AssignPunch"</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">section</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"toolSection"</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"punchElements"</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="k">[[section_assignments]]</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AssignDie"</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="n">section</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"toolSection"</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"dieElements"</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="k">[[section_assignments]]</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AssignPlate"</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="n">section</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plateSection"</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plateElements"</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Section</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Material</th>
+<th style="text-align: left;">Thickness</th>
+<th style="text-align: left;">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>toolSection</code></td>
+<td style="text-align: left;">RIGID</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">2.0 mm</td>
+<td style="text-align: left;">For punch and die (rigid bodies)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>plateSection</code></td>
+<td style="text-align: left;">SHELL_GENERALIZED</td>
+<td style="text-align: left;">HyperTex</td>
+<td style="text-align: left;">1.0 mm</td>
+<td style="text-align: left;">For deformable plate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assignments:</strong>
+- Punch uses <code>toolSection</code> (rigid)
+- Die uses <code>toolSection</code> (rigid)
+- Plate uses <code>plateSection</code> (deformable composite)</p>
+<h4 id="section_9_amplitudes">Section 9: Amplitudes<a class="headerlink" href="#section_9_amplitudes" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># --- Amplitudes ---</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">[amplitude.punchAmplitude]</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"TABULAR"</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">          </span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">],</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">          </span><span class="p">[</span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">]]</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong>
+- <code>type = "TABULAR"</code>: Function defined by points
+- <code>values</code>: [time, value] pairs
+  - At t=0.0s: value = 0.0 (start from rest)
+  - At t=1.0s: value = 1.0 (full speed)
+  - At t=10.0s: value = 1.0 (speed maintained)</p>
+<p>This amplitude is used to modulate the punch velocity.</p>
+<h4 id="section_10_constraints_boundary_conditions">Section 10: Constraints (Boundary Conditions)<a class="headerlink" href="#section_10_constraints_boundary_conditions" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># --- constraints ---</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">[constraint.fixX]</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"BOUNDARY_CONDITION"</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plateXNodes"</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">vx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">[constraint.fixY]</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"BOUNDARY_CONDITION"</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"plateYNodes"</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="n">vy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">vrx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="k">[constraint.fixPunch]</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"BOUNDARY_CONDITION"</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"punchNodes"</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">vx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">vy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="n">vz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">value</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">-10.0</span><span class="p">,</span><span class="w"> </span><span class="n">amplitude</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"punchAmplitude"</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="k">[constraint.fixDie]</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"BOUNDARY_CONDITION"</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"dieNodes"</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="n">preset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FIXED"</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Constraint</th>
+<th style="text-align: left;">Set</th>
+<th style="text-align: left;">DOFs</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>fixX</code></td>
+<td style="text-align: left;">plateXNodes</td>
+<td style="text-align: left;">vx</td>
+<td style="text-align: left;">0.0 (blocked in X)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fixY</code></td>
+<td style="text-align: left;">plateYNodes</td>
+<td style="text-align: left;">vy, vrx</td>
+<td style="text-align: left;">0.0 (blocked in Y and rotation X)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fixPunch</code></td>
+<td style="text-align: left;">punchNodes</td>
+<td style="text-align: left;">vx, vy</td>
+<td style="text-align: left;">0.0 (laterally blocked)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fixPunch</code></td>
+<td style="text-align: left;">punchNodes</td>
+<td style="text-align: left;">vz</td>
+<td style="text-align: left;">-10.0 with amplitude (downward speed)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fixDie</code></td>
+<td style="text-align: left;">dieNodes</td>
+<td style="text-align: left;">all</td>
+<td style="text-align: left;">FIXED (completely fixed)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">FIXED Preset</p>
+<p>The <code>"FIXED"</code> preset blocks all degrees of freedom (vx, vy, vz, vrx, vry, vrz).</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Punch Speed</p>
+<p>The punch moves downward at 10 mm/s (negative = downward), modulated by the amplitude which ramps from 0 to 1 during the first second. Over 7 s the punch therefore travels 0.5 × 10 × 1 + 10 × 6 = 65 mm.</p>
+</div>
+<h4 id="section_11_contact_behaviors">Section 11: Contact Behaviors<a class="headerlink" href="#section_11_contact_behaviors" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># --- Contact Behaviors ---</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">[contact_behaviour.PENALTY_GENERAL]</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"LINEAR_PENALTY"</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">stiffness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.0</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">[contact_behaviour.COULOMB_GENERAL]</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"COULOMB"</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">friction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Behavior</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>PENALTY_GENERAL</code></td>
+<td style="text-align: left;">LINEAR_PENALTY</td>
+<td style="text-align: left;">stiffness</td>
+<td style="text-align: left;">10.0 (penalty stiffness)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>COULOMB_GENERAL</code></td>
+<td style="text-align: left;">COULOMB</td>
+<td style="text-align: left;">friction</td>
+<td style="text-align: left;">0.1 (friction coefficient)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="section_12_contact">Section 12: Contact<a class="headerlink" href="#section_12_contact" title="Permanent link">#</a></h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># --- Contacts (General) ---</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">[contact.GENERAL_CONTACT]</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GENERAL"</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">normal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"PENALTY_GENERAL"</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">tangential</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"COULOMB_GENERAL"</span>
+</span></code></pre></div>
+<p><strong>Explanations:</strong>
+- <code>type = "GENERAL"</code>: General contact between all surfaces
+- <code>normal = "PENALTY_GENERAL"</code>: Normal contact law (penalty)
+- <code>tangential = "COULOMB_GENERAL"</code>: Tangential contact law (Coulomb friction)</p>
+<div class="admonition info">
+<p class="admonition-title">General Contact</p>
+<p>General contact does not require explicit surface definitions: interactions are detected over the whole model. Only one <code>GENERAL</code> contact can be defined per model.</p>
+</div>
+<hr />
+<h3 id="step_3_validate_the_file">Step 3: Validate the File<a class="headerlink" href="#step_3_validate_the_file" title="Permanent link">#</a></h3>
+<p>Before running the simulation, it is highly recommended to validate the input file:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>comfor<span class="w"> </span>-j<span class="w"> </span>double-dome.toml<span class="w"> </span>--validate
+</span></code></pre></div>
+<p><strong>Expected Output</strong> (after the banner):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a> Logging job double-dome
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a> =======================================
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a> File info
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  &gt; File name: double-dome.toml
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>  &gt; Extension: .toml
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a> Parse validation
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>  &gt; Validation successful. No errors found.
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a> Exit Comfor
+</span></code></pre></div>
+<p>The same information is written to <code>double-dome.md</code>, next to the input file. When errors are found, all of them are listed in this file under <strong>Validation Errors</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Scope of the validation</p>
+<p><code>--validate</code> checks the syntax, the mandatory parameters, the allowed values and the uniqueness of names. Some checks require the model to be built (e.g. element/section compatibility, which depends on <code>element_mapping</code>); they are performed when the simulation starts.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Fixing Errors</p>
+<p>If errors are reported:</p>
 <ol>
-<li>Launch <strong>ParaView</strong>.</li>
-<li>Go to <strong>File → Open</strong> and select the <code>Results_Feuilles/</code> directory.</li>
-<li>Select the group of <code>.vtu</code> files (often shown as <code>Feuilles_..vtu</code>).</li>
-<li>Click <strong>Apply</strong>.</li>
+<li>Check that all mesh file paths are correct</li>
+<li>Check that all references exist (e.g., <code>material.HyperTex</code> is referenced in <code>section.plateSection</code>)</li>
+<li>Check that every block that requires it has a name (e.g. <code>[output.vtus]</code>, or <code>name = ...</code> inside <code>[[output]]</code> and <code>[[section_assignments]]</code>)</li>
 </ol>
-<p>If nothing appears, make sure the “eye” icon next to the dataset is enabled.</p>
+</div>
+<hr />
+<h3 id="step_4_run_the_simulation">Step 4: Run the Simulation<a class="headerlink" href="#step_4_run_the_simulation" title="Permanent link">#</a></h3>
+<p>Once validation is successful, run the simulation:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>comfor<span class="w"> </span>-j<span class="w"> </span>double-dome.toml
+</span></code></pre></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>-j double-dome.toml</code>: Specify the input file (required)</li>
+<li><code>-o &lt;path&gt;</code>: Optional, write the results to another directory (see <a href="../../docs/analysis/">Running the Analysis</a>)</li>
+</ul>
+<p><strong>Output during execution</strong> (extract):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a> Model info
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>  &gt; Number of objects instances
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>   - Nodes: 1892
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>   - Elements: 3492
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>   ...
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>  &gt; Automatic step time: true
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>   - Step time: 0.000446
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a> Running info
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a> =======================================
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>  &gt; Writing output file 1
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>   - Elapsed time: 0.395195
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>   - Current time: 0.100326
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>   - Time step: 0.000446
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>   - Internal energy: 0.000000
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>   - Kinetic energy: 0.000000
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>   - Ek/Ei (%): ...
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a> =======================================
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a> ...
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a> =======================================
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>  &gt; Writing output file 70
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>   - Elapsed time: 34.176837
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>   - Current time: 7.000105
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>   - Time step: 0.000273
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>   - Internal energy: 77.677680
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>   - Kinetic energy: 5.454920
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>   - Ek/Ei (%): 7.022506
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a> =======================================
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a> Solving took : 34.225519
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a> Exit Comfor
+</span></code></pre></div>
+<p>A block is printed each time an output frame is written (every 0.1 s here). At the end of the forming, the kinetic energy is about 7 % of the internal energy: the simulation remains quasi-static. The time step is computed automatically and may decrease during the forming as elements distort.</p>
+<div class="admonition info">
+<p class="admonition-title">Execution Time</p>
+<p>With the quarter model, the simulation takes about 30 seconds on a recent laptop (serial execution).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Existing results</p>
+<p>The results directory must not exist before the run. To run the same file again, delete <code>Results_double-dome/</code> or use <code>-o</code> to choose another directory.</p>
+</div>
+<hr />
+<h3 id="step_5_analyze_the_results">Step 5: Analyze the Results<a class="headerlink" href="#step_5_analyze_the_results" title="Permanent link">#</a></h3>
+<h4 id="results_structure">Results Structure<a class="headerlink" href="#results_structure" title="Permanent link">#</a></h4>
+<p>After execution, the following files are available:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>double-dome.toml
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>double-dome.md                  # Job log
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Results_double-dome/
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>├── manifest.toml               # Run status and list of generated files
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>└── vtus/                       # One folder per output (its name)
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    ├── vtus_000000.vtu
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    ├── vtus_000001.vtu
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    │   ... (1 file every 0.1 seconds)
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>    └── vtus_000070.vtu
+</span></code></pre></div>
+<h4 id="visualization_with_paraview">Visualization with ParaView<a class="headerlink" href="#visualization_with_paraview" title="Permanent link">#</a></h4>
+<ol>
+<li><strong>Launch ParaView</strong></li>
+<li><strong>Open files</strong>: Select the <code>vtus_..vtu</code> group in <code>Results_double-dome/vtus/</code></li>
+<li><strong>Apply</strong>: Click the Apply button to display the mesh</li>
+</ol>
+<h5 id="deformation_visualization">Deformation Visualization<a class="headerlink" href="#deformation_visualization" title="Permanent link">#</a></h5>
+<ul>
+<li>The mesh is written at its current position: the displayed geometry is already the deformed one</li>
+<li>Color it with <code>Displacement</code> (magnitude or <code>Z</code> component)</li>
+<li>Use the VCR toolbar to play the animation</li>
+</ul>
 <figure>
-    <img src="../../assets/img/open_vtk.gif" alt="Opening results in ParaView">
-    <figcaption>Opening the VTK result files in ParaView</figcaption>
+  <img src="../../assets/img/deformed_vtk.gif" alt="Deformation visualization">
+  <figcaption>Deformed plate at end of simulation</figcaption>
 </figure>
 
-<p>Use the <strong>Play</strong> button (VCR controls) to watch the animation. You can change the displayed field (e.g., Displacement, Stress) using the dropdown menu in the top toolbar.</p>
-<h2 id="next_steps">Next Steps<a class="headerlink" href="#next_steps" title="Permanent link">#</a></h2>
-<p>Congratulations! You have successfully run a <strong>COMFOR</strong> simulation.</p>
+<h5 id="fabric_visualization">Fabric Visualization<a class="headerlink" href="#fabric_visualization" title="Permanent link">#</a></h5>
 <ul>
-<li>Explore the <a href="../../docs/overview/">Overview Documentation</a>.</li>
-<li>Learn how to configure an <a href="../../docs/preprocessing/#input_structure">Input File</a>.</li>
+<li>Select <code>ShearAngle</code> to see the in-plane shear of the fabric (the key result of the double-dome benchmark)</li>
+<li>Select <code>FiberStress</code> or <code>FiberStrain</code> (2 components: warp and weft) to see the fiber tension</li>
+<li><code>FiberOrientationWarp</code> / <code>FiberOrientationWeft</code> show the current fiber directions (e.g. with the <strong>Glyph</strong> filter)</li>
+<li>Adjust color scale to see the distribution</li>
 </ul>
+<h5 id="part_selection">Part Selection<a class="headerlink" href="#part_selection" title="Permanent link">#</a></h5>
+<ul>
+<li>Apply a <strong><code>Threshold</code></strong> filter on <code>PartID</code> to display only the plate (the tools hide it at the end of the forming). Here <code>PartID</code> is 0 for the die, 1 for the plate and 2 for the punch</li>
+<li>The rigid tools have no stress or strain: their cell values are <code>NaN</code>, which ParaView displays with the <em>NaN color</em></li>
+</ul>
+<h4 id="tracker_analysis">Tracker Analysis<a class="headerlink" href="#tracker_analysis" title="Permanent link">#</a></h4>
+<p>If you add trackers (not included in this basic example), one CSV file per tracker is written in <code>Results_double-dome/</code> (e.g. <code>Results_double-dome/PunchForce.csv</code>). See <a href="../../docs/modules/trackers/">Trackers</a>.</p>
+<hr />
+<h3 id="step_6_interpret_results">Step 6: Interpret Results<a class="headerlink" href="#step_6_interpret_results" title="Permanent link">#</a></h3>
+<h4 id="simulation_verification">Simulation Verification<a class="headerlink" href="#simulation_verification" title="Permanent link">#</a></h4>
+<ol>
+<li><strong>Run status</strong>: <code>Results_double-dome/manifest.toml</code> must contain <code>status = 'completed'</code></li>
+<li><strong>Energies</strong>: In a quasi-static forming simulation, the kinetic energy should stay small compared to the internal energy. Monitor the <code>Ek/Ei (%)</code> ratio printed at each output</li>
+<li><strong>Time step</strong>: Should remain stable (no drastic reduction)</li>
+</ol>
+<h4 id="common_issues">Common Issues<a class="headerlink" href="#common_issues" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Issue</th>
+<th style="text-align: left;">Cause</th>
+<th style="text-align: left;">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Directory already exists</code></td>
+<td style="text-align: left;">Results from a previous run</td>
+<td style="text-align: left;">Delete the results directory or use <code>-o</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>assigned section must be of type ...</code></td>
+<td style="text-align: left;">Element type and section do not match</td>
+<td style="text-align: left;">Check <code>element_mapping</code> (keys = types of the mesh file) and <code>section_assignments</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">High <code>Ek/Ei (%)</code></td>
+<td style="text-align: left;">Dynamic effects too large</td>
+<td style="text-align: left;">Reduce the punch speed or increase <code>damping</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Slow simulation</td>
+<td style="text-align: left;">Mesh too fine or small time step</td>
+<td style="text-align: left;">Use the quarter model or coarsen the mesh</td>
+</tr>
+<tr>
+<td style="text-align: left;">Punch penetration</td>
+<td style="text-align: left;">Insufficient contact stiffness</td>
+<td style="text-align: left;">Increase <code>stiffness</code> in <code>PENALTY_GENERAL</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="complete_file">Complete File<a class="headerlink" href="#complete_file" title="Permanent link">#</a></h3>
+<p>You can download the complete file here: <a href="../../assets/tutorial/double-dome.toml">double-dome.toml</a></p>
+<hr />
+<h3 id="exercise_customize_the_simulation">Exercise: Customize the Simulation<a class="headerlink" href="#exercise_customize_the_simulation" title="Permanent link">#</a></h3>
+<p>Try modifying the following parameters and observe the differences:</p>
+<ol>
+<li><strong>Punch speed</strong>: Change <code>vz = -10.0</code> to <code>-5.0</code> or <code>-20.0</code></li>
+<li><strong>Amplitude</strong>: Modify <code>punchAmplitude</code> for progressive acceleration</li>
+<li><strong>Friction</strong>: Change <code>friction = 0.1</code> to <code>0.0</code> or <code>0.2</code></li>
+<li><strong>Material stiffness</strong>: Modify <code>k_elong_warp</code> and <code>k_elong_weft</code></li>
+<li><strong>Plate thickness</strong>: Change <code>thickness = 1.0</code> to <code>0.5</code> or <code>2.0</code></li>
+</ol>
+<hr />
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h3>
+<p>You have now:
+- ✅ Understood the Double Dome benchmark
+- ✅ Created a complete TOML input file
+- ✅ Imported external meshes (Abaqus, Gmsh)
+- ✅ Defined composite materials
+- ✅ Configured contact with friction
+- ✅ Run an explicit simulation
+- ✅ Visualized results with ParaView</p>
+<p>The Double Dome benchmark is a well-established test case in the composite forming community, widely used for validation and comparison of numerical simulation codes <sup id="fnref:SAR10"><a class="footnote-ref" href="#fn:SAR10">1</a></sup> <sup id="fnref:KHA10"><a class="footnote-ref" href="#fn:KHA10">2</a></sup> <sup id="fnref:HAR13a"><a class="footnote-ref" href="#fn:HAR13a">3</a></sup>.</p>
+<hr />
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h3>
+<hr />
+<h3 id="next_steps">Next Steps<a class="headerlink" href="#next_steps" title="Permanent link">#</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Try with the full model (<code>full/*.inp</code>); note that the full punch uses Abaqus <code>R3D3</code> elements, mapped with <code>element_mapping = { "R3D3" = "CONTACT_TRIANGLE" }</code></li>
+<li class="task-list-item"><input type="checkbox" disabled/> Add trackers to record punch force</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Modify geometry to create a new benchmark</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Try with different material types (ELASTIC, etc.)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Explore other examples in the documentation</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:SAR10">
+<p>Sargent, J. <em>et al.</em> <a href="https://doi.org/10.1007/s12289-010-0862-5">Benchmark study of finite element models for simulating the thermostamping of woven-fabric reinforced composites</a>. <em>Int J Mater Form</em> <strong>3</strong>, 683--686 (2010).&#160;<a class="footnote-backref" href="#fnref:SAR10" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:KHA10">
+<p>Khan, M. A., Mabrouki, T., Vidal-Sallé, E. &amp; Boisse, P. <a href="https://doi.org/10.1016/j.jmatprotec.2009.09.027">Numerical and experimental analyses of woven composite reinforcement forming using a hypoelastic behaviour. Application to the double dome benchmark</a>. <em>Journal of Materials Processing Technology</em> <strong>210</strong>, 378--388 (2010).&#160;<a class="footnote-backref" href="#fnref:KHA10" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:HAR13a">
+<p>Harrison, P., Gomes, R. &amp; Curado-Correia, N. <a href="https://doi.org/10.1016/j.compositesa.2013.06.014">Press forming a 0/90 cross-ply advanced thermoplastic composite using the double-dome benchmark geometry</a>. <em>Composites Part A: Applied Science and Manufacturing</em> <strong>54</strong>, 56--69 (2013).&#160;<a class="footnote-backref" href="#fnref:HAR13a" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

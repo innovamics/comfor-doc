@@ -881,7 +881,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Complete Tutorial
   
 
     
@@ -1125,7 +1125,119 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/materials/" class="md-nav__link">
+      <a href="../../docs/modules/amplitudes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amplitudes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Constraints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/contact_behaviours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact Behaviours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/materials/" class="md-nav__link">
         
   
   
@@ -1153,14 +1265,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/elements/" class="md-nav__link">
+      <a href="../../docs/modules/sections/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Elements
+    Sections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/modules/trackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trackers
   
 
     
@@ -1352,6 +1492,58 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solvers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solvers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../docs/theory/solvers/solvers_overview/" class="md-nav__link">
         
@@ -1360,7 +1552,35 @@
   <span class="md-ellipsis">
     
   
-    Solvers
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/theory/solvers/solvers_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solvers Architecture
   
 
     
@@ -1397,6 +1617,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2351,7 +2579,7 @@
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>cmake<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>..
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>Release
 </span></code></pre></div>
-<p>The binary files will be located in the <code>bin/Release</code> folder.</p>
+<p>The executable <code>comfor</code> is located in the <code>bin</code> folder of the build directory (<code>bin/Release</code> with multi-configuration generators such as Visual Studio).</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>CMake can <a href="https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html" target="_blank">generate</a> projects for different IDEs (Visual Studio, Xcode, Eclipse). You can specify a generator using <code>cmake .. -G &lt;generator_name&gt;</code>. To see the available list for your system, use <code>cmake -G</code>.</p>
@@ -2376,19 +2604,25 @@
 <td style="text-align: left;"><code>-j</code></td>
 <td style="text-align: left;"><code>--job</code></td>
 <td style="text-align: center;"><code>FILE</code></td>
-<td style="text-align: left;"><strong>Required.</strong> Path to the input file (<code>.toml</code>, <code>.txt</code> or <code>.fembic</code>).</td>
+<td style="text-align: left;"><strong>Required.</strong> Path to the input file (<code>.toml</code>, or <code>.txt</code>/<code>.in</code> for the legacy Fembic format).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>-u</code></td>
-<td style="text-align: left;"><code>--cpus</code></td>
-<td style="text-align: center;"><code>1..16</code></td>
-<td style="text-align: left;">Number of CPU threads for parallel execution. (Default: <code>1</code>).</td>
+<td style="text-align: left;"><code>-o</code></td>
+<td style="text-align: left;"><code>--output</code></td>
+<td style="text-align: center;"><code>PATH</code></td>
+<td style="text-align: left;">Result root directory (default: <code>Results_&lt;input_name&gt;/</code> next to the input file).</td>
 </tr>
 <tr>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;"><code>--validate</code></td>
 <td style="text-align: center;">-</td>
-<td style="text-align: left;">Validates the input file syntax without running the solver.</td>
+<td style="text-align: left;">Validates the input file without running the solver.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-u</code></td>
+<td style="text-align: left;"><code>--cpus</code></td>
+<td style="text-align: center;"><code>1</code></td>
+<td style="text-align: left;">Number of CPUs. The current build is serial: only <code>1</code> is accepted (default).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>-i</code></td>
@@ -2426,23 +2660,23 @@
 <h2 id="run_and_test">Run and test<a class="headerlink" href="#run_and_test" title="Permanent link">#</a></h2>
 <p>You should now have an executable file called <strong>COMFOR</strong> (or <code>comfor.exe</code> on Windows).</p>
 <h3 id="run_it">Run it<a class="headerlink" href="#run_it" title="Permanent link">#</a></h3>
-<p>To launch a simulation, navigate to your work directory and use the <code>-j</code> (or <code>--job</code>) flag followed by your input file. You can also specify the number of CPU threads with <code>-u</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Standard execution (1 thread)</span>
+<p>To launch a simulation, navigate to your work directory and use the <code>-j</code> (or <code>--job</code>) flag followed by your input file.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Standard execution</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>./comfor<span class="w"> </span>-j<span class="w"> </span>Examples/input_file.toml
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Parallel execution with 4 threads</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>./comfor<span class="w"> </span>-j<span class="w"> </span>Examples/input_file.toml<span class="w"> </span>-u<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Write the results in a custom directory</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>./comfor<span class="w"> </span>-j<span class="w"> </span>Examples/input_file.toml<span class="w"> </span>-o<span class="w"> </span>run-01
 </span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you run <code>./comfor</code> without the <code>-j</code> argument, the program will start in interactive mode and prompt you to manually type the path to your input file.</p>
+<p>The <code>-j</code> argument is required. See <a href="../../docs/analysis/">Running the Analysis</a> for all the options and the generated files.</p>
 </div>
 <h3 id="validate_it">Validate it<a class="headerlink" href="#validate_it" title="Permanent link">#</a></h3>
 <p>If you want to check your input file for syntax errors or missing parameters without starting the actual computation, use the <code>--validate</code> flag:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./comfor<span class="w"> </span>-j<span class="w"> </span>Examples/input_file.toml<span class="w"> </span>--validate
 </span></code></pre></div>
 <h3 id="test_it">Test it<a class="headerlink" href="#test_it" title="Permanent link">#</a></h3>
-<p>In addition to the main binary, CMake generates a series of test executables (e.g., <code>AmplitudeTest</code>, <code>MaterialTest</code>). These allow you to verify if the different <strong>COMFOR</strong> modules are working correctly on your machine.</p>
+<p>When the project is configured with <code>-DCOMFOR_TEST=ON</code>, CMake also generates a series of test executables (e.g., <code>AmplitudeTest</code>, <code>MaterialTest</code>). These allow you to verify if the different <strong>COMFOR</strong> modules are working correctly on your machine.</p>
 <p>Example:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./AmplitudeTest
 </span></code></pre></div>
@@ -2509,13 +2743,13 @@
         
         
           
-          <a href="../tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorial">
+          <a href="../tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: Complete Tutorial">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Tutorial
+                Complete Tutorial
               </div>
             </div>
             <div class="md-footer__button md-icon">

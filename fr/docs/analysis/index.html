@@ -57,6 +57,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/css/landing_page.css">
+    
       <link rel="stylesheet" href="../../assets/css/faq_admonition.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -94,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#demarrer_une_nouvelle_analyse" class="md-skip">
+        <a href="#execution_de_lanalyse" class="md-skip">
           Aller au contenu
         </a>
       
@@ -653,7 +655,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriel
+    Tutoriel complet
   
 
     
@@ -850,46 +852,236 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#demarrer_une_nouvelle_analyse" class="md-nav__link">
+  <a href="#execution_de_lanalyse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Démarrer une nouvelle analyse
+        Exécution de l'Analyse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exécution de l&#39;Analyse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lancer_une_nouvelle_analyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lancer une Nouvelle Analyse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lancer une Nouvelle Analyse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commande_de_base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commande de Base
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#informations_pendant_lexecution" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#options_de_la_ligne_de_commande" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Informations pendant l’exécution
+        Options de la Ligne de Commande
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options de la Ligne de Commande">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_du_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Options du Job
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#sortie" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#options_de_lapplication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sortie
+        Options de l'Application
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#erreurs_et_bugs" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Erreurs et bugs
+        Validation
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informations_dexecution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informations d'Exécution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Informations d&#39;Exécution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resume_du_modele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Résumé du Modèle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frames_de_sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frames de Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichiers_generes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichiers Générés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers Générés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_des_repertoires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure des Répertoires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#journal_du_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Journal du Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion_des_erreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des Erreurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types_derreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types d'Erreurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format_des_messages_derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format des Messages d'Erreur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bonnes_pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonnes Pratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple Complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -992,7 +1184,119 @@
   
   
     <li class="md-nav__item">
-      <a href="../materials/" class="md-nav__link">
+      <a href="../modules/amplitudes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amplitudes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contraintes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/contact_behaviours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comportements de Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eléments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/materials/" class="md-nav__link">
         
   
   
@@ -1020,14 +1324,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../elements/" class="md-nav__link">
+      <a href="../modules/sections/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Eléments
+    Sections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/trackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trackers
   
 
     
@@ -1222,6 +1554,58 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solveurs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solveurs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../theory/solvers/solvers_overview/" class="md-nav__link">
         
@@ -1230,7 +1614,35 @@
   <span class="md-ellipsis">
     
   
-    Solveurs
+    Vue d'ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/solvers/solvers_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture des solveurs
   
 
     
@@ -1267,6 +1679,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1954,46 +2374,236 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#demarrer_une_nouvelle_analyse" class="md-nav__link">
+  <a href="#execution_de_lanalyse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Démarrer une nouvelle analyse
+        Exécution de l'Analyse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exécution de l&#39;Analyse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lancer_une_nouvelle_analyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lancer une Nouvelle Analyse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lancer une Nouvelle Analyse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commande_de_base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commande de Base
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#informations_pendant_lexecution" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#options_de_la_ligne_de_commande" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Informations pendant l’exécution
+        Options de la Ligne de Commande
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options de la Ligne de Commande">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options_du_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Options du Job
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#sortie" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#options_de_lapplication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sortie
+        Options de l'Application
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#erreurs_et_bugs" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Erreurs et bugs
+        Validation
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informations_dexecution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informations d'Exécution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Informations d&#39;Exécution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resume_du_modele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Résumé du Modèle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frames_de_sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frames de Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichiers_generes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichiers Générés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichiers Générés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_des_repertoires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure des Répertoires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#journal_du_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Journal du Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion_des_erreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des Erreurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types_derreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types d'Erreurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format_des_messages_derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format des Messages d'Erreur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bonnes_pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonnes Pratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple Complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2021,56 +2631,298 @@
 
   <h1>Exécution</h1>
 
-<p>L'étape de pré-traitement consiste à générer un fichier texte ASCII d’entrée
-décrivant le modèle. L’étape suivante consiste à exécuter Comfor en utilisant ce
-fichier d’entrée. L’analyse sera effectuée et Comfor va générer plusieurs
-fichiers de sortie : fichiers ParaView, fichiers CSV et journaux (.log).</p>
-<h2 id="demarrer_une_nouvelle_analyse">Démarrer une nouvelle analyse<a class="headerlink" href="#demarrer_une_nouvelle_analyse" title="Permanent link">#</a></h2>
-<p>Comfor s’exécute depuis le terminal (ligne de commande) avec la syntaxe
-suivante:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>comfor<span class="w"> </span>&lt;nom_du_fichier&gt;
+<style>
+  .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__item .md-nav {
+    display: none !important;
+  }
+
+  .md-typeset td:first-child, .md-typeset th:first-child {
+    white-space: nowrap;
+  }
+</style>
+
+<h2 id="execution_de_lanalyse">Exécution de l'Analyse<a class="headerlink" href="#execution_de_lanalyse" title="Permanent link">#</a></h2>
+<p>Une fois le modèle défini dans le fichier d'entrée, l'étape suivante consiste à exécuter <strong>COMFOR</strong> pour réaliser l'analyse. Cette section décrit comment lancer une simulation, interpréter les informations affichées pendant l'exécution et comprendre les fichiers générés.</p>
+<hr />
+<h3 id="lancer_une_nouvelle_analyse">Lancer une Nouvelle Analyse<a class="headerlink" href="#lancer_une_nouvelle_analyse" title="Permanent link">#</a></h3>
+<h4 id="commande_de_base">Commande de Base<a class="headerlink" href="#commande_de_base" title="Permanent link">#</a></h4>
+<p>COMFOR s'exécute depuis le terminal (ligne de commande). Le fichier d'entrée est donné avec l'option <code>-j</code> (ou <code>--job</code>), qui est <strong>obligatoire</strong> :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>comfor<span class="w"> </span>-j<span class="w"> </span>&lt;fichier_d_entree&gt;<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </span></code></pre></div>
 <ul>
-<li><code>&lt;nom_du_fichier&gt;</code> : chemin relatif ou absolu vers le fichier d’entrée.
-  Si le fichier est situé dans le même dossier que l’exécutable de Comfor, vous
-  pouvez simplement indiquer son nom.</li>
+<li><code>&lt;fichier_d_entree&gt;</code> : Chemin relatif (au répertoire courant) ou absolu vers le fichier d'entrée</li>
 </ul>
-<p><em>Exemples</em> :</p>
-<div class="language-console highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span>comfor<span class="w"> </span>test.bim
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp">$ </span>comfor<span class="w"> </span>./sim/test.bim
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gp">$ </span>comfor<span class="w"> </span>../test.bim
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="gp">$ </span>comfor<span class="w"> </span>/usr/name/sim/test.bim
+<p><strong>Exemples :</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Fichier dans le répertoire courant</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>comfor<span class="w"> </span>-j<span class="w"> </span>simulation.toml
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Idem, avec l'option longue</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>comfor<span class="w"> </span>--job<span class="o">=</span>simulation.toml
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Chemin relatif</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>comfor<span class="w"> </span>-j<span class="w"> </span>./simulations/forming.toml
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Chemin absolu</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>comfor<span class="w"> </span>-j<span class="w"> </span>/home/user/simulations/forming.toml
 </span></code></pre></div>
-<h2 id="informations_pendant_lexecution">Informations pendant l’exécution<a class="headerlink" href="#informations_pendant_lexecution" title="Permanent link">#</a></h2>
-<p>Pendant l’analyse, Comfor affiche périodiquement des informations utiles dans le
-terminal. La fréquence est définie par le paramètre
-<a href="../preprocessing/#sorties_output"><code>PRINT EVERY</code></a> dans le bloc de contrôle.</p>
-<p>La sortie s’organise en blocs comme suit :</p>
-<div class="language-console highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">=================================</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">Elapsed time: 0.955748s</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">Current time: 8s</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">Time step: 0.001</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="go">Internal energy: 35.2456</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="go">Kinetic energy: 0.0110008</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="go">=================================</span>
-</span></code></pre></div>
-<ul>
-<li><code>Elapsed time</code> : temps CPU utilisateur (temps réel) depuis le début de la simulation.</li>
-<li><code>Current time</code> : temps courant dans la simulation.</li>
-<li><code>Time step</code> : plus petit pas de temps courant du modèle.</li>
-<li><code>Internal energy</code> : énergie générée par les forces internes du modèle.</li>
-<li><code>Kinetic energy</code> : énergie cinétique du modèle.</li>
-</ul>
 <div class="admonition tip">
-<p class="admonition-title">Conseil</p>
-<p>Pour arrêter une simulation en cours, appuyez sur <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>.</p>
+<p class="admonition-title">Extensions de fichier</p>
+<p>Le format d'entrée est choisi à partir de l'extension du fichier :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Extension</th>
+<th style="text-align: left;">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.toml</code>, <code>.giml</code></td>
+<td style="text-align: left;">TOML (recommandé)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.txt</code>, <code>.in</code></td>
+<td style="text-align: left;">Fembic (historique)</td>
+</tr>
+</tbody>
+</table>
 </div>
-<h2 id="sortie">Sortie<a class="headerlink" href="#sortie" title="Permanent link">#</a></h2>
-<p>Un nouveau dossier nommé <code>Results_&lt;nom_du_fichier&gt;</code> est créé dans le même
-répertoire que le fichier d’entrée. Ce dossier contient une série de fichiers
-<code>*.vtk</code> pouvant être visualisés avec ParaView.</p>
-<h2 id="erreurs_et_bugs">Erreurs et bugs<a class="headerlink" href="#erreurs_et_bugs" title="Permanent link">#</a></h2>
-<p>Si une erreur survient, veuillez nous contacter.</p>
+<hr />
+<h4 id="options_de_la_ligne_de_commande">Options de la Ligne de Commande<a class="headerlink" href="#options_de_la_ligne_de_commande" title="Permanent link">#</a></h4>
+<p>Les options ci-dessous sont celles affichées par <code>comfor --help</code>.</p>
+<h5 id="options_du_job">Options du Job<a class="headerlink" href="#options_du_job" title="Permanent link">#</a></h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>-j, --job INPUT_FILE_NAME</code></td>
+<td style="text-align: left;">Nom du fichier d'entrée (<strong>obligatoire</strong>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-o, --output PATH</code></td>
+<td style="text-align: left;">Répertoire racine des résultats. Remplace le répertoire par défaut <code>Results_&lt;nom_entrée&gt;/</code>. Les chemins relatifs sont résolus depuis le répertoire courant.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--validate</code></td>
+<td style="text-align: left;">Analyse et valide le fichier d'entrée sans lancer la simulation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-u, --cpus 1</code></td>
+<td style="text-align: left;">Nombre de CPU. La version actuelle est séquentielle : seule la valeur <code>1</code> est acceptée (défaut). Contactez <a href="mailto:eduardo.guzman@innovamics.com">Innovamics</a> pour plus de capacité.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="options_de_lapplication">Options de l'Application<a class="headerlink" href="#options_de_lapplication" title="Permanent link">#</a></h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>-i, --info</code></td>
+<td style="text-align: left;">Affiche des informations générales sur COMFOR</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-c, --credits</code></td>
+<td style="text-align: left;">Affiche les crédits, les contributeurs et les bibliothèques tierces</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-l, --license</code></td>
+<td style="text-align: left;">Affiche la licence du logiciel</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-v, --version</code></td>
+<td style="text-align: left;">Affiche la version de COMFOR et quitte</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-h, --help</code></td>
+<td style="text-align: left;">Affiche le message d'aide et quitte</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemples d'utilisation :</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Valider uniquement le fichier d'entrée</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>comfor<span class="w"> </span>-j<span class="w"> </span>simulation.toml<span class="w"> </span>--validate
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Lancer la simulation</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>comfor<span class="w"> </span>-j<span class="w"> </span>simulation.toml
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Écrire les résultats dans un répertoire personnalisé</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>comfor<span class="w"> </span>-j<span class="w"> </span>simulation.toml<span class="w"> </span>-o<span class="w"> </span>./results/run-01
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Valider, puis lancer seulement si la validation a réussi</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>comfor<span class="w"> </span>-j<span class="w"> </span>simulation.toml<span class="w"> </span>--validate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>comfor<span class="w"> </span>-j<span class="w"> </span>simulation.toml
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Afficher la version</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>comfor<span class="w"> </span>--version
+</span></code></pre></div>
+<h4 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">#</a></h4>
+<p>Avec l'option <code>--validate</code>, COMFOR :</p>
+<ol>
+<li>Analyse le fichier d'entrée (les erreurs de syntaxe TOML sont signalées avec leur numéro de ligne)</li>
+<li>Valide chaque bloc : paramètres obligatoires, types, valeurs et plages autorisées</li>
+<li>Vérifie que les noms sont présents et uniques pour chaque type de bloc</li>
+<li>Écrit le rapport dans le terminal et dans le journal du job, puis quitte sans lancer la simulation</li>
+</ol>
+<p>Les vérifications qui nécessitent la construction du modèle (par exemple la compatibilité des sections avec les types d'éléments du set auquel elles sont assignées, ou l'existence des sets référencés) sont effectuées au démarrage de la simulation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>La même validation est toujours effectuée au début d'un calcul normal : <code>--validate</code> est simplement un moyen rapide de vérifier un fichier sans créer de résultats.</p>
+</div>
+<hr />
+<h3 id="informations_dexecution">Informations d'Exécution<a class="headerlink" href="#informations_dexecution" title="Permanent link">#</a></h3>
+<p>COMFOR affiche d'abord un résumé du modèle, puis un bloc d'informations à chaque écriture d'une frame de sortie.</p>
+<h4 id="resume_du_modele">Résumé du Modèle<a class="headerlink" href="#resume_du_modele" title="Permanent link">#</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> Model info
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  &gt; Number of objects instances
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   - Nodes: 1892
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   - Loads: 0
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   - Elements: 3492
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   - Controls: 1
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>   - Trackers: 0
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>   - Materials: 1
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>   - Sections: 2
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>   - Amplitudes: 1
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>   - Constraints: 4
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>   - Sets: 7
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>   - Surfaces: 0
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  &gt; Automatic step time: true
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>   - Step time: 0.000446
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  Output
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>  &gt; Type: VTU
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>  &gt; Format: BINARY
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>  &gt; Frequency: 0.100000
+</span></code></pre></div>
+<h4 id="frames_de_sortie">Frames de Sortie<a class="headerlink" href="#frames_de_sortie" title="Permanent link">#</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> =======================================
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  &gt; Writing output file 12
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   - Elapsed time: 4.782843
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   - Current time: 1.200059
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   - Time step: 0.000442
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>   - Internal energy: 0.319601
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>   - Kinetic energy: 0.251585
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>   - Ek/Ei (%): 78.718403
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a> =======================================
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Champ</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Writing output file</code></td>
+<td style="text-align: left;">Indice de la frame écrite</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Elapsed time</code></td>
+<td style="text-align: left;">Temps réel écoulé depuis le début de la résolution (secondes)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Current time</code></td>
+<td style="text-align: left;">Temps de simulation courant</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Time step</code></td>
+<td style="text-align: left;">Incrément de temps courant</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Internal energy</code></td>
+<td style="text-align: left;">Énergie interne (de déformation) du modèle</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Kinetic energy</code></td>
+<td style="text-align: left;">Énergie cinétique du modèle</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ek/Ei (%)</code></td>
+<td style="text-align: left;">Rapport entre énergie cinétique et énergie interne</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Simulations quasi statiques</p>
+<p>Pour les procédés de mise en forme, qui sont quasi statiques, l'énergie cinétique doit rester faible devant l'énergie interne une fois la déformation engagée. Un rapport <code>Ek/Ei</code> élevé indique des effets dynamiques importants (vitesse d'outil trop élevée, amortissement insuffisant, etc.). Ce rapport n'a pas de sens au tout début de la simulation, lorsque l'énergie interne est encore proche de zéro.</p>
+</div>
+<p>À la fin du calcul, COMFOR affiche le temps total de résolution :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> Solving took : 31.524193
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a> Exit Comfor
+</span></code></pre></div>
+<hr />
+<h3 id="fichiers_generes">Fichiers Générés<a class="headerlink" href="#fichiers_generes" title="Permanent link">#</a></h3>
+<h4 id="structure_des_repertoires">Structure des Répertoires<a class="headerlink" href="#structure_des_repertoires" title="Permanent link">#</a></h4>
+<p>Pour un fichier d'entrée <code>simulation.toml</code> :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>simulation.toml
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>simulation.md                  # Journal du job
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Results_simulation/            # Racine des résultats (ou le chemin donné avec -o)
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>├── manifest.toml              # Statut du calcul et liste des fichiers générés
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>├── &lt;nom_output&gt;/              # Un dossier par bloc [[output]]
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│   ├── &lt;nom_output&gt;_000000.vtu
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│   ├── &lt;nom_output&gt;_000001.vtu
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│   └── ...
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>└── &lt;nom_tracker&gt;.csv          # Un fichier par bloc [tracker]
+</span></code></pre></div>
+<ul>
+<li>Chaque bloc <code>[[output]]</code> écrit ses frames dans un dossier portant le <code>name</code> de la sortie. Les frames sont numérotées sur 6 chiffres.</li>
+<li>Chaque bloc <code>[tracker]</code> écrit un fichier CSV portant le <code>name</code> du tracker.</li>
+<li><code>manifest.toml</code> enregistre le statut du calcul (<code>running</code>, <code>completed</code> ou <code>failed</code>) et la liste des fichiers écrits.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Résultats existants</p>
+<p>La racine des résultats ne doit pas exister avant le calcul. Si elle existe, COMFOR s'arrête avec une erreur <code>Directory already exists</code> pour ne pas écraser des résultats précédents. Supprimez le répertoire ou choisissez-en un autre avec <code>-o</code>.</p>
+</div>
+<h4 id="journal_du_job">Journal du Job<a class="headerlink" href="#journal_du_job" title="Permanent link">#</a></h4>
+<p>Le journal du job est un fichier Markdown écrit à côté du fichier d'entrée, avec le même nom (<code>simulation.md</code> pour <code>simulation.toml</code>). Il contient les mêmes informations que le terminal (informations du fichier, rapport de validation, résumé du modèle, frames) et, lorsque la validation échoue, la liste complète des erreurs sous <strong>Validation Errors</strong>.</p>
+<p>Voir <a href="../postprocessing/">Post-traitement</a> pour le contenu des fichiers de résultats.</p>
+<hr />
+<h3 id="gestion_des_erreurs">Gestion des Erreurs<a class="headerlink" href="#gestion_des_erreurs" title="Permanent link">#</a></h3>
+<h4 id="types_derreurs">Types d'Erreurs<a class="headerlink" href="#types_derreurs" title="Permanent link">#</a></h4>
+<ol>
+<li><strong>Erreurs de ligne de commande</strong> : <code>-j</code> manquant ou option inconnue (COMFOR affiche l'erreur et l'indication <code>Run with --help for more information.</code>), ou fichier d'entrée introuvable.</li>
+<li><strong>Erreurs d'analyse</strong> : Syntaxe TOML invalide, ou bloc sans le <code>name</code> requis. Le message donne le numéro de ligne.</li>
+<li><strong>Erreurs de validation</strong> : Paramètres manquants ou invalides. Toutes les erreurs sont listées dans le journal du job.</li>
+<li><strong>Erreurs de construction</strong> : Problèmes détectés lors de la construction du modèle (référence manquante, section incompatible, répertoire de résultats existant...).</li>
+</ol>
+<h4 id="format_des_messages_derreur">Format des Messages d'Erreur<a class="headerlink" href="#format_des_messages_derreur" title="Permanent link">#</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> --&gt; Exception caught
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Validation failed
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  --&gt; TOMLParser: block 'output' at line 14 requires a non-empty 'name'.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> --&gt; Exception caught
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Setup failed
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  --&gt; Directory already exists: /home/user/simulations/Results_simulation
+</span></code></pre></div>
+<p>Dans les deux cas, COMFOR quitte avec un code de retour non nul, utilisable dans des scripts.</p>
+<hr />
+<h3 id="bonnes_pratiques">Bonnes Pratiques<a class="headerlink" href="#bonnes_pratiques" title="Permanent link">#</a></h3>
+<ol>
+<li><strong>Valider avant l'exécution</strong> : <code>comfor -j fichier.toml --validate</code></li>
+<li><strong>Commencer petit</strong> : Tester avec un modèle réduit ou un <code>run_to</code> court</li>
+<li><strong>Surveiller les énergies</strong> : Garder <code>Ek/Ei</code> faible pour les procédés quasi statiques</li>
+<li><strong>Vérifier les unités</strong> : Assurer la cohérence des unités (voir <a href="../preprocessing/#unites">Unités</a>)</li>
+</ol>
+<hr />
+<h3 id="exemple_complet">Exemple Complet<a class="headerlink" href="#exemple_complet" title="Permanent link">#</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Valider</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>comfor<span class="w"> </span>-j<span class="w"> </span>forming.toml<span class="w"> </span>--validate
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Lancer, en écrivant les résultats dans ./results/forming</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>comfor<span class="w"> </span>-j<span class="w"> </span>forming.toml<span class="w"> </span>-o<span class="w"> </span>./results/forming
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># Vérifier les résultats</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>ls<span class="w"> </span>./results/forming
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>cat<span class="w"> </span>./results/forming/manifest.toml
+</span></code></pre></div>
 
 
 

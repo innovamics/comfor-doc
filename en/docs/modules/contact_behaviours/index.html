@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="fr" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -10,13 +10,13 @@
         <meta name="author" content="Eduardo Guzman">
       
       
-        <link rel="canonical" href="https://innovamics.github.io/comfor-doc/fr/docs/elements/">
+        <link rel="canonical" href="https://innovamics.github.io/comfor-doc/en/docs/modules/contact_behaviours/">
       
       
-        <link rel="prev" href="../materials/">
+        <link rel="prev" href="../constraints/">
       
       
-        <link rel="next" href="../theory/theory_overview/">
+        <link rel="next" href="../elements/">
       
       
         
@@ -26,19 +26,19 @@
         
       
       
-      <link rel="icon" href="../../assets/img/apple-touch-icon-72x72.png">
+      <link rel="icon" href="../../../assets/img/apple-touch-icon-72x72.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Eléments - Comfor Documentation</title>
+        <title>Contact Behaviours - Comfor Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -52,14 +52,16 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geist:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Geist";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../assets/css/faq_admonition.css">
+      <link rel="stylesheet" href="../../../assets/css/landing_page.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      <link rel="stylesheet" href="../../../assets/css/faq_admonition.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -94,8 +96,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#page_en_preparation" class="md-skip">
-          Aller au contenu
+        <a href="#available_contact_behaviour_types" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -107,10 +109,10 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../.." title="Comfor Documentation" class="md-header__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Comfor Documentation" class="md-header__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
       
-  <img src="../../assets/img/logo-icon-innovamics.png" alt="logo">
+  <img src="../../../assets/img/logo-icon-innovamics.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -127,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Eléments
+              Contact Behaviours
             
           </span>
         </div>
@@ -167,7 +169,7 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
@@ -201,16 +203,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Recherche">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -221,7 +223,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initialisation de la recherche
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -233,7 +235,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://gitlab.com/comfor/comfor.git" title="Aller au dépôt" class="md-source" data-md-component="source">
+        <a href="https://gitlab.com/comfor/comfor.git" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -254,7 +256,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -266,11 +268,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
   
-  Accueil
+  Home
 
         </a>
       </li>
@@ -286,11 +288,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../overview/download/" class="md-tabs__link">
+        <a href="../../../overview/download/" class="md-tabs__link">
           
   
   
-  Démarrer ici
+  Start here
 
         </a>
       </li>
@@ -308,11 +310,11 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+        <a href="../../overview/" class="md-tabs__link">
           
   
   
-  Manuel
+  Docs
 
         </a>
       </li>
@@ -328,11 +330,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../developers/git/" class="md-tabs__link">
+        <a href="../../../developers/git/" class="md-tabs__link">
           
   
   
-  Développeurs
+  Developers
 
         </a>
       </li>
@@ -348,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../services/industry/" class="md-tabs__link">
+        <a href="../../../services/industry/" class="md-tabs__link">
           
   
   
@@ -368,7 +370,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -388,7 +390,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../faq/faq/" class="md-tabs__link">
+        <a href="../../../faq/faq/" class="md-tabs__link">
           
   
   
@@ -422,16 +424,16 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Comfor Documentation" class="md-nav__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
+    <a href="../../.." title="Comfor Documentation" class="md-nav__button md-logo" aria-label="Comfor Documentation" data-md-component="logo">
       
-  <img src="../../assets/img/logo-icon-innovamics.png" alt="logo">
+  <img src="../../../assets/img/logo-icon-innovamics.png" alt="logo">
 
     </a>
     Comfor Documentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://gitlab.com/comfor/comfor.git" title="Aller au dépôt" class="md-source" data-md-component="source">
+      <a href="https://gitlab.com/comfor/comfor.git" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -474,7 +476,7 @@
   <span class="md-ellipsis">
     
   
-    Accueil
+    Home
   
 
     
@@ -490,7 +492,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Accueil
+    Home
   
 
           </label>
@@ -503,14 +505,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Bienvenue
+    Welcome
   
 
     
@@ -561,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Démarrer ici
+    Start here
   
 
     
@@ -577,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Démarrer ici
+    Start here
   
 
           </label>
@@ -590,14 +592,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/download/" class="md-nav__link">
+      <a href="../../../overview/download/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Téléchargements
+    Downloads
   
 
     
@@ -618,14 +620,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/quick_starter_guide/" class="md-nav__link">
+      <a href="../../../overview/quick_starter_guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Démarrage rapide
+    Quick Start
   
 
     
@@ -646,14 +648,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/tutorial/" class="md-nav__link">
+      <a href="../../../overview/tutorial/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tutoriel
+    Complete Tutorial
   
 
     
@@ -709,7 +711,7 @@
   <span class="md-ellipsis">
     
   
-    Manuel
+    Docs
   
 
     
@@ -725,7 +727,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Manuel
+    Docs
   
 
           </label>
@@ -738,14 +740,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Généralités
+    Overview
   
 
     
@@ -766,14 +768,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocessing/" class="md-nav__link">
+      <a href="../../preprocessing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Pré-traitement
+    Preprocessing
   
 
     
@@ -794,14 +796,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis/" class="md-nav__link">
+      <a href="../../analysis/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Exécution
+    Running
   
 
     
@@ -822,14 +824,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../postprocessing/" class="md-nav__link">
+      <a href="../../postprocessing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Post-traitement
+    Postprocessing
   
 
     
@@ -907,14 +909,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../materials/" class="md-nav__link">
+      <a href="../amplitudes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Matériaux
+    Amplitudes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Constraints
   
 
     
@@ -949,7 +979,7 @@
   <span class="md-ellipsis">
     
   
-    Eléments
+    Contact Behaviours
   
 
     
@@ -967,7 +997,7 @@
   <span class="md-ellipsis">
     
   
-    Eléments
+    Contact Behaviours
   
 
     
@@ -979,22 +1009,168 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table des matières
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#page_en_preparation" class="md-nav__link">
+  <a href="#available_contact_behaviour_types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Page en préparation
+        Available Contact Behaviour Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Contact Behaviour Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common_parameters_for_all_contact_behaviours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Parameters for All Contact Behaviours
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal_contact_laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal Contact Laws
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal Contact Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear_penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LINEAR_PENALTY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LINEAR_PENALTY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_adhesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PENALTY_ADHESION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PENALTY_ADHESION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangential_contact_laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tangential Contact Laws
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tangential Contact Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coulomb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COULOMB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COULOMB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose_a_contact_behaviour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose a Contact Behaviour
       
     </span>
   </a>
@@ -1005,6 +1181,118 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trackers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1051,7 +1339,7 @@
   <span class="md-ellipsis">
     
   
-    Théorie
+    Theory
   
 
     
@@ -1067,7 +1355,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Théorie
+    Theory
   
 
           </label>
@@ -1080,14 +1368,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/theory_overview/" class="md-nav__link">
+      <a href="../../theory/theory_overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Généralités
+    Overview
   
 
     
@@ -1108,14 +1396,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/continuum_mechanics/" class="md-nav__link">
+      <a href="../../theory/continuum_mechanics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Mécanique des milieux continus
+    Continuum Mechanics
   
 
     
@@ -1136,14 +1424,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/materials/composite_materials/" class="md-nav__link">
+      <a href="../../theory/materials/composite_materials/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Matériaux composites
+    Composite Materials
   
 
     
@@ -1164,14 +1452,94 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/materials/materials_overview/" class="md-nav__link">
+      <a href="../../theory/materials/materials_overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Matériaux
+    Materials overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solvers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solvers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../theory/solvers/solvers_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
   
 
     
@@ -1192,14 +1560,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/solvers/solvers_overview/" class="md-nav__link">
+      <a href="../../theory/solvers/solvers_architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Solveurs
+    Solvers Architecture
   
 
     
@@ -1220,14 +1588,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/solvers/explicit_rayleigh_damping/" class="md-nav__link">
+      <a href="../../theory/solvers/explicit_rayleigh_damping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Amortissement de Rayleigh explicite
+    Explicit Rayleigh Damping
   
 
     
@@ -1236,6 +1604,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1286,7 +1662,7 @@
   <span class="md-ellipsis">
     
   
-    Développeurs
+    Developers
   
 
     
@@ -1302,7 +1678,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Développeurs
+    Developers
   
 
           </label>
@@ -1315,7 +1691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developers/git/" class="md-nav__link">
+      <a href="../../../developers/git/" class="md-nav__link">
         
   
   
@@ -1343,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developers/api/" class="md-nav__link">
+      <a href="../../../developers/api/" class="md-nav__link">
         
   
   
@@ -1371,14 +1747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developers/temporal_semantics/" class="md-nav__link">
+      <a href="../../../developers/temporal_semantics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sémantique temporelle
+    Temporal Semantics
   
 
     
@@ -1399,14 +1775,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developers/code_of_conduct/" class="md-nav__link">
+      <a href="../../../developers/code_of_conduct/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Code de conduite
+    Code of conduct
   
 
     
@@ -1486,14 +1862,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/industry/" class="md-nav__link">
+      <a href="../../../services/industry/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Entreprise
+    Industry
   
 
     
@@ -1514,14 +1890,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/academy/" class="md-nav__link">
+      <a href="../../../services/academy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Enseignement
+    Academy
   
 
     
@@ -1603,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -1685,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/archive/2025/" class="md-nav__link">
+      <a href="../../../blog/archive/2025/" class="md-nav__link">
         
   
   
@@ -1744,7 +2120,7 @@
   <span class="md-ellipsis">
     
   
-    Catégories
+    Categories
   
 
     
@@ -1760,7 +2136,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Catégories
+    Categories
   
 
           </label>
@@ -1775,14 +2151,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/actualit%C3%A9s/" class="md-nav__link">
+      <a href="../../../blog/category/news/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Actualités
+    News
   
 
     
@@ -1870,7 +2246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/faq/" class="md-nav__link">
+      <a href="../../../faq/faq/" class="md-nav__link">
         
   
   
@@ -1911,22 +2287,168 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table des matières
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#page_en_preparation" class="md-nav__link">
+  <a href="#available_contact_behaviour_types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Page en préparation
+        Available Contact Behaviour Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Contact Behaviour Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common_parameters_for_all_contact_behaviours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Parameters for All Contact Behaviours
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal_contact_laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal Contact Laws
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal Contact Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear_penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LINEAR_PENALTY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LINEAR_PENALTY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penalty_adhesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PENALTY_ADHESION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PENALTY_ADHESION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangential_contact_laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tangential Contact Laws
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tangential Contact Laws">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coulomb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COULOMB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COULOMB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose_a_contact_behaviour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose a Contact Behaviour
       
     </span>
   </a>
@@ -1955,11 +2477,189 @@
   
 
 
-  <h1>Eléments</h1>
+  <h1>Contact Behaviours</h1>
 
-<h2 id="page_en_preparation"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span> Page en préparation<a class="headerlink" href="#page_en_preparation" title="Permanent link">#</a></h2>
+<style>
+  .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__item .md-nav {
+    display: none !important;
+  }
+</style>
+
+<div class="grid cards" style="grid-template-columns: repeat(auto-fit, minmax(200px, 320px))">
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 4h6v8h4.84L12 19.84 4.16 12H9z"/></svg></span>
+  <a href="#normal_contact_laws"><span style="color: #76B900; font-weight: bold;">Normal Laws</span></a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 11h6V8l4 4-4 4v-3H9v3l-4-4 4-4zm-7 9V4h2v16zm18 0V4h2v16z"/></svg></span>
+  <a href="#tangential_contact_laws"><span style="color: #c73131ff; font-weight: bold;">Tangential Laws</span></a></p>
+</li>
+</ul>
+</div>
+<p>This section provides a <strong>practical overview</strong> of the physical laws governing surface interaction in <strong>COMFOR</strong>. Contact behaviours are defined independently and referenced by <a href="../../preprocessing/#contact">Contact</a> blocks.</p>
+<h2 id="available_contact_behaviour_types">Available Contact Behaviour Types<a class="headerlink" href="#available_contact_behaviour_types" title="Permanent link">#</a></h2>
+<h3 id="common_parameters_for_all_contact_behaviours">Common Parameters for All Contact Behaviours<a class="headerlink" href="#common_parameters_for_all_contact_behaviours" title="Permanent link">#</a></h3>
+<p>Every contact behaviour block requires this base parameter:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>type</code></strong></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: center;"><strong>Yes</strong></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: left;">Contact law technology keyword (<code>LINEAR_PENALTY</code>, <code>PENALTY_ADHESION</code>, <code>COULOMB</code>).</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p><span class="twemoji middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.78 15.3 6 6 2.11-2.16-6-6zm3.72-5.2c-.39 0-.81-.05-1.14-.19L4.97 21.25l-2.11-2.11 7.41-7.4L8.5 9.96l-.72.7-1.45-1.41v2.86l-.7.7-3.52-3.56.7-.7h2.81l-1.4-1.41 3.56-3.56a2.976 2.976 0 0 1 4.22 0L9.89 5.74l1.41 1.4-.71.71 1.79 1.78 1.82-1.88c-.14-.33-.2-.75-.2-1.12a3.49 3.49 0 0 1 3.5-3.52c.59 0 1.11.14 1.58.42L16.41 6.2l1.5 1.5 2.67-2.67c.28.47.42.97.42 1.6 0 1.92-1.55 3.47-3.5 3.47"/></svg></span> Cette page est actuellement en développement. Nous finalisons son contenu et elle sera disponible prochainement.</p>
+<h3 id="normal_contact_laws">Normal Contact Laws<a class="headerlink" href="#normal_contact_laws" title="Permanent link">#</a></h3>
+<p>Normal contact laws compute reaction forces perpendicular to the interface to prevent penetration or manage adhesion.</p>
+<h4 id="linear_penalty">LINEAR_PENALTY<a class="headerlink" href="#linear_penalty" title="Permanent link">#</a></h4>
+<p>A linear penalty spring model that applies a normal compressive force proportional to the penetration distance (<em>gap</em>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>stiffness</code></strong></td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: center;"><strong>Yes</strong></td>
+<td style="text-align: left;">Penalty spring stiffness. Must be strictly positive. <em>(Alias: <code>factor</code>)</em></td>
+</tr>
+</tbody>
+</table>
+<h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h5>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">TOML <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.014 0h5.34v2.652H2.888v18.681h2.468V24H.015zm17.622 5.049v2.78h-4.274v12.935h-3.008V7.83H6.059V5.05zM23.986 24h-5.34v-2.652h2.467V2.667h-2.468V0h5.34v24Z"/></svg></span></label><label for="__tabbed_1_2">Fembic <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6v2H3V6zM3 18h9v-2H3zm0-5h18v-2H3z"/></svg></span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[contact_behaviour.HardNormal]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"LINEAR_PENALTY"</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">stiffness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0e6</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CONTACT_BEHAVIOURS<span class="w"> </span>TYPE<span class="w"> </span>LINEAR_PENALTY
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>HardNormal<span class="w"> </span>STIFFNESS<span class="w"> </span>=<span class="w"> </span>1.0e6
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h4 id="penalty_adhesion">PENALTY_ADHESION<a class="headerlink" href="#penalty_adhesion" title="Permanent link">#</a></h4>
+<p>A normal law that handles both compression penalty forces during penetration and tensile adhesive forces during separation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>stiffness</code></strong></td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: center;"><strong>Yes</strong></td>
+<td style="text-align: left;">Compression penalty stiffness. Must be strictly positive. <em>(Alias: <code>factor</code>)</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>strength</code></strong></td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: center;"><strong>Yes</strong></td>
+<td style="text-align: left;">Adhesive force magnitude per unit area. Must be non-negative. <em>(Alias: <code>adhesive_strength</code>)</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>threshold</code></td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Distance tolerance for adhesion. Defaults to element thickness (<span class="arithmatex">\(t\)</span>). <em>(Alias: <code>adhesion_threshold</code>)</em></td>
+</tr>
+</tbody>
+</table>
+<h5 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">#</a></h5>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">TOML <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.014 0h5.34v2.652H2.888v18.681h2.468V24H.015zm17.622 5.049v2.78h-4.274v12.935h-3.008V7.83H6.059V5.05zM23.986 24h-5.34v-2.652h2.467V2.667h-2.468V0h5.34v24Z"/></svg></span></label><label for="__tabbed_2_2">Fembic <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6v2H3V6zM3 18h9v-2H3zm0-5h18v-2H3z"/></svg></span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[contact_behaviour.AdhesiveTool]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"PENALTY_ADHESION"</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">stiffness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0e6</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">strength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50.0</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">threshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>CONTACT_BEHAVIOURS<span class="w"> </span>TYPE<span class="w"> </span>PENALTY_ADHESION
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>AdhesiveTool<span class="w"> </span>STIFFNESS<span class="w"> </span>=<span class="w"> </span>1.0e6<span class="w"> </span>STRENGTH<span class="w"> </span>=<span class="w"> </span>50.0<span class="w"> </span>THRESHOLD<span class="w"> </span>=<span class="w"> </span>0.5
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="tangential_contact_laws">Tangential Contact Laws<a class="headerlink" href="#tangential_contact_laws" title="Permanent link">#</a></h3>
+<p>Tangential contact laws compute friction forces parallel to the contact plane.</p>
+<h4 id="coulomb">COULOMB<a class="headerlink" href="#coulomb" title="Permanent link">#</a></h4>
+<p>Standard Coulomb friction law. It applies a tangential force proportional to the normal contact force and the friction coefficient <span class="arithmatex">\(\mu\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>friction</code></strong></td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: center;"><strong>Yes</strong></td>
+<td style="text-align: left;">Friction coefficient <span class="arithmatex">\(\mu\)</span>. Must be non-negative. <em>(Alias: <code>mu</code>)</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Regularization &amp; Smooth Factor</p>
+<p>To minimize numerical oscillations during abrupt changes in slip direction, the <code>COULOMB</code> implementation uses a continuous smoothing factor derived from the dot product of consecutive slip vectors.</p>
+</div>
+<h5 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">#</a></h5>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">TOML <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.014 0h5.34v2.652H2.888v18.681h2.468V24H.015zm17.622 5.049v2.78h-4.274v12.935h-3.008V7.83H6.059V5.05zM23.986 24h-5.34v-2.652h2.467V2.667h-2.468V0h5.34v24Z"/></svg></span></label><label for="__tabbed_3_2">Fembic <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6v2H3V6zM3 18h9v-2H3zm0-5h18v-2H3z"/></svg></span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[contact_behaviour.SteelFriction]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"COULOMB"</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">friction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.15</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>CONTACT_BEHAVIOURS<span class="w"> </span>TYPE<span class="w"> </span>COULOMB
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>SteelFriction<span class="w"> </span>FRICTION<span class="w"> </span>=<span class="w"> </span>0.15
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="choose_a_contact_behaviour">Choose a Contact Behaviour<a class="headerlink" href="#choose_a_contact_behaviour" title="Permanent link">#</a></h2>
+<ul>
+<li>Use <strong><code>LINEAR_PENALTY</code></strong> (Normal) + <strong><code>COULOMB</code></strong> (Tangential) for standard tool-part or self-contact interfaces.</li>
+<li>Use <strong><code>PENALTY_ADHESION</code></strong> (Normal) for sticky tools, tack analysis, or resin-rich composite forming.</li>
+</ul>
 
 
 
@@ -1991,33 +2691,33 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../materials/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Matériaux">
+          <a href="../constraints/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Constraints">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Précédent
+                Previous
               </span>
               <div class="md-ellipsis">
-                Matériaux
+                Constraints
               </div>
             </div>
           </a>
         
         
           
-          <a href="../theory/theory_overview/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Généralités">
+          <a href="../elements/" class="md-footer__link md-footer__link--next" aria-label="Next: Elements">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Suivant
+                Next
               </span>
               <div class="md-ellipsis">
-                Généralités
+                Elements
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2058,18 +2758,18 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../assets/js/mathjax.js"></script>
+        <script src="../../../assets/js/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
       
-        <script src="../../assets/js/xy_graphs.js"></script>
+        <script src="../../../assets/js/xy_graphs.js"></script>
       
     
   </body>
