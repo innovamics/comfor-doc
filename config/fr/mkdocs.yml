@@ -6,6 +6,9 @@ repo_name: comfor/comfor
 copyright: Copyright &copy; 2021 - 2026 Eduardo Guzman
 
 docs_dir: ../../docs/fr
+# Pages kept in the repository but not published yet
+exclude_docs: |
+  docs/theory/coordinate_systems.md
 site_dir: ../../public/comfor-doc/fr
 
 nav:
@@ -14,22 +17,29 @@ nav:
   - "Démarrer ici":
       - "Téléchargements": overview/download.md
       - "Démarrage rapide": overview/quick_starter_guide.md
-      - 'Tutoriel': overview/tutorial.md
+      - "Tutoriel complet": overview/tutorial.md
   - "Manuel":
       - "Généralités": docs/overview.md
       - "Pré-traitement": docs/preprocessing.md
       - "Exécution": docs/analysis.md
       - "Post-traitement": docs/postprocessing.md
       - "Modules":
-        - "Matériaux": docs/materials.md
-        - "Eléments": docs/elements.md
+        - "Amplitudes": docs/modules/amplitudes.md
+        - "Contraintes": docs/modules/constraints.md
+        - "Comportements de Contact": docs/modules/contact_behaviours.md
+        - "Eléments": docs/modules/elements.md
+        - "Matériaux": docs/modules/materials.md
+        - "Sections": docs/modules/sections.md
+        - "Trackers": docs/modules/trackers.md
       - "Théorie":
         - "Généralités": docs/theory/theory_overview.md
         - "Mécanique des milieux continus": docs/theory/continuum_mechanics.md
         - "Matériaux composites": docs/theory/materials/composite_materials.md
         - "Matériaux": docs/theory/materials/materials_overview.md
-        - "Solveurs": docs/theory/solvers/solvers_overview.md
-        - "Amortissement de Rayleigh explicite": docs/theory/solvers/explicit_rayleigh_damping.md
+        - "Solveurs":
+          - "Vue d'ensemble": docs/theory/solvers/solvers_overview.md
+          - "Architecture des solveurs": docs/theory/solvers/solvers_architecture.md
+          - "Amortissement de Rayleigh explicite": docs/theory/solvers/explicit_rayleigh_damping.md
   - "Développeurs":
       - "Git": developers/git.md
       - "API": developers/api.md
@@ -146,7 +156,7 @@ extra_javascript:
   # - assets/js/background_effects.js 
 
 extra_css:
-  # - assets/css/landing_page.css
+  - assets/css/landing_page.css
   - assets/css/faq_admonition.css
   # - assets/css/tabbed.css
   # - assets/css/home_page.css

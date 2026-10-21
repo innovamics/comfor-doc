@@ -99,7 +99,7 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build . --config Release
 ```
 
-The binary files will be located in the `bin/Release` folder.
+The executable `comfor` is located in the `bin` folder of the build directory (`bin/Release` with multi-configuration generators such as Visual Studio).
 
 !!! tip
     CMake can [generate](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html){:target="_blank"} projects for different IDEs (Visual Studio, Xcode, Eclipse). You can specify a generator using `cmake .. -G <generator_name>`. To see the available list for your system, use `cmake -G`.
@@ -118,9 +118,10 @@ If you prefer a graphical interface, you can use **Visual Studio Code** with the
 
 | Argument | Long Form | Value | Description |
 | :--- | :--- | :---: | :--- |
-| `-j` | `--job` | `FILE` | **Required.** Path to the input file (`.toml`, `.txt` or `.fembic`). |
-| `-u` | `--cpus` | `1..16` | Number of CPU threads for parallel execution. (Default: `1`). |
-| - | `--validate` | - | Validates the input file syntax without running the solver. |
+| `-j` | `--job` | `FILE` | **Required.** Path to the input file (`.toml`, or `.txt`/`.in` for the legacy Fembic format). |
+| `-o` | `--output` | `PATH` | Result root directory (default: `Results_<input_name>/` next to the input file). |
+| - | `--validate` | - | Validates the input file without running the solver. |
+| `-u` | `--cpus` | `1` | Number of CPUs. The current build is serial: only `1` is accepted (default). |
 | `-i` | `--info` | - | Shows general information about **COMFOR**. |
 | `-c` | `--credits` | - | Lists software contributors and libraries. |
 | `-l` | `--license` | - | Displays the software license terms. |
@@ -135,18 +136,18 @@ You should now have an executable file called **COMFOR** (or `comfor.exe` on Win
 
 ## Run it
 
-To launch a simulation, navigate to your work directory and use the `-j` (or `--job`) flag followed by your input file. You can also specify the number of CPU threads with `-u`.
+To launch a simulation, navigate to your work directory and use the `-j` (or `--job`) flag followed by your input file.
 
 ```bash
-# Standard execution (1 thread)
+# Standard execution
 ./comfor -j Examples/input_file.toml
 
-# Parallel execution with 4 threads
-./comfor -j Examples/input_file.toml -u 4
+# Write the results in a custom directory
+./comfor -j Examples/input_file.toml -o run-01
 ```
 
 !!! tip
-    If you run `./comfor` without the `-j` argument, the program will start in interactive mode and prompt you to manually type the path to your input file.
+    The `-j` argument is required. See [Running the Analysis](../docs/analysis.md) for all the options and the generated files.
 
 ## Validate it
 
@@ -158,7 +159,7 @@ If you want to check your input file for syntax errors or missing parameters wit
 
 ## Test it
 
-In addition to the main binary, CMake generates a series of test executables (e.g., `AmplitudeTest`, `MaterialTest`). These allow you to verify if the different **COMFOR** modules are working correctly on your machine.
+When the project is configured with `-DCOMFOR_TEST=ON`, CMake also generates a series of test executables (e.g., `AmplitudeTest`, `MaterialTest`). These allow you to verify if the different **COMFOR** modules are working correctly on your machine.
 
 Example:
 

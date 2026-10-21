@@ -49,7 +49,7 @@ Comprendre les éléments fondamentaux de Comfor
 
     Découvrez les **modèles de matériaux** disponibles dans Comfor, basés sur des recherches récentes.
 
-    [:octicons-arrow-right-24: En savoir plus](materials.md)
+    [:octicons-arrow-right-24: En savoir plus](modules/materials.md)
 
 -   :fontawesome-solid-cubes:{ .lg .middle } __Éléments__
 
@@ -57,7 +57,7 @@ Comprendre les éléments fondamentaux de Comfor
     
     Apprenez-en plus sur les **éléments finis**, les **lois de contact** et les **nœuds**.
     
-    [:octicons-arrow-right-24: En savoir plus](elements.md)
+    [:octicons-arrow-right-24: En savoir plus](modules/elements.md)
 
 -   :fontawesome-solid-book-open:{ .lg .middle } __Théorie__
     
@@ -67,5 +67,12 @@ Comprendre les éléments fondamentaux de Comfor
     
     [:octicons-arrow-right-24: En savoir plus](theory/theory_overview.md)
 
-</div>
+-   :fontawesome-solid-bolt:{ .lg .middle } __Architecture des Solveurs__
 
+    ---
+
+    Découvrez l'**architecture modulaire** des solveurs explicites dans COMFOR.
+
+    [:octicons-arrow-right-24: En savoir plus](theory/solvers/solvers_architecture.md)
+
+</div>
